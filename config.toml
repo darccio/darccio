@@ -1,0 +1,86 @@
+baseURL = "https://dario.im"
+title = "Dario Castañé"
+copyright = "2018 Dario Castañé - Creative Commons Attribution-ShareAlike 4.0 International License."
+
+theme = "minimo"
+
+Paginate = 5
+preserveTaxonomyNames = true
+
+enableRobotsTXT = true
+
+pygmentsCodefences = true
+
+enableEmoji = true
+
+defaultContentLanguage = "ca"
+
+[params.info]
+description = "Pirate, trollslayer, gopher, full stack engineer"
+title404 = "404 Not Found"
+
+[params.assets]
+favicon = "favicon.ico"
+customCSS = ["css/custom.css"]
+customJS = ["js/custom.js"]
+gopher = "" # used in 404 template ( Generator: https://gopherize.me )
+
+[params.settings]
+dateFormat = "2006-01-02"
+listDateFormat = "2006-01-02"
+archiveDateFormat = "Jan 02"
+hideEntryNavigation = ["page"]
+hideSocialMenu = false
+showReadingTime = true
+taxonomyCloudShuffle = false
+accentColor = "#572b85"
+
+[params.sidebar]
+enable = true
+
+[params.widgets]
+homepage = ["recent_posts"]
+sidebar = ["about","taxonomy_cloud"]
+
+[params.opengraph.twitter]
+page = "im_dario"
+
+[params.seo]
+titleSeparator = "|"
+
+[params.social]
+email = "i@dario.im"
+github = "imdario"
+linkedin = "im.dario"
+twitter = "im_dario"
+telegram = "im_dario"
+
+[taxonomies]
+author = "authors"
+category = "categories"
+series = "series"
+tag = "tags"
+
+[permalinks]
+page = "/:slug/"
+
+[blackfriday]
+hrefTargetBlank = true
+
+[languages]
+[languages.ca]
+lang = "ca"
+languageName = "Català"
+weight = 1
+copyright = "2018 Dario Castañé - Reconeixement-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)"
+
+[languages.es]
+lang = "es"
+languageName = "Castellano"
+weight = 2
+copyright = "2018 Dario Castañé - Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)"
+
+[languages.en]
+lang = "en"
+languageName = "English"
+weight = 3
