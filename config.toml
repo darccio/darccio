@@ -21,8 +21,7 @@ title404 = "404 Not Found"
 
 [params.assets]
 favicon = "favicon.ico"
-customCSS = ["css/custom.css"]
-customJS = ["js/custom.js"]
+customCSS = ["css/custom.4779ed56.css"]
 gopher = "" # used in 404 template ( Generator: https://gopherize.me )
 
 [params.settings]
@@ -40,7 +39,7 @@ enable = true
 
 [params.widgets]
 homepage = ["recent_posts"]
-sidebar = ["about","taxonomy_cloud"]
+sidebar = ["about", "taxonomy_cloud", "languages"]
 
 [params.opengraph.twitter]
 page = "im_dario"
@@ -84,3 +83,20 @@ copyright = "2018 Dario Castañé - Reconocimiento-CompartirIgual 4.0 Internacio
 lang = "en"
 languageName = "English"
 weight = 3
+
+[[menu.main]]
+url = "/"
+identifier = "home"
+
+[[languages.ca.menu.main]]
+name = "Inici"
+weight = 0
+url = "/"
+
+[[languages.es.menu.main]]
+name = "Inicio"
+url = "/es/"
+
+[[languages.en.menu.main]]
+name = "Home"
+url = "/en/"
