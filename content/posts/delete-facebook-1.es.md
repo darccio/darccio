@@ -2,7 +2,7 @@
 title: "Delete Facebook #1"
 tags: [ "facebook", "social networks" ]
 date: 2018-04-01T17:09:03+02:00
-categories: [ "blog" ]
+series: [ "Delete Facebook" ]
 images: [ "/images/delete-facebook-1.png" ]
 ---
 > **Progresos realizados:** creación de mi propia página bajo dominio propio y revisión de los inicios del período de sesiones activo.

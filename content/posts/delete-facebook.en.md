@@ -2,7 +2,7 @@
 title: "Delete Facebook #0"
 tags: [ "facebook", "social networks" ]
 date: 2018-03-28T23:26:00+02:00
-categories: [ "blog" ]
+series: [ "Delete Facebook" ]
 ---
 After the controversy of Cambridge Analytica, I have decided to stop feeding the beast, Facebook.
 
