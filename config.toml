@@ -55,8 +55,6 @@ twitter = "im_dario"
 telegram = "im_dario"
 
 [taxonomies]
-author = "authors"
-category = "categories"
 series = "series"
 tag = "tags"
 
@@ -85,18 +83,69 @@ languageName = "English"
 weight = 3
 
 [[menu.main]]
-url = "/"
+name = "home"
 identifier = "home"
+url = "/"
+weight = -500
 
 [[languages.ca.menu.main]]
 name = "Inici"
-weight = 0
+identifier = "home"
 url = "/"
+weight = -500
 
 [[languages.es.menu.main]]
 name = "Inicio"
+identifier = "home"
 url = "/es/"
+weight = -500
 
 [[languages.en.menu.main]]
 name = "Home"
+identifier = "home"
 url = "/en/"
+weight = -500
+
+[[menu.main]]
+name = "blog"
+identifier = "blog"
+url = "/posts/"
+weight = -400
+
+[[languages.ca.menu.main]]
+name = "Blog"
+identifier = "blog"
+url = "/posts/"
+weight = -400
+
+[[languages.es.menu.main]]
+name = "Blog"
+identifier = "blog"
+url = "/es/posts/"
+weight = -400
+
+[[languages.en.menu.main]]
+name = "Blog"
+identifier = "blog"
+url = "/en/posts/"
+weight = -400
+
+#[[menu.main]]
+#name = "Microblog"
+#url = ""
+
+#[[menu.main]]
+#name = "Code"
+#url = ""
+
+#[[menu.main]]
+#name = "Talks"
+#url = ""
+
+#[[menu.main]]
+#name = "Press archive"
+#url = ""
+
+#[[menu.main]]
+#name = "Contact"
+#url = ""
