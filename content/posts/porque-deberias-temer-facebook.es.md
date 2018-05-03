@@ -30,3 +30,5 @@ Gracias por tu tiempo. Sin importar qué decides finalmente el 31 de Mayo, esper
 
 Saludos,<br>
 [Matt (autor original)](https://twitter.com/mwpher)
+
+Este trabajo realizado por [Matthew Pherigo](https://twitter.com/mwpher) está licenciado bajo una licencia [Creative Commons Reconocimiento-No Comercial-Compartir bajo la misma licencia 3.0 Unported](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.es).

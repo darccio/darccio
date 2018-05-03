@@ -28,3 +28,5 @@ Gràcies pel teu temps. Sense importar que decideixis finalment el 31 de Maig, e
 
 Salutacions,<br>
 [Matt (autor original)](https://twitter.com/mwpher)
+
+Aquest treball realitzat per [Matthew Pherigo](https://twitter.com/mwpher) està llicenciat sota una llicència [Creative Commons Reconeixement-NoComercial-CompartirIgual 3.0 No adaptada](https://creativecommons.org/licenses/by-nc-sa/3.0/deed.ca).
