@@ -4,7 +4,7 @@ copyright = "2018 Dario Castañé - Creative Commons Attribution-ShareAlike 4.0 
 
 theme = "minimo"
 
-Paginate = 5
+Paginate = 10
 preserveTaxonomyNames = true
 
 enableRobotsTXT = true
