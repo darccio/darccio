@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    {{if .Title}}
+    <title>{{.Title}} | {{.Extra "/site/title"}}</title>
+    {{else}}
+    <title>{{.Extra "/site/title"}}</title>
+    {{end}}
+    <link rel="stylesheet" type="text/css" href="/static/neat.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+{{if .Title}}
+<h1>{{.Title}}</h1>
+{{else}}
+<h1>{{.Extra "/site/title"}}</h1>
+{{end}}
+<main>{{.Body}}</main>
+</body>
+</html>
