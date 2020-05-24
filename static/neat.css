@@ -3,6 +3,10 @@
     color: #404040;
 }
 
+a {
+    color: #993399;
+}
+
 html {
     border-style: solid;
     border-width: 5px 0 0 0;
@@ -53,12 +57,8 @@ pre {
 
 .home {
     display: inline-block;
-    background-color: #404040;
-    color: white;
     margin-top: 20px;
-    padding: 5px 10px 5px 10px;
-    text-decoration: none;
-    font-weight: bold;
+    padding-top: 10px;
 }
 
 

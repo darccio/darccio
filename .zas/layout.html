@@ -5,15 +5,16 @@
     {{else}}
     <title>{{.Extra "/site/title"}}</title>
     {{end}}
+    <link rel=icon href=/static/favicon.ico>
     <link rel="stylesheet" type="text/css" href="/static/neat.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-{{if .Title}}
-<h1>{{.Title}}</h1>
-{{else}}
+<a class="home" href="/"><img src="/static/favicon-32x32.png"></a>
+{{if not .Title}}
 <h1>{{.Extra "/site/title"}}</h1>
 {{end}}
 <main>{{.Body}}</main>
+<footer>2009-2020 {{.Extra "/site/title"}} - {{.H "license"}} - Site generated with <a href="https://github.com/imdario/zas">Zas</a>.</footer>
 </body>
 </html>
