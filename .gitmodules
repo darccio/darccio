@@ -1,0 +1,3 @@
+[submodule "lyd"]
+	path = lyd
+	url = git@github.com:imdario/lyd.git
