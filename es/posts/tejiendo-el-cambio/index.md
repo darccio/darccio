@@ -1,8 +1,9 @@
----
-title: "Tejiendo el cambio"
+<!--
 tags: [ "politics" ]
 date_created: "2013-10-18T22:28:00-04:00"
----
+-->
+
+# Tejiendo el cambio
 
 Fui invitado a otro grupo de Facebook, de esos de buscar la “confluencia”. Es decir, iniciar otro proceso tortuoso de intento de unión, donde los egos no van a ceder.
 

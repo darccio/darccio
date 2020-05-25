@@ -1,8 +1,9 @@
----
-title: "Manifiesto de la Acampada Sol"
+<!--
 tags: [ "15M" ]
 date_created: "2011-05-19T18:19:00-04:00"
----
+-->
+
+# Manifiesto de la Acampada Sol
 
 ## ¿Quiénes somos?
 

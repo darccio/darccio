@@ -1,8 +1,9 @@
----
-title: "Por qué deberías temer a Facebook"
+<!--
 tags: [ "facebook", "social networks" ]
 date_created: "2010-05-19T22:01:00-04:00"
----
+-->
+
+# Por qué deberías temer a Facebook
 
 Hola amigo,
 

@@ -1,10 +1,12 @@
----
-title: "Delete Facebook #1"
+<!--
 tags: [ "facebook", "social networks" ]
 date_created: 2018-04-01T17:09:03+02:00
 series: [ "Delete Facebook" ]
 images: [ "/images/delete-facebook-1.png" ]
----
+-->
+
+# Delete Facebook #1
+
 > **Progresos realizados:** creación de mi propia página bajo dominio propio y revisión de los inicios del período de sesiones activo.
 
 Como prometí, [sigo documentando](https://dario.im/es/posts/delete-facebook/). Estos últimos días he recuperado el uso de mi dominio personal, que usaré como perfil principal. Sus ventajas no vienen sin desventajas. Por una parte controlaré mi identidad, combinado con [Keybase](https://keybase.io) (más sobre esta herramienta en otra entrega), y la autoría de mis textos, disponibles bajo licencia [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES). Hay más ventajas, pero no quiero alargarme y antes debo reconocer que esto no está al alcance de cualquiera sin caer en otra plataforma privativa y mucho menos sin coste alguno.

@@ -1,10 +1,12 @@
----
-title: "Delete Facebook #2"
+<!--
 tags: [ "facebook", "social networks" ]
 date_created: "2018-04-08T11:53:34+02:00"
 series: [ "Delete Facebook" ]
 images: [ "/images/delete-facebook-1.png" ]
----
+-->
+
+# Delete Facebook #2
+
 > **Progreso realizado:** eliminación de inicios de sesión.
 
 El primer paso fácil para terminar mi dependencia de Facebook es eliminar todos los inicios de sesión a webs y aplicaciones de terceros. Como ya comenté en la anterior entrada, tengo 123. ¿Y qué me he encontrado entre esos 123 inicios?

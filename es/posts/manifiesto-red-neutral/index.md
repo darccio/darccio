@@ -1,9 +1,10 @@
----
-title: "Manifiesto por una Red Neutral"
+<!--
 tags: [ "internet", "net neutrality" ]
 date_created: "2010-11-30T17:47:00-05:00"
 permalink: https://www.enriquedans.com/2010/11/manifiesto-por-una-red-neutral.html
----
+-->
+
+# Manifiesto por una Red Neutral
 
 *Si te sientes cómodo y representado por este texto, dale toda la difusión que puedas y quieras: reprodúcelo, enlázalo, tradúcelo, compártelo, vótalo… todas esas cosas que puedes hacer con total tranquilidad y libertad gracias, precisamente, al hecho de que tenemos todavía una red neutral. Hagamos posible el seguir teniéndola.*
 

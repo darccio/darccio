@@ -1,8 +1,9 @@
----
-title: "Diez cosas que no deberías hacer en Facebook"
+<!--
 tags: [ "facebook", "social networks" ]
 date_created: "2009-11-23T19:34:00-05:00"
----
+-->
+
+# Diez cosas que no deberías hacer en Facebook
 
 Facebook es más popular que nunca y pasa por frecuentes cambios. Pero preguntémonos si realizas mejoras en tu propio perfil con la misma frecuencia.
 

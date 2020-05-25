@@ -1,9 +1,11 @@
----
-title: "Delete Facebook #0"
+<!--
 tags: [ "facebook", "social networks" ]
 date_created: 2018-03-28T23:26:00+02:00
 series: [ "Delete Facebook" ]
----
+-->
+
+# Delete Facebook #0
+
 Tras la polémica de Cambridge Analytica, he decidido dejar de alimentar a la bestia, Facebook.
 
 Además he decidido que será un proceso que documentaré, ya que no es simplemente dejar de usar o cerrar a las bravas mi cuenta.
