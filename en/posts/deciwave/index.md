@@ -1,8 +1,9 @@
----
-title: "Deciwave - Robot Rocking for Google Wave"
+<!--
 tags: [ "social networks", "google wave" ]
 date_created: "2009-10-29T21:57:00-04:00"
----
+-->
+
+# Deciwave - Robot Rocking for Google Wave
 
 Last Sunday I built a little robot for [Google Wave](https://wave.google.com) which allows to embed music players from [GoEar](http://www.goear.com/), [Jamendo](https://www.jamendo.com/start) and [The Sixty One](http://thesixtyone.com): [Deciwave](https://deciwave.appspot.com/).
 

@@ -1,10 +1,12 @@
----
-title: "Delete Facebook #2"
+<!--
 tags: [ "facebook", "social networks" ]
 date_created: "2018-04-08T12:06:19+02:00"
 series: [ "Delete Facebook" ]
 images: [ "/images/delete-facebook-1.png" ]
----
+-->
+
+# Delete Facebook #2
+
 > **Progress made:** deletion of logins.
 
 The first easy step to end my dependence on Facebook is to delete all my websites and third-party applications logins. As I said in my previous post, I have 123 logins. And what have I found among those?

@@ -1,8 +1,9 @@
----
-title: "What Internet told me: Geekvana, is it possible?"
+<!--
 tags: [ "digital clutter", "minimalism" ]
 date_created: "2009-11-04T22:18:00-05:00"
----
+-->
+
+# What Internet told me: Geekvana, is it possible?
 
 Time ago I wrote down a quick plain text file with the main "rules" about achieving the "geekvana", an inner peace state, which I learnt reading posts and posts through years.
 

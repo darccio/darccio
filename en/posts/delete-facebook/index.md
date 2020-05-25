@@ -1,9 +1,11 @@
----
-title: "Delete Facebook #0"
+<!--
 tags: [ "facebook", "social networks" ]
 date_created: 2018-03-28T23:26:00+02:00
 series: [ "Delete Facebook" ]
----
+-->
+
+# Delete Facebook #0
+
 After the controversy of Cambridge Analytica, I have decided to stop feeding the beast, Facebook.
 
 I also decided that I'm going to document my process, since it is not simply stop using it or abruptly closing my account.

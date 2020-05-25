@@ -1,10 +1,12 @@
----
-title: "Delete Facebook #1"
+<!--
 tags: [ "facebook", "social networks" ]
 date_created: 2018-04-01T17:13:15+02:00
 series: [ "Delete Facebook" ]
 images: [ "/images/delete-facebook-1.png" ]
----
+-->
+
+# Delete Facebook #1
+
 > **Progress made:** creation of my own page under my personal domain and review of active logins.
 
 As promised, [I'm writing down my progress](https://dario.im/en/posts/delete-facebook/). In the last days I have recovered my personal domain, which I'll use as my main profile. Its advantages don't come without disadvantages. I'll control my identity, combined with [Keybase](https://keybase.io) (more about this tool in another post), and the authorship of my texts, available under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license. There are more advantages, but I don't want to extend myself. Before I must admit that this isn't available to everybody without falling into another walled garden, much less at no cost.
