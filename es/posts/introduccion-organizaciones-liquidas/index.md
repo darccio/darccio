@@ -15,7 +15,7 @@ Tras múltiples versiones, analizando las consecuencias y buscando la versión m
 Con esto establezco las bases de las organizaciones líquidas. ¿Y qué son?
 
 <figure>
-    <img src="2591366230_6ec445b68f_c.jpg">
+    <img src="/static/images/2591366230_6ec445b68f_c.jpg">
     <figcaption>"<a href="https://secure.flickr.com/photos/74105777@N00/2591366230/">Whose social graph is it?</a>" por <a href="https://secure.flickr.com/photos/adactio/">Jeremy Keith</a> bajo licencia <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></figcaption>
 </figure>
 

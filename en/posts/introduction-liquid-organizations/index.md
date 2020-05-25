@@ -15,7 +15,7 @@ Until today, July 1st 2013. After several versions, analyzing the outcomes and l
 With this I set liquid organizations’ bases. But, what they are?
 
 <figure>
-    <img src="2591366230_6ec445b68f_c.jpg">
+    <img src="/static/images/2591366230_6ec445b68f_c.jpg">
     <figcaption>"<a href="https://secure.flickr.com/photos/74105777@N00/2591366230/">Whose social graph is it?</a>" by <a href="https://secure.flickr.com/photos/adactio/">Jeremy Keith</a> licensed under <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></figcaption>
 </figure>
 
