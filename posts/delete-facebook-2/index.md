@@ -1,10 +1,12 @@
----
-title: "Delete Facebook #2"
+<!--
 tags: [ "facebook", "social networks" ]
 date_created: "2018-04-07T17:04:09+02:00"
 series: [ "Delete Facebook" ]
 images: [ "/images/delete-facebook-1.png" ]
----
+-->
+
+# Delete Facebook #2
+
 > **Progrés realitzat:** eliminació d'inicis de sessió.
 
 El primer pas fàcil per acabar la meva dependència de Facebook és eliminar tots els inicis de sessió a webs i aplicacions de tercers. Com ja vaig comentar en l'anterior entrada, en tinc 123. I què m'hi he trobat?

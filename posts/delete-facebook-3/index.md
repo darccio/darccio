@@ -1,10 +1,12 @@
----
-title: "Delete-Facebook-3"
+<!--
 tags: []
 date_created: "2018-04-08T15:00:56+02:00"
 categories: []
 draft: true
----
+-->
+
+# Delete Facebook #3
+
 # Tinder: impossible canviar el compte de Facebook i fins i tot l'autenticació amb mòbil (per SMS) depèn d'Account Kit de Facebook.
 # vonvon i QuizzStar: desactivar add-ons de privacitat per a poder eliminar compte.
 # Facebook fa 10 anys: https://venturebeat.com/2010/05/31/quit-facebook-day-flops-as-only-1-in-15000-pledge-to-quit/ https://mashable.com/2010/05/20/time-magazine-facebook-2/#CJoRwwgSiaqY
