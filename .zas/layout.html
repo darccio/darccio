@@ -8,6 +8,7 @@
     {{end}}
     <link rel=icon href=/static/favicon.ico>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin-when-crossorigin">
     <style>
         * {
             box-sizing: border-box;
@@ -15,21 +16,21 @@
         }
 
         a {
-            color: #993399;
+            color: #8E2F8E;
         }
 
         html {
             border-style: solid;
             border-width: 5px 0 0 0;
-            border-color: #404040;
+            border-color: #993399;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
         }
 
         body {
             background-color: white;
             margin: 0;
-            max-width: 800px;
-            padding: 0 20px 20px 20px;
+            max-width: 30em;
+            padding: 0 0.75em 0.75em 0.75em;
             font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
             line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
         }
@@ -39,7 +40,7 @@
         }
 
         p {
-            margin-bottom: 10px;
+            margin-bottom: 0.35em;
         }
 
         img {
@@ -48,8 +49,8 @@
 
         .home {
             display: inline-block;
-            margin-top: 20px;
-            padding-top: 10px;
+            margin-top: 1.5em;
+            max-width: 3em;
         }
 
         /* Desktop sizes */
@@ -67,7 +68,7 @@
     <noscript><link rel="stylesheet" type="text/css" href="/static/styles.css"></noscript>
 </head>
 <body>
-<a class="home" href="/"><img src="/static/favicon-32x32.png"></a>
+<a class="home" href="/"><img alt='{{.E "home"}}' src="/static/_.png"></a>
 {{if not .Title}}
 <h1>{{.Extra "/site/title"}}</h1>
 {{end}}

@@ -43,6 +43,10 @@ net-neutrality:
     en: Net neutrality
     es: Neutralidad de la red
 license:
-    ca: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ca" target="_blank">Creative Commons Reconeixement-CompartirIgual 4.0 Internacional</a>
-    en: <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>
-    es: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES" target="_blank">Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional</a>
+    ca: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ca">Creative Commons Reconeixement-CompartirIgual 4.0 Internacional</a>
+    en: <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+    es: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional</a>
+home:
+    ca: Inici
+    en: Home
+    es: Inicio
