@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{.Language}}">
+<html lang="{{.Language}}" prefix="og: http://ogp.me/ns#">
 <head>
     {{if .Title}}
     <title>{{.Title}} | {{.Extra "/site/title"}}</title>
@@ -53,14 +53,19 @@
             max-width: 3em;
         }
 
-        nav > div {
+        nav {
             display: flex;
             min-height: 48px;
-            align-items: center;
         }
 
-        nav > div > a {
+        nav > a {
             min-height: 48px;
+            width: 100%;
+        }
+
+        .u-photo {
+            margin-top: 1em;
+            width: unset;
         }
 
         /* Desktop sizes */
@@ -68,25 +73,57 @@
             ol {
                 column-count: 2;
             }
+
             body {
                 margin-left: 60px;
                 margin-right: 60px;
+            }
+
+            nav {
+                align-items: baseline;
+                flex-direction: column;
+                min-height: unset;
+            }
+
+            nav > a {
+                min-height: unset;
+                width: unset;
             }
         }
     </style>
     <link rel="preload" href="/static/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" type="text/css" href="/static/styles.css"></noscript>
+    {{if .Resolve "description"}}
+    <meta name="description" content='{{.Resolve "description"}}'>
+    <meta property="og:description" content='{{.Resolve "description"}}'>
+    {{end}}
+    {{if .Title}}
+    <meta property="og:title" content='{{.Title}} | {{.Extra "/site/title"}}'>
+    {{else}}
+    <meta property="og:title" content='{{.Extra "/site/title"}}'>
+    {{end}}
+    <meta property="og:url" content="{{.URL}}">
+    <meta property="og:type" content="profile">
+    <meta property="og:locale" content="{{.Language}}">
+    <meta property="og:site_name" content='{{.Extra "/site/title"}}'>
+    {{if .Resolve "image"}}
+    <meta property="og:image" content='{{.Resolve "image"}}'>
+    {{else}}
+    <meta property="og:image" content="{{.Site.BaseURL}}/static/_.png">
+    {{end}}
 </head>
 {{if .Resolve "body_class"}}
 <body class='{{.Resolve "body_class"}}'>
 {{else}}
 <body>
 {{end}}
-<a class="home u-url u-uid" href="/"><img alt='{{.E "home"}}' src="/static/_.png"></a>
+<a class="home u-url u-uid" rel="author" href="/"><img alt='{{.E "home"}}' src="/static/_.png"></a>
 {{if not .Title}}
 <h1 class="p-name fn">{{.Extra "/site/title"}}</h1>
 {{end}}
 <main>{{.Body}}</main>
-<footer>2009-2020 {{.Extra "/site/title"}} - {{.H "license"}} - Site generated with <a href="https://github.com/imdario/zas">Zas</a>.</footer>
+<footer>
+    <p>2009-2020 {{.Extra "/site/title"}} - {{.H "license"}} - Site generated with <a href="//github.com/imdario/zas">Zas</a>.</p>
+</footer>
 </body>
 </html>

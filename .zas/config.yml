@@ -3,7 +3,7 @@ mimetypes:
   text/markdown: markdown
   text/plain: plain
 site:
-  baseurl: http://da.rio.hn
+  baseurl: https://da.rio.hn
   language: ca
   title: Dario Castañé
 zas:
