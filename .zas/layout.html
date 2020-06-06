@@ -77,10 +77,14 @@
     <link rel="preload" href="/static/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" type="text/css" href="/static/styles.css"></noscript>
 </head>
+{{if .Resolve "body_class"}}
+<body class='{{.Resolve "body_class"}}'>
+{{else}}
 <body>
-<a class="home" href="/"><img alt='{{.E "home"}}' src="/static/_.png"></a>
+{{end}}
+<a class="home u-url u-uid" href="/"><img alt='{{.E "home"}}' src="/static/_.png"></a>
 {{if not .Title}}
-<h1>{{.Extra "/site/title"}}</h1>
+<h1 class="p-name fn">{{.Extra "/site/title"}}</h1>
 {{end}}
 <main>{{.Body}}</main>
 <footer>2009-2020 {{.Extra "/site/title"}} - {{.H "license"}} - Site generated with <a href="https://github.com/imdario/zas">Zas</a>.</footer>

@@ -1,9 +1,12 @@
+<!--
+body_class: h-card vcard
+-->
 ## Qui sóc?
 
-Collita del 85. Enginyer en Informàtica de Sistemes per la UOC i tech lead a [Loyal Guru](https://loyal.guru). Portaveu internacional de [Pirates de Catalunya](https://pirates.cat), secretari de [Blockchain Catalunya](https://blockchaincatalunya.org/), president de la [Fundació Inceptum](https://inceptum.org) i ex-regidor per Decidim Igualada. Desenvolupador de [programari lliure](https://github.com/imdario), organitzador del meetup [IGD Tech & Drinks](https://www.meetup.com/es-ES/IGD-Tech-Drinks/) i membre del consell consultiu de [TIC Anoia](https://www.ticanoia.cat/).
+Collita del <time datetime="1985-09-23" class="dt-bday">1985</time>. <span class="p-role role">Enginyer en Informàtica de Sistemes</span> per la <a class="p-org org h-card" href="https://www.uoc.edu/">UOC</a> i <span class="p-role role">tech lead</span> a <a class="p-org org h-card" href="https://loyal.guru">Loyal Guru</a>. <span class="p-role role">Portaveu internacional</span> de <a class="p-org org h-card" href="https://pirates.cat">Pirates de Catalunya</a>, <span class="p-role role">secretari</span> de <a class="p-org org h-card" href="https://blockchaincatalunya.org/">Blockchain Catalunya</a>, <span class="p-role role">president</span> de la <a class="p-org org h-card" href="https://inceptum.org">Fundació Inceptum</a> i <span class="p-role role">ex-regidor</span> per <span class="p-org org">Decidim Igualada</span>. <span class="p-role role">Desenvolupador</span> de <a class="u-url url" href="https://github.com/imdario">programari lliure</a>, <span class="p-role role">organitzador</span> del meetup <a class="p-org org h-card" href="https://www.meetup.com/es-ES/IGD-Tech-Drinks/">IGD Tech & Drinks</a> i <span class="p-role role">membre del consell consultiu</span> de <a class="p-org org h-card" href="https://www.ticanoia.cat/">TIC Anoia</a>.</p>
 
-Escric sobre tecnologia i el seu impacte en la societat, [organitzacions](/es/posts/introduccion-organizaciones-liquidas) i política. També en faig [xerrades i tallers](https://speakerdeck.com/dario).
+Escric sobre tecnologia i el seu impacte en la societat, [organitzacions](/es/posts/introduccion-organizaciones-liquidas) i política. També en faig <a class="u-url url" href="https://speakerdeck.com/dario">xerrades i tallers</a>.
 
 ## Contacte
 
-<embed src=".zas/partials/contact.md" type="text/markdown" />
+<embed src=".zas/partials/contact.html" type="text/html" />

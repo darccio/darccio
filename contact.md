@@ -1,3 +1,3 @@
 # Contacte
 
-<embed src=".zas/partials/contact.md" type="text/markdown" />
+<embed src=".zas/partials/contact.html" type="text/html" />
