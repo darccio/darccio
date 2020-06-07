@@ -111,6 +111,7 @@
     {{else}}
     <meta property="og:image" content="{{.Site.BaseURL}}/static/_.png">
     {{end}}
+    {{if .Resolve "vcard"}}<link rel="alternate" type="text/vcard" href='{{.Resolve "vcard"}}'>{{end}}
 </head>
 {{if .Resolve "body_class"}}
 <body class='{{.Resolve "body_class"}}'>
