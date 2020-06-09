@@ -129,5 +129,12 @@
 <footer>
     <p>2009-2020 {{.Extra "/site/title"}} - {{.H "license"}} - Site generated with <a href="//github.com/imdario/zas">Zas</a>.</p>
 </footer>
+<script>
+    if (window.location.host !== '{{.Extra "/site/host"}}') {
+        window.goatcounter = {no_onload: true}
+    }
+</script>
+<script data-goatcounter="https://stats.rio.hn/count" async src="//stats.rio.hn/count.js"></script>
+<noscript><img src="https://stats.rio.hn/count?p=/test-img"></noscript>
 </body>
 </html>
