@@ -17,14 +17,14 @@ Per saber què fer, cal conèixer els fets. El dia 9 d'agost es va fer la presen
 
 <figure>
 <img src="https://pbs.twimg.com/media/E8Vn4XhX0AcpQvv?format=jpg&name=small">
-<figcaption>Font: [Héctor Tejero](https://twitter.com/htejero_/status/1424676109736681472)</figcaption>
+<figcaption>Font: <a href="https://twitter.com/htejero_/status/1424676109736681472">Héctor Tejero</a></figcaption>
 </figure>
 
 En la llista anterior he afegit un asterisc perquè cal aclarir què estem fent que ho causa. Un gràfic fet per la BBC amb dades de l'informe ens assenyala l'inici de la causa: la revolució industrial que va donar pas al capitalisme.
 
 <figure>
 <img src="https://pbs.twimg.com/media/E8VpnwhXoAMNuye?format=jpg&name=small">
-<figcaption>Font: [@adriaral](https://twitter.com/adriaral/status/1424660996715597824)</figcaption>
+<figcaption>Font: <a href="https://twitter.com/adriaral/status/1424660996715597824">@adriaral</a></figcaption>
 </figure>
 
 Podem afirmar, amb dades a la mà, que la crisi climàtica és responsabilitat del capitalisme. Tant de les elits com dels que hi vivim acrítics o impotents. [Però més dels primers que dels segons](https://twitter.com/Mylestring/status/1424721126534565893), no ens enganyem. Si no us agrada plantejar-lo en aquests termes, diguem-ne que és culpa del sistema econòmic actual.
@@ -37,9 +37,9 @@ Us porto alguns titulars destacats d'aquest resum d'[un article amb les troballe
 
 <dl>
 <dt><strong>Adeu 1,5 °C, hola sobrepassament</strong></dt>
-<dd>Arribarem a l'increment d’1,5-1,6 °C sobre temperatures preindustrials cap a 2030\. Però en el millor dels escenaris ho podem revertir a 1,4 °C cap al 2100.</dd>
+<dd>Arribarem a l'increment d’1,5-1,6 °C sobre temperatures preindustrials cap a 2030. Però en el millor dels escenaris ho podem revertir a 1,4 °C cap al 2100.</dd>
 <dt><strong>Els nostres aliats de la natura es troben dèbils</strong></dt>
-<dd>Boscos, terra i oceans, els nostres [embornals de carboni](https://ca.wikipedia.org/wiki/Embornal_de_carboni), estan saturats i veurem reduïda la seva capacitat d'absorbir les nostres emissions.</dd>
+<dd>Boscos, terra i oceans, els nostres <a href="https://ca.wikipedia.org/wiki/Embornal_de_carboni">embornals de carboni</a>, estan saturats i veurem reduïda la seva capacitat d'absorbir les nostres emissions.</dd>
 <dt><strong>Sí, el canvi climàtic n'és responsable</strong></dt>
 <dd>L’informe posa de manifest l’impressionant progrés d’un nou camp, la ciència de l’atribució, en quantificar fins a quin punt l’escalfament global induït per l’ésser humà augmenta la intensitat o la probabilitat d’un esdeveniment meteorològic extrem concret, com ara una onada de calor, un huracà o un incendi.</dd>
 <dt><strong>El nivell del mar puja, encara més ràpid</strong></dt>
