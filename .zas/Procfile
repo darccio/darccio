@@ -1,2 +1,2 @@
 server: devd -lo ./.zas/deploy
-build: reflex -- zas generate -verbose
+build: reflex .. -- sh -c 'cd .. && zas generate -verbose'

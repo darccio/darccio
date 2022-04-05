@@ -2,6 +2,15 @@ pre {
     overflow: auto;
 }
 
+pre.highlight {
+    overflow: visible;
+    font-size: large;
+    padding: 1em;
+    background: rgb(242,242,242);
+    background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 100%);
+    font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+}
+
 .button {
     display: inline-block;
     background-color: #404040;
