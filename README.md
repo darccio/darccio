@@ -8,7 +8,9 @@ Pirate, trollslayer, gopher, bofher, speaker, engineering manager.
 - [Asembleo](https://github.com/coopanio/asembleo): Pseudoanonymous voting system for general assemblies.
 - [Talks](https://github.com/imdario/talks): my slide decks.
 
-![GitHub Sponsor](https://img.shields.io/github/sponsors/<username>?label=Sponsor&logo=GitHub)
+Please consider sponsoring my work:
+
+[![GitHub Sponsor](https://img.shields.io/github/sponsors/imdario?label=Sponsor&logo=GitHub)](https://github.com/sponsors/imdario)
 
 ## Myself around the net
 
