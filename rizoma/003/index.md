@@ -3,7 +3,7 @@ tags: [ "rizoma" ]
 date_created: 2021-09-05T12:00:00+02:00
 -->
 
-# Estat del català: a l'UCI o acostant-se a la revifada?
+# Rizoma #003: Estat del català: a l'UCI o acostant-se a la revifada?
 
 Feu un experiment: aneu a una cafeteria de Barcelona i demaneu en català un cafè amb llet. Les probabilitats d'acabar amb un cafè amb gel són altes. El primer cop et sorprèn, el segon et molesta i al tercer has après a gaudir d'un cafè fresc. Però per molt inversemblant que ens sembli, això no deixa de ser anecdòtic.
 
