@@ -90,7 +90,7 @@ En una línia més pràctica, podem començar per [tancar les plantes energètiq
 
 Ara pregunta't: quines altres propostes i solucions aplicaries?
 
-Si t'ha agradat i acabes de descobrir Rizoma, subscriu-t'hi [aquí](https://rizoma.da.rio.hn).
+Si t'ha agradat i acabes de descobrir Rizoma, subscriu-t'hi [aquí](https://rizoma.dario.cat).
 
 Fins la propera!  
 **Dario Castañé**

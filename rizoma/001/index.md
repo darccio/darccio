@@ -51,7 +51,7 @@ Com avui és la cloenda dels Jocs Olímpics de Tòquio, et comparteixo una petit
 
 ![Estàtua de Cobi](https://pbs.twimg.com/media/E7D7e4tXIA46ULx?format=jpg&name=small)
 
-Si t'ha agradat i acabes de descobrir Rizoma, subscriu-t'hi [aquí](https://rizoma.da.rio.hn).
+Si t'ha agradat i acabes de descobrir Rizoma, subscriu-t'hi [aquí](https://rizoma.dario.cat).
 
 Fins la propera!  
 **Dario Castañé**

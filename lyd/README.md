@@ -2,7 +2,7 @@
 
 > lýð- _/ˈliːð-/_ from Icelandic, "people" (or related with). lýður: public, popular; lýðræði: democracy.
 
-Welcome to [Lýd](http://lyd.dario.im), an open concept about human communication and organization. It is alive and feed with real experience.
+Welcome to [Lýd](http://dario.cat/lyd), an open concept about human communication and organization. It is alive and feed with real experience.
 
 This project is open to anyone willing to contribute. Feel free to fork and pull request any idea, improvement, etc.
 

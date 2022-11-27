@@ -3,8 +3,8 @@ mimetypes:
   text/markdown: markdown
   text/plain: plain
 site:
-  host: da.rio.hn
-  baseurl: https://da.rio.hn
+  host: dario.cat
+  baseurl: https://dario.cat
   language: ca
   title: Dario Castañé
 zas:

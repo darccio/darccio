@@ -1,7 +1,7 @@
 mimetypes:
   text/markdown: markdown
 site:
-  baseurl: http://lyd.dario.im
+  baseurl: http://dario.cat/lyd
   language: en
 zas:
   deploy: .zas/deploy
