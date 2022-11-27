@@ -1,0 +1,111 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #121513;
+}
+
+a {
+	color: #993399;
+	text-decoration: none;
+}
+
+#layout {
+	padding-left: 13em;
+	left: 0;
+}
+
+#menu {
+	margin-left: -13em;
+	width: 13em;
+	position: fixed;
+	top: 0;
+	left: 13em;
+	bottom: 0;
+	z-index: 1000;
+	overflow-y: auto;
+	background: #FFFFFF;
+	border-right: 1px solid #eeeeee;
+}
+
+#menu .pure-menu-open, #menu .pure-menu .pure-menu-heading {
+	background: transparent;
+	border: 0;
+}
+
+#menu .pure-menu-heading {
+	font-size: 3em;
+	color: #993399;
+	font-weight: bolder;
+}
+
+#menu .pure-menu li a, #legal {
+	padding: 8px 21px;
+}
+
+#menu .pure-menu li a:hover {
+	color: #993399;
+}
+
+#legal {
+	font-size: 89%;
+	padding-top: 3em;
+}
+
+#legal a, #main a {
+	font-weight: bold;
+}
+
+#main a:hover {
+	text-decoration: underline;
+}
+
+#legal img {
+	margin-left: -3px;
+}
+
+#main {
+	max-width: 83%;
+	width: 100%;
+	padding: 1.3em 0em 3em 3em;
+}
+
+#main p {
+	margin: 0.8em 0;
+	line-height: 1.5em;
+}
+
+#main h2, #main h3 {
+	margin: 1.3em 0 0.5em 0;
+}
+
+#main ul li {
+	line-height: 1.5em;
+}
+
+#main blockquote {
+	margin: 3em 0 2.1em 5em;
+}
+
+#main blockquote p {
+	margin: 0 0 0.5em;
+	font-style: italic;
+	color: #993399;
+}
+
+#main blockquote p:first-child:before {
+	content: '“';
+	display: block;
+	float: left;
+	font-size: 5em;
+	line-height: 0.3em;
+	margin-left: -0.4em;
+	color: #993399;
+	font-style: normal;
+}
+
+#zas {
+	width: 100%;
+	border-top: 1px solid #eee;
+	font-size: 89%;
+	font-style: italic;
+	padding-top: 0.8em;
+}
