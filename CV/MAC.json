@@ -1,27 +1,1192 @@
 {
   "$schema": "https://raw.githubusercontent.com/getmanfred/mac/v0.3/schema/schema.json",
   "settings": {
-    "language": "EN",
+    "language": "ES",
     "MACVersion": "0.3"
   },
   "aboutMe": {
     "profile": {
       "name": "Dario",
       "surnames": "Castañé",
-      "title": "",
-      "description": "",
+      "title": "Senior Software Engineer (Go & Ruby), Engineering Manager, Indie Hacker, FLOSS Evangelist and Public Speaker",
+      "description": "At the core, I'm a generalizing specialist. During my +18 years of experience, I have specialized in different roles, including:\n\n- Full-Stack Software Engineer.\n- DevOps Engineer, using the major cloud providers.\n- Software Architect.\n- Engineering Manager.\n- Ethical Hacker.\n\nMoreover, I have broad knowledge about areas beyond engineering, like:\n\n- Leadership and mentoring.\n- Public speaking.\n- Cost management.\n- Several business domains: tourism, health, retail loyalty programs, citizen participation, public administration, etc.\n\nI'm an enthusiastic free software advocate, releasing various libraries and projects. One of them, [Mergo](https://github.com/imdario/mergo) (a small library to merge Go structs), is used by 60K repositories only in GitHub, and it's used actively in big projects like Docker and Kubernetes, running my code millions of times around the world at the heart of the cloud.\n\nAlso, I'm an activist for civil rights, open source, open access and free culture, an experienced speaker, and an indie hacker.\n\nI'm seeking a change starting from September 2023 to take another step in my professional journey.",
+      "avatar": {
+        "alt": "163009.jpg",
+        "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/02/77023195-2e50-484d-901e-296364874fae_163009.jpg"
+      },
       "location": {
-        "notes": "Barcelona"
+        "country": "España",
+        "region": "Cataluña",
+        "municipality": "Barcelona",
+        "notes": "Autocompleted using Google Maps API"
       }
     },
     "relevantLinks": [
       {
+        "type": "other",
+        "URL": "https://dario.cat"
+      },
+      {
         "type": "github",
         "URL": "https://github.com/imdario"
+      },
+      {
+        "type": "linkedin",
+        "URL": "https://www.linkedin.com/in/darccio/"
+      }
+    ]
+  },
+  "experience": {
+    "jobs": [
+      {
+        "organization": {
+          "name": "Coopanio OÜ",
+          "image": {
+            "alt": "42222943.png",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/19aed9ab-a002-4928-89e3-3619b823c5e9_42222943.png"
+          },
+          "URL": "https://coopanio.com/"
+        },
+        "roles": [
+          {
+            "name": "Founder",
+            "startDate": "2021-05-01",
+            "challenges": [
+              {
+                "description": "Unlocking Collective Wisdom: Make Decisions & Take Action with Confidence\n\nOur platform allows organizations to easily collaborate and document ideas, proposals, and decisions. With our built-in feedback and voting tools, you can discuss and refine ideas, and make informed decisions with confidence. Join the many organizations that are using Coopanio to improve their knowledge management and decision-making processes."
+              }
+            ],
+            "competences": [
+              {
+                "name": "Go",
+                "type": "technology"
+              },
+              {
+                "name": "Ruby on Rails",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Loyal Guru",
+          "image": {
+            "alt": "1652371083997.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/02/d0ff9a81-e292-46ef-bf45-6f9c9746a1c9_1652371083997.jpg"
+          },
+          "URL": "https://loyal.guru"
+        },
+        "roles": [
+          {
+            "name": "Engineering Manager",
+            "startDate": "2019-11-01",
+            "challenges": [
+              {
+                "description": "[Mid-senior]\n\n- Team's members churn rate of 0% in all my time as Engineering Manager.\n- Improved voucher generation by 6x, now delivering millions of vouchers per hour.\n- Reduced main API's response times by 70%.\n- Deliver good quality source code adjusted to given boundaries with a 90% success rate.\n- 7 direct reports."
+              }
+            ],
+            "competences": [
+              {
+                "name": "BigQuery",
+                "type": "technology"
+              },
+              {
+                "name": "Go",
+                "type": "technology"
+              },
+              {
+                "name": "Google Cloud",
+                "type": "technology"
+              },
+              {
+                "name": "Heroku",
+                "type": "technology"
+              },
+              {
+                "name": "PostgreSQL",
+                "type": "technology"
+              },
+              {
+                "name": "Ruby on Rails",
+                "type": "technology"
+              },
+              {
+                "name": "Sendgrid",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "IGD Tech & Drinks",
+          "image": {
+            "alt": "photo_2022-11-03_17-18-55.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/65c045d9-8ea0-42ff-9a6d-8ea3db7d5e91_photo_2022-11-03_17-.jpg"
+          },
+          "URL": "https://t.me/igdtech"
+        },
+        "roles": [
+          {
+            "name": "Organizer",
+            "startDate": "2018-09-01",
+            "challenges": [
+              {
+                "description": "Meetup organized at Igualada, Barcelona."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Fundación Inceptum",
+          "image": {
+            "alt": "1579699798001.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/ff65c36f-200e-46f9-aa64-5f5758bf50bb_1579699798001.jpg"
+          },
+          "URL": "https://inceptum.org/"
+        },
+        "roles": [
+          {
+            "name": "President",
+            "startDate": "2014-01-01",
+            "challenges": [
+              {
+                "description": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Pirate Parties International",
+          "image": {
+            "alt": "R.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/fa2c440d-0bda-4641-ab0d-054e92d31e70_r.jpg"
+          },
+          "URL": "https://pp-international.net/"
+        },
+        "roles": [
+          {
+            "name": "Board Member",
+            "startDate": "2020-12-01",
+            "finishDate": "2023-01-01",
+            "challenges": [
+              {
+                "description": "The aim of this international organization of Pirate Parties is to help establish, to support and promote, and to maintain communication and cooperation between Pirate Parties around the world."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Loyal Guru",
+          "image": {
+            "alt": "1652371083997.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/02/38651e8f-0ccb-47e1-8486-f8a3db911cfc_1652371083997.jpg"
+          },
+          "URL": "https://loyal.guru"
+        },
+        "roles": [
+          {
+            "name": "Senior Go/Ruby Software Engineer",
+            "startDate": "2019-11-01",
+            "finishDate": "2020-03-01",
+            "challenges": [
+              {
+                "description": ""
+              }
+            ],
+            "competences": [
+              {
+                "name": "BigQuery",
+                "type": "technology"
+              },
+              {
+                "name": "Go",
+                "type": "technology"
+              },
+              {
+                "name": "Google Cloud",
+                "type": "technology"
+              },
+              {
+                "name": "Heroku",
+                "type": "technology"
+              },
+              {
+                "name": "PostgreSQL",
+                "type": "technology"
+              },
+              {
+                "name": "Ruby on Rails",
+                "type": "technology"
+              },
+              {
+                "name": "Sendgrid",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "TICAnoia",
+          "image": {
+            "alt": "1573034165619.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/c27659ec-9d13-4fcd-a83d-76e072c0b973_1573034165619.jpg"
+          },
+          "URL": "https://www.ticanoia.cat/"
+        },
+        "roles": [
+          {
+            "name": "Board Advisor",
+            "startDate": "2019-10-01",
+            "finishDate": "2022-08-01",
+            "challenges": [
+              {
+                "description": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Associació Blockchain Catalunya",
+          "image": {
+            "alt": "1548520492053.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/da37cadd-6ddf-4d23-900a-68b6847ab039_1548520492053.jpg"
+          },
+          "URL": "https://blockchaincatalunya.org/"
+        },
+        "roles": [
+          {
+            "name": "Board Member",
+            "startDate": "2019-05-01",
+            "finishDate": "2021-05-01",
+            "challenges": [
+              {
+                "description": ""
+              }
+            ],
+            "competences": [
+              {
+                "name": "Ethereum",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "TICAnoia",
+          "image": {
+            "alt": "1573034165619.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/31491a27-2ed4-4932-b935-1ef5a8519207_1573034165619.jpg"
+          },
+          "URL": "https://www.ticanoia.cat/"
+        },
+        "roles": [
+          {
+            "name": "Board Member",
+            "startDate": "2015-09-01",
+            "finishDate": "2019-10-01",
+            "challenges": [
+              {
+                "description": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Ajuntament d'Igualada",
+          "image": {
+            "alt": "índex.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/914849f5-8bdd-491e-bef3-848014e474f7_index.jpg"
+          },
+          "URL": "https://www.igualada.cat/"
+        },
+        "roles": [
+          {
+            "name": "City Council Member",
+            "startDate": "2015-05-01",
+            "finishDate": "2019-05-01",
+            "challenges": [
+              {
+                "description": "Elected city council member for Decidim Igualada."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Epnuke",
+          "image": {
+            "alt": "6d863d6d60be19308b0bf581880e3941_400x400.png",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/65dd05bc-d335-45d1-a12f-a9dcf939a85a_6d863d6d60be19308b0b.png"
+          },
+          "URL": "https://anoiadiari.cat/societat/empresa-igualadina-crea-joc-mobils-sobre-llegenda-sant-jordi/"
+        },
+        "roles": [
+          {
+            "name": "Technomancer",
+            "startDate": "2012-03-01",
+            "finishDate": "2013-10-01",
+            "challenges": [
+              {
+                "description": "I cast Python spells to untangle gamebooks graphs for \nGamebook Experience, the line of gamebooks released by Epnuke Studio.\n\nAs Technomancer, I developed Kerta, a language to annotate plain text to allow the reader app to reproduce complex gamebooks. Also, I have been involved in all the steps of the design of the game: \"Saint George, the forging of a Legend\"."
+              }
+            ],
+            "competences": [
+              {
+                "name": "Python",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Qomun",
+          "image": {
+            "alt": "avatars-000043491615-dtvs82-t500x500.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/f26166a1-8354-439f-b305-6ca4f831fa60_avatars-000043491615.jpg"
+          },
+          "URL": "https://www.gutierrez-rubi.es/2011/07/29/zw-269-qomun-y-openlibra/"
+        },
+        "roles": [
+          {
+            "name": "Founder",
+            "startDate": "2010-01-01",
+            "finishDate": "2014-02-01",
+            "challenges": [
+              {
+                "description": "A libre and free culture directory and promotion non-profit platform. Share, remix and love."
+              }
+            ],
+            "competences": [
+              {
+                "name": "Google Cloud",
+                "type": "technology"
+              },
+              {
+                "name": "JAVA",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Enginyeria de Software, S.A.",
+          "image": {
+            "alt": "1550762444067.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/02/f4c34540-0500-4b18-83e8-b4f703366676_1550762444067.jpg"
+          },
+          "URL": "https://www.engisoft.com/"
+        },
+        "roles": [
+          {
+            "name": "Full-Stack Software Engineer",
+            "startDate": "2006-04-01",
+            "finishDate": "2019-11-01",
+            "challenges": [
+              {
+                "description": "Full stack engineer for high availability cloud systems.\n\nProjects:\n\n- Successfully implemented a PCI DSS bubble for processing credit cards in a global hospitality company with more than 400 establishments.\n- Integrated an innovative portable electrocardiography device with HL7-based PACS.\n- Managed a highly available booking platform with integration with external on-line travel agencies."
+              }
+            ],
+            "competences": [
+              {
+                "name": "AWS",
+                "type": "technology"
+              },
+              {
+                "name": "Ansible",
+                "type": "technology"
+              },
+              {
+                "name": "Chef",
+                "type": "technology"
+              },
+              {
+                "name": "Django",
+                "type": "technology"
+              },
+              {
+                "name": "J2EE",
+                "type": "technology"
+              },
+              {
+                "name": "JAVA",
+                "type": "technology"
+              },
+              {
+                "name": "Linux",
+                "type": "technology"
+              },
+              {
+                "name": "WebComponents",
+                "type": "technology"
+              },
+              {
+                "name": "jQuery",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "details": {
+          "name": "Asembleo",
+          "description": " Pseudo-anonymous voting system for distributed general assemblies, organizations, or events.",
+          "URL": "https://github.com/coopanio/asembleo",
+          "image": {
+            "alt": "42222943.png",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/d7a9888e-8083-4240-aafc-22964253133e_42222943.png"
+          }
+        },
+        "type": "openSource",
+        "roles": [
+          {
+            "name": "Developer",
+            "startDate": "2020-09-01",
+            "competences": [
+              {
+                "name": "Ruby on Rails",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "details": {
+          "name": "Zas",
+          "description": " Simple static website generator in Golang. ",
+          "URL": "https://github.com/imdario/zas",
+          "image": {
+            "alt": "687474703a2f2f692e696d6775722e636f6d2f653961625752582e706e67.png",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/33c7b44c-094b-4405-9675-b4410d616223_687474703a2f2f692e69.png"
+          }
+        },
+        "type": "openSource",
+        "roles": [
+          {
+            "name": "Developer",
+            "startDate": "2013-03-01",
+            "competences": [
+              {
+                "name": "CSS",
+                "type": "technology"
+              },
+              {
+                "name": "Go",
+                "type": "technology"
+              },
+              {
+                "name": "HTML",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "details": {
+          "name": "Mergo",
+          "description": "A helper to merge structs and maps in Golang. Useful for configuration default values, avoiding messy if-statements.\n\nUsed by Docker, Kubernetes, VMWare, Telefónica, Shopify, etc.",
+          "URL": "https://github.com/imdario/mergo",
+          "image": {
+            "alt": "Go-Logo_Aqua.png",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/ebdcd96f-9efb-4ec4-8784-1cb518337ed5_go-logo_aqua.png"
+          }
+        },
+        "type": "openSource",
+        "roles": [
+          {
+            "name": "Developer",
+            "startDate": "2013-03-01",
+            "competences": [
+              {
+                "name": "Go",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "details": {
+          "name": "14fruites.cat",
+          "description": "I led the effort of building the UI for 14fruites.cat, the blockchain-based opinion poll, featured in TV3, RTVE, and other media. It integrated with Vocdoni's digital voting platform using React.\n\nAlmost 2.000 people participated in this initiative.",
+          "URL": "https://www.elnacional.cat/es/politica/2000-personas-participan-primera-prueba-voto-digital-14-f_583530_102.html",
+          "image": {
+            "alt": "56851220.png",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/02/dad90588-c79e-4f49-ac52-80edb2da8d7d_56851220.png"
+          }
+        },
+        "type": "sideProject",
+        "roles": [
+          {
+            "name": "Developer",
+            "startDate": "2021-02-01",
+            "finishDate": "2021-02-01",
+            "competences": [
+              {
+                "name": "React",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "details": {
+          "name": "Freedom to Share",
+          "description": "**Cause:** Civil Rights and Social Action\n**Role:** organizer\n\nEuropean Citizen Initiative to legalise sharing – via digital networks, for personal use and non-profit purposes – of files containing works and other material protected by copyright, related rights and sui generis database rights, with a view to striking a balance between the rights of authors and other rightholders and the universal right to science and culture.",
+          "URL": "https://freesharing.eu",
+          "image": {
+            "alt": "1605530825765.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/df73d71f-18ba-4f0e-9be3-8d3c58aeefad_1605530825765.jpg"
+          }
+        },
+        "type": "sideProject",
+        "roles": [
+          {
+            "name": "Developer",
+            "startDate": "2020-05-01",
+            "finishDate": "2021-05-01"
+          }
+        ]
+      },
+      {
+        "details": {
+          "name": "Saint George 2, heroes without honor",
+          "description": "",
+          "URL": "https://anoiadiari.cat/societat/arriba-segona-part-del-llibre-joc-llegenda-sant-jordi/",
+          "image": {
+            "alt": "gbx_logo.png",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/29ad3694-c727-4da1-8089-b96160718f6b_gbx_logo.png"
+          }
+        },
+        "type": "sideProject",
+        "roles": [
+          {
+            "name": "Developer",
+            "startDate": "2012-04-01",
+            "finishDate": "2012-09-01",
+            "competences": [
+              {
+                "name": "Python",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "details": {
+          "name": "Saint George, the forging of a Legend",
+          "description": "I have been involved in all the steps of the design of the game and developed Kerta, a DSL to describe gamebooks.",
+          "URL": "https://cargad.com/index.php/2013/10/08/entrevista-a-gbx-gamebook-experience/",
+          "image": {
+            "alt": "gbx_logo.png",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/3f392f42-dc2f-4905-8ad9-3d51fe09b49b_gbx_logo.png"
+          }
+        },
+        "type": "sideProject",
+        "roles": [
+          {
+            "name": "Developer",
+            "startDate": "2011-07-01",
+            "finishDate": "2012-04-01",
+            "competences": [
+              {
+                "name": "Python",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "publicArtifacts": [
+      {
+        "details": {
+          "name": "GoDevNet: Generics: ¿A dónde vamos desde aquí? Speaker: Dario Castañé ",
+          "description": "Tras una larga década, los genéricos están en Go. Y ahora, qué hacemos con ellos? Esta es una charla introductoria para conocer mejor esta nueva herramienta en nuestro cinturón. ",
+          "URL": "https://www.youtube.com/watch?v=_7paSqvhLbo",
+          "image": {
+            "alt": "gpkk0ci8_400x400.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/60c7fceb-1e96-4452-91b2-051f1da1d0be_gpkk0ci8_400x400.jpg"
+          }
+        },
+        "type": "talk",
+        "publishingDate": "2023-01-01",
+        "relatedCompetences": [
+          {
+            "name": "Go",
+            "type": "technology"
+          }
+        ],
+        "tags": [
+          "Open source"
+        ]
+      },
+      {
+        "details": {
+          "name": "Autodefensa digital: Què podem fer per protegir les nostres vides (digitals)? ",
+          "description": " Conferència sobre Seguretat Digital - Què podem fer per evitar que ens espiïn. ",
+          "URL": "https://www.youtube.com/watch?v=0mX-ofgn45o",
+          "image": {
+            "alt": "channels4_profile.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/238f6646-e7d7-43a7-b73a-63d373e57425_channels4_profile.jpg"
+          }
+        },
+        "type": "talk",
+        "publishingDate": "2023-01-01",
+        "tags": [
+          "Digital self-defense & cybersecurity"
+        ]
+      },
+      {
+        "details": {
+          "name": " ÚLTIM INFORME SOBRE PEGASUS la punta d'un iceberg, per Josep Jover i Dario Castañé ",
+          "description": "El programari Pegasus no és més que la constatació empírica de la desconfiança que demostren els actors estatals per implementar i estendre la feina d’intel·ligència al domini cibernètic, fins i tot a risc de compartir la informació obtinguda amb actors privats patrocinats per estats estrangers, els objectius polítics dels quals es desconeixen. Però també, i aquesta és una de les conclusions que podem treure, la desconfiança d’elits funcionarials i extractives contra els propis polítics i contra les seves pròpies elits competidores.\n\nA Espanya s’identifiquen clarament quatre grups, que són en aquest ordre, el CNI, la Guàrdia Civil, la Policia Nacional i el lobby dels grans bancs i empreses. I les seves víctimes – poques són terroristes i autors de delinqüència greu – són activistes, periodistes, advocats, funcionaris de tots els nivells i adversaris polítics, adversaris entre els quals es compten també els propis membres del govern, companys de partit i l’oposició.\n\nPegasus és un malware/spyware creat per la companyia israeliana NSO Group Technologies, dedicada a la creació de programari d’intrusió i monitoratge, i que és venut de manera “legal” als estats com una eina destinada a combatre el terrorisme i el crim organitzat. No obstant això, tal com s’ha demostrat a través dels diferents escàndols d’espionatge estatal que ha protagonitzat –i que han transcendit al públic–, les víctimes potencials de Pegasus no es limiten únicament al món de l’hampa o de terroristes acreditats; aquests són, com s’ha dit, precisament, els menys.\n\nLa forma d’infecció mitjançant Pegasus és relativament simple, una vegada seleccionada la víctima per part de l’emissor, (amb el que l’estat d’Israel i la meitat de les empreses d’intel·ligència del món saben que és un “subjecte d’interès”(1), aquest envia un missatge amb un enllaç infecciós camuflat en un contingut aparentment legítim, el qual permet descarregar de manera inadvertida el programari maliciós, una vegada que la víctima accedeix a aquest. Des d’aquest moment, el spyware permet al comprador i usuari de Pegasus recopilar la informació emmagatzemada en el dispositiu i monitorar de manera constant l’activitat del terminal, ja que, donat el seu caràcter modular el malware permet a l’atacant adquirir un control total del dispositiu, permetent-li llegir missatges, accedir als seus comptes personals, conèixer les contrasenyes emprades, activar les càmeres i el micròfon del dispositiu, etc. O dit d’una altra manera, Pegasus permet tenir un accés total a la intimitat digital de la víctima, la seva agenda, els seus contactes i el seu entorn, mitjançant la recopilació i actualització d’una quantitat ingent de dades.",
+          "URL": "https://www.youtube.com/watch?v=nHOYr44l3c8",
+          "image": {
+            "alt": "1519870598806.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/25db8e7b-853d-4cfd-865d-19fe4f8686ae_1519870598806.jpg"
+          }
+        },
+        "type": "talk",
+        "publishingDate": "2022-09-01",
+        "tags": [
+          "Politics"
+        ]
+      },
+      {
+        "details": {
+          "name": "#Firma Libertad Para Compartir - Darío Castañé | freesharing.eu",
+          "description": "",
+          "URL": "https://www.youtube.com/watch?v=HOAPwBl0GiI",
+          "image": {
+            "alt": "unnamed.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/e1247d49-185c-4cca-b7c7-12ffab3bdba3_unnamed.jpg"
+          }
+        },
+        "type": "talk",
+        "publishingDate": "2021-12-01",
+        "tags": [
+          "Politics"
+        ]
+      },
+      {
+        "details": {
+          "name": "GoDevNet: Dario Castañé - Oops - I broke Docker. A story about maintaining github.com/imdario/mergo",
+          "description": "Releasing code in the open is an act of kindness. You help to scratch the same itch you had. But you don't know who will use this code. Mine ended in the heart of the cloud: containers. Mergo is a small library used to merge structs used by Docker, Kubernetes, and other big projects. And, because of one teeny tiny mistake, I broke a released version of Docker. This talk is the story of what happened and what lessons I learned.",
+          "URL": "https://www.youtube.com/watch?v=kx1ycW4YGqQ",
+          "image": {
+            "alt": "gpkk0ci8_400x400.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/84d209a9-44da-46d4-9e39-b45b9bc81653_gpkk0ci8_400x400.jpg"
+          }
+        },
+        "type": "talk",
+        "publishingDate": "2021-09-01",
+        "relatedCompetences": [
+          {
+            "name": "Go",
+            "type": "technology"
+          }
+        ],
+        "tags": [
+          "Open source"
+        ]
+      },
+      {
+        "details": {
+          "name": "EsLibre 2021 - Dario Castañé - Libertad para compartir",
+          "description": "Esta iniciativa aboga por la adopción de una disposición legislativa que contemple una exención de los derechos de autor, derechos afines y derechos sui generis del fabricante de bases de datos para las personas físicas que comparten archivos a través de redes digitales para fines personales y sin ánimo de lucro.\n\n- Web del proyecto: https://freesharing.eu/es",
+          "URL": "https://commons.wikimedia.org/wiki/File:EsLibre_2021_P31_-_Dario_Casta%C3%B1%C3%A9_-_Libertad_para_compartir.webm",
+          "image": {
+            "alt": "firefox_UIuMXYf3Ki.png",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/8a64f382-e056-4f89-9df1-edeb090fd49e_firefox_uiumxyf3ki.png"
+          }
+        },
+        "type": "talk",
+        "publishingDate": "2021-06-01",
+        "tags": [
+          "Politics"
+        ]
+      },
+      {
+        "details": {
+          "name": "Debat virtual de #PolíTICa: Descobrim les propostes dels partits sobre Telecomunicacions i TIC ",
+          "description": "Que les Telecomunicacions i les TIC són estratègiques per al futur del nostre país és una realitat inqüestionable. És per això que des de l’Associació Catalana d’Enginyers de Telecomunicació (Telecos.cat) volem interpel·lar les principals candidatures que concorren a les eleccions al Parlament de Catalunya per tal de conèixer les seves propostes en relació al nostre sector.\n\nEl proper dijous 21 de gener a partir de les 17h diferents representants polítics participaran en un debat virtual -realitzat amb la col·laboració especial de Floss- que girarà al voltant de cinc eixos temàtics:\n\n1. El model de les Telecomunicacions i de les TIC a Catalunya\n2. Inversions previstes en Telecomunicacions i TIC\n3. Infraestructures\n4. Serveis i continguts\n5. R+D+I\n\nModerats pel periodista Daniel Condeminas, hi participaran: \n\n- Dimas Gragera (en representació de Ciutadans)\n- Jordi Puigneró (en representació de Junts per Catalunya)\n- Jordi Albert (en representació d’Esquerra Republicana de Catalunya)\n- Alícia Romero (en representació del Partit dels Socialistes de Catalunya)\n- Marc Parés (en representació de Catalunya en Comú-Podem)\n- Dario Castañé (en representació de la CUP-Guanyem)\n• Santi Rodríguez (en representació del Partit Popular)\n• Marc Arza (en representació del PDeCAT)\n\nEls inscrits al debat també podran participar-hi fent arribar les seves preguntes a la part final de la sessió a través del canal de whatsapp que facilitarem al directe.",
+          "URL": "https://www.youtube.com/watch?v=x6C_mwsypz8",
+          "image": {
+            "alt": "unnamed.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/1117ddf6-9599-4c81-bec3-101256dbb13d_unnamed.jpg"
+          }
+        },
+        "type": "video",
+        "publishingDate": "2021-01-01",
+        "tags": [
+          "Politics"
+        ]
+      },
+      {
+        "details": {
+          "name": "Tecnologies disruptives i el seu impacte social - Dario Castañé [Mobile Week Igualada 2020]",
+          "description": "La tecnologia és neutral? La disrupció té només beneficis? Controlem la tecnologia o ens controla? Cal establir una ètica tecnològica?\n\nAquestes preguntes i d'altres seran tractades en aquesta xerrada de la mà de Dario Castañé, Enginyer en Informàtica de Sistemes per la UOC, desenvolupador de programari lliure i exregidor.",
+          "URL": "https://www.youtube.com/watch?v=jVE-9WYNkoo",
+          "image": {
+            "alt": "1573034165619.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/49bd7c88-26ab-44a0-beea-f1abb7fadb5f_1573034165619.jpg"
+          }
+        },
+        "type": "talk",
+        "publishingDate": "2021-01-01",
+        "tags": [
+          "Politics"
+        ]
+      },
+      {
+        "details": {
+          "name": "Buscando Alternativas | 25/09/2020 | Programari Lliure (CAT)",
+          "description": "Entrevista sobre programari lliure a RCR Barcelona. ",
+          "URL": "https://www.youtube.com/watch?v=-kX9VH_TaTc",
+          "image": {
+            "alt": "unnamed.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/18e94f22-41ed-4661-bd45-976546ee9684_unnamed.jpg"
+          }
+        },
+        "type": "talk",
+        "publishingDate": "2020-09-01",
+        "tags": [
+          "Politics"
+        ]
+      },
+      {
+        "details": {
+          "name": " Data extraction assistant for EU Horizon 2020 project",
+          "description": "Data extraction assistant for EU-funded project to compare effectiveness of self-management health interventions in high priority chronic diseases: developed in Django.",
+          "URL": "https://www.fadq.org/portfolio/compar-eu/",
+          "image": {
+            "alt": "1550762444067.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/02/3ebbd3fd-c3d3-4de5-ab44-ab39b2db9db6_1550762444067.jpg"
+          }
+        },
+        "type": "launch",
+        "publishingDate": "2019-08-01",
+        "relatedCompetences": [
+          {
+            "name": "Django",
+            "type": "technology"
+          }
+        ],
+        "tags": [
+          "Work project"
+        ]
+      },
+      {
+        "details": {
+          "name": "Estat de Gràcia - Ahoy! Celebrem el Dia Mundial de Parlar com un Pirata!",
+          "description": "Tot el que no sabies dels pirates i més ho aprendràs escoltant la Núria Bàguena, historiadora experta en gastronomia i cuina pirata; l'Enric García Domingo, historiador del Museu Marítim de Barcelona, i en Darío Castañé, portaveu del Partit Pirates de Catalunya. Què menjaven? Què bevien? Com parlaven? I què fan els pirates del segle XXI?",
+          "URL": "https://www.ccma.cat/catradio/alacarta/estat-de-gracia/ahoy-celebrem-el-dia-mundial-de-parlar-com-un-pirata/video/5787087/",
+          "image": {
+            "alt": "OIP.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/b806fc5b-7b07-4d46-bca3-a80682f7e431_oip.jpg"
+          }
+        },
+        "type": "video",
+        "publishingDate": "2018-09-01",
+        "tags": [
+          "Politics"
+        ]
+      },
+      {
+        "details": {
+          "name": "PCI compliant serverless infrastructure",
+          "description": "Development and management of a PCI compliant Cloud Infrastructure on AWS. Project highlighted as an example of serverless architecture by Werner Vogels in 2018 AWS Summit at Madrid.",
+          "image": {
+            "alt": "1550762444067.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/02/b7dd3983-ba30-40aa-b13b-62426bd6b54f_1550762444067.jpg"
+          }
+        },
+        "type": "launch",
+        "publishingDate": "2018-04-01",
+        "relatedCompetences": [
+          {
+            "name": "AWS",
+            "type": "technology"
+          },
+          {
+            "name": "Docker",
+            "type": "technology"
+          },
+          {
+            "name": "JAVA",
+            "type": "technology"
+          },
+          {
+            "name": "PCI",
+            "type": "technology"
+          }
+        ],
+        "tags": [
+          "Work project"
+        ]
+      },
+      {
+        "details": {
+          "name": "Referéndum Real Ya",
+          "description": "From https://15mpedia.org/wiki/Referendum_Real_Ya:\n\nReferendum Real Ya is the name given to an activity launched by 15M collectives and the DRY Platform, which have called a referendum to be held between June 14 and 19, before the proclamation of Felipe VI. In this citizen referenda (not official or binding), Internet voting will be allowed through the Ágora Voting platform, already used in the Podemos primaries or the Compromís party's Transparent Congress initiative. The AgoraVoting platform allows authentication through the digital certificate of the DNIe.",
+          "URL": "https://www.eldiario.es/politica/participantes-consulta-ciudadana-referendum-favor_1_4811752.html",
+          "image": {
+            "alt": "307209884_194619246266931_8290699176205588932_n.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/02/cfcce81b-d35b-4448-8cab-b5f236ab7743_307209884_1946192462.jpg"
+          }
+        },
+        "type": "launch",
+        "publishingDate": "2014-06-01",
+        "relatedCompetences": [
+          {
+            "name": "JavaScript",
+            "type": "technology"
+          },
+          {
+            "name": "Python",
+            "type": "technology"
+          }
+        ],
+        "tags": [
+          "Politics"
+        ]
+      },
+      {
+        "details": {
+          "name": "Multireferèndum",
+          "description": "From http://www.multireferendum.cat/:\n\nMultireferendum 2014 is a popular referenda, by the people for the people, to debate and decide on issues blocked in political institutions. It was born at the proposal of Som lo que Sembrem and the Platform Stop Fracking and has culminated in a first wave, during the weeks before the European elections in May 2014. With it, we are looking for practices that lead us towards a growing and direct democracy .",
+          "URL": "http://www.multireferendum.cat/",
+          "image": {
+            "alt": "OIP.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/02/7b001894-9548-4127-aa4c-7d1a874f0f1f_oip.jpg"
+          }
+        },
+        "type": "launch",
+        "publishingDate": "2014-05-01",
+        "relatedCompetences": [
+          {
+            "name": "Go",
+            "type": "technology"
+          },
+          {
+            "name": "Python",
+            "type": "technology"
+          }
+        ],
+        "tags": [
+          "Politics"
+        ]
+      },
+      {
+        "details": {
+          "name": "Integration platform for medical data capture and archive",
+          "description": "High throughput platform to capture and consolidate medical data in Picture Archiving and Communication Systems (PACS).",
+          "image": {
+            "alt": "1550762444067.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/02/09555cc4-42b3-4fc4-8d27-47904174428f_1550762444067.jpg"
+          }
+        },
+        "type": "launch",
+        "publishingDate": "2008-01-01",
+        "relatedCompetences": [
+          {
+            "name": "HL7",
+            "type": "technology"
+          },
+          {
+            "name": "JAVA",
+            "type": "technology"
+          }
+        ],
+        "tags": [
+          "Work project"
+        ]
+      }
+    ]
+  },
+  "knowledge": {
+    "languages": [
+      {
+        "name": "Catalan",
+        "level": "Native or bilingual proficiency"
+      },
+      {
+        "name": "English",
+        "level": "Full professional proficiency"
+      },
+      {
+        "name": "Spanish",
+        "level": "Native or bilingual proficiency"
+      }
+    ],
+    "hardSkills": [
+      {
+        "skill": {
+          "name": "Ruby on Rails",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Google Cloud",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Ruby",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Go",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "PostgreSQL",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "AWS",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Django",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Python",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "MySQL",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "JAVA",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "JavaScript",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "BigQuery",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Docker",
+          "type": "technology"
+        }
+      }
+    ],
+    "studies": [
+      {
+        "studyType": "certification",
+        "degreeAchieved": false,
+        "name": "Wardley Mapping Practitioner",
+        "startDate": "2023-01-01",
+        "institution": {
+          "name": "Hired Thought",
+          "description": "Credential ID cert_l8gscclx",
+          "URL": "https://learnwardleymapping.com/",
+          "image": {
+            "alt": "1602031269628.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/2e241038-ee06-4302-850d-687a05927a28_1602031269628.jpg"
+          }
+        }
+      },
+      {
+        "studyType": "certification",
+        "degreeAchieved": false,
+        "name": "Triplebyte Engineering Certificate",
+        "startDate": "2022-12-01",
+        "institution": {
+          "name": "Triplebyte",
+          "description": "Credential ID XQryY8M",
+          "URL": "https://triplebyte.com/tb/dario-castane-2chveq3/certificate",
+          "image": {
+            "alt": "1592438653658.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/c891e2d9-8b8c-4b9f-9128-8c4edb39d652_1592438653658.jpg"
+          }
+        },
+        "linkedCompetences": [
+          {
+            "name": "Go",
+            "type": "technology"
+          },
+          {
+            "name": "SQL",
+            "type": "technology"
+          }
+        ]
+      },
+      {
+        "studyType": "certification",
+        "degreeAchieved": false,
+        "name": "TeamOps Certification",
+        "startDate": "2022-11-01",
+        "institution": {
+          "name": "GitLab",
+          "description": "",
+          "URL": "https://levelup.gitlab.com/c/MHqNizkSRVGn2Se1Vko9EQ",
+          "image": {
+            "alt": "1651058101845.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/35cbbf12-6ada-441a-891f-a7b22d21d9ca_1651058101845.jpg"
+          }
+        }
+      },
+      {
+        "studyType": "certification",
+        "degreeAchieved": false,
+        "name": "LFS172x: Introduction to Hyperledger Sovereign Identity Blockchain Solutions: Indy, Aries & Ursa",
+        "startDate": "2021-05-01",
+        "institution": {
+          "name": "The Linux Foundation",
+          "description": "Credential ID c01eb4d1abc548b790f2920728d60bcd",
+          "URL": "https://courses.edx.org/certificates/c01eb4d1abc548b790f2920728d60bcd",
+          "image": {
+            "alt": "1608046236488.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/02e08197-4fa3-4a7c-b42d-5d58a965ee37_1608046236488.jpg"
+          }
+        },
+        "linkedCompetences": [
+          {
+            "name": "Ethereum",
+            "type": "technology"
+          },
+          {
+            "name": "Go",
+            "type": "technology"
+          }
+        ]
+      },
+      {
+        "studyType": "certification",
+        "degreeAchieved": false,
+        "name": "Introducción al peritaje jurídico informático",
+        "startDate": "2016-01-01",
+        "institution": {
+          "name": "Aspertic – Asociación Mediterránea de Peritos de las TIC",
+          "description": "",
+          "image": {
+            "alt": "1519870598806.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/bdf978df-0e5f-4343-a0ae-4190302e25d1_1519870598806.jpg"
+          }
+        }
+      },
+      {
+        "studyType": "certification",
+        "degreeAchieved": true,
+        "name": "AWS Certified Solutions Architect",
+        "startDate": "2015-12-01",
+        "finishDate": "2020-12-01",
+        "institution": {
+          "name": "Amazon Web Services (AWS)",
+          "description": "Credential ID AWS-ASA-ES-17 (valid until December 2020)",
+          "image": {
+            "alt": "1670264050886.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/d3c74dfe-fc9a-407c-9c4b-b8fc0d8a4cf4_1670264050886.jpg"
+          }
+        },
+        "linkedCompetences": [
+          {
+            "name": "AWS",
+            "type": "technology"
+          }
+        ]
+      },
+      {
+        "studyType": "unaccredited",
+        "degreeAchieved": true,
+        "name": "Seguridad Informática y Hacking de Sistemas",
+        "startDate": "2007-01-01",
+        "finishDate": "2007-03-01",
+        "institution": {
+          "name": "Ceina Formació",
+          "description": "",
+          "URL": "https://www.educaweb.com/curso/seguridad-informatica-hacking-sistemas-barcelona-124456/",
+          "image": {
+            "alt": "1519904565902.jpg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/1d917a15-001e-443f-9303-a39f3e1b20f9_1519904565902.jpg"
+          }
+        }
+      },
+      {
+        "studyType": "officialDegree",
+        "degreeAchieved": true,
+        "name": "Bachelor, Computer Science",
+        "startDate": "2006-09-01",
+        "finishDate": "2010-06-01",
+        "institution": {
+          "name": "Universitat Oberta de Catalunya",
+          "description": "",
+          "image": {
+            "alt": "1667376612569.jpeg",
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/03/b89b9506-b507-4ef7-a8b1-b24e32d98226_1667376612569.jpeg"
+          }
+        }
       }
     ]
   },
   "careerPreferences": {
+    "contact": {
+      "publicProfiles": [
+        {
+          "type": "linkedin",
+          "URL": "https://www.linkedin.com/in/darccio/"
+        }
+      ]
+    },
     "preferences": {
       "preferredCompetences": [
         {
@@ -32,7 +1197,33 @@
           "name": "Ruby on Rails",
           "type": "technology"
         }
+      ],
+      "discardedCompetences": [
+        {
+          "name": "PHP",
+          "type": "technology"
+        }
+      ],
+      "preferredRoles": [
+        "Backend Developer",
+        "Director / General Manager",
+        "Engineering Management",
+        "Software Architect",
+        "VP of Engineering"
       ]
-    }
+    },
+    "status": "openToOffers"
+  },
+  "asgardPreferences": {
+    "mainStackTechs": [
+      {
+        "name": "Ruby on Rails",
+        "type": "technology"
+      },
+      {
+        "name": "Go",
+        "type": "technology"
+      }
+    ]
   }
 }
