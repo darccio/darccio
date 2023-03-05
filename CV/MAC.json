@@ -9,7 +9,7 @@
       "name": "Dario",
       "surnames": "Castañé",
       "title": "Senior Software Engineer (Go & Ruby), Engineering Manager, Indie Hacker, FLOSS Evangelist and Public Speaker",
-      "description": "At the core, I'm a generalizing specialist. During my +18 years of experience, I have specialized in different roles, including:\n\n- Full-Stack Software Engineer.\n- DevOps Engineer, using the major cloud providers.\n- Software Architect.\n- Engineering Manager.\n- Ethical Hacker.\n\nMoreover, I have broad knowledge about areas beyond engineering, like:\n\n- Leadership and mentoring.\n- Public speaking.\n- Cost management.\n- Several business domains: tourism, health, retail loyalty programs, citizen participation, public administration, etc.\n\nI'm an enthusiastic free software advocate, releasing various libraries and projects. One of them, [Mergo](https://github.com/imdario/mergo) (a small library to merge Go structs), is used by 60K repositories only in GitHub, and it's used actively in big projects like Docker and Kubernetes, running my code millions of times around the world at the heart of the cloud.\n\nAlso, I'm an activist for civil rights, open source, open access and free culture, an experienced speaker, and an indie hacker.\n\nI'm seeking a change starting from September 2023 to take another step in my professional journey.",
+      "description": "At the core, I'm a generalizing specialist. During my +18 years of experience, I have specialized in different roles, including:\n\n- Full-Stack Software Engineer.\n- DevOps Engineer, using the major cloud providers.\n- Software Architect.\n- Engineering Manager.\n- Ethical Hacker.\n\nMoreover, I have broad knowledge about areas beyond engineering, like:\n\n- Leadership and mentoring.\n- Public speaking.\n- Cost management.\n- Several business domains: tourism, health, retail loyalty programs, citizen participation, public administration, etc.\n\nI'm an enthusiastic free software advocate, releasing various libraries and projects. One of them, [Mergo](https://github.com/imdario/mergo) (a small library to merge Go structs), is used by 60K repositories only in GitHub, and it's used actively in big projects like Docker and Kubernetes, running my code millions of times around the world at the heart of the cloud.\n\nAlso, I'm an activist for civil rights, open source, open access and free culture, an experienced speaker, and an indie hacker.",
       "avatar": {
         "alt": "163009.jpg",
         "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/02/77023195-2e50-484d-901e-296364874fae_163009.jpg"
@@ -23,14 +23,6 @@
     },
     "relevantLinks": [
       {
-        "type": "other",
-        "URL": "https://dario.cat"
-      },
-      {
-        "type": "github",
-        "URL": "https://github.com/imdario"
-      },
-      {
         "type": "linkedin",
         "URL": "https://www.linkedin.com/in/darccio/"
       }
@@ -40,12 +32,7 @@
     "jobs": [
       {
         "organization": {
-          "name": "Coopanio OÜ",
-          "image": {
-            "alt": "42222943.png",
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/19aed9ab-a002-4928-89e3-3619b823c5e9_42222943.png"
-          },
-          "URL": "https://coopanio.com/"
+          "name": "Coopanio OÜ"
         },
         "roles": [
           {
@@ -55,28 +42,13 @@
               {
                 "description": "Unlocking Collective Wisdom: Make Decisions & Take Action with Confidence\n\nOur platform allows organizations to easily collaborate and document ideas, proposals, and decisions. With our built-in feedback and voting tools, you can discuss and refine ideas, and make informed decisions with confidence. Join the many organizations that are using Coopanio to improve their knowledge management and decision-making processes."
               }
-            ],
-            "competences": [
-              {
-                "name": "Go",
-                "type": "technology"
-              },
-              {
-                "name": "Ruby on Rails",
-                "type": "technology"
-              }
             ]
           }
         ]
       },
       {
         "organization": {
-          "name": "Loyal Guru",
-          "image": {
-            "alt": "1652371083997.jpg",
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/02/d0ff9a81-e292-46ef-bf45-6f9c9746a1c9_1652371083997.jpg"
-          },
-          "URL": "https://loyal.guru"
+          "name": "Loyal Guru"
         },
         "roles": [
           {
@@ -86,48 +58,13 @@
               {
                 "description": "[Mid-senior]\n\n- Team's members churn rate of 0% in all my time as Engineering Manager.\n- Improved voucher generation by 6x, now delivering millions of vouchers per hour.\n- Reduced main API's response times by 70%.\n- Deliver good quality source code adjusted to given boundaries with a 90% success rate.\n- 7 direct reports."
               }
-            ],
-            "competences": [
-              {
-                "name": "BigQuery",
-                "type": "technology"
-              },
-              {
-                "name": "Go",
-                "type": "technology"
-              },
-              {
-                "name": "Google Cloud",
-                "type": "technology"
-              },
-              {
-                "name": "Heroku",
-                "type": "technology"
-              },
-              {
-                "name": "PostgreSQL",
-                "type": "technology"
-              },
-              {
-                "name": "Ruby on Rails",
-                "type": "technology"
-              },
-              {
-                "name": "Sendgrid",
-                "type": "technology"
-              }
             ]
           }
         ]
       },
       {
         "organization": {
-          "name": "IGD Tech & Drinks",
-          "image": {
-            "alt": "photo_2022-11-03_17-18-55.jpg",
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/65c045d9-8ea0-42ff-9a6d-8ea3db7d5e91_photo_2022-11-03_17-.jpg"
-          },
-          "URL": "https://t.me/igdtech"
+          "name": "IGD Tech & Drinks"
         },
         "roles": [
           {
@@ -143,12 +80,7 @@
       },
       {
         "organization": {
-          "name": "Fundación Inceptum",
-          "image": {
-            "alt": "1579699798001.jpg",
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/ff65c36f-200e-46f9-aa64-5f5758bf50bb_1579699798001.jpg"
-          },
-          "URL": "https://inceptum.org/"
+          "name": "Fundación Inceptum"
         },
         "roles": [
           {
@@ -164,12 +96,7 @@
       },
       {
         "organization": {
-          "name": "Pirate Parties International",
-          "image": {
-            "alt": "R.jpg",
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/fa2c440d-0bda-4641-ab0d-054e92d31e70_r.jpg"
-          },
-          "URL": "https://pp-international.net/"
+          "name": "Pirate Parties International"
         },
         "roles": [
           {
@@ -186,12 +113,7 @@
       },
       {
         "organization": {
-          "name": "Loyal Guru",
-          "image": {
-            "alt": "1652371083997.jpg",
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/02/38651e8f-0ccb-47e1-8486-f8a3db911cfc_1652371083997.jpg"
-          },
-          "URL": "https://loyal.guru"
+          "name": "Loyal Guru"
         },
         "roles": [
           {
@@ -202,48 +124,13 @@
               {
                 "description": ""
               }
-            ],
-            "competences": [
-              {
-                "name": "BigQuery",
-                "type": "technology"
-              },
-              {
-                "name": "Go",
-                "type": "technology"
-              },
-              {
-                "name": "Google Cloud",
-                "type": "technology"
-              },
-              {
-                "name": "Heroku",
-                "type": "technology"
-              },
-              {
-                "name": "PostgreSQL",
-                "type": "technology"
-              },
-              {
-                "name": "Ruby on Rails",
-                "type": "technology"
-              },
-              {
-                "name": "Sendgrid",
-                "type": "technology"
-              }
             ]
           }
         ]
       },
       {
         "organization": {
-          "name": "TICAnoia",
-          "image": {
-            "alt": "1573034165619.jpg",
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/c27659ec-9d13-4fcd-a83d-76e072c0b973_1573034165619.jpg"
-          },
-          "URL": "https://www.ticanoia.cat/"
+          "name": "TICAnoia"
         },
         "roles": [
           {
@@ -260,12 +147,7 @@
       },
       {
         "organization": {
-          "name": "Associació Blockchain Catalunya",
-          "image": {
-            "alt": "1548520492053.jpg",
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/da37cadd-6ddf-4d23-900a-68b6847ab039_1548520492053.jpg"
-          },
-          "URL": "https://blockchaincatalunya.org/"
+          "name": "Associació Blockchain Catalunya"
         },
         "roles": [
           {
@@ -276,24 +158,13 @@
               {
                 "description": ""
               }
-            ],
-            "competences": [
-              {
-                "name": "Ethereum",
-                "type": "technology"
-              }
             ]
           }
         ]
       },
       {
         "organization": {
-          "name": "TICAnoia",
-          "image": {
-            "alt": "1573034165619.jpg",
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/31491a27-2ed4-4932-b935-1ef5a8519207_1573034165619.jpg"
-          },
-          "URL": "https://www.ticanoia.cat/"
+          "name": "TICAnoia"
         },
         "roles": [
           {
@@ -310,12 +181,7 @@
       },
       {
         "organization": {
-          "name": "Ajuntament d'Igualada",
-          "image": {
-            "alt": "índex.jpg",
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/914849f5-8bdd-491e-bef3-848014e474f7_index.jpg"
-          },
-          "URL": "https://www.igualada.cat/"
+          "name": "Ajuntament d'Igualada"
         },
         "roles": [
           {
@@ -332,12 +198,7 @@
       },
       {
         "organization": {
-          "name": "Epnuke",
-          "image": {
-            "alt": "6d863d6d60be19308b0bf581880e3941_400x400.png",
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/65dd05bc-d335-45d1-a12f-a9dcf939a85a_6d863d6d60be19308b0b.png"
-          },
-          "URL": "https://anoiadiari.cat/societat/empresa-igualadina-crea-joc-mobils-sobre-llegenda-sant-jordi/"
+          "name": "Epnuke"
         },
         "roles": [
           {
@@ -348,24 +209,13 @@
               {
                 "description": "I cast Python spells to untangle gamebooks graphs for \nGamebook Experience, the line of gamebooks released by Epnuke Studio.\n\nAs Technomancer, I developed Kerta, a language to annotate plain text to allow the reader app to reproduce complex gamebooks. Also, I have been involved in all the steps of the design of the game: \"Saint George, the forging of a Legend\"."
               }
-            ],
-            "competences": [
-              {
-                "name": "Python",
-                "type": "technology"
-              }
             ]
           }
         ]
       },
       {
         "organization": {
-          "name": "Qomun",
-          "image": {
-            "alt": "avatars-000043491615-dtvs82-t500x500.jpg",
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/f26166a1-8354-439f-b305-6ca4f831fa60_avatars-000043491615.jpg"
-          },
-          "URL": "https://www.gutierrez-rubi.es/2011/07/29/zw-269-qomun-y-openlibra/"
+          "name": "Qomun"
         },
         "roles": [
           {
@@ -376,28 +226,13 @@
               {
                 "description": "A libre and free culture directory and promotion non-profit platform. Share, remix and love."
               }
-            ],
-            "competences": [
-              {
-                "name": "Google Cloud",
-                "type": "technology"
-              },
-              {
-                "name": "JAVA",
-                "type": "technology"
-              }
             ]
           }
         ]
       },
       {
         "organization": {
-          "name": "Enginyeria de Software, S.A.",
-          "image": {
-            "alt": "1550762444067.jpg",
-            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/02/f4c34540-0500-4b18-83e8-b4f703366676_1550762444067.jpg"
-          },
-          "URL": "https://www.engisoft.com/"
+          "name": "Enginyeria de Software, S.A."
         },
         "roles": [
           {
@@ -407,44 +242,6 @@
             "challenges": [
               {
                 "description": "Full stack engineer for high availability cloud systems.\n\nProjects:\n\n- Successfully implemented a PCI DSS bubble for processing credit cards in a global hospitality company with more than 400 establishments.\n- Integrated an innovative portable electrocardiography device with HL7-based PACS.\n- Managed a highly available booking platform with integration with external on-line travel agencies."
-              }
-            ],
-            "competences": [
-              {
-                "name": "AWS",
-                "type": "technology"
-              },
-              {
-                "name": "Ansible",
-                "type": "technology"
-              },
-              {
-                "name": "Chef",
-                "type": "technology"
-              },
-              {
-                "name": "Django",
-                "type": "technology"
-              },
-              {
-                "name": "J2EE",
-                "type": "technology"
-              },
-              {
-                "name": "JAVA",
-                "type": "technology"
-              },
-              {
-                "name": "Linux",
-                "type": "technology"
-              },
-              {
-                "name": "WebComponents",
-                "type": "technology"
-              },
-              {
-                "name": "jQuery",
-                "type": "technology"
               }
             ]
           }
@@ -952,7 +749,43 @@
     "hardSkills": [
       {
         "skill": {
+          "name": "BigQuery",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "JAVA",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
           "name": "Ruby on Rails",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "PostgreSQL",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Python",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Docker",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Django",
           "type": "technology"
         }
       },
@@ -970,43 +803,7 @@
       },
       {
         "skill": {
-          "name": "Go",
-          "type": "technology"
-        }
-      },
-      {
-        "skill": {
-          "name": "PostgreSQL",
-          "type": "technology"
-        }
-      },
-      {
-        "skill": {
-          "name": "AWS",
-          "type": "technology"
-        }
-      },
-      {
-        "skill": {
-          "name": "Django",
-          "type": "technology"
-        }
-      },
-      {
-        "skill": {
-          "name": "Python",
-          "type": "technology"
-        }
-      },
-      {
-        "skill": {
           "name": "MySQL",
-          "type": "technology"
-        }
-      },
-      {
-        "skill": {
-          "name": "JAVA",
           "type": "technology"
         }
       },
@@ -1018,13 +815,13 @@
       },
       {
         "skill": {
-          "name": "BigQuery",
+          "name": "Go",
           "type": "technology"
         }
       },
       {
         "skill": {
-          "name": "Docker",
+          "name": "AWS",
           "type": "technology"
         }
       }
