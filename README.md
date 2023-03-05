@@ -1,6 +1,6 @@
 # Bon dia, I'm Dario! 👋
 
-Pirate, trollslayer, gopher, bofher, speaker, engineering manager.
+Senior Software Engineer (Go & Ruby), Engineering Manager, Indie Hacker, FLOSS Evangelist and Public Speaker.
 
 ## I'm known for...
 
