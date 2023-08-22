@@ -4,9 +4,9 @@ Senior Software Engineer (Go & Ruby), Engineering Manager, Indie Hacker, FLOSS E
 
 ## I'm known for...
 
-- [Mergo](https://github.com/imdario/mergo): Simple structs & maps merging for Go.
+- [Mergo](https://github.com/darccio/mergo): Simple structs & maps merging for Go.
 - [Asembleo](https://github.com/coopanio/asembleo): Pseudoanonymous voting system for general assemblies.
-- [Talks](https://github.com/imdario/talks): my slide decks.
+- [Talks](https://github.com/darccio/talks): my slide decks.
 
 Please consider sponsoring my work:
 
@@ -16,7 +16,7 @@ Please consider sponsoring my work:
 
 - [Web](https://dario.cat)
 - [Fediverse](https://mastodont.cat/@dario)
-- [BlueSky](https://staging.bsky.app/profile/dario.cat)
+- [BlueSky](https://bsky.app/profile/dario.cat)
 - [LinkedIn](https://linkedin.com/in/darccio)
 - [Manfred Awesomic CV](/CV/MAC.json): an open-source, interchangeable, machine-readable format. It's also synchronized with [my profile in Manfred](https://getmanfred.com/profile/dcc).
 

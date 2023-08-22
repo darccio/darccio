@@ -11,7 +11,7 @@ images: [ "/images/delete-facebook-1.png" ]
 
 Com vaig prometre, [segueixo documentant](https://dario.cat/posts/delete-facebook/). Aquests últims dies he recuperat l'ús del meu domini personal, que faré servir com a perfil principal. Els seus avantatges no vénen sense desavantatges. D'una banda controlaré la meva identitat, combinat amb [Keybase](https://keybase.io) (més sobre aquesta eina en una altra entrega), i l'autoria dels meus textos, disponibles sota llicència [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.ca). Hi ha més avantatges, però no vull allargar-me i abans he de reconèixer que això no està a l'abast de qualsevol sense caure en una altra plataforma privativa i molt menys sense cap cost.
 
-Per si algú té curiositat, el web està generada amb [Hugo](https://gohugo.io/), usant el tema [Minimo](https://themes.gohugo.io/theme/minimo/). [Repositori disponible aquí](https://github.com/imdario/dario.cat) per als més tècnics.
+Per si algú té curiositat, el web està generada amb [Hugo](https://gohugo.io/), usant el tema [Minimo](https://themes.gohugo.io/theme/minimo/). [Repositori disponible aquí](https://github.com/darccio/dario.cat) per als més tècnics.
 
 També he revisat què logins tinc actius i he vist que són 123. 123 webs externes i aplicacions de mòbil on inicio sessió amb Facebook perquè és còmode. També solc fer-ho amb Twitter. És molt còmode però inconvenient. Inconvenient per casos com el que ens ocupa, però l'exercici serveix per prendre consciència del fàcil que és caure en el parany de la utilitat abans que fer la presa de decisions orientada a mantenir la sobirania personal de la teva informació.
 

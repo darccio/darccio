@@ -11,7 +11,7 @@ images: [ "/images/delete-facebook-1.png" ]
 
 Como prometí, [sigo documentando](https://dario.cat/es/posts/delete-facebook/). Estos últimos días he recuperado el uso de mi dominio personal, que usaré como perfil principal. Sus ventajas no vienen sin desventajas. Por una parte controlaré mi identidad, combinado con [Keybase](https://keybase.io) (más sobre esta herramienta en otra entrega), y la autoría de mis textos, disponibles bajo licencia [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES). Hay más ventajas, pero no quiero alargarme y antes debo reconocer que esto no está al alcance de cualquiera sin caer en otra plataforma privativa y mucho menos sin coste alguno.
 
-Por si alguien tiene curiosidad, la web está generada con [Hugo](https://gohugo.io), usando el tema [Minimo](https://themes.gohugo.io/theme/minimo/). [Repositorio disponible aquí](https://github.com/imdario/dario.cat) para los más técnicos.
+Por si alguien tiene curiosidad, la web está generada con [Hugo](https://gohugo.io), usando el tema [Minimo](https://themes.gohugo.io/theme/minimo/). [Repositorio disponible aquí](https://github.com/darccio/dario.cat) para los más técnicos.
 
 También he revisado qué logins tengo activos y he visto que son 123. 123 webs externas y aplicaciones de móvil en las que inicio sesión con Facebook porque es cómodo. También suelo hacerlo con Twitter. Es muy cómodo pero inconveniente. Inconveniente por casos como el que nos ocupa, pero el ejercicio sirve para tomar conciencia de lo fácil que es caer en la trampa de la utilidad antes que hacer una toma de decisiones orientada a mantener la soberanía personal de tu información.
 

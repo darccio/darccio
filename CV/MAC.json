@@ -9,7 +9,7 @@
       "name": "Dario",
       "surnames": "Castañé",
       "title": "Senior Software Engineer (Go & Ruby), Engineering Manager, Indie Hacker, FLOSS Evangelist and Public Speaker",
-      "description": "At the core, I'm a generalizing specialist. During my +18 years of experience, I have specialized in different roles, including:\n\n- Full-Stack Software Engineer.\n- DevOps Engineer, using the major cloud providers.\n- Software Architect.\n- Engineering Manager.\n- Ethical Hacker.\n\nMoreover, I have broad knowledge about areas beyond engineering, like:\n\n- Leadership and mentoring.\n- Public speaking.\n- Cost management.\n- Several business domains: tourism, health, retail loyalty programs, citizen participation, public administration, etc.\n\nI'm an enthusiastic free software advocate, releasing various libraries and projects. One of them, [Mergo](https://github.com/imdario/mergo) (a small library to merge Go structs), is used by 60K repositories only in GitHub, and it's used actively in big projects like Docker and Kubernetes, running my code millions of times around the world at the heart of the cloud.\n\nAlso, I'm an activist for civil rights, open source, open access and free culture, an experienced speaker, and an indie hacker.",
+      "description": "At the core, I'm a generalizing specialist. During my +18 years of experience, I have specialized in different roles, including:\n\n- Full-Stack Software Engineer.\n- DevOps Engineer, using the major cloud providers.\n- Software Architect.\n- Engineering Manager.\n- Ethical Hacker.\n\nMoreover, I have broad knowledge about areas beyond engineering, like:\n\n- Leadership and mentoring.\n- Public speaking.\n- Cost management.\n- Several business domains: tourism, health, retail loyalty programs, citizen participation, public administration, etc.\n\nI'm an enthusiastic free software advocate, releasing various libraries and projects. One of them, [Mergo](https://github.com/darccio/mergo) (a small library to merge Go structs), is used by 60K repositories only in GitHub, and it's used actively in big projects like Docker and Kubernetes, running my code millions of times around the world at the heart of the cloud.\n\nAlso, I'm an activist for civil rights, open source, open access and free culture, an experienced speaker, and an indie hacker.",
       "avatar": {
         "alt": "163009.jpg",
         "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/02/77023195-2e50-484d-901e-296364874fae_163009.jpg"
@@ -277,7 +277,7 @@
         "details": {
           "name": "Zas",
           "description": " Simple static website generator in Golang. ",
-          "URL": "https://github.com/imdario/zas",
+          "URL": "https://github.com/darccio/zas",
           "image": {
             "alt": "687474703a2f2f692e696d6775722e636f6d2f653961625752582e706e67.png",
             "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/33c7b44c-094b-4405-9675-b4410d616223_687474703a2f2f692e69.png"
@@ -309,7 +309,7 @@
         "details": {
           "name": "Mergo",
           "description": "A helper to merge structs and maps in Golang. Useful for configuration default values, avoiding messy if-statements.\n\nUsed by Docker, Kubernetes, VMWare, Telefónica, Shopify, etc.",
-          "URL": "https://github.com/imdario/mergo",
+          "URL": "https://github.com/darccio/mergo",
           "image": {
             "alt": "Go-Logo_Aqua.png",
             "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/ebdcd96f-9efb-4ec4-8784-1cb518337ed5_go-logo_aqua.png"
@@ -497,7 +497,7 @@
       },
       {
         "details": {
-          "name": "GoDevNet: Dario Castañé - Oops - I broke Docker. A story about maintaining github.com/imdario/mergo",
+          "name": "GoDevNet: Dario Castañé - Oops - I broke Docker. A story about maintaining github.com/darccio/mergo",
           "description": "Releasing code in the open is an act of kindness. You help to scratch the same itch you had. But you don't know who will use this code. Mine ended in the heart of the cloud: containers. Mergo is a small library used to merge structs used by Docker, Kubernetes, and other big projects. And, because of one teeny tiny mistake, I broke a released version of Docker. This talk is the story of what happened and what lessons I learned.",
           "URL": "https://www.youtube.com/watch?v=kx1ycW4YGqQ",
           "image": {
