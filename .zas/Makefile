@@ -1,5 +1,8 @@
 serve:
-	hivemind
+	hivemind .zas/Procfile
+
+generate:
+	zas generate -full
 
 publish:
 	GOBIN=/tmp go install github.com/darccio/zas@v0.0.4

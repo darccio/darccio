@@ -1,2 +1,1 @@
-server: devd -lo ./.zas/deploy
-build: reflex .. -- sh -c 'cd .. && zas generate -verbose'
+server: caddy file-server --root ./zas/deploy --listen 127.0.0.1:1304
