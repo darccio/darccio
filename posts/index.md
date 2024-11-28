@@ -14,7 +14,7 @@
 - [Rizoma #001](/rizoma/001/)
 - [Rizoma #002: Canvi climàtic. O fallida climàtica? 🌍🔥](/rizoma/002/)
 - [Rizoma #003: Estat del català: a l'UCI o acostant-se a la revifada?](/rizoma/003/)
-- [rizoma/004/index.md](/rizoma/004/)
+- [Rizoma #004: popurri d'enllaços](/rizoma/004/)
 
 ## 2018
 
