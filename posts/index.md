@@ -16,9 +16,17 @@
 - [Rizoma #003: Estat del català: a l'UCI o acostant-se a la revifada?](/rizoma/003/)
 - [Rizoma #004: popurri d'enllaços](/rizoma/004/)
 
+## 2020
+
+- [Contra la compartimentación](https://www.elsaltodiario.com/opinion/queer-marxismo-transfobia-contra-compartimentacion)
+
 ## 2018
 
 - [Blockchain en mi próximo proyecto: ¿sí o no?](/es/posts/blockchain-si-o-no/)
+
+## 2015
+
+- [Per al·lusions](https://www.nuvol.com/pantalles/per-al-lusions-22931)
 
 ## 2014
 
