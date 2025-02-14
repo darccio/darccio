@@ -1,5 +1,9 @@
 # Articles
 
+## 2025
+
+- [Tecnofeudalisme i el Pseudo-Estat: la futura governabilitat del capitalisme](/posts/pseudo-estat/)
+
 ## 2024
 
 - [Un nou camí](/posts/un-nou-cami/)
