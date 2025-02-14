@@ -1,0 +1,18 @@
+<!--
+tags: [ "pseudo-state", "trump", "capitalism", "ai-assisted summary" ]
+date_created: "2025-02-14T12:39:00+01:00"
+image: /static/images/TrumpMileiMusk.jpg
+description: "El capitalisme evoluciona cap a una nova fase on les grans corporacions acumulen poder mitjançant el control de dades i infraestructures digitals. Aquest capitalisme 4.0 planteja reptes de governabilitat, donant lloc al concepte de Pseudo-Estat: una xarxa de corporacions privades que exerceixen poder sense rendició de comptes democràtica. La gestió d'aquesta transició, en un context de crisi climàtica i reterritorialització del capital, podria consolidar una forma autoritària política adaptada a un capitalisme hiperconcentrat, desafiant les expectatives dels seguidors de Musk i Trump."
+-->
+
+# Tecnofeudalisme i el Pseudo-Estat: la futura governabilitat del capitalisme
+
+Segons Alejandro Galliano a [“Los tecnofeudatari de la Gran América otra vez”](https://revistasupernova.com/nota/los-tecnofeudatari-de-la-gran-america-otra-vez), el capitalisme està experimentant una transformació en què les grans corporacions acumulen poder no per innovació, sinó per monopolitzar dades i infraestructures digitals. Alguns autors han descrit aquest fenomen com a “tecnofeudalisme”, establint paral·lelismes amb el feudalisme històric per la seva concentració de riquesa i captació de rendes.
+
+Tanmateix, aquesta analogia és discutible. El capitalisme no depèn exclusivament del mercat, sinó de la lògica d’acumulació, que pot restringir-lo o eliminar-lo quan cal. Fernand Braudel diferenciava entre un intercanvi competitiu i un d’exclusiu i dominant; és en aquest segon en què realment opera el capitalisme.
+
+El repte no és si vivim en un tecnofeudalisme, sinó com es governarà aquesta nova fase del capitalisme que podem anomenar capitalisme 4.0. Figures com Elon Musk i Peter Thiel cerquen una nova governabilitat basada en el control digital d’una societat fragmentada i imprevisible. Però mentre que alguns autors parlen d’un “capitalisme de vigilància”, el model emergent és més complex i caòtic, explotant l’algoritme, la desinformació i el caos digitals per satisfer els interessos de les grans corporacions.
+
+En aquest context, es perfila el que Kevin Batcho anomena “Pseudo-Estat”: una xarxa d’entitats privades que exerceixen poder sense cap rendició de comptes democràtica. A diferència de l'Estat profund, que es basa en la burocràcia, el Pseudo-Estat envaeix institucions estatals i colonitza l’espai públic des de fora d'aquestes. Això ja es va veure amb institucions “filàntropes” durant el segle XX, i ara es reprodueix amb empreses com SpaceX i Palantir, que operen en la frontera difusa entre la cosa pública i la privada.
+
+Trump i les elits que l'acompanyen aspiren a fer aquesta transició enmig d’una crisi climàtica i un procés de reterritorialització del capital. La consolidació del Pseudo-Estat podria ser la forma política més apta per aquest capitalisme hiperconcentrat, obrint una paradoxa per als seus seguidors neoreaccionaris i paleollibertaris. Els primers podrien veure com la seva utopia tecnocràtica es materialitza en una forma encara més autoritària del que imaginaven. Els segons, que somien amb la descentralització i privatització del poder, podrien acabar sota un règim encara més tirànic que els vells Estats nacionals. Quan aquest futur es materialitzi, ja serà massa tard per lamentacions.
