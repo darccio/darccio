@@ -1,0 +1,108 @@
+{
+    "version": "v1.0.0",
+    "entity": {
+      "type": "individual",
+      "role": "owner",
+      "name": "Dario Castañé",
+      "email": "d@rio.hn",
+      "description": "Senior Software Engineer (APM Data Collection and Storage - Go Language Platform @ Datadog), Indie Hacker, FLOSS Evangelist and Public Speaker",
+      "webpageUrl": {
+        "url": "https://dario.cat"
+      }
+    },
+    "projects": [
+      {
+        "guid": "darccio/mergo",
+        "name": "Mergo",
+        "description": "A helper to merge structs and maps in Golang. Useful for configuration default values, avoiding messy if-statements.",
+        "webpageUrl": {
+          "url": "https://github.com/darccio/mergo"
+        },
+        "repositoryUrl": {
+          "url": "https://github.com/darccio/mergo",
+          "wellKnown": "https://github.com/darccio/mergo/blob/master/.well-known/funding-manifest-urls"
+        },
+        "licenses": [
+          "spdx:BSD-3-Clause-Clear"
+        ],
+        "tags": [
+          "go",
+          "mapping",
+          "structures",
+          "merge"
+        ]
+      }
+    ],
+    "funding": {
+      "channels": [
+        {
+          "guid": "github-sponsors",
+          "type": "other",
+          "description": "https://github.com/sponsors/darccio"
+        },
+        {
+          "guid": "bank",
+          "type": "bank",
+          "description": "Will accept direct bank transfers. Please e-mail me for details."
+        },
+        {
+          "guid": "thanks-dev",
+          "type": "other",
+          "description": "https://thanks.dev/gh/darccio"
+        },
+        {
+          "guid": "tidelift",
+          "type": "other",
+          "description": "https://tidelift.com/funding/github/go/github.com/imdario/mergo (only for Mergo)"
+        }
+      ],
+      "plans": [
+        {
+          "guid": "every-drop-makes-an-ocean",
+          "status": "active",
+          "name": "Every drop makes an ocean",
+          "amount": 1,
+          "currency": "USD",
+          "frequency": "monthly",
+          "channels": [
+            "github-sponsors"
+          ]
+        },
+        {
+          "guid": "thanks-for-the-coffee",
+          "status": "active",
+          "name": "Thanks for the coffee!",
+          "amount": 5,
+          "currency": "USD",
+          "frequency": "monthly",
+          "channels": [
+            "github-sponsors"
+          ]
+        },
+        {
+          "guid": "wow-just-wow",
+          "status": "active",
+          "name": "Wow, just wow",
+          "description": "If you ever need support in any of my projects and you are an individual, you'll get priority once per month.",
+          "amount": 20,
+          "currency": "USD",
+          "frequency": "monthly",
+          "channels": [
+            "github-sponsors"
+          ]
+        },
+        {
+          "guid": "startup-tier",
+          "status": "active",
+          "name": "I hope you are a startup that really loves my work",
+          "amount": 200,
+          "currency": "USD",
+          "frequency": "monthly",
+          "channels": [
+            "github-sponsors"
+          ]
+        }
+      ],
+      "history": []
+    }
+  }
