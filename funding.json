@@ -16,7 +16,8 @@
         "name": "Mergo",
         "description": "A helper to merge structs and maps in Golang. Useful for configuration default values, avoiding messy if-statements.",
         "webpageUrl": {
-          "url": "https://github.com/darccio/mergo"
+          "url": "https://github.com/darccio/mergo",
+          "wellKnown": "https://github.com/darccio/mergo/blob/master/.well-known/funding-manifest-urls"
         },
         "repositoryUrl": {
           "url": "https://github.com/darccio/mergo",
