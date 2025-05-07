@@ -12,7 +12,7 @@
     },
     "projects": [
       {
-        "guid": "darccio/mergo",
+        "guid": "mergo",
         "name": "Mergo",
         "description": "A helper to merge structs and maps in Golang. Useful for configuration default values, avoiding messy if-statements.",
         "webpageUrl": {
