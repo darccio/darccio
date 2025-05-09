@@ -10,7 +10,7 @@ Senior Software Engineer (Go & Ruby), Engineering Manager, Indie Hacker, FLOSS E
 
 Please consider sponsoring my work:
 
-[![GitHub Sponsor](https://img.shields.io/github/sponsors/imdario?label=Sponsor&logo=GitHub)](https://github.com/sponsors/imdario)
+[![GitHub Sponsor](https://img.shields.io/github/sponsors/darccio?label=Sponsor&logo=GitHub)](https://github.com/sponsors/darccio)
 
 ## Myself around the net
 
