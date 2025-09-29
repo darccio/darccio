@@ -1,6 +1,6 @@
 # Bon dia, I'm Dario! 👋
 
-Senior Software Engineer (Go & Ruby), Engineering Manager, Indie Hacker, FLOSS Evangelist and Public Speaker.
+Catalan, pirate, gopher, bofher, trollslayer, tsundokusha, speaker, senior open source library software engineer - Go @DataDog 
 
 ## I'm known for...
 
