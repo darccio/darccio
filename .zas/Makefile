@@ -11,3 +11,4 @@ publish:
 	cat darna/index.html > .zas/deploy/darna/index.html
 	cat errors/index.html > .zas/deploy/errors/index.html
 	cat xdr/index.html > .zas/deploy/xdr/index.html
+	cat awaken/index.html > .zas/deploy/awaken/index.html
