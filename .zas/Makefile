@@ -12,3 +12,4 @@ publish:
 	cat errors/index.html > .zas/deploy/errors/index.html
 	cat xdr/index.html > .zas/deploy/xdr/index.html
 	cat awaken/index.html > .zas/deploy/awaken/index.html
+	cat x/index.html > .zas/deploy/x/index.html
