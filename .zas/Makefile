@@ -5,7 +5,7 @@ generate:
 	zas generate -full
 
 publish:
-	GOBIN=/tmp go install github.com/darccio/zas@v0.0.6
+	GOBIN=/tmp go install github.com/darccio/zas/cmd/zas@v0.0.6
 	/tmp/zas generate
 	cat mergo/index.html > .zas/deploy/mergo/index.html
 	cat darna/index.html > .zas/deploy/darna/index.html
