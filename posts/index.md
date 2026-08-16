@@ -1,5 +1,9 @@
 # Articles
 
+## 2026
+
+- [Monitoring a Synology NAS with Datadog](/en/posts/monitoring-synology-nas-with-datadog/)
+
 ## 2025
 
 - [Tecnofeudalisme i el Pseudo-Estat: la futura governabilitat del capitalisme](/posts/pseudo-estat/)
