@@ -13,9 +13,7 @@ Here's the whole setup, in the order I'd do it again.
 
 1. Open DSM > Control Panel > Terminal & SNMP > SNMP.
 2. Check "Enable SNMP service".
-3. Pick a version:
-   - SNMPv2c is simpler. Set a custom community string, never `public`.
-   - SNMPv3 is the one I'd use. Create a user with SHA for authentication and AES for privacy. Synology's SNMP daemon only speaks SHA-1 and AES-128, so don't reach for SHA256 or AES256.
+3. Enable SNMPv3 and create a user with SHA for authentication and AES for privacy. Synology's SNMP daemon only speaks SHA-1 and AES-128, so don't reach for SHA256 or AES256.
 4. Write down your NAS's LAN IP. You need that one, not `127.0.0.1`, because the Agent runs in a bridged container.
 
 ## Step 2: Open the firewall for SNMP
@@ -37,7 +35,7 @@ Order matters here. Create the SNMP config file before the container exists. If 
 1. In File Station, create the project folder, for example `/docker/datadog-agent` inside the `docker` shared folder that Container Manager set up for you (on whichever volume it landed, usually `volume1`). Inside it, create a `conf.d` subfolder.
 2. Inside `conf.d`, create `snmp.yaml` with your NAS IP and the SNMPv3 credentials from step 1:
 
-```yaml
+```
 init_config:
   loader: core
   use_device_id_as_hostname: true
@@ -62,7 +60,7 @@ instances:
 6. Under Source, choose "Create docker-compose.yml".
 7. Paste this, with the `snmp.yaml` bind mount already in `volumes:`:
 
-```yaml
+```
 services:
   datadog-agent:
     image: datadog/agent:7
@@ -98,13 +96,13 @@ Fix the path in that last volume line if you picked a different folder.
 
 Open a terminal from Container Manager, or SSH into DSM and run `docker exec -it datadog-agent bash`, then:
 
-```bash
+```
 agent status
 ```
 
 You want sections for `snmp`, `process` and `logs agent`, and no restart or crash loop. For the SNMP side specifically:
 
-```bash
+```
 agent status | grep -A 10 snmp
 ```
 
@@ -128,15 +126,13 @@ Give it about five minutes. If nothing turns up, skip to the troubleshooting lis
 
 Monitors > New Monitor > Metric, then set up these:
 
-| Metric | Condition | Severity |
-|---|---|---|
-| `snmp.synology.system.temperature` | > 60°C | Critical |
-| `snmp.synology.system.temperature` | > 50°C | Warning |
-| `snmp.synology.diskTemperature` | > 50°C (per disk) | Warning |
-| `snmp.synology.diskStatus` | ≠ 1 (normal) | Critical |
-| `snmp.synology.raidStatus` | in {degrade, crashed} | Critical |
-| Volume usage (`raidFreeSize`/`raidTotalSize`) | > 90% used | Critical |
-| Volume usage | > 80% used | Warning |
+- `snmp.synology.system.temperature` above 60°C, critical.
+- `snmp.synology.system.temperature` above 50°C, warning.
+- `snmp.synology.diskTemperature` above 50°C on any disk, warning.
+- `snmp.synology.diskStatus` anything other than 1 (normal), critical.
+- `snmp.synology.raidStatus` in degrade or crashed, critical.
+- Volume usage (`raidFreeSize`/`raidTotalSize`) above 90%, critical.
+- Volume usage above 80%, warning.
 
 The temperature numbers are a starting point. Check what your drives are actually rated for and move them.
 
