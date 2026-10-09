@@ -9,6 +9,7 @@ publish:
 	/tmp/zas generate
 	cat mergo/index.html > .zas/deploy/mergo/index.html
 	cat darna/index.html > .zas/deploy/darna/index.html
+	cat cocoon/index.html > .zas/deploy/cocoon/index.html
 	cat errors/index.html > .zas/deploy/errors/index.html
 	cat xdr/index.html > .zas/deploy/xdr/index.html
 	cat awaken/index.html > .zas/deploy/awaken/index.html
