@@ -2,13 +2,13 @@ ZAS ?= zas
 ZAS_VERSION := v0.0.9-0.20261011133110-abdae2fd51de
 ZAS_BIN_DIR ?= /tmp/dario-site-zas
 
-.PHONY: serve generate publish check-vanity check-vanity-live test
+.PHONY: serve generate publish check-vanity check-vanity-live check-microformats test
 
 serve:
 	hivemind .zas/Procfile
 
 generate:
-	go -C .tools/vanity run ./cmd/build-site -root ../.. -zas "$(ZAS)"
+	go -C .tools/vanity run ./cmd/build-site -root ../.. -zas "$(ZAS)" -check-microformats
 
 publish:
 	@set -e; \
@@ -19,7 +19,7 @@ publish:
 	fi
 	mkdir -p "$(ZAS_BIN_DIR)"
 	GOBIN="$(abspath $(ZAS_BIN_DIR))" go install github.com/darccio/zas/cmd/zas@$(ZAS_VERSION)
-	go -C .tools/vanity run ./cmd/build-site -root ../.. -zas "$(abspath $(ZAS_BIN_DIR))/zas"
+	go -C .tools/vanity run ./cmd/build-site -root ../.. -zas "$(abspath $(ZAS_BIN_DIR))/zas" -check-microformats
 
 check-vanity:
 	go -C .tools/vanity run ./cmd/vanity -dir ../../.zas/deploy
@@ -27,5 +27,9 @@ check-vanity:
 check-vanity-live:
 	go -C .tools/vanity run ./cmd/vanity -live -base-url https://dario.cat -timeout 10s
 
+check-microformats:
+	go -C .tools/microformats run -mod=readonly ./cmd/microformats -root ../.. -dir ../../.zas/deploy
+
 test:
 	go -C .tools/vanity test ./...
+	go -C .tools/microformats test -mod=readonly ./...

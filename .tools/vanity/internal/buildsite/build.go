@@ -18,9 +18,10 @@ import (
 )
 
 type Options struct {
-	Root   string
-	Zas    string
-	Output io.Writer
+	Root     string
+	Zas      string
+	Output   io.Writer
+	Validate func(context.Context, string) error
 }
 
 func Build(ctx context.Context, options Options) error {
@@ -95,6 +96,11 @@ func Build(ctx context.Context, options Options) error {
 	}
 	if err := vanity.CheckDir(deploy); err != nil {
 		return fmt.Errorf("assembled deployment rejected: %w", err)
+	}
+	if options.Validate != nil {
+		if err := options.Validate(ctx, deploy); err != nil {
+			return fmt.Errorf("assembled microformats rejected: %w", err)
+		}
 	}
 	if err := ctx.Err(); err != nil {
 		return err

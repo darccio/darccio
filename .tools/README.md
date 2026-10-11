@@ -8,6 +8,7 @@ make -f .zas/Makefile generate                  # installed Zas
 make -f .zas/Makefile publish                   # installs the pinned Zas revision
 make -f .zas/Makefile check-vanity
 make -f .zas/Makefile check-vanity-live
+make -f .zas/Makefile check-microformats
 ```
 
 `publish` assembles local `.zas/deploy`; the site's Cloudflare Pages Git integration controls actual deployment. The build-only GitHub workflow does not deploy. `vanity-after-deploy.yml` starts on pushes to production `main` (or a manual retry on `main`), then waits up to eight minutes for that exact SHA's completed, successful `Cloudflare Pages` check from the observed Cloudflare app/project, with its deployment-success title and a `main` check suite. It fails on terminal deployment failures, an unconfirmed result, or timeout; superseded commits are skipped. Only then does it run the shared live checker against `https://dario.cat`, using the deployed commit's baseline. It reads GitHub metadata with `contents: read` and `checks: read`; it never dispatches a deployment. The scheduled/manual monitor remains available independently.
@@ -25,6 +26,21 @@ After generation, each raw vanity source is copied byte for byte into its origin
 When native sitemaps are enabled, assembly finalizes `sitemap.xml` after restoring the seven raw vanity pages. It aligns native locations and translation links with each deployed page's canonical URL, preserves native last-modified dates and translation groups, and adds restored vanity entries using source Git dates when available. Complete HTML coverage, local canonical URLs and reciprocal language links are validated before promotion. This site supports one sitemap; sharded output and unfamiliar XML fields fail explicitly, preserving the previous deployment.
 
 With `site.publish_markdown: true`, Zas emits post-template Markdown companions. After assembly, the builder inserts one Markdown alternate link only where the matching deployed `.md` file exists. HTML sources, unpublished pages and the seven raw vanity pages get no invented twins or links. Discovery URLs follow actual filenames, including `index.md`; invalid or duplicate links fail before promotion. The insertion preserves all existing HTML bytes.
+
+Both build targets also validate microformats in the completed stage before output is promoted. The hidden `.tools/microformats` module parses HTML with `willnorris.com/go/microformats` and selects the representative identity with its `rhc` helper, rather than relying on item order or accepting an organization card. It pins immutable revision `22f0c2eff25b`; the last tagged release, v1.2.0, does not contain `rhc`. Home and about must identify Dario with the stable homepage URL/UID, a local avatar, the public email and all seven verification profiles. Every public post must retain its source name, content, author, canonical URL, summary, tags, language and available publication/update instants. The checker reuses metadata helpers from the same pinned Zas revision as production. Only tracked source history supplies a missing update date; publication dates are never inferred from Git.
+
+The three archives must contain exactly their source-derived article sets, with no duplicate URLs, visible language labels and the known publication precision. Currently there are 33 public local posts, 30 explicit publication instants and three sourced partial dates; the combined archive also retains two separately marked external citations. The live draft URL remains generated but cannot become an entry or appear in an archive. The checker also validates the six dated slash entries, project items, slash-index updates and the dated talks against their existing public sources. It preserves day precision on events and does not invent timestamps for undated talks.
+
+Checks perform no HTTP requests, process no CV data and exclude hidden tooling and private planning artifacts from output. Unit tests use local HTML fixtures and deliberate semantic failures, including organization identity, wrong timezone or author, empty content, missing/duplicate entries, draft exposure, hidden language labels and invented event times. The article content adapter supports the current literal sources; a future article containing a Go template action or embed fails explicitly until its rendered-source adapter is added. The contact page's existing public HTML fragment is the only embedded source supported for slash-page checks.
+
+Run the checker separately against any completed deployment with explicit source and output roots:
+
+```sh
+go -C .tools/microformats run -mod=readonly ./cmd/microformats -root ../.. -dir ../../.zas/deploy
+go -C .tools/microformats test -mod=readonly ./...
+```
+
+`make test` runs both isolated tooling modules. The Site checks workflow caches both pinned dependency sets and uses the same protected `publish` command configured in Cloudflare Pages. A failed or unavailable microformats checker stops staged assembly before the previous deployment is replaced.
 
 The live CLI is independent of its working directory:
 

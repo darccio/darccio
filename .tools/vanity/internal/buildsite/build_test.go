@@ -3,6 +3,8 @@ package buildsite
 import (
 	"bytes"
 	"context"
+	"errors"
+	"fmt"
 	"io"
 	"os"
 	"os/exec"
@@ -170,6 +172,49 @@ func TestCopyRejectsSourceSymlinks(t *testing.T) {
 	}
 	if err := Build(context.Background(), Options{Root: root, Zas: generator(t, ordinaryOutput), Output: io.Discard}); err == nil {
 		t.Fatal("source symlink was followed")
+	}
+}
+
+func TestValidationRunsBeforePromotion(t *testing.T) {
+	for _, reject := range []bool{false, true} {
+		t.Run(fmt.Sprintf("reject=%t", reject), func(t *testing.T) {
+			root := sourceTree(t)
+			called := false
+			err := Build(context.Background(), Options{
+				Root: root, Zas: generator(t, ordinaryOutput), Output: io.Discard,
+				Validate: func(ctx context.Context, deploy string) error {
+					called = true
+					if ctx.Err() != nil || deploy == filepath.Join(root, ".zas", "deploy") {
+						t.Fatal("validator must inspect the complete stage before promotion")
+					}
+					if err := vanity.CheckDir(deploy); err != nil {
+						t.Fatalf("validator did not receive restored vanity pages: %v", err)
+					}
+					if got, err := os.ReadFile(filepath.Join(root, ".zas", "deploy", "previous.txt")); err != nil || string(got) != "last successful deployment" {
+						t.Fatalf("previous output changed before validation: %v", err)
+					}
+					if reject {
+						return errors.New("identity mismatch")
+					}
+					return nil
+				},
+			})
+			if !called {
+				t.Fatal("validator was not invoked")
+			}
+			if reject {
+				if err == nil || !strings.Contains(err.Error(), "identity mismatch") {
+					t.Fatalf("validation failure was not returned: %v", err)
+				}
+				if got, err := os.ReadFile(filepath.Join(root, ".zas", "deploy", "previous.txt")); err != nil || string(got) != "last successful deployment" {
+					t.Fatalf("validation failure lost previous output: %v", err)
+				}
+			} else if err != nil {
+				t.Fatal(err)
+			} else if _, err := os.Stat(filepath.Join(root, ".zas", "deploy", "index.html")); err != nil {
+				t.Fatalf("accepted stage was not promoted: %v", err)
+			}
+		})
 	}
 }
 

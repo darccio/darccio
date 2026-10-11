@@ -20,8 +20,10 @@ jobs:
       - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e
         with:
           go-version-file: .tools/vanity/go.mod
-          cache-dependency-path: .tools/vanity/go.sum
-      - name: Test metadata, HTTP checks, and staged assembly
+          cache-dependency-path: |
+            .tools/vanity/go.sum
+            .tools/microformats/go.sum
+      - name: Test metadata, microformats, HTTP checks, and staged assembly
         run: make -f .zas/Makefile test
       - name: Build with pinned Zas and validate assembled output
         run: make -f .zas/Makefile publish
