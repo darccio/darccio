@@ -1,6 +1,11 @@
 <!--
 tags: [ "rizoma" ]
 date_created: 2021-09-05T12:00:00+02:00
+article: true
+date: "2021-09-05T12:00:00+02:00"
+date_precision: instant
+summary: "Una reflexió sobre la situació del català que proposa mantenir-ne l'ús quotidià i crear, consumir i difondre contingut de tots els territoris de parla catalana."
+language: ca
 -->
 
 # Rizoma #003: Estat del català: a l'UCI o acostant-se a la revifada?

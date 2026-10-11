@@ -1,6 +1,11 @@
 <!--
 tags: [ "observability", "synology", "datadog" ]
 date_created: "2026-08-16T15:59:44+02:00"
+article: true
+date: "2026-08-16T15:59:44+02:00"
+date_precision: instant
+summary: "A step-by-step setup for monitoring Synology NAS hardware and services with Datadog through SNMP and a containerized Agent, including alerts and troubleshooting."
+language: en
 -->
 
 # Monitoring a Synology NAS with Datadog

@@ -1,6 +1,11 @@
 <!--
 tags: [ "facebook", "social networks" ]
 date_created: "2010-05-19T22:01:00-04:00"
+article: true
+date: "2010-05-19T22:01:00-04:00"
+date_precision: instant
+summary: "Traducción de una carta de Matthew Pherigo sobre los cambios de privacidad de Facebook de 2010 y las opciones para limitar la exposición de datos personales."
+language: es
 -->
 
 # Por qué deberías temer a Facebook

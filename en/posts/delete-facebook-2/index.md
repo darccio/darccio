@@ -3,6 +3,11 @@ tags: [ "facebook", "social networks" ]
 date_created: "2018-04-08T12:06:19+02:00"
 series: [ "Delete Facebook" ]
 images: [ "/images/delete-facebook-1.png" ]
+article: true
+date: "2018-04-08T12:06:19+02:00"
+date_precision: instant
+summary: "A review of Facebook logins and the difficult process of asking third-party apps to delete the personal data they collected."
+language: en
 -->
 
 # Delete Facebook #2

@@ -1,6 +1,11 @@
 <!--
 tags: [ "social networks", "google wave" ]
 date_created: "2009-10-29T21:57:00-04:00"
+article: true
+date: "2009-10-29T21:57:00-04:00"
+date_precision: instant
+summary: "Introducing Deciwave, a Google Wave robot that embeds music players from GoEar, Jamendo and The Sixty One using shared links."
+language: en
 -->
 
 # Deciwave - Robot Rocking for Google Wave

@@ -1,6 +1,11 @@
 <!--
 tags: [ "rizoma" ]
 date_created: 2021-09-26T19:00:00+02:00
+article: true
+date: "2021-09-26T19:00:00+02:00"
+date_precision: instant
+summary: "Un recull d'enllaços sobre reciclatge de CO₂, l'oposició hongaresa, privacitat dels mòbils, divulgació científica i xarxes socials, amb una xerrada sobre Mergo."
+language: ca
 -->
 
 # Rizoma #004: popurri d'enllaços

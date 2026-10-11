@@ -1,8 +1,15 @@
 <!--
-tags: []
+tags: [ "facebook", "social networks" ]
 date_created: "2018-04-08T15:00:56+02:00"
 categories: []
 draft: true
+article: true
+date: "2018-04-08T15:00:56+02:00"
+date_precision: instant
+summary: "Notes d'esborrany sobre els obstacles per desvincular serveis de Facebook, eliminar comptes i revisar opcions de privacitat."
+language: ca
+feed: false
+atproto: false
 -->
 
 # Delete Facebook #3

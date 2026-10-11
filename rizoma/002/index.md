@@ -1,6 +1,11 @@
 <!--
 tags: [ "rizoma" ]
 date_created: 2021-08-22T17:00:00+02:00
+article: true
+date: "2021-08-22T17:00:00+02:00"
+date_precision: instant
+summary: "Una lectura del sisè informe de l'IPCC que vincula la crisi climàtica amb el sistema econòmic i proposa canvis socials, energètics i de consum."
+language: ca
 -->
 
 # Rizoma #002: Canvi climàtic. O fallida climàtica? 🌍🔥

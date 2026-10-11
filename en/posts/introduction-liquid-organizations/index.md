@@ -1,5 +1,12 @@
 <!--
 date_created: "2013-07-01"
+article: true
+date_precision: day
+summary: "An introduction to Lýd's model of horizontal organizations, using voluntary delegation and flows to support participation and collective decisions."
+language: en
+feed: false
+atproto: false
+tags: [ "liquid organizations", "liquid democracy", "lyd" ]
 -->
 
 # Introduction to liquid organizations

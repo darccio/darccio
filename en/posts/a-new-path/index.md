@@ -2,6 +2,11 @@
 tags: [ "pirates", "politics" ]
 date_created: "2024-11-27T22:22:00+01:00"
 image: /static/images/horitzo.jpg
+article: true
+date: "2024-11-27T22:22:00+01:00"
+date_precision: instant
+summary: "An announcement of leaving Pirates de Catalunya, reflecting on fourteen years of shared political work and the decision to pursue new challenges."
+language: en
 -->
 
 # A New Path

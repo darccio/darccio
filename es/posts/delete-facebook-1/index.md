@@ -3,6 +3,11 @@ tags: [ "facebook", "social networks" ]
 date_created: 2018-04-01T17:09:03+02:00
 series: [ "Delete Facebook" ]
 images: [ "/images/delete-facebook-1.png" ]
+article: true
+date: "2018-04-01T17:09:03+02:00"
+date_precision: instant
+summary: "Primeros pasos para dejar Facebook: recuperar un dominio propio, revisar 123 inicios de sesión y explorar alternativas sociales descentralizadas."
+language: es
 -->
 
 # Delete Facebook #1

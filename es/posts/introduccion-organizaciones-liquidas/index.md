@@ -1,5 +1,12 @@
 <!--
 date_created: "2013-07-01"
+article: true
+date_precision: day
+summary: "Introducción al modelo de organizaciones horizontales de Lýd, basado en la delegación voluntaria y los flujos para facilitar la participación y las decisiones colectivas."
+language: es
+feed: false
+atproto: false
+tags: [ "liquid organizations", "liquid democracy", "lyd" ]
 -->
 
 # Introducción a las organizaciones líquidas

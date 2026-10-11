@@ -2,6 +2,11 @@
 tags: [ "pirates", "politics" ]
 date_created: "2024-11-27T22:22:00+01:00"
 image: /static/images/horitzo.jpg
+article: true
+date: "2024-11-27T22:22:00+01:00"
+date_precision: instant
+summary: "Anunci del final de l'etapa de militància a Pirates de Catalunya, amb agraïment pel camí compartit i la decisió d'assumir nous reptes."
+language: ca
 -->
 
 # Un nou camí

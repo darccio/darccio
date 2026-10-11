@@ -1,6 +1,11 @@
 <!--
 tags: [ "rizoma" ]
 date_created: 2021-08-08T10:00:00+02:00
+article: true
+date: "2021-08-08T10:00:00+02:00"
+date_precision: instant
+summary: "Presentació de Rizoma amb lectures sobre vacunes, llibertat de compartir cultura, euro digital i desigualtat, i un record dels Jocs Olímpics de Barcelona."
+language: ca
 -->
 
 # Rizoma #001

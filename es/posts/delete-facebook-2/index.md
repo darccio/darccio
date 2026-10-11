@@ -3,6 +3,11 @@ tags: [ "facebook", "social networks" ]
 date_created: "2018-04-08T11:53:34+02:00"
 series: [ "Delete Facebook" ]
 images: [ "/images/delete-facebook-1.png" ]
+article: true
+date: "2018-04-08T11:53:34+02:00"
+date_precision: instant
+summary: "Revisión de los accesos mediante Facebook y de las dificultades para pedir a aplicaciones de terceros que eliminen los datos personales recogidos."
+language: es
 -->
 
 # Delete Facebook #2

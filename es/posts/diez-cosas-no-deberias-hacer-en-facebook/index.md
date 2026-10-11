@@ -1,6 +1,11 @@
 <!--
 tags: [ "facebook", "social networks" ]
 date_created: "2009-11-23T19:34:00-05:00"
+article: true
+date: "2009-11-23T19:34:00-05:00"
+date_precision: instant
+summary: "Traducción de diez recomendaciones de Errata Security para reducir la exposición de datos y los riesgos de seguridad al usar Facebook."
+language: es
 -->
 
 # Diez cosas que no deberías hacer en Facebook

@@ -1,6 +1,11 @@
 <!--
 tags: [ "basic income", "ai-assisted summary" ]
 date_created: "2024-04-10T21:09:00+02:00"
+article: true
+date: "2024-04-10T21:09:00+02:00"
+date_precision: instant
+summary: "Repàs dels resultats de pilots de renda bàsica sobre pobresa, benestar i ocupació, amb els reptes de finançament i viabilitat que continuen oberts."
+language: ca
 -->
 
 # Renda bàsica: deixarà tothom de treballar?

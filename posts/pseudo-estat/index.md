@@ -3,6 +3,11 @@ tags: [ "pseudo-state", "trump", "capitalism", "ai-assisted summary" ]
 date_created: "2025-02-14T12:39:00+01:00"
 image: /static/images/TrumpMileiMusk.jpg
 description: "El capitalisme evoluciona cap a una nova fase on les grans corporacions acumulen poder mitjançant el control de dades i infraestructures digitals. Aquest capitalisme 4.0 planteja reptes de governabilitat, donant lloc al concepte de Pseudo-Estat: una xarxa de corporacions privades que exerceixen poder sense rendició de comptes democràtica. La gestió d'aquesta transició, en un context de crisi climàtica i reterritorialització del capital, podria consolidar una forma autoritària política adaptada a un capitalisme hiperconcentrat, desafiant les expectatives dels seguidors de Musk i Trump."
+article: true
+date: "2025-02-14T12:39:00+01:00"
+date_precision: instant
+summary: "Reflexió sobre el poder de les corporacions digitals i el Pseudo-Estat com a possible forma de governabilitat d'un capitalisme hiperconcentrat."
+language: ca
 -->
 
 # Tecnofeudalisme i el Pseudo-Estat: la futura governabilitat del capitalisme

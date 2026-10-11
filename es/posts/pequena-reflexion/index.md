@@ -1,6 +1,11 @@
 <!--
 tags: [ "capitalism", "politics" ]
 date_created: "2013-04-28T23:50:52+02:00"
+article: true
+date: "2013-04-28T23:50:52+02:00"
+date_precision: instant
+summary: "Una reflexión que defiende redistribuir el poder político antes de reformar el sistema económico para limitar la influencia de la oligarquía."
+language: es
 -->
 
 # Pequeña reflexión: ¿qué es primero, cambiar el capitalismo o el poder?

@@ -1,6 +1,11 @@
 <!--
 tags: [ "15M" ]
 date_created: "2011-05-19T18:19:00-04:00"
+article: true
+date: "2011-05-19T18:19:00-04:00"
+date_precision: instant
+summary: "El manifiesto de Acampada Sol presenta un movimiento independiente de partidos que reclama un cambio social pacífico centrado en la dignidad y la solidaridad."
+language: es
 -->
 
 # Manifiesto de la Acampada Sol

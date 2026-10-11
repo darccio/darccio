@@ -1,6 +1,11 @@
 <!--
 tags: [ "blockchain" ]
 date_created: "2018-11-21T22:45:00+01:00"
+article: true
+date: "2018-11-21T22:45:00+01:00"
+date_precision: instant
+summary: "Un cuestionario basado en un diagrama de decisión del NIST para valorar si un proyecto necesita usar blockchain."
+language: es
 -->
 
 # Blockchain en mi próximo proyecto: ¿sí o no?

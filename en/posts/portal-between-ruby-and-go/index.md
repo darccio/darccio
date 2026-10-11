@@ -2,6 +2,12 @@
 tags: [ "ruby", "go", "ffi" ]
 date_created: "2022-04-05T22:42:00"
 image: /static/images/gopher-portal.png
+article: true
+date_precision: local-time
+summary: "An FFI prototype that lets Ruby load a Go shared library for gradual API migration and reuse of existing tests, with possible performance overhead."
+language: en
+feed: false
+atproto: false
 -->
 
 # A portal between Ruby and Go (using FFI)

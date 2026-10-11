@@ -1,6 +1,11 @@
 <!--
 tags: [ "digital clutter", "minimalism" ]
 date_created: "2009-11-04T22:18:00-05:00"
+article: true
+date: "2009-11-04T22:18:00-05:00"
+date_precision: instant
+summary: "A personal list of habits for reducing digital clutter and improving focus, from simplifying and using reminders to avoiding multitasking."
+language: en
 -->
 
 # What Internet told me: Geekvana, is it possible?

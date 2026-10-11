@@ -2,6 +2,11 @@
 tags: [ "internet", "net neutrality" ]
 date_created: "2010-11-30T17:47:00-05:00"
 permalink: https://www.enriquedans.com/2010/11/manifiesto-por-una-red-neutral.html
+article: true
+date: "2010-11-30T17:47:00-05:00"
+date_precision: instant
+summary: "Un manifiesto en defensa de la neutralidad de la red que pide proteger el tráfico de Internet frente a la discriminación y los intereses comerciales de las operadoras."
+language: es
 -->
 
 # Manifiesto por una Red Neutral

@@ -2,6 +2,11 @@
 tags: [ "facebook", "social networks" ]
 date_created: 2018-03-28T23:26:00+02:00
 series: [ "Delete Facebook" ]
+article: true
+date: "2018-03-28T23:26:00+02:00"
+date_precision: instant
+summary: "Inicio de un proceso documentado para dejar Facebook tras el caso Cambridge Analytica, revisando los accesos a servicios y las formas de mantener el contacto."
+language: es
 -->
 
 # Delete Facebook #0

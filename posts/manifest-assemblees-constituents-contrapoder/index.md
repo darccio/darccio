@@ -1,6 +1,11 @@
 <!--
 tags: [ "politics", "catalonia" ]
 date_created: "2014-11-26T08:08:46+01:00"
+article: true
+date: "2014-11-26T08:08:46+01:00"
+date_precision: instant
+summary: "Manifest que proposa assemblees constituents obertes i participatives com a contrapoder popular per construir un nou Estat des de baix."
+language: ca
 -->
 
 # Manifest per les assemblees constituents com contrapoder

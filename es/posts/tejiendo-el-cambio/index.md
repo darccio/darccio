@@ -1,6 +1,11 @@
 <!--
 tags: [ "politics" ]
 date_created: "2013-10-18T22:28:00-04:00"
+article: true
+date: "2013-10-18T22:28:00-04:00"
+date_precision: instant
+summary: "Una propuesta para conectar presencialmente a personas que buscan un cambio social y construir confianza sin imponer una única vía de acción política."
+language: es
 -->
 
 # Tejiendo el cambio
