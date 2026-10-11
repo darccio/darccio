@@ -60,14 +60,14 @@ flowchart LR
 
 Dependencies below include the report’s original ordering and repository-specific additions from each review. The detailed task pages explain optional dependencies and independent parts such as registrar work in T01 and generator-only work in T11.
 
-| Task | Work | Repository | Depends on | Initial status |
+| Task | Work | Repository | Depends on | Current status |
 | --- | --- | --- | --- | --- |
-| [T00](tasks/T00.md) | Verify unverified facts | site | — | Planned |
-| [T01](tasks/T01.md) | Harden domain and DNS and add monitoring | site | T02 | Planned |
-| [T02](tasks/T02.md) | Protect vanity imports with regression checks | site | T00 | Planned |
-| [T03](tasks/T03.md) | Correct project identity links | zas | — | Planned |
+| [T00](tasks/T00.md) | Verify unverified facts | site | — | Audit committed |
+| [T01](tasks/T01.md) | Harden domain and DNS and add monitoring | site | T02 | Software committed; account operations pending |
+| [T02](tasks/T02.md) | Protect vanity imports with regression checks | site | T00 | Local implementation committed; hosting activation pending |
+| [T03](tasks/T03.md) | Correct project identity links | zas | — | Zas PR #111 open; external follow-up queued |
 | [T04](tasks/T04.md) | Add explicit publication metadata to posts | site | T00, T02 | Planned |
-| [T05](tasks/T05.md) | Expose dates and metadata in Zas templates | zas | — | Planned |
+| [T05](tasks/T05.md) | Expose dates and metadata in Zas templates | zas | — | Zas PR #112 open; checks pass |
 | [T06](tasks/T06.md) | List pages in Zas templates | zas | T05 | Optional and deferred |
 | [T07](tasks/T07.md) | Correct canonical and Open Graph metadata | site | T05, T04 | Planned |
 | [T08](tasks/T08.md) | Publish contact details and self-host the avatar | site | — | Planned |
