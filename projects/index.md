@@ -9,7 +9,7 @@ updated: 2026-10-11T15:33:14+02:00
 <a class="u-url" href="https://dario.cat/projects/" hidden>Projectes</a>
 <a class="p-author h-card" href="https://dario.cat/" hidden><span class="p-name">Dario Castañé</span></a>
 
-Programari lliure que mantinc o en què he participat. La documentació de les API de Go és a pkg.go.dev; els repositoris contenen les guies i les instruccions d'ús.
+Programari lliure que mantinc o en què he participat. La documentació de les API de Go és a pkg.go.dev; les guies de Mergo, Zas i darna es publiquen aquí des dels seus repositoris.
 
 <section class="h-item">
 
@@ -18,7 +18,7 @@ Programari lliure que mantinc o en què he participat. La documentació de les A
 <p class="p-summary">Biblioteca de Go per combinar estructures i mapes del mateix tipus, omplint els camps amb valor zero. El projecte és estable i congelat: no accepta funcionalitats noves.</p>
 
 - Camí d'importació: `dario.cat/mergo`.
-- <a class="u-url" href="https://pkg.go.dev/dario.cat/mergo">Documentació de l'API</a> i [guia d'ús](https://github.com/darccio/mergo#readme).
+- <a class="u-url" href="/mergo/">Guia d'ús</a> i [documentació de l'API](https://pkg.go.dev/dario.cat/mergo).
 - [Codi i incidències](https://github.com/darccio/mergo).
 
 </section>
@@ -30,7 +30,7 @@ Programari lliure que mantinc o en què he participat. La documentació de les A
 <p class="p-summary">Generador de webs estàtics escrit en Go. Parteix de Markdown, HTML i una plantilla, amb una estructura de fitxers senzilla. Aquest web està fet amb Zas.</p>
 
 - Mòdul: `github.com/darccio/zas`.
-- <a class="u-url" href="https://github.com/darccio/zas#readme">Documentació</a> i [API de Go](https://pkg.go.dev/github.com/darccio/zas).
+- <a class="u-url" href="/zas/">Documentació</a> i [API de Go](https://pkg.go.dev/github.com/darccio/zas).
 - [Codi i incidències](https://github.com/darccio/zas).
 
 </section>
@@ -42,7 +42,7 @@ Programari lliure que mantinc o en què he participat. La documentació de les A
 <p class="p-summary">Validador de commits atòmics per a Go. Comprova que els fitxers preparats formen un canvi complet i no depenen de codi que ha quedat fora del commit.</p>
 
 - Mòdul: `dario.cat/darna`.
-- <a class="u-url" href="https://github.com/darccio/darna#readme">Documentació i instal·lació</a> i [API de Go](https://pkg.go.dev/dario.cat/darna).
+- <a class="u-url" href="/darna/">Documentació i instal·lació</a> i [API de Go](https://pkg.go.dev/dario.cat/darna).
 - [Codi i incidències](https://github.com/darccio/darna).
 
 </section>

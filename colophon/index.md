@@ -10,7 +10,9 @@ dario.cat és un web estàtic fet amb [Zas](https://github.com/darccio/zas), el 
 
 ## Publicació
 
-Cloudflare Pages construeix el web quan es publiquen canvis a la branca `main`. La construcció executa `make -f .zas/Makefile publish` i publica `.zas/deploy`. La versió de Zas queda fixada al Makefile perquè cada construcció faci servir una revisió concreta; aquest web fa servir la revisió [`abdae2fd51de`](https://github.com/darccio/zas/commit/abdae2fd51de).
+Cloudflare Pages construeix el web quan es publiquen canvis a la branca `main`. La construcció executa `make -f .zas/Makefile publish` i publica `.zas/deploy`. La versió de Zas queda fixada al Makefile perquè cada construcció faci servir una revisió concreta; aquest web fa servir la revisió [`844e0732ba6f`](https://github.com/darccio/zas/commit/844e0732ba6f).
+
+Les [guies dels projectes](/projects/) viuen als seus repositoris. El web només incorpora els fitxers seleccionats d'una revisió fixada i els renderitza com a dades, sense executar plantilles, connectors ni scripts del projecte. Cada guia conserva la llicència original i enllaça la revisió d'origen. Les actualitzacions arriben en una proposta de canvi al web; es publiquen quan es fusiona a `main`.
 
 Abans de publicar, la construcció comprova els camins d'importació de Go que serveix aquest domini, com ara `dario.cat/mergo` i `dario.cat/darna`.
 

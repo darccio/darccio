@@ -366,3 +366,22 @@ test("asset transport failures return an uncached, policy-bearing response", asy
     if (method === "HEAD") assert.equal(await response.text(), "");
   }
 });
+
+test("documentation landings negotiate literal twins while go-get always retains HTML metadata", async () => {
+  const docsHTML = '<!doctype html><html lang="en"><head><meta name="go-import" content="dario.cat/mergo git https://github.com/imdario/mergo"></head><body>Documentation</body></html>';
+  const docsMarkdown = '# Mergo\n\n`{{.Title}}` is a literal Go template example.\n';
+  const worker = createWorker({
+    '/mergo/': {path: '/mergo/index.md', sha256: sha256(docsMarkdown), htmlSha256: sha256(docsHTML)},
+  });
+  const backend = assets((req) => new URL(req.url).pathname === '/mergo/index.md'
+    ? staticResponse(req, docsMarkdown, 'text/markdown; charset=utf-8')
+    : staticResponse(req, docsHTML));
+  const md = await worker.fetch(request('/mergo/', {Accept: 'text/markdown'}), backend.env);
+  assertNegotiatedHeaders(md, 'text/markdown; charset=utf-8');
+  assert.equal(await md.text(), docsMarkdown);
+  const before = backend.requests.length;
+  const vanity = await worker.fetch(request('/mergo/?go-get=1', {Accept: 'text/markdown'}), backend.env);
+  assert.equal(await vanity.text(), docsHTML);
+  assert.equal(backend.requests.length, before + 1);
+  assert.equal(new URL(backend.requests.at(-1).url).search, '?go-get=1');
+});

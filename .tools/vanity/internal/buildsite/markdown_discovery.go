@@ -30,7 +30,7 @@ type markdownDiscoveryChange struct {
 	body []byte
 }
 
-func finalizeMarkdownDiscovery(stage, deploy string) error {
+func finalizeMarkdownDiscovery(stage, deploy string, docs ...map[string]string) error {
 	configBytes, err := os.ReadFile(filepath.Join(stage, ".zas", "config.yml"))
 	if err != nil {
 		return err
@@ -58,7 +58,7 @@ func finalizeMarkdownDiscovery(stage, deploy string) error {
 	if !config.Site.PublishMarkdown {
 		return nil
 	}
-	return addMarkdownDiscoveryWithContexts(deploy, config.Site.BaseURL, contexts)
+	return addMarkdownDiscoveryWithContexts(deploy, config.Site.BaseURL, contexts, docs...)
 }
 
 // addMarkdownDiscovery advertises only Markdown twins in the assembled deploy
@@ -114,7 +114,7 @@ func markdownContextArtifacts(deploy string, base *url.URL) (map[string]markdown
 	return artifacts, nil
 }
 
-func addMarkdownDiscoveryWithContexts(deploy, baseURL string, contexts bool) error {
+func addMarkdownDiscoveryWithContexts(deploy, baseURL string, contexts bool, docs ...map[string]string) error {
 	if err := auditOutput(deploy); err != nil {
 		return err
 	}
@@ -182,6 +182,12 @@ func addMarkdownDiscoveryWithContexts(deploy, baseURL string, contexts bool) err
 	var changes []markdownDiscoveryChange
 	for rel, page := range pages {
 		twin := strings.TrimSuffix(rel, ".html") + ".md"
+		if declared := declaredDocsTwin(docs, rel); declared != "" {
+			twin = declared
+			if !twins[twin] {
+				return fmt.Errorf("missing declared project twin %s", twin)
+			}
+		}
 		expected := ""
 		if twins[twin] {
 			location := *base
@@ -190,7 +196,7 @@ func addMarkdownDiscoveryWithContexts(deploy, baseURL string, contexts bool) err
 			expected = location.String()
 		}
 		policy := artifacts
-		if rawVanity[rel] {
+		if rawVanity[rel] && declaredDocsTwin(docs, rel) == "" {
 			policy = nil
 		}
 		position, linked, err := markdownDiscoveryHeadWithContexts(page.body, expected, policy)
@@ -519,4 +525,12 @@ func writeMarkdownDiscovery(change markdownDiscoveryChange) (err error) {
 		return err
 	}
 	return os.Rename(temporary, change.page.file)
+}
+
+// Only the trusted compiler supplies nonstandard twin mappings.
+func declaredDocsTwin(docs []map[string]string, file string) string {
+	if len(docs) == 1 {
+		return docs[0][file]
+	}
+	return ""
 }

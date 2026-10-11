@@ -249,3 +249,32 @@ func TestJSONLDDirectoryExemptsOnlyReviewedVanityFragments(t *testing.T) {
 		}
 	})
 }
+
+func TestSoftwareSourceCodeUsesVerifiedProjectMetadata(t *testing.T) {
+	for project, name := range map[string]string{"mergo": "Mergo", "zas": "Zas", "darna": "darna"} {
+		t.Run(project, func(t *testing.T) {
+			pageURL := homeURL + project + "/"
+			data := jsonFixture(t)
+			data["@graph"] = []any{graphNode(data, 0), map[string]any{"@type": "SoftwareSourceCode", "name": name, "url": pageURL, "codeRepository": "https://github.com/darccio/" + project, "programmingLanguage": "Go", "license": homeURL + project + "/LICENSE.txt"}}
+			document := func() string {
+				return strings.ReplaceAll(structuredDocument(t, marshalFixture(t, data)), examplePost().URL, pageURL)
+			}
+			doc, _ := parsed(t, document(), pageURL)
+			if err := validateJSONLD(doc, pageURL, nil); err != nil {
+				t.Fatal(err)
+			}
+			for key := range graphNode(data, 1) {
+				t.Run(key, func(t *testing.T) {
+					node := graphNode(data, 1)
+					original := node[key]
+					node[key] = "incorrect"
+					defer func() { node[key] = original }()
+					doc, _ := parsed(t, document(), pageURL)
+					if err := validateJSONLD(doc, pageURL, nil); err == nil {
+						t.Fatal("accepted mismatched project metadata")
+					}
+				})
+			}
+		})
+	}
+}

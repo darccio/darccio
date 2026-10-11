@@ -1,0 +1,55 @@
+name: Docs source update
+
+on:
+  repository_dispatch:
+    types: [docs-updated]
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: Reviewed source repository (darccio/mergo, darccio/zas or darccio/darna)
+        required: true
+        type: string
+      commit:
+        description: Full immutable source commit SHA
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+
+concurrency:
+  group: docs-update-${{ github.event.client_payload.repo || inputs.repository }}
+  cancel-in-progress: false
+
+jobs:
+  propose:
+    if: github.repository == 'darccio/darccio'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SOURCE_REPOSITORY: ${{ github.event.client_payload.repo || inputs.repository }}
+      SOURCE_COMMIT: ${{ github.event.client_payload.commit || inputs.commit }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e
+        with:
+          go-version-file: .tools/vanity/go.mod
+          cache-dependency-path: |
+            .tools/vanity/go.sum
+            .tools/microformats/go.sum
+      - name: Validate selected source and propose its pin
+        run: |
+          go -C .tools/vanity run ./cmd/docs-update -root ../.. \
+            -repo "$SOURCE_REPOSITORY" -commit "$SOURCE_COMMIT"
+      - name: Build and check the proposed deployment
+        run: make -f .zas/Makefile publish
+      - name: Open source pin pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash .tools/docs/open-update-pr.sh
