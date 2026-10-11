@@ -11,7 +11,17 @@ This is the owner runbook for `dario.cat`. The GitHub workflow is a software bac
 
 The public [.cat RDAP response](https://rdap.nic.cat/rdap/domain/dario.cat), recorded in [HANDOFF-FACTS.md](HANDOFF-FACTS.md), reports expiration at **2027-06-01T07:05:04.361Z**, status `active`, and `secureDNS.delegationSigned: false`. Nameservers are `ray.ns.cloudflare.com` and `jean.ns.cloudflare.com`. This expiry provides less than one year of paid runway. Auto-renew, payment validity and transfer lock are **unverified**; the public status does not prove that lock is disabled. Recheck the registry and dashboards after each account action.
 
-Cloudflare Pages with Git integration is owner-confirmed. The production branch and dashboard build/output settings still need confirmation. This workflow neither builds nor deploys the site and needs no Pages or PDS credentials.
+Cloudflare Pages with Git integration is owner-confirmed: production branch `main`, build command `make -f .zas/Makefile publish`, output `.zas/deploy`, and an empty root-directory setting. This monitoring workflow neither builds nor deploys the site and needs no Pages or PDS credentials.
+
+## Verification receipt, 2026-10-11
+
+At **20:57 UTC**, the public checks confirmed:
+
+- [Vanity metadata monitor run 38173556457](https://github.com/darccio/darccio/actions/runs/38173556457) completed successfully at **20:46:01 UTC** after manual dispatch on `main` (`84f707d`). Its checker passed all seven packages, with and without trailing slashes, against the reviewed metadata baseline. This is manual-run evidence; an observed scheduled run and notification delivery remain pending.
+- The [.cat RDAP response](https://rdap.nic.cat/rdap/domain/dario.cat) was retrieved successfully with TLS verification enabled. Expiration remains **2027-06-01T07:05:04.361Z**, status remains `active`, and `secureDNS.delegationSigned` remains `false`; both Cloudflare nameservers are unchanged. Account auto-renew, payment validity and transfer lock remain unverified.
+- [Google DS](https://dns.google/resolve?name=dario.cat&type=DS&do=1) and [DNSKEY](https://dns.google/resolve?name=dario.cat&type=DNSKEY&do=1) queries, cross-checked through Cloudflare DNS-over-HTTPS, returned `NOERROR` with no DS or DNSKEY answers. The DS responses had `AD:true`; DNSKEY responses had `AD:false`. These observations support the unsigned-delegation baseline and do not establish an active DNSSEC chain.
+
+No account, billing, DNS or provider settings changed. Paid runway greater than one year, registrar protection, validated DNSSEC, an independent 30-minute monitor and received test/recovery/expiry alerts still require owner evidence.
 
 ## Registrar protection in SW Hosting
 
