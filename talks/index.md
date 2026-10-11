@@ -15,13 +15,21 @@ Pots anar directament a [programari i enginyeria](#programari-i-enginyeria) o a 
 
 La revolució industrial del programari. [Materials](https://github.com/darccio/talks/blob/main/ai/programacio-automatica/slides.md).
 
-### <span lang="en">Orchestrion: Automatic compile-time instrumentation of Go code</span> [en]
+<section class="h-event">
 
-GoLab, Florència · 12/11/2024. [Vídeo de les lightning talks](https://www.youtube.com/watch?v=nItWDQnYQCQ) · [Materials](https://github.com/darccio/talks/blob/main/go/orchestrion/slides.md).
+<h3><span class="p-name" lang="en">Orchestrion: Automatic compile-time instrumentation of Go code</span> [en]</h3>
 
-### <span lang="es">Genéricos: ¿A dónde vamos desde aquí?</span> [es]
+GoLab, <span class="p-location">Florència</span> · <time class="dt-start" datetime="2024-11-12">12/11/2024</time>. <a class="u-url" href="https://www.youtube.com/watch?v=nItWDQnYQCQ">Vídeo de les lightning talks</a> · [Materials](https://github.com/darccio/talks/blob/main/go/orchestrion/slides.md).
 
-GoDevNet / GoBridge · 20/01/2023 · en línia. [Vídeo](https://www.youtube.com/watch?v=_7paSqvhLbo) · [Materials](https://github.com/darccio/talks/blob/main/go/generics/index.slide).
+</section>
+
+<section class="h-event">
+
+<h3><span class="p-name" lang="es">Genéricos: ¿A dónde vamos desde aquí?</span> [es]</h3>
+
+GoDevNet / GoBridge · <time class="dt-start" datetime="2023-01-20">20/01/2023</time> · <span class="p-location">en línia</span>. <a class="u-url" href="https://www.youtube.com/watch?v=_7paSqvhLbo">Vídeo</a> · [Materials](https://github.com/darccio/talks/blob/main/go/generics/index.slide).
+
+</section>
 
 ### <span lang="en">Oops — I broke Docker</span> [en]
 
@@ -31,9 +39,13 @@ Una història sobre el manteniment de Mergo. GoDevNet. [Vídeo](https://www.yout
 
 Tech Talks, Loyal Guru · 10/06/2021. [Materials](https://github.com/darccio/talks/blob/main/ruby/sidekiq/presentation.md).
 
-### Creació i conseqüències de la creació d'una llibreria que és al cor del Cloud
+<section class="h-event">
 
-Open Mic, IGD Tech & Drinks · 03/06/2020 · en línia. [Vídeo de la trobada](https://www.youtube.com/watch?v=i0UOYHs0eDI): és la segona xerrada.
+<h3 class="p-name">Creació i conseqüències de la creació d'una llibreria que és al cor del Cloud</h3>
+
+Open Mic, IGD Tech & Drinks · <time class="dt-start" datetime="2020-06-03">03/06/2020</time> · <span class="p-location">en línia</span>. <a class="u-url" href="https://www.youtube.com/watch?v=i0UOYHs0eDI">Vídeo de la trobada</a>: és la segona xerrada.
+
+</section>
 
 ### <span lang="en">Machine Learning quickly explained</span> [en]
 
@@ -47,9 +59,13 @@ Tech Talks, Loyal Guru · 06/03/2020. [Materials](https://github.com/darccio/tal
 
 [Diapositives](https://speakerdeck.com/dario/introduction-to-cloud-computing) · [Materials](https://github.com/darccio/talks/blob/main/cloud-computing/presentation.md).
 
-### Contenidors i microserveis [ca]
+<section class="h-event">
 
-IGD Tech & Drinks, inQuiet, Igualada · 12/09/2018. [Vídeo de «Microserveis per a tots els públics»](https://www.youtube.com/watch?v=7ue3XhtvImA): hi parlo de contenidors. [Diapositives](https://speakerdeck.com/dario/contenidors-i-microserveis).
+<h3><span class="p-name">Contenidors i microserveis</span> [ca]</h3>
+
+IGD Tech & Drinks, <span class="p-location">inQuiet, Igualada</span> · <time class="dt-start" datetime="2018-09-12">12/09/2018</time>. [Vídeo de «Microserveis per a tots els públics»](https://www.youtube.com/watch?v=7ue3XhtvImA): hi parlo de contenidors. <a class="u-url" href="https://speakerdeck.com/dario/contenidors-i-microserveis">Diapositives</a>.
+
+</section>
 
 <h2 id="tecnologia-cultura-i-política">Tecnologia, cultura i política</h2>
 
@@ -69,17 +85,25 @@ Amb Josep Jover. [Vídeo](https://www.youtube.com/watch?v=nHOYr44l3c8).
 
 [Fragment de la xerrada](https://www.youtube.com/watch?v=HOAPwBl0GiI) · [Materials](https://github.com/darccio/talks/blob/main/digital-rights/freedom-to-share-eci/presentation.md).
 
-### Debat virtual de #PolíTICa
+<section class="h-event">
 
-Propostes dels partits sobre telecomunicacions i TIC. Telecos.cat · 21/01/2021 · en línia. [Vídeo](https://www.youtube.com/watch?v=x6C_mwsypz8).
+<h3 class="p-name">Debat virtual de #PolíTICa</h3>
+
+Propostes dels partits sobre telecomunicacions i TIC. Telecos.cat · <time class="dt-start" datetime="2021-01-21">21/01/2021</time> · <span class="p-location">en línia</span>. <a class="u-url" href="https://www.youtube.com/watch?v=x6C_mwsypz8">Vídeo</a>.
+
+</section>
 
 ### Programari lliure a <span lang="es">Buscando Alternativas</span> [ca]
 
 Entrevista a RCR Barcelona · 25/09/2020. [Vídeo](https://www.youtube.com/watch?v=-kX9VH_TaTc).
 
-### Tecnologies disruptives i el seu impacte social
+<section class="h-event">
 
-Mobile Week Igualada, Adoberia Bella · 13/02/2020. [Vídeo](https://www.youtube.com/watch?v=jVE-9WYNkoo) · [Materials](https://github.com/darccio/tecnologiesdisruptives2019/blob/master/presentation.md).
+<h3 class="p-name">Tecnologies disruptives i el seu impacte social</h3>
+
+Mobile Week Igualada, <span class="p-location">Adoberia Bella</span> · <time class="dt-start" datetime="2020-02-13">13/02/2020</time>. <a class="u-url" href="https://www.youtube.com/watch?v=jVE-9WYNkoo">Vídeo</a> · [Materials](https://github.com/darccio/tecnologiesdisruptives2019/blob/master/presentation.md).
+
+</section>
 
 ### <span lang="es">Blockchain para todo el mundo</span> [es]
 
@@ -101,17 +125,29 @@ Festival Cyberpunk · 16/02/2019. [Diapositives](https://speakerdeck.com/dario/e
 
 Blockchain & Beers, IGD Tech & Drinks. [Diapositives](https://speakerdeck.com/dario/blockchain-en-10-minutos).
 
-### Eixamplem Programa: aportacions des de l'ideari pirata per a candidatures municipalistes [ca]
+<section class="h-event">
 
-Eixamplem Municipis, Igualada · 28/07/2018. [Diapositives](https://speakerdeck.com/dario/eixamplem-programa-aportacions-des-de-lideari-pirata-per-a-candidatures-municipalistes).
+<h3><span class="p-name">Eixamplem Programa: aportacions des de l'ideari pirata per a candidatures municipalistes</span> [ca]</h3>
 
-### <span lang="es">Blockchain y ciencia: ¿amigas para siempre?</span> [es]
+Eixamplem Municipis, <span class="p-location">Igualada</span> · <time class="dt-start" datetime="2018-07-28">28/07/2018</time>. <a class="u-url" href="https://speakerdeck.com/dario/eixamplem-programa-aportacions-des-de-lideari-pirata-per-a-candidatures-municipalistes">Diapositives</a>.
 
-Selecció de xerrades de BCNspiracy, Vil·la Urània · 15/06/2018. [Diapositives](https://speakerdeck.com/dario/blockchain-y-ciencia-amigas-para-siempre).
+</section>
 
-### Com sobreviure en l'era post-Snowden? Aprenent a navegar de forma segura [ca]
+<section class="h-event">
 
-Coop de Cap, Ateneu Igualadí, Igualada · 27/05/2017. [Diapositives](https://speakerdeck.com/dario/com-sobreviure-en-lera-post-snowden-aprenent-a-navegar-de-forma-segura).
+<h3><span class="p-name" lang="es">Blockchain y ciencia: ¿amigas para siempre?</span> [es]</h3>
+
+Selecció de xerrades de BCNspiracy, <span class="p-location">Vil·la Urània</span> · <time class="dt-start" datetime="2018-06-15">15/06/2018</time>. <a class="u-url" href="https://speakerdeck.com/dario/blockchain-y-ciencia-amigas-para-siempre">Diapositives</a>.
+
+</section>
+
+<section class="h-event">
+
+<h3><span class="p-name">Com sobreviure en l'era post-Snowden? Aprenent a navegar de forma segura</span> [ca]</h3>
+
+Coop de Cap, <span class="p-location">Ateneu Igualadí, Igualada</span> · <time class="dt-start" datetime="2017-05-27">27/05/2017</time>. <a class="u-url" href="https://speakerdeck.com/dario/com-sobreviure-en-lera-post-snowden-aprenent-a-navegar-de-forma-segura">Diapositives</a>.
+
+</section>
 
 ### Municipi i tecnologia: on som i futurs possibles [ca]
 
@@ -133,6 +169,10 @@ IV Jornada Pirata. [Diapositives](https://speakerdeck.com/dario/pot-la-tecnologi
 
 [Diapositives](https://speakerdeck.com/dario/number-europapirata-presentacio-de-candidatura-pirates-de-catalunya).
 
-### <span lang="es">Revolución Creative Commons: liberando cultura con alternativas al copyright</span> [es]
+<section class="h-event">
 
-Casal de Joves de Masquefa · 30/06/2012. [Diapositives](https://speakerdeck.com/dario/revolucion-creative-commons-liberando-cultura-con-alternativas-al-copyright).
+<h3><span class="p-name" lang="es">Revolución Creative Commons: liberando cultura con alternativas al copyright</span> [es]</h3>
+
+<span class="p-location">Casal de Joves de Masquefa</span> · <time class="dt-start" datetime="2012-06-30">30/06/2012</time>. <a class="u-url" href="https://speakerdeck.com/dario/revolucion-creative-commons-liberando-cultura-con-alternativas-al-copyright">Diapositives</a>.
+
+</section>

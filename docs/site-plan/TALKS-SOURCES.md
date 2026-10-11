@@ -12,7 +12,7 @@ Audited on 2026-10-11 after the owner supplied YouTube, Speaker Deck and GitHub 
 - GitHub source tree: `8939c9f8f4272f0310bbf978801ce9cfefe2fc60` in https://github.com/darccio/talks. Two public submodules were also inspected for presentation titles.
 - The supplied YouTube playlist ID `PLCEcD-jTS2kEMNfHIPbKvpoidLXZCXb` is unavailable: its playlist URL returns 404, and yt-dlp resolves only the linked video. The owner answered with 12 individual recording links. All are included among the 14 independently verified recordings; playlist membership is not claimed.
 - Thirty-one catalogue entries combine matching resources and preserve distinct appearances. The three original recording links remain. The Mobile Week event is correctly dated 2020-02-13, although its recording was uploaded in 2021.
-- Full event microformats are still T17 work; these source facts do not complete the other T17 subitems.
+- T17 now annotates the ten entries with a verified exact event day and physical or online location. The other 21 entries remain plain; this does not authorise CV processing.
 
 ## Speaker Deck inventory
 
@@ -91,3 +91,22 @@ The esLibre 2021 [Commons recording](https://commons.wikimedia.org/wiki/File:EsL
 - [GoLab 2024 official agenda](https://golab.io/past-editions/2024): lightning talks on 2024-11-12 in Florence, with Dario and Orchestrion.
 - [Mobile Week organiser programme](https://www.ticanoia.cat/agenda-tic-de-lanoia/darreres-activitats/xerrada-tecnologies-disruptives-i-el-seu-impacte-social.html): 2020-02-13, 19:00–20:00, Adoberia Bella, Igualada.
 - Other exact event dates and venues in the deck table are stated directly in deck text or descriptions; retained deck-upload dates are separate evidence.
+
+## Implemented event markup
+
+Every `dt-start` below uses day precision. Available programme clock times are not promoted to the start of Dario's individual segment. `u-url` reuses one catalogue resource, and titles and other resource links remain unchanged.
+
+| Entry | `dt-start` | `p-location` | Primary event URL and evidence |
+| --- | --- | --- | --- |
+| Orchestrion | 2024-11-12 | Florència | [Official recording](https://www.youtube.com/watch?v=nItWDQnYQCQ); [GoLab agenda](https://golab.io/past-editions/2024) |
+| Genéricos: ¿A dónde vamos desde aquí? | 2023-01-20 | en línia | [Recording](https://www.youtube.com/watch?v=_7paSqvhLbo); [organiser programme](https://www.meetup.com/gobridge/events/290224727/) |
+| Creació i conseqüències de la creació d'una llibreria que és al cor del Cloud | 2020-06-03 | en línia | [Organiser's Open Mic recording and description](https://www.youtube.com/watch?v=i0UOYHs0eDI); owner identifies the second talk |
+| Contenidors i microserveis | 2018-09-12 | inQuiet, Igualada | [Deck description](https://speakerdeck.com/dario/contenidors-i-microserveis); organiser recording identifies Dario's containers segment |
+| Debat virtual de #PolíTICa | 2021-01-21 | en línia | [Organiser recording and description](https://www.youtube.com/watch?v=x6C_mwsypz8) |
+| Tecnologies disruptives i el seu impacte social | 2020-02-13 | Adoberia Bella | [Recording](https://www.youtube.com/watch?v=jVE-9WYNkoo); [organiser programme](https://www.ticanoia.cat/agenda-tic-de-lanoia/darreres-activitats/xerrada-tecnologies-disruptives-i-el-seu-impacte-social.html) |
+| Eixamplem Programa | 2018-07-28 | Igualada | [Deck text](https://speakerdeck.com/dario/eixamplem-programa-aportacions-des-de-lideari-pirata-per-a-candidatures-municipalistes) |
+| Blockchain y ciencia: ¿amigas para siempre? | 2018-06-15 | Vil·la Urània | [Deck title and description](https://speakerdeck.com/dario/blockchain-y-ciencia-amigas-para-siempre) |
+| Com sobreviure en l'era post-Snowden? | 2017-05-27 | Ateneu Igualadí, Igualada | [Deck description](https://speakerdeck.com/dario/com-sobreviure-en-lera-post-snowden-aprenent-a-navegar-de-forma-segura) |
+| Revolución Creative Commons | 2012-06-30 | Casal de Joves de Masquefa | [Deck text and description](https://speakerdeck.com/dario/revolucion-creative-commons-liberando-cultura-con-alternativas-al-copyright) |
+
+The three Loyal Guru presentations, Espiadas y vendidas and the RCR interview have exact dates but insufficient physical/online venue evidence for this change's event criteria. They remain plain, as do the entries without an established exact day. Month-only September 2019 is preserved as month-only prose. No upload date is substituted for an event date and no chapter timestamp is invented.
