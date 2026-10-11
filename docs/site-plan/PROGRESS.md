@@ -183,3 +183,10 @@ activation remains pending: merge the implementation, add the site secrets,
 explicitly apply the reviewed publication metadata, then merge its generated
 verification PR and verify the live response. T27 document publishing remains
 next; historical backfill needs the separately reviewed T30 allowlist.
+
+[T26 site PR #11](https://github.com/darccio/darccio/pull/11) contains signed,
+GitHub-verified feature commit `30014f9`. Both Site checks runs and the exact-SHA
+Pages deployment pass. Immutable preview `d78c64fa` passes the 66 focused HTTPS
+checks and independent seven-package live checker; the committed tree reproduces
+all 185 reviewed output hashes. The owner can review the prepared implementation
+without configuring credentials; account activation remains a later step.
