@@ -109,7 +109,6 @@
     <meta property="og:site_name" content='{{.Extra "/site/title"}}'>
     <meta name="fediverse:creator" content="@dario@mastodont.cat">
     {{if .Resolve "image"}}
-    {{if eq .Path "/index.html"}}<link rel="preconnect" href="https://gravatar.com">{{end}}
     <meta property="og:image" content='{{.Resolve "image"}}'>
     {{else}}
     <meta property="og:image" content="{{.Site.BaseURL}}/static/_.png">
