@@ -46,6 +46,9 @@ languages:
           - source: feeds/index.md
             title: "Subscripcions"
             description: "Feeds dels articles, el butlletí Rizoma i les versions de Mergo i Zas."
+          - source: blogroll/index.md
+            title: "Lectures"
+            description: "La Máquina de Escribir, de Gemma Goldie, recomanada públicament des de Rizoma."
           - source: slashes/index.md
             title: "Totes les pàgines"
             description: "Índex de les pàgines principals del web amb les dates de revisió."
