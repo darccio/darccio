@@ -143,3 +143,10 @@ The source receiver proposes manifest-only pin PRs after a complete guarded buil
 
 
 T24 site PR #8 contains signed feature commit bcf1c8c. Its exact-SHA GitHub checks and Cloudflare Pages succeed; immutable preview d7365698 passes 310 HTTPS variant/resource/import requests plus six path-specific docs metadata checks and the shared Go vanity checker. All 177 output hashes reproduce across two committed-tree builds, and an actual rejected docs build preserves all prior bytes. All three source PRs have passing CI. Source merges, the site production merge and three absent SITE_DISPATCH_TOKEN secrets remain owner actions; Actions PR creation is already enabled and read-only verified; all implementation and preview acceptance are complete.
+
+
+## T25 Mergo guides
+
+T25 is implemented for review in [Mergo PR #322](https://github.com/darccio/mergo/pull/322), signed source commit `8c092c379d3602a60b22605ee577d8e70aea9860`, and the separate site branch `docs/t25-mergo-guides-site`. The site selects five English guides from that immutable commit: overview, all eight options, transformers, migration and FAQ. Source-owned executable examples pass on current source and released v1.0.2; migration fixtures reproduce the original path error and verify both direct adoption and the temporary legacy pin. Source CI is green.
+
+The 185-file guarded build preserves all seven vanity contracts, all feeds/posts and other project output. Five HTML/Markdown pairs, project context indexes, local anchors, licenses, source dates and accessible layouts pass independent checks. T24 site PR #8 merged as `8b3dd43`; all three source `SITE_DISPATCH_TOKEN` names are present. Production T25 completion follows merging its source and site PRs; a successful token-backed dispatch remains a separate live check. See tasks/T25.md for precise verification and rollout evidence.
