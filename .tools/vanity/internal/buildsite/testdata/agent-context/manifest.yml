@@ -1,0 +1,33 @@
+version: 1
+languages:
+  - language: ca
+    title: Dario Castañé
+    summary: Escrits públics en català.
+    introduction: Personal site with public writing in three languages.
+    feed: true
+    sections:
+      - title: Sobre mi
+        pages:
+          - source: about/index.md
+            title: Sobre mi
+            description: Programari lliure, tecnologia i comunitat.
+  - language: en
+    title: Dario Castañé
+    summary: Public writing in English.
+    feed: true
+    sections:
+      - title: Writing
+        pages:
+          - source: en/posts/example/index.md
+            title: An example
+            description: A rendered English article.
+  - language: es
+    title: Dario Castañé
+    summary: Escritos públicos en español.
+    feed: true
+    sections:
+      - title: Escritos
+        pages:
+          - source: es/posts/example/index.md
+            title: Un ejemplo
+            description: Un artículo publicado en español.

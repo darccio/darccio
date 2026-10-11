@@ -81,8 +81,8 @@ Dependencies below include the report’s original ordering and repository-speci
 | [T16](tasks/T16.md) | Add h-feed archives and language labels | site | T04 | Deployed; complete 33/9/12 archives pass live checks |
 | [T17](tasks/T17.md) | Mark up talks and other supported page types | site | T09, T14 | Talk/slash/project units deployed and live-verified; CV deferred |
 | [T18](tasks/T18.md) | Validate microformats in CI | site | T14, T15, T16, T02, T04 | Deployed; offline fixtures, staged Pages validation and CI pass |
-| [T19](tasks/T19.md) | Emit shared JSON-LD metadata | site+zas | T05, T14, T15, T07, T08, T24 | Person/posts ready: Zas #115 and draft site #4; project schema follows T24 |
-| [T20](tasks/T20.md) | Publish per-language agent context files | site | T09, T21 | Planned |
+| [T19](tasks/T19.md) | Emit shared JSON-LD metadata | site+zas | T05, T14, T15, T07, T08, T24 | Person/posts merged and production-verified; project schema follows T24 |
+| [T20](tasks/T20.md) | Publish per-language agent context files | site | T09, T21 | Implemented and locally validated; site PR delivery in progress |
 | [T21](tasks/T21.md) | Generate Markdown twins in Zas | zas | T05 | [Zas PR #113](https://github.com/darccio/zas/pull/113) merged; twins and inventory discovery enabled |
 | [T22](tasks/T22.md) | Negotiate Markdown at the actual site host | site | T00, T21, T13, T02, T10 | Negotiation queued; matching static Content-Signal header deployed |
 | [T23](tasks/T23.md) | Add optional declarative search tooling | site | T06 | Optional and deferred |

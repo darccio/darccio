@@ -3,6 +3,7 @@ package buildsite
 import (
 	"bytes"
 	"context"
+	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
@@ -254,4 +255,276 @@ func readMarkdownDiscoveryFile(t *testing.T, deploy, rel string) []byte {
 		t.Fatal(err)
 	}
 	return body
+}
+
+func putMarkdownContextArtifacts(t *testing.T, deploy string) {
+	t.Helper()
+	for _, prefix := range []string{"", "en/", "es/"} {
+		for _, file := range []string{"llms.txt", "llms-full.txt"} {
+			put(t, deploy, prefix+file, "# Dario Castañé\n\nGenerated reviewed context.\n")
+		}
+	}
+}
+
+func markdownContextTestLinks(language string) string {
+	var links strings.Builder
+	for i, locale := range []string{"ca", "en", "es"} {
+		prefix, rel := "", "alternate"
+		if locale != "ca" {
+			prefix = locale + "/"
+		}
+		if locale == language {
+			rel += " describedby"
+		}
+		title := []string{"Català", "English", "Español"}[i]
+		fmt.Fprintf(&links, `<link rel="%s" type="text/markdown" title="LLM Context (%s)" hreflang="%s" href="https://dario.cat/%sllms.txt">`, rel, title, locale, prefix)
+	}
+	prefix := ""
+	if language != "ca" {
+		prefix = language + "/"
+	}
+	fmt.Fprintf(&links, `<link rel="alternate" type="text/markdown" title="Full LLM Context" hreflang="%s" href="https://dario.cat/%sllms-full.txt">`, language, prefix)
+	return links.String()
+}
+
+func markdownContextTestPage(language, links string) string {
+	return `<html lang="` + language + `"><head><title>Context fixture</title>` + links + `</head><body>Unchanged</body></html>`
+}
+
+func TestMarkdownDiscoveryContextsRemainSeparateFromPublishedTwins(t *testing.T) {
+	deploy := t.TempDir()
+	putMarkdownContextArtifacts(t, deploy)
+	for _, language := range []string{"ca", "en", "es"} {
+		file := language + "/page.html"
+		put(t, deploy, file, markdownContextTestPage(language, markdownContextTestLinks(language)))
+		put(t, deploy, language+"/page.md", "# Published twin\n")
+	}
+	noTwin := markdownContextTestPage("ca", markdownContextTestLinks("ca"))
+	put(t, deploy, "draft/index.html", noTwin)
+	vanity := `<meta name="go-import" content="dario.cat/xdr git https://github.com/darccio/xdr">`
+	put(t, deploy, "xdr/index.html", vanity)
+	if err := addMarkdownDiscoveryWithContexts(deploy, "https://dario.cat", true); err != nil {
+		t.Fatal(err)
+	}
+	for _, language := range []string{"ca", "en", "es"} {
+		file := language + "/page.html"
+		got := readMarkdownDiscoveryFile(t, deploy, file)
+		twin := "https://dario.cat/" + language + "/page.md"
+		if strings.Count(string(got), `type="text/markdown"`) != 5 || strings.Count(string(got), `href="`+twin+`"`) != 1 {
+			t.Fatalf("%s: contexts changed twin advertisement count: %s", file, got)
+		}
+		base, err := markdownDiscoveryBase("https://dario.cat")
+		if err != nil {
+			t.Fatal(err)
+		}
+		artifacts, err := markdownContextArtifacts(deploy, base)
+		if err != nil {
+			t.Fatal(err)
+		}
+		if _, linked, err := markdownDiscoveryHeadWithContexts(got, twin, artifacts); err != nil || !linked {
+			t.Fatalf("%s: independently classify one published twin: linked=%t err=%v", file, linked, err)
+		}
+		before := bytes.Clone(got)
+		if err := addMarkdownDiscoveryWithContexts(deploy, "https://dario.cat/", true); err != nil {
+			t.Fatal(err)
+		}
+		if !bytes.Equal(before, readMarkdownDiscoveryFile(t, deploy, file)) {
+			t.Fatal("repeat context discovery changed existing links")
+		}
+	}
+	if string(readMarkdownDiscoveryFile(t, deploy, "draft/index.html")) != noTwin || string(readMarkdownDiscoveryFile(t, deploy, "xdr/index.html")) != vanity {
+		t.Fatal("context-only page or raw vanity fragment changed")
+	}
+}
+
+func TestMarkdownDiscoveryLegacyModeRejectsContextLinks(t *testing.T) {
+	deploy := t.TempDir()
+	putMarkdownContextArtifacts(t, deploy)
+	original := markdownContextTestPage("ca", markdownContextTestLinks("ca"))
+	put(t, deploy, "index.html", original)
+	put(t, deploy, "index.md", "# Published\n")
+	if err := addMarkdownDiscovery(deploy, "https://dario.cat"); err == nil {
+		t.Fatal("context-looking titles and six .txt files bypassed legacy twin validation")
+	}
+	if string(readMarkdownDiscoveryFile(t, deploy, "index.html")) != original {
+		t.Fatal("legacy rejection changed HTML")
+	}
+}
+
+func TestMarkdownDiscoveryContextExceptionsKeepTwinValidationStrict(t *testing.T) {
+	twin := `<link rel="alternate" type="text/markdown" href="https://dario.cat/index.md">`
+	for _, mode := range []string{"missing twin", "duplicate twin"} {
+		t.Run(mode, func(t *testing.T) {
+			deploy := t.TempDir()
+			putMarkdownContextArtifacts(t, deploy)
+			links := markdownContextTestLinks("ca") + twin
+			if mode == "duplicate twin" {
+				put(t, deploy, "index.md", "# Published twin\n")
+				links += twin
+			}
+			original := markdownContextTestPage("ca", links)
+			put(t, deploy, "index.html", original)
+			if err := addMarkdownDiscoveryWithContexts(deploy, "https://dario.cat", true); err == nil {
+				t.Fatal("registered context links weakened published-twin validation")
+			}
+			if string(readMarkdownDiscoveryFile(t, deploy, "index.html")) != original {
+				t.Fatal("failed twin validation changed HTML")
+			}
+		})
+	}
+}
+
+func TestMarkdownDiscoveryContextPolicyRequiresRegularManifest(t *testing.T) {
+	for _, mode := range []string{"absent", "regular", "directory", "symlink", "disabled"} {
+		t.Run(mode, func(t *testing.T) {
+			stage, deploy := t.TempDir(), t.TempDir()
+			put(t, stage, ".zas/config.yml", "site:\n  publish_markdown: true\n  baseurl: https://dario.cat\n")
+			putMarkdownContextArtifacts(t, deploy)
+			put(t, deploy, "index.html", markdownContextTestPage("ca", markdownContextTestLinks("ca")))
+			put(t, deploy, "index.md", "# Published\n")
+			manifest := filepath.Join(stage, ".zas", "llms.yml")
+			switch mode {
+			case "regular", "disabled":
+				put(t, stage, ".zas/llms.yml", "version: 1\n")
+				if mode == "disabled" {
+					put(t, stage, ".zas/config.yml", "site:\n  baseurl: https://dario.cat\n")
+				}
+			case "directory":
+				if err := os.Mkdir(manifest, 0755); err != nil {
+					t.Fatal(err)
+				}
+			case "symlink":
+				outside := filepath.Join(t.TempDir(), "llms.yml")
+				if err := os.WriteFile(outside, []byte("version: 1\n"), 0644); err != nil {
+					t.Fatal(err)
+				}
+				if err := os.Symlink(outside, manifest); err != nil {
+					t.Skipf("symlinks unavailable: %v", err)
+				}
+			}
+			err := finalizeMarkdownDiscovery(stage, deploy)
+			if (err == nil) != (mode == "regular") {
+				t.Fatalf("manifest %s: error = %v", mode, err)
+			}
+		})
+	}
+}
+
+func TestMarkdownDiscoveryRejectsContextLinkForgeriesBeforeMutation(t *testing.T) {
+	links := markdownContextTestLinks("en")
+	full := `<link rel="alternate" type="text/markdown" title="Full LLM Context" hreflang="en" href="https://dario.cat/en/llms-full.txt">`
+	summary := `<link rel="alternate describedby" type="text/markdown" title="LLM Context (English)" hreflang="en" href="https://dario.cat/en/llms.txt">`
+	cases := map[string]string{
+		"missing summary":      strings.Replace(links, summary, "", 1),
+		"missing full":         strings.Replace(links, full, "", 1),
+		"duplicate summary":    links + summary,
+		"duplicate full":       links + full,
+		"wrong full locale":    strings.Replace(links, full, strings.ReplaceAll(strings.ReplaceAll(full, `hreflang="en"`, `hreflang="ca"`), "/en/llms-full.txt", "/llms-full.txt"), 1),
+		"two full locales":     links + strings.ReplaceAll(strings.ReplaceAll(full, `hreflang="en"`, `hreflang="ca"`), "/en/llms-full.txt", "/llms-full.txt"),
+		"wrong language":       strings.Replace(links, `hreflang="en"`, `hreflang="ca"`, 1),
+		"wrong title":          strings.Replace(links, "LLM Context (English)", "LLM Context (Català)", 1),
+		"missing alternate":    strings.Replace(links, "alternate describedby", "describedby", 1),
+		"missing describedby":  strings.Replace(links, "alternate describedby", "alternate", 1),
+		"foreign describedby":  strings.Replace(links, `rel="alternate"`, `rel="alternate describedby"`, 1),
+		"extra relation":       strings.Replace(links, "alternate describedby", "alternate describedby author", 1),
+		"duplicate relation":   strings.Replace(links, "alternate describedby", "alternate describedby alternate", 1),
+		"wrong type":           strings.Replace(links, `type="text/markdown"`, `type="text/plain"`, 1),
+		"missing type":         strings.Replace(links, `type="text/markdown"`, "", 1),
+		"invalid type":         strings.Replace(links, `type="text/markdown"`, `type="text/markdown; garbage"`, 1),
+		"duplicate href":       strings.Replace(links, `<link `, `<link href="https://other.example/llms.txt" `, 1),
+		"inactive template":    strings.Replace(links, summary, "<template>"+summary+"</template>", 1),
+		"inactive noscript":    strings.Replace(links, summary, "<noscript>"+summary+"</noscript>", 1),
+		"inactive media":       strings.Replace(links, `<link `, `<link media="print" `, 1),
+		"disabled link":        strings.Replace(links, `<link `, `<link disabled `, 1),
+		"relative href":        strings.Replace(links, "https://dario.cat/llms.txt", "/llms.txt", 1),
+		"foreign href":         strings.Replace(links, "https://dario.cat/llms.txt", "https://other.example/llms.txt", 1),
+		"suffix spoof":         strings.Replace(links, "https://dario.cat/llms.txt", "https://dario.cat/spoof-llms.txt", 1),
+		"query spoof":          strings.Replace(links, "https://dario.cat/llms.txt", "https://dario.cat/llms.txt?foo=1", 1),
+		"fragment spoof":       strings.Replace(links, "https://dario.cat/llms.txt", "https://dario.cat/llms.txt#foo", 1),
+		"extra markdown link":  links + `<link rel="alternate" type="text/markdown" href="https://dario.cat/unreviewed.txt" title="LLM Context (English)">`,
+		"spoof twin exception": links + `<link rel="alternate" type="text/markdown" href="https://dario.cat/other.md" title="Full LLM Context">`,
+	}
+	for name, changed := range cases {
+		t.Run(name, func(t *testing.T) {
+			deploy := t.TempDir()
+			putMarkdownContextArtifacts(t, deploy)
+			good := markdownContextTestPage("ca", markdownContextTestLinks("ca"))
+			bad := markdownContextTestPage("en", changed)
+			put(t, deploy, "good.html", good)
+			put(t, deploy, "good.md", "# Good\n")
+			put(t, deploy, "bad.html", bad)
+			put(t, deploy, "bad.md", "# Bad\n")
+			if err := addMarkdownDiscoveryWithContexts(deploy, "https://dario.cat", true); err == nil {
+				t.Fatal("invalid agent-context discovery was accepted")
+			}
+			if string(readMarkdownDiscoveryFile(t, deploy, "good.html")) != good || string(readMarkdownDiscoveryFile(t, deploy, "bad.html")) != bad {
+				t.Fatal("context validation failure mutated HTML")
+			}
+		})
+	}
+}
+
+func TestMarkdownDiscoveryRejectsMisplacedContextsAndBadLocale(t *testing.T) {
+	links := markdownContextTestLinks("ca")
+	for name, original := range map[string]string{
+		"outside head":    `<html lang="ca"><head></head><body>` + links + `</body></html>`,
+		"no html lang":    `<html><head>` + links + `</head><body>Body</body></html>`,
+		"wrong html lang": markdownContextTestPage("es", links),
+		"duplicate html":  `<html lang="ca">` + markdownContextTestPage("ca", links),
+		"duplicate lang":  strings.Replace(markdownContextTestPage("ca", links), `lang="ca"`, `lang="ca" LANG="es"`, 1),
+		"raw vanity link": `<meta name="go-import" content="dario.cat/xdr git https://github.com/darccio/xdr">` + links,
+	} {
+		t.Run(name, func(t *testing.T) {
+			deploy := t.TempDir()
+			putMarkdownContextArtifacts(t, deploy)
+			file := "index.html"
+			if name == "raw vanity link" {
+				file = "xdr/index.html"
+			}
+			put(t, deploy, file, original)
+			if err := addMarkdownDiscoveryWithContexts(deploy, "https://dario.cat", true); err == nil {
+				t.Fatal("misplaced or wrongly localized contexts were accepted")
+			}
+		})
+	}
+}
+
+func TestMarkdownDiscoveryRejectsMissingOrBogusContextArtifacts(t *testing.T) {
+	for _, mode := range []string{"missing", "directory", "empty", "HTML", "symlink"} {
+		t.Run(mode, func(t *testing.T) {
+			deploy := t.TempDir()
+			putMarkdownContextArtifacts(t, deploy)
+			original := markdownContextTestPage("ca", markdownContextTestLinks("ca"))
+			put(t, deploy, "index.html", original)
+			put(t, deploy, "index.md", "# Published\n")
+			file := filepath.Join(deploy, "es", "llms-full.txt")
+			if err := os.Remove(file); err != nil {
+				t.Fatal(err)
+			}
+			switch mode {
+			case "directory":
+				if err := os.Mkdir(file, 0755); err != nil {
+					t.Fatal(err)
+				}
+			case "empty":
+				put(t, deploy, "es/llms-full.txt", "")
+			case "HTML":
+				put(t, deploy, "es/llms-full.txt", "<!doctype html><html><body>Not generated Markdown</body></html>")
+			case "symlink":
+				outside := filepath.Join(t.TempDir(), "context.txt")
+				if err := os.WriteFile(outside, []byte("# Outside\n"), 0644); err != nil {
+					t.Fatal(err)
+				}
+				if err := os.Symlink(outside, file); err != nil {
+					t.Skipf("symlinks unavailable: %v", err)
+				}
+			}
+			if err := addMarkdownDiscoveryWithContexts(deploy, "https://dario.cat", true); err == nil {
+				t.Fatal("missing or invalid registered context artifact accepted")
+			}
+			if string(readMarkdownDiscoveryFile(t, deploy, "index.html")) != original {
+				t.Fatal("context artifact failure mutated page")
+			}
+		})
+	}
 }

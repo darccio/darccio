@@ -172,6 +172,10 @@
     <link rel="alternate" type="application/rss+xml" title='{{.Extra "/site/feed_title"}}' href="{{.Site.BaseURL}}/feed.xml">
     {{if eq $language "en"}}<link rel="alternate" type="application/rss+xml" title='{{.Extra "/site/feed_title"}} (English)' href="{{.Site.BaseURL}}/en/feed.xml">{{end}}
     {{if eq $language "es"}}<link rel="alternate" type="application/rss+xml" title='{{.Extra "/site/feed_title"}} (Español)' href="{{.Site.BaseURL}}/es/feed.xml">{{end}}
+    <link rel="alternate{{if eq $language "ca"}} describedby{{end}}" type="text/markdown" title="LLM Context (Català)" hreflang="ca" href="{{.Site.BaseURL}}/llms.txt">
+    <link rel="alternate{{if eq $language "en"}} describedby{{end}}" type="text/markdown" title="LLM Context (English)" hreflang="en" href="{{.Site.BaseURL}}/en/llms.txt">
+    <link rel="alternate{{if eq $language "es"}} describedby{{end}}" type="text/markdown" title="LLM Context (Español)" hreflang="es" href="{{.Site.BaseURL}}/es/llms.txt">
+    <link rel="alternate" type="text/markdown" title="Full LLM Context" hreflang="{{$language}}" href="{{.Site.BaseURL}}{{if eq $language "en"}}/en{{else if eq $language "es"}}/es{{end}}/llms-full.txt">
     {{if $description}}
     <meta name="description" content="{{$description}}">
     <meta property="og:description" content="{{$description}}">

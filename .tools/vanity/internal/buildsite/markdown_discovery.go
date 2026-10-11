@@ -14,6 +14,7 @@ import (
 	"path/filepath"
 	"strings"
 
+	"dario.cat/site-tools/internal/vanity"
 	"go.yaml.in/yaml/v3"
 	"golang.org/x/net/html"
 )
@@ -43,10 +44,21 @@ func finalizeMarkdownDiscovery(stage, deploy string) error {
 	if err := yaml.Unmarshal(configBytes, &config); err != nil {
 		return err
 	}
+	manifest, err := os.Lstat(filepath.Join(stage, ".zas", "llms.yml"))
+	contexts := err == nil
+	if err != nil && !errors.Is(err, os.ErrNotExist) {
+		return err
+	}
+	if contexts && !manifest.Mode().IsRegular() {
+		return errors.New("agent-context discovery requires a regular .zas/llms.yml manifest")
+	}
+	if !config.Site.PublishMarkdown && contexts {
+		return errors.New("agent-context discovery requires site.publish_markdown")
+	}
 	if !config.Site.PublishMarkdown {
 		return nil
 	}
-	return addMarkdownDiscovery(deploy, config.Site.BaseURL)
+	return addMarkdownDiscoveryWithContexts(deploy, config.Site.BaseURL, contexts)
 }
 
 // addMarkdownDiscovery advertises only Markdown twins in the assembled deploy
@@ -54,6 +66,55 @@ func finalizeMarkdownDiscovery(stage, deploy string) error {
 // when site.publish_markdown is enabled. It validates the complete inventory
 // before changing any HTML and inserts bytes without reserializing the page.
 func addMarkdownDiscovery(deploy, baseURL string) error {
+	return addMarkdownDiscoveryWithContexts(deploy, baseURL, false)
+}
+
+type markdownContextArtifact struct {
+	language string
+	title    string
+	full     bool
+}
+
+// Context exceptions are opt-in and cover only the six assembled, regular
+// outputs. Titles, suffixes and arbitrary .txt files cannot grant an exception.
+func markdownContextArtifacts(deploy string, base *url.URL) (map[string]markdownContextArtifact, error) {
+	artifacts := make(map[string]markdownContextArtifact)
+	for _, language := range []string{"ca", "en", "es"} {
+		prefix, title := "", "LLM Context (Català)"
+		if language == "en" {
+			prefix, title = "en/", "LLM Context (English)"
+		} else if language == "es" {
+			prefix, title = "es/", "LLM Context (Español)"
+		}
+		for _, full := range []bool{false, true} {
+			file, linkTitle := prefix+"llms.txt", title
+			if full {
+				file, linkTitle = prefix+"llms-full.txt", "Full LLM Context"
+			}
+			info, err := os.Lstat(filepath.Join(deploy, filepath.FromSlash(file)))
+			if err != nil {
+				return nil, fmt.Errorf("agent-context artifact %s: %w", file, err)
+			}
+			if !info.Mode().IsRegular() || info.Size() == 0 {
+				return nil, fmt.Errorf("agent-context artifact %s must be a nonempty regular file", file)
+			}
+			body, err := os.ReadFile(filepath.Join(deploy, filepath.FromSlash(file)))
+			if err != nil {
+				return nil, err
+			}
+			if !bytes.HasPrefix(body, []byte("# ")) {
+				return nil, fmt.Errorf("agent-context artifact %s must begin with a Markdown H1", file)
+			}
+			location := *base
+			location.Path = strings.TrimRight(base.Path, "/") + "/" + file
+			location.RawPath = ""
+			artifacts[location.String()] = markdownContextArtifact{language: language, title: linkTitle, full: full}
+		}
+	}
+	return artifacts, nil
+}
+
+func addMarkdownDiscoveryWithContexts(deploy, baseURL string, contexts bool) error {
 	if err := auditOutput(deploy); err != nil {
 		return err
 	}
@@ -67,6 +128,17 @@ func addMarkdownDiscovery(deploy, baseURL string) error {
 	base, err := markdownDiscoveryBase(baseURL)
 	if err != nil {
 		return fmt.Errorf("Markdown discovery site.baseurl: %w", err)
+	}
+	var artifacts map[string]markdownContextArtifact
+	if contexts {
+		artifacts, err = markdownContextArtifacts(deploy, base)
+		if err != nil {
+			return err
+		}
+	}
+	rawVanity := make(map[string]bool)
+	for _, route := range vanity.Routes() {
+		rawVanity[route.File()] = true
 	}
 	pages := make(map[string]markdownDiscoveryPage)
 	twins := make(map[string]bool)
@@ -117,7 +189,11 @@ func addMarkdownDiscovery(deploy, baseURL string) error {
 			location.RawPath = ""
 			expected = location.String()
 		}
-		position, linked, err := markdownDiscoveryHead(page.body, expected)
+		policy := artifacts
+		if rawVanity[rel] {
+			policy = nil
+		}
+		position, linked, err := markdownDiscoveryHeadWithContexts(page.body, expected, policy)
 		if err != nil {
 			return fmt.Errorf("Markdown discovery %s: %w", rel, err)
 		}
@@ -156,9 +232,15 @@ func markdownDiscoveryBase(raw string) (*url.URL, error) {
 // Token offsets identify the real closing head even when scripts/styles contain
 // strings such as </head>. No template or HTML repair pass runs over the bytes.
 func markdownDiscoveryHead(body []byte, expected string) (position int, linked bool, err error) {
+	return markdownDiscoveryHeadWithContexts(body, expected, nil)
+}
+
+func markdownDiscoveryHeadWithContexts(body []byte, expected string, artifacts map[string]markdownContextArtifact) (position int, linked bool, err error) {
 	z := html.NewTokenizer(bytes.NewReader(body))
 	position = -1
 	offset, heads, closes, links := 0, 0, 0, 0
+	htmlElements, language := 0, ""
+	contextLinks := make(map[string]bool)
 	inHead, inBody := false, false
 	templateDepth, noscriptDepth := 0, 0
 	rawText := ""
@@ -212,6 +294,18 @@ func markdownDiscoveryHead(body []byte, expected string) (position int, linked b
 			continue
 		}
 		switch token.Data {
+		case "html":
+			if artifacts != nil {
+				if inHead || inBody || markdownDiscoveryDuplicateAttributes(raw) || kind == html.SelfClosingTagToken {
+					return -1, false, errors.New("invalid html element for agent-context discovery")
+				}
+				htmlElements++
+				for _, attr := range token.Attr {
+					if attr.Key == "lang" {
+						language = attr.Val
+					}
+				}
+			}
 		case "head":
 			if inHead || heads != 0 || inBody || kind == html.SelfClosingTagToken {
 				structureErr = errors.New("malformed or duplicate head")
@@ -249,7 +343,8 @@ func markdownDiscoveryHead(body []byte, expected string) (position int, linked b
 			if markdownDiscoveryDuplicateAttributes(raw) {
 				return -1, false, errors.New("duplicate attributes on discovery link")
 			}
-			if !markdown {
+			artifact, contextLink := artifacts[attrs["href"]]
+			if !markdown && !contextLink {
 				continue
 			}
 			mediaType, _, typeErr := mime.ParseMediaType(attrs["type"])
@@ -258,6 +353,16 @@ func markdownDiscoveryHead(body []byte, expected string) (position int, linked b
 			}
 			if !inHead || templateDepth != 0 || noscriptDepth != 0 {
 				return -1, false, errors.New("Markdown discovery link outside the active head")
+			}
+			if contextLink {
+				if err := validateMarkdownContextLink(attrs, artifact, language); err != nil {
+					return -1, false, err
+				}
+				if contextLinks[attrs["href"]] {
+					return -1, false, errors.New("duplicate agent-context discovery link")
+				}
+				contextLinks[attrs["href"]] = true
+				continue
 			}
 			if !strings.EqualFold(strings.TrimSpace(attrs["rel"]), "alternate") {
 				return -1, false, errors.New("Markdown discovery link must declare rel=alternate")
@@ -275,7 +380,7 @@ func markdownDiscoveryHead(body []byte, expected string) (position int, linked b
 			}
 		}
 	}
-	if expected == "" && links == 0 {
+	if expected == "" && links == 0 && artifacts == nil {
 		return -1, false, nil // Includes the seven raw head-only vanity fragments.
 	}
 	if structureErr != nil {
@@ -287,7 +392,47 @@ func markdownDiscoveryHead(body []byte, expected string) (position int, linked b
 	if links > 1 {
 		return -1, false, errors.New("duplicate Markdown discovery links")
 	}
+	if artifacts != nil {
+		if htmlElements != 1 || (language != "ca" && language != "en" && language != "es") {
+			return -1, false, errors.New("agent-context discovery requires one html element with lang=ca, en or es")
+		}
+		for href, artifact := range artifacts {
+			if !artifact.full || artifact.language == language {
+				if !contextLinks[href] {
+					return -1, false, fmt.Errorf("missing agent-context discovery link %q", href)
+				}
+			}
+		}
+	}
 	return position, links == 1, nil
+}
+
+func validateMarkdownContextLink(attrs map[string]string, artifact markdownContextArtifact, language string) error {
+	if artifact.full && artifact.language != language {
+		return errors.New("full agent-context discovery language does not match html lang")
+	}
+	if attrs["title"] != artifact.title || attrs["hreflang"] != artifact.language {
+		return errors.New("agent-context discovery title or hreflang does not match its artifact")
+	}
+	rels := make(map[string]bool)
+	for _, rel := range strings.Fields(strings.ToLower(attrs["rel"])) {
+		if rels[rel] {
+			return errors.New("duplicate relation on agent-context discovery link")
+		}
+		rels[rel] = true
+	}
+	describedby := !artifact.full && artifact.language == language
+	relationCount := 1
+	if describedby {
+		relationCount++
+	}
+	if !rels["alternate"] || rels["describedby"] != describedby || len(rels) != relationCount {
+		return errors.New("agent-context discovery relation does not match its language and artifact")
+	}
+	if _, disabled := attrs["disabled"]; disabled || attrs["media"] != "" {
+		return errors.New("inactive agent-context discovery link")
+	}
+	return nil
 }
 
 // The HTML tokenizer deliberately discards duplicate attributes. Scan only
