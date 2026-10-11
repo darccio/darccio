@@ -1,0 +1,60 @@
+name: Standard.site publication
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: Create or update the reviewed publication and propose its verification file
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: standard-site-publication
+  cancel-in-progress: false
+
+jobs:
+  bootstrap:
+    if: github.repository == 'darccio/darccio' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e
+        with:
+          go-version-file: .tools/atproto/go.mod
+          cache: false
+      - name: Test publication bootstrap
+        run: |
+          go -C .tools/atproto test ./...
+          python3 .tools/atproto/open-publication-pr_test.py
+      - name: Preview publication changes without authentication
+        run: >-
+          go -C .tools/atproto run ./cmd/publication
+          -root ../.. -record .tools/atproto/publication.json
+      - name: Apply reviewed publication metadata
+        if: inputs.apply
+        env:
+          ATP_HANDLE: ${{ secrets.ATP_HANDLE }}
+          ATP_APP_PASSWORD: ${{ secrets.ATP_APP_PASSWORD }}
+        run: >-
+          go -C .tools/atproto run ./cmd/publication
+          -root ../.. -record .tools/atproto/publication.json -apply
+      - name: Validate site with the verified publication file
+        if: inputs.apply
+        run: make -f .zas/Makefile publish
+      - name: Propose publication verification in an atomic commit
+        if: inputs.apply
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .tools/atproto/open-publication-pr.py

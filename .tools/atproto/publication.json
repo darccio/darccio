@@ -1,0 +1,9 @@
+{
+  "$type": "site.standard.publication",
+  "url": "https://dario.cat",
+  "name": "Dario Castañé",
+  "description": "Tecnologia, política i divulgació.",
+  "preferences": {
+    "showInDiscover": true
+  }
+}

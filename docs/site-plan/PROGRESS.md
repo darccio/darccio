@@ -166,3 +166,20 @@ now passes and opens [source pin PR #10](https://github.com/darccio/darccio/pull
 confirming T24's dispatch/build/atomic proposal path. Merging that separate PR
 adopts the source's merged commit; the deployed docs already use the verified
 immutable feature commit.
+
+## T26 publication preparation · 2026-10-11
+
+The T26 Go bootstrap, exact reviewed publication metadata, default-preview manual
+workflow and atomic two-output PR handoff are implemented. Public identity/schema
+checks and the real unauthenticated preview pass; the account still has only
+Rizoma. Mocked Go tests, race/shuffle, vet, ten offline GitHub handoff tests,
+workflow lint and the full existing site suite pass. The guarded build preserves
+all 185 output hashes except its new verification MIME rule. An isolated fixture
+confirms extensionless URI preservation and internal-state exclusion.
+
+The owner chose to prepare the PR and configure `ATP_HANDLE`/`ATP_APP_PASSWORD`
+later. No authentication, PDS write or placeholder verifier is included. T26
+activation remains pending: merge the implementation, add the site secrets,
+explicitly apply the reviewed publication metadata, then merge its generated
+verification PR and verify the live response. T27 document publishing remains
+next; historical backfill needs the separately reviewed T30 allowlist.
