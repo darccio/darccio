@@ -63,7 +63,7 @@ The live home replaces the plain email link with `/cdn-cgi/l/email-protection#..
 
 ## Hosting and WebFinger uncertainty
 
-Cloudflare is observed at the public edge; **Cloudflare Pages, an asset Worker, the origin platform, build command, output-directory setting, production branch, preview policy and dashboard route rules are unconfirmed**. A public CNAME lookup returned no CNAME answer and a Cloudflare SOA; that does not identify the origin. No deployment/dashboard credentials or settings were inspected. Do not select `_headers` behavior solely from the `Server` header.
+Cloudflare is observed at the public edge. **The owner confirmed Cloudflare Pages with Git integration during this session.** The build command, output-directory setting, production branch, preview policy, function/Worker routing and dashboard redirect rules remain unconfirmed. A public CNAME lookup returned no CNAME answer and a Cloudflare SOA; that does not identify the origin. No deployment/dashboard credentials or settings were inspected. Do not select `_headers` behavior solely from the `Server` header.
 
 [`.workers/webfinger/wrangler.toml`](../.workers/webfinger/wrangler.toml) only sets `name = "webfinger"` and `compatibility_date = "2022-11-27"`; it declares no `ASSETS` binding or routes. The TypeScript environment is empty. The worker matches only `resource=acct:d@rio.hn`, then emits a static `application/jrd+json; charset=utf-8` document with subject `acct:dario@mastodont.cat`, profile/activity/subscribe links; it otherwise returns 404. Deployment and current route ownership of this worker are not confirmed. A live request to `https://rio.hn/.well-known/webfinger?resource=acct:d@rio.hn` redirected to the same path/query on `dario.cat`, whose response was the homepage fallback. Do not overwrite this worker to add site asset negotiation.
 
@@ -93,7 +93,7 @@ These dates are evidence of Substack's feed values. They do not establish first 
 
 ## Public domain registration evidence
 
-A root-agent HTTPS query through RDAP on 2026-10-11 reached the .cat registry data for `dario.cat` (registry database update `2026-10-11T08:08:07.582Z`). The registry reports expiration at **2027-06-01T07:05:04.361Z**, status `active`, and `secureDNS.delegationSigned: false`. Its nameservers are `ray.ns.cloudflare.com` and `jean.ns.cloudflare.com`. The expiry is less than one year from this audit; it does not satisfy T01’s more-than-one-year acceptance requirement. Auto-renew, payment validity and registrar lock must be checked in the registrar account; absence of a transfer-lock status in this response is not proof of a disabled setting. DNSSEC requires a real validation check after activation. No renewal purchase or DNS setting was changed.
+A root-agent HTTPS query through RDAP on 2026-10-11 reached the .cat [registry data for `dario.cat`](https://rdap.nic.cat/rdap/domain/dario.cat) (registry database update `2026-10-11T08:08:07.582Z`). The registry reports expiration at **2027-06-01T07:05:04.361Z**, status `active`, and `secureDNS.delegationSigned: false`. Its nameservers are `ray.ns.cloudflare.com` and `jean.ns.cloudflare.com`. The expiry is less than one year from this audit; it does not satisfy T01’s more-than-one-year acceptance requirement. Auto-renew, payment validity and registrar lock must be checked in the registrar account; absence of a transfer-lock status in this response is not proof of a disabled setting. DNSSEC requires a real validation check after activation. No renewal purchase or DNS setting was changed.
 
 ## Reverification and owner inputs
 
@@ -105,4 +105,4 @@ curl --silent --show-error --location --max-redirs 5 \
   --output /tmp/site-body.txt 'https://dario.cat/sitemap.xml'
 ```
 
-Before host-specific changes or public publishing, establish the actual origin platform and deployment settings, email-obfuscation setting, desired WebFinger routing, approved content/licensing policy, and Standard.site publication/account authorization. Exact historical publication times that are absent from source remain unknown. This audit requires no owner approval to record the available facts, and records unavailable settings explicitly.
+Before host-specific changes or public publishing, establish the remaining Pages deployment settings, email-obfuscation setting, desired WebFinger routing, approved content/licensing policy, and Standard.site publication/account authorization. Exact historical publication times that are absent from source remain unknown. This audit requires no owner approval to record the available facts, and records unavailable settings explicitly.
