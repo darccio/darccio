@@ -10,7 +10,7 @@ feed: false
 atproto: false
 -->
 
-# A portal between Ruby and Go (using FFI)
+<h1 class="p-name">A portal between Ruby and Go (using FFI)</h1>
 
 Thinking about migrating some huge REST APIs from Ruby to Go, I researched how to replace the Ruby code progressively with Go code.
 

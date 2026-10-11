@@ -8,7 +8,7 @@ summary: "Un cuestionario basado en un diagrama de decisión del NIST para valor
 language: es
 -->
 
-# Blockchain en mi próximo proyecto: ¿sí o no?
+<h1 class="p-name">Blockchain en mi próximo proyecto: ¿sí o no?</h1>
 
 Una pregunta habitual cuando conoces mejor la tecnología blockchain (o tu jefe) es "¿Necesito o puedo usar una blockchain en algún proyecto?". En el <abbr title="National Institute of Standards and Technology">NIST</abbr> se enfrentaron a esta misma pregunta y diseñaron un diagrama de decisión que podemos usar como [cuestionario interactivo](https://brucemacd.github.io/You-Dont-Need-A-Blockchain/).
 

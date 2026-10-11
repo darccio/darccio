@@ -10,7 +10,7 @@ summary: "Revisión de los accesos mediante Facebook y de las dificultades para 
 language: es
 -->
 
-# Delete Facebook #2
+<h1 class="p-name">Delete Facebook #2</h1>
 
 > **Progreso realizado:** eliminación de inicios de sesión.
 

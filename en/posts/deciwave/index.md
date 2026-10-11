@@ -8,7 +8,7 @@ summary: "Introducing Deciwave, a Google Wave robot that embeds music players fr
 language: en
 -->
 
-# Deciwave - Robot Rocking for Google Wave
+<h1 class="p-name">Deciwave - Robot Rocking for Google Wave</h1>
 
 Last Sunday I built a little robot for [Google Wave](https://wave.google.com) which allows to embed music players from [GoEar](http://www.goear.com/), [Jamendo](https://www.jamendo.com/start) and [The Sixty One](http://thesixtyone.com): [Deciwave](https://deciwave.appspot.com/).
 

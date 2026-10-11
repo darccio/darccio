@@ -10,7 +10,7 @@ summary: "Primers passos per deixar Facebook: recuperar un domini propi, revisar
 language: ca
 -->
 
-# Delete Facebook #1
+<h1 class="p-name">Delete Facebook #1</h1>
 
 > **Progrés realitzat:** creació de la meva pròpia pàgina sota domini propi i revisió d'inicis de sessió actius.
 

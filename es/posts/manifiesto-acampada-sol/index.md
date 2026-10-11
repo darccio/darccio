@@ -8,7 +8,7 @@ summary: "El manifiesto de Acampada Sol presenta un movimiento independiente de 
 language: es
 -->
 
-# Manifiesto de la Acampada Sol
+<h1 class="p-name">Manifiesto de la Acampada Sol</h1>
 
 ## ¿Quiénes somos?
 

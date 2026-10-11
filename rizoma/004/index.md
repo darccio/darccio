@@ -8,7 +8,7 @@ summary: "Un recull d'enllaços sobre reciclatge de CO₂, l'oposició hongaresa
 language: ca
 -->
 
-# Rizoma #004: popurri d'enllaços
+<h1 class="p-name">Rizoma #004: popurri d'enllaços</h1>
 
 Avui porto un recull d'enllaços interessants que he llegit aquestes últimes tres setmanes.
 

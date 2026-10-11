@@ -8,7 +8,7 @@ summary: "A personal list of habits for reducing digital clutter and improving f
 language: en
 -->
 
-# What Internet told me: Geekvana, is it possible?
+<h1 class="p-name">What Internet told me: Geekvana, is it possible?</h1>
 
 Time ago I wrote down a quick plain text file with the main "rules" about achieving the "geekvana", an inner peace state, which I learnt reading posts and posts through years.
 

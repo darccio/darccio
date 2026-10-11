@@ -8,7 +8,7 @@ summary: "Una propuesta para conectar presencialmente a personas que buscan un c
 language: es
 -->
 
-# Tejiendo el cambio
+<h1 class="p-name">Tejiendo el cambio</h1>
 
 Fui invitado a otro grupo de Facebook, de esos de buscar la “confluencia”. Es decir, iniciar otro proceso tortuoso de intento de unión, donde los egos no van a ceder.
 

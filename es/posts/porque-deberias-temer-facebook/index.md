@@ -8,7 +8,7 @@ summary: "Traducción de una carta de Matthew Pherigo sobre los cambios de priva
 language: es
 -->
 
-# Por qué deberías temer a Facebook
+<h1 class="p-name">Por qué deberías temer a Facebook</h1>
 
 Hola amigo,
 

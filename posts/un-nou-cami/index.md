@@ -9,7 +9,7 @@ summary: "Anunci del final de l'etapa de militància a Pirates de Catalunya, amb
 language: ca
 -->
 
-# Un nou camí
+<h1 class="p-name">Un nou camí</h1>
 
 Avui, coincidint amb l'aniversari de les eleccions del 28 de novembre del 2010 i després de complir amb compromisos adquirits, anuncio que d'unes setmanes ençà he abandonat la militància a Pirates de Catalunya. L'efemèride és rellevant perquè aquestes eleccions van ser les primeres en què Pirates va concórrer, poc després de la seva oficialització, i van marcar la meva primera experiència electoral.
 

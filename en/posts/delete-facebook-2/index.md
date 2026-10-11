@@ -10,7 +10,7 @@ summary: "A review of Facebook logins and the difficult process of asking third-
 language: en
 -->
 
-# Delete Facebook #2
+<h1 class="p-name">Delete Facebook #2</h1>
 
 > **Progress made:** deletion of logins.
 

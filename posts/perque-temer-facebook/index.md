@@ -8,7 +8,7 @@ summary: "Traducció d'una carta de Matthew Pherigo sobre els canvis de privacit
 language: ca
 -->
 
-# Perquè has de témer a Facebook
+<h1 class="p-name">Perquè has de témer a Facebook</h1>
 
 Hola amic,
 

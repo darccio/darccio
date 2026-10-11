@@ -8,7 +8,7 @@ summary: "A step-by-step setup for monitoring Synology NAS hardware and services
 language: en
 -->
 
-# Monitoring a Synology NAS with Datadog
+<h1 class="p-name">Monitoring a Synology NAS with Datadog</h1>
 
 There are two things worth watching on a NAS: the hardware (disks, RAID, temperature) and everything running on top of it. Datadog covers the first over SNMP and the second with its Agent, so I run both out of a single container on the NAS itself.
 

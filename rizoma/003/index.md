@@ -8,7 +8,7 @@ summary: "Una reflexió sobre la situació del català que proposa mantenir-ne l
 language: ca
 -->
 
-# Rizoma #003: Estat del català: a l'UCI o acostant-se a la revifada?
+<h1 class="p-name">Rizoma #003: Estat del català: a l'UCI o acostant-se a la revifada?</h1>
 
 Feu un experiment: aneu a una cafeteria de Barcelona i demaneu en català un cafè amb llet. Les probabilitats d'acabar amb un cafè amb gel són altes. El primer cop et sorprèn, el segon et molesta i al tercer has après a gaudir d'un cafè fresc. Però per molt inversemblant que ens sembli, això no deixa de ser anecdòtic.
 

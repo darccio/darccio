@@ -10,7 +10,7 @@ summary: "First steps towards leaving Facebook: reclaiming a personal domain, re
 language: en
 -->
 
-# Delete Facebook #1
+<h1 class="p-name">Delete Facebook #1</h1>
 
 > **Progress made:** creation of my own page under my personal domain and review of active logins.
 

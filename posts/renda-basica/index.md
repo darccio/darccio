@@ -8,7 +8,7 @@ summary: "Repàs dels resultats de pilots de renda bàsica sobre pobresa, benest
 language: ca
 -->
 
-# Renda bàsica: deixarà tothom de treballar?
+<h1 class="p-name">Renda bàsica: deixarà tothom de treballar?</h1>
 
 Arran de la [proposta de la CUP d'introduir la Renda Bàsica Universal](https://cup.cat/el-pla-independitzat-i-la-renda-basica-universal-dues-apostes-clau-de-la-cup-per-fer-front-a-la-crisi-socioeconomica-que-viu-el-pais/), moltes persones es pregunten si tothom simplement no faria brot i tot pujaria.
 

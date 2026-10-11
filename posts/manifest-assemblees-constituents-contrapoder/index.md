@@ -8,7 +8,7 @@ summary: "Manifest que proposa assemblees constituents obertes i participatives 
 language: ca
 -->
 
-# Manifest per les assemblees constituents com contrapoder
+<h1 class="p-name">Manifest per les assemblees constituents com contrapoder</h1>
 
 Ahir, 25 de novembre de 2014, el president Mas va trencar el tauler polític amb un full de ruta de dos anys i escaig, amb la independència com meta.
 

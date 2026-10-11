@@ -8,7 +8,7 @@ summary: "Una lectura del sisè informe de l'IPCC que vincula la crisi climàtic
 language: ca
 -->
 
-# Rizoma #002: Canvi climàtic. O fallida climàtica? 🌍🔥
+<h1 class="p-name">Rizoma #002: Canvi climàtic. O fallida climàtica? 🌍🔥</h1>
 
 A l'edició d'avui parlarem del canvi climàtic. Bé, arribats a on som, començaria a parlar de l'inici de la fallida climàtica. És cap on anem si no actuem des d'ara.
 

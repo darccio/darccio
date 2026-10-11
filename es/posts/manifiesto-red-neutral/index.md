@@ -9,7 +9,7 @@ summary: "Un manifiesto en defensa de la neutralidad de la red que pide proteger
 language: es
 -->
 
-# Manifiesto por una Red Neutral
+<h1 class="p-name">Manifiesto por una Red Neutral</h1>
 
 *Si te sientes cómodo y representado por este texto, dale toda la difusión que puedas y quieras: reprodúcelo, enlázalo, tradúcelo, compártelo, vótalo… todas esas cosas que puedes hacer con total tranquilidad y libertad gracias, precisamente, al hecho de que tenemos todavía una red neutral. Hagamos posible el seguir teniéndola.*
 

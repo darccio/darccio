@@ -8,7 +8,7 @@ summary: "Presentació de Rizoma amb lectures sobre vacunes, llibertat de compar
 language: ca
 -->
 
-# Rizoma #001
+<h1 class="p-name">Rizoma #001</h1>
 
 > **rizoma** _m._ \[LC\] \[BO\] Tija subterrània, normalment de creixement horitzontal, amb aspecte d’arrel.
 

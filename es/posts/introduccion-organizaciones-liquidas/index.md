@@ -9,7 +9,7 @@ atproto: false
 tags: [ "liquid organizations", "liquid democracy", "lyd" ]
 -->
 
-# Introducción a las organizaciones líquidas
+<h1 class="p-name">Introducción a las organizaciones líquidas</h1>
 
 Hace muchos años me planteé un objetivo muy ambicioso: desarrollar un sistema de participación y organización para [Pirates de Catalunya](https://pirates.cat). Su nombre, [Lýd](/lyd).
 

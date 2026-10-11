@@ -10,7 +10,7 @@ summary: "Revisió dels inicis de sessió amb Facebook i de les dificultats per 
 language: ca
 -->
 
-# Delete Facebook #2
+<h1 class="p-name">Delete Facebook #2</h1>
 
 > **Progrés realitzat:** eliminació d'inicis de sessió.
 

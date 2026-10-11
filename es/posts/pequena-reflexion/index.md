@@ -8,7 +8,7 @@ summary: "Una reflexión que defiende redistribuir el poder político antes de r
 language: es
 -->
 
-# Pequeña reflexión: ¿qué es primero, cambiar el capitalismo o el poder?
+<h1 class="p-name">Pequeña reflexión: ¿qué es primero, cambiar el capitalismo o el poder?</h1>
 
 Hoy me han dicho ([cito literalmente](https://www.meneame.net/story/partido-pirata-islandes-entra-parlamento/c016#c-16)) que "el problema es el CA-PI-TA-LIS-MO, no una mala gestión de dicho sistema, el problema es el sistema" ya que "el carácter de clase del estado capitalista que con su control de los medios de comunicación puede manejar prácticamente a su antojo el estado de opinión de las mayorías para imponer sus sangrantes políticas de forma aparentemente democrática."
 

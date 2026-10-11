@@ -8,7 +8,7 @@ summary: "Traducción de diez recomendaciones de Errata Security para reducir la
 language: es
 -->
 
-# Diez cosas que no deberías hacer en Facebook
+<h1 class="p-name">Diez cosas que no deberías hacer en Facebook</h1>
 
 Facebook es más popular que nunca y pasa por frecuentes cambios. Pero preguntémonos si realizas mejoras en tu propio perfil con la misma frecuencia.
 

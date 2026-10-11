@@ -10,7 +10,7 @@ summary: "Reflexió sobre el poder de les corporacions digitals i el Pseudo-Esta
 language: ca
 -->
 
-# Tecnofeudalisme i el Pseudo-Estat: la futura governabilitat del capitalisme
+<h1 class="p-name">Tecnofeudalisme i el Pseudo-Estat: la futura governabilitat del capitalisme</h1>
 
 Segons Alejandro Galliano a [“Los tecnofeudatari de la Gran América otra vez”](https://revistasupernova.com/nota/los-tecnofeudatari-de-la-gran-america-otra-vez), el capitalisme està experimentant una transformació en què les grans corporacions acumulen poder no per innovació, sinó per monopolitzar dades i infraestructures digitals. Alguns autors han descrit aquest fenomen com a “tecnofeudalisme”, establint paral·lelismes amb el feudalisme històric per la seva concentració de riquesa i captació de rendes.
 

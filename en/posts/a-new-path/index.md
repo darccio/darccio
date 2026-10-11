@@ -9,7 +9,7 @@ summary: "An announcement of leaving Pirates de Catalunya, reflecting on fourtee
 language: en
 -->
 
-# A New Path
+<h1 class="p-name">A New Path</h1>
 
 Today, coinciding with the anniversary of the November 28, 2010 elections and after fulfilling acquired commitments, I announce that a few weeks ago I left Pirates de Catalunya. This date is significant because these elections were the first in which Pirates participated, shortly after its official formation, and marked my first electoral experience.
 

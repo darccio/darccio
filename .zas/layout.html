@@ -2,6 +2,8 @@
 {{$canonical := .Canonical}}
 {{$description := .Summary}}
 {{if not $description}}{{$description = .Resolve "description"}}{{end}}
+{{$publishedArticle := and (index .Page "article") (not (index .Page "draft"))}}
+{{$entry := or $publishedArticle (index .Page "entry")}}
 <!DOCTYPE html>
 <html lang="{{$language}}" prefix="og: http://ogp.me/ns#">
 <head>
@@ -223,7 +225,39 @@
 {{if and (not .Title) (not (index .Page "representative_hcard"))}}
 <h1 class="p-name fn">{{.Extra "/site/title"}}</h1>
 {{end}}
+{{if $entry}}
+<article class="h-entry" lang="{{$language}}">
+    <header>
+        <p>
+            {{if $publishedArticle}}{{$date := .Date}}{{if not $date.IsZero}}
+            {{if eq $language "en"}}Published{{else if eq $language "es"}}Publicado{{else}}Publicat{{end}}:
+            <time class="dt-published" datetime="{{$date.Format "2006-01-02T15:04:05.999999999Z07:00"}}">{{if eq $language "en"}}{{$date.Format "2 Jan 2006"}}{{else}}{{$date.Format "02/01/2006"}}{{end}}</time> ·
+            {{end}}{{end}}
+            {{$updated := .Updated}}{{if not $updated.IsZero}}
+            {{if eq $language "en"}}Updated{{else if eq $language "es"}}Actualizado{{else}}Actualitzat{{end}}:
+            <time class="dt-updated" datetime="{{$updated.Format "2006-01-02T15:04:05.999999999Z07:00"}}">{{if eq $language "en"}}{{$updated.Format "2 Jan 2006"}}{{else}}{{$updated.Format "02/01/2006"}}{{end}}</time> ·
+            {{end}}
+            {{if eq $language "en"}}By{{else if eq $language "es"}}Por{{else}}Per{{end}}
+            <span class="p-author h-card"><a class="p-name u-url u-uid" href="https://dario.cat/">{{.Extra "/site/title"}}</a></span>
+            · <a class="u-url u-uid" href="{{$canonical}}">{{if eq $language "en"}}Permalink{{else if eq $language "es"}}Enlace permanente{{else}}Enllaç permanent{{end}}</a>
+        </p>
+    </header>
+    {{with .Summary}}<p class="p-summary" hidden>{{.}}</p>{{end}}
+    <div class="e-content">{{.Body}}</div>
+    {{with .Tags}}
+    <footer>
+        <p>{{if eq $language "en"}}Tags{{else if eq $language "es"}}Etiquetas{{else}}Temes{{end}}:
+            {{range $i, $tag := .}}{{if $i}}, {{end}}<span class="p-category">{{$tag}}</span>{{end}}
+        </p>
+    </footer>
+    {{end}}
+    {{with index .Page "syndication"}}
+    <p>{{range .}}<a class="u-syndication" href="{{.}}">{{.}}</a> {{end}}</p>
+    {{end}}
+</article>
+{{else}}
 {{.Body}}
+{{end}}
 </main>
 <footer lang="ca">
     <p><a href="/feeds/">Subscripcions</a> · <a href="/slashes/">Totes les pàgines</a> · <a href="/colophon/">Sobre aquest web</a></p>

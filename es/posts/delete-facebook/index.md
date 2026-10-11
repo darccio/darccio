@@ -9,7 +9,7 @@ summary: "Inicio de un proceso documentado para dejar Facebook tras el caso Camb
 language: es
 -->
 
-# Delete Facebook #0
+<h1 class="p-name">Delete Facebook #0</h1>
 
 Tras la polémica de Cambridge Analytica, he decidido dejar de alimentar a la bestia, Facebook.
 

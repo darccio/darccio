@@ -9,7 +9,7 @@ summary: "The start of a documented effort to leave Facebook after Cambridge Ana
 language: en
 -->
 
-# Delete Facebook #0
+<h1 class="p-name">Delete Facebook #0</h1>
 
 After the controversy of Cambridge Analytica, I have decided to stop feeding the beast, Facebook.
 
