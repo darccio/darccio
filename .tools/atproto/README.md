@@ -7,8 +7,9 @@ It does not publish articles. The reviewed metadata is in [publication.json](pub
 
 The current account is `dario.cat`, DID
 `did:plc:aj77r5uwt72o6oimdjfplqoz`, hosted at `https://eurosky.social`.
-Every run checks the public handle resolution and reciprocal DID document against
-those facts. A changed identity or PDS stops the run and requires review.
+Every publication run checks the public handle resolution and reciprocal DID
+document against those facts. A changed identity or PDS stops the run and
+requires review.
 The existing Rizoma publication at `https://rizoma.pckt.blog` is a separate
 publication and is never selected or updated.
 
@@ -33,10 +34,18 @@ gh workflow run standard-publication.yml --repo darccio/darccio \
   --ref main -f apply=false
 ```
 
-## Activate after merging this implementation
+## Publication maintenance
 
-In the `darccio/darccio` repository's Actions secrets, set `ATP_HANDLE` to
-`dario.cat` and `ATP_APP_PASSWORD` to a dedicated **Eurosky app password**.
+The publication and exact deployed backlink were verified on 2026-10-11.
+The committed [public state](../../.zas/atproto-publication.json) identifies
+`at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t`;
+the [verification endpoint](../../.well-known/site.standard.publication)
+contains that exact URI. These files verify the publication, independently of
+any document publishing.
+
+For maintenance runs, configure the `darccio/darccio` repository's Actions
+secrets with `ATP_HANDLE` set to `dario.cat` and `ATP_APP_PASSWORD` set to a
+dedicated **Eurosky app password**.
 Use an app password, not the primary account password. These secrets are
 separate from the source repositories' `SITE_DISPATCH_TOKEN`.
 
@@ -86,9 +95,10 @@ cmp .well-known/site.standard.publication /tmp/dario-publication-live.txt
 curl -fsSI https://dario.cat/.well-known/site.standard.publication
 ```
 
-There is no placeholder verification file in the implementation PR. Site builds
-and deploys never contact the PDS or need these secrets. Per-article publishing,
-backfill approval and automation belong to T27–T30.
+Verification files contain only publicly confirmed outputs. Site builds and
+deploys never contact the PDS or need these secrets. The separate document
+command and workflow below support per-article publishing; historical articles
+still require explicit reviewed approval.
 
 ## Validation and rollback
 
@@ -106,8 +116,10 @@ invalid remote responses, cleanup and verification artifacts. GitHub handoff
 tests cover atomic output selection, interruption recovery and duplicate PRs.
 
 To disable bootstrap, disable its manual workflow. Removing the verification
-file or reverting Git does not delete a public record. Record deletion is a
-separate owner action; the tool has no delete-record operation.
+file or reverting Git does not delete a public record. Publication deletion is
+a separate owner action; the `publication` command has no delete-record
+operation. The `documents` command supports explicit document deletion as
+described below.
 
 The publication schema was checked on 2026-10-11 at CID
 `bafyreiapvnarfn3nl2wvg27hsylli5zqvou7a74p7od5mu4detprtejapy`.
@@ -136,8 +148,9 @@ record deletion. Candidate discovery never approves or publishes an article.
 the existing **Vanity after deploy** workflow. It independently checks the
 current `main` SHA against the trusted Cloudflare Pages production check and
 suite, then checks out that immutable revision. Preview and fork events,
-failed deployments, superseded revisions and backlink-only commits cannot
-publish. Pages deployment never waits for this workflow.
+failed deployments and backlink-only commits cannot publish. Revisions found
+to be superseded at the deployment gate or final pre-apply check are skipped.
+Pages deployment never waits for this workflow.
 
 Manual dispatch defaults to an offline preview:
 
