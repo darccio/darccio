@@ -76,11 +76,11 @@ Dependencies below include the report’s original ordering and repository-speci
 | [T11](tasks/T11.md) | Generate native RSS 2.0 feeds | zas | T05 | [Zas PR #114](https://github.com/darccio/zas/pull/114) merged; enabled/deployed; all three live feeds validated |
 | [T12](tasks/T12.md) | Expose feeds in the layout and slash index | site | T09, T11, T04 | Strict RSS, discovery and subscription page deployed and live-verified |
 | [T13](tasks/T13.md) | Serve correct feed and well-known headers | site | T00, T11, T12 | Static Pages response rules deployed; live MIME/cache/policy checks pass |
-| [T14](tasks/T14.md) | Complete representative identity microformats | site | T08, T09 | Committed; representative parser passes; deployment/account verification pending |
-| [T15](tasks/T15.md) | Wrap posts in h-entry markup | site | T04, T05, T07, T14 | Committed; all 33 public articles pass source/parser checks; deployment pending |
-| [T16](tasks/T16.md) | Add h-feed archives and language labels | site | T04 | Committed; complete 33/9/12 archives pass; deployment pending |
-| [T17](tasks/T17.md) | Mark up talks and other supported page types | site | T09, T14 | Talk/slash/project units committed and validated; deployment pending; CV deferred |
-| [T18](tasks/T18.md) | Validate microformats in CI | site | T14, T15, T16, T02, T04 | Committed; offline fixtures and staged Cloudflare build validation pass |
+| [T14](tasks/T14.md) | Complete representative identity microformats | site | T08, T09 | Deployed; live representative parser and existing Mastodon verification pass |
+| [T15](tasks/T15.md) | Wrap posts in h-entry markup | site | T04, T05, T07, T14 | Deployed; 33 entries validated; narrow historical-email follow-up committed |
+| [T16](tasks/T16.md) | Add h-feed archives and language labels | site | T04 | Deployed; complete 33/9/12 archives pass live checks |
+| [T17](tasks/T17.md) | Mark up talks and other supported page types | site | T09, T14 | Talk/slash/project units deployed and live-verified; CV deferred |
+| [T18](tasks/T18.md) | Validate microformats in CI | site | T14, T15, T16, T02, T04 | Deployed; offline fixtures, staged Pages validation and CI pass |
 | [T19](tasks/T19.md) | Emit shared JSON-LD metadata | site+zas | T05, T14, T15, T07, T08, T24 | Planned |
 | [T20](tasks/T20.md) | Publish per-language agent context files | site | T09, T21 | Planned |
 | [T21](tasks/T21.md) | Generate Markdown twins in Zas | zas | T05 | [Zas PR #113](https://github.com/darccio/zas/pull/113) merged; twins and inventory discovery enabled |
