@@ -96,6 +96,7 @@ func Directory(root, deploy string) (Report, error) {
 		check(archive.file, err)
 	}
 	check("supported slash pages, projects and talks", validateSupportedPages(root, deploy))
+	check("shared JSON-LD", validateJSONLDPages(deploy, inv))
 	for _, path := range []string{".tools", "docs/site-plan", "docs/HANDOFF-FACTS.md"} {
 		if _, err := os.Stat(filepath.Join(deploy, filepath.FromSlash(path))); !os.IsNotExist(err) {
 			check(path, fmt.Errorf("private tooling or planning path present in deployment"))

@@ -4,6 +4,18 @@
 {{if not $description}}{{$description = .Resolve "description"}}{{end}}
 {{$publishedArticle := and (index .Page "article") (not (index .Page "draft"))}}
 {{$entry := or $publishedArticle (index .Page "entry")}}
+{{$profiles := list "https://github.com/darccio" "https://bsky.app/profile/dario.cat" "https://mastodont.cat/@dario" "https://linkedin.com/in/darccio" "https://sifa.id/p/dario.cat" "https://rizoma.dario.cat/" "https://speakerdeck.com/dario"}}
+{{$personID := printf "%s/#person" .Site.BaseURL}}
+{{$person := dict
+    "@type" "Person"
+    "@id" $personID
+    "name" (.Extra "/site/title")
+    "url" (printf "%s/" .Site.BaseURL)
+    "image" (printf "%s/static/avatar.webp" .Site.BaseURL)
+    "jobTitle" "Senior Software Engineer"
+    "worksFor" (dict "@type" "Organization" "name" "Datadog")
+    "sameAs" $profiles
+}}
 <!DOCTYPE html>
 <html lang="{{$language}}" prefix="og: http://ogp.me/ns#">
 <head>
@@ -155,13 +167,8 @@
     </style>
     <link rel="stylesheet" href="/static/styles.css">
     <link rel="canonical" href="{{$canonical}}">
-    <link rel="me" href="https://github.com/darccio">
-    <link rel="me" href="https://bsky.app/profile/dario.cat">
-    <link rel="me" href="https://mastodont.cat/@dario">
-    <link rel="me" href="https://linkedin.com/in/darccio">
-    <link rel="me" href="https://sifa.id/p/dario.cat">
-    <link rel="me" href="https://rizoma.dario.cat/">
-    <link rel="me" href="https://speakerdeck.com/dario">
+    {{range $profiles}}<link rel="me" href="{{.}}">
+    {{end}}
     <link rel="alternate" type="application/rss+xml" title='{{.Extra "/site/feed_title"}}' href="{{.Site.BaseURL}}/feed.xml">
     {{if eq $language "en"}}<link rel="alternate" type="application/rss+xml" title='{{.Extra "/site/feed_title"}} (English)' href="{{.Site.BaseURL}}/en/feed.xml">{{end}}
     {{if eq $language "es"}}<link rel="alternate" type="application/rss+xml" title='{{.Extra "/site/feed_title"}} (Español)' href="{{.Site.BaseURL}}/es/feed.xml">{{end}}
@@ -195,6 +202,25 @@
     {{end}}
     {{if .Resolve "vcard"}}<link rel="alternate" type="text/vcard" href='{{.Resolve "vcard"}}'>{{end}}
     <meta name="google-site-verification" content="laOQWM-wYdhlFWBQ3PPD4dR3UrbTWmni7M6MTS_-BfU" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {{json $person}}{{if $publishedArticle}},
+        {
+          "@type": "BlogPosting",
+          "headline": {{json .Title}},
+          "url": {{json $canonical}},
+          "inLanguage": {{json $language}},
+          "author": {{json (dict "@id" $personID)}}{{with .Summary}},
+          "description": {{json .}}{{end}}{{with .Tags}},
+          "keywords": {{json .}}{{end}}{{$date := .Date}}{{if not $date.IsZero}},
+          "datePublished": {{json ($date.Format "2006-01-02T15:04:05.999999999Z07:00")}}{{end}}{{$updated := .Updated}}{{if not $updated.IsZero}},
+          "dateModified": {{json ($updated.Format "2006-01-02T15:04:05.999999999Z07:00")}}{{end}}
+        }{{end}}
+      ]
+    }
+    </script>
 </head>
 {{if .Resolve "body_class"}}
 <body class='{{.Resolve "body_class"}}'>
