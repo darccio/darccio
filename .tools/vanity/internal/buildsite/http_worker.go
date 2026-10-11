@@ -37,7 +37,7 @@ type httpWorkerRoutes struct {
 // The Pages adapter is assembled only after Markdown discovery has validated
 // the public twins. Its inventory hashes the final deploy bytes, and all output
 // is written inside the isolated build before the previous deploy is promoted.
-func finalizeHTTPWorker(root, stage, deploy string) error {
+func finalizeHTTPWorker(root, stage, deploy string, docs ...map[string]string) error {
 	configBytes, err := readAgentContextFile(stage, ".zas/config.yml")
 	if err != nil {
 		return err
@@ -83,7 +83,7 @@ func finalizeHTTPWorker(root, stage, deploy string) error {
 	if bytes.Count(template, []byte(httpWorkerMarker)) != 1 {
 		return errors.New("HTTP worker template must contain exactly one page-inventory marker")
 	}
-	pages, routes, err := collectHTTPWorkerPages(deploy, base)
+	pages, routes, err := collectHTTPWorkerPages(deploy, base, docs...)
 	if err != nil {
 		return err
 	}
@@ -103,7 +103,7 @@ func finalizeHTTPWorker(root, stage, deploy string) error {
 	return os.WriteFile(filepath.Join(deploy, "_routes.json"), routeBytes, 0644)
 }
 
-func collectHTTPWorkerPages(deploy string, base *url.URL) (map[string]httpWorkerPage, httpWorkerRoutes, error) {
+func collectHTTPWorkerPages(deploy string, base *url.URL, docs ...map[string]string) (map[string]httpWorkerPage, httpWorkerRoutes, error) {
 	info, err := os.Lstat(deploy)
 	if err != nil {
 		return nil, httpWorkerRoutes{}, err
@@ -121,6 +121,9 @@ func collectHTTPWorkerPages(deploy string, base *url.URL) (map[string]httpWorker
 	}
 	raw := make(map[string]bool)
 	for _, route := range vanity.Routes() {
+		if declaredDocsTwin(docs, route.File()) != "" {
+			continue
+		}
 		raw[route.File()] = true
 		prefix := strings.Trim(route.Path, "/")
 		exclusions[httpWorkerEscapedPath(base, prefix)] = true
@@ -148,7 +151,7 @@ func collectHTTPWorkerPages(deploy string, base *url.URL) (map[string]httpWorker
 		if raw[relative] {
 			return nil
 		}
-		if httpWorkerExcluded(relative) {
+		if httpWorkerExcluded(relative) && declaredDocsTwin(docs, relative) == "" {
 			if entry.IsDir() {
 				exclusions[httpWorkerEscapedPath(base, relative+"/*")] = true
 				return fs.SkipDir
@@ -190,12 +193,16 @@ func collectHTTPWorkerPages(deploy string, base *url.URL) (map[string]httpWorker
 		}
 		page := httpWorkerPage{HTMLSHA256: httpWorkerDigest(body)}
 		twin := strings.TrimSuffix(relative, filepath.Ext(relative)) + ".md"
+		declared := declaredDocsTwin(docs, relative)
+		if declared != "" {
+			twin = declared
+		}
 		if _, err := os.Lstat(filepath.Join(deploy, filepath.FromSlash(twin))); err == nil {
 			markdown, err := readAgentContextFile(deploy, twin)
 			if err != nil {
 				return fmt.Errorf("HTTP worker %s twin: %w", relative, err)
 			}
-			if err := agentContextMarkdown(markdown); err != nil {
+			if err := httpWorkerMarkdown(markdown, declared != ""); err != nil {
 				return fmt.Errorf("HTTP worker %s twin: %w", relative, err)
 			}
 			twinPath, digest := httpWorkerEscapedPath(base, twin), httpWorkerDigest(markdown)
@@ -289,6 +296,19 @@ func httpWorkerSafePath(relative string) error {
 	// Refuse those names instead of silently routing the wrong representation.
 	if relative == "" || relative != path.Clean(relative) || strings.HasPrefix(relative, "/") || strings.ContainsAny(relative, "*?%#\\!'()[]+$^{}|") || strings.IndexFunc(relative, unicode.IsControl) != -1 {
 		return fmt.Errorf("HTTP worker cannot safely route deploy path %q", relative)
+	}
+	return nil
+}
+
+func httpWorkerMarkdown(body []byte, literalDocs bool) error {
+	if !literalDocs {
+		return agentContextMarkdown(body)
+	}
+	// Literal template examples are deliberate in compiler-owned docs twins.
+	// Still reject empty files and HTML fallback documents.
+	trimmed := strings.ToLower(strings.TrimSpace(string(body)))
+	if trimmed == "" || strings.HasPrefix(trimmed, "<!doctype html") || strings.HasPrefix(trimmed, "<html") {
+		return errors.New("invalid project Markdown twin")
 	}
 	return nil
 }

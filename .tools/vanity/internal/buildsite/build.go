@@ -13,6 +13,7 @@ import (
 	"path/filepath"
 	"strings"
 
+	"dario.cat/site-tools/internal/projectdocs"
 	"dario.cat/site-tools/internal/vanity"
 	"go.yaml.in/yaml/v3"
 )
@@ -65,6 +66,10 @@ func Build(ctx context.Context, options Options) error {
 	if err := isolateDeploy(filepath.Join(stage, ".zas", "config.yml")); err != nil {
 		return err
 	}
+	docs, err := projectdocs.Prepare(ctx, root, stage, nil)
+	if err != nil {
+		return fmt.Errorf("assemble project docs: %w", err)
+	}
 	gitDir, err := gitOutput(ctx, root, "rev-parse", "--absolute-git-dir")
 	if err != nil {
 		return err
@@ -80,21 +85,30 @@ func Build(ctx context.Context, options Options) error {
 	}
 	deploy := filepath.Join(stage, ".zas", "deploy")
 	for _, route := range vanity.Routes() {
-		// Fragments bypass rendering and are copied byte for byte only now.
+		// Undocumented import fragments retain their original bytes.
+		if docs.Owns(route.File()) {
+			continue
+		}
 		if err := copyFile(filepath.Join(root, filepath.FromSlash(route.File())), filepath.Join(deploy, filepath.FromSlash(route.File()))); err != nil {
 			return err
 		}
 	}
-	if err := finalizeSitemap(ctx, root, stage, deploy); err != nil {
+	if err := docs.Finalize(root, deploy); err != nil {
+		return fmt.Errorf("finalize project docs: %w", err)
+	}
+	if err := finalizeSitemap(ctx, root, stage, deploy, docs.LastMod); err != nil {
 		return fmt.Errorf("assembled sitemap rejected: %w", err)
 	}
 	if err := finalizeAgentContext(stage, deploy); err != nil {
 		return fmt.Errorf("assembled agent context rejected: %w", err)
 	}
-	if err := finalizeMarkdownDiscovery(stage, deploy); err != nil {
+	if err := docs.LinkContexts(deploy); err != nil {
+		return err
+	}
+	if err := finalizeMarkdownDiscovery(stage, deploy, docs.Twins); err != nil {
 		return fmt.Errorf("assembled Markdown discovery rejected: %w", err)
 	}
-	if err := finalizeHTTPWorker(root, stage, deploy); err != nil {
+	if err := finalizeHTTPWorker(root, stage, deploy, docs.Twins); err != nil {
 		return fmt.Errorf("assembled HTTP adapter rejected: %w", err)
 	}
 	if err := auditOutput(deploy); err != nil {
@@ -115,7 +129,7 @@ func Build(ctx context.Context, options Options) error {
 		return err
 	}
 	promoted = true
-	fmt.Fprintln(options.Output, "Built and checked .zas/deploy; seven raw vanity pages preserved.")
+	fmt.Fprintln(options.Output, "Built and checked .zas/deploy; seven vanity import contracts preserved.")
 	return nil
 }
 

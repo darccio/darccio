@@ -56,7 +56,7 @@ type sitemapPage struct {
 // Zas collects normal rendered pages before the assembler restores raw vanity
 // fragments. Keep its entries, dates and translation groups, align their URLs
 // with the actual HTML, and append only the assembler-owned missing pages.
-func finalizeSitemap(ctx context.Context, root, stage, deploy string) error {
+func finalizeSitemap(ctx context.Context, root, stage, deploy string, docs ...map[string]time.Time) error {
 	configBytes, err := os.ReadFile(filepath.Join(stage, ".zas", "config.yml"))
 	if err != nil {
 		return err
@@ -119,6 +119,11 @@ func finalizeSitemap(ctx context.Context, root, stage, deploy string) error {
 			return fmt.Errorf("duplicate sitemap page %s", page.file)
 		}
 		entry.Location = page.canonical
+		if len(docs) == 1 {
+			if stamp, ok := docs[0][page.file]; ok {
+				entry.Lastmod = stamp.Format(time.RFC3339)
+			}
+		}
 		entries[page.file] = entry
 		for j := range entry.Links {
 			link := &entry.Links[j]

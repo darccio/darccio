@@ -20,6 +20,7 @@
 <html lang="{{$language}}" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="utf-8">
+    {{with index .Page "docs_project"}}<meta name="project-docs" content="{{.}}">{{end}}
     {{if and .Title (ne .Title (.Extra "/site/title"))}}
     <title>{{.Title}} | {{.Extra "/site/title"}}</title>
     {{else}}
@@ -221,7 +222,8 @@
           "keywords": {{json .}}{{end}}{{$date := .Date}}{{if not $date.IsZero}},
           "datePublished": {{json ($date.Format "2006-01-02T15:04:05.999999999Z07:00")}}{{end}}{{$updated := .Updated}}{{if not $updated.IsZero}},
           "dateModified": {{json ($updated.Format "2006-01-02T15:04:05.999999999Z07:00")}}{{end}}
-        }{{end}}
+        }{{end}}{{with index .Page "code_repository"}},
+        {{json (dict "@type" "SoftwareSourceCode" "name" (index $.Page "project_name") "url" $canonical "codeRepository" . "programmingLanguage" "Go" "license" (printf "%s%s" $.Site.BaseURL (index $.Page "docs_license_url")))}}{{end}}
       ]
     }
     </script>
@@ -291,7 +293,7 @@
 </main>
 <footer lang="ca">
     <p><a href="/feeds/">Subscripcions</a> · <a href="/slashes/">Totes les pàgines</a> · <a href="/colophon/">Sobre aquest web</a></p>
-    <p>2009–2026 {{.Extra "/site/title"}} · Contingut: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ca">CC BY-SA 4.0</a> · <a href="/LICENSE">Llicències i excepcions</a> · Web generat amb <a href="https://github.com/darccio/zas">Zas</a>.</p>
+    <p>2009–2026 {{.Extra "/site/title"}} · {{with index .Page "docs_license"}}Documentació: <a href="{{index $.Page "docs_license_url"}}">{{.}}</a>{{else}}Contingut: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ca">CC BY-SA 4.0</a>{{end}} · <a href="/LICENSE">Llicències i excepcions</a> · Web generat amb <a href="https://github.com/darccio/zas">Zas</a>.</p>
 </footer>
 </body>
 </html>

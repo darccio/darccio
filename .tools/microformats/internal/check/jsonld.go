@@ -72,7 +72,7 @@ func validateJSONLDPages(deploy string, inv inventory) error {
 		if err != nil {
 			return err
 		}
-		if rawVanityHTML[file] {
+		if rawVanityHTML[file] && !projectDocsLanding(doc, file) {
 			if len(jsonLDScripts(doc)) != 0 {
 				failures = append(failures, fmt.Errorf("%s: raw vanity fragment acquired JSON-LD", file))
 			}
@@ -131,14 +131,18 @@ func validateJSONLD(doc *htmlNode, pageURL string, post *Post) error {
 		return err
 	}
 	graph, ok := data["@graph"].([]any)
+	project := structuredProject(pageURL)
 	expected := 1
+	if project != "" {
+		expected++
+	}
 	if post != nil {
 		expected++
 	}
 	if !ok || len(graph) != expected {
-		return fmt.Errorf("JSON-LD graph must contain one Person and only an eligible article's BlogPosting")
+		return fmt.Errorf("JSON-LD graph must contain Person and the eligible article or project record")
 	}
-	var person, article map[string]any
+	var person, article, software map[string]any
 	for _, value := range graph {
 		node, ok := value.(map[string]any)
 		if !ok {
@@ -150,6 +154,11 @@ func validateJSONLD(doc *htmlNode, pageURL string, post *Post) error {
 				return fmt.Errorf("duplicate Person in JSON-LD graph")
 			}
 			person = node
+		case "SoftwareSourceCode":
+			if software != nil {
+				return fmt.Errorf("duplicate SoftwareSourceCode in graph")
+			}
+			software = node
 		case "BlogPosting":
 			if article != nil {
 				return fmt.Errorf("duplicate BlogPosting in JSON-LD graph")
@@ -194,6 +203,19 @@ func validateJSONLD(doc *htmlNode, pageURL string, post *Post) error {
 	canonicals := find(head, func(n *htmlNode) bool { return isTag(n, "link") && attribute(n, "rel") == "canonical" })
 	if len(canonicals) != 1 || attribute(canonicals[0], "href") != pageURL {
 		return fmt.Errorf("JSON-LD page canonical disagrees with deployed path %q", pageURL)
+	}
+	if project != "" {
+		if software == nil {
+			return fmt.Errorf("project landing lacks SoftwareSourceCode")
+		}
+		name := map[string]string{"mergo": "Mergo", "zas": "Zas", "darna": "darna"}[project]
+		for key, value := range map[string]string{"name": name, "url": pageURL, "codeRepository": "https://github.com/darccio/" + project, "programmingLanguage": "Go", "license": homeURL + project + "/LICENSE.txt"} {
+			if err := jsonString(software, key, value); err != nil {
+				return fmt.Errorf("SoftwareSourceCode: %w", err)
+			}
+		}
+	} else if software != nil {
+		return fmt.Errorf("unexpected software record outside reviewed project roots")
 	}
 	if post == nil {
 		return nil
@@ -309,4 +331,26 @@ func decodeJSONValue(decoder *json.Decoder) (any, error) {
 	default:
 		return token, nil
 	}
+}
+
+// Only reviewed docs roots can replace the corresponding raw import fragment.
+// They receive every ordinary structured-data check, rather than an exemption.
+func projectDocsLanding(doc *htmlNode, file string) bool {
+	project := map[string]string{"mergo/index.html": "mergo", "darna/index.html": "darna"}[file]
+	if project == "" {
+		return false
+	}
+	markers := find(doc, func(n *htmlNode) bool {
+		return isTag(n, "meta") && attribute(n, "name") == "project-docs" && attribute(n, "content") == project
+	})
+	return len(markers) == 1
+}
+
+func structuredProject(pageURL string) string {
+	for _, project := range []string{"mergo", "zas", "darna"} {
+		if pageURL == homeURL+project+"/" {
+			return project
+		}
+	}
+	return ""
 }

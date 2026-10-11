@@ -108,7 +108,7 @@ Cloudflare Pages Git integration deploys pushes to main. The owner reports build
 
 Public .cat RDAP reports expiry on 1 June 2027 and delegationSigned:false. Auto-renew, valid payment, transfer lock and independent monitor configuration still need actual account evidence. T00 also observed edge email obfuscation, which the local contact source cannot disable.
 
-Only this site and Zas are implementation repositories in this request. Mergo and darna source-owned changes remain explicit follow-ups. Existing docs/go-vanity-url.md remains untracked and unchanged (SHA-256 b1fca26739cf9d022923a2c2ebe7445b60ac10f8f89126ca7b654e946201de89). Zas work used isolated branches; the feature batch starts at upstream master fcb82e4, including the merged helpers, while the user's checkout is preserved.
+The owner has now explicitly authorized Mergo and darna docs/workflow PRs for T24, in addition to this site and Zas. Other project repositories remain outside this implementation batch. Existing docs/go-vanity-url.md remains untracked and unchanged (SHA-256 b1fca26739cf9d022923a2c2ebe7445b60ac10f8f89126ca7b654e946201de89). Zas work used isolated branches; the feature batch starts at upstream master fcb82e4, including the merged helpers, while the user's checkout is preserved.
 
 ## Implementation queue
 
@@ -133,3 +133,10 @@ After the T20 and post-deploy-gate merges, 18 of 33 task IDs retain open work: t
 T22 uses Pages' automatically deployed advanced-mode Worker output with the existing Git build settings. The guarded assembler builds an exact inventory of final public HTML and rendered twins, preserving all raw import fragments and excluding CV/operations. The server adapter validates fetched twin bytes, negotiates quality weights, preserves asset routing, distinguishes variant validators and disables shared variant storage. Static assets bypass the Worker; future nested project documentation remains eligible. Node tests run only in development/CI; production assembly remains Go-only. Local and preview acceptance are recorded in tasks/T22.md before handoff.
 
 T22 site PR #7 contains signed feature commit 47f7ba0. GitHub CI and Cloudflare Pages succeed for the exact SHA; immutable preview ac8a9eaf passes 283 HTTPS checks across all public variants, headers, conditionals, direct resources and all seven import routes. The independent live Go checker passes too. The existing 156 public file hashes remain unchanged, and rollback removes the two server artifacts. Cloudflare removes HTML validators while retaining Markdown validators; variant storage stays disabled and cross-format conditions remain safe. Detailed acceptance and hosting observations are in tasks/T22.md. Production verification follows merge.
+
+
+## T24 implementation · 2026-10-11
+
+The owner authorized Mergo and darna source PRs. Source docs and dispatch workflows are open in Mergo #321, Zas #116 and darna #15, with immutable source pins recorded in `.zas/projects.yml`. The site now assembles six English docs pages, declared portable Markdown twins, original project licenses, navigation/provenance and per-project agent context without executing fetched content. Exact vanity metadata, the five remaining raw fragments, feeds and existing article bodies are preserved. Manifest-driven SoftwareSourceCode completes T19's deferred project records for these three projects.
+
+The source receiver proposes manifest-only pin PRs after a complete guarded build; merging those PRs triggers the existing Pages Git integration. Source SITE_DISPATCH_TOKEN configuration and site Actions PR creation remain account setup steps, so live dispatch automation awaits that evidence. All implementation, offline gh handoff tests, local build/format/accessibility checks and source CI are complete; site PR and exact-SHA preview acceptance follow. T25's Mergo guides remain next. See tasks/T24.md for detailed validation and rollback.
