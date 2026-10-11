@@ -22,6 +22,8 @@ After generation, each raw vanity source is copied byte for byte into its origin
 
 When native sitemaps are enabled, assembly finalizes `sitemap.xml` after restoring the seven raw vanity pages. It aligns native locations and translation links with each deployed page's canonical URL, preserves native last-modified dates and translation groups, and adds restored vanity entries using source Git dates when available. Complete HTML coverage, local canonical URLs and reciprocal language links are validated before promotion. This site supports one sitemap; sharded output and unfamiliar XML fields fail explicitly, preserving the previous deployment.
 
+With `site.publish_markdown: true`, Zas emits post-template Markdown companions. After assembly, the builder inserts one Markdown alternate link only where the matching deployed `.md` file exists. HTML sources, unpublished pages and the seven raw vanity pages get no invented twins or links. Discovery URLs follow actual filenames, including `index.md`; invalid or duplicate links fail before promotion. The insertion preserves all existing HTML bytes.
+
 The live CLI is independent of its working directory:
 
 ```sh

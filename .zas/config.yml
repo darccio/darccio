@@ -8,6 +8,7 @@ site:
   language: ca
   title: Dario Castañé
   sitemap: true
+  publish_markdown: true
   feed: true
   feed_title: Dario Castañé
   feed_description: "Dario Castañé: tecnologia, política i programari lliure. Escrits en català, castellà i anglès."
