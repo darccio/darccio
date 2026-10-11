@@ -20,7 +20,7 @@ import (
 // These are existing public pages with supported facts. Deliberately do not
 // walk CV or derive events for undated talks.
 func validateSupportedPages(root, deploy string) error {
-	for _, slug := range []string{"now", "ai", "colophon", "feeds", "contact", "hello", "elsewhere", "languages"} {
+	for _, slug := range []string{"now", "ai", "colophon", "feeds", "contact", "hello", "elsewhere", "languages", "sponsor"} {
 		pageURL := homeURL + slug + "/"
 		config, expected, err := publicSource(root, slug+"/index.md")
 		if err != nil {
