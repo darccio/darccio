@@ -59,8 +59,13 @@ jobs:
               deployed)
                 suite_id="$(jq -r .check_suite.id <<< "$check")"
                 suite="$(timeout 20s gh api "repos/$GITHUB_REPOSITORY/check-suites/$suite_id")"
+                # Cloudflare can create a main-commit suite with a null branch.
+                # The workflow ref and current main SHA above identify main;
+                # still reject explicit non-main branches and mismatched SHAs.
                 if ! jq -e --arg sha "$GITHUB_SHA" '
-                  .head_branch == "main" and .head_sha == $sha and
+                  has("head_branch") and
+                  (.head_branch == "main" or .head_branch == null) and
+                  .head_sha == $sha and
                   .app.id == 85455 and .app.slug == "cloudflare-workers-and-pages"
                 ' <<< "$suite" > /dev/null; then
                   echo '::error::Cloudflare check suite does not identify this production main commit.'
