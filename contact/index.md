@@ -1,12 +1,12 @@
 <!--
 description: "Contacte amb Dario Castañé: correu electrònic, xarxes i incidències de programari."
 vcard: /static/dario-castane.vcf
-updated: 2026-10-11T15:33:14+02:00
+updated: 2026-10-11T16:45:48+02:00
 -->
 
 # Contacte
 
-Em pots escriure a [d@rio.hn](mailto:d@rio.hn). Per comentar un article o seguir les novetats, també em trobaràs als perfils següents:
+Em pots escriure a <!--email_off-->[cc@dario.cat](mailto:cc@dario.cat)<!--/email_off-->. Per comentar un article o seguir les novetats, també em trobaràs als perfils següents:
 
 <embed src="../.zas/partials/contact.html" type="text/html" />
 

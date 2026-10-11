@@ -4,7 +4,7 @@ publish: false
 
 # Site implementation decisions
 
-The report defaults below govern implementation. Repository facts resolve the public address; exact publication dates and reviewed public backfill selections remain evidence requirements.
+The report defaults below govern implementation. Dario confirmed the public address below; exact publication dates and reviewed public backfill selections remain evidence requirements.
 
 | ID | Decision | Choice | Status |
 | --- | --- | --- | --- |
@@ -13,7 +13,7 @@ The report defaults below govern implementation. Repository facts resolve the pu
 | D3 | Other feed formats | RSS 2.0 only; no Atom, JSON Feed or XSLT. | Adopted report default |
 | D4 | Off-site feed items | Exclude external-only articles; preserve links in archives with labels. | Adopted report default |
 | D5 | Rizoma canonical home | Substack for new issues; keep the four 2021 local issues and link https://rizoma.dario.cat/feed. | Adopted report default |
-| D6 | Public email | Keep the already-public d@rio.hn; disable edge obfuscation when hosting access is available. | Resolved from source contact partial and vCard |
+| D6 | Public email | Use cc@dario.cat in public contact links, the vCard, security.txt and funding metadata. Wrap visible HTML email links in Cloudflare's documented email_off comments to keep them readable without JS; the global dashboard toggle remains unmodified. | Owner confirmed on 2026-10-11; supersedes the initial source-derived address; targeted source opt-out prepared |
 | D7 | Locality | Omit locality until Dario confirms it. | Adopted report default |
 | D8 | Standard.site backfill | Prepare a reviewed allowlist from 2013 onward; exclude 2009–2010, drafts and external-only articles. Write no backfill records until that list is approved. | Default scope; exact list pending review |
 | D9 | Standard.site full text | Include textContent in approved records; /ai explains that copies are outside robots.txt. | Adopted report default; recorded before public writes |
