@@ -12,7 +12,7 @@ Organize the October 2026 review into 33 independently reviewable tasks across t
 
 Site content, templates, hosting integration and site-specific tools belong here. Generic dates, listing, feeds and Markdown generation belong in Zas behind additive APIs or opt-in settings. Start independent Zas branches from current upstream master; stack a dependent PR on its prerequisite when shared code needs integration. Include tests and docs with their implementation, validate staging with darna, and open a focused PR for each item or independent part. Merge dependencies before enabling them here, then pin a tested release or commit in both the Makefile and CI. Do not pin @latest for production.
 
-The report also asks for source-owned Mergo and darna docs and workflows. Their repositories are outside the two checkouts named in this request. Track the required source changes under T03, T24 and T25 and prepare local artifacts where useful; do not claim those repositories changed or that source-owned docs are complete until the external follow-up lands.
+The report also asks for source-owned Mergo and darna docs and workflows. The owner subsequently authorized their source PRs. T24 and T25 source/site changes are merged and verified; the remaining Mergo identity correction is a separate PR. Keep receipts distinct from unmerged changes.
 
 Your existing untracked docs/go-vanity-url.md is excluded from this work and from staging. Planning and operational Markdown files carry publish: false and must remain absent from generated output. Do not put Go template delimiters in those files: excluded pages are still parsed during generation.
 
@@ -65,13 +65,13 @@ Dependencies below include the report’s original ordering and repository-speci
 | [T00](tasks/T00.md) | Verify unverified facts | site | — | Audit committed |
 | [T01](tasks/T01.md) | Harden domain and DNS and add monitoring | site | T02 | Software committed; account operations pending |
 | [T02](tasks/T02.md) | Protect vanity imports with regression checks | site | T00 | Guarded build and exact-SHA post-deploy workflow deployed and live-verified |
-| [T03](tasks/T03.md) | Correct project identity links | zas | — | Zas PR #111 merged; external follow-up queued |
+| [T03](tasks/T03.md) | Correct project identity links | zas+mergo | — | Zas PR #111 merged; Mergo PR #323 passes checks |
 | [T04](tasks/T04.md) | Add explicit publication metadata to posts | site | T00, T02 | Source committed; three incomplete dates excluded from syndication |
 | [T05](tasks/T05.md) | Expose dates and metadata in Zas templates | zas | — | Zas PR #112 merged; site pins tested merged revision |
 | [T06](tasks/T06.md) | List pages in Zas templates | zas | T05 | Optional and deferred |
 | [T07](tasks/T07.md) | Correct canonical and Open Graph metadata | site | T05, T04 | Deployed; canonical/OG/language checks pass |
 | [T08](tasks/T08.md) | Publish contact details and self-host the avatar | site | — | Avatar/licence/contact deployed; readable cc@dario.cat edge checks pass |
-| [T09](tasks/T09.md) | Add navigation and core slash pages | site | T07 | Core pages deployed; axe/keyboard/reflow/no-JS pass; Tier 2 remains queued |
+| [T09](tasks/T09.md) | Add navigation and core slash pages | site | T07 | Core deployed; six supplementary pages in site PR #13; defaults pending |
 | [T10](tasks/T10.md) | Publish crawler policy and security contact | site+zas | T00, T08, T04, T05, T07 | Policy/security/sitemap deployed; live resource and coverage checks pass |
 | [T11](tasks/T11.md) | Generate native RSS 2.0 feeds | zas | T05 | [Zas PR #114](https://github.com/darccio/zas/pull/114) merged; enabled/deployed; all three live feeds validated |
 | [T12](tasks/T12.md) | Expose feeds in the layout and slash index | site | T09, T11, T04 | Strict RSS, discovery and subscription page deployed and live-verified |
@@ -81,20 +81,20 @@ Dependencies below include the report’s original ordering and repository-speci
 | [T16](tasks/T16.md) | Add h-feed archives and language labels | site | T04 | Deployed; complete 33/9/12 archives pass live checks |
 | [T17](tasks/T17.md) | Mark up talks and other supported page types | site | T09, T14 | Talk/slash/project units deployed and live-verified; CV deferred |
 | [T18](tasks/T18.md) | Validate microformats in CI | site | T14, T15, T16, T02, T04 | Deployed; offline fixtures, staged Pages validation and CI pass |
-| [T19](tasks/T19.md) | Emit shared JSON-LD metadata | site+zas | T05, T14, T15, T07, T08, T24 | Person/posts merged and production-verified; project schema follows T24 |
+| [T19](tasks/T19.md) | Emit shared JSON-LD metadata | site+zas | T05, T14, T15, T07, T08, T24 | Person/posts and manifest-driven project schema deployed |
 | [T20](tasks/T20.md) | Publish per-language agent context files | site | T09, T21 | [Site PR #5](https://github.com/darccio/darccio/pull/5) merged; production resources and headers verified |
 | [T21](tasks/T21.md) | Generate Markdown twins in Zas | zas | T05 | [Zas PR #113](https://github.com/darccio/zas/pull/113) merged; rendered twins deployed and live-verified |
-| [T22](tasks/T22.md) | Negotiate Markdown at the actual site host | site | T00, T21, T13, T02, T10 | Negotiation queued; matching static Content-Signal header deployed |
+| [T22](tasks/T22.md) | Negotiate Markdown at the actual site host | site | T00, T21, T13, T02, T10 | Site PR #7 merged; live negotiation/import/header checks pass |
 | [T23](tasks/T23.md) | Add optional declarative search tooling | site | T06 | Optional and deferred |
-| [T24](tasks/T24.md) | Pull and host OSS docs safely | site+zas | T02, T21, T10 | Planned |
-| [T25](tasks/T25.md) | Write and test Mergo guides | site preparation; external source follow-up | T24 | Planned |
-| [T26](tasks/T26.md) | Bootstrap Standard.site publication | site | T00, T13, T10 | Planned |
-| [T27](tasks/T27.md) | Publish documents with stable record keys | site | T04, T26 | Planned |
-| [T28](tasks/T28.md) | Link verified Standard.site documents | site | T27, T02 | Planned |
-| [T29](tasks/T29.md) | Separate publishing from site deployment | site | T27, T28, T00 | Planned |
-| [T30](tasks/T30.md) | Backfill approved posts | site | T29, T27, T28 | Planned |
-| [T31](tasks/T31.md) | Verify agreement across publishing formats | site | T11, T15, T19, T27 | Planned |
-| [T32](tasks/T32.md) | Document and release the finished features | site+zas | T05, T11, T21, T29, T02, T31 | Planned |
+| [T24](tasks/T24.md) | Pull and host OSS docs safely | site+zas | T02, T21, T10 | Pipeline and source dispatch deployed; token-backed receiver retry passed |
+| [T25](tasks/T25.md) | Write and test Mergo guides | site+mergo | T24 | Source/site PRs merged; five Mergo guides production-verified |
+| [T26](tasks/T26.md) | Bootstrap Standard.site publication | site | T00, T13, T10 | Publication and exact live backlink verified after PR #12 merge |
+| [T27](tasks/T27.md) | Publish documents with stable record keys | site | T04, T26 | Site PR #14: publisher implemented/tested; approvals empty |
+| [T28](tasks/T28.md) | Link verified Standard.site documents | site | T27, T02 | Site PR #14: verified offline backlinks implemented/tested |
+| [T29](tasks/T29.md) | Separate publishing from site deployment | site | T27, T28, T00 | Site PR #14: independent post-deploy workflow implemented/tested |
+| [T30](tasks/T30.md) | Backfill approved posts | site | T29, T27, T28 | 23 eligible candidates prepared; owner approvals pending |
+| [T31](tasks/T31.md) | Verify agreement across publishing formats | site | T11, T15, T19, T27 | Site PR #14: mandatory offline consistency gate passes |
+| [T32](tasks/T32.md) | Document and release the finished features | site+zas | T05, T11, T21, T29, T02, T31 | Site docs PR #14; Zas release docs PR #117; tag after merge |
 
 ## Secondary work and maintenance
 
