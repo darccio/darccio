@@ -1,5 +1,9 @@
+{{$language := .Language}}
+{{$canonical := .Canonical}}
+{{$description := .Summary}}
+{{if not $description}}{{$description = .Resolve "description"}}{{end}}
 <!DOCTYPE html>
-<html lang="{{.Language}}" prefix="og: http://ogp.me/ns#">
+<html lang="{{$language}}" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="utf-8">
     {{if .Title}}
@@ -94,22 +98,32 @@
     </style>
     <link rel="preload" href="/static/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" type="text/css" href="/static/styles.css"></noscript>
-    {{if .Resolve "description"}}
-    <meta name="description" content='{{.Resolve "description"}}'>
-    <meta property="og:description" content='{{.Resolve "description"}}'>
+    <link rel="canonical" href="{{$canonical}}">
+    {{if $description}}
+    <meta name="description" content="{{$description}}">
+    <meta property="og:description" content="{{$description}}">
     {{end}}
     {{if .Title}}
     <meta property="og:title" content='{{.Title}} | {{.Extra "/site/title"}}'>
     {{else}}
     <meta property="og:title" content='{{.Extra "/site/title"}}'>
     {{end}}
-    <meta property="og:url" content="{{.URL}}">
-    <meta property="og:type" content="profile">
-    <meta property="og:locale" content="{{.Language}}">
+    <meta property="og:url" content="{{$canonical}}">
+    {{if index .Page "article"}}
+    <meta property="og:type" content="article">
+    {{$date := .Date}}{{if not $date.IsZero}}
+    <meta property="article:published_time" content="{{$date.Format "2006-01-02T15:04:05.999999999Z07:00"}}">
+    {{end}}
+    {{else}}
+    <meta property="og:type" content="website">
+    {{end}}
+    <meta property="og:locale" content="{{if eq $language "ca"}}ca_ES{{else if eq $language "en"}}en_US{{else if eq $language "es"}}es_ES{{else}}{{$language}}{{end}}">
     <meta property="og:site_name" content='{{.Extra "/site/title"}}'>
     <meta name="fediverse:creator" content="@dario@mastodont.cat">
-    {{if .Resolve "image"}}
-    <meta property="og:image" content='{{.Resolve "image"}}'>
+    {{$image := .Resolve "image"}}
+    {{if $image}}
+    {{if eq (printf "%.2s" $image) "//"}}{{$image = printf "https:%s" $image}}{{else if eq (printf "%.1s" $image) "/"}}{{$image = printf "%s%s" .Site.BaseURL $image}}{{end}}
+    <meta property="og:image" content="{{$image}}">
     {{else}}
     <meta property="og:image" content="{{.Site.BaseURL}}/static/_.png">
     {{end}}

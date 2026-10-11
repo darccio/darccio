@@ -1,3 +1,8 @@
+<!--
+description: "Articles de Dario Castañé sobre tecnologia, política i societat, en català, castellà i anglès."
+image: /static/avatar.webp
+-->
+
 # Articles
 
 ## 2026
