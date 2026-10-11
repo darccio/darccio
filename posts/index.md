@@ -31,7 +31,7 @@ image: /static/avatar.webp
 
 ## 2020
 
-- [Contra la compartimentación](https://www.elsaltodiario.com/opinion/queer-marxismo-transfobia-contra-compartimentacion)
+- [Contra la compartimentación](https://www.elsaltodiario.com/opinion/queer-marxismo-transfobia-contra-compartimentacion) — article extern a El Salto.
 
 ## 2018
 
@@ -39,7 +39,7 @@ image: /static/avatar.webp
 
 ## 2015
 
-- [Per al·lusions](https://www.nuvol.com/pantalles/per-al-lusions-22931)
+- [Per al·lusions](https://www.nuvol.com/pantalles/per-al-lusions-22931) — article extern a Núvol.
 
 ## 2014
 
