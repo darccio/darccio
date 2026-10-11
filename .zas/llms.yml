@@ -19,6 +19,9 @@ languages:
           - source: contact/index.md
             title: "Contacte"
             description: "Correu públic cc@dario.cat, perfils i vies per comunicar incidències o vulnerabilitats."
+          - source: elsewhere/index.md
+            title: "En altres llocs"
+            description: "Perfils públics a GitHub, Bluesky, el Fediverse, LinkedIn, Sifa.id, Substack i Speaker Deck."
           - source: projects/index.md
             title: "Projectes"
             description: "Mergo, Zas, darna, xdr i Asembleo, amb enllaços al codi i a la documentació."
