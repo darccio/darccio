@@ -3,17 +3,25 @@ description: "Índex de les pàgines principals de dario.cat."
 updated: 2026-10-11T15:33:14+02:00
 -->
 
-# Totes les pàgines
+<section class="h-feed" lang="ca">
+
+<h1 class="p-name">Totes les pàgines</h1>
+<a class="u-url" href="https://dario.cat/slashes/" hidden>Totes les pàgines</a>
+<a class="p-author h-card" href="https://dario.cat/" hidden><span class="p-name">Dario Castañé</span></a>
 
 Un índex curt per trobar el contingut del web. Les dates indiquen l'última revisió d'aquestes pàgines.
 
-- [Sobre mi](/about/): trajectòria i biografia. Revisat l'11 d'octubre de 2026.
-- [Ara](/now/): projectes i feina actuals. Revisat l'11 d'octubre de 2026.
-- [Projectes](/projects/): programari lliure i documentació. Revisat l'11 d'octubre de 2026.
-- [Contacte](/contact/): correu, perfils i consultes. Revisat l'11 d'octubre de 2026.
-- [Hola](/hello/): una manera curta d'arribar al contacte. Revisat l'11 d'octubre de 2026.
-- [Sobre aquest web](/colophon/): construcció, publicació i llicències. Revisat l'11 d'octubre de 2026.
-- [IA i rastrejadors](/ai/): preferències d'ús i dades personals. Revisat l'11 d'octubre de 2026.
-- [Subscripcions](/feeds/): RSS dels articles, butlletí i novetats dels projectes. Revisat l'11 d'octubre de 2026.
-- [Escrits](/posts/): arxiu d'articles en català, castellà i anglès.
-- [Xerrades](/talks/): vídeos, entrevistes i presentacions.
+<ul>
+<li class="h-entry" lang="ca"><a class="p-name u-url" href="/about/">Sobre mi</a>: trajectòria i biografia. Revisat l'<time class="dt-updated" datetime="2026-10-11">11 d'octubre de 2026</time>.</li>
+<li class="h-entry" lang="ca"><a class="p-name u-url" href="/now/">Ara</a>: projectes i feina actuals. Revisat l'<time class="dt-updated" datetime="2026-10-11">11 d'octubre de 2026</time>.</li>
+<li class="h-entry" lang="ca"><a class="p-name u-url" href="/projects/">Projectes</a>: programari lliure i documentació. Revisat l'<time class="dt-updated" datetime="2026-10-11">11 d'octubre de 2026</time>.</li>
+<li class="h-entry" lang="ca"><a class="p-name u-url" href="/contact/">Contacte</a>: correu, perfils i consultes. Revisat l'<time class="dt-updated" datetime="2026-10-11">11 d'octubre de 2026</time>.</li>
+<li class="h-entry" lang="ca"><a class="p-name u-url" href="/hello/">Hola</a>: una manera curta d'arribar al contacte. Revisat l'<time class="dt-updated" datetime="2026-10-11">11 d'octubre de 2026</time>.</li>
+<li class="h-entry" lang="ca"><a class="p-name u-url" href="/colophon/">Sobre aquest web</a>: construcció, publicació i llicències. Revisat l'<time class="dt-updated" datetime="2026-10-11">11 d'octubre de 2026</time>.</li>
+<li class="h-entry" lang="ca"><a class="p-name u-url" href="/ai/">IA i rastrejadors</a>: preferències d'ús i dades personals. Revisat l'<time class="dt-updated" datetime="2026-10-11">11 d'octubre de 2026</time>.</li>
+<li class="h-entry" lang="ca"><a class="p-name u-url" href="/feeds/">Subscripcions</a>: RSS dels articles, butlletí i novetats dels projectes. Revisat l'<time class="dt-updated" datetime="2026-10-11">11 d'octubre de 2026</time>.</li>
+<li><a href="/posts/">Escrits</a>: arxiu d'articles en català, castellà i anglès.</li>
+<li><a href="/talks/">Xerrades</a>: vídeos, entrevistes i presentacions.</li>
+</ul>
+
+</section>

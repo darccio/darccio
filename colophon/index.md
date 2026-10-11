@@ -1,9 +1,10 @@
 <!--
+entry: true
 description: "Com està fet dario.cat: Zas, Cloudflare Pages, codi i llicències."
 updated: 2026-10-11T15:33:14+02:00
 -->
 
-# Sobre aquest web
+<h1 class="p-name">Sobre aquest web</h1>
 
 dario.cat és un web estàtic fet amb [Zas](https://github.com/darccio/zas), el meu generador escrit en Go. Les pàgines parteixen de Markdown o HTML i comparteixen una plantilla. El [codi del web](https://github.com/darccio/darccio) és públic.
 

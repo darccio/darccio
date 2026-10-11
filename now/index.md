@@ -1,11 +1,10 @@
 <!--
+entry: true
 description: "Actualitat de Dario Castañé: corb.ax, Cocoon i la posada al dia del web."
 updated: 2026-10-11T15:33:14+02:00
 -->
 
-# Ara
-
-<p>Actualitzat el <time class="dt-updated" datetime="2026-10-11T15:33:14+02:00">11 d'octubre de 2026</time>.</p>
+<h1 class="p-name">Ara</h1>
 
 Ara treballo en [corb.ax](https://corb.ax) i [Cocoon](https://dario.cat/cocoon).
 

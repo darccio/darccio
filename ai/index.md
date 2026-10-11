@@ -1,11 +1,10 @@
 <!--
+entry: true
 description: "Preferències de dario.cat sobre cercadors, ús d'IA, entrenament i dades personals."
 updated: 2026-10-11T15:33:14+02:00
 -->
 
-# IA i rastrejadors
-
-<p>Actualitzat el <time class="dt-updated" datetime="2026-10-11T15:33:14+02:00">11 d'octubre de 2026</time>.</p>
+<h1 class="p-name">IA i rastrejadors</h1>
 
 ## Preferències d'ús
 

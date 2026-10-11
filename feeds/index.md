@@ -1,9 +1,10 @@
 <!--
+entry: true
 description: "RSS dels articles de Dario Castañé, el butlletí Rizoma i les versions de Mergo i Zas."
 updated: 2026-10-11T15:33:14+02:00
 -->
 
-# Subscripcions
+<h1 class="p-name">Subscripcions</h1>
 
 RSS permet seguir publicacions des d'un lector de feeds. Afegeix-hi l'adreça d'una subscripció per rebre els articles sense haver de visitar cada web.
 
