@@ -25,6 +25,10 @@
       {
         "type": "linkedin",
         "URL": "https://www.linkedin.com/in/darccio/"
+      },
+      {
+        "type": "other",
+        "URL": "https://sifa.id/p/dario.cat"
       }
     ]
   },
@@ -981,6 +985,10 @@
         {
           "type": "linkedin",
           "URL": "https://www.linkedin.com/in/darccio/"
+        },
+        {
+          "type": "other",
+          "URL": "https://sifa.id/p/dario.cat"
         }
       ]
     },

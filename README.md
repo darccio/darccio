@@ -18,6 +18,7 @@ Please consider sponsoring my work:
 - [Fediverse](https://mastodont.cat/@dario)
 - [BlueSky](https://bsky.app/profile/dario.cat)
 - [LinkedIn](https://linkedin.com/in/darccio)
+- [Sifa.id](https://sifa.id/p/dario.cat)
 - [Manfred Awesomic CV](/CV/MAC.json): an open-source, interchangeable, machine-readable format. It's also synchronized with [my profile in Manfred](https://getmanfred.com/profile/dcc).
 
 
