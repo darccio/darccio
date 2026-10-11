@@ -23,6 +23,7 @@ Un índex curt per trobar el contingut del web. Les dates indiquen l'última rev
 <li class="h-entry" lang="ca"><a class="p-name u-url" href="/elsewhere/">En altres llocs</a>: tots els perfils públics. Revisat l'<time class="dt-updated" datetime="2026-10-11">11 d'octubre de 2026</time>.</li>
 <li class="h-entry" lang="ca"><a class="p-name u-url" href="/languages/">Idiomes</a>: català, castellà i anglès al web. Revisat l'<time class="dt-updated" datetime="2026-10-11">11 d'octubre de 2026</time>.</li>
 <li class="h-entry" lang="ca"><a class="p-name u-url" href="/sponsor/">Donar suport</a>: patrocini i vies de finançament. Revisat l'<time class="dt-updated" datetime="2026-10-11">11 d'octubre de 2026</time>.</li>
+<li class="h-entry" lang="ca"><a class="p-name u-url" href="/uses/">Eines</a>: el web i la monitorització del NAS. Revisat l'<time class="dt-updated" datetime="2026-10-11">11 d'octubre de 2026</time>.</li>
 <li><a href="/posts/">Escrits</a>: arxiu d'articles en català, castellà i anglès.</li>
 <li><a href="/talks/">Xerrades</a>: vídeos, entrevistes i presentacions.</li>
 </ul>

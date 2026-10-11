@@ -263,7 +263,7 @@ func agentContextSourcePath(source string) error {
 		root = parts[1]
 	}
 	switch root {
-	case "about", "now", "projects", "contact", "hello", "colophon", "ai", "feeds", "slashes", "talks", "languages", "elsewhere", "sponsor", "posts", "rizoma":
+	case "about", "now", "projects", "contact", "hello", "colophon", "ai", "feeds", "slashes", "talks", "languages", "elsewhere", "sponsor", "uses", "posts", "rizoma":
 		return nil
 	default:
 		return fmt.Errorf("unreviewed agent context source %q", source)

@@ -40,6 +40,9 @@ languages:
           - source: colophon/index.md
             title: "Sobre aquest web"
             description: "Zas, la publicació amb Cloudflare Pages, el codi i les llicències."
+          - source: uses/index.md
+            title: "Eines"
+            description: "La construcció del web amb Zas i la configuració publicada per monitoritzar un NAS Synology amb Datadog."
           - source: feeds/index.md
             title: "Subscripcions"
             description: "Feeds dels articles, el butlletí Rizoma i les versions de Mergo i Zas."
