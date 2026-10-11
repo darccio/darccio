@@ -10,7 +10,7 @@ Organize the October 2026 review into 33 independently reviewable tasks across t
 
 ## Repository boundaries
 
-Site content, templates, hosting integration and site-specific tools belong here. Generic dates, listing, feeds and Markdown generation belong in Zas behind additive APIs or opt-in settings. Start Zas branches from current upstream master, include tests and docs with their implementation, validate staging with darna, and open a focused PR for each item or independent part. Merge dependencies before enabling them here, then pin a tested release or commit in both the Makefile and CI. Do not pin @latest for production.
+Site content, templates, hosting integration and site-specific tools belong here. Generic dates, listing, feeds and Markdown generation belong in Zas behind additive APIs or opt-in settings. Start independent Zas branches from current upstream master; stack a dependent PR on its prerequisite when shared code needs integration. Include tests and docs with their implementation, validate staging with darna, and open a focused PR for each item or independent part. Merge dependencies before enabling them here, then pin a tested release or commit in both the Makefile and CI. Do not pin @latest for production.
 
 The report also asks for source-owned Mergo and darna docs and workflows. Their repositories are outside the two checkouts named in this request. Track the required source changes under T03, T24 and T25 and prepare local artifacts where useful; do not claim those repositories changed or that source-owned docs are complete until the external follow-up lands.
 
@@ -73,7 +73,7 @@ Dependencies below include the report’s original ordering and repository-speci
 | [T08](tasks/T08.md) | Publish contact details and self-host the avatar | site | — | Avatar/licence committed; edge obfuscation and deployment pending |
 | [T09](tasks/T09.md) | Add navigation and core slash pages | site | T07 | Planned |
 | [T10](tasks/T10.md) | Publish crawler policy and security contact | site+zas | T00, T08, T04, T05, T07 | Planned |
-| [T11](tasks/T11.md) | Generate native RSS 2.0 feeds | zas | T05 | Planned |
+| [T11](tasks/T11.md) | Generate native RSS 2.0 feeds | zas | T05 | [Zas PR #114](https://github.com/darccio/zas/pull/114) open, stacked on #113; local and remote checks pass |
 | [T12](tasks/T12.md) | Expose feeds in the layout and slash index | site | T09, T11, T04 | Planned |
 | [T13](tasks/T13.md) | Serve correct feed and well-known headers | site | T00, T11, T12 | Planned |
 | [T14](tasks/T14.md) | Complete representative identity microformats | site | T08, T09 | Planned |
@@ -83,7 +83,7 @@ Dependencies below include the report’s original ordering and repository-speci
 | [T18](tasks/T18.md) | Validate microformats in CI | site | T14, T15, T16, T02, T04 | Planned |
 | [T19](tasks/T19.md) | Emit shared JSON-LD metadata | site+zas | T05, T14, T15, T07, T08, T24 | Planned |
 | [T20](tasks/T20.md) | Publish per-language agent context files | site | T09, T21 | Planned |
-| [T21](tasks/T21.md) | Generate Markdown twins in Zas | zas | T05 | Planned |
+| [T21](tasks/T21.md) | Generate Markdown twins in Zas | zas | T05 | [Zas PR #113](https://github.com/darccio/zas/pull/113) open; local and remote checks pass |
 | [T22](tasks/T22.md) | Negotiate Markdown at the actual site host | site | T00, T21, T13, T02, T10 | Planned |
 | [T23](tasks/T23.md) | Add optional declarative search tooling | site | T06 | Optional and deferred |
 | [T24](tasks/T24.md) | Pull and host OSS docs safely | site+zas | T02, T21, T10 | Planned |
