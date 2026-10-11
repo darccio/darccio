@@ -1,0 +1,169 @@
+# Reviewed public content only. New pages require an explicit addition here.
+# Publication-date precision does not change an already-public article's eligibility.
+version: 1
+languages:
+  - language: ca
+    title: "Dario Castañé — context en català"
+    summary: "Web personal de Dario Castañé, enginyer de programari a Datadog i mantenidor de Mergo i Zas. Escrits sobre tecnologia, política i programari lliure en català, castellà i anglès."
+    introduction: "This file indexes selected public pages in Catalan. The English and Spanish files link to their respective articles and full-text context."
+    feed: true
+    sections:
+      - title: "Sobre mi i el web"
+        pages:
+          - source: about/index.md
+            title: "Sobre mi"
+            description: "Biografia, trajectòria professional i programari lliure."
+          - source: now/index.md
+            title: "Ara"
+            description: "Feina actual en corb.ax, Cocoon i la posada al dia del web i de Zas."
+          - source: contact/index.md
+            title: "Contacte"
+            description: "Correu públic cc@dario.cat, perfils i vies per comunicar incidències o vulnerabilitats."
+          - source: projects/index.md
+            title: "Projectes"
+            description: "Mergo, Zas, darna, xdr i Asembleo, amb enllaços al codi i a la documentació."
+          - source: talks/index.md
+            title: "Xerrades i entrevistes"
+            description: "Enregistraments, diapositives i materials sobre Go, programari lliure, drets digitals, cultura i política."
+          - source: ai/index.md
+            title: "IA i rastrejadors"
+            description: "Preferències sobre cerca, ús del contingut com a context, entrenament d'IA i dades personals."
+          - source: colophon/index.md
+            title: "Sobre aquest web"
+            description: "Zas, la publicació amb Cloudflare Pages, el codi i les llicències."
+          - source: feeds/index.md
+            title: "Subscripcions"
+            description: "Feeds dels articles, el butlletí Rizoma i les versions de Mergo i Zas."
+          - source: slashes/index.md
+            title: "Totes les pàgines"
+            description: "Índex de les pàgines principals del web amb les dates de revisió."
+      - title: "Escrits"
+        pages:
+          - source: posts/index.md
+            title: "Articles"
+            description: "Arxiu dels articles en català, castellà i anglès, amb les publicacions externes indicades."
+          - source: posts/pseudo-estat/index.md
+            title: "Tecnofeudalisme i el Pseudo-Estat: la futura governabilitat del capitalisme"
+            description: "Reflexió sobre el poder de les corporacions digitals i el Pseudo-Estat com a possible forma de governabilitat d'un capitalisme hiperconcentrat."
+          - source: posts/un-nou-cami/index.md
+            title: "Un nou camí"
+            description: "Anunci del final de l'etapa de militància a Pirates de Catalunya, amb agraïment pel camí compartit i la decisió d'assumir nous reptes."
+          - source: posts/renda-basica/index.md
+            title: "Renda bàsica: deixarà tothom de treballar?"
+            description: "Repàs dels resultats de pilots de renda bàsica sobre pobresa, benestar i ocupació, amb els reptes de finançament i viabilitat que continuen oberts."
+          - source: posts/delete-facebook-2/index.md
+            title: "Delete Facebook #2"
+            description: "Revisió dels inicis de sessió amb Facebook i de les dificultats per eliminar les dades personals cedides a aplicacions de tercers."
+          - source: posts/delete-facebook-1/index.md
+            title: "Delete Facebook #1"
+            description: "Primers passos per deixar Facebook: recuperar un domini propi, revisar 123 inicis de sessió i explorar alternatives socials descentralitzades."
+          - source: posts/delete-facebook/index.md
+            title: "Delete Facebook #0"
+            description: "Inici d'un procés documentat per deixar Facebook després del cas Cambridge Analytica i recuperar el control de la identitat digital."
+          - source: posts/manifest-assemblees-constituents-contrapoder/index.md
+            title: "Manifest per les assemblees constituents com contrapoder"
+            description: "Manifest que proposa assemblees constituents obertes i participatives com a contrapoder popular per construir un nou Estat des de baix."
+          - source: posts/perque-temer-facebook/index.md
+            title: "Perquè has de témer a Facebook"
+            description: "Traducció d'una carta de Matthew Pherigo sobre els canvis de privacitat de Facebook de 2010 i les opcions per limitar-hi l'exposició de dades personals."
+      - title: "Rizoma: edicions de 2021"
+        pages:
+          - source: rizoma/004/index.md
+            title: "Rizoma #004: popurri d'enllaços"
+            description: "Un recull d'enllaços sobre reciclatge de CO₂, l'oposició hongaresa, privacitat dels mòbils, divulgació científica i xarxes socials, amb una xerrada sobre Mergo."
+          - source: rizoma/003/index.md
+            title: "Rizoma #003: Estat del català: a l'UCI o acostant-se a la revifada?"
+            description: "Una reflexió sobre la situació del català que proposa mantenir-ne l'ús quotidià i crear, consumir i difondre contingut de tots els territoris de parla catalana."
+          - source: rizoma/002/index.md
+            title: "Rizoma #002: Canvi climàtic. O fallida climàtica? 🌍🔥"
+            description: "Una lectura del sisè informe de l'IPCC que vincula la crisi climàtica amb el sistema econòmic i proposa canvis socials, energètics i de consum."
+          - source: rizoma/001/index.md
+            title: "Rizoma #001"
+            description: "Presentació de Rizoma amb lectures sobre vacunes, llibertat de compartir cultura, euro digital i desigualtat, i un record dels Jocs Olímpics de Barcelona."
+  - language: en
+    title: "Dario Castañé — English writing"
+    summary: "English articles by Dario Castañé, a software engineer at Datadog and maintainer of Mergo and Zas, on Go, technology, politics and society."
+    feed: true
+    sections:
+      - title: "Archive"
+        pages:
+          - source: en/posts/index.md
+            title: "Articles in English"
+            description: "The English article archive, with publication dates and links to other language archives."
+      - title: "Articles"
+        pages:
+          - source: en/posts/monitoring-synology-nas-with-datadog/index.md
+            title: "Monitoring a Synology NAS with Datadog"
+            description: "A step-by-step setup for monitoring Synology NAS hardware and services with Datadog through SNMP and a containerized Agent, including alerts and troubleshooting."
+          - source: en/posts/a-new-path/index.md
+            title: "A New Path"
+            description: "An announcement of leaving Pirates de Catalunya, reflecting on fourteen years of shared political work and the decision to pursue new challenges."
+          - source: en/posts/portal-between-ruby-and-go/index.md
+            title: "A portal between Ruby and Go (using FFI)"
+            description: "An FFI prototype that lets Ruby load a Go shared library for gradual API migration and reuse of existing tests, with possible performance overhead."
+          - source: en/posts/delete-facebook-2/index.md
+            title: "Delete Facebook #2"
+            description: "A review of Facebook logins and the difficult process of asking third-party apps to delete the personal data they collected."
+          - source: en/posts/delete-facebook-1/index.md
+            title: "Delete Facebook #1"
+            description: "First steps towards leaving Facebook: reclaiming a personal domain, reviewing 123 active logins and considering decentralized social alternatives."
+          - source: en/posts/delete-facebook/index.md
+            title: "Delete Facebook #0"
+            description: "The start of a documented effort to leave Facebook after Cambridge Analytica while untangling logins and keeping in touch with people."
+          - source: en/posts/introduction-liquid-organizations/index.md
+            title: "Introduction to liquid organizations"
+            description: "An introduction to Lýd's model of horizontal organizations, using voluntary delegation and flows to support participation and collective decisions."
+          - source: en/posts/geekvana/index.md
+            title: "What Internet told me: Geekvana, is it possible?"
+            description: "A personal list of habits for reducing digital clutter and improving focus, from simplifying and using reminders to avoiding multitasking."
+          - source: en/posts/deciwave/index.md
+            title: "Deciwave - Robot Rocking for Google Wave"
+            description: "Introducing Deciwave, a Google Wave robot that embeds music players from GoEar, Jamendo and The Sixty One using shared links."
+  - language: es
+    title: "Dario Castañé — escritos en castellano"
+    summary: "Artículos en castellano de Dario Castañé, ingeniero de software en Datadog y mantenedor de Mergo y Zas, sobre tecnología, política y sociedad."
+    feed: true
+    sections:
+      - title: "Archivo"
+        pages:
+          - source: es/posts/index.md
+            title: "Artículos en castellano"
+            description: "Archivo de artículos en castellano, con fechas de publicación y enlaces a los archivos en otras lenguas."
+      - title: "Artículos"
+        pages:
+          - source: es/posts/un-nuevo-camino/index.md
+            title: "Un nuevo camino"
+            description: "Anuncio del final de la etapa de militancia en Pirates de Catalunya, con agradecimiento por el camino compartido y la decisión de asumir nuevos retos."
+          - source: es/posts/blockchain-si-o-no/index.md
+            title: "Blockchain en mi próximo proyecto: ¿sí o no?"
+            description: "Un cuestionario basado en un diagrama de decisión del NIST para valorar si un proyecto necesita usar blockchain."
+          - source: es/posts/delete-facebook-2/index.md
+            title: "Delete Facebook #2"
+            description: "Revisión de los accesos mediante Facebook y de las dificultades para pedir a aplicaciones de terceros que eliminen los datos personales recogidos."
+          - source: es/posts/delete-facebook-1/index.md
+            title: "Delete Facebook #1"
+            description: "Primeros pasos para dejar Facebook: recuperar un dominio propio, revisar 123 inicios de sesión y explorar alternativas sociales descentralizadas."
+          - source: es/posts/delete-facebook/index.md
+            title: "Delete Facebook #0"
+            description: "Inicio de un proceso documentado para dejar Facebook tras el caso Cambridge Analytica, revisando los accesos a servicios y las formas de mantener el contacto."
+          - source: es/posts/tejiendo-el-cambio/index.md
+            title: "Tejiendo el cambio"
+            description: "Una propuesta para conectar presencialmente a personas que buscan un cambio social y construir confianza sin imponer una única vía de acción política."
+          - source: es/posts/introduccion-organizaciones-liquidas/index.md
+            title: "Introducción a las organizaciones líquidas"
+            description: "Introducción al modelo de organizaciones horizontales de Lýd, basado en la delegación voluntaria y los flujos para facilitar la participación y las decisiones colectivas."
+          - source: es/posts/pequena-reflexion/index.md
+            title: "Pequeña reflexión: ¿qué es primero, cambiar el capitalismo o el poder?"
+            description: "Una reflexión que defiende redistribuir el poder político antes de reformar el sistema económico para limitar la influencia de la oligarquía."
+          - source: es/posts/manifiesto-acampada-sol/index.md
+            title: "Manifiesto de la Acampada Sol"
+            description: "El manifiesto de Acampada Sol presenta un movimiento independiente de partidos que reclama un cambio social pacífico centrado en la dignidad y la solidaridad."
+          - source: es/posts/manifiesto-red-neutral/index.md
+            title: "Manifiesto por una Red Neutral"
+            description: "Un manifiesto en defensa de la neutralidad de la red que pide proteger el tráfico de Internet frente a la discriminación y los intereses comerciales de las operadoras."
+          - source: es/posts/porque-deberias-temer-facebook/index.md
+            title: "Por qué deberías temer a Facebook"
+            description: "Traducción de una carta de Matthew Pherigo sobre los cambios de privacidad de Facebook de 2010 y las opciones para limitar la exposición de datos personales."
+          - source: es/posts/diez-cosas-no-deberias-hacer-en-facebook/index.md
+            title: "Diez cosas que no deberías hacer en Facebook"
+            description: "Traducción de diez recomendaciones de Errata Security para reducir la exposición de datos y los riesgos de seguridad al usar Facebook."
