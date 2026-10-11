@@ -1,0 +1,128 @@
+name: Standard.site documents
+
+on:
+  workflow_run:
+    workflows: ["Vanity after deploy"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: Publish only the explicitly reviewed document allowlist
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: standard-site-documents
+  cancel-in-progress: false
+
+jobs:
+  deployment:
+    if: github.repository == 'darccio/darccio' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    continue-on-error: true
+    permissions:
+      contents: read
+      checks: read
+    outputs:
+      ready: ${{ steps.production.outputs.ready }}
+      sha: ${{ steps.production.outputs.sha }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Confirm current production Pages revision
+        id: production
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .tools/atproto/deployed-revision.py
+
+  publish:
+    needs: deployment
+    if: needs.deployment.outputs.ready == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    continue-on-error: true
+    outputs:
+      applied: ${{ steps.apply.outputs.applied }}
+    env:
+      GOTOOLCHAIN: local
+      GOFLAGS: -mod=readonly
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ needs.deployment.outputs.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e
+        with:
+          go-version-file: .tools/atproto/go.mod
+          cache-dependency-path: .tools/atproto/go.sum
+      - name: Test publisher and handoff
+        run: |
+          go -C .tools/atproto test ./...
+          python3 .tools/atproto/deployed-revision_test.py
+          python3 .tools/atproto/open-documents-pr_test.py
+      - name: Build the deployed revision without PDS access
+        run: make -f .zas/Makefile publish
+      - name: Preview the reviewed documents without authentication or network
+        run: >-
+          go -C .tools/atproto run ./cmd/documents -root ../..
+          > "$RUNNER_TEMP/standard-plan.json"
+      - name: Apply the reviewed documents
+        id: apply
+        if: github.event_name == 'workflow_run' || inputs.apply
+        env:
+          ATP_HANDLE: ${{ secrets.ATP_HANDLE }}
+          ATP_APP_PASSWORD: ${{ secrets.ATP_APP_PASSWORD }}
+          GH_TOKEN: ${{ github.token }}
+          DEPLOYED_SHA: ${{ needs.deployment.outputs.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          current_main="$(gh api "repos/$GITHUB_REPOSITORY/commits/main" --jq .sha)"
+          if [[ "$current_main" != "$DEPLOYED_SHA" ]]; then
+            echo '::notice::Production revision was superseded; no documents were published.'
+            exit 0
+          fi
+          go -C .tools/atproto run ./cmd/documents -root ../.. -apply > "$RUNNER_TEMP/standard-applied.json"
+          echo 'applied=true' >> "$GITHUB_OUTPUT"
+      - name: Validate the verified URI mapping before handoff
+        if: steps.apply.outputs.applied == 'true'
+        run: make -f .zas/Makefile generate ZAS=/tmp/dario-site-zas/zas
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: steps.apply.outputs.applied == 'true'
+        with:
+          name: verified-document-uris
+          path: .zas/atproto.json
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 7
+
+  propose:
+    needs: [deployment, publish]
+    if: needs.publish.outputs.applied == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    continue-on-error: true
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ needs.deployment.outputs.sha }}
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: verified-document-uris
+          path: .zas
+      - name: Propose only public document backlinks
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEPLOYED_SHA: ${{ needs.deployment.outputs.sha }}
+        run: python3 .tools/atproto/open-documents-pr.py

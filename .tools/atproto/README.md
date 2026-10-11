@@ -129,3 +129,32 @@ paths and publication instants in [documents-allowlist.json](documents-allowlist
 That list starts empty. [DOCUMENTS.md](DOCUMENTS.md) covers offline previews,
 candidate review, stable keys, record updates, recovery state and explicit
 record deletion. Candidate discovery never approves or publishes an article.
+
+## Independent workflow and rollback
+
+[Standard.site documents](../../.github/workflows/standard-site.yml) runs after
+the existing **Vanity after deploy** workflow. It independently checks the
+current `main` SHA against the trusted Cloudflare Pages production check and
+suite, then checks out that immutable revision. Preview and fork events,
+failed deployments, superseded revisions and backlink-only commits cannot
+publish. Pages deployment never waits for this workflow.
+
+Manual dispatch defaults to an offline preview:
+
+```sh
+gh workflow run standard-site.yml --repo darccio/darccio --ref main -f apply=false
+```
+
+Automatic runs and a manual `apply=true` publish only the committed reviewed
+allowlist. The password exists only in the apply step. A separate GitHub job
+receives only the verified public URI map and proposes a single-file atomic PR;
+it receives no PDS credentials or session files. Repeating an unchanged publish
+makes zero record writes and creates no state PR. Publisher failures are visible
+in its independent job and cannot block the already-completed deployment.
+
+Disable `standard-site.yml` to stop automation without changing deployment.
+Removing a post from the allowlist never silently deletes its public record.
+For an explicit deletion, preview `-delete /posts/example/`, then use the same
+command with `-apply`; review and commit the resulting public map removal.
+Deletion cannot retract copies held elsewhere. Reverting Git alone does not
+delete any public record.

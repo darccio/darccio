@@ -37,3 +37,5 @@ test:
 	node --test .tools/http/worker.test.mjs
 	bash .tools/docs/open-update-pr_test.sh
 	python3 .tools/atproto/open-publication-pr_test.py
+	python3 .tools/atproto/deployed-revision_test.py
+	python3 .tools/atproto/open-documents-pr_test.py
