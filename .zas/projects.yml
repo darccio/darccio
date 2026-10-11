@@ -5,15 +5,27 @@ projects:
   - id: mergo
     name: Mergo
     repo: darccio/mergo
-    ref: feat/t24-site-docs
-    commit: d09428412cb0609365bf16916fdd42a170f45e1e
+    ref: docs/t25-mergo-guides
+    commit: 8c092c379d3602a60b22605ee577d8e70aea9860
     language: en
     license: BSD-3-Clause
     license_file: docs/LICENSE.txt
     pages:
       - source: docs/index.md
         title: Mergo
-        summary: Merge Go structs and maps with configuration defaults.
+        summary: Merge Go structs and maps, choose options, and migrate to dario.cat/mergo.
+      - source: docs/options.md
+        title: Merge options
+        summary: Choose overwrite, empty-value, slice, pointer, type-check, and transformer behavior.
+      - source: docs/transformers.md
+        title: Transformer cookbook
+        summary: Merge time.Time with explicit overwrite rules and propagate transformer errors.
+      - source: docs/migration.md
+        title: Migrate to dario.cat/mergo
+        summary: Move direct imports to the vanity module path or pin an indirect legacy dependency.
+      - source: docs/faq.md
+        title: Mergo FAQ
+        summary: Understand map values, aliasing, empty values, mapping types, and merge errors.
   - id: zas
     name: Zas
     repo: darccio/zas
