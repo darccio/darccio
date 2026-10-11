@@ -1,24 +1,29 @@
-This is free and unencumbered software released into the public domain.
+# Licence scope
 
-Anyone is free to copy, modify, publish, use, compile, sell, or
-distribute this software, either in source code form or as a compiled
-binary, for any purpose, commercial or non-commercial, and by any
-means.
+Original site content for which Dario Castañé holds the necessary rights is
+licensed under Creative Commons Attribution-ShareAlike 4.0 International
+(CC BY-SA 4.0), subject to the scope exceptions below.
 
-In jurisdictions that recognize copyright laws, the author or authors
-of this software dedicate any and all copyright interest in the
-software to the public domain. We make this dedication for the benefit
-of the public at large and to the detriment of our heirs and
-successors. We intend this dedication to be an overt act of
-relinquishment in perpetuity of all present and future rights to this
-software under copyright law.
+Licence: https://creativecommons.org/licenses/by-sa/4.0/
+Legal code: https://creativecommons.org/licenses/by-sa/4.0/legalcode.en
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
+This content grant excludes CV personal data and separately licensed
+material. It applies to original text and other creative works only where
+Dario holds the necessary rights. It does not relicense third-party images,
+quotations, code or dependencies, which retain their own licences and
+notices.
 
-For more information, please refer to <https://unlicense.org>
+The CVs included in this repository contain my personal and professional data, and they can't be automatically processed without my explicit permission according to the [GDPR](https://gdpr-info.eu/) (General Data Protection Regulation).
+
+The lyd/ subtree retains its separate Creative Commons Attribution 4.0
+licence (CC BY 4.0), as declared in lyd/README.md:
+https://creativecommons.org/licenses/by/4.0/
+
+Original software and site implementation code outside separately licensed
+paths retain the original Unlicense, reproduced unchanged in LICENSE-CODE.
+This includes templates, stylesheets, build configuration, the .tools/
+checks and the .workers/ worker. Prose and media embedded in implementation
+files follow the content scope above rather than the software statement.
+
+This clarification does not revoke or narrow any existing public-domain
+dedication or other prior licence grant.
