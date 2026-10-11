@@ -20,7 +20,7 @@ The report defaults below govern implementation. Repository facts resolve the pu
 | D10 | Discovery preference | preferences.showInDiscover = true for the one root publication. | Adopted report default |
 | D11 | Webmentions | Skip. | Adopted report default |
 | D12 | Publishing authentication | App password only in Actions secrets; OAuth later. Never commit credentials. | Adopted report default; secrets not provisioned |
-| D13 | Homepage writing claim | Point the claim at actual writing channels without promising a cadence. | Adopted report default |
+| D13 | Homepage writing claim | Point at actual writing channels without promising a cadence; Now names the owner-confirmed Corb and Cocoon projects. | Implemented in 1ad3087 |
 | D14 | Generator | Extend Zas. Reassess Hugo + Hugo Modules only after two weekends of actual stalled implementation. | Adopted report default |
 | D15 | Zas import path | Keep github.com/darccio/zas; /zas/ is a docs route only. | Adopted report default |
 | D16 | AI policy | search=yes, ai-input=yes, ai-train=no; disallow /CV/; HTTP Content-Signal must agree. | Adopted report default |

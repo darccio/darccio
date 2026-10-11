@@ -71,11 +71,11 @@ Dependencies below include the report’s original ordering and repository-speci
 | [T06](tasks/T06.md) | List pages in Zas templates | zas | T05 | Optional and deferred |
 | [T07](tasks/T07.md) | Correct canonical and Open Graph metadata | site | T05, T04 | Source committed; local assembled checks pass |
 | [T08](tasks/T08.md) | Publish contact details and self-host the avatar | site | — | Avatar/licence committed; edge obfuscation and deployment pending |
-| [T09](tasks/T09.md) | Add navigation and core slash pages | site | T07 | Planned |
-| [T10](tasks/T10.md) | Publish crawler policy and security contact | site+zas | T00, T08, T04, T05, T07 | Planned |
-| [T11](tasks/T11.md) | Generate native RSS 2.0 feeds | zas | T05 | [Zas PR #114](https://github.com/darccio/zas/pull/114) open, stacked on #113; local and remote checks pass |
-| [T12](tasks/T12.md) | Expose feeds in the layout and slash index | site | T09, T11, T04 | Planned |
-| [T13](tasks/T13.md) | Serve correct feed and well-known headers | site | T00, T11, T12 | Planned |
+| [T09](tasks/T09.md) | Add navigation and core slash pages | site | T07 | Core pages committed; axe/keyboard/reflow/no-JS pass; deployment and Tier 2 pending |
+| [T10](tasks/T10.md) | Publish crawler policy and security contact | site+zas | T00, T08, T04, T05, T07 | Policy/security and complete canonical sitemap assembly committed; live checks pending |
+| [T11](tasks/T11.md) | Generate native RSS 2.0 feeds | zas | T05 | [Zas PR #114](https://github.com/darccio/zas/pull/114) merged; site pinned/enabled; live W3C validation pending |
+| [T12](tasks/T12.md) | Expose feeds in the layout and slash index | site | T09, T11, T04 | Strict RSS, discovery and subscription page committed; live checks pending |
+| [T13](tasks/T13.md) | Serve correct feed and well-known headers | site | T00, T11, T12 | Static Pages response rules committed; live MIME/cache/header checks pending |
 | [T14](tasks/T14.md) | Complete representative identity microformats | site | T08, T09 | Planned |
 | [T15](tasks/T15.md) | Wrap posts in h-entry markup | site | T04, T05, T07, T14 | Planned |
 | [T16](tasks/T16.md) | Add h-feed archives and language labels | site | T04 | Planned |
@@ -83,8 +83,8 @@ Dependencies below include the report’s original ordering and repository-speci
 | [T18](tasks/T18.md) | Validate microformats in CI | site | T14, T15, T16, T02, T04 | Planned |
 | [T19](tasks/T19.md) | Emit shared JSON-LD metadata | site+zas | T05, T14, T15, T07, T08, T24 | Planned |
 | [T20](tasks/T20.md) | Publish per-language agent context files | site | T09, T21 | Planned |
-| [T21](tasks/T21.md) | Generate Markdown twins in Zas | zas | T05 | [Zas PR #113](https://github.com/darccio/zas/pull/113) open; local and remote checks pass |
-| [T22](tasks/T22.md) | Negotiate Markdown at the actual site host | site | T00, T21, T13, T02, T10 | Planned |
+| [T21](tasks/T21.md) | Generate Markdown twins in Zas | zas | T05 | [Zas PR #113](https://github.com/darccio/zas/pull/113) merged; twins and inventory discovery enabled |
+| [T22](tasks/T22.md) | Negotiate Markdown at the actual site host | site | T00, T21, T13, T02, T10 | Negotiation queued; static Content-Signal header committed |
 | [T23](tasks/T23.md) | Add optional declarative search tooling | site | T06 | Optional and deferred |
 | [T24](tasks/T24.md) | Pull and host OSS docs safely | site+zas | T02, T21, T10 | Planned |
 | [T25](tasks/T25.md) | Write and test Mergo guides | site preparation; external source follow-up | T24 | Planned |
