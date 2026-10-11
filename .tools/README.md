@@ -1,5 +1,9 @@
 # Site checks and builds
 
+The separate [Standard.site publication bootstrap](atproto/README.md) has its own
+manual workflow, defaults to a public-read preview, and proposes its two verified
+outputs in one commit. It does not publish articles or participate in deployment.
+
 Run these commands from the site repository root:
 
 ```sh

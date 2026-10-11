@@ -152,3 +152,41 @@ T25 is implemented for review in [Mergo PR #322](https://github.com/darccio/merg
 The 185-file guarded build preserves all seven vanity contracts, all feeds/posts and other project output. Five HTML/Markdown pairs, project context indexes, local anchors, licenses, source dates and accessible layouts pass independent checks. T24 site PR #8 merged as `8b3dd43`; all three source `SITE_DISPATCH_TOKEN` names are present. Production T25 completion follows merging its source and site PRs; a successful token-backed dispatch remains a separate live check. See tasks/T25.md for precise verification and rollout evidence.
 
 Both T25 PRs have passing GitHub checks. Cloudflare's exact-feature preview https://80ed6769.da-rio-hn.pages.dev/mergo/ passes 66 focused HTTPS requests plus the independent seven-package live import checker. The exact committed build reproduces all 185 hashes. Merge Mergo PR #322 before site PR #9 to publish the guides; production verification follows those merges.
+
+## T25 production and T24 dispatch closure · 2026-10-11
+
+The owner merged Mergo #322 as `ff8ae09` and site #9 as `9a3af08`.
+The exact site commit's Pages, CI and automatic post-deploy vanity checks pass;
+the production domain passes all 66 focused Mergo requests. T25 is deployed.
+
+The token-backed Mergo dispatch initially ran before the site's new guide
+whitelist merged and safely rejected its newly linked migration page. The
+[receiver retry](https://github.com/darccio/darccio/actions/runs/38169148268)
+now passes and opens [source pin PR #10](https://github.com/darccio/darccio/pull/10),
+confirming T24's dispatch/build/atomic proposal path. Merging that separate PR
+adopts the source's merged commit; the deployed docs already use the verified
+immutable feature commit.
+
+## T26 publication preparation · 2026-10-11
+
+The T26 Go bootstrap, exact reviewed publication metadata, default-preview manual
+workflow and atomic two-output PR handoff are implemented. Public identity/schema
+checks and the real unauthenticated preview pass; the account still has only
+Rizoma. Mocked Go tests, race/shuffle, vet, ten offline GitHub handoff tests,
+workflow lint and the full existing site suite pass. The guarded build preserves
+all 185 output hashes except its new verification MIME rule. An isolated fixture
+confirms extensionless URI preservation and internal-state exclusion.
+
+The owner chose to prepare the PR and configure `ATP_HANDLE`/`ATP_APP_PASSWORD`
+later. No authentication, PDS write or placeholder verifier is included. T26
+activation remains pending: merge the implementation, add the site secrets,
+explicitly apply the reviewed publication metadata, then merge its generated
+verification PR and verify the live response. T27 document publishing remains
+next; historical backfill needs the separately reviewed T30 allowlist.
+
+[T26 site PR #11](https://github.com/darccio/darccio/pull/11) contains signed,
+GitHub-verified feature commit `30014f9`. Both Site checks runs and the exact-SHA
+Pages deployment pass. Immutable preview `d78c64fa` passes the 66 focused HTTPS
+checks and independent seven-package live checker; the committed tree reproduces
+all 185 reviewed output hashes. The owner can review the prepared implementation
+without configuring credentials; account activation remains a later step.
