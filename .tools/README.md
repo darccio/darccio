@@ -5,14 +5,14 @@ Run these commands from the site repository root:
 ```sh
 make -f .zas/Makefile test
 make -f .zas/Makefile generate                  # installed Zas
-make -f .zas/Makefile publish                   # installs pinned Zas v0.0.7
+make -f .zas/Makefile publish                   # installs the pinned Zas revision
 make -f .zas/Makefile check-vanity
 make -f .zas/Makefile check-vanity-live
 ```
 
 `publish` assembles local `.zas/deploy`; the site's Cloudflare Pages Git integration controls actual deployment. The build-only GitHub workflow does not deploy or run a post-deploy check. Run the explicit live check after a successful Pages deployment.
 
-Both build targets copy working-tree public sources into an isolated tree under `.zas`, omit the seven head-only vanity fragments, and run `zas generate -full -no-plugins`. Zas v0.0.7 is the minimum compatible release; v0.0.6 lacks `-no-plugins`. `generate` accepts `ZAS=/absolute/path/to/zas` to test a candidate executable. `publish` installs its fixed release into `ZAS_BIN_DIR` (default `/tmp/dario-site-zas`). Build failure never falls back to plugin execution.
+Both build targets copy working-tree public sources into an isolated tree under `.zas`, omit the seven head-only vanity fragments, and run `zas generate -full -no-plugins`. `publish` pins `v0.0.9-0.20261011090514-f463876749cb`, the merged metadata helpers at commit `f463876749cb79da25be2e8843086034e716c4e7`. This immutable revision supports the site's typed date, summary and canonical helpers. Zas v0.0.7 is the minimum version supporting `-no-plugins`; v0.0.6 lacks that flag. `generate` accepts `ZAS=/absolute/path/to/zas` to test a candidate executable. `publish` installs the pinned revision into `ZAS_BIN_DIR` (default `/tmp/dario-site-zas`). Build failure never falls back to plugin execution.
 
 Git selects tracked and nonignored untracked files, including local edits. Hidden account/tool directories, `node_modules`, previous output, and planning/operations documents are excluded. Only `.zas` configuration, `.zas.yml` files, and `.well-known` public paths are allowed hidden inputs. Source symlinks are rejected. Git history remains available through `GIT_DIR`/`GIT_WORK_TREE` against the original repository; it is never copied. Original source mtimes are preserved. A YAML parser rewrites only the staged `zas.deploy` path to keep generation inside the stage; the source configuration is unchanged.
 
