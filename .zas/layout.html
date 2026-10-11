@@ -6,7 +6,7 @@
 <html lang="{{$language}}" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="utf-8">
-    {{if .Title}}
+    {{if and .Title (ne .Title (.Extra "/site/title"))}}
     <title>{{.Title}} | {{.Extra "/site/title"}}</title>
     {{else}}
     <title>{{.Extra "/site/title"}}</title>
@@ -77,6 +77,22 @@
             max-width: 3em;
         }
 
+        .site-author {
+            display: inline-flex;
+            margin-top: 1.5em;
+        }
+
+        .site-author > a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75em;
+        }
+
+        .site-author .u-photo {
+            width: 3em;
+            margin: 0;
+        }
+
         .primary-navigation {
             display: flex;
             flex-wrap: wrap;
@@ -137,6 +153,13 @@
     </style>
     <link rel="stylesheet" href="/static/styles.css">
     <link rel="canonical" href="{{$canonical}}">
+    <link rel="me" href="https://github.com/darccio">
+    <link rel="me" href="https://bsky.app/profile/dario.cat">
+    <link rel="me" href="https://mastodont.cat/@dario">
+    <link rel="me" href="https://linkedin.com/in/darccio">
+    <link rel="me" href="https://sifa.id/p/dario.cat">
+    <link rel="me" href="https://rizoma.dario.cat/">
+    <link rel="me" href="https://speakerdeck.com/dario">
     <link rel="alternate" type="application/rss+xml" title='{{.Extra "/site/feed_title"}}' href="{{.Site.BaseURL}}/feed.xml">
     {{if eq $language "en"}}<link rel="alternate" type="application/rss+xml" title='{{.Extra "/site/feed_title"}} (English)' href="{{.Site.BaseURL}}/en/feed.xml">{{end}}
     {{if eq $language "es"}}<link rel="alternate" type="application/rss+xml" title='{{.Extra "/site/feed_title"}} (Español)' href="{{.Site.BaseURL}}/es/feed.xml">{{end}}
@@ -144,7 +167,7 @@
     <meta name="description" content="{{$description}}">
     <meta property="og:description" content="{{$description}}">
     {{end}}
-    {{if .Title}}
+    {{if and .Title (ne .Title (.Extra "/site/title"))}}
     <meta property="og:title" content='{{.Title}} | {{.Extra "/site/title"}}'>
     {{else}}
     <meta property="og:title" content='{{.Extra "/site/title"}}'>
@@ -178,7 +201,16 @@
 {{end}}
 <a class="skip-link" href="#main-content" lang="ca">Salta al contingut</a>
 <header>
-    <a class="home u-url u-uid" rel="author" href="/"><img alt='{{.E "home"}}' src="/static/_.png"></a>
+    {{if index .Page "representative_hcard"}}
+    <a class="home" rel="author" href="/"><img alt='{{.E "home"}}' src="/static/_.png"></a>
+    {{else}}
+    <div class="h-card site-author">
+        <a class="u-url u-uid" rel="me author" href="https://dario.cat/">
+            <img class="u-photo" src="/static/avatar-96.webp" width="96" height="96" alt="" decoding="async">
+            <span class="p-name">{{.Extra "/site/title"}}</span>
+        </a>
+    </div>
+    {{end}}
     <nav class="primary-navigation" aria-label="Navegació principal" lang="ca">
         <a href="/">Inici</a>
         <a href="/posts/">Escrits</a>
@@ -188,7 +220,7 @@
     </nav>
 </header>
 <main id="main-content" tabindex="-1">
-{{if not .Title}}
+{{if and (not .Title) (not (index .Page "representative_hcard"))}}
 <h1 class="p-name fn">{{.Extra "/site/title"}}</h1>
 {{end}}
 {{.Body}}
