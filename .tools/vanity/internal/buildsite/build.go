@@ -94,6 +94,9 @@ func Build(ctx context.Context, options Options) error {
 	if err := finalizeMarkdownDiscovery(stage, deploy); err != nil {
 		return fmt.Errorf("assembled Markdown discovery rejected: %w", err)
 	}
+	if err := finalizeHTTPWorker(root, stage, deploy); err != nil {
+		return fmt.Errorf("assembled HTTP adapter rejected: %w", err)
+	}
 	if err := auditOutput(deploy); err != nil {
 		return err
 	}
