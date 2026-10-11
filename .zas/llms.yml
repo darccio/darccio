@@ -22,6 +22,9 @@ languages:
           - source: elsewhere/index.md
             title: "En altres llocs"
             description: "Perfils públics a GitHub, Bluesky, el Fediverse, LinkedIn, Sifa.id, Substack i Speaker Deck."
+          - source: languages/index.md
+            title: "Idiomes"
+            description: "Política lingüística del web personal i de la documentació, amb els arxius en anglès i castellà."
           - source: projects/index.md
             title: "Projectes"
             description: "Mergo, Zas, darna, xdr i Asembleo, amb enllaços al codi i a la documentació."
