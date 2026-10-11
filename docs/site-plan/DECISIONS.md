@@ -24,6 +24,6 @@ The report defaults below govern implementation. Repository facts resolve the pu
 | D14 | Generator | Extend Zas. Reassess Hugo + Hugo Modules only after two weekends of actual stalled implementation. | Adopted report default |
 | D15 | Zas import path | Keep github.com/darccio/zas; /zas/ is a docs route only. | Adopted report default |
 | D16 | AI policy | search=yes, ai-input=yes, ai-train=no; disallow /CV/; HTTP Content-Signal must agree. | Adopted report default |
-| D17 | Site content licence | CC BY-SA 4.0 for content; align README, footer and root licence, preserving the explicit CV personal-data exception and recording any separately licensed code. | Adopted report default; implementation pending |
+| D17 | Site content licence | Original content with the necessary rights uses CC BY-SA 4.0; preserve CV restrictions, Lýd's CC BY 4.0, third-party terms and prior grants. Original implementation code retains the unchanged Unlicense in LICENSE-CODE. | Source scope clarified in d3ed333; deployment pending |
 
 T06 and T23 remain optional and deferred. CV rendering in T17 requires reconciliation with the README’s explicit restriction before automated processing. Registrar, hosting and account settings need account access and actual verification; documenting a setting does not complete it.

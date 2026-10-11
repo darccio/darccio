@@ -20,8 +20,8 @@ Your existing untracked docs/go-vanity-url.md is excluded from this work and fro
 
 - Unknown live resource URLs return a homepage fallback with 200 text/html. Feeds, well-known files and agent surfaces must pass content, MIME and path-specific checks, not just status checks.
 - Seven raw vanity routes exist: mergo, darna, cocoon, errors, xdr, awaken and x. Their exact go-import values are the fixture; no go-source tags currently exist. lyd is prose. Preserve the imdario/mergo repository URL unless a separate reviewed change deliberately updates it.
-- There is no tracked site deployment workflow. The existing Worker serves WebFinger and has no static-assets binding. The owner confirmed Cloudflare Pages with Git integration. Plan static _headers and Pages middleware; verify actual build/output/branch/routing settings. Publishing must follow a real successful Pages deployment, not an invented GitHub build workflow.
-- The source already has h-card and rel=me links, and the layout emits html lang. English and Spanish posts currently inherit ca. Complete these features and fix language defaults rather than starting from an assumed absence.
+- There is no tracked site deployment workflow. The existing Worker serves WebFinger and has no static-assets binding. The owner confirmed Cloudflare Pages Git integration on pushes to main, build command make -f .zas/Makefile publish, output .zas/deploy and blank root directory. This already uses the guarded build path. Plan static _headers and Pages middleware; function/Worker routing remains unverified. Publishing must follow a real successful Pages deployment, not an invented GitHub build workflow.
+- The audited source already had h-card and rel=me links, and the layout emitted html lang. English and Spanish posts inherited ca at baseline; T04 now fixes the source defaults. Complete the identity markup rather than starting from an assumed absence.
 - The posts already contain date_created. There are 33 public candidates and one draft; three candidates need time/offset precision handling. The report’s February Synology date is illustrative; the source contains an August timestamp.
 - A duplicate en key in .zas/i18n.yml prevents a clean build with current Zas. Correct it in a separate prerequisite commit before enforcing build checks. Current upstream also rejects head-only vanity fragments before copying. Use isolated generator input excluding those fragments, restore exact bytes, then validate assembled output before promotion.
 
@@ -64,13 +64,13 @@ Dependencies below include the report’s original ordering and repository-speci
 | --- | --- | --- | --- | --- |
 | [T00](tasks/T00.md) | Verify unverified facts | site | — | Audit committed |
 | [T01](tasks/T01.md) | Harden domain and DNS and add monitoring | site | T02 | Software committed; account operations pending |
-| [T02](tasks/T02.md) | Protect vanity imports with regression checks | site | T00 | Local implementation committed; hosting activation pending |
-| [T03](tasks/T03.md) | Correct project identity links | zas | — | Zas PR #111 open; external follow-up queued |
-| [T04](tasks/T04.md) | Add explicit publication metadata to posts | site | T00, T02 | Planned |
-| [T05](tasks/T05.md) | Expose dates and metadata in Zas templates | zas | — | Zas PR #112 open; checks pass |
+| [T02](tasks/T02.md) | Protect vanity imports with regression checks | site | T00 | Guarded build/live workflow committed; first Pages deployment verification pending |
+| [T03](tasks/T03.md) | Correct project identity links | zas | — | Zas PR #111 merged; external follow-up queued |
+| [T04](tasks/T04.md) | Add explicit publication metadata to posts | site | T00, T02 | Source committed; three incomplete dates excluded from syndication |
+| [T05](tasks/T05.md) | Expose dates and metadata in Zas templates | zas | — | Zas PR #112 merged; site pins tested merged revision |
 | [T06](tasks/T06.md) | List pages in Zas templates | zas | T05 | Optional and deferred |
-| [T07](tasks/T07.md) | Correct canonical and Open Graph metadata | site | T05, T04 | Planned |
-| [T08](tasks/T08.md) | Publish contact details and self-host the avatar | site | — | Planned |
+| [T07](tasks/T07.md) | Correct canonical and Open Graph metadata | site | T05, T04 | Source committed; local assembled checks pass |
+| [T08](tasks/T08.md) | Publish contact details and self-host the avatar | site | — | Avatar/licence committed; edge obfuscation and deployment pending |
 | [T09](tasks/T09.md) | Add navigation and core slash pages | site | T07 | Planned |
 | [T10](tasks/T10.md) | Publish crawler policy and security contact | site+zas | T00, T08, T04, T05, T07 | Planned |
 | [T11](tasks/T11.md) | Generate native RSS 2.0 feeds | zas | T05 | Planned |
