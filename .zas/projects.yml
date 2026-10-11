@@ -1,61 +1,59 @@
-# Reviewed public documentation only; branch names describe provenance, while
-# immutable commits determine builds. Source updates arrive as separate PRs.
 version: 1
 projects:
-  - id: mergo
-    name: Mergo
-    repo: darccio/mergo
-    ref: docs/t25-mergo-guides
-    commit: 8c092c379d3602a60b22605ee577d8e70aea9860
-    language: en
-    license: BSD-3-Clause
-    license_file: docs/LICENSE.txt
-    pages:
-      - source: docs/index.md
-        title: Mergo
-        summary: Merge Go structs and maps, choose options, and migrate to dario.cat/mergo.
-      - source: docs/options.md
-        title: Merge options
-        summary: Choose overwrite, empty-value, slice, pointer, type-check, and transformer behavior.
-      - source: docs/transformers.md
-        title: Transformer cookbook
-        summary: Merge time.Time with explicit overwrite rules and propagate transformer errors.
-      - source: docs/migration.md
-        title: Migrate to dario.cat/mergo
-        summary: Move direct imports to the vanity module path or pin an indirect legacy dependency.
-      - source: docs/faq.md
-        title: Mergo FAQ
-        summary: Understand map values, aliasing, empty values, mapping types, and merge errors.
-  - id: zas
-    name: Zas
-    repo: darccio/zas
-    ref: feat/t24-site-docs
-    commit: d89a28125f63b041692385e07ca9e64ed9c6e9c6
-    language: en
-    license: AGPL-3.0-or-later
-    license_file: docs/LICENSE.txt
-    pages:
-      - source: docs/index.md
-        title: Zas
-        summary: Build a static site from Markdown and a shared HTML layout.
-      - source: docs/configuration.md
-        title: Zas configuration
-        summary: Configure site output, page metadata and language overrides.
-      - source: docs/templates.md
-        title: Zas templates and plugins
-        summary: Use layouts and shared metadata while keeping content-triggered plugins controlled.
-      - source: docs/publishing.md
-        title: Publishing with Zas
-        summary: Generate sitemaps, RSS and rendered Markdown twins for a static host.
-  - id: darna
-    name: darna
-    repo: darccio/darna
-    ref: feat/t24-site-docs
-    commit: d32f5c364a586e00729d3730cede0660ec311a8d
-    language: en
-    license: Apache-2.0
-    license_file: docs/LICENSE.txt
-    pages:
-      - source: docs/index.md
-        title: darna
-        summary: Validate atomic Go commits before saving a changeset.
+    - id: mergo
+      name: Mergo
+      repo: darccio/mergo
+      ref: docs/t25-mergo-guides
+      commit: ff8ae09d071c4dd736f15cdab68deb5aaafb5751
+      language: en
+      license: BSD-3-Clause
+      license_file: docs/LICENSE.txt
+      pages:
+        - source: docs/index.md
+          title: Mergo
+          summary: Merge Go structs and maps, choose options, and migrate to dario.cat/mergo.
+        - source: docs/options.md
+          title: Merge options
+          summary: Choose overwrite, empty-value, slice, pointer, type-check, and transformer behavior.
+        - source: docs/transformers.md
+          title: Transformer cookbook
+          summary: Merge time.Time with explicit overwrite rules and propagate transformer errors.
+        - source: docs/migration.md
+          title: Migrate to dario.cat/mergo
+          summary: Move direct imports to the vanity module path or pin an indirect legacy dependency.
+        - source: docs/faq.md
+          title: Mergo FAQ
+          summary: Understand map values, aliasing, empty values, mapping types, and merge errors.
+    - id: zas
+      name: Zas
+      repo: darccio/zas
+      ref: feat/t24-site-docs
+      commit: d89a28125f63b041692385e07ca9e64ed9c6e9c6
+      language: en
+      license: AGPL-3.0-or-later
+      license_file: docs/LICENSE.txt
+      pages:
+        - source: docs/index.md
+          title: Zas
+          summary: Build a static site from Markdown and a shared HTML layout.
+        - source: docs/configuration.md
+          title: Zas configuration
+          summary: Configure site output, page metadata and language overrides.
+        - source: docs/templates.md
+          title: Zas templates and plugins
+          summary: Use layouts and shared metadata while keeping content-triggered plugins controlled.
+        - source: docs/publishing.md
+          title: Publishing with Zas
+          summary: Generate sitemaps, RSS and rendered Markdown twins for a static host.
+    - id: darna
+      name: darna
+      repo: darccio/darna
+      ref: feat/t24-site-docs
+      commit: d32f5c364a586e00729d3730cede0660ec311a8d
+      language: en
+      license: Apache-2.0
+      license_file: docs/LICENSE.txt
+      pages:
+        - source: docs/index.md
+          title: darna
+          summary: Validate atomic Go commits before saving a changeset.
