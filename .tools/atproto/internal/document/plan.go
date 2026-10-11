@@ -138,8 +138,10 @@ func makePlan(allowlist Allowlist, sources map[string]source, state State, manif
 	}
 	for _, approval := range allowlist.Documents {
 		if deleteSet[approval.Path] {
-			continue
-		} // Explicit deletion owns this target.
+			return plan, fmt.Errorf("%s: remove the path from the reviewed allowlist before explicit deletion", approval.Path)
+		}
+	}
+	for _, approval := range allowlist.Documents {
 		s, exists := sources[approval.Path]
 		if !exists || !s.Eligible {
 			return plan, fmt.Errorf("%s: approved source is missing or excluded", approval.Path)

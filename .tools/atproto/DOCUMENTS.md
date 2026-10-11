@@ -111,8 +111,10 @@ state and public-map writes is recovered by repeating apply.
 ## Explicit deletion
 
 Removing an approval or excluding a source never deletes a remote record.
-Preview an explicit existing target, then apply the same action only when its
-deletion is intended:
+First remove the intended target from the local reviewed allowlist, leaving its
+existing public-map entry in place. Both preview and apply reject a `-delete`
+target that remains approved, before any PDS request or login. Preview the
+explicit existing target, then apply the same action:
 
 ```sh
 go -C .tools/atproto run ./cmd/documents -root ../.. -delete /posts/example/
@@ -121,7 +123,11 @@ go -C .tools/atproto run ./cmd/documents -root ../.. -delete /posts/example/ -ap
 
 Targets must have stored or committed public identities. Public absence is
 verified before removal from the public map; a private tombstone retains the
-stable identity. Repeated deletion with that state is unchanged. AT Protocol
+stable identity. Commit the allowlist removal and verified public-map removal
+together after successful deletion. Deploying the allowlist removal while its
+backlink remains would fail the build's approval checks. An ordinary apply
+with the removed approval does not recreate the record, even without private
+state. Repeated explicit deletion with the tombstone is unchanged. AT Protocol
 relays or indexers can retain copies after deletion. Reverting Git or disabling
 the workflow changes future publishing but does not reverse existing records.
 

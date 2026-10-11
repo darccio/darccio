@@ -154,8 +154,11 @@ in its independent job and cannot block the already-completed deployment.
 
 Disable `standard-site.yml` to stop automation without changing deployment.
 Removing a post from the allowlist never silently deletes its public record.
-For an explicit deletion, preview `-delete /posts/example/`, then use the same
-command with `-apply`; review and commit the resulting public map removal.
+For an explicit deletion, first remove the path from the local allowlist.
+Preview `-delete /posts/example/`, then use the same command with `-apply`.
+Review and commit the approval removal and verified public map removal together
+after deletion succeeds. Both modes reject targets that remain approved; the
+removed approval prevents a later automatic run from republishing the document.
 Deletion cannot retract copies held elsewhere. Reverting Git alone does not
 delete any public record.
 

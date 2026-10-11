@@ -394,6 +394,64 @@ func TestTIDEncodingAndLocalHashCollision(t *testing.T) {
 	}
 }
 
+func TestApprovedDeleteRejectedBeforeNetworkAndNotRecreatedAfterRemoval(t *testing.T) {
+	options := fixture(t)
+	options.Apply = true
+	f := fake()
+	first := run(t, f, options)
+	uri := first.Documents[0].URI
+	verified := f.records[uri]
+	before := map[string]string{}
+	for _, path := range []string{StatePath, ManifestPath} {
+		data, err := os.ReadFile(filepath.Join(options.Root, path))
+		if err != nil {
+			t.Fatal(err)
+		}
+		before[path] = string(data)
+	}
+	options.Delete = []string{"/posts/example/"}
+	options.Credentials = atproto.Credentials{}
+	for _, apply := range []bool{false, true} {
+		options.Apply = apply
+		f.events = nil
+		if _, err := Run(context.Background(), f, options); err == nil || !strings.Contains(err.Error(), "remove the path from the reviewed allowlist") {
+			t.Fatalf("apply=%v: still-approved deletion was not rejected: %v", apply, err)
+		}
+		if len(f.events) != 0 || f.logins != 1 || f.cleanups != 1 || f.writes != 1 || f.deletes != 0 || len(f.records) != 1 || !reflect.DeepEqual(f.records[uri], verified) {
+			t.Fatalf("apply=%v: rejected deletion accessed network, authenticated or mutated", apply)
+		}
+		for path, original := range before {
+			data, err := os.ReadFile(filepath.Join(options.Root, path))
+			if err != nil || string(data) != original {
+				t.Fatalf("apply=%v: rejected deletion changed %s: %v", apply, path, err)
+			}
+		}
+	}
+	approve(t, options.Root)
+	options.Apply = true
+	options.Credentials = atproto.Credentials{Handle: atproto.Handle, AppPassword: "fake-only-password"}
+	deleted := run(t, f, options)
+	if deleted.Documents[0].Action != "delete" || f.deletes != 1 || f.writes != 1 || len(f.records) != 0 {
+		t.Fatal("removing approval did not permit the intended explicit deletion")
+	}
+	manifest, err := readManifest(filepath.Join(options.Root, ManifestPath))
+	if err != nil || len(manifest) != 0 {
+		t.Fatal("verified deletion did not remove the public map entry")
+	}
+	// A fresh CI run has only the committed allowlist and public map. It must
+	// not depend on a private tombstone to prevent recreating the document.
+	if err := os.Remove(filepath.Join(options.Root, StatePath)); err != nil {
+		t.Fatal(err)
+	}
+	options.Delete = nil
+	options.Credentials = atproto.Credentials{}
+	f.events = nil
+	next := run(t, f, options)
+	if len(next.Documents) != 0 || len(f.events) != 0 || f.logins != 2 || f.cleanups != 2 || f.writes != 1 || f.deletes != 1 || len(f.records) != 0 {
+		t.Fatal("ordinary apply after approved removal and deletion recreated or contacted the deleted document")
+	}
+}
+
 func TestRemovedApprovalDoesNotDeleteAndExplicitDeleteIsIdempotent(t *testing.T) {
 	options := fixture(t)
 	options.Apply = true
