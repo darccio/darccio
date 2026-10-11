@@ -1,7 +1,7 @@
-# Standard.site publication bootstrap
+# Standard.site tools
 
-This tool prepares one publication for `https://dario.cat`. It does not publish
-articles. The reviewed metadata is in [publication.json](publication.json):
+The `publication` command prepares one publication for `https://dario.cat`.
+It does not publish articles. The reviewed metadata is in [publication.json](publication.json):
 `Dario Castañé`, `Tecnologia, política i divulgació.`, and
 `preferences.showInDiscover: true`.
 
@@ -121,3 +121,11 @@ authoritative [createRecord](https://github.com/bluesky-social/atproto/blob/main
 [putRecord](https://github.com/bluesky-social/atproto/blob/main/lexicons/com/atproto/repo/putRecord.json)
 and [deleteSession](https://github.com/bluesky-social/atproto/blob/main/lexicons/com/atproto/server/deleteSession.json)
 lexicons.
+
+## Reviewed document publishing
+
+The separate `documents` command plans locally and publishes only the exact
+paths and publication instants in [documents-allowlist.json](documents-allowlist.json).
+That list starts empty. [DOCUMENTS.md](DOCUMENTS.md) covers offline previews,
+candidate review, stable keys, record updates, recovery state and explicit
+record deletion. Candidate discovery never approves or publishes an article.
