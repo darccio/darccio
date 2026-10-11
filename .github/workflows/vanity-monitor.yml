@@ -1,0 +1,34 @@
+name: Vanity metadata monitor
+
+on:
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  monitor:
+    name: Check public Go vanity metadata
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GOTOOLCHAIN: local
+      GOFLAGS: -mod=readonly
+    steps:
+      - name: Check out metadata checker
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Set up Go
+        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e
+        with:
+          go-version-file: .tools/vanity/go.mod
+          cache-dependency-path: .tools/vanity/go.sum
+      - name: Check all seven vanity paths with and without trailing slashes
+        run: go -C .tools/vanity run ./cmd/vanity -live -base-url https://dario.cat -timeout 10s
+      - name: Explain recovery steps
+        if: ${{ failure() }}
+        run: |
+          echo '::error::Vanity monitor failed. Inspect the failed step and checker output. Follow docs/DOMAIN-OPERATIONS.md: confirm DNS and HTTPS, compare tags with the reviewed baseline, restore the last verified Pages deployment if metadata regressed, and rerun this workflow. Never update the baseline to silence a failure.'
