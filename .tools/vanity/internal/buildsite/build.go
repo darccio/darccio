@@ -122,7 +122,7 @@ func Build(ctx context.Context, options Options) error {
 	}
 	if options.Validate != nil {
 		if err := options.Validate(ctx, deploy); err != nil {
-			return fmt.Errorf("assembled microformats rejected: %w", err)
+			return fmt.Errorf("assembled metadata rejected: %w", err)
 		}
 	}
 	if err := ctx.Err(); err != nil {

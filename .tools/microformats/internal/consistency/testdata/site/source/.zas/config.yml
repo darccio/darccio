@@ -1,0 +1,10 @@
+site:
+  baseurl: https://dario.cat
+  language: ca
+  title: Dario Castañé
+  feed: true
+  feed_title: Dario Castañé
+  feed_description: Public test writing.
+  feed_sections: [posts, en/posts]
+  feed_limit: 2
+  feed_per_language: true

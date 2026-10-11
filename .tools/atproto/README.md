@@ -158,3 +158,7 @@ For an explicit deletion, preview `-delete /posts/example/`, then use the same
 command with `-apply`; review and commit the resulting public map removal.
 Deletion cannot retract copies held elsewhere. Reverting Git alone does not
 delete any public record.
+
+`make -f .zas/Makefile check-consistency` compares built RSS, microformats,
+Open Graph, JSON-LD and the offline Standard.site plan against source metadata.
+The production build runs that gate before replacing `.zas/deploy`.
