@@ -1,5 +1,10 @@
 pre {
     overflow: auto;
+    white-space: pre-wrap;
+}
+
+pre, code {
+    overflow-wrap: anywhere;
 }
 
 pre.highlight {
