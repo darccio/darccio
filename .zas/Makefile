@@ -1,16 +1,25 @@
+ZAS ?= zas
+ZAS_VERSION := v0.0.7
+ZAS_BIN_DIR ?= /tmp/dario-site-zas
+
+.PHONY: serve generate publish check-vanity check-vanity-live test
+
 serve:
 	hivemind .zas/Procfile
 
 generate:
-	zas generate -full
+	go -C .tools/vanity run ./cmd/build-site -root ../.. -zas "$(ZAS)"
 
 publish:
-	GOBIN=/tmp go install github.com/darccio/zas/cmd/zas@v0.0.6
-	/tmp/zas generate
-	cat mergo/index.html > .zas/deploy/mergo/index.html
-	cat darna/index.html > .zas/deploy/darna/index.html
-	cat cocoon/index.html > .zas/deploy/cocoon/index.html
-	cat errors/index.html > .zas/deploy/errors/index.html
-	cat xdr/index.html > .zas/deploy/xdr/index.html
-	cat awaken/index.html > .zas/deploy/awaken/index.html
-	cat x/index.html > .zas/deploy/x/index.html
+	mkdir -p "$(ZAS_BIN_DIR)"
+	GOBIN="$(abspath $(ZAS_BIN_DIR))" go install github.com/darccio/zas/cmd/zas@$(ZAS_VERSION)
+	go -C .tools/vanity run ./cmd/build-site -root ../.. -zas "$(abspath $(ZAS_BIN_DIR))/zas"
+
+check-vanity:
+	go -C .tools/vanity run ./cmd/vanity -dir ../../.zas/deploy
+
+check-vanity-live:
+	go -C .tools/vanity run ./cmd/vanity -live -base-url https://dario.cat -timeout 10s
+
+test:
+	go -C .tools/vanity test ./...

@@ -1,0 +1,27 @@
+name: Site checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e
+        with:
+          go-version-file: .tools/vanity/go.mod
+          cache-dependency-path: .tools/vanity/go.sum
+      - name: Test metadata, HTTP checks, and staged assembly
+        run: make -f .zas/Makefile test
+      - name: Build with pinned Zas and validate assembled output
+        run: make -f .zas/Makefile publish

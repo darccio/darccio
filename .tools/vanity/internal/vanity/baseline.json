@@ -1,0 +1,9 @@
+[
+  {"path":"/mergo/","go_import":["dario.cat/mergo git https://github.com/imdario/mergo"],"go_source":[]},
+  {"path":"/darna/","go_import":["dario.cat/darna git https://github.com/darccio/darna"],"go_source":[]},
+  {"path":"/cocoon/","go_import":["dario.cat/cocoon git https://github.com/darccio/cocoon"],"go_source":[]},
+  {"path":"/errors/","go_import":["dario.cat/errors git https://github.com/darccio/errors"],"go_source":[]},
+  {"path":"/xdr/","go_import":["dario.cat/xdr git https://github.com/darccio/xdr"],"go_source":[]},
+  {"path":"/awaken/","go_import":["dario.cat/awaken git https://tangled.org/dario.cat/awaken"],"go_source":[]},
+  {"path":"/x/","go_import":["dario.cat/x git https://tangled.org/dario.cat/x"],"go_source":[]}
+]
