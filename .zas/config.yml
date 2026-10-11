@@ -8,6 +8,13 @@ site:
   language: ca
   title: Dario Castañé
   sitemap: true
+  feed: true
+  feed_title: Dario Castañé
+  feed_description: "Dario Castañé: tecnologia, política i programari lliure. Escrits en català, castellà i anglès."
+  feed_sections: ["posts", "en/posts", "es/posts", "rizoma"]
+  feed_limit: 50
+  feed_per_language: true
+  feed_strict: true
 zas:
   allowed_dotdirs: [".well-known"]
   deploy: .zas/deploy
