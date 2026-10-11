@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://dario.cat/#person",
+      "name": "Dario Castañé",
+      "url": "https://dario.cat/",
+      "image": "https://dario.cat/static/avatar.webp",
+      "jobTitle": "Senior Software Engineer",
+      "worksFor": {"@type": "Organization", "name": "Datadog"},
+      "sameAs": [
+        "https://bsky.app/profile/dario.cat",
+        "https://mastodont.cat/@dario",
+        "https://github.com/darccio",
+        "https://linkedin.com/in/darccio",
+        "https://sifa.id/p/dario.cat",
+        "https://rizoma.dario.cat/",
+        "https://speakerdeck.com/dario"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Example article",
+      "url": "https://dario.cat/en/posts/example/",
+      "description": "A sample article.",
+      "keywords": ["go", "rss"],
+      "inLanguage": "en",
+      "author": {"@id": "https://dario.cat/#person"},
+      "datePublished": "2024-07-01T10:00:00+02:00",
+      "dateModified": "2024-08-01T12:30:00+02:00"
+    }
+  ]
+}

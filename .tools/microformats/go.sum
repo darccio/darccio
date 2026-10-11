@@ -4,8 +4,8 @@ github.com/PuerkitoBio/goquery v1.13.0 h1:mqHbjD7Jmnul4DTR24LKTjo1uUmHUh072kteGV
 github.com/PuerkitoBio/goquery v1.13.0/go.mod h1:Hip5mdBL8K2wEGKJdr27sRaNwIdDajmCwB/ExUPwW+g=
 github.com/andybalholm/cascadia v1.3.4 h1:vM2lgh0Vru9Vwyfm4cQqWP2HHMW0u0+2PAW7Q38Qufg=
 github.com/andybalholm/cascadia v1.3.4/go.mod h1:BLRmbRjpEtNKieZOCCvYj4RqN+KRA41GBe/5O+G93kM=
-github.com/darccio/zas v0.0.9-0.20261011133110-abdae2fd51de h1:RHn/Z+lQyZcHQlSwDnyFwpVlDJ5u2hr5AVLEfIIgbKc=
-github.com/darccio/zas v0.0.9-0.20261011133110-abdae2fd51de/go.mod h1:+3vTtXD/q/efAISzf3mZPuwBCmmVvuxrp8zoQ2+YNP0=
+github.com/darccio/zas v0.0.9-0.20261011161100-844e0732ba6f h1:G0eIDTzROdp4eOydqz0tlzcyviKWIFhDJCMVytmGw9U=
+github.com/darccio/zas v0.0.9-0.20261011161100-844e0732ba6f/go.mod h1:+3vTtXD/q/efAISzf3mZPuwBCmmVvuxrp8zoQ2+YNP0=
 github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
 github.com/google/go-cmp v0.6.0/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
 github.com/yuin/goldmark v1.8.6 h1:d0VcaP1sx9GkFVkoW+KtggpGi2KZ965i14b0+bDQST4=
