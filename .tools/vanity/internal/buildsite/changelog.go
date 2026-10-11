@@ -96,7 +96,7 @@ func renderChangelog(history []byte) ([]byte, time.Time, error) {
 		return nil, time.Time{}, errors.New("invalid or empty Git changelog metadata")
 	}
 	var body bytes.Buffer
-	body.WriteString("<ol>\n")
+	body.WriteString("<ol class=\"site-changelog\">\n")
 	var updated time.Time
 	for i := 0; i < len(parts)-1; i += 3 {
 		hash := strings.TrimSpace(string(parts[i]))

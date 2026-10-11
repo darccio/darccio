@@ -44,6 +44,9 @@ func TestChangelogOptionalStagedGeneration(t *testing.T) {
 		t.Fatalf("staged generation: %v %v", updated, err)
 	}
 	first := readMarkdownDiscoveryFile(t, stage, changelogSource)
+	if bytes.Count(first, []byte(`<ol class="site-changelog">`)) != 1 {
+		t.Fatal("generated commit list lacks its scoped text-wrapping class")
+	}
 	if strings.Contains(string(first), changelogMarker) || strings.Contains(string(first), "{{") || strings.Contains(string(first), "<script>") || !strings.Contains(string(first), "&lt;script&gt;") || !strings.Contains(string(first), "&amp; català") || !strings.Contains(string(first), "template: false") {
 		t.Fatalf("subject was executable or changed meaning: %s", first)
 	}
