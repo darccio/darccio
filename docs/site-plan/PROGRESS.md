@@ -152,3 +152,17 @@ T25 is implemented for review in [Mergo PR #322](https://github.com/darccio/merg
 The 185-file guarded build preserves all seven vanity contracts, all feeds/posts and other project output. Five HTML/Markdown pairs, project context indexes, local anchors, licenses, source dates and accessible layouts pass independent checks. T24 site PR #8 merged as `8b3dd43`; all three source `SITE_DISPATCH_TOKEN` names are present. Production T25 completion follows merging its source and site PRs; a successful token-backed dispatch remains a separate live check. See tasks/T25.md for precise verification and rollout evidence.
 
 Both T25 PRs have passing GitHub checks. Cloudflare's exact-feature preview https://80ed6769.da-rio-hn.pages.dev/mergo/ passes 66 focused HTTPS requests plus the independent seven-package live import checker. The exact committed build reproduces all 185 hashes. Merge Mergo PR #322 before site PR #9 to publish the guides; production verification follows those merges.
+
+## T25 production and T24 dispatch closure · 2026-10-11
+
+The owner merged Mergo #322 as `ff8ae09` and site #9 as `9a3af08`.
+The exact site commit's Pages, CI and automatic post-deploy vanity checks pass;
+the production domain passes all 66 focused Mergo requests. T25 is deployed.
+
+The token-backed Mergo dispatch initially ran before the site's new guide
+whitelist merged and safely rejected its newly linked migration page. The
+[receiver retry](https://github.com/darccio/darccio/actions/runs/38169148268)
+now passes and opens [source pin PR #10](https://github.com/darccio/darccio/pull/10),
+confirming T24's dispatch/build/atomic proposal path. Merging that separate PR
+adopts the source's merged commit; the deployed docs already use the verified
+immutable feature commit.
