@@ -1,0 +1,114 @@
+name: Vanity after deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  checks: read
+
+jobs:
+  check:
+    name: Check vanity metadata after production Pages deployment
+    if: ${{ github.repository == 'darccio/darccio' && github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GOTOOLCHAIN: local
+      GOFLAGS: -mod=readonly
+    steps:
+      # check_run delivery has recursion restrictions; inspect Cloudflare's
+      # actual deployment result for this SHA instead of relying on that event.
+      - name: Wait for this main commit's successful Cloudflare deployment
+        id: deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          deadline=$((SECONDS + 480))
+          while (( SECONDS < deadline )); do
+            main_sha="$(timeout 20s gh api "repos/$GITHUB_REPOSITORY/commits/main" --jq .sha)"
+            if [[ "$main_sha" != "$GITHUB_SHA" ]]; then
+              echo '::notice::Skipping superseded main commit; no current production deployment is claimed.'
+              echo 'ready=false' >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+
+            checks="$(timeout 20s gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA/check-runs?check_name=Cloudflare%20Pages&filter=latest&per_page=100")"
+            check="$(jq -c --arg sha "$GITHUB_SHA" '
+              [.check_runs[] | select(
+                .head_sha == $sha and
+                .name == "Cloudflare Pages" and
+                .app.id == 85455 and
+                .app.slug == "cloudflare-workers-and-pages" and
+                ((.details_url // "") | startswith("https://dash.cloudflare.com/?to=/")) and
+                ((.details_url // "") | contains("/pages/view/dario/"))
+              )] | sort_by(.id) | last // null
+            ' <<< "$checks")"
+            state="$(jq -r '
+              if . == null or .status != "completed" then "pending"
+              elif .conclusion != "success" then "failed"
+              elif .output.title != "Deployed successfully" then "unconfirmed"
+              else "deployed" end
+            ' <<< "$check")"
+
+            case "$state" in
+              deployed)
+                suite_id="$(jq -r .check_suite.id <<< "$check")"
+                suite="$(timeout 20s gh api "repos/$GITHUB_REPOSITORY/check-suites/$suite_id")"
+                if ! jq -e --arg sha "$GITHUB_SHA" '
+                  .head_branch == "main" and .head_sha == $sha and
+                  .app.id == 85455 and .app.slug == "cloudflare-workers-and-pages"
+                ' <<< "$suite" > /dev/null; then
+                  echo '::error::Cloudflare check suite does not identify this production main commit.'
+                  exit 1
+                fi
+                echo 'Confirmed Cloudflare Pages deployment for the pushed main SHA.'
+                echo 'ready=true' >> "$GITHUB_OUTPUT"
+                exit 0
+                ;;
+              failed)
+                conclusion="$(jq -r .conclusion <<< "$check")"
+                printf '::error::Cloudflare deployment ended with %s; live check was not run.\n' "$conclusion"
+                exit 1
+                ;;
+              unconfirmed)
+                echo '::error::Cloudflare success lacks the observed deployment-success title; inspect the provider result.'
+                exit 1
+                ;;
+              pending)
+                sleep 10
+                ;;
+            esac
+          done
+          echo '::error::No confirmed successful Cloudflare production deployment for this SHA within eight minutes.'
+          exit 1
+
+      - name: Check out the deployed commit's metadata checker
+        if: steps.deployment.outputs.ready == 'true'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Set up Go
+        if: steps.deployment.outputs.ready == 'true'
+        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e
+        with:
+          go-version-file: .tools/vanity/go.mod
+          cache-dependency-path: .tools/vanity/go.sum
+      - name: Check all seven live vanity paths after deployment
+        if: steps.deployment.outputs.ready == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          main_sha="$(timeout 20s gh api "repos/$GITHUB_REPOSITORY/commits/main" --jq .sha)"
+          if [[ "$main_sha" != "$GITHUB_SHA" ]]; then
+            echo '::notice::Main advanced while preparing the checker; skipping superseded deployment.'
+            exit 0
+          fi
+          go -C .tools/vanity run ./cmd/vanity -live -base-url https://dario.cat -timeout 10s
