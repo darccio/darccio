@@ -18,4 +18,4 @@ It was really simple, once I got the Gadget API and its inners, to be able to re
   <iframe src="https://www.youtube-nocookie.com/embed/QdhR5rW4oN0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
-If you want to use it, just add deciwave@appspot.com to your wave, create a new [blip](http://google.about.com/od/b/g/google_wave_blip.htm) and paste a share URL on it.
+If you want to use it, just add <!--email_off-->deciwave@appspot.com<!--/email_off--> to your wave, create a new [blip](http://google.about.com/od/b/g/google_wave_blip.htm) and paste a share URL on it.
