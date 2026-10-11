@@ -43,6 +43,9 @@ languages:
           - source: uses/index.md
             title: "Eines"
             description: "La construcció del web amb Zas i la configuració publicada per monitoritzar un NAS Synology amb Datadog."
+          - source: changelog/index.md
+            title: "Canvis del web"
+            description: "Els últims cinquanta canvis del repositori públic, generats a partir de l'historial de Git."
           - source: feeds/index.md
             title: "Subscripcions"
             description: "Feeds dels articles, el butlletí Rizoma i les versions de Mergo i Zas."

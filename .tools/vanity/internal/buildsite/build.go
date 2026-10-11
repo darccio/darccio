@@ -66,9 +66,16 @@ func Build(ctx context.Context, options Options) error {
 	if err := isolateDeploy(filepath.Join(stage, ".zas", "config.yml")); err != nil {
 		return err
 	}
+	changelogUpdated, err := prepareChangelog(ctx, root, stage)
+	if err != nil {
+		return fmt.Errorf("assemble public changelog: %w", err)
+	}
 	docs, err := projectdocs.Prepare(ctx, root, stage, nil)
 	if err != nil {
 		return fmt.Errorf("assemble project docs: %w", err)
+	}
+	if !changelogUpdated.IsZero() {
+		docs.LastMod["changelog/index.html"] = changelogUpdated
 	}
 	gitDir, err := gitOutput(ctx, root, "rev-parse", "--absolute-git-dir")
 	if err != nil {
