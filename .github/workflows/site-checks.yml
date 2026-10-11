@@ -23,6 +23,9 @@ jobs:
           cache-dependency-path: |
             .tools/vanity/go.sum
             .tools/microformats/go.sum
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
       - name: Test metadata, microformats, HTTP checks, and staged assembly
         run: make -f .zas/Makefile test
       - name: Build with pinned Zas and validate assembled output
