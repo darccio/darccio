@@ -1,0 +1,4 @@
+Contact: mailto:d@rio.hn
+Expires: 2027-10-11T00:00:00Z
+Preferred-Languages: en, ca, es
+Canonical: https://dario.cat/.well-known/security.txt

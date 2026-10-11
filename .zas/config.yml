@@ -7,6 +7,8 @@ site:
   baseurl: https://dario.cat
   language: ca
   title: Dario Castañé
+  sitemap: true
 zas:
+  allowed_dotdirs: [".well-known"]
   deploy: .zas/deploy
   layout: .zas/layout.html

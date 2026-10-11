@@ -20,6 +20,8 @@ Git selects tracked and nonignored untracked files, including local edits. Hidde
 
 After generation, each raw vanity source is copied byte for byte into its original `name/index.html` path. The checker scans all output HTML, requires the embedded reviewed metadata baseline for all seven routes, and rejects extra routes or `go-source` tags. Its HTML tokenizer accepts existing head fragments and full documents, ignores comments, script strings and escaped examples, and rejects metadata in bodies. Attribute order/case and tuple whitespace do not affect matching; import prefix, VCS and repository identity must remain exact. Duplicate metadata tags fail, including identical tags. Within one tag, the tokenizer retains the first occurrence of each attribute, matching Go discovery. Baseline changes require deliberate review; there is no automatic refresh command.
 
+When native sitemaps are enabled, assembly finalizes `sitemap.xml` after restoring the seven raw vanity pages. It aligns native locations and translation links with each deployed page's canonical URL, preserves native last-modified dates and translation groups, and adds restored vanity entries using source Git dates when available. Complete HTML coverage, local canonical URLs and reciprocal language links are validated before promotion. This site supports one sitemap; sharded output and unfamiliar XML fields fail explicitly, preserving the previous deployment.
+
 The live CLI is independent of its working directory:
 
 ```sh

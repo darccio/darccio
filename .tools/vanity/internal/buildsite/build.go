@@ -84,6 +84,9 @@ func Build(ctx context.Context, options Options) error {
 			return err
 		}
 	}
+	if err := finalizeSitemap(ctx, root, stage, deploy); err != nil {
+		return fmt.Errorf("assembled sitemap rejected: %w", err)
+	}
 	if err := auditOutput(deploy); err != nil {
 		return err
 	}
