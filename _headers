@@ -1,0 +1,24 @@
+# Cloudflare Pages static response rules:
+# https://developers.cloudflare.com/pages/configuration/headers/
+# Pages Functions must set matching headers on their own responses.
+
+/*
+  Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+/feed.xml
+  Content-Type: application/rss+xml; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+/en/feed.xml
+  Content-Type: application/rss+xml; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+/es/feed.xml
+  Content-Type: application/rss+xml; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+/.well-known/security.txt
+  Content-Type: text/plain; charset=utf-8
+
+/*.md
+  Content-Type: text/markdown; charset=utf-8
