@@ -94,7 +94,7 @@ published as site content.
 ## Publishing formats and maintenance
 
 The tested generator pin is
-`github.com/darccio/zas@v0.0.9-0.20261011161100-844e0732ba6f`.
+`github.com/darccio/zas@v0.0.9`.
 Native RSS is opt-in through `site.feed`; rendered Markdown twins use
 `site.publish_markdown`. The main feed combines languages, while `/en/feed.xml`
 and `/es/feed.xml` select their respective posts. Complete explicit source dates
