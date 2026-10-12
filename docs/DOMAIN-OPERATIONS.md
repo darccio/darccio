@@ -7,6 +7,12 @@ template: false
 
 This is the owner runbook for `dario.cat`. The GitHub workflow is a software backstop; registrar settings, DNSSEC and the independent monitor require account actions and real evidence before T01 is complete. Keep account screenshots, invoices, payment details, recovery codes and alert addresses in private storage; record only their location and review date here.
 
+**Current status, 2026-10-12:** T01 is complete. Registrar protection and paid
+renewal, validated DNSSEC, scheduled GitHub and Datadog checks, real failure and
+recovery delivery, probe cleanup and all three expiry-notification simulations
+are verified below. Datadog execution and email receipts are owner-confirmed;
+the dated chronology preserves earlier incomplete states.
+
 ## Observed baseline, 2026-10-11
 
 The public [.cat RDAP response](https://rdap.nic.cat/rdap/domain/dario.cat), recorded in [HANDOFF-FACTS.md](HANDOFF-FACTS.md), reports expiration at **2027-06-01T07:05:04.361Z**, status `active`, and `secureDNS.delegationSigned: false`. Nameservers are `ray.ns.cloudflare.com` and `jean.ns.cloudflare.com`. This expiry provides less than one year of paid runway. Auto-renew, payment validity and transfer lock are **unverified**; the public status does not prove that lock is disabled. Recheck the registry and dashboards after each account action.
@@ -127,6 +133,104 @@ verifies these two moves, zero additions, two updates, three removals and six
 auxiliary no-ops. It validates both retained IDs and all grouped request fields
 without account access or reading the owner's actual state.
 
+### Successful owner apply, 2026-10-12
+
+The owner reports `Apply complete! Resources: 0 added, 2 changed, 3 destroyed`.
+Both groups updated in place: priority retains `kv2-z2c-77h` and other retains
+`m4f-5g8-vxh`. The redundant Awaken, Errors and X tests were removed. The six
+auxiliary IDs remain `g8t-xdf-un3` (certificate), `k3y-yqg-6ie` and `nyj-f6n-bkw`
+(DNSSEC), and `5c4-3sr-u5n`, `ztr-u4m-xfc`, `ikm-hww-7qr` (30/60/90-day expiry).
+The notification probe is absent. This confirms actual grouped API acceptance
+and the planned state migration, superseding the migration-pending status.
+
+Scheduled-run and cost outputs are zero because `enabled` remains false. The
+eight tests are paused; this receipt does not establish hosted test success or
+active monitoring. Run the eight owned tests on demand while paused, inspect
+all fourteen vanity steps and the six auxiliary results, then enable the
+schedule through Terraform. Received real failure/recovery and expiry notices
+remain required to close T01.
+
+### Hosted execution verified by the owner, 2026-10-12
+
+The owner reports all eight tests green after the requested paused on-demand
+runs: both vanity groups and all six auxiliary tests passed. This establishes
+hosted request/assertion execution for the grouped configuration. The module
+remains disabled until the owner sets local `enabled = true` and applies a
+fresh plan. With unchanged inputs, activation should update all eight tests in
+place, add/remove none, and preserve their IDs. Scheduled successes and received
+failure/recovery/expiry notices remain open; paused manual successes do not
+establish alert delivery.
+
+### Schedule activation reported by the owner, 2026-10-12
+
+The owner applied local `enabled = true` successfully: zero additions, eight
+in-place changes and zero destructions. Both grouped vanity IDs and all six
+auxiliary IDs are retained. The module reports 9,540 scheduled requests per
+thirty days and 9,858 per thirty-one days, estimated at $4.77 and $4.929 with
+the configured rate. The notification probe remains absent.
+
+This establishes successful API activation of the eight managed tests. The
+owner has not yet supplied observed scheduled-run results or received real
+failure/recovery/expiry notices. The next delivery check uses the opt-in,
+one-minute HTTP notification probe with intentionally wrong expected metadata;
+the public Mergo page and eight production expectations remain unchanged.
+
+The first notification-probe apply was rejected before resource changes because
+OpenTofu 1.13.1 compared the saved CLI variable inputs against different current
+inputs. A provider-free local reproduction confirms the failure and verifies
+that repeating the exact two `-var` overrides on saved-plan apply succeeds for
+creation, recovery and cleanup. The operator commands now carry both flags on
+both commands. Received notification evidence remains pending.
+
+### Failure notification received by the owner, 2026-10-12
+
+After applying the probe with matching OpenTofu flags, the owner confirms
+receipt of its failure notification at the configured contact. This establishes
+real failure-email delivery for the temporary wrong-metadata test. Its public
+ID and exact email timestamp were not supplied. Recovery delivery, probe
+cleanup, scheduled production successes and expiry-notification simulations
+remain open. Restore the correct metadata on the same probe before cleanup so
+the alert-to-recovery transition can also be verified.
+
+The owner explicitly confirms that the recovery email arrived after restoring
+the correct expected metadata on the same probe. Real failure and recovery
+delivery are now verified. Remove only the temporary probe with matching
+OpenTofu plan/apply flags; cleanup, scheduled production successes and the three
+expiry-notification simulations remain open.
+
+### Temporary probe cleanup confirmed by the owner, 2026-10-12
+
+The owner confirms completing the requested cleanup and retaining the eight
+live production tests. The temporary failure/recovery probe has been removed.
+Its full lifecycle—failure email, recovery email and cleanup—is complete.
+Scheduled passing results for each production test and received 90/60/30-day
+expiry simulations are the remaining T01 evidence requirements.
+
+### Scheduled production successes confirmed by the owner, 2026-10-12
+
+The owner explicitly confirms that each of the eight live production tests
+has a passing run marked **Scheduled**. This establishes successful scheduled
+execution at the configured cadences, in addition to the earlier paused
+on-demand results. Real failure/recovery delivery and probe cleanup are already
+confirmed. Only received simulations from the 90/60/30-day registry-expiry
+tests remain required for T01; the owner is locating the simulation control.
+
+### Expiry notifications received and T01 completed, 2026-10-12
+
+After locating **Edit Test → Configure the test monitor → Simulate
+Notifications**, the owner confirms sending and receiving the alert simulation
+for each of the **90-, 60- and 30-day** registry-expiry tests at the configured
+`cc@dario.cat` contact. These receipts establish notification routing for each
+test; simulations do not establish an actual threshold-triggered expiry event.
+The registry-threshold fixtures cover those calculations separately. Individual
+email timestamps and private receipt locations were not supplied.
+
+T01 is complete: registrar protection and paid expiry `2028-06-01`, the
+independently validated DNSSEC chain, successful scheduled GitHub backstop,
+eight live Datadog tests with owner-confirmed scheduled passes, real temporary
+probe failure/recovery emails, probe cleanup and all three expiry simulations
+are recorded. Continue the review calendar below and retain private evidence.
+
 ## Registrar protection in SW Hosting
 
 1. Sign in to SWPanel and open **Domains and SSL → Domain Portfolio → dario.cat**. Confirm that this is the account controlling registration and that owner/admin contact email reaches you. Review MFA and recovery access.
@@ -166,9 +270,11 @@ schedules **9,540 runs per 30 days** (9,858 per 31 days), about **$4.77/month**
 at the published annual-agreement rate; the local rate input can reflect the
 account's actual pricing. Retries/manual runs are additional.
 It runs from Datadog's managed Frankfurt location independently of GitHub,
-Pages builds and PDS. Tests are paused by default; account apply, actual
-scheduled successes and received failure/recovery/expiry notices are still
-pending. No Datadog API/application credentials are available in this session.
+Pages builds and PDS. Tests are paused by default for new installations; the
+owner has applied and activated this installation, confirmed scheduled passes
+for all eight production tests and received failure/recovery/expiry notices.
+The temporary probe is removed. No Datadog API/application credentials are
+available in this session.
 Both URL forms for all seven packages remain checked in fourteen critical
 steps. Grouped alerts identify the failing step; all steps continue after a
 failure and a group recovers when every step passes.
@@ -177,8 +283,9 @@ The module reuses the reviewed tuples below. Each bare request must preserve
 the current exact 308 redirect to its slash URL with `go-get=1`; the canonical
 request then parses real HTML metadata with a bundled tokenizer. This is a
 stricter observed single-hop routing check than the Go checker's permitted
-five-hop same-origin redirects. Datadog's assertion runtime must be confirmed
-with real on-demand runs before activation. Configure each of these names
+five-hop same-origin redirects. Real paused on-demand runs verified Datadog's
+assertion runtime before activation, followed by scheduled production passes.
+Configure each of these names
 with both `/<name>?go-get=1` and `/<name>/?go-get=1`:
 
 | Name | Exact expected `go-import` content |
@@ -213,4 +320,4 @@ On failure, inspect the failed step first: checkout/toolchain failures need a su
 
 The owner should add a private quarterly review on **15 January, April, July and October**, plus a review after any registrar, billing, nameserver, DNSSEC, Pages routing or account-security change. This document creates no calendar entries or external schedules.
 
-At each review, check paid runway greater than one year, auto-renew/payment, transfer lock, contacts/MFA/recovery, validated DNSSEC, provider expiry notices, the latest external checks and notification test, and an enabled/recent GitHub schedule. Store dated evidence privately. T01 remains pending until the registrar evidence, successful DNSSEC validation, active external checks at the owner's selected 30-minute/two-hour/daily cadence, received test/recovery/expiry notices and observed GitHub runs are all available. The owner explicitly relaxed independent checks of the five other imports to two hours to target about $5/month; the GitHub backstop still checks every package twice an hour.
+At each review, check paid runway greater than one year, auto-renew/payment, transfer lock, contacts/MFA/recovery, validated DNSSEC, provider expiry notices, the latest external checks and notification test, and an enabled/recent GitHub schedule. Store dated evidence privately. The receipts above close T01 on 2026-10-12; repeat these checks after relevant account or infrastructure changes. The owner explicitly relaxed independent checks of the five other imports to two hours to target about $5/month; the GitHub backstop still checks every package twice an hour.
