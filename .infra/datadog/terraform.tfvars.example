@@ -1,0 +1,11 @@
+# Copy to terraform.tfvars; keep local overrides and state out of Git.
+datadog_site         = "datadoghq.eu"
+notification_handles = ["@cc@dario.cat"]
+locations            = ["aws:eu-central-1"]
+
+# Create paused, check real test results, then change this to true.
+enabled = false
+
+# Temporary notification test; normally leave absent/false.
+notification_probe_enabled     = false
+notification_probe_should_fail = true

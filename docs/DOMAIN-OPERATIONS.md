@@ -102,7 +102,22 @@ For rollback, remove the parent DS through the registrar first. Keep Cloudflare 
 
 ## Independent external monitor
 
-Choose an external service that runs HTTPS metadata checks every **30 minutes**, independently of GitHub, Pages builds and PDS. Configure each of these names with both `/<name>?go-get=1` and `/<name>/?go-get=1`:
+The owner selected **Datadog EU1** and **cc@dario.cat** for notifications. The
+[Terraform module](../.infra/datadog/README.md) prepares seven two-step import
+checks and two validating-resolver checks every **15 minutes**, hourly TLS
+expiry checks, and daily registry-renewal warnings at **90, 60 and 30 days**.
+It runs from Datadog's managed Frankfurt location independently of GitHub,
+Pages builds and PDS. Tests are paused by default; account apply, actual
+scheduled successes and received failure/recovery/expiry notices are still
+pending. No Datadog API/application credentials are available in this session.
+
+The module reuses the reviewed tuples below. Each bare request must preserve
+the current exact 308 redirect to its slash URL with `go-get=1`; the canonical
+request then parses real HTML metadata with a bundled tokenizer. This is a
+stricter observed single-hop routing check than the Go checker's permitted
+five-hop same-origin redirects. Datadog's assertion runtime must be confirmed
+with real on-demand runs before activation. Configure each of these names
+with both `/<name>?go-get=1` and `/<name>/?go-get=1`:
 
 | Name | Exact expected `go-import` content |
 | --- | --- |
