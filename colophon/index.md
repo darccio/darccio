@@ -1,7 +1,7 @@
 <!--
 entry: true
 description: "Com està fet dario.cat: Zas, Cloudflare Pages, codi i llicències."
-updated: 2026-10-11T15:33:14+02:00
+updated: 2026-10-11T22:55:00+02:00
 -->
 
 <h1 class="p-name">Sobre aquest web</h1>
@@ -23,6 +23,10 @@ El web fa servir HTML i CSS, sense JavaScript propi al navegador. La navegació,
 Escric el vessant personal en català, amb articles en castellà i anglès. La documentació dels projectes de Go és principalment en anglès.
 
 Les [subscripcions](/feeds/) permeten seguir el contingut amb un lector de feeds. La [política d'IA](/ai/) explica les preferències per als rastrejadors i les dades personals.
+
+Els articles tenen metadades compartides entre els feeds RSS, microformats i dades estructurades. Les versions Markdown i els fitxers de context per a agents es generen durant la construcció, sense scripts al navegador.
+
+La publicació d'articles a Standard.site té un procés separat, posterior al desplegament i limitat als articles revisats. Una incidència al servei de publicació no impedeix publicar el web. Les còpies distribuïdes per l'AT Protocol queden fora de l'abast de les preferències dels rastrejadors d'aquest domini.
 
 ## Llicències
 

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "publication": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+  "documents": [
+    {
+      "path": "/posts/alpha/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3aaaaaaaaaaaa",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "path": "/posts/alpha/",
+        "title": "Alpha",
+        "description": "A & B <literal>.",
+        "publishedAt": "2024-01-01T09:00:00Z",
+        "updatedAt": "2024-02-01T09:00:00Z",
+        "textContent": "Alpha\n\nPublic alpha body.",
+        "tags": [
+          "go",
+          "writing",
+          "lang:ca"
+        ]
+      }
+    }
+  ]
+}

@@ -115,6 +115,9 @@ func Build(ctx context.Context, options Options) error {
 	if err := finalizeMarkdownDiscovery(stage, deploy, docs.Twins); err != nil {
 		return fmt.Errorf("assembled Markdown discovery rejected: %w", err)
 	}
+	if err := finalizeStandardDocuments(root, stage, deploy); err != nil {
+		return fmt.Errorf("assembled Standard.site documents rejected: %w", err)
+	}
 	if err := finalizeHTTPWorker(root, stage, deploy, docs.Twins); err != nil {
 		return fmt.Errorf("assembled HTTP adapter rejected: %w", err)
 	}
@@ -126,7 +129,7 @@ func Build(ctx context.Context, options Options) error {
 	}
 	if options.Validate != nil {
 		if err := options.Validate(ctx, deploy); err != nil {
-			return fmt.Errorf("assembled microformats rejected: %w", err)
+			return fmt.Errorf("assembled metadata rejected: %w", err)
 		}
 	}
 	if err := ctx.Err(); err != nil {

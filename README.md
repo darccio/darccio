@@ -48,8 +48,9 @@ and explicit documentation paths from Mergo, Zas and darna. Only the selected
 regular Git blobs and the original repository license are read; no fetched
 checkout, build script, template action, raw HTML or embed executes. A safe
 Markdown renderer produces data for the trusted site layout, with
-`zas -full -no-plugins` still enabled. Project landings retain the exact original
-`go-import` and `go-source` tags; the other import fragments stay byte-identical.
+`zas generate -full -no-plugins` still enabled. Project landings retain the exact
+original `go-import` and `go-source` tags; the other import fragments stay
+byte-identical.
 
 Documentation is in English and retains BSD-3-Clause (Mergo),
 AGPL-3.0-or-later (Zas) and Apache-2.0 (darna), including exact license files.
@@ -89,3 +90,38 @@ intact. Restore an earlier manifest pin to roll back docs, or revert the pipelin
 commit to restore the untouched original vanity landings. Operational receipts
 remain in [the implementation plan](docs/site-plan/PROGRESS.md) and are not
 published as site content.
+
+## Publishing formats and maintenance
+
+The tested generator pin is
+`github.com/darccio/zas@v0.0.9-0.20261011161100-844e0732ba6f`.
+Native RSS is opt-in through `site.feed`; rendered Markdown twins use
+`site.publish_markdown`. The main feed combines languages, while `/en/feed.xml`
+and `/es/feed.xml` select their respective posts. Complete explicit source dates
+drive RSS, h-entry, JSON-LD and Open Graph; a partial historical date stays partial
+and is excluded from RSS and AT Protocol publishing.
+
+The guarded build checks all seven exact vanity tuples, representative identity,
+article/archive microformats, JSON-LD and cross-format dates, canonical URLs,
+summaries and tags before replacing output. It creates the Standard.site record
+plan locally; builds need no PDS credentials or connectivity. Reuse the pinned
+binary with `make -f .zas/Makefile generate ZAS=/tmp/dario-site-zas/zas`, and run
+`make -f .zas/Makefile check-consistency` to inspect an existing deployment.
+
+The [Standard.site document workflow](.github/workflows/standard-site.yml) starts
+after a confirmed production Pages deployment and independently verifies its
+exact revision. It publishes only the committed reviewed allowlist, using
+`ATP_HANDLE` and `ATP_APP_PASSWORD` in one step. The site deployment never waits
+for publishing. Only verified public URIs enter a separate backlink PR; private
+recovery state and credentials stay out of Git and artifacts. Manual dispatch
+defaults to an offline preview. See the
+[publisher instructions](https://github.com/darccio/darccio/blob/main/.tools/atproto/README.md)
+for approval, retry, deletion and rollback procedures.
+
+Maintain the documented ownership boundaries: generic features belong in Zas;
+templates, curation, source-date provenance and site assembly belong here.
+The operational `docs/HANDOFF-FACTS.md`, `docs/publication-provenance.md`,
+`docs/standard-site-backfill.md` and `docs/site-plan/PROGRESS.md` hold the audit,
+date evidence, unapproved candidate inventory and implementation receipts.
+They are excluded from the deployed site. Registrar renewal, DNSSEC and external
+alert delivery require separate account evidence in `docs/DOMAIN-OPERATIONS.md`.
