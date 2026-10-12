@@ -65,13 +65,13 @@ Dependencies below include the report’s original ordering and repository-speci
 | [T00](tasks/T00.md) | Verify unverified facts | site | — | Audit committed |
 | [T01](tasks/T01.md) | Harden domain and DNS and add monitoring | site | T02 | Software committed; account operations pending |
 | [T02](tasks/T02.md) | Protect vanity imports with regression checks | site | T00 | Guarded build and exact-SHA post-deploy workflow deployed and live-verified |
-| [T03](tasks/T03.md) | Correct project identity links | zas+mergo | — | Zas PR #111 merged; Mergo PR #323 passes checks |
+| [T03](tasks/T03.md) | Correct project identity links | zas+mergo | — | Zas PR #111 and Mergo PR #323 merged |
 | [T04](tasks/T04.md) | Add explicit publication metadata to posts | site | T00, T02 | Source committed; three incomplete dates excluded from syndication |
 | [T05](tasks/T05.md) | Expose dates and metadata in Zas templates | zas | — | Zas PR #112 merged; site pins tested merged revision |
 | [T06](tasks/T06.md) | List pages in Zas templates | zas | T05 | Optional and deferred |
 | [T07](tasks/T07.md) | Correct canonical and Open Graph metadata | site | T05, T04 | Deployed; canonical/OG/language checks pass |
 | [T08](tasks/T08.md) | Publish contact details and self-host the avatar | site | — | Avatar/licence/contact deployed; readable cc@dario.cat edge checks pass |
-| [T09](tasks/T09.md) | Add navigation and core slash pages | site | T07 | Core deployed; six supplementary pages in site PR #13; defaults pending |
+| [T09](tasks/T09.md) | Add navigation and core slash pages | site | T07 | Core and six supplementary pages deployed; defaults pending |
 | [T10](tasks/T10.md) | Publish crawler policy and security contact | site+zas | T00, T08, T04, T05, T07 | Policy/security/sitemap deployed; live resource and coverage checks pass |
 | [T11](tasks/T11.md) | Generate native RSS 2.0 feeds | zas | T05 | [Zas PR #114](https://github.com/darccio/zas/pull/114) merged; enabled/deployed; all three live feeds validated |
 | [T12](tasks/T12.md) | Expose feeds in the layout and slash index | site | T09, T11, T04 | Strict RSS, discovery and subscription page deployed and live-verified |
@@ -89,12 +89,12 @@ Dependencies below include the report’s original ordering and repository-speci
 | [T24](tasks/T24.md) | Pull and host OSS docs safely | site+zas | T02, T21, T10 | Pipeline and source dispatch deployed; token-backed receiver retry passed |
 | [T25](tasks/T25.md) | Write and test Mergo guides | site+mergo | T24 | Source/site PRs merged; five Mergo guides production-verified |
 | [T26](tasks/T26.md) | Bootstrap Standard.site publication | site | T00, T13, T10 | Publication and exact live backlink verified after PR #12 merge |
-| [T27](tasks/T27.md) | Publish documents with stable record keys | site | T04, T26 | Site PR #14: publisher implemented/tested; approvals empty |
-| [T28](tasks/T28.md) | Link verified Standard.site documents | site | T27, T02 | Site PR #14: verified offline backlinks implemented/tested |
-| [T29](tasks/T29.md) | Separate publishing from site deployment | site | T27, T28, T00 | Site PR #14: independent post-deploy workflow implemented/tested |
+| [T27](tasks/T27.md) | Publish documents with stable record keys | site | T04, T26 | Publisher deployed; first automatic empty approval run passes |
+| [T28](tasks/T28.md) | Link verified Standard.site documents | site | T27, T02 | Verified offline backlinks deployed; committed document map empty |
+| [T29](tasks/T29.md) | Separate publishing from site deployment | site | T27, T28, T00 | Deployed; first automatic trusted-production run passes |
 | [T30](tasks/T30.md) | Backfill approved posts | site | T29, T27, T28 | 23 eligible candidates prepared; owner approvals pending |
-| [T31](tasks/T31.md) | Verify agreement across publishing formats | site | T11, T15, T19, T27 | Site PR #14: mandatory offline consistency gate passes |
-| [T32](tasks/T32.md) | Document and release the finished features | site+zas | T05, T11, T21, T29, T02, T31 | Site docs PR #14; Zas release docs PR #117; tag after merge |
+| [T31](tasks/T31.md) | Verify agreement across publishing formats | site | T11, T15, T19, T27 | Mandatory offline consistency gate deployed and passing |
+| [T32](tasks/T32.md) | Document and release the finished features | site+zas | T05, T11, T21, T29, T02, T31 | Docs merged; Zas v0.0.9 released; released pin adoption verified next |
 
 ## Secondary work and maintenance
 
