@@ -72,6 +72,22 @@ After earlier unsigned answers, successful verification completed at **2026-10-1
 
 This receipt supersedes the earlier DS-absence and pending-chain status. Owner items **1 (renewal/protection)** and **2 (DNSSEC)** are complete. T01 remains open for independently scheduled monitoring and received failure, recovery and expiry notices. The agent performed read-only verification; the owner changed the account settings.
 
+## Datadog partial-apply receipt, 2026-10-12
+
+After resolving authentication, the owner applied the monitoring module. Datadog
+created the certificate test, both DNSSEC tests and all three registry-expiry
+tests. It rejected the seven vanity tests because its variable interpolation
+mistook double braces in the parser's compressed entity table for a global
+variable reference. The assertion-build fix escapes this string data while
+preserving the tokenizer's decoded values and exact metadata checks.
+
+Keep the owner's existing OpenTofu state and local variables. After updating the
+code, generate a fresh plan to create the seven missing tests while retaining
+the six successful resources; see the module's
+[partial-apply instructions](../.infra/datadog/README.md#resume-a-partially-failed-apply).
+Resource creation does not establish hosted assertion success, scheduled
+monitoring or received alerts. Those operational checks remain open.
+
 ## Registrar protection in SW Hosting
 
 1. Sign in to SWPanel and open **Domains and SSL → Domain Portfolio → dario.cat**. Confirm that this is the account controlling registration and that owner/admin contact email reaches you. Review MFA and recovery access.

@@ -47,9 +47,20 @@ including the full parse5 tree parser's initialization. This entry is an
 internal API, so upgrades require rebuilding and rerunning the adversarial
 tests. Tokenizer behavior is documented in the
 [pinned upstream source](https://github.com/inikulin/parse5/blob/v8.0.1/packages/parse5/lib/tokenizer/index.ts).
-The checked-in artifact is 94,042 UTF-8 bytes before route JSON substitution.
+The checked-in artifact is 94,752 UTF-8 bytes before route JSON substitution.
 The `--check` command compares a fresh pinned build byte-for-byte without
 overwriting the artifact.
+
+Datadog supports [`{{variable}}` references in assertions](https://docs.datadoghq.com/synthetics/api_tests/http_tests/#use-variables)
+and processes them before JavaScript runs. The upstream entities trie originally included that opening
+delimiter inside its compressed string data, causing Datadog to reject the
+assertion as an invalid global-variable reference. The build now extracts the
+pinned module's one JSON-compatible table literal, validates it with
+`JSON.parse`, and replaces that exact complete literal with an equivalent
+serialization whose opening braces use Unicode escapes. It checks that the
+decoded table is unchanged and rejects any remaining `{{` anywhere in the
+bundle. Structural JavaScript braces are preserved. Changed dependency format,
+ambiguous matches or a new interpolation site fail the build for review.
 
 The Node built-in tests execute the committed bundle in a restricted VM with
 `dd.response.body` and callable `dd.assert`, without DOM, Node, module-loading,
@@ -57,6 +68,9 @@ network, encoder, timer or console globals. They cover all seven real source
 fragments, full-document heads, entity/formatting variations, first duplicate
 attributes, fake metadata in comments/scripts/text, wrong and duplicate tuples,
 head reopening, body metadata, extra `go-source` and the UTF-8 body limit.
+They also check brace-entity decoding, exact table-data round trips, and absence
+of substitution prefixes after injecting each production route and both
+notification-probe payloads. This does not require another npm dependency.
 No test calls Datadog or the live website.
 
 ## Runtime boundary

@@ -15,6 +15,8 @@ const source = '<meta name="go-source" content="dario.cat/mergo https://example.
 
 function execute(body, expected = route) {
   assert.equal(bundle.split('__EXPECTED_METADATA__').length, 2);
+  const injected = bundle.replace('__EXPECTED_METADATA__', () => JSON.stringify(expected));
+  assert.equal(injected.includes('{{'), false, 'Datadog must not find a substitution prefix in assertion code');
   const calls = [];
   const sandbox = {
     dd: {
@@ -30,7 +32,7 @@ function execute(body, expected = route) {
   for (const name of ['Buffer', 'process', 'require', 'module', 'exports', 'importScripts', 'DOMParser', 'document', 'window', 'fetch', 'TextEncoder', 'TextDecoder', 'setTimeout', 'console']) sandbox[name] = undefined;
   const context = createContext(sandbox, { codeGeneration: { strings: false, wasm: false } });
   try {
-    new Script(bundle.replace('__EXPECTED_METADATA__', () => JSON.stringify(expected))).runInContext(context, { timeout: 2000 });
+    new Script(injected).runInContext(context, { timeout: 2000 });
   } catch (error) {
     // Keep diagnostics readable: vm's default stack prints the whole minified
     // source line, including the vendored tokenizer and entity tables.
@@ -58,6 +60,7 @@ const accepted = {
   'unquoted name': '<MeTa name=go-import content="' + route.go_import[0] + '">',
   'numeric entities in names and fields': '<meta NAME="go&#45;import" CONTENT="dario.cat/mergo&#x9;git&#32;https://github.com/imdario/mergo" disabled>',
   'named entity in content': correct.replace('https:', 'https&colon;'),
+  'brace entities in ordinary metadata': '<meta name="description" content="&lbrace;&lbrace;U#:5Abb&rbrace;&rbrace;">' + correct,
   'ordinary metadata with raw characters': '<meta name="description" content="valid HTML with raw < and &" custom@key="x">' + correct,
   'comments do not contribute fake tags': '<!-- ' + fake + ' -->' + correct,
   'raw text does not contribute fake tags': '<title>' + fake + '</title><style>' + fake + '</style><script>const example = \'' + fake + '\';</script><noscript>' + fake + '</noscript>' + correct,
@@ -137,4 +140,26 @@ test('Terraform replacement produces a script without a runtime module loader', 
   // Every test above runs the generated artifact, never the source module. A
   // import/require/DOM/global leak fails the restricted sandbox immediately.
   execute(correct);
+});
+
+test('all production routes and both probe payloads have no Datadog substitution prefix', () => {
+  assert.equal(bundle.includes('{{'), false);
+  for (const expected of baseline) {
+    const injected = bundle.replace('__EXPECTED_METADATA__', () => JSON.stringify(expected));
+    assert.equal(injected.includes('{{'), false, expected.path);
+  }
+  const probePassing = { ...route };
+  const probeFailing = { ...route, go_import: ['dario.cat/mergo git https://example.invalid/notification-probe'] };
+  for (const expected of [probePassing, probeFailing]) {
+    assert.equal(bundle.replace('__EXPECTED_METADATA__', () => JSON.stringify(expected)).includes('{{'), false);
+  }
+  execute(correct, probePassing);
+  assert.throws(() => execute(correct, probeFailing), /reviewed baseline/);
+});
+
+test('named brace entities preserve exact go-source template characters', () => {
+  const expected = { ...route, go_source: ['dario.cat/mergo https://example.org https://example.org/tree{/dir} https://example.org/blob{/dir}/{file}#L{line}'] };
+  const encoded = source.replaceAll('{', '&lbrace;').replaceAll('}', '&rbrace;');
+  execute(correct + encoded, expected);
+  assert.throws(() => execute(correct + encoded.replace('&lbrace;', '&lpar;'), expected), /reviewed baseline/);
 });

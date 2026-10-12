@@ -96,6 +96,34 @@ migrate the state before another operator runs it. State, saved plans, local
 variables and credentials stay out of Git; Terraform's dependency lock stays
 committed. See [Terraform state storage](https://developer.hashicorp.com/terraform/language/state/backends).
 
+## Resume a partially failed apply
+
+OpenTofu can manage this module with the same `init`, `validate`, `plan` and
+`apply` commands. After an apply creates some tests and then fails, keep the
+existing local state, backups and variables in this directory. The successful
+resources are recorded in state; a failed apply is not rolled back.
+
+The first owner apply created the certificate, two DNSSEC and three registry
+tests, while Datadog rejected all seven vanity tests. The bundled HTML entity
+table contained literal double braces which Datadog interpreted as a global
+variable reference. The assertion build now escapes that string data without
+changing its JavaScript value. CI checks all seven injected assertions and both
+notification-probe variants for accidental variable openers.
+
+After updating to the fix, use the same initialized directory and variables to
+create a **fresh** plan:
+
+```sh
+tofu plan -out=monitoring.tfplan
+tofu apply monitoring.tfplan
+```
+
+Review the plan before applying it. With the same variables, it should create
+the seven missing vanity tests and retain the six successful resources. Do not
+reuse the previous saved plan, remove state, or destroy the successful tests.
+On-demand hosted assertions, activation and received notices remain the next
+verification steps.
+
 ## Activate production monitoring
 
 In your local `terraform.tfvars`, change `enabled` to `true`, then review and

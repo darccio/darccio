@@ -2,6 +2,7 @@ import { build } from 'esbuild';
 import { readFile, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import { escapePackedTable } from './safe-packed-table.mjs';
 
 const directory = path.dirname(fileURLToPath(import.meta.url));
 const runtimeLicenses = await Promise.all(['parse5', 'entities'].map(async name => {
@@ -24,7 +25,8 @@ const output = await build({
   metafile: true,
   write: false,
 });
-const text = output.outputFiles[0].text;
+const packedTable = await readFile(path.join(directory, 'node_modules/entities/dist/generated/decode-data-html.js'), 'utf8');
+const text = escapePackedTable(output.outputFiles[0].text, packedTable);
 if (text.split('__EXPECTED_METADATA__').length !== 2) throw new Error('Expected exactly one Terraform metadata marker');
 if (Object.values(output.metafile.outputs).some(file => file.imports.length !== 0)) throw new Error('Runtime dependency leaked into assertion bundle');
 const filename = path.join(directory, 'vanity.js');
