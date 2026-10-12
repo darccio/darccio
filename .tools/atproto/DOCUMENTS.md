@@ -2,11 +2,12 @@
 
 The document tool defaults to an offline dry-run. The versioned
 [allowlist](documents-allowlist.json) defines the exact paths and publication
-instants selected for publishing. The T30 proposal contains 26 articles;
-merging its approval PR authorizes that selection and its full rendered text.
-Before that merge, production's approval list remains empty and this proposal
-has published no records. Building or deploying the site never requires a PDS
-connection or credentials.
+instants selected for publishing. The owner approved the 26-article T30 archive
+in [PR #24](https://github.com/darccio/darccio/pull/24); all records are published
+and verified, with production backlinks deployed through
+[PR #25](https://github.com/darccio/darccio/pull/25). An unchanged online apply
+reported 26 unchanged records and zero writes. Building or deploying the site
+never requires a PDS connection or credentials.
 
 The existing **Standard.site documents** workflow automatically applies the
 reviewed allowlist after a successful current-main production deployment. A
@@ -164,10 +165,12 @@ The existing T26 client supplies session and identity handling. See also the
 [TID specification](https://atproto.com/specs/tid) and
 [site verification protocol](https://standard.site/docs/verification/).
 
-Real document creation, public retrieval, matching page verification links,
-and a second unchanged online run remain acceptance checks after specific
-document approval. The current T30 proposal is reviewed offline; its record
-creation and public verification have not yet occurred.
+The [T30 delivery receipt](../../docs/site-plan/tasks/T30.md) records the
+approved 26-record backfill, exact public retrieval, production verification
+links, three reader samples and the unchanged online rerun. Its
+[public identity snapshot](review/backfill-verification.json) records the
+verified URIs, CIDs and payload hashes as of 2026-10-12. Future selections and
+updates require their own review and actual apply/readback checks.
 
 Successful apply runs upload their public plan as
 `standard-site-document-apply-plan`, retained for seven days. Use its action

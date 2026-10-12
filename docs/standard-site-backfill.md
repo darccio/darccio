@@ -5,25 +5,25 @@ template: false
 
 # Standard.site backfill review
 
-The T30 PR proposes all 26 eligible articles below for publication. Its proposed allowlist and offline full-record plan contain 26 entries; the production approval list remains empty until the owner merges the PR. No article record has been written by this preparation, and the verified URI map remains empty.
+T30 is complete. The owner approved all 26 articles below by merging [PR #24](https://github.com/darccio/darccio/pull/24). The post-deploy workflow created and verified their records, and [PR #25](https://github.com/darccio/darccio/pull/25) deployed their public verification links. A repeated online apply reported all 26 unchanged, with zero writes and identical IDs, CIDs and values. See the [delivery receipt](site-plan/tasks/T30.md) and [verified identity snapshot](../.tools/atproto/review/backfill-verification.json).
 
-Review the [complete proposed records](../.tools/atproto/review/backfill-preview.json), including each article's full rendered plaintext, alongside the source links below. Planned URIs in that artifact do not imply successful publication or verified backlinks.
+The [original approved record preview](../.tools/atproto/review/backfill-preview.json) preserves each article's full rendered plaintext at approval. Its create actions describe the pre-publication plan; the separate identity snapshot and production URI map establish the completed publication.
 
-**Merging the approval PR authorizes full-text publication of these 26 articles.** The existing workflow automatically applies the merged allowlist after a successful current-main production deploy, then opens a separate PR with publicly verified document URIs. Request any exclusions before merging. Relays and indexers can retain public copies; reverting the allowlist does not remove already published records.
+Future allowlist changes require review before merge: the existing workflow automatically applies the merged selection after a successful current-main production deploy, then opens a separate PR with publicly verified document URIs. Relays and indexers can retain public copies; reverting the allowlist does not remove already published records.
 
-The offline candidate inventory contains 34 local article sources: 26 eligible candidates, seven articles before the 2013 cutoff and one draft. Eligibility is a proposal for owner review, not publication approval. The 26 candidates include 11 Catalan, eight Spanish and seven English documents; maintained language versions remain separate documents under one publication.
+The source inventory contains 34 local articles: 26 approved publications, seven articles before the 2013 cutoff and one draft. The published selection contains 11 Catalan, eight Spanish and seven English documents; maintained language versions remain separate documents under one publication. Eligibility alone still grants no approval for future additions.
 
-## Publishing scope to review
+## Approved publishing scope
 
-The publication remains `at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t`. Each approved document will point back to its existing canonical trailing-slash URL. Dates below are the configured publication timestamps, including their recorded offsets. The T04 follow-up recovers the English liquid-organizations instant from original RSS, adds Ruby/Go's owner-confirmed timezone and adopts the English timestamp for Spanish at the owner's explicit instruction. That Spanish clock time is an assumption, not independently recovered historical evidence. [Publication provenance](publication-provenance.md) records these distinctions; no Git date supplies a publication instant.
+The publication remains `at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t`. Each approved document points back to its existing canonical trailing-slash URL. Dates below are the configured publication timestamps, including their recorded offsets. The T04 follow-up recovers the English liquid-organizations instant from original RSS, adds Ruby/Go's owner-confirmed timezone and adopts the English timestamp for Spanish at the owner's explicit instruction. That Spanish clock time is an assumption, not independently recovered historical evidence. [Publication provenance](publication-provenance.md) records these distinctions; no Git date supplies a publication instant.
 
 Approval also covers publishing full rendered text through Standard.site `textContent`. Those public AT Protocol records can be copied by relays and indexers and sit outside the site’s robots.txt policy. Deleting a record from the PDS does not guarantee that downstream copies disappear.
 
 The 2021 Rizoma issues hosted here are eligible local documents. New Substack issues and external archive links have no local article source in this inventory and are not backfill candidates. CV data is never included.
 
-## Eligible candidates
+## Published archive
 
-These 26 candidates are sorted newest first and match the proposed allowlist. Review the linked source and public page before approving publication. The three T04 date corrections are deployed and production-verified; the Spanish clock-time assumption remains explicitly documented above.
+These 26 articles are sorted newest first and match the approved allowlist and verified URI map. The three T04 date corrections are deployed and production-verified; the Spanish clock-time assumption remains explicitly documented above.
 
 | Published at | Language | Article | Source | Summary |
 | --- | --- | --- | --- | --- |
@@ -76,7 +76,7 @@ Successful publish runs retain their actual action plan in the seven-day
 there and via public readback; an overall green workflow does not establish
 successful publication because its jobs deliberately fail softly.
 
-The proposed [.tools/atproto/documents-allowlist.json](../.tools/atproto/documents-allowlist.json) contains each listed canonical path and its exact configured publication timestamp. Remove any article the owner excludes before merging this approval PR. The inventory alone grants no publication permission; merging the explicitly scoped proposal approves this selection. The optional date-correction switch is reserved for an explicitly reviewed correction of an existing published record.
+The approved [.tools/atproto/documents-allowlist.json](../.tools/atproto/documents-allowlist.json) contains each listed canonical path and its exact configured publication timestamp. Future additions require an explicitly scoped publication review before merging; the inventory alone grants no permission. The optional date-correction switch remains reserved for an explicitly reviewed correction of an existing published record.
 
 The default document command makes no PDS requests or state writes. Regenerate this review inventory from the repository root with:
 
@@ -87,4 +87,4 @@ go -C .tools/atproto run -mod=readonly ./cmd/documents \
 
 After changing the reviewed allowlist, build the site and inspect the ordinary offline plan before any apply run. The mandatory cross-format gate checks its dates, canonical paths, summaries, language tags and full text against the source and assembled HTML/RSS. A planned URI does not become a verification link until a real write succeeds and a reviewed state PR records it.
 
-Actual backfill still requires owner approval and an authenticated publish run. After merging the approval PR, verify that the automatic **Standard.site documents** run accounts for all 26 selected records, without touching records belonging to another publication. Merge its public-URI PR, then check each article's live verification link against its public record. Inspect three records in a reader, preferably one per language, confirming title, full text, publication date and canonical URL. Dispatch the same workflow with `apply: true` against the unchanged current production revision and confirm zero creates, updates or deletes. A backlink-only automatic skip is not evidence of an unchanged online publishing run. These live acceptance checks remain pending; this file records the publication proposal and offline preparation.
+The [delivery receipt](site-plan/tasks/T30.md) records all 26 successful creates, exact public readbacks, production backlinks, one viewer sample per language and the real online `apply: true` rerun with zero creates, updates or deletes. The later backlink-only merge correctly skipped publishing; that skip is separate from the successful idempotence run. Future batches must repeat these actual checks rather than relying on an offline plan or an overall green workflow.

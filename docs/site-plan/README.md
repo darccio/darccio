@@ -89,12 +89,12 @@ Dependencies below include the report’s original ordering and repository-speci
 | [T24](tasks/T24.md) | Pull and host OSS docs safely | site+zas | T02, T21, T10 | Pipeline and source dispatch deployed; token-backed receiver retry passed |
 | [T25](tasks/T25.md) | Write and test Mergo guides | site+mergo | T24 | Source/site PRs merged; five Mergo guides production-verified |
 | [T26](tasks/T26.md) | Bootstrap Standard.site publication | site | T00, T13, T10 | Publication and exact live backlink verified after PR #12 merge |
-| [T27](tasks/T27.md) | Publish documents with stable record keys | site | T04, T26 | Publisher deployed; first automatic empty approval run passes |
-| [T28](tasks/T28.md) | Link verified Standard.site documents | site | T27, T02 | Verified offline backlinks deployed; committed document map empty |
-| [T29](tasks/T29.md) | Separate publishing from site deployment | site | T27, T28, T00 | Deployed; first automatic trusted-production run passes |
-| [T30](tasks/T30.md) | Backfill approved posts | site | T29, T27, T28 | PR proposes publication of 26 posts; approval merge and live acceptance pending |
+| [T27](tasks/T27.md) | Publish documents with stable record keys | site | T04, T26 | Complete; 26 approved creates verified and unchanged online apply makes zero writes |
+| [T28](tasks/T28.md) | Link verified Standard.site documents | site | T27, T02 | Complete; PR #25 deployed all 26 publicly verified article backlinks |
+| [T29](tasks/T29.md) | Separate publishing from site deployment | site | T27, T28, T00 | Complete; real post-deploy publication, URI PR and backlink-only skip verified |
+| [T30](tasks/T30.md) | Backfill approved posts | site | T29, T27, T28 | Complete; PR #24 approvals, PR #25 production links, reader samples and zero-write rerun verified |
 | [T31](tasks/T31.md) | Verify agreement across publishing formats | site | T11, T15, T19, T27 | Mandatory offline consistency gate deployed and passing |
-| [T32](tasks/T32.md) | Document and release the finished features | site+zas | T05, T11, T21, T29, T02, T31 | Docs merged; Zas v0.0.9 released; released pin adoption verified next |
+| [T32](tasks/T32.md) | Document and release the finished features | site+zas | T05, T11, T21, T29, T02, T31 | Docs merged; Zas v0.0.9 released and pinned; guarded builds and production adoption verified |
 
 ## Secondary work and maintenance
 

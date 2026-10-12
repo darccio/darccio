@@ -122,6 +122,8 @@ Maintain the documented ownership boundaries: generic features belong in Zas;
 templates, curation, source-date provenance and site assembly belong here.
 The operational `docs/HANDOFF-FACTS.md`, `docs/publication-provenance.md`,
 `docs/standard-site-backfill.md` and `docs/site-plan/PROGRESS.md` hold the audit,
-date evidence, unapproved candidate inventory and implementation receipts.
+date evidence, the approved archive inventory and implementation receipts. The
+[T30 receipt](docs/site-plan/tasks/T30.md) records the 26 published articles,
+production verification links, reader checks and zero-write online rerun.
 They are excluded from the deployed site. Registrar renewal, DNSSEC and external
 alert delivery require separate account evidence in `docs/DOMAIN-OPERATIONS.md`.
