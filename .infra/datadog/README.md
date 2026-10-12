@@ -236,10 +236,16 @@ Verify that cleanup deletes only this additional test and keeps the eight
 production resources. The persistent local `notification_probe_enabled` value
 stays false and `enabled` stays true.
 
-For each expiry test, use Datadog's **Simulate Notifications** action and receive
-the `[TEST]` notice. These prove routing; local threshold fixtures prove the
-90/60/30-day calculations. Simulated notifications and paused manual tests do
-not prove that a real monitor failure/recovery transition executed. See
+For each expiry test, open the Synthetic Tests list, select its three-dot menu
+and **Edit Test**, then scroll to **Monitor** / **Configure the test monitor**.
+The **Simulate Notifications** button is below the message editor,
+renotification controls and **Priority**, before **Permissions**. Select
+**Alert**, deselect **Alert Recovery** if both are checked, and click
+**Send Notifications**. Receive the `[TEST]` notice at the configured contact;
+leave the editor without saving configuration changes. These prove routing;
+local threshold fixtures prove the 90/60/30-day calculations. Simulated
+notifications and paused manual tests do not prove that a real monitor
+failure/recovery transition executed. See
 [Datadog's notification simulation](https://docs.datadoghq.com/synthetics/notifications/)
 and [alert state rules](https://docs.datadoghq.com/synthetics/guide/how-synthetics-monitors-trigger-alerts/).
 
