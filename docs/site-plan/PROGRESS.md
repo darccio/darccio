@@ -522,6 +522,8 @@ custom-domain deployment remains pending the review PR.
 
 ### Talks archive
 
+Committed as `70d44fb`.
+
 All 31 talks use the supplied archive-row pattern in two labelled sections
 (10 engineering, 21 culture). Dates retain their original full/month precision;
 15 undated rows remain undated. Language badges are decorative, with full
@@ -537,3 +539,19 @@ less than one third of the gap between rows, and all resource targets at least
 24px tall. Talks passes axe, visible keyboard focus and 320px normal/200% reflow
 in both OS themes at 1440px and 390px. Before/after screenshots are retained for
 the PR. Deployment and the final full-page matrix remain pending.
+
+### Article language tags
+
+The 35/9/12 archive rows replace all 56 bracketed codes with decorative badges
+and full spoken language names localized to each index, with explicit language
+on the spoken span even when its row is in another language. Titles, dates,
+URLs, microformats and one-line source rows are preserved. Archive dates use
+the mono small/muted tokens, including external citations.
+
+The existing guard required literal small-element bracket codes. Its contract
+and fixture now enforce the accessible badge/label pair instead; negative
+checks reject missing or hidden badges, incorrect language/name, labels inside
+p-name and spoken labels hidden from assistive technology. The original
+URL/date/entry/citation checks remain intact. Generate, full tests and vanity
+pass. All twelve archive browser scenarios pass axe, keyboard focus and 320px
+normal/200% reflow. Production acceptance remains pending deployment.

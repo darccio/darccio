@@ -155,13 +155,32 @@ func TestArchiveFixtureAndSemanticRegressions(t *testing.T) {
 	if err := validateArchive(archiveURL, "", posts, doc, data); err != nil {
 		t.Fatal(err)
 	}
+	badge := `<span class="lang-tag" aria-hidden="true">en</span>`
+	spoken := `<span class="visually-hidden" lang="ca"> (en anglès)</span>`
 	cases := []struct{ name, from, to string }{
 		{"missing entry", `class="h-entry"`, `class="entry"`},
 		{"duplicate entry", `<ul>`, `<ul><li class="h-entry" lang="en"><a class="p-name u-url u-uid" href="https://dario.cat/en/posts/example/">Example article</a></li>`},
-		{"missing visible language", `<small>[en]</small>`, ``},
-		{"hidden language label", `<small>[en]</small>`, `<small hidden>[en]</small>`},
-		{"hidden language ancestor", `<small>[en]</small>`, `<span hidden><small>[en]</small></span>`},
-		{"hidden language style", `<small>[en]</small>`, `<small style="display: none">[en]</small>`},
+		{"missing visible language", badge, ``},
+		{"wrong badge code", badge, `<span class="lang-tag" aria-hidden="true">ca</span>`},
+		{"badge lacks aria-hidden", badge, `<span class="lang-tag">en</span>`},
+		{"badge aria-hidden false", badge, `<span class="lang-tag" aria-hidden="false">en</span>`},
+		{"duplicate language badge", badge, badge + badge},
+		{"hidden language label", badge, `<span class="lang-tag" aria-hidden="true" hidden>en</span>`},
+		{"hidden language ancestor", badge, `<span hidden>` + badge + `</span>`},
+		{"hidden language style", badge, `<span class="lang-tag" aria-hidden="true" style="display: none">en</span>`},
+		{"visually hidden badge", badge, `<span class="lang-tag visually-hidden" aria-hidden="true">en</span>`},
+		{"hidden archive ancestor", `<ul>`, `<ul hidden>`},
+		{"missing spoken language", spoken, ``},
+		{"wrong full language name", spoken, `<span class="visually-hidden" lang="ca"> (en català)</span>`},
+		{"wrong label localization", spoken, `<span class="visually-hidden" lang="ca"> (in English)</span>`},
+		{"spoken language lacks page lang", spoken, `<span class="visually-hidden"> (en anglès)</span>`},
+		{"spoken language inherits row lang", spoken, `<span class="visually-hidden" lang="en"> (en anglès)</span>`},
+		{"aria-hidden spoken language", spoken, `<span class="visually-hidden" lang="ca" aria-hidden="true"> (en anglès)</span>`},
+		{"aria-hidden spoken ancestor", spoken, `<span aria-hidden="true">` + spoken + `</span>`},
+		{"hidden spoken language", spoken, `<span class="visually-hidden" lang="ca" hidden> (en anglès)</span>`},
+		{"inert spoken language", spoken, `<span class="visually-hidden" lang="ca" inert> (en anglès)</span>`},
+		{"missing external spoken language", `<span class="visually-hidden" lang="ca"> (en castellà)</span>`, ``},
+		{"language labels in p-name", `Example article</a> ` + badge + spoken, `Example article ` + badge + spoken + `</a>`},
 		{"wrong language", `class="h-entry" lang="en"`, `class="h-entry" lang="ca"`},
 		{"wrong date", `2024-07-01T10:00:00+02:00`, `2024-07-01T10:00:00+01:00`},
 		{"wrong URL", `https://dario.cat/en/posts/example/`, `https://dario.cat/en/posts/example/index.html`},
@@ -178,6 +197,34 @@ func TestArchiveFixtureAndSemanticRegressions(t *testing.T) {
 			doc, data := parsed(t, strings.Replace(input, test.from, test.to, 1), archiveURL)
 			if err := validateArchive(archiveURL, "", posts, doc, data); err == nil {
 				t.Fatal("archive regression was accepted")
+			}
+		})
+	}
+}
+
+func TestLanguageArchivesUseTheirOwnSpokenLanguage(t *testing.T) {
+	var lines []string
+	for _, line := range strings.Split(fixture(t, "archive.html"), "\n") {
+		if !strings.Contains(line, `class="h-cite"`) {
+			lines = append(lines, line)
+		}
+	}
+	for _, tc := range []struct{ language, label string }{{"en", "in English"}, {"es", "en español"}} {
+		t.Run(tc.language, func(t *testing.T) {
+			post := examplePost()
+			post.Language = tc.language
+			post.URL = homeURL + tc.language + "/posts/example/"
+			archiveURL := homeURL + tc.language + "/posts/"
+			input := strings.Join(lines, "\n")
+			input = strings.ReplaceAll(input, `lang="ca"`, `lang="`+tc.language+`"`)
+			input = strings.Replace(input, `class="h-entry" lang="en"`, `class="h-entry" lang="`+tc.language+`"`, 1)
+			input = strings.Replace(input, `href="https://dario.cat/posts/"`, `href="`+archiveURL+`"`, 1)
+			input = strings.Replace(input, `href="https://dario.cat/en/posts/example/"`, `href="`+post.URL+`"`, 1)
+			input = strings.Replace(input, `aria-hidden="true">en</span>`, `aria-hidden="true">`+tc.language+`</span>`, 1)
+			input = strings.Replace(input, `(en anglès)`, `(`+tc.label+`)`, 1)
+			doc, data := parsed(t, input, archiveURL)
+			if err := validateArchive(archiveURL, tc.language, []Post{post}, doc, data); err != nil {
+				t.Fatal(err)
 			}
 		})
 	}

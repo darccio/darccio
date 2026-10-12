@@ -344,6 +344,13 @@ body > footer {
   text-align: center;
 }
 
+.h-feed > ul > li > time {
+  font-family: var(--font-mono);
+  font-size: var(--fz-sm);
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
 /* Long words (titles in three languages, product names) must wrap at
    320px and 200% text instead of scrolling sideways. */
 h1, h2, h3, h4 { overflow-wrap: break-word; hyphens: auto; }
