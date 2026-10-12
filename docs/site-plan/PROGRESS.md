@@ -560,6 +560,8 @@ normal/200% reflow. Production acceptance remains pending deployment.
 
 ### Homepage paths and contact
 
+Committed as `53143d9`.
+
 The homepage now places its 96px photo beside the name, retains the existing
 bio note verbatim, shows Per on començar next, and then the compact shared
 contact row. Duplicate prose profile links are removed; each profile occurs
@@ -574,3 +576,16 @@ list fits within 636px on a 1440×900 viewport. Contact links are 44px tall with
 pass axe, visible keyboard focus and 320px normal/200% reflow. Head identity
 links and JSON-LD remain intentionally separate from the visible contact row;
 custom-domain acceptance remains pending the review PR.
+
+### Project resource names
+
+The six repeated repository/API links now append their project name as spoken
+context, while visible labels and destinations stay unchanged. All five parsed
+h-item objects and the complete project href list equal the pre-change build.
+Generate, full tests, vanity and microformats checks pass. The final 36 browser
+scenarios (nine pages, light/dark, 1440px/390px) have zero axe violations,
+working focused skip links, visible link focus and no 320px overflow at normal
+or 200% text. Every prior HTML route remains present. All seven vanity contracts,
+the raw fragments and the CV JSON are preserved; talk links/events and the
+representative homepage card remain unchanged. The final screenshot/commit
+receipt and hosted preview follow this unit; production follows owner merge.
