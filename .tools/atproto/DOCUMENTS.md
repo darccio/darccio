@@ -1,9 +1,19 @@
 # Reviewed Standard.site document publishing
 
-The document tool defaults to an offline dry-run. The committed
-[allowlist](documents-allowlist.json) is empty: no archive document has been
-approved or published by this implementation. Building or deploying the site
-never requires a PDS connection or credentials.
+The document tool defaults to an offline dry-run. The versioned
+[allowlist](documents-allowlist.json) defines the exact paths and publication
+instants selected for publishing. The T30 proposal contains 26 articles;
+merging its approval PR authorizes that selection and its full rendered text.
+Before that merge, production's approval list remains empty and this proposal
+has published no records. Building or deploying the site never requires a PDS
+connection or credentials.
+
+The existing **Standard.site documents** workflow automatically applies the
+reviewed allowlist after a successful current-main production deployment. A
+nonempty allowlist merge is therefore a publication action, rather than merely
+preparation for a later manual run. Public AT Protocol records can be copied
+outside the site's robots.txt policy. Review the exact selection and full-text
+preview before merging; run apply only after the owner approves publication.
 
 From the site root:
 
@@ -156,4 +166,13 @@ The existing T26 client supplies session and identity handling. See also the
 
 Real document creation, public retrieval, matching page verification links,
 and a second unchanged online run remain acceptance checks after specific
-document approval. This implementation performs no historical publication.
+document approval. The current T30 proposal is reviewed offline; its record
+creation and public verification have not yet occurred.
+
+Successful apply runs upload their public plan as
+`standard-site-document-apply-plan`, retained for seven days. Use its action
+counts and actual public records to verify publication; these soft-failing
+jobs can leave the overall workflow green despite a failed apply. An unchanged
+online rerun must contain only `unchanged` actions, with zero record writes.
+The artifact includes public record values, not session credentials or private
+recovery state. The verified-URI artifact remains separate for the state PR.
