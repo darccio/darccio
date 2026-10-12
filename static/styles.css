@@ -242,7 +242,7 @@ body > header {
   border-radius: var(--radius-sm);
 }
 
-.primary-navigation, nav[aria-label="Contact"] {
+.primary-navigation {
   display: flex;
   flex-wrap: wrap;
   gap: 0 var(--space-5);
@@ -259,7 +259,7 @@ body > header {
   padding-bottom: var(--space-2);
 }
 
-.primary-navigation > a, nav[aria-label="Contact"] > a {
+.primary-navigation > a {
   display: inline-flex;
   align-items: center;
   min-height: var(--target-comfortable);
@@ -349,6 +349,52 @@ body > footer {
   font-size: var(--fz-sm);
   color: var(--text-muted);
   font-variant-numeric: tabular-nums;
+}
+
+.home-intro {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    align-items: center;
+    gap: var(--space-4) var(--space-5);
+}
+
+.home-intro h1 {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.home-intro > p {
+    grid-column: 1 / -1;
+    margin: 0;
+}
+
+.home-intro .u-photo {
+    display: block;
+    width: 96px;
+    height: 96px;
+    margin: 0;
+    border-radius: var(--radius-sm);
+}
+
+.home-paths {
+    margin-block: var(--space-6);
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: var(--fz-sm);
+    line-height: var(--leading-mono);
+    letter-spacing: var(--tracking-nav);
+}
+
+.contact-links > a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--target-comfortable);
 }
 
 /* Long words (titles in three languages, product names) must wrap at

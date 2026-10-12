@@ -542,6 +542,8 @@ the PR. Deployment and the final full-page matrix remain pending.
 
 ### Article language tags
 
+Committed as `50cb1d6`.
+
 The 35/9/12 archive rows replace all 56 bracketed codes with decorative badges
 and full spoken language names localized to each index, with explicit language
 on the spoken span even when its row is in another language. Titles, dates,
@@ -555,3 +557,20 @@ p-name and spoken labels hidden from assistive technology. The original
 URL/date/entry/citation checks remain intact. Generate, full tests and vanity
 pass. All twelve archive browser scenarios pass axe, keyboard focus and 320px
 normal/200% reflow. Production acceptance remains pending deployment.
+
+### Homepage paths and contact
+
+The homepage now places its 96px photo beside the name, retains the existing
+bio note verbatim, shows Per on començar next, and then the compact shared
+contact row. Duplicate prose profile links are removed; each profile occurs
+once in main, with rel=me retained. The newsletter label is Rizoma. Speaker
+Deck moves into the shared partial without adding a new h-card URL property.
+The photo retains its canonical asset URL; all parsed representative h-card
+properties are exactly unchanged. The optional projects line stays omitted.
+
+Generate, full tests, vanity and microformats checks pass. The whole starting
+list fits within 636px on a 1440×900 viewport. Contact links are 44px tall with
+16px gaps in both directions. All twelve home/about/contact browser scenarios
+pass axe, visible keyboard focus and 320px normal/200% reflow. Head identity
+links and JSON-LD remain intentionally separate from the visible contact row;
+custom-domain acceptance remains pending the review PR.
