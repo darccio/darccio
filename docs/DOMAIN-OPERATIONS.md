@@ -31,6 +31,14 @@ The previously pending scheduled-run evidence is now present: [Vanity metadata m
 
 Fresh registry and validating-resolver checks still report expiration `2027-06-01T07:05:04.361Z`, status `active`, `delegationSigned:false`, unchanged Cloudflare nameservers, and no DS/DNSKEY answers. Auto-renew, payment, transfer lock and independent monitoring remain unverified. No account or DNS change was made.
 
+## Owner confirmation, 2026-10-12
+
+Dario confirms auto-renew enabled, transfer lock enabled, billing and contact details checked, and a registrar expiry of **2028-06-01**. These are owner-confirmed account facts; no payment or contact details are recorded here.
+
+Independent public verification at **2026-10-12 07:13:57 UTC** confirms registry expiration `2028-06-01T07:05:04.361Z` at [registry RDAP](https://rdap.nic.cat/rdap/domain/dario.cat), with registry WHOIS agreeing. The registry reports `renew period` and a last-change timestamp of `2026-10-12T07:10:05.613Z`. [Registrar RDAP](https://rdap.swhosting.com/domain/dario.cat), checked at **07:12:44 UTC**, reports `registrar expiration: 2028-06-01T00:00:00Z`. The earlier old-year response was superseded by these fresh checks; paid runway greater than one year is now independently confirmed.
+
+Auto-renew, transfer lock and billing/contact checks are owner-confirmed. Both RDAP responses still report `delegationSigned:false`; WHOIS reports unsigned DNSSEC, and the same Cloudflare nameservers remain. Item 1 is complete. Validated DNSSEC and independent alert setup remain open.
+
 ## Registrar protection in SW Hosting
 
 1. Sign in to SWPanel and open **Domains and SSL → Domain Portfolio → dario.cat**. Confirm that this is the account controlling registration and that owner/admin contact email reaches you. Review MFA and recovery access.
