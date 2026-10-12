@@ -4,6 +4,11 @@ locals {
     for route in jsondecode(file("${path.module}/../../.tools/vanity/internal/vanity/baseline.json")) :
     trim(route.path, "/") => route
   }
+  # The owner prioritizes the two production libraries within the ~$5/month
+  # schedule. Keep both request forms and exact assertions for every package.
+  vanity_intervals = {
+    for name in keys(local.routes) : name => contains(["mergo", "darna"], name) ? 1800 : 7200
+  }
   status        = var.enabled ? "live" : "paused"
   notifications = join(" ", var.notification_handles)
   tags          = ["site:dario.cat", "env:production", "managed-by:terraform", "purpose:domain-protection"]
@@ -90,7 +95,7 @@ resource "datadog_synthetics_test" "vanity" {
   }
 
   options_list {
-    tick_every           = 900
+    tick_every           = local.vanity_intervals[each.key]
     allow_insecure       = false
     min_failure_duration = 0
     min_location_failed  = 1
@@ -124,7 +129,7 @@ resource "datadog_synthetics_test" "certificate" {
     target   = tostring(var.certificate_warning_days)
   }
   options_list {
-    tick_every                    = 3600
+    tick_every                    = 86400
     accept_self_signed            = false
     ignore_certificate_validation = false
     min_failure_duration          = 0
@@ -200,7 +205,7 @@ resource "datadog_synthetics_test" "dnssec" {
     code = file("${path.module}/dnssec.js")
   }
   options_list {
-    tick_every           = 900
+    tick_every           = 86400
     follow_redirects     = false
     allow_insecure       = false
     min_failure_duration = 0

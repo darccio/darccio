@@ -104,8 +104,12 @@ For rollback, remove the parent DS through the registrar first. Keep Cloudflare 
 
 The owner selected **Datadog EU1** and **cc@dario.cat** for notifications. The
 [Terraform module](../.infra/datadog/README.md) prepares seven two-step import
-checks and two validating-resolver checks every **15 minutes**, hourly TLS
-expiry checks, and daily registry-renewal warnings at **90, 60 and 30 days**.
+checks on the owner's selected budget schedule: **Mergo/darna every 30 minutes**,
+the other five imports **every 2 hours**, and **daily** validating-resolver/TLS
+checks and registry-renewal warnings at **90, 60 and 30 days**. A single location
+schedules **9,540 runs per 30 days** (9,858 per 31 days), about **$4.77/month**
+at the published annual-agreement rate; the local rate input can reflect the
+account's actual pricing. Retries/manual runs are additional.
 It runs from Datadog's managed Frankfurt location independently of GitHub,
 Pages builds and PDS. Tests are paused by default; account apply, actual
 scheduled successes and received failure/recovery/expiry notices are still
@@ -151,4 +155,4 @@ On failure, inspect the failed step first: checkout/toolchain failures need a su
 
 The owner should add a private quarterly review on **15 January, April, July and October**, plus a review after any registrar, billing, nameserver, DNSSEC, Pages routing or account-security change. This document creates no calendar entries or external schedules.
 
-At each review, check paid runway greater than one year, auto-renew/payment, transfer lock, contacts/MFA/recovery, validated DNSSEC, provider expiry notices, the latest external checks and notification test, and an enabled/recent GitHub schedule. Store dated evidence privately. T01 remains pending until the registrar evidence, successful DNSSEC validation, active external 30-minute checks, received test/recovery/expiry notices and observed GitHub runs are all available.
+At each review, check paid runway greater than one year, auto-renew/payment, transfer lock, contacts/MFA/recovery, validated DNSSEC, provider expiry notices, the latest external checks and notification test, and an enabled/recent GitHub schedule. Store dated evidence privately. T01 remains pending until the registrar evidence, successful DNSSEC validation, active external checks at the owner's selected 30-minute/two-hour/daily cadence, received test/recovery/expiry notices and observed GitHub runs are all available. The owner explicitly relaxed independent checks of the five other imports to two hours to target about $5/month; the GitHub backstop still checks every package twice an hour.

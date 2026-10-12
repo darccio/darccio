@@ -34,6 +34,16 @@ variable "enabled" {
   default     = false
 }
 
+variable "api_test_rate_usd_per_10000" {
+  description = "USD price per 10,000 API step-runs used only for monthly cost estimates. Default is the published annual-agreement rate; use your account's actual rate (published on-demand: 7.20)."
+  type        = number
+  default     = 5
+  validation {
+    condition     = var.api_test_rate_usd_per_10000 >= 0
+    error_message = "The API test price must be zero or a positive USD amount."
+  }
+}
+
 variable "certificate_warning_days" {
   description = "Alert when the HTTPS certificate has no more than this many days remaining."
   type        = number

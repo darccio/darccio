@@ -13,9 +13,10 @@ builds and the PDS. The owner selected EU1 and `cc@dario.cat`; EU1 uses
 
 | Tests | Schedule | Failure condition |
 | --- | --- | --- |
-| Seven two-step vanity tests | Every 15 minutes | Bare URL's exact 308 redirect/query changes, or canonical response fails TLS/HTTP/content-type/HTML metadata checks |
-| Two validating DNS resolvers | Every 15 minutes | Google or Cloudflare cannot return an authenticated `dario.cat` A answer with validation enabled |
-| One TLS certificate test | Hourly | Invalid certificate or 14 days or fewer until expiration |
+| Mergo and darna two-step vanity tests | Every 30 minutes | Bare URL's exact 308 redirect/query changes, or canonical response fails TLS/HTTP/content-type/HTML metadata checks |
+| Other five two-step vanity tests | Every 2 hours | Same exact redirect, TLS, HTTP and metadata checks |
+| Two validating DNS resolvers | Daily | Google or Cloudflare cannot return an authenticated `dario.cat` A answer with validation enabled |
+| One TLS certificate test | Daily | Invalid certificate or 14 days or fewer until expiration |
 | Three registry-expiry tests | Daily | 90, 60 or 30 days or fewer until registry expiration, or usable registry data is missing |
 
 The vanity tests read the same reviewed
@@ -28,14 +29,32 @@ then the second requests the expected slash URL directly. A failed bare step
 remains critical while allowing the canonical check to run. No browser test or
 client JavaScript is needed.
 
-The normal monitoring budget is **46,890 API step-runs per 30 days** for one
+The owner selected this schedule to target **about $5 per month**. Independent
+checks for Mergo/darna retain a thirty-minute cadence; package-specific failures
+in the other imports can take up to two hours to be detected. Resolver and expiry
+checks run daily. The full GitHub backstop remains every thirty minutes.
+
+The normal monitoring budget is **9,540 API step-runs per 30 days** for one
 location, before retries, manual runs and the temporary notification probe.
+That is 5,760 priority-import requests, 3,600 other-import requests and 180
+auxiliary requests. A 31-day month schedules **9,858** runs.
 Each multistep request and each additional location contributes billed runs.
-Datadog's published API starting rate is $5 per 10,000 runs with annual billing;
-that gives about $23.45 at that rate, while your account's agreement determines
-actual charges. See [Datadog pricing and billing definitions](https://www.datadoghq.com/pricing/?product=synthetic-monitoring).
-The Terraform output reports zero scheduled runs while production tests are
-paused and the active schedule's budget after activation.
+
+| Published rate per 10,000 API runs | Estimate per 30-day month | Estimate per 31-day month |
+| --- | --- | --- |
+| $5 with an annual agreement | **$4.77/month** | **$4.93/month** |
+| $6 with a month-to-month agreement | $5.72/month | $5.91/month |
+| $7.20 on-demand | $6.87/month | $7.10/month |
+
+Rates were checked on 12 October 2026 against the
+[Datadog price list](https://www.datadoghq.com/pricing/list/); see also the
+[per-step billing definition](https://www.datadoghq.com/pricing/?product=synthetic-monitoring).
+Your account's agreement determines actual charges. Set local
+`api_test_rate_usd_per_10000` to its actual rate to get the appropriate estimate;
+this input changes the estimate only. Usage outputs are calculated from the
+actual planned schedules and step counts and report zero for paused production
+tests. The estimate excludes retries, manual runs and the optional notification
+probe and does not impose an account spending cap.
 
 ## Create and inspect the tests
 
@@ -87,6 +106,8 @@ terraform plan -out=monitoring.tfplan
 terraform apply monitoring.tfplan
 terraform output test_ids
 terraform output scheduled_requests_per_30_days
+terraform output scheduled_requests_per_31_days
+terraform output estimated_scheduled_cost_usd
 ```
 
 The existing tests become live, with one failed location sufficient to alert,
