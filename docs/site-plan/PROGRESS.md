@@ -463,7 +463,7 @@ resume template, allowing Cloudflare to hide its email. Existing contact pages
 already retain their exclusions.
 
 The correction emits only the two reviewed static comment boundaries as trusted
-template data. A regression test checks the exact protected email fragment;
+template data in `6ff0f56`. A regression test checks the exact protected email fragment;
 the guarded generated HTML retains both boundaries. Generate, full repository
 tests and the seven-package vanity check pass. Production email acceptance
 follows deployment of this correction. No CV data or processing scope changes.
@@ -481,3 +481,20 @@ exact href/event snapshot were captured before design edits. User-supplied
 Appendices A/B replace the inaccessible design-system artifact; tokens remain
 verbatim. Fonts come from the pinned Fontsource packages with original OFL
 licenses, verified npm integrity and individual file checksums.
+
+### Design foundations
+
+Self-hosted Newsreader 400/500/600 and 400 italic and IBM Plex Mono 400/500
+replace the system-font foundation. Both pinned Fontsource 5.3.0 packages retain
+their OFL licenses and checksums. `tokens.css` equals Appendix A byte-for-byte;
+the exact Appendix B is the stylesheet suffix. The missing hairline shorthand
+is supplied only in `styles.css`, preserving the tokens.
+
+The inline style block is removed. The centered column, theme colors, serif
+headings, paragraph rhythm, mono code/navigation, focus outline and wrapping
+use the supplied tokens. Generate, full repository tests and vanity checks pass.
+All 36 browser scenarios (nine requested pages, two widths and two OS themes)
+have zero axe violations and visible keyboard focus. Every scenario passes
+320px reflow at normal and 200% text, with both font families loaded locally.
+No theme JavaScript or external font request is added. Later units own the
+header/current-navigation and catalogue changes; their acceptance is still pending.
