@@ -230,3 +230,20 @@ The owner selected Datadog EU1, Terraform and `cc@dario.cat` alerts. The prepare
 ## Reduced monitoring budget · 2026-10-12
 
 PR #17 merged as `20bfd48`. The owner then requested about $5/month and explicitly chose Mergo/darna checks every thirty minutes, other imports every two hours, and daily auxiliary tests. That schedule retains all thirteen test resources and exact URL/metadata assertions while reducing scheduled runs from 46,890 to 9,540 per thirty days. Monthly estimates at the published annual-agreement rate are $4.77 for thirty days and $4.93 for thirty-one days; the account-specific rate is configurable. Independent detection for the other five imports is now on the chosen two-hour cadence; the full GitHub backstop remains thirty minutes. Account apply and received notices remain pending.
+
+## Datadog partial apply and assertion correction · 2026-10-12
+
+The owner merged PR #18 and resolved account authentication. Their apply created
+the certificate, two DNSSEC and three registry-expiry tests, then Datadog
+rejected all seven vanity tests with `Global variable invalid names`. The
+rejected name exactly matches compressed HTML entity data enclosed in literal
+double braces inside the generated parser bundle. This is an assertion-build
+defect; the text is public parser data, not account material.
+
+The follow-up escapes literal variable openers in JavaScript string data while
+preserving decoded values. Restricted-runtime fixtures and mocked plans cover
+the generated bundle, all seven route-injected assertions and the temporary
+failure/recovery probe. The operator guide retains the six successful resources
+and requires a fresh plan after updating, without deleting state or reusing the
+failed saved plan. Hosted execution, activation and received notices remain
+owner work; creation alone does not establish active monitoring.

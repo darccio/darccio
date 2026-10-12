@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "node build.mjs",
-    "test": "node --test vanity.test.mjs",
+    "test": "node --test *.test.mjs",
     "check-bundle": "node build.mjs --check"
   },
   "dependencies": {

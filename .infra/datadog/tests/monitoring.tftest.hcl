@@ -36,6 +36,10 @@ run "active_public_probes" {
     error_message = "Inject the exact shared metadata into each parser and address real failure/recovery notifications."
   }
   assert {
+    condition     = alltrue([for test in datadog_synthetics_test.vanity : !strcontains(nonsensitive(test.api_step[1].assertion[2].code), "{{")])
+    error_message = "Rendered JavaScript must not contain a Datadog variable opener, including in bundled entity data."
+  }
+  assert {
     condition     = datadog_synthetics_test.certificate.options_list[0].accept_self_signed == false && datadog_synthetics_test.certificate.options_list[0].ignore_certificate_validation == false && datadog_synthetics_test.certificate.assertion[0].target == "14"
     error_message = "Retain valid certificate checks and the reviewed fourteen-day expiry warning."
   }
@@ -90,6 +94,10 @@ run "isolated_failure_notification" {
     condition     = length(datadog_synthetics_test.notification_probe) == 1 && datadog_synthetics_test.notification_probe[0].status == "live" && strcontains(datadog_synthetics_test.notification_probe[0].assertion[1].code, "https://example.invalid/notification-probe") && alltrue([for test in datadog_synthetics_test.vanity : test.status == "paused"])
     error_message = "The temporary test must exercise a real wrong-metadata failure while leaving primary tests unchanged."
   }
+  assert {
+    condition     = !strcontains(nonsensitive(datadog_synthetics_test.notification_probe[0].assertion[1].code), "{{")
+    error_message = "The failure probe must use an assertion safe for Datadog variable substitution."
+  }
 }
 
 run "isolated_recovery_notification" {
@@ -101,6 +109,10 @@ run "isolated_recovery_notification" {
   assert {
     condition     = strcontains(datadog_synthetics_test.notification_probe[0].assertion[1].code, local.routes["mergo"].go_import[0]) && !strcontains(datadog_synthetics_test.notification_probe[0].assertion[1].code, "https://example.invalid/notification-probe")
     error_message = "The same temporary monitor must recover with the exact production metadata."
+  }
+  assert {
+    condition     = !strcontains(nonsensitive(datadog_synthetics_test.notification_probe[0].assertion[1].code), "{{")
+    error_message = "The recovery probe must use an assertion safe for Datadog variable substitution."
   }
 }
 
