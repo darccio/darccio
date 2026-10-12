@@ -31,6 +31,47 @@ The previously pending scheduled-run evidence is now present: [Vanity metadata m
 
 Fresh registry and validating-resolver checks still report expiration `2027-06-01T07:05:04.361Z`, status `active`, `delegationSigned:false`, unchanged Cloudflare nameservers, and no DS/DNSKEY answers. Auto-renew, payment, transfer lock and independent monitoring remain unverified. No account or DNS change was made.
 
+## Owner confirmation, 2026-10-12
+
+Dario confirms auto-renew enabled, transfer lock enabled, billing and contact details checked, and a registrar expiry of **2028-06-01**. These are owner-confirmed account facts; no payment or contact details are recorded here.
+
+Independent public verification at **2026-10-12 07:13:57 UTC** confirms registry expiration `2028-06-01T07:05:04.361Z` at [registry RDAP](https://rdap.nic.cat/rdap/domain/dario.cat), with registry WHOIS agreeing. The registry reports `renew period` and a last-change timestamp of `2026-10-12T07:10:05.613Z`. [Registrar RDAP](https://rdap.swhosting.com/domain/dario.cat), checked at **07:12:44 UTC**, reports `registrar expiration: 2028-06-01T00:00:00Z`. The earlier old-year response was superseded by these fresh checks; paid runway greater than one year is now independently confirmed.
+
+Auto-renew, transfer lock and billing/contact checks are owner-confirmed. Both RDAP responses still report `delegationSigned:false`; WHOIS reports unsigned DNSSEC, and the same Cloudflare nameservers remain. Item 1 is complete. Validated DNSSEC and independent alert setup remain open.
+
+## Cloudflare DNSSEC handoff, 2026-10-12
+
+The owner supplies the following public DS record after enabling Cloudflare signing:
+
+```text
+dario.cat. 3600 IN DS 2371 13 2 64921FF6361DDA0ECC288F28CAFACA444B5E162BE06DB16FB1910D4316082762
+```
+
+The public KSK has flags `257`, protocol `3`, algorithm `13` and key tag `2371`:
+
+```text
+mdsswUyr3DPW132mOi8V9xESWE8jTo0dxCjjnopKl+GqJxpVXckHAeF+KkxLbxILfDLUT0rAK9iUzy1L53eKGQ==
+```
+
+BIND's `dnssec-dsfromkey -2` independently derives exactly the supplied key tag and SHA-256 digest from the retrieved DNSKEY. Independent wire-format hashing also agrees. At **07:30:47 UTC**, the [HTTPS DNSKEY response](https://cloudflare-dns.com/dns-query?name=dario.cat&type=DNSKEY&do=1) contains the same KSK and DNSKEY RRSIG. Cloudflare and [Google HTTPS DS responses](https://dns.google/resolve?name=dario.cat&type=DS&do=1) have status NOERROR, AD=true and empty answers with signed denial records; `delv` reports an unsigned answer. These establish resolver-visible authenticated DS absence, not a complete DNSSEC chain. Requests naming authoritative servers returned recursive flags in this environment, so they are not evidence of a fresh direct authoritative query.
+
+Cloudflare signing is verified at this handoff. Registrar publication of the DS and a fully authenticated DNSSEC chain remain pending. The registrar DS form needs key tag `2371`, algorithm `13`, digest type `2` and the digest above. Keep the current Cloudflare nameservers. If the domain-control panel has no external-DS form, the owner should ask SW Hosting support to publish these exact DS values at the `.cat` parent. No external message or DNS mutation was performed by the agent.
+
+## DNSSEC completion receipt, 2026-10-12
+
+The owner saved the Cloudflare KSK in SWPanel's domain **Registros DSSec** form. Its fields accept DNSKEY data: **Marques (flags) `257`**, **Protocol `3`**, **Algoritme `13`**, and the exact public key above. Algorithm `13` is ECDSA P-256 with SHA-256; DS digest type `2` separately selects SHA-256. Submitting this key data produced the matching parent DS; this form does not require a separate key-tag or digest field.
+
+Fresh [registry RDAP](https://rdap.nic.cat/rdap/domain/dario.cat) reports `secureDNS.delegationSigned:true` and the exact `257 / 3 / 13` public KSK in `keyData`; registrar RDAP also reports `delegationSigned:true`. The registry records the change at `2026-10-12T08:10:09.378Z`. Nameservers remain `ray.ns.cloudflare.com` and `jean.ns.cloudflare.com`.
+
+After earlier unsigned answers, successful verification completed at **2026-10-12 08:17:15 UTC**:
+
+- [Google's DS response](https://dns.google/resolve?name=dario.cat&type=DS&do=1&cd=0) and Cloudflare's DNS-over-HTTPS JSON response both contain exactly the supplied DS: key tag `2371`, algorithm `13`, digest type `2`, and digest `64921FF6361DDA0ECC288F28CAFACA444B5E162BE06DB16FB1910D4316082762`. Digest letter case differs between providers but the bytes agree.
+- Both providers' DS, A and DNSKEY responses have `Status:0`, `AD:true`, `CD:false`, with the expected answers present. Cloudflare JSON queries use `https://cloudflare-dns.com/dns-query` with `Accept: application/dns-json` and `name=dario.cat&type=<type>&do=1&cd=0`.
+- `delv @1.1.1.1 dario.cat A` and `delv @8.8.8.8 dario.cat DNSKEY` both report `; fully validated`, establishing the complete authenticated chain. These are validating-resolver checks; no direct-authoritative claim is made.
+- The committed live vanity checker passes all **fourteen** bare/slash `?go-get=1` routes for the seven reviewed packages after DS publication.
+
+This receipt supersedes the earlier DS-absence and pending-chain status. Owner items **1 (renewal/protection)** and **2 (DNSSEC)** are complete. T01 remains open for independently scheduled monitoring and received failure, recovery and expiry notices. The agent performed read-only verification; the owner changed the account settings.
+
 ## Registrar protection in SW Hosting
 
 1. Sign in to SWPanel and open **Domains and SSL → Domain Portfolio → dario.cat**. Confirm that this is the account controlling registration and that owner/admin contact email reaches you. Review MFA and recovery access.
@@ -44,7 +85,7 @@ The current nameservers belong to Cloudflare. SW Hosting's [hosting DNSSEC switc
 
 1. Save the existing parent DS response and TTL, nameservers and Cloudflare zone settings privately. Confirm that the registrar can publish Cloudflare's DS values to the `.cat` parent before activation.
 2. In Cloudflare, select **dario.cat → DNS → Settings → DNSSEC → Enable DNSSEC**. Keep the existing nameservers. Copy the generated key tag, algorithm, digest type and digest exactly.
-3. Publish that DS through SW Hosting's registrar DS management. If no such control is available, prepare an administrative support ticket requesting publication of those exact four values for `dario.cat` at the `.cat` parent, with nameservers unchanged. Account access or support confirmation is required; this repository cannot perform the change.
+3. Use SW Hosting's separately documented [domain DS manager](https://www.swhosting.com/es/comunidad/manual/como-gestionar-registros-ds-desde-swpanel): **Dominios y SSL → Cartera de dominios → dario.cat → […] → Registros DSSec → Crear Registro**. The control is documented for Professional/Reseller modes. If hidden, their [mode guide](https://www.swhosting.com/es/comunidad/manual/modos-de-swpanel) documents a free switch via **profile → Mi SWPanel → Preferencias de mi SWPanel → Funcionamiento → Profesional → Guardar preferencias**. The owner-confirmed form accepts DNSKEY flags, protocol, algorithm and the base64 public key; enter Cloudflare's KSK values exactly, as in the completion receipt above. A form accepting DS data instead needs Cloudflare's key tag, algorithm, digest type and digest. Keep Cloudflare nameservers. This domain control is distinct from the hosting-signing switch above. If the action is missing or rejected, ask registrar support to confirm and publish the external Cloudflare DS. Publication and successful chain verification remain required after any key change.
 4. After propagation, compare the published parent DS to Cloudflare's values and validate the chain from a network-capable host:
 
    ```sh
