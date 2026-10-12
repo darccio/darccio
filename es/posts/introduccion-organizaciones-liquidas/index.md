@@ -1,11 +1,12 @@
 <!--
-date_created: "2013-07-01"
+date_created: "2013-07-02"
+date_created_original: "2013-07-01"
+date: "2013-07-02T10:00:39+02:00"
+date_source: "Owner instructed using the English translation's timestamp on 2026-10-12."
 article: true
-date_precision: day
+date_precision: instant
 summary: "Introducción al modelo de organizaciones horizontales de Lýd, basado en la delegación voluntaria y los flujos para facilitar la participación y las decisiones colectivas."
 language: es
-feed: false
-atproto: false
 tags: [ "liquid organizations", "liquid democracy", "lyd" ]
 -->
 
