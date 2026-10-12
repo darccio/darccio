@@ -214,3 +214,7 @@ The scheduled monitoring backstop is now observed successfully. The registrar ex
 ## Registrar owner confirmation · 2026-10-12
 
 The owner confirms auto-renew and transfer lock enabled, billing/contact details checked, and registrar expiry `2028-06-01`. These account checks are recorded without private billing/contact material. Fresh .cat RDAP and registry WHOIS confirm `2028-06-01T07:05:04.361Z`; registrar RDAP independently confirms the paid term. Item 1 is complete, superseding the initially older registry response. DNSSEC and external alerts remain the next owner steps. Site release-pin PR #15 is merged as `92d4956`.
+
+## DNSSEC DS handoff · 2026-10-12
+
+Cloudflare signing is enabled, with public DNSKEY records and verified KSK key tag `2371`/algorithm `13`. The SHA-256 digest exactly matches the supplied DS. Public resolver checks show no parent DS and an unsigned answer; registrar DS publication and end-to-end chain validation remain next. The open operational receipt includes the exact public fields and records the transport limitations without claiming direct authoritative verification.

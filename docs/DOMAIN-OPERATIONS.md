@@ -39,6 +39,24 @@ Independent public verification at **2026-10-12 07:13:57 UTC** confirms registry
 
 Auto-renew, transfer lock and billing/contact checks are owner-confirmed. Both RDAP responses still report `delegationSigned:false`; WHOIS reports unsigned DNSSEC, and the same Cloudflare nameservers remain. Item 1 is complete. Validated DNSSEC and independent alert setup remain open.
 
+## Cloudflare DNSSEC handoff, 2026-10-12
+
+The owner supplies the following public DS record after enabling Cloudflare signing:
+
+```text
+dario.cat. 3600 IN DS 2371 13 2 64921FF6361DDA0ECC288F28CAFACA444B5E162BE06DB16FB1910D4316082762
+```
+
+The public KSK has flags `257`, protocol `3`, algorithm `13` and key tag `2371`:
+
+```text
+mdsswUyr3DPW132mOi8V9xESWE8jTo0dxCjjnopKl+GqJxpVXckHAeF+KkxLbxILfDLUT0rAK9iUzy1L53eKGQ==
+```
+
+BIND's `dnssec-dsfromkey -2` independently derives exactly the supplied key tag and SHA-256 digest from the retrieved DNSKEY. Independent wire-format hashing also agrees. At **07:30:47 UTC**, the [HTTPS DNSKEY response](https://cloudflare-dns.com/dns-query?name=dario.cat&type=DNSKEY&do=1) contains the same KSK and DNSKEY RRSIG. Cloudflare and [Google HTTPS DS responses](https://dns.google/resolve?name=dario.cat&type=DS&do=1) have status NOERROR, AD=true and empty answers with signed denial records; `delv` reports an unsigned answer. These establish resolver-visible authenticated DS absence, not a complete DNSSEC chain. Requests naming authoritative servers returned recursive flags in this environment, so they are not evidence of a fresh direct authoritative query.
+
+Cloudflare signing is verified at this handoff. Registrar publication of the DS and a fully authenticated DNSSEC chain remain pending. The registrar DS form needs key tag `2371`, algorithm `13`, digest type `2` and the digest above. Keep the current Cloudflare nameservers. If the domain-control panel has no external-DS form, the owner should ask SW Hosting support to publish these exact DS values at the `.cat` parent. No external message or DNS mutation was performed by the agent.
+
 ## Registrar protection in SW Hosting
 
 1. Sign in to SWPanel and open **Domains and SSL → Domain Portfolio → dario.cat**. Confirm that this is the account controlling registration and that owner/admin contact email reaches you. Review MFA and recovery access.
