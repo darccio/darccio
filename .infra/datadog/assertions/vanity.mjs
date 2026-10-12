@@ -1,6 +1,6 @@
-// Use the pinned tokenizer entry directly; parse5's public index imports the
-// full tree parser and retains unrelated initialization in a standalone bundle.
-import { Tokenizer, TokenizerMode } from './node_modules/parse5/dist/tokenizer/index.js';
+// Compile the unchanged, pinned tokenizer TypeScript directly so esbuild can
+// inline its state enums. The build verifies the vendored source checksums.
+import { Tokenizer, TokenizerMode } from './vendor/parse5/tokenizer/index.ts';
 
 // Match Go strings.Fields/TrimSpace, rather than JavaScript's different \s set.
 const space = /[\t\n\v\f\r \u0085\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000]+/;

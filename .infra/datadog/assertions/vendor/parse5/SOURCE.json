@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "name": "parse5",
+  "release": "8.0.1",
+  "repository": "https://github.com/inikulin/parse5",
+  "commit": "0d56627fc924d40f560fd260ade0e1a935e2369c",
+  "files": {
+    "tokenizer/index.ts": {
+      "upstream": "packages/parse5/lib/tokenizer/index.ts",
+      "sha256": "b261a0f91bd18975462e7770dd419dc148766c4206b4d7d235c2e051ed3cfe54"
+    },
+    "tokenizer/preprocessor.ts": {
+      "upstream": "packages/parse5/lib/tokenizer/preprocessor.ts",
+      "sha256": "029caeb53e0f337f48f651bc9bd28b769257aa9c771d45ced940d0af750ff973"
+    },
+    "common/token.ts": {
+      "upstream": "packages/parse5/lib/common/token.ts",
+      "sha256": "b80bf4be6b1ccdce0bca9a392d5dc6ac874a158826249e544b75d8327432f4e7"
+    },
+    "common/unicode.ts": {
+      "upstream": "packages/parse5/lib/common/unicode.ts",
+      "sha256": "fc010faa522012ddfa05b4e6ea9374fc69d2d6093c1c28e4a03005295599a474"
+    },
+    "LICENSE": {
+      "upstream": "LICENSE",
+      "sha256": "8c535800331e1e4439835555b3f9edc7fe9dee2fab0d8bbbd5a982e8b8343d4d"
+    }
+  }
+}

@@ -88,6 +88,22 @@ the six successful resources; see the module's
 Resource creation does not establish hosted assertion success, scheduled
 monitoring or received alerts. Those operational checks remain open.
 
+The subsequent seven failures exposed an independent assertion-size constraint.
+The owner tested a tiny multistep assertion successfully, then received the same
+HTTP 400 for the full 94,833-byte script and a trivial script padded to that
+size. Fixed-size paused probes accepted 32,768 bytes and rejected 65,536 bytes;
+all five accepted temporary tests were cleaned up. A finer probe accepted
+49,152, 50,000 and 51,200 bytes, rejected 60,000 bytes, and cleaned up its three
+accepted tests. These results establish a
+usable lower bound, not an exact service maximum. The compact build retains
+parse5's grammar and checks all injected scripts against a 49,000-byte budget;
+the largest reviewed route/probe script is 48,868 bytes.
+The owner then created a paused HTTP test with the actual 48,858-byte Mergo
+replacement successfully, alongside the tiny multistep control. Both temporary
+tests were cleaned up. The accepted artifact's SHA256 is
+`de41f1a14fb161269505561fd7d467eacfe664b202fca15e3404f03451d11987`.
+This confirms API acceptance; real managed-location execution remains open.
+
 ## Registrar protection in SW Hosting
 
 1. Sign in to SWPanel and open **Domains and SSL → Domain Portfolio → dario.cat**. Confirm that this is the account controlling registration and that owner/admin contact email reaches you. Review MFA and recovery access.

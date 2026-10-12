@@ -3,7 +3,7 @@ import { runInNewContext } from 'node:vm';
 import { test } from 'node:test';
 import { escapePackedTable } from './safe-packed-table.mjs';
 
-const packed = '!{{U#:5Abb}}\"\\\n{still-data}';
+const packed = '!{{U#:5Abb}}\"\\\n{still-data} {{{triple}}}';
 const literal = JSON.stringify(packed);
 const upstream = 'export const htmlDecodeTree = /* #__PURE__ */ decodeTrieDict(' + literal + ', 10, 2, 0, 1, 2);';
 
@@ -12,6 +12,7 @@ test('escape only the complete data literal and preserve its decoded value', () 
   const escaped = escapePackedTable(code, upstream);
   assert.equal(escaped.includes('{{'), false);
   assert.equal(escaped.includes('}}'), true, 'Structural closing braces must retain their JavaScript meaning');
+  assert.equal(escaped.includes('{still-data}'), true, 'Unpaired data braces need no size-expanding escape');
   assert.equal(runInNewContext(escaped), runInNewContext(code));
   assert.equal(runInNewContext(escaped), packed);
   assert.equal(escapePackedTable(code, upstream), escaped, 'Generation is deterministic');

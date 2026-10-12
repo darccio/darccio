@@ -110,6 +110,18 @@ variable reference. The assertion build now escapes that string data without
 changing its JavaScript value. CI checks all seven injected assertions and both
 notification-probe variants for accidental variable openers.
 
+A second rejection identified a separate size problem: the 94,833-byte injected
+assertion and a trivial padded script of the same size were both rejected.
+Paused size probes accepted 32,768 bytes and rejected 65,536 bytes; those
+observations do not establish Datadog's exact limit. A finer probe accepted
+51,200 bytes and rejected 60,000 bytes. The compact build retains
+parse5's tokenizer and entity decoding while removing unused diagnostics and
+location tracking. Its build checks every injected route and notification
+variant against a conservative 49,000-byte budget. The owner successfully
+created a paused HTTP test with the actual 48,858-byte Mergo assertion and
+verified cleanup. This establishes API acceptance of the replacement code;
+managed-location execution still needs verification before activation.
+
 After updating to the fix, use the same initialized directory and variables to
 create a **fresh** plan:
 
@@ -188,7 +200,20 @@ the prepared module alone does not close it.
 ## Maintain and validate
 
 The standalone parser is committed with its pinned source, build dependencies
-and license notices under `assertions/`. To rebuild it after a reviewed change:
+and license notices under `assertions/`.
+
+The four unchanged parse5 TypeScript files in `assertions/vendor/parse5/` are
+pinned to the upstream release commit and checked against `SOURCE.json` before
+building. Compiling their original TypeScript lets esbuild inline state enums.
+The build specializes only unused diagnostic/location callbacks and derived
+tag IDs, and shortens an explicit list of internal property names. It leaves
+quoted dictionary keys, Datadog APIs and baseline metadata keys intact. Full
+parse5 and entities license notices remain in the generated assertion; no
+source fetch or module loader is needed by Datadog.
+Each parser fixture also runs against the unmodified npm tokenizer in the same
+restricted runtime and compares acceptance or the exact rejection message.
+
+To rebuild it after a reviewed change:
 
 ```sh
 npm --prefix assertions ci --ignore-scripts --no-audit --no-fund

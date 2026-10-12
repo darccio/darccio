@@ -40,6 +40,10 @@ run "active_public_probes" {
     error_message = "Rendered JavaScript must not contain a Datadog variable opener, including in bundled entity data."
   }
   assert {
+    condition     = alltrue([for test in datadog_synthetics_test.vanity : length(nonsensitive(test.api_step[1].assertion[2].code)) <= 49000])
+    error_message = "Keep every final route assertion within the build's reviewed size budget."
+  }
+  assert {
     condition     = datadog_synthetics_test.certificate.options_list[0].accept_self_signed == false && datadog_synthetics_test.certificate.options_list[0].ignore_certificate_validation == false && datadog_synthetics_test.certificate.assertion[0].target == "14"
     error_message = "Retain valid certificate checks and the reviewed fourteen-day expiry warning."
   }
@@ -98,6 +102,10 @@ run "isolated_failure_notification" {
     condition     = !strcontains(nonsensitive(datadog_synthetics_test.notification_probe[0].assertion[1].code), "{{")
     error_message = "The failure probe must use an assertion safe for Datadog variable substitution."
   }
+  assert {
+    condition     = length(nonsensitive(datadog_synthetics_test.notification_probe[0].assertion[1].code)) <= 49000
+    error_message = "The failure probe must retain the same assertion size budget."
+  }
 }
 
 run "isolated_recovery_notification" {
@@ -113,6 +121,10 @@ run "isolated_recovery_notification" {
   assert {
     condition     = !strcontains(nonsensitive(datadog_synthetics_test.notification_probe[0].assertion[1].code), "{{")
     error_message = "The recovery probe must use an assertion safe for Datadog variable substitution."
+  }
+  assert {
+    condition     = length(nonsensitive(datadog_synthetics_test.notification_probe[0].assertion[1].code)) <= 49000
+    error_message = "The recovery probe must retain the same assertion size budget."
   }
 }
 
