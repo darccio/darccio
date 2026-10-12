@@ -628,3 +628,10 @@ this batch. The remaining T09/defaults work stays deferred.
 
 Local acceptance is complete. Hosted preview and exact-commit CI checks follow
 push; custom-domain acceptance and the CV email correction require owner merge.
+
+The screenshot/check receipt is committed as `917fc41`. Review is open in
+[PR #28](https://github.com/darccio/darccio/pull/28); its
+[commit checks](https://github.com/darccio/darccio/pull/28/checks) record hosted
+CI and Pages outcomes separately from the local evidence above. The review
+assets and progress notes were verified absent from exact-head generated
+output after the receipt commit. Production remains subject to owner merge.
