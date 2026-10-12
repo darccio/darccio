@@ -24,7 +24,7 @@
           "wellKnown": "https://github.com/darccio/mergo/blob/master/.well-known/funding-manifest-urls"
         },
         "licenses": [
-          "spdx:BSD-3-Clause-Clear"
+          "spdx:BSD-3-Clause"
         ],
         "tags": [
           "go",

@@ -19,9 +19,18 @@ languages:
           - source: contact/index.md
             title: "Contacte"
             description: "Correu públic cc@dario.cat, perfils i vies per comunicar incidències o vulnerabilitats."
+          - source: elsewhere/index.md
+            title: "En altres llocs"
+            description: "Perfils públics a GitHub, Bluesky, el Fediverse, LinkedIn, Sifa.id, Substack i Speaker Deck."
+          - source: languages/index.md
+            title: "Idiomes"
+            description: "Política lingüística del web personal i de la documentació, amb els arxius en anglès i castellà."
           - source: projects/index.md
             title: "Projectes"
             description: "Mergo, Zas, darna, xdr i Asembleo, amb enllaços al codi i a la documentació."
+          - source: sponsor/index.md
+            title: "Donar suport"
+            description: "GitHub Sponsors i les vies de finançament recollides al manifest públic."
           - source: talks/index.md
             title: "Xerrades i entrevistes"
             description: "Enregistraments, diapositives i materials sobre Go, programari lliure, drets digitals, cultura i política."
@@ -31,9 +40,18 @@ languages:
           - source: colophon/index.md
             title: "Sobre aquest web"
             description: "Zas, la publicació amb Cloudflare Pages, el codi i les llicències."
+          - source: uses/index.md
+            title: "Eines"
+            description: "La construcció del web amb Zas i la configuració publicada per monitoritzar un NAS Synology amb Datadog."
+          - source: changelog/index.md
+            title: "Canvis del web"
+            description: "Els últims cinquanta canvis del repositori públic, generats a partir de l'historial de Git."
           - source: feeds/index.md
             title: "Subscripcions"
             description: "Feeds dels articles, el butlletí Rizoma i les versions de Mergo i Zas."
+          - source: blogroll/index.md
+            title: "Lectures"
+            description: "La Máquina de Escribir, de Gemma Goldie, recomanada públicament des de Rizoma."
           - source: slashes/index.md
             title: "Totes les pàgines"
             description: "Índex de les pàgines principals del web amb les dates de revisió."
