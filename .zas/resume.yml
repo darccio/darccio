@@ -1,0 +1,20 @@
+# Explicit owner-authorized CV rendering; this is separate from the agent corpus.
+version: 1
+source: CV/MAC.json
+locale: en
+output: cv/index.html
+updated: '2026-10-12'
+public_email: cc@dario.cat
+# The earlier MAC uses this historical AWS finish date for credential expiry.
+expiry_dates: [/knowledge/studies/10/finishDate]
+# MAC requires full dates; show only the precision established by the sources.
+date_precision:
+  /experience/jobs/15/roles/0/startDate: year
+  /experience/jobs/19/roles/0/startDate: year
+  /knowledge/studies/9/startDate: year
+  /knowledge/studies/12/startDate: year
+  /knowledge/studies/12/finishDate: year
+  /knowledge/studies/13/startDate: year
+  /knowledge/studies/13/finishDate: year
+  /knowledge/studies/14/startDate: year
+  /knowledge/studies/14/finishDate: year

@@ -19,12 +19,20 @@ Please consider sponsoring my work:
 - [BlueSky](https://bsky.app/profile/dario.cat)
 - [LinkedIn](https://linkedin.com/in/darccio)
 - [Sifa.id](https://sifa.id/p/dario.cat)
+- [CV](https://dario.cat/cv/): HTML generated from the MAC JSON below.
 - [Manfred Awesomic CV](/CV/MAC.json): an open-source, interchangeable, machine-readable format. It's also synchronized with [my profile in Manfred](https://getmanfred.com/profile/dcc).
 
 
 ## ⚖️ License
 
 The CVs included in this repository contain my personal and professional data, and they can't be automatically processed without my explicit permission according to the [GDPR](https://gdpr-info.eu/) (General Data Protection Regulation).
+
+On 12 October 2026 I authorized updating `CV/MAC.json` from my Sifa profile and
+supplied LinkedIn export, and generating and validating `/cv/` from that JSON
+during site builds. This specific permission leaves the restriction above in
+place for other uses. Both CV URLs remain excluded from crawling and from the
+site's feeds, Standard.site publishing and agent text collections. See
+[CV maintenance](CV/README.md) for the source and date conventions.
 
 The [MAC format](https://github.com/getmanfred/mac) is free and open-source software licensed and distributed under the [Creative Commons Attribution Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0 International).
 

@@ -1,27 +1,31 @@
 {
   "$schema": "https://raw.githubusercontent.com/getmanfred/mac/v0.3/schema/schema.json",
   "settings": {
-    "language": "ES",
-    "MACVersion": "0.3"
+    "language": "EN",
+    "MACVersion": "0.3",
+    "lastUpdate": "2026-10-12"
   },
   "aboutMe": {
     "profile": {
       "name": "Dario",
       "surnames": "Castañé",
-      "title": "Senior Software Engineer (Go & Ruby), Engineering Manager, Indie Hacker, FLOSS Evangelist and Public Speaker",
-      "description": "At the core, I'm a generalizing specialist. During my +18 years of experience, I have specialized in different roles, including:\n\n- Full-Stack Software Engineer.\n- DevOps Engineer, using the major cloud providers.\n- Software Architect.\n- Engineering Manager.\n- Ethical Hacker.\n\nMoreover, I have broad knowledge about areas beyond engineering, like:\n\n- Leadership and mentoring.\n- Public speaking.\n- Cost management.\n- Several business domains: tourism, health, retail loyalty programs, citizen participation, public administration, etc.\n\nI'm an enthusiastic free software advocate, releasing various libraries and projects. One of them, [Mergo](https://github.com/darccio/mergo) (a small library to merge Go structs), is used by 60K repositories only in GitHub, and it's used actively in big projects like Docker and Kubernetes, running my code millions of times around the world at the heart of the cloud.\n\nAlso, I'm an activist for civil rights, open source, open access and free culture, an experienced speaker, and an indie hacker.",
+      "title": "Senior Software Engineer at Datadog · Go, open source and public speaking",
+      "description": "I'm a Senior Software Engineer at Datadog, working on APM data collection and the Go language platform. I maintain [dd-trace-go](https://github.com/DataDog/dd-trace-go) and [Orchestrion](https://github.com/DataDog/orchestrion), which brings compile-time automatic instrumentation to Go.\n\nI have over 20 years of experience in full-stack development, DevOps, cloud computing, software architecture and engineering management.\n\nI'm an advocate for free software, open source and civil rights, and the maintainer of [Mergo](https://dario.cat/mergo/) and [Zas](https://dario.cat/zas/). I speak about technology, politics, civil rights and personal digital security, and help organize Full Stack Vallès.",
       "avatar": {
-        "alt": "163009.jpg",
-        "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/02/77023195-2e50-484d-901e-296364874fae_163009.jpg"
+        "alt": "Dario Castañé",
+        "link": "https://dario.cat/static/avatar.webp"
       },
       "location": {
-        "country": "España",
-        "region": "Cataluña",
-        "municipality": "Barcelona",
-        "notes": "Autocompleted using Google Maps API"
+        "country": "Spain",
+        "region": "Catalonia",
+        "municipality": "Terrassa"
       }
     },
     "relevantLinks": [
+      {
+        "type": "other",
+        "URL": "https://dario.cat/"
+      },
       {
         "type": "linkedin",
         "URL": "https://www.linkedin.com/in/darccio/"
@@ -29,6 +33,14 @@
       {
         "type": "other",
         "URL": "https://sifa.id/p/dario.cat"
+      },
+      {
+        "type": "other",
+        "URL": "https://github.com/darccio"
+      },
+      {
+        "type": "other",
+        "URL": "https://speakerdeck.com/dario"
       }
     ]
   },
@@ -36,63 +48,48 @@
     "jobs": [
       {
         "organization": {
-          "name": "Coopanio OÜ"
+          "name": "Full Stack Vallès"
+        },
+        "roles": [
+          {
+            "name": "Co-organizer",
+            "startDate": "2026-03-01",
+            "challenges": [
+              {
+                "description": "Co-organizer of the Full Stack Vallès developer community."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Datadog"
+        },
+        "roles": [
+          {
+            "name": "Senior Software Engineer (Open Source & Go Language Platform)",
+            "startDate": "2023-08-01",
+            "challenges": [
+              {
+                "description": "Maintainer of [dd-trace-go](https://github.com/DataDog/dd-trace-go), Datadog’s Go tracing library, and [Orchestrion](https://github.com/DataDog/orchestrion), compile-time automatic instrumentation for Go. I work on the APM data collection and Go language platform."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Coopanio OÜ",
+          "description": "Opinee by Coopanio OÜ"
         },
         "roles": [
           {
             "name": "Founder",
-            "startDate": "2021-05-01",
+            "startDate": "2021-04-01",
             "challenges": [
               {
                 "description": "Unlocking Collective Wisdom: Make Decisions & Take Action with Confidence\n\nOur platform allows organizations to easily collaborate and document ideas, proposals, and decisions. With our built-in feedback and voting tools, you can discuss and refine ideas, and make informed decisions with confidence. Join the many organizations that are using Coopanio to improve their knowledge management and decision-making processes."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "organization": {
-          "name": "Loyal Guru"
-        },
-        "roles": [
-          {
-            "name": "Engineering Manager",
-            "startDate": "2019-11-01",
-            "challenges": [
-              {
-                "description": "[Mid-senior]\n\n- Team's members churn rate of 0% in all my time as Engineering Manager.\n- Improved voucher generation by 6x, now delivering millions of vouchers per hour.\n- Reduced main API's response times by 70%.\n- Deliver good quality source code adjusted to given boundaries with a 90% success rate.\n- 7 direct reports."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "organization": {
-          "name": "IGD Tech & Drinks"
-        },
-        "roles": [
-          {
-            "name": "Organizer",
-            "startDate": "2018-09-01",
-            "challenges": [
-              {
-                "description": "Meetup organized at Igualada, Barcelona."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "organization": {
-          "name": "Fundación Inceptum"
-        },
-        "roles": [
-          {
-            "name": "President",
-            "startDate": "2014-01-01",
-            "challenges": [
-              {
-                "description": ""
               }
             ]
           }
@@ -117,11 +114,45 @@
       },
       {
         "organization": {
+          "name": "Freedom to Share"
+        },
+        "roles": [
+          {
+            "name": "Promoter",
+            "startDate": "2020-05-01",
+            "finishDate": "2022-06-01",
+            "challenges": [
+              {
+                "description": "European Citizens’ Initiative seeking to legalize sharing works online for personal, non-profit use."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
           "name": "Loyal Guru"
         },
         "roles": [
           {
-            "name": "Senior Go/Ruby Software Engineer",
+            "name": "Engineering Manager",
+            "startDate": "2020-04-01",
+            "challenges": [
+              {
+                "description": "[Mid-senior]\n\n- Team's members churn rate of 0% in all my time as Engineering Manager.\n- Improved voucher generation by 6x, now delivering millions of vouchers per hour.\n- Reduced main API's response times by 70%.\n- Deliver good quality source code adjusted to given boundaries with a 90% success rate.\n- 7 direct reports."
+              }
+            ],
+            "finishDate": "2023-07-01"
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Loyal Guru"
+        },
+        "roles": [
+          {
+            "name": "Senior Go Software Engineer",
             "startDate": "2019-11-01",
             "finishDate": "2020-03-01",
             "challenges": [
@@ -151,18 +182,47 @@
       },
       {
         "organization": {
+          "name": "Pirates de Catalunya"
+        },
+        "roles": [
+          {
+            "name": "International delegate",
+            "startDate": "2019-06-01",
+            "finishDate": "2024-09-01"
+          }
+        ]
+      },
+      {
+        "organization": {
           "name": "Associació Blockchain Catalunya"
         },
         "roles": [
           {
             "name": "Board Member",
-            "startDate": "2019-05-01",
-            "finishDate": "2021-05-01",
+            "startDate": "2019-02-01",
+            "finishDate": "2021-06-01",
             "challenges": [
               {
                 "description": ""
               }
             ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "IGD Tech & Drinks"
+        },
+        "roles": [
+          {
+            "name": "Co-organizer",
+            "startDate": "2018-09-01",
+            "challenges": [
+              {
+                "description": "Meetup organized at Igualada, Barcelona."
+              }
+            ],
+            "finishDate": "2024-01-01"
           }
         ]
       },
@@ -185,6 +245,18 @@
       },
       {
         "organization": {
+          "name": "Pirates de Catalunya"
+        },
+        "roles": [
+          {
+            "name": "Board Member",
+            "startDate": "2015-06-01",
+            "finishDate": "2019-06-01"
+          }
+        ]
+      },
+      {
+        "organization": {
           "name": "Ajuntament d'Igualada"
         },
         "roles": [
@@ -202,11 +274,63 @@
       },
       {
         "organization": {
+          "name": "Referéndum Real Ya"
+        },
+        "roles": [
+          {
+            "name": "Technical Coordinator",
+            "startDate": "2014-04-01",
+            "finishDate": "2014-06-01"
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Fundación Inceptum"
+        },
+        "roles": [
+          {
+            "name": "President",
+            "startDate": "2014-01-01",
+            "challenges": [
+              {
+                "description": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Multireferèndum"
+        },
+        "roles": [
+          {
+            "name": "Technical Coordinator",
+            "startDate": "2014-01-01",
+            "finishDate": "2014-05-01"
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Unconditional Basic Income ECI"
+        },
+        "roles": [
+          {
+            "name": "Campaign Coordinator",
+            "startDate": "2013-03-01",
+            "finishDate": "2013-11-01"
+          }
+        ]
+      },
+      {
+        "organization": {
           "name": "Epnuke"
         },
         "roles": [
           {
-            "name": "Technomancer",
+            "name": "Software Engineer",
             "startDate": "2012-03-01",
             "finishDate": "2013-10-01",
             "challenges": [
@@ -214,6 +338,34 @@
                 "description": "I cast Python spells to untangle gamebooks graphs for \nGamebook Experience, the line of gamebooks released by Epnuke Studio.\n\nAs Technomancer, I developed Kerta, a language to annotate plain text to allow the reader app to reproduce complex gamebooks. Also, I have been involved in all the steps of the design of the game: \"Saint George, the forging of a Legend\"."
               }
             ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Independent"
+        },
+        "roles": [
+          {
+            "name": "Public Speaker",
+            "startDate": "2012-01-01",
+            "challenges": [
+              {
+                "description": "Talks on politics and technology, with an emphasis on civil rights and personal digital security. [Recordings and slides](https://dario.cat/talks/)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Pirates de Catalunya"
+        },
+        "roles": [
+          {
+            "name": "TIC coordinator",
+            "startDate": "2010-09-01",
+            "finishDate": "2013-02-01"
           }
         ]
       },
@@ -236,11 +388,11 @@
       },
       {
         "organization": {
-          "name": "Enginyeria de Software, S.A."
+          "name": "ENGISOFT (Enginyeria de Software, S.A.)"
         },
         "roles": [
           {
-            "name": "Full-Stack Software Engineer",
+            "name": "Full Stack Engineer",
             "startDate": "2006-04-01",
             "finishDate": "2019-11-01",
             "challenges": [
@@ -267,7 +419,7 @@
         "roles": [
           {
             "name": "Developer",
-            "startDate": "2020-09-01",
+            "startDate": "2020-10-01",
             "competences": [
               {
                 "name": "Ruby on Rails",
@@ -281,7 +433,7 @@
         "details": {
           "name": "Zas",
           "description": " Simple static website generator in Golang. ",
-          "URL": "https://github.com/darccio/zas",
+          "URL": "https://dario.cat/zas/",
           "image": {
             "alt": "687474703a2f2f692e696d6775722e636f6d2f653961625752582e706e67.png",
             "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/33c7b44c-094b-4405-9675-b4410d616223_687474703a2f2f692e69.png"
@@ -291,7 +443,7 @@
         "roles": [
           {
             "name": "Developer",
-            "startDate": "2013-03-01",
+            "startDate": "2013-04-01",
             "competences": [
               {
                 "name": "CSS",
@@ -312,8 +464,8 @@
       {
         "details": {
           "name": "Mergo",
-          "description": "A helper to merge structs and maps in Golang. Useful for configuration default values, avoiding messy if-statements.\n\nUsed by Docker, Kubernetes, VMWare, Telefónica, Shopify, etc.",
-          "URL": "https://github.com/darccio/mergo",
+          "description": "Mergo merges Go structs and maps. It fills unset fields by default and provides options and transformers to control merging.",
+          "URL": "https://dario.cat/mergo/",
           "image": {
             "alt": "Go-Logo_Aqua.png",
             "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/ebdcd96f-9efb-4ec4-8784-1cb518337ed5_go-logo_aqua.png"
@@ -742,15 +894,51 @@
         "level": "Native or bilingual proficiency"
       },
       {
-        "name": "English",
-        "level": "Full professional proficiency"
-      },
-      {
         "name": "Spanish",
         "level": "Native or bilingual proficiency"
+      },
+      {
+        "name": "English",
+        "level": "Full professional proficiency"
       }
     ],
     "hardSkills": [
+      {
+        "skill": {
+          "name": "Agile Methodologies",
+          "type": "practice"
+        }
+      },
+      {
+        "skill": {
+          "name": "Amazon Web Services (AWS)",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Android",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Ansible",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Apache",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Bash",
+          "type": "technology"
+        }
+      },
       {
         "skill": {
           "name": "BigQuery",
@@ -759,25 +947,73 @@
       },
       {
         "skill": {
-          "name": "JAVA",
+          "name": "Blockchain",
+          "type": "domain"
+        }
+      },
+      {
+        "skill": {
+          "name": "Brainfuck",
           "type": "technology"
         }
       },
       {
         "skill": {
-          "name": "Ruby on Rails",
+          "name": "C",
           "type": "technology"
         }
       },
       {
         "skill": {
-          "name": "PostgreSQL",
+          "name": "Chef",
           "type": "technology"
         }
       },
       {
         "skill": {
-          "name": "Python",
+          "name": "Cloud Computing",
+          "type": "domain"
+        }
+      },
+      {
+        "skill": {
+          "name": "Communication",
+          "type": "practice"
+        }
+      },
+      {
+        "skill": {
+          "name": "Community Building",
+          "type": "practice"
+        }
+      },
+      {
+        "skill": {
+          "name": "CSS",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Cybersecurity Incident Response",
+          "type": "practice"
+        }
+      },
+      {
+        "skill": {
+          "name": "DevOps",
+          "type": "practice"
+        }
+      },
+      {
+        "skill": {
+          "name": "Distributed Systems",
+          "type": "domain"
+        }
+      },
+      {
+        "skill": {
+          "name": "Django",
           "type": "technology"
         }
       },
@@ -789,25 +1025,73 @@
       },
       {
         "skill": {
-          "name": "Django",
+          "name": "Eclipse",
+          "type": "tool"
+        }
+      },
+      {
+        "skill": {
+          "name": "European Law",
+          "type": "domain"
+        }
+      },
+      {
+        "skill": {
+          "name": "Free Software",
+          "type": "practice"
+        }
+      },
+      {
+        "skill": {
+          "name": "Git",
+          "type": "tool"
+        }
+      },
+      {
+        "skill": {
+          "name": "GitHub",
+          "type": "tool"
+        }
+      },
+      {
+        "skill": {
+          "name": "Go",
           "type": "technology"
         }
       },
       {
         "skill": {
-          "name": "Google Cloud",
+          "name": "Google App Engine",
           "type": "technology"
         }
       },
       {
         "skill": {
-          "name": "Ruby",
+          "name": "Google Cloud Platform (GCP)",
           "type": "technology"
         }
       },
       {
         "skill": {
-          "name": "MySQL",
+          "name": "Graph Theory",
+          "type": "domain"
+        }
+      },
+      {
+        "skill": {
+          "name": "HTML 5",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Java",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Java Enterprise Edition",
           "type": "technology"
         }
       },
@@ -819,13 +1103,151 @@
       },
       {
         "skill": {
-          "name": "Go",
+          "name": "JSON",
           "type": "technology"
         }
       },
       {
         "skill": {
-          "name": "AWS",
+          "name": "Leadership",
+          "type": "practice"
+        }
+      },
+      {
+        "skill": {
+          "name": "Linux",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "MySQL",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Nginx",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Observability",
+          "type": "domain"
+        }
+      },
+      {
+        "skill": {
+          "name": "Open Source",
+          "type": "practice"
+        }
+      },
+      {
+        "skill": {
+          "name": "Paint",
+          "type": "tool"
+        }
+      },
+      {
+        "skill": {
+          "name": "PHP",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "PostgreSQL",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Public Relations",
+          "type": "practice"
+        }
+      },
+      {
+        "skill": {
+          "name": "Public speaking",
+          "type": "practice"
+        }
+      },
+      {
+        "skill": {
+          "name": "Puppet",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Python",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Ruby",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Ruby on Rails",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Shell Scripting",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Software Design",
+          "type": "practice"
+        }
+      },
+      {
+        "skill": {
+          "name": "Software Development",
+          "type": "practice"
+        }
+      },
+      {
+        "skill": {
+          "name": "Software Project Management",
+          "type": "practice"
+        }
+      },
+      {
+        "skill": {
+          "name": "SQL",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Team Management",
+          "type": "practice"
+        }
+      },
+      {
+        "skill": {
+          "name": "Technical Leadership",
+          "type": "practice"
+        }
+      },
+      {
+        "skill": {
+          "name": "Tomcat",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "XML",
           "type": "technology"
         }
       }
@@ -833,7 +1255,27 @@
     "studies": [
       {
         "studyType": "certification",
-        "degreeAchieved": false,
+        "degreeAchieved": true,
+        "name": "Understanding the EU Cyber Resilience Act CRA (LFEL1001)",
+        "startDate": "2025-06-01",
+        "institution": {
+          "name": "The Linux Foundation"
+        },
+        "description": "Credential issued in June 2025."
+      },
+      {
+        "studyType": "certification",
+        "degreeAchieved": true,
+        "name": "Certificate of English Proficiency (Level CEFR C1+)",
+        "startDate": "2023-03-01",
+        "institution": {
+          "name": "goFLUENT"
+        },
+        "description": "Credential issued in March 2023."
+      },
+      {
+        "studyType": "certification",
+        "degreeAchieved": true,
         "name": "Wardley Mapping Practitioner",
         "startDate": "2023-01-01",
         "institution": {
@@ -848,8 +1290,8 @@
       },
       {
         "studyType": "certification",
-        "degreeAchieved": false,
-        "name": "Triplebyte Engineering Certificate",
+        "degreeAchieved": true,
+        "name": "Triplebyte Certified",
         "startDate": "2022-12-01",
         "institution": {
           "name": "Triplebyte",
@@ -873,7 +1315,7 @@
       },
       {
         "studyType": "certification",
-        "degreeAchieved": false,
+        "degreeAchieved": true,
         "name": "TeamOps Certification",
         "startDate": "2022-11-01",
         "institution": {
@@ -888,7 +1330,27 @@
       },
       {
         "studyType": "certification",
-        "degreeAchieved": false,
+        "degreeAchieved": true,
+        "name": "Humble Leadership: The Power of Relationships, Openness, and Trust (getAbstract Summary)",
+        "startDate": "2022-08-01",
+        "institution": {
+          "name": "LinkedIn"
+        },
+        "description": "Credential issued in August 2022."
+      },
+      {
+        "studyType": "certification",
+        "degreeAchieved": true,
+        "name": "ISO 27001 Cybersecurity manager: Guidelines",
+        "startDate": "2021-12-01",
+        "institution": {
+          "name": "Udemy"
+        },
+        "description": "Credential issued in December 2021."
+      },
+      {
+        "studyType": "certification",
+        "degreeAchieved": true,
         "name": "LFS172x: Introduction to Hyperledger Sovereign Identity Blockchain Solutions: Indy, Aries & Ursa",
         "startDate": "2021-05-01",
         "institution": {
@@ -913,7 +1375,17 @@
       },
       {
         "studyType": "certification",
-        "degreeAchieved": false,
+        "degreeAchieved": true,
+        "name": "AWS Certified Solutions Architect – Associate recertification (historical)",
+        "startDate": "2017-12-01",
+        "institution": {
+          "name": "Amazon Web Services"
+        },
+        "description": "Recertified in December 2017. The earlier CV records validity through December 2020; this does not claim current certification."
+      },
+      {
+        "studyType": "certification",
+        "degreeAchieved": true,
         "name": "Introducción al peritaje jurídico informático",
         "startDate": "2016-01-01",
         "institution": {
@@ -928,7 +1400,7 @@
       {
         "studyType": "certification",
         "degreeAchieved": true,
-        "name": "AWS Certified Solutions Architect",
+        "name": "AWS Certified Solutions Architect – Associate (historical)",
         "startDate": "2015-12-01",
         "finishDate": "2020-12-01",
         "institution": {
@@ -960,7 +1432,8 @@
             "alt": "1519904565902.jpg",
             "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/05/1d917a15-001e-443f-9303-a39f3e1b20f9_1519904565902.jpg"
           }
-        }
+        },
+        "description": "Completed in March 2007. The earlier MAC CV records attendance from January through March 2007."
       },
       {
         "studyType": "officialDegree",
@@ -976,6 +1449,28 @@
             "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/03/03/b89b9506-b507-4ef7-a8b1-b24e32d98226_1667376612569.jpeg"
           }
         }
+      },
+      {
+        "studyType": "officialDegree",
+        "degreeAchieved": true,
+        "name": "CFGS, Systems Administration",
+        "startDate": "2005-01-01",
+        "institution": {
+          "name": "IES Milà i Fontanals"
+        },
+        "finishDate": "2006-01-01",
+        "description": "Higher vocational qualification in Systems Administration. Sources provide years only."
+      },
+      {
+        "studyType": "officialDegree",
+        "degreeAchieved": true,
+        "name": "CFGS, Application Development",
+        "startDate": "2003-01-01",
+        "institution": {
+          "name": "IES Milà i Fontanals"
+        },
+        "finishDate": "2005-01-01",
+        "description": "Higher vocational qualification in Application Development. Sources provide years only."
       }
     ]
   },
@@ -990,6 +1485,9 @@
           "type": "other",
           "URL": "https://sifa.id/p/dario.cat"
         }
+      ],
+      "contactMails": [
+        "cc@dario.cat"
       ]
     },
     "preferences": {

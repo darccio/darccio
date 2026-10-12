@@ -11,6 +11,10 @@ pre, code {
     overflow-wrap: anywhere;
 }
 
+.h-resume {
+    overflow-wrap: anywhere;
+}
+
 pre.highlight {
     overflow: visible;
     font-size: large;
