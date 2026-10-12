@@ -589,6 +589,14 @@ func resumeMarkdown(input string) (template.HTML, error) {
 }
 
 var resumePage = template.Must(template.New("resume").Funcs(template.FuncMap{
+	// html/template removes literal HTML comments when parsing its source.
+	// Emit these reviewed static boundaries as data so Cloudflare receives them.
+	"emailBoundary": func(open bool) template.HTML {
+		if open {
+			return template.HTML("<!--email_off-->")
+		}
+		return template.HTML("<!--/email_off-->")
+	},
 	"dictEvent": func(event resumeEvent, present string) any {
 		return struct {
 			Event   resumeEvent
@@ -603,7 +611,7 @@ var resumePage = template.Must(template.New("resume").Funcs(template.FuncMap{
 <p><a class="p-name u-url u-uid" href="https://dario.cat/">{{.Name}}</a></p>
 <p class="p-job-title">{{.Headline}}</p>
 {{if or .Locality .Region .Country}}<p>{{if .Locality}}<span class="p-locality">{{.Locality}}</span>{{end}}{{if .Region}}{{if .Locality}}, {{end}}<span class="p-region">{{.Region}}</span>{{end}}{{if .Country}}{{if or .Locality .Region}}, {{end}}<span class="p-country-name">{{.Country}}</span>{{end}}</p>{{end}}
-<p><!--email_off--><a class="u-email" href="mailto:{{.Email}}">{{.Email}}</a><!--/email_off--></p>
+<p>{{emailBoundary true}}<a class="u-email" href="mailto:{{.Email}}">{{.Email}}</a>{{emailBoundary false}}</p>
 <ul>{{range .Links}}<li><a href="{{.URL}}" rel="me">{{.Label}}</a></li>{{end}}</ul>
 </div>
 <div class="p-summary">{{.Summary}}</div>

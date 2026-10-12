@@ -4,7 +4,7 @@ publish: false
 
 # Site implementation progress
 
-The preceding implementation PRs are merged and production-verified, and the site adopts released Zas v0.0.9. T26's production publication backlink is verified. T01 is complete: registrar renewal/protection, fully validated DNSSEC, independent scheduled monitoring, real failure/recovery delivery and three expiry-notification simulations are confirmed. T04 is complete after PR #23. T30 is complete after owner approval in PR #24 and production backlinks in PR #25: all 26 records, three reader samples and a zero-write online rerun are verified. The owner-authorized English CV refresh and HTML render pass local acceptance and are ready for review; production acceptance follows merge. Personal defaults still need owner input. Optional T06/T23 remain deferred. The chronology below retains previous observations and their dates.
+The preceding implementation PRs are merged, and the site adopts released Zas v0.0.9. T26's production publication backlink is verified. T01 is complete: registrar renewal/protection, fully validated DNSSEC, independent scheduled monitoring, real failure/recovery delivery and three expiry-notification simulations are confirmed. T04 and T30 are complete. The English CV is merged in PR #27; its production JSON matches the preserved source, while a Cloudflare email-obfuscation regression needs the correction recorded below. The owner deferred the remaining T09 work and authorized six design/accessibility units. Optional T06/T23 remain deferred. The chronology below retains previous observations and their dates.
 
 All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are merged. The site now pins the merged feed/Markdown revision and has navigation, core slash pages, crawler/security resources, complete canonical sitemaps, RSS discovery, Markdown twins and static response headers deployed. Cloudflare deployed 20a3e10 and source-history fix 594cf0d successfully on 2026-10-11; site CI and post-deploy vanity checks passed. The owner's expanded talks catalogue, cc@dario.cat contact and Sifa profile additions deployed successfully in 8e3acb1. The T14–T18 identity, post/archive microformats, supported talk/slash/project markup and protected parser checks deployed successfully in 28bd9ba; the narrow historical-email follow-up is committed as d21a476. Account operations remain separate evidence requirements.
 
@@ -451,3 +451,33 @@ Cloudflare beacon prevents a raw whole-page/local byte-equality assertion, but
 article content and metadata agree. The original approval preview is retained
 as historical evidence. CV permission and personal defaults remain owner work;
 optional T06/T23 remain deferred.
+
+## CV email correction and design review
+
+The owner merged [PR #27](https://github.com/darccio/darccio/pull/27) as
+`4d4f481`. Exact-commit Pages, Site checks and post-deploy vanity checks succeed.
+The immutable deployment serves the new English resume; the production
+`/CV/MAC.json` bytes match its preserved source. Custom-domain verification
+found that `html/template` removed literal `email_off` comments from the new
+resume template, allowing Cloudflare to hide its email. Existing contact pages
+already retain their exclusions.
+
+The correction emits only the two reviewed static comment boundaries as trusted
+template data. A regression test checks the exact protected email fragment;
+the guarded generated HTML retains both boundaries. Generate, full repository
+tests and the seven-package vanity check pass. Production email acceptance
+follows deployment of this correction. No CV data or processing scope changes.
+
+The design work follows the owner's six units in order: foundations, localized
+navigation, talks archive, article language tags, homepage hierarchy/contact
+and project link labels. T09's remaining personal defaults are deferred. The
+owner declined the optional homepage project-proof line and confirmed Catalan
+for all five previously untagged talks; no language question remains open.
+Only this progress file may change among files marked `publish: false`.
+
+The baseline has 31 talks (10 engineering and 21 culture), 46 external hrefs and
+ten verified event tuples. Before screenshots at 1440×900 and 390×844 and the
+exact href/event snapshot were captured before design edits. User-supplied
+Appendices A/B replace the inaccessible design-system artifact; tokens remain
+verbatim. Fonts come from the pinned Fontsource packages with original OFL
+licenses, verified npm integrity and individual file checksums.
