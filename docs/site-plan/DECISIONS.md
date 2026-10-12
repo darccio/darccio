@@ -4,7 +4,7 @@ publish: false
 
 # Site implementation decisions
 
-The report defaults below govern implementation. Dario confirmed the public address below; exact publication dates and reviewed public backfill selections remain evidence requirements.
+The report defaults below govern implementation. Dario confirmed the public address and all publication dates are recorded with provenance. The exact 26-record backfill was owner-approved in PR #24 and production-verified after PR #25; future selections still require explicit review.
 
 | ID | Decision | Choice | Status |
 | --- | --- | --- | --- |
@@ -15,11 +15,11 @@ The report defaults below govern implementation. Dario confirmed the public addr
 | D5 | Rizoma canonical home | Substack for new issues; keep the four 2021 local issues and link https://rizoma.dario.cat/feed. | Adopted report default |
 | D6 | Public email | Use cc@dario.cat in public contact links, the vCard, security.txt and funding metadata. Wrap visible HTML email links in Cloudflare's documented email_off comments to keep them readable without JS; the global dashboard toggle remains unmodified. | Owner confirmed; targeted opt-outs and readable production contact verified |
 | D7 | Locality | Omit locality until Dario confirms it. | Adopted report default |
-| D8 | Standard.site backfill | Prepare a reviewed allowlist from 2013 onward; exclude 2009–2010, drafts and external-only articles. Write no backfill records until that list is approved. | Default scope; exact list pending review |
-| D9 | Standard.site full text | Include textContent in approved records; /ai explains that copies are outside robots.txt. | Adopted report default; recorded before public writes |
+| D8 | Standard.site backfill | Publish the reviewed 26 articles from 2013 onward; exclude all pre-2013 articles, drafts and external-only links. Future additions require review before publication. | Owner approved [PR #24](https://github.com/darccio/darccio/pull/24); all 26 records and [PR #25](https://github.com/darccio/darccio/pull/25) production backlinks verified |
+| D9 | Standard.site full text | Include textContent in approved records; /ai explains that copies are outside robots.txt. | Owner approved the full-record preview in PR #24; all 72,442 UTF-8 text bytes match public readback |
 | D10 | Discovery preference | preferences.showInDiscover = true for the one root publication. | Adopted report default |
 | D11 | Webmentions | Skip. | Adopted report default |
-| D12 | Publishing authentication | App password only in Actions secrets; OAuth later. Never commit credentials. | Owner configured Actions secrets; T26 applied/verified and empty-allowlist T29 automation succeeded |
+| D12 | Publishing authentication | App password only in Actions secrets; OAuth later. Never commit credentials. | Owner configured Actions secrets; T26 and T30 applied and verified; unchanged online apply makes zero writes |
 | D13 | Homepage writing claim | Point at actual writing channels without promising a cadence; Now names the owner-confirmed Corb and Cocoon projects. | Implemented in 1ad3087 |
 | D14 | Generator | Extend Zas. Reassess Hugo + Hugo Modules only after two weekends of actual stalled implementation. | Adopted report default |
 | D15 | Zas import path | Keep github.com/darccio/zas; /zas/ is a docs route only. | Adopted report default |

@@ -4,7 +4,7 @@ publish: false
 
 # Site implementation progress
 
-The implementation PRs are merged and production-verified, and the site adopts released Zas v0.0.9. T26's production publication backlink is verified. T01 is complete: registrar renewal/protection, fully validated DNSSEC, independent scheduled monitoring, real failure/recovery delivery and three expiry-notification simulations are confirmed. T04 is complete and production-verified after PR #23. T30 now has a concrete 26-article publication proposal with a complete offline record preview; merging that PR grants publication approval. Production's allowlist remains empty until then. CV permission and personal defaults still need owner input. Optional T06/T23 remain deferred. The chronology below retains previous observations and their dates.
+The implementation PRs are merged and production-verified, and the site adopts released Zas v0.0.9. T26's production publication backlink is verified. T01 is complete: registrar renewal/protection, fully validated DNSSEC, independent scheduled monitoring, real failure/recovery delivery and three expiry-notification simulations are confirmed. T04 is complete after PR #23. T30 is complete after owner approval in PR #24 and production backlinks in PR #25: all 26 records, three reader samples and a zero-write online rerun are verified. CV permission and personal defaults still need owner input. Optional T06/T23 remain deferred. The chronology below retains previous observations and their dates.
 
 All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are merged. The site now pins the merged feed/Markdown revision and has navigation, core slash pages, crawler/security resources, complete canonical sitemaps, RSS discovery, Markdown twins and static response headers deployed. Cloudflare deployed 20a3e10 and source-history fix 594cf0d successfully on 2026-10-11; site CI and post-deploy vanity checks passed. The owner's expanded talks catalogue, cc@dario.cat contact and Sifa profile additions deployed successfully in 8e3acb1. The T14–T18 identity, post/archive microformats, supported talk/slash/project markup and protected parser checks deployed successfully in 28bd9ba; the narrow historical-email follow-up is committed as d21a476. Account operations remain separate evidence requirements.
 
@@ -421,3 +421,33 @@ proposes publicly verified article URIs in a separate PR. T30 remains pending
 owner approval, successful record readback, deployed verification links, three
 reader samples and a zero-write online rerun. Records for other publications
 remain outside the operation; optional CV/defaults work remains separate.
+
+## T30 completion · 2026-10-12
+
+The owner approved all 26 full-text archive records by merging
+[PR #24](https://github.com/darccio/darccio/pull/24) as `5fc7634`. The
+[post-deploy apply](https://github.com/darccio/darccio/actions/runs/38296784023)
+contains 26 successful creates matching the exact approved preview. Public
+inventory and individual readbacks confirm 11 Catalan, eight Spanish and seven
+English documents, with 72,442 UTF-8 text bytes. Three fresh PDSls samples pass.
+The [repeated online apply](https://github.com/darccio/darccio/actions/runs/38297070735)
+contains 26 unchanged records and zero creates, updates or deletes; URIs, CIDs
+and values remain identical in fresh public reads.
+
+The owner merged the public-map-only
+[PR #25](https://github.com/darccio/darccio/pull/25) as `87b6dcd`. Exact-main
+production Pages, Site checks and the post-deploy vanity gate pass. All 26
+article verification links match public records. All 34 checked canonical URLs
+(33 articles plus the retained draft URL) stay stable; selected metadata and
+article plaintext agree, excluded articles have no document link, and all
+fourteen vanity URL variants pass. The backlink-only automatic workflow skips
+publish/propose; that skip is separate from the successful online idempotence
+run. A preview asset-upload rate limit was resolved by retrying the same commit.
+
+T30 is complete. The [task receipt](tasks/T30.md) records the checks and viewer
+limits; the [identity snapshot](../../.tools/atproto/review/backfill-verification.json)
+retains the public URIs, CIDs and payload hashes. Production's edge-injected
+Cloudflare beacon prevents a raw whole-page/local byte-equality assertion, but
+article content and metadata agree. The original approval preview is retained
+as historical evidence. CV permission and personal defaults remain owner work;
+optional T06/T23 remain deferred.

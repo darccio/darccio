@@ -1,0 +1,434 @@
+{
+  "version": 1,
+  "verifiedAt": "2026-10-12T19:50:36.417456+00:00",
+  "publication": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+  "approval": {
+    "pr": "https://github.com/darccio/darccio/pull/24",
+    "mergeCommit": "5fc763448e515cdae8f96df40f21339b27cb1257",
+    "previewSHA256": "3b31b9d99808e0bb2fbc6ba47dcdf76f1f5daf421183c9ad4055575f4d13ea59"
+  },
+  "initialApply": {
+    "run": "https://github.com/darccio/darccio/actions/runs/38296784023",
+    "create": 26,
+    "update": 0,
+    "delete": 0,
+    "unchanged": 0
+  },
+  "unchangedApply": {
+    "run": "https://github.com/darccio/darccio/actions/runs/38297070735",
+    "create": 0,
+    "update": 0,
+    "delete": 0,
+    "unchanged": 26,
+    "sameURIsCIDsAndValues": true
+  },
+  "backlinks": {
+    "pr": "https://github.com/darccio/darccio/pull/25",
+    "mergeCommit": "87b6dcd0e70e08291b4242c99693e2533fbed6f7",
+    "backlinkOnlyPublishingSkippedRun": "https://github.com/darccio/darccio/actions/runs/38299112220"
+  },
+  "production": {
+    "checkedAt": "2026-10-12T19:50:36.417456+00:00",
+    "productionURL": "https://dario.cat",
+    "commit": "87b6dcd0e70e08291b4242c99693e2533fbed6f7",
+    "deployment": "5daee168-55c1-4c5c-af50-46dfc633e847",
+    "publicArticleGETs": 33,
+    "correctHeadBacklinks": 26,
+    "pre2013ArticlesWithoutBacklinks": 7,
+    "canonicalURLsUnchanged": 34,
+    "draftLiveButExcluded": true,
+    "all33PublicArticleTextsMatchBaseline": true,
+    "selectedHTMLDatesSummariesLanguagesAndPlaintextMatchPublicRecords": 26,
+    "publicPDSRecords": 26,
+    "stableURIAndCIDPairsVersusOnlineRerun": 26,
+    "publicRecordValuesMatchApprovedPreview": 26,
+    "paginationPages": 2,
+    "vanityPackages": 7,
+    "vanityURLVariants": 14,
+    "vanityCheck": "passed",
+    "rawHTMLByteEqualityClaim": false,
+    "edgeInjectedBeaconResponses": 34,
+    "limitation": "Production Cloudflare injects its Insights beacon and consumes email_off comments; raw response bytes differ from local/preview HTML. Article plaintext and selected record metadata are unchanged. No edge settings were changed."
+  },
+  "totals": {
+    "documents": 26,
+    "language": {
+      "ca": 11,
+      "en": 7,
+      "es": 8
+    },
+    "textContentBytes": 72442
+  },
+  "viewers": {
+    "checkedAt": "2026-10-12T19:25:50.819Z",
+    "samples": [
+      {
+        "path": "/rizoma/004/",
+        "lang": "ca",
+        "viewerURL": "https://pdsls.dev/at/did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3igx5omrt22um",
+        "status": 200,
+        "renderedTitle": true,
+        "bodyCharacters": 3186,
+        "errors": [],
+        "fields": {
+          "date": true,
+          "languageTag": true,
+          "path": true,
+          "site": true,
+          "plaintextFullExact": true,
+          "plaintextFullNormalized": true
+        },
+        "canonicalURL": "https://dario.cat/rizoma/004/",
+        "canonicalURLDisplayed": false
+      },
+      {
+        "path": "/es/posts/introduccion-organizaciones-liquidas/",
+        "lang": "es",
+        "viewerURL": "https://pdsls.dev/at/did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3b2keyughy24n",
+        "status": 200,
+        "renderedTitle": true,
+        "bodyCharacters": 5345,
+        "errors": [],
+        "fields": {
+          "date": true,
+          "languageTag": true,
+          "path": true,
+          "site": true,
+          "plaintextFullExact": true,
+          "plaintextFullNormalized": true
+        },
+        "canonicalURL": "https://dario.cat/es/posts/introduccion-organizaciones-liquidas/",
+        "canonicalURLDisplayed": false
+      },
+      {
+        "path": "/en/posts/portal-between-ruby-and-go/",
+        "lang": "en",
+        "viewerURL": "https://pdsls.dev/at/did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3ivxt5gr7k2qu",
+        "status": 200,
+        "renderedTitle": true,
+        "bodyCharacters": 3257,
+        "errors": [],
+        "fields": {
+          "date": true,
+          "languageTag": true,
+          "path": true,
+          "site": true,
+          "plaintextFullExact": true,
+          "plaintextFullNormalized": true
+        },
+        "canonicalURL": "https://dario.cat/en/posts/portal-between-ruby-and-go/",
+        "canonicalURLDisplayed": false
+      }
+    ],
+    "canonicalChecks": {
+      "publicationURL": "https://dario.cat",
+      "checks": [
+        {
+          "language": "ca",
+          "canonicalURL": "https://dario.cat/rizoma/004/",
+          "exactCanonicalLink": true
+        },
+        {
+          "language": "es",
+          "canonicalURL": "https://dario.cat/es/posts/introduccion-organizaciones-liquidas/",
+          "exactCanonicalLink": true
+        },
+        {
+          "language": "en",
+          "canonicalURL": "https://dario.cat/en/posts/portal-between-ruby-and-go/",
+          "exactCanonicalLink": true
+        }
+      ]
+    },
+    "limitation": "PDSls shows publication reference and path, not an absolute canonical URL; public publication and HTML head reads verify the derived URLs. Raw-record viewing does not prove rich-reader discovery."
+  },
+  "recordHashEncoding": "sha256(json.dumps(record, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8'))",
+  "documents": [
+    {
+      "path": "/en/posts/a-new-path/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3lbxibacnk2x5",
+      "cid": "bafyreiheccesfvj6hggnob7gwfl5yyh5zogamtjn42hpf67j3yxg32cssa",
+      "title": "A New Path",
+      "language": "en",
+      "publishedAt": "2024-11-27T22:22:00+01:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 1577,
+      "recordSHA256": "fcded0300b1780fbb387b7ac48127b0f5643d9e10bc249a31a665e923f325807"
+    },
+    {
+      "path": "/en/posts/delete-facebook-1/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fctfotbaa26v",
+      "cid": "bafyreibolzg62hk7z4khevypyhrfzuky4j6kn2zgkhztj6fo76gjsqfury",
+      "title": "Delete Facebook #1",
+      "language": "en",
+      "publishedAt": "2018-04-01T17:13:15+02:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 1930,
+      "recordSHA256": "4b427a1669c8b5c41870ed41600f857fab8b2b0e396fec451ab5820d7ae8c85d"
+    },
+    {
+      "path": "/en/posts/delete-facebook-2/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fdehsgmra2x6",
+      "cid": "bafyreib673tlyeg6gjmtwqrruo7bcdojgimxxcaqqewhzdsocbdaj5uewu",
+      "title": "Delete Facebook #2",
+      "language": "en",
+      "publishedAt": "2018-04-08T12:06:19+02:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 3151,
+      "recordSHA256": "b6ad825f2e9d99fa45528b02ab69c802a56274c9cb5d81252722a6de051400ec"
+    },
+    {
+      "path": "/en/posts/delete-facebook/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fcjynoduk2rd",
+      "cid": "bafyreia2ugbpiny5iibylw6h3esn3vcafsay6tr3c4mfs33fqiosreczv4",
+      "title": "Delete Facebook #0",
+      "language": "en",
+      "publishedAt": "2018-03-28T23:26:00+02:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 634,
+      "recordSHA256": "e5d418f32f58257e97c0062945459868272540e2ca95e5a17d85df461386f141"
+    },
+    {
+      "path": "/en/posts/introduction-liquid-organizations/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3b2keyughy2ih",
+      "cid": "bafyreia7sjdz2amzgnoczvdtwr6v6r3a6goblbdelen4455yxmbwgttzpa",
+      "title": "Introduction to liquid organizations",
+      "language": "en",
+      "publishedAt": "2013-07-02T10:00:39+02:00",
+      "updatedAt": "2026-10-12T20:24:46+02:00",
+      "textContentBytes": 4159,
+      "recordSHA256": "16cd5d4b9751c96297938fc1cc6a0f893e5411f6ab45e7b4d6d1f9b592b9f789"
+    },
+    {
+      "path": "/en/posts/monitoring-synology-nas-with-datadog/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3mt7dvnmh2245",
+      "cid": "bafyreicrl5q3ci3cn3cm6bjaxr7ub7xmdzy6cjnvxrjpapxaugtleopyza",
+      "title": "Monitoring a Synology NAS with Datadog",
+      "language": "en",
+      "publishedAt": "2026-08-16T15:59:44+02:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 7450,
+      "recordSHA256": "22163efd6551b289a6f6c4ba76bb01017b927c64dff115a050d3cbbec816b26f"
+    },
+    {
+      "path": "/en/posts/portal-between-ruby-and-go/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3ivxt5gr7k2qu",
+      "cid": "bafyreibt2unt2sui3syzwbfyjzbuhkbogrns45idsndcq3ox5hj2anybze",
+      "title": "A portal between Ruby and Go (using FFI)",
+      "language": "en",
+      "publishedAt": "2022-04-05T22:42:00+02:00",
+      "updatedAt": "2026-10-12T20:24:46+02:00",
+      "textContentBytes": 2585,
+      "recordSHA256": "c5a4c964b568f70006ebf0f0fb9b5b933d94fa600975f8905e41d34ac11754e1"
+    },
+    {
+      "path": "/es/posts/blockchain-si-o-no/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fvaiorafs2sx",
+      "cid": "bafyreihjxqsmx2ea6id745xz56dr2fbk36mgvf4awbaisxerdlwl7j6xtu",
+      "title": "Blockchain en mi próximo proyecto: ¿sí o no?",
+      "language": "es",
+      "publishedAt": "2018-11-21T22:45:00+01:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 489,
+      "recordSHA256": "e4d862eb108f76c925013caf8f0fe3a1839e30db6d20ebe69c7df81879b1bdcd"
+    },
+    {
+      "path": "/es/posts/delete-facebook-1/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fctfhcwsi2ay",
+      "cid": "bafyreicpkcvtxqbw27gu4uodexmbqrboiyfplsd4q2ofvqq2egqy55ycye",
+      "title": "Delete Facebook #1",
+      "language": "es",
+      "publishedAt": "2018-04-01T17:09:03+02:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 2012,
+      "recordSHA256": "ac4f0789725970e536db1b600146071a1b11bd73be132cbf889a8596ce1be9b3"
+    },
+    {
+      "path": "/es/posts/delete-facebook-2/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fdeh3n2sw2wt",
+      "cid": "bafyreift322deadf3evv24pwbtawes5onuw2arsgsp6rxdphmalibp6yvi",
+      "title": "Delete Facebook #2",
+      "language": "es",
+      "publishedAt": "2018-04-08T11:53:34+02:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 3352,
+      "recordSHA256": "4f1da10ee0fc4a06dd9e94422f95d13f5342715a52e09c22832ad0c18e71900c"
+    },
+    {
+      "path": "/es/posts/delete-facebook/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fcjynoduk2ak",
+      "cid": "bafyreidegchvlcfmgob5hp3m42qw42gmijixnuqqc4s6kxaun62tzabefi",
+      "title": "Delete Facebook #0",
+      "language": "es",
+      "publishedAt": "2018-03-28T23:26:00+02:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 637,
+      "recordSHA256": "c57ddd1a11cfb8781233882671a8739833ffc1aa27d64d8b0ae5eba757ca5cae"
+    },
+    {
+      "path": "/es/posts/introduccion-organizaciones-liquidas/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3b2keyughy24n",
+      "cid": "bafyreifukwsv42y4oiagmumd7sobgcvkvy4zqajpyvdikxrawciupoeaxm",
+      "title": "Introducción a las organizaciones líquidas",
+      "language": "es",
+      "publishedAt": "2013-07-02T10:00:39+02:00",
+      "updatedAt": "2026-10-12T20:24:46+02:00",
+      "textContentBytes": 4717,
+      "recordSHA256": "914453006c7e9317e09a3885afa3fd0184fb2b9a6546c8c6bfaa7c9ce0ef31f4"
+    },
+    {
+      "path": "/es/posts/pequena-reflexion/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3avif3ktts2ke",
+      "cid": "bafyreic636jgsaynmocelmwiuk365euak3npzitlqnw6lxkaxz6ilmjafy",
+      "title": "Pequeña reflexión: ¿qué es primero, cambiar el capitalismo o el poder?",
+      "language": "es",
+      "publishedAt": "2013-04-28T23:50:52+02:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 2459,
+      "recordSHA256": "522a2ee98d2af0596d1adc942668b864ce1d4f898db7a3f9f09ae6e38f86e3c1"
+    },
+    {
+      "path": "/es/posts/tejiendo-el-cambio/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3bd3vafbv22ra",
+      "cid": "bafyreie2tdkofcvk25vb7da6pktqixhrbfxvyz2d52y5vwo6mrz62w5e64",
+      "title": "Tejiendo el cambio",
+      "language": "es",
+      "publishedAt": "2013-10-18T22:28:00-04:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 2755,
+      "recordSHA256": "ad10861366f729aa8be03fe4f7c97394a33a70cf65084d5a7b5d78d0aa42aba0"
+    },
+    {
+      "path": "/es/posts/un-nuevo-camino/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3lbxibacnk2h3",
+      "cid": "bafyreia7dfdcgggl7j7k3ftacnst4mjrsqf7a4mwcdgg7olfvsfdzg6fzq",
+      "title": "Un nuevo camino",
+      "language": "es",
+      "publishedAt": "2024-11-27T22:22:00+01:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 1700,
+      "recordSHA256": "f824323e7a6f18c3a03dbcf41b91ce0afc4f4401f627f734c3f168cc2e7f9a3d"
+    },
+    {
+      "path": "/posts/delete-facebook-1/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fctel2u5a23n",
+      "cid": "bafyreicjsdifiyvbshriu23tnvm2vksejgmmoafgik7tvzpezpo7q4ljn4",
+      "title": "Delete Facebook #1",
+      "language": "ca",
+      "publishedAt": "2018-04-01T16:53:15+02:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 2020,
+      "recordSHA256": "549e5a68584ffbd865ce050d0141a19f0c021651125ce3f954196c55623d1100"
+    },
+    {
+      "path": "/posts/delete-facebook-2/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fdchy3d542nw",
+      "cid": "bafyreidf2j3w7atlcbnzwdsaop2liapa4yelrjh6n45ixjga3jlzb4f64a",
+      "title": "Delete Facebook #2",
+      "language": "ca",
+      "publishedAt": "2018-04-07T17:04:09+02:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 3262,
+      "recordSHA256": "f1d07c0b13eda5beda41e76db44e8101e88d4d864b53f431865280f8be4c220d"
+    },
+    {
+      "path": "/posts/delete-facebook/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fcjynoduk2hl",
+      "cid": "bafyreigizxwekdn2h2h6ozeluo3upnpb5ghfaiz3eqb7zq4ineaibvsvru",
+      "title": "Delete Facebook #0",
+      "language": "ca",
+      "publishedAt": "2018-03-28T23:26:00+02:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 629,
+      "recordSHA256": "4293c4af6ee1a2560b2794639c5a1d28cf9d72c37ff7a2e3ff94bd5c236fea14"
+    },
+    {
+      "path": "/posts/manifest-assemblees-constituents-contrapoder/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3ccrqthnaw2dl",
+      "cid": "bafyreibmrexhs2majha4ctpvabmzoxmjl6wx42t6tfosw235ycocss4l4y",
+      "title": "Manifest per les assemblees constituents com contrapoder",
+      "language": "ca",
+      "publishedAt": "2014-11-26T08:08:46+01:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 1778,
+      "recordSHA256": "19a4723103fae0e973a7f9470fc5f2918e18ad1a4ac9f4f659cecb6f6110ed0e"
+    },
+    {
+      "path": "/posts/pseudo-estat/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3li54ji6zc2xd",
+      "cid": "bafyreicxzdcm4gvm5y4yv5qptmhr2xgutz4p6zl46pciw7yojffligae4a",
+      "title": "Tecnofeudalisme i el Pseudo-Estat: la futura governabilitat del capitalisme",
+      "language": "ca",
+      "publishedAt": "2025-02-14T12:39:00+01:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 2625,
+      "recordSHA256": "2657e91d5bf51c24a04cf948b5e5ca23d9f31157ce1d100faf91acc17f946beb"
+    },
+    {
+      "path": "/posts/renda-basica/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3kpsf4qj4s2jv",
+      "cid": "bafyreiagt2amxeq7ouwppykhm742dxihknljcopeutu22lgr6lzk43hlbi",
+      "title": "Renda bàsica: deixarà tothom de treballar?",
+      "language": "ca",
+      "publishedAt": "2024-04-10T21:09:00+02:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 5985,
+      "recordSHA256": "d6985563b5c5499d5406ccef8f883a301d79ed5a0db3dcc796392f9b134d4bda"
+    },
+    {
+      "path": "/posts/un-nou-cami/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3lbxibacnk23c",
+      "cid": "bafyreicss6vbjshhvm3ze7wkp22w2txolsvln72pxdk5k7nbtcdm4iycwu",
+      "title": "Un nou camí",
+      "language": "ca",
+      "publishedAt": "2024-11-27T22:22:00+01:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 1675,
+      "recordSHA256": "70d3a6568c413c2e5bc6c8c646823b11ab0abcece5860d6dcbdc4913f5d138d5"
+    },
+    {
+      "path": "/rizoma/001/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3id2ynw5k226r",
+      "cid": "bafyreifzuxl3c2edo27fe7ut4go7mwvur6ubfza6ahwnbxutck3mwey2va",
+      "title": "Rizoma #001",
+      "language": "ca",
+      "publishedAt": "2021-08-08T10:00:00+02:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 3179,
+      "recordSHA256": "c886fcf2a8f37e2cf46562fbde2f249877e73c6e100f77370744960a1cb23350"
+    },
+    {
+      "path": "/rizoma/002/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3ie6wnt6z2262",
+      "cid": "bafyreic3f2xl5cpnpukzxvw3gctielmjazrs65q5fdjlbnk4ll4vpqxolq",
+      "title": "Rizoma #002: Canvi climàtic. O fallida climàtica? 🌍🔥",
+      "language": "ca",
+      "publishedAt": "2021-08-22T17:00:00+02:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 5174,
+      "recordSHA256": "c78441051bae1cce30013daef9c9d7f9c128b8cb163c5b5a7abdc4eff1f42525"
+    },
+    {
+      "path": "/rizoma/003/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3ifbmgbj4224d",
+      "cid": "bafyreic4cdgq37ckjqifusj5gmv55apqsbdynh2gfr45dqfipnjxerma54",
+      "title": "Rizoma #003: Estat del català: a l'UCI o acostant-se a la revifada?",
+      "language": "ca",
+      "publishedAt": "2021-09-05T12:00:00+02:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 3898,
+      "recordSHA256": "bd605c1bf18b02a1c5de4004374f666b6481e7e2413815fd702f1ba1821dd990"
+    },
+    {
+      "path": "/rizoma/004/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3igx5omrt22um",
+      "cid": "bafyreigrxjcejc7tl45hezaf247h3dwuv7wg22woard3xi6wvqqwjeouca",
+      "title": "Rizoma #004: popurri d'enllaços",
+      "language": "ca",
+      "publishedAt": "2021-09-26T19:00:00+02:00",
+      "updatedAt": "2026-10-11T17:22:22+02:00",
+      "textContentBytes": 2610,
+      "recordSHA256": "90a67d23fa6df4260ac2afb2fe2f0b5ffaeaf799bf889a04a7593102c57d70e6"
+    }
+  ]
+}
