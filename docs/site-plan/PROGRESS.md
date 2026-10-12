@@ -594,6 +594,8 @@ receipt and hosted preview follow this unit; production follows owner merge.
 
 ### Foundation reflow follow-up
 
+Committed as `da02de2`.
+
 The wider check found 200% text overflow on the older Deciwave video embed and
 three Mergo/Zas documentation tables. Iframes now respect their container;
 tables and cells wrap within the column without changing their semantic HTML
@@ -606,3 +608,23 @@ to their existing pkg.go.dev destinations. The final requested 36-scenario
 axe/keyboard/font/reflow matrix was rerun with this final CSS and passes.
 Final screenshots and all catalogue/home measurements were recaptured.
 No article facts, embedded destinations, docs sources or client scripts change.
+
+### Design review receipt
+
+The six requested units are committed in order: `51c2f67` foundations,
+`1fa425d` localized layout, `70d44fb` talks, `50cb1d6` article tags, `53143d9`
+home/contact and `3766154` project labels. The isolated CV exclusion fix is
+`6ff0f56`; the measured media/table reflow correction is `da02de2`. All commits
+are signed and passed darna staging/atomicity validation without bypassing hooks.
+
+[Review evidence](../../.github/review/site-design/verification.json) records
+source/CSS hashes, tool versions, exact before/after talk tuples and hrefs,
+measurements and check limits. Four before/after screenshots at 1440×900 and
+390×844 and the 36-scenario/74-page browser reports live alongside it for the
+PR, under .github so they are excluded from the published site. Independent
+review found no material issues. The five talk languages are confirmed Catalan;
+the optional homepage proof line is omitted. No owner question remains for
+this batch. The remaining T09/defaults work stays deferred.
+
+Local acceptance is complete. Hosted preview and exact-commit CI checks follow
+push; custom-domain acceptance and the CV email correction require owner merge.
