@@ -247,3 +247,25 @@ failure/recovery probe. The operator guide retains the six successful resources
 and requires a fresh plan after updating, without deleting state or reusing the
 failed saved plan. Hosted execution, activation and received notices remain
 owner work; creation alone does not establish active monitoring.
+
+## Datadog assertion-size correction · 2026-10-12
+
+After PR #19 resolved variable interpolation, the owner captured seven HTTP 400
+invalid-JavaScript-assertion responses through OpenTofu's JSON output. Temporary
+paused probes accepted a tiny multistep script, rejected both the 94,833-byte
+parser and equal-sized trivial padding, and accepted fixed sizes through 32,768
+bytes before rejecting 65,536 bytes. A finer probe accepted through 51,200 bytes
+and rejected 60,000 bytes. Every temporary accepted test was removed;
+the six state-managed auxiliary tests remain intact.
+
+The next correction compiles checksum-pinned parse5 TypeScript, specializes
+unused diagnostics/location tracking and shortens reviewed internal property
+names. It retains the existing HTML grammar, full entity decoding and licenses,
+with additional script/CDATA fixtures and a 49,000-byte final-assertion budget.
+The measured bounds do not establish Datadog's exact size limit. The owner then
+confirmed API acceptance by creating a paused HTTP test with the actual
+48,858-byte Mergo replacement; both it and the tiny multistep control were
+cleaned up. The tested artifact is SHA256
+`de41f1a14fb161269505561fd7d467eacfe664b202fca15e3404f03451d11987`.
+State-managed creation, managed-location execution and received notices remain
+the next operational gates.

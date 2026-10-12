@@ -4,18 +4,30 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { createContext, Script } from 'node:vm';
 import { test } from 'node:test';
+import { build } from 'esbuild';
+import { escapePackedTable } from './safe-packed-table.mjs';
 
 const directory = path.dirname(fileURLToPath(import.meta.url));
 const bundle = await readFile(path.join(directory, 'vanity.js'), 'utf8');
+// Independently compile the original published parse5 tokenizer, without the
+// compact build's specializations or property shortening. Every fixture checks
+// the deployed artifact against this reference under the same restricted VM.
+const adapter = await readFile(path.join(directory, 'vanity.mjs'), 'utf8');
+const referenceBuild = await build({
+  stdin: { contents: adapter.replace('./vendor/parse5/tokenizer/index.ts', './node_modules/parse5/dist/tokenizer/index.js'), resolveDir: directory, sourcefile: 'reference.mjs' },
+  bundle: true, format: 'iife', platform: 'neutral', target: 'es2018',
+  minify: true, charset: 'utf8', legalComments: 'none', write: false,
+});
+const reference = escapePackedTable(referenceBuild.outputFiles[0].text, await readFile(path.join(directory, 'node_modules/entities/dist/generated/decode-data-html.js'), 'utf8'));
 const baseline = JSON.parse(await readFile(path.resolve(directory, '../../..', '.tools/vanity/internal/vanity/baseline.json'), 'utf8'));
 const route = baseline.find(row => row.path === '/mergo/');
 const correct = '<meta name="go-import" content="' + route.go_import[0] + '">';
 const fake = correct.replace('/imdario/', '/evil/');
 const source = '<meta name="go-source" content="dario.cat/mergo https://example.org https://example.org/tree{/dir} https://example.org/blob{/dir}/{file}#L{line}">';
 
-function execute(body, expected = route) {
-  assert.equal(bundle.split('__EXPECTED_METADATA__').length, 2);
-  const injected = bundle.replace('__EXPECTED_METADATA__', () => JSON.stringify(expected));
+function executeArtifact(artifact, body, expected) {
+  assert.equal(artifact.split('__EXPECTED_METADATA__').length, 2);
+  const injected = artifact.replace('__EXPECTED_METADATA__', () => JSON.stringify(expected));
   assert.equal(injected.includes('{{'), false, 'Datadog must not find a substitution prefix in assertion code');
   const calls = [];
   const sandbox = {
@@ -39,6 +51,21 @@ function execute(body, expected = route) {
     throw new Error(error.message);
   }
   assert.equal(calls.length, 1, 'The standalone assertion must explicitly signal success');
+}
+
+function execute(body, expected = route) {
+  const outcomes = [bundle, reference].map(artifact => {
+    try {
+      executeArtifact(artifact, body, expected);
+      return null;
+    } catch (error) {
+      return error;
+    }
+  });
+  if ((outcomes[0]?.message ?? null) !== (outcomes[1]?.message ?? null)) {
+    throw new Error('Compact tokenizer differs from the original parse5 outcome');
+  }
+  if (outcomes[0]) throw outcomes[0];
 }
 
 test('the real seven tracked vanity fragments match the shared reviewed baseline', async () => {
@@ -70,6 +97,9 @@ const accepted = {
   'Go Unicode whitespace': '\u0085\u00a0\u1680\u2000\u202f\u205f\u3000' + correct.replace(' git ', '\u0085git\u3000'),
   'body raw-text examples do not become metadata': correct + '<body><iframe>' + fake + '</iframe><textarea>' + fake + '</textarea><xmp>' + fake + '</xmp><noembed>' + fake + '</noembed><noframes>' + fake + '</noframes><plaintext>' + fake,
   'body comments and scripts after real metadata': correct + '<body><!--' + fake + '--><script>' + fake + '</script></body>',
+  'double-escaped script metadata stays inert': correct + '<script><!--<script></script>' + fake,
+  'script double-escape exit returns to ordinary head metadata': '<script><!--<script></script></script>' + correct,
+  'bogus HTML CDATA comment cannot introduce conflicting metadata': correct + '<![CDATA[' + fake + ']]>',
 };
 for (const [name, body] of Object.entries(accepted)) test('accept: ' + name, () => execute(body));
 
@@ -109,6 +139,9 @@ const rejected = {
   'unclosed comment hides metadata': '<!-- ' + correct,
   'unclosed script hides metadata': '<script>\'' + correct,
   'self-closing non-void script still hides metadata': '<script/>' + correct,
+  'double-escaped script cannot supply missing metadata': '<script><!--<script></script>' + correct,
+  'unclosed HTML CDATA comment hides metadata': '<![CDATA[' + correct,
+  'CDATA remainder starts implicit body before later metadata': '<![CDATA[' + fake + ']]>' + correct,
   'inert template starts non-head content': '<template>' + correct + '</template>',
 };
 for (const [name, body] of Object.entries(rejected)) test('reject: ' + name, () => assert.throws(() => execute(body), /Vanity/));
@@ -155,6 +188,14 @@ test('all production routes and both probe payloads have no Datadog substitution
   }
   execute(correct, probePassing);
   assert.throws(() => execute(correct, probeFailing), /reviewed baseline/);
+});
+
+test('all injected assertions remain within the reviewed 49,000-byte budget', () => {
+  const probeFailing = { ...route, go_import: ['dario.cat/mergo git https://example.invalid/notification-probe'] };
+  for (const expected of [...baseline, route, probeFailing]) {
+    const injected = bundle.replace('__EXPECTED_METADATA__', () => JSON.stringify(expected));
+    assert.ok(Buffer.byteLength(injected, 'utf8') <= 49_000, 'Assertion size budget exceeded: ' + expected.path);
+  }
 });
 
 test('named brace entities preserve exact go-source template characters', () => {

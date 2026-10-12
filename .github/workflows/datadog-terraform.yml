@@ -40,6 +40,6 @@ jobs:
           terraform -chdir=.infra/datadog test
       - name: Test standalone monitoring assertions
         run: |
-          node --test .infra/datadog/assertions.test.mjs .infra/datadog/assertions/*.test.mjs
           npm --prefix .infra/datadog/assertions ci --ignore-scripts --no-audit --no-fund
+          node --test .infra/datadog/assertions.test.mjs .infra/datadog/assertions/*.test.mjs
           node .infra/datadog/assertions/build.mjs --check

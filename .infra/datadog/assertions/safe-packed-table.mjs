@@ -9,7 +9,9 @@ export function escapePackedTable(bundle, upstream) {
   if (bundle.split(literal).length !== 2) throw new Error('Expected exactly one complete entities data literal in bundle');
   // This replacement acts on a JSON string scalar, not code. Unicode escapes
   // retain every decoded table character and prevent a substitution prefix.
-  const escaped = literal.replace(/\{/g, '\\u007b');
+  // Escape only openers of adjacent pairs; ordinary braces need no expansion.
+  // The lookahead also handles runs of three or more braces without overlap.
+  const escaped = literal.replace(/\{(?=\{)/g, '\\u007b');
   if (JSON.parse(escaped) !== packed) throw new Error('Escaping changed entities table data');
   const safe = bundle.replace(literal, () => escaped);
   if (safe.includes('{{')) throw new Error('Datadog substitution prefix remains outside the reviewed table literal');
