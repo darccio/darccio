@@ -1,0 +1,20 @@
+{
+  "name": "dario-cat-datadog-vanity-assertion",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test vanity.test.mjs",
+    "check-bundle": "node build.mjs --check"
+  },
+  "dependencies": {
+    "parse5": "8.0.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

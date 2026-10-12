@@ -1,0 +1,45 @@
+name: Datadog Terraform checks
+
+on:
+  pull_request:
+    paths:
+      - '.infra/datadog/**'
+      - '.tools/vanity/internal/vanity/**'
+      - '.github/workflows/datadog-terraform.yml'
+  push:
+    branches: [main]
+    paths:
+      - '.infra/datadog/**'
+      - '.tools/vanity/internal/vanity/**'
+      - '.github/workflows/datadog-terraform.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+      - uses: hashicorp/setup-terraform@dfe3c3f87815947d99a8997f908cb6525fc44e9e # v4.0.1
+        with:
+          terraform_version: '1.16.5'
+          terraform_wrapper: false
+      - name: Validate Terraform without Datadog credentials
+        run: |
+          terraform -chdir=.infra/datadog fmt -check -recursive
+          terraform -chdir=.infra/datadog init -backend=false -input=false -lockfile=readonly
+          terraform -chdir=.infra/datadog validate
+          terraform -chdir=.infra/datadog test
+      - name: Test standalone monitoring assertions
+        run: |
+          node --test .infra/datadog/assertions.test.mjs .infra/datadog/assertions/*.test.mjs
+          npm --prefix .infra/datadog/assertions ci --ignore-scripts --no-audit --no-fund
+          node .infra/datadog/assertions/build.mjs --check
