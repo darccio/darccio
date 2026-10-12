@@ -1,4 +1,5 @@
 <!--
+nav: talks
 description: "Xerrades, entrevistes i presentacions de Dario Castañé sobre Go, programari lliure, drets digitals, cultura i política."
 updated: 2026-10-11T17:01:37+02:00
 -->

@@ -224,11 +224,6 @@ body > header {
   padding-top: var(--space-7);
 }
 
-.home {
-  display: inline-block;
-  max-width: 3rem;
-}
-
 .site-author, .site-author > a {
   display: inline-flex;
   align-items: center;
@@ -259,6 +254,7 @@ body > header {
 }
 
 .primary-navigation {
+  text-transform: uppercase;
   border-bottom: var(--border-hairline);
   padding-bottom: var(--space-2);
 }
@@ -267,6 +263,20 @@ body > header {
   display: inline-flex;
   align-items: center;
   min-height: var(--target-comfortable);
+}
+
+.primary-navigation > a[aria-current="page"] {
+  color: var(--text);
+  font-weight: var(--weight-medium);
+  text-decoration-color: var(--rule-accent);
+  text-decoration-thickness: var(--rule-weight);
+}
+
+@media (max-width: 34rem) {
+  .primary-navigation {
+    gap: 0 var(--space-3);
+    letter-spacing: var(--tracking-normal);
+  }
 }
 
 main {

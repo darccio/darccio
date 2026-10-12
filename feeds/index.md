@@ -1,5 +1,6 @@
 <!--
 entry: true
+nav: posts
 description: "RSS dels articles de Dario Castañé, el butlletí Rizoma i les versions de Mergo i Zas."
 updated: 2026-10-11T15:33:14+02:00
 -->

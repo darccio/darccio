@@ -1,4 +1,5 @@
 <!--
+nav: projects
 description: "Mergo, Zas, darna i altres projectes de programari lliure de Dario Castañé."
 updated: 2026-10-11T15:33:14+02:00
 -->

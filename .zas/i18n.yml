@@ -50,3 +50,79 @@ home:
     ca: Inici
     en: Home
     es: Inicio
+main-navigation:
+    ca: Navegació principal
+    en: Main navigation
+    es: Navegación principal
+skip-content:
+    ca: Salta al contingut
+    en: Skip to content
+    es: Saltar al contenido
+nav-posts:
+    ca: Escrits
+    en: Articles
+    es: Artículos
+nav-projects:
+    ca: Projectes
+    en: Projects
+    es: Proyectos
+nav-talks:
+    ca: Xerrades
+    en: Talks
+    es: Charlas
+nav-contact:
+    ca: Contacte
+    en: Contact
+    es: Contacto
+published:
+    ca: Publicat
+    en: Published
+    es: Publicado
+updated:
+    ca: Actualitzat
+    en: Updated
+    es: Actualizado
+by:
+    ca: Per
+    en: By
+    es: Por
+permalink:
+    ca: Enllaç permanent
+    en: Permalink
+    es: Enlace permanente
+tags:
+    ca: Temes
+    en: Tags
+    es: Etiquetas
+footer-feeds:
+    ca: Subscripcions
+    en: Feeds
+    es: Suscripciones
+footer-slashes:
+    ca: Totes les pàgines
+    en: All pages
+    es: Todas las páginas
+footer-colophon:
+    ca: Sobre aquest web
+    en: About this site
+    es: Sobre esta web
+license-content:
+    ca: Contingut
+    en: Content
+    es: Contenido
+license-content-url:
+    ca: https://creativecommons.org/licenses/by-sa/4.0/deed.ca
+    en: https://creativecommons.org/licenses/by-sa/4.0/
+    es: https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES
+license-docs:
+    ca: Documentació
+    en: Documentation
+    es: Documentación
+license-exceptions:
+    ca: Llicències i excepcions
+    en: Licences and exceptions
+    es: Licencias y excepciones
+generated-with:
+    ca: Web generat amb
+    en: Site generated with
+    es: Web generado con

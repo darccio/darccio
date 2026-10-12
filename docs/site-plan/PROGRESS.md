@@ -484,6 +484,8 @@ licenses, verified npm integrity and individual file checksums.
 
 ### Design foundations
 
+Committed as `51c2f67`.
+
 Self-hosted Newsreader 400/500/600 and 400 italic and IBM Plex Mono 400/500
 replace the system-font foundation. Both pinned Fontsource 5.3.0 packages retain
 their OFL licenses and checksums. `tokens.css` equals Appendix A byte-for-byte;
@@ -498,3 +500,20 @@ have zero axe violations and visible keyboard focus. Every scenario passes
 320px reflow at normal and 200% text, with both font families loaded locally.
 No theme JavaScript or external font request is added. Later units own the
 header/current-navigation and catalogue changes; their acceptance is still pending.
+
+### Localized layout
+
+Section metadata resolves through Zas page and nearest-directory config;
+English/Spanish defaults retain both their language and selected posts section.
+Navigation, skip link, article chrome and footer now use the ca/en/es message
+catalogue. The Catalan archive and its nav label both say Escrits. The current
+section uses an explicit aria-current attribute and a token-colored 2px underline.
+The uniform header uses the same 96px avatar and name everywhere; its compact
+card is omitted only as a microformats root where the body already supplies the
+representative card, preserving the homepage/about representative identity.
+
+Generate, full tests, vanity and microformats checks pass. All 36 browser
+scenarios pass axe, keyboard focus and 320px normal/200% reflow. A targeted
+nine-route check confirms selected sections, localized chrome, 44px nav targets
+and a single-row Catalan menu at 390px. Checks use local generated output;
+custom-domain deployment remains pending the review PR.

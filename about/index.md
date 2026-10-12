@@ -1,6 +1,7 @@
 <!--
 title: Sobre mi
 representative_hcard: true
+nav: home
 description: "Dario Castañé: programari lliure, tecnologia, política i comunitat."
 image: /static/avatar.webp
 vcard: /static/dario-castane.vcf
