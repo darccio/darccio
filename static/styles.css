@@ -53,7 +53,7 @@
 html {
   box-sizing: border-box;
   min-height: 100%;
-  border-top: 5px solid var(--rule-accent);
+  border-top: 5px solid var(--accent);
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-serif);
@@ -146,6 +146,28 @@ strong, b {
 img, svg, video {
   max-width: 100%;
   height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+  margin: 0 0 var(--space-5);
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: var(--space-2);
+  border-bottom: var(--border-hairline);
+  text-align: start;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+th {
+  font-weight: var(--weight-semibold);
 }
 
 blockquote {

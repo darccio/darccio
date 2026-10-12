@@ -579,6 +579,8 @@ custom-domain acceptance remains pending the review PR.
 
 ### Project resource names
 
+Committed as `3766154`.
+
 The six repeated repository/API links now append their project name as spoken
 context, while visible labels and destinations stay unchanged. All five parsed
 h-item objects and the complete project href list equal the pre-change build.
@@ -589,3 +591,18 @@ or 200% text. Every prior HTML route remains present. All seven vanity contracts
 the raw fragments and the CV JSON are preserved; talk links/events and the
 representative homepage card remain unchanged. The final screenshot/commit
 receipt and hosted preview follow this unit; production follows owner merge.
+
+### Foundation reflow follow-up
+
+The wider check found 200% text overflow on the older Deciwave video embed and
+three Mergo/Zas documentation tables. Iframes now respect their container;
+tables and cells wrap within the column without changing their semantic HTML
+or content. The top 5px rule uses the requested accent token directly.
+
+Generate, full tests and vanity pass. All 74 styled HTML pages pass 320px
+reflow at normal and 200% text. Five raw vanity fragments are excluded from
+browser styling checks and remain byte-identical; four intentionally redirect
+to their existing pkg.go.dev destinations. The final requested 36-scenario
+axe/keyboard/font/reflow matrix was rerun with this final CSS and passes.
+Final screenshots and all catalogue/home measurements were recaptured.
+No article facts, embedded destinations, docs sources or client scripts change.
