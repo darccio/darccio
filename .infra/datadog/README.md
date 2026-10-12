@@ -5,7 +5,7 @@ template: false
 
 # Datadog domain monitoring with Terraform
 
-This root module manages thirteen Datadog Synthetic API tests for `dario.cat`.
+This root module manages eight Datadog Synthetic API tests for `dario.cat`.
 Datadog's managed Frankfurt location runs them independently of GitHub, Pages
 builds and the PDS. The owner selected EU1 and `cc@dario.cat`; EU1 uses
 `https://app.datadoghq.eu` and `https://api.datadoghq.eu/`, as listed in
@@ -13,8 +13,8 @@ builds and the PDS. The owner selected EU1 and `cc@dario.cat`; EU1 uses
 
 | Tests | Schedule | Failure condition |
 | --- | --- | --- |
-| Mergo and darna two-step vanity tests | Every 30 minutes | Bare URL's exact 308 redirect/query changes, or canonical response fails TLS/HTTP/content-type/HTML metadata checks |
-| Other five two-step vanity tests | Every 2 hours | Same exact redirect, TLS, HTTP and metadata checks |
+| Mergo/Cocoon vanity group (four steps) | Every 30 minutes | Any bare URL's exact 308 redirect/query changes, or canonical response fails TLS/HTTP/content-type/HTML metadata checks |
+| Other five vanity paths (one group, ten steps) | Every 2 hours | Same exact redirect, TLS, HTTP and metadata checks |
 | Two validating DNS resolvers | Daily | Google or Cloudflare cannot return an authenticated `dario.cat` A answer with validation enabled |
 | One TLS certificate test | Daily | Invalid certificate or 14 days or fewer until expiration |
 | Three registry-expiry tests | Daily | 90, 60 or 30 days or fewer until registry expiration, or usable registry data is missing |
@@ -26,11 +26,17 @@ text, ignores comments/scripts, rejects metadata outside the head, and retains
 duplicate-tag multiplicity. The body limit is 1 MiB. Datadog does not follow
 redirects: the first step verifies the observed single hop and exact Location,
 then the second requests the expected slash URL directly. A failed bare step
-remains critical while allowing the canonical check to run. No browser test or
-client JavaScript is needed.
+remains critical while allowing the canonical check to run. Every canonical
+step also remains critical and lets later packages run after a failure. Alerts
+are per group and identify the failed step and URL; a group recovers when all
+of its steps pass. No browser test or client JavaScript is needed.
+
+Two multistep groups fit the owner's five-test account quota and
+[Datadog's default ten-step limit](https://docs.datadoghq.com/synthetics/multistep/).
+Grouping reduces test count; each of the fourteen requests remains billable.
 
 The owner selected this schedule to target **about $5 per month**. Independent
-checks for Mergo/darna retain a thirty-minute cadence; package-specific failures
+checks for Mergo/Cocoon use a thirty-minute cadence; package-specific failures
 in the other imports can take up to two hours to be detected. Resolver and expiry
 checks run daily. The full GitHub backstop remains every thirty minutes.
 
@@ -82,7 +88,7 @@ terraform plan -out=monitoring.tfplan
 terraform apply monitoring.tfplan
 ```
 
-Review that the first plan creates thirteen **paused** tests in the intended EU
+Review that a fresh installation creates eight **paused** tests in the intended EU
 account and uses your selected recipient. Open them in Datadog and run each on
 demand to verify actual request and assertion execution, including the bundled
 parser in Datadog's sandbox. Local VM tests and Terraform schema validation
@@ -122,19 +128,45 @@ created a paused HTTP test with the actual 48,858-byte Mergo assertion and
 verified cleanup. This establishes API acceptance of the replacement code;
 managed-location execution still needs verification before activation.
 
-After updating to the fix, use the same initialized directory and variables to
-create a **fresh** plan:
+The next owner apply created five vanity tests (darna, awaken, errors, x and
+xdr), while Mergo and Cocoon hit `Quota reached for multi tests: 5`. The grouped
+layout reuses two confirmed existing resources through `moved` blocks:
+
+| Existing resource | Group | Existing public ID retained |
+| --- | --- | --- |
+| `vanity["darna"]` | `vanity["priority"]`: Mergo/Cocoon | `kv2-z2c-77h` |
+| `vanity["xdr"]` | `vanity["other"]`: remaining five | `m4f-5g8-vxh` |
+
+The existing Awaken, Errors and X test resources become redundant and are
+removed by the same reviewed plan. Both groups update their reused resources
+in place, so migration needs no extra multistep quota. Use the same initialized
+directory, existing state and variables to create a **fresh** plan:
 
 ```sh
 tofu plan -out=monitoring.tfplan
 tofu apply monitoring.tfplan
 ```
 
-Review the plan before applying it. With the same variables, it should create
-the seven missing vanity tests and retain the six successful resources. Do not
-reuse the previous saved plan, remove state, or destroy the successful tests.
+Review the plan before applying it. For this eleven-resource partial state and
+the same variables, expect **0 additions, 2 in-place changes and 3 destructions**.
+The two moved resources retain their public IDs and the six certificate,
+DNSSEC and renewal resources remain unchanged. Stop if the plan replaces a
+group or changes those auxiliary tests unexpectedly. Keep the existing state;
+removing resources from state leaves remote tests consuming account quota.
+Do not reuse the failed saved plan or delete tests manually before applying.
 On-demand hosted assertions, activation and received notices remain the next
 verification steps.
+
+The offline migration regression builds prior state from the pinned pre-group
+revision and eleven fake resource IDs. With provider 4.25.0 it verifies two
+in-place updates, three redundant-test removals, six auxiliary no-ops and both
+retained IDs. Its isolated provider uses fake keys and a loopback-only endpoint
+with validation and refresh disabled; it never reads real state or plans and
+never applies resources. Run it with an initialized provider cache:
+
+```sh
+python3 tests/quota-migration.py
+```
 
 ## Activate production monitoring
 
@@ -182,7 +214,7 @@ terraform apply notification.tfplan
 Confirm a scheduled successful run and its received recovery email. Remove the
 temporary test by planning/applying normally again (the local file keeps
 `notification_probe_enabled = false`). Verify that the plan deletes only this
-additional test and keeps the thirteen production resources.
+additional test and keeps the eight production resources.
 
 For each expiry test, use Datadog's **Simulate Notifications** action and receive
 the `[TEST]` notice. These prove routing; local threshold fixtures prove the
@@ -224,6 +256,7 @@ terraform fmt -check -recursive
 terraform init -backend=false -input=false -lockfile=readonly
 terraform validate
 terraform test
+python3 tests/quota-migration.py
 ```
 
 The Terraform tests use a mocked provider; CI needs no Datadog credentials and

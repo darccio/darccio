@@ -24,6 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          fetch-depth: 0 # The migration fixture reads the pinned pre-group revision.
           persist-credentials: false
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
@@ -38,6 +39,8 @@ jobs:
           terraform -chdir=.infra/datadog init -backend=false -input=false -lockfile=readonly
           terraform -chdir=.infra/datadog validate
           terraform -chdir=.infra/datadog test
+      - name: Verify partial-state migration without account access
+        run: python3 .infra/datadog/tests/quota-migration.py
       - name: Test standalone monitoring assertions
         run: |
           npm --prefix .infra/datadog/assertions ci --ignore-scripts --no-audit --no-fund

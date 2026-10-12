@@ -269,3 +269,22 @@ cleaned up. The tested artifact is SHA256
 `de41f1a14fb161269505561fd7d467eacfe664b202fca15e3404f03451d11987`.
 State-managed creation, managed-location execution and received notices remain
 the next operational gates.
+
+## Datadog multistep account quota · 2026-10-12
+
+PR #20 merged as `4432d44`. The owner's next apply created five vanity tests
+and hit the account's five-multistep-test quota on Mergo and Cocoon. The
+owner-selected two-group layout keeps all fourteen URL checks: Mergo/Cocoon have
+four steps every thirty minutes; the other five have ten steps every two hours.
+All steps remain critical while allowing subsequent steps to execute. The
+monthly schedule estimate remains $4.77 for thirty days at the configured rate.
+
+Moved blocks reuse the confirmed Darna and Xdr resource IDs. The expected
+partial-state migration updates those two tests in place and removes three
+redundant vanity tests, with no additions and the six auxiliary tests unchanged.
+Actual account migration, managed-location execution and received alerts remain
+owner checks. No account resources were changed by the agent.
+The actual provider's offline migration plan confirms zero creates, two updates,
+three redundant-test deletions, both moved IDs retained and six auxiliary no-ops.
+Its fake prior state is generated from pinned pre-group configuration; validation
+and refresh are disabled against a loopback endpoint, with no real state reads.

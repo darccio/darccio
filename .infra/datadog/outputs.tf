@@ -1,5 +1,5 @@
 output "test_ids" {
-  description = "Datadog public IDs for the managed tests. These are resource IDs, not credentials."
+  description = "Datadog public IDs for vanity groups and auxiliary tests. These are resource IDs, not credentials."
   value = {
     vanity             = { for name, test in datadog_synthetics_test.vanity : name => test.id }
     certificate        = datadog_synthetics_test.certificate.id

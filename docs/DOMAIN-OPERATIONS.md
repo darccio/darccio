@@ -82,8 +82,8 @@ variable reference. The assertion-build fix escapes this string data while
 preserving the tokenizer's decoded values and exact metadata checks.
 
 Keep the owner's existing OpenTofu state and local variables. After updating the
-code, generate a fresh plan to create the seven missing tests while retaining
-the six successful resources; see the module's
+code, generate a fresh plan according to the current quota-migration receipt
+below; see the module's
 [partial-apply instructions](../.infra/datadog/README.md#resume-a-partially-failed-apply).
 Resource creation does not establish hosted assertion success, scheduled
 monitoring or received alerts. Those operational checks remain open.
@@ -103,6 +103,29 @@ replacement successfully, alongside the tiny multistep control. Both temporary
 tests were cleaned up. The accepted artifact's SHA256 is
 `de41f1a14fb161269505561fd7d467eacfe664b202fca15e3404f03451d11987`.
 This confirms API acceptance; real managed-location execution remains open.
+
+## Datadog multistep quota migration, 2026-10-12
+
+After the compact assertion fix, the owner created the Darna, Awaken, Errors,
+X and Xdr vanity tests. Mergo and Cocoon creation failed with HTTP 402 and
+`Quota reached for multi tests: 5`. The prepared layout groups Mergo/Cocoon into
+four steps every thirty minutes and the remaining five paths into ten steps
+every two hours. All fourteen request/metadata checks remain, with the same
+9,540 scheduled requests per thirty days and the configured $4.77 estimate.
+Alerts now operate per group and identify the failing step and URL.
+
+Explicit `moved` blocks reuse the successful Darna test (`kv2-z2c-77h`) for the
+priority group and Xdr (`m4f-5g8-vxh`) for the other group. A fresh plan against
+the reported state and unchanged variables should show zero additions, two
+in-place changes and three redundant vanity-test destructions. The six
+certificate, DNSSEC and renewal tests remain unchanged. Keep the existing
+state and check public-ID continuity before applying; don't use `state rm`
+or remove tests through the dashboard to free quota.
+
+An offline plan using the actual pinned provider and eleven fake prior IDs
+verifies these two moves, zero additions, two updates, three removals and six
+auxiliary no-ops. It validates both retained IDs and all grouped request fields
+without account access or reading the owner's actual state.
 
 ## Registrar protection in SW Hosting
 
@@ -135,8 +158,8 @@ For rollback, remove the parent DS through the registrar first. Keep Cloudflare 
 ## Independent external monitor
 
 The owner selected **Datadog EU1** and **cc@dario.cat** for notifications. The
-[Terraform module](../.infra/datadog/README.md) prepares seven two-step import
-checks on the owner's selected budget schedule: **Mergo/darna every 30 minutes**,
+[Terraform module](../.infra/datadog/README.md) prepares two grouped import
+checks on the owner's selected budget schedule: **Mergo/Cocoon every 30 minutes**,
 the other five imports **every 2 hours**, and **daily** validating-resolver/TLS
 checks and registry-renewal warnings at **90, 60 and 30 days**. A single location
 schedules **9,540 runs per 30 days** (9,858 per 31 days), about **$4.77/month**
@@ -146,6 +169,9 @@ It runs from Datadog's managed Frankfurt location independently of GitHub,
 Pages builds and PDS. Tests are paused by default; account apply, actual
 scheduled successes and received failure/recovery/expiry notices are still
 pending. No Datadog API/application credentials are available in this session.
+Both URL forms for all seven packages remain checked in fourteen critical
+steps. Grouped alerts identify the failing step; all steps continue after a
+failure and a group recovers when every step passes.
 
 The module reuses the reviewed tuples below. Each bare request must preserve
 the current exact 308 redirect to its slash URL with `go-get=1`; the canonical

@@ -4,10 +4,22 @@ locals {
     for route in jsondecode(file("${path.module}/../../.tools/vanity/internal/vanity/baseline.json")) :
     trim(route.path, "/") => route
   }
-  # The owner prioritizes the two production libraries within the ~$5/month
-  # schedule. Keep both request forms and exact assertions for every package.
-  vanity_intervals = {
-    for name in keys(local.routes) : name => contains(["mergo", "darna"], name) ? 1800 : 7200
+  # Each package retains its bare and canonical request. Grouping fits the
+  # account's five-multistep-test quota and the default ten-step limit.
+  vanity_groups = {
+    priority = { packages = ["mergo", "cocoon"], interval = 1800 }
+    other = {
+      packages = [for name in keys(local.routes) : name if !contains(["mergo", "cocoon"], name)]
+      interval = 7200
+    }
+  }
+  vanity_steps = {
+    for group, settings in local.vanity_groups : group => flatten([
+      for name in settings.packages : [
+        { package = name, canonical = false },
+        { package = name, canonical = true },
+      ]
+    ])
   }
   status        = var.enabled ? "live" : "paused"
   notifications = join(" ", var.notification_handles)
@@ -21,81 +33,76 @@ locals {
   })
 }
 
+# Reuse two tests from the owner's quota-limited partial apply. Updates retain
+# their remote IDs; Terraform removes the other three redundant vanity tests.
+moved {
+  from = datadog_synthetics_test.vanity["darna"]
+  to   = datadog_synthetics_test.vanity["priority"]
+}
+
+moved {
+  from = datadog_synthetics_test.vanity["xdr"]
+  to   = datadog_synthetics_test.vanity["other"]
+}
+
 resource "datadog_synthetics_test" "vanity" {
-  for_each  = local.routes
-  name      = "dario.cat ${each.key}: Go import discovery"
+  for_each  = local.vanity_groups
+  name      = "dario.cat ${each.key}: Go import discovery (${join(", ", each.value.packages)})"
   type      = "api"
   subtype   = "multi"
   status    = local.status
   locations = var.locations
-  tags      = concat(local.tags, ["package:${each.key}"])
+  tags      = concat(local.tags, ["vanity-group:${each.key}"], [for name in each.value.packages : "package:${name}"])
   message   = <<-EOT
-    Go import discovery for dario.cat/${each.key} is failing.
+    Go import discovery is failing for the dario.cat ${each.key} group.
+    Failed step: {{synthetics.failed_step.name}}
+    Failed URL: {{synthetics.failed_step.url}}
     Check DNS, TLS, the Pages deployment, the query-preserving redirect and exact head metadata.
     Run: make -f .zas/Makefile check-vanity-live
     Runbook: https://github.com/darccio/darccio/blob/main/docs/DOMAIN-OPERATIONS.md
     ${local.notifications}
   EOT
 
-  # Check the observed single redirect explicitly instead of following an
-  # unbounded/cross-origin chain or accidentally losing the go-get query.
-  api_step {
-    name    = "Bare import URL retains go-get=1"
-    subtype = "http"
-    request_definition {
-      method           = "GET"
-      url              = "https://dario.cat/${each.key}?go-get=1"
-      timeout          = 10
-      follow_redirects = false
-      allow_insecure   = false
-    }
-    request_headers = { Accept = "text/html" }
-    assertion {
-      type     = "statusCode"
-      operator = "is"
-      target   = "308"
-    }
-    assertion {
-      type     = "header"
-      property = "location"
-      operator = "matches"
-      target   = "^(https://dario[.]cat)?/${each.key}/[?]go-get=1$"
-    }
-    # Always check the canonical response, including when the bare URL fails.
-    allow_failure = true
-    is_critical   = true
-  }
-
-  api_step {
-    name    = "Canonical import URL has exact real HTML metadata"
-    subtype = "http"
-    request_definition {
-      method           = "GET"
-      url              = "https://dario.cat${each.value.path}?go-get=1"
-      timeout          = 10
-      follow_redirects = false
-      allow_insecure   = false
-    }
-    request_headers = { Accept = "text/html" }
-    assertion {
-      type     = "statusCode"
-      operator = "is"
-      target   = "200"
-    }
-    assertion {
-      type     = "header"
-      property = "content-type"
-      operator = "matches"
-      target   = "^text/html([;].*)?$"
-    }
-    assertion {
-      type = "javascript"
-      code = replace(file("${path.module}/assertions/vanity.js"), "__EXPECTED_METADATA__", jsonencode(each.value))
+  dynamic "api_step" {
+    for_each = local.vanity_steps[each.key]
+    iterator = check
+    content {
+      name    = "${check.value.package}: ${check.value.canonical ? "canonical metadata" : "bare redirect preserves go-get=1"}"
+      subtype = "http"
+      request_definition {
+        method           = "GET"
+        url              = "https://dario.cat/${check.value.package}${check.value.canonical ? "/" : ""}?go-get=1"
+        timeout          = 10
+        follow_redirects = false
+        allow_insecure   = false
+      }
+      request_headers = { Accept = "text/html" }
+      assertion {
+        type     = "statusCode"
+        operator = "is"
+        target   = check.value.canonical ? "200" : "308"
+      }
+      assertion {
+        type     = "header"
+        property = check.value.canonical ? "content-type" : "location"
+        operator = "matches"
+        target   = check.value.canonical ? "^text/html([;].*)?$" : "^(https://dario[.]cat)?/${check.value.package}/[?]go-get=1$"
+      }
+      dynamic "assertion" {
+        for_each = check.value.canonical ? [local.routes[check.value.package]] : []
+        content {
+          type = "javascript"
+          code = replace(file("${path.module}/assertions/vanity.js"), "__EXPECTED_METADATA__", jsonencode(assertion.value))
+        }
+      }
+      # Check every package after a failure, while still failing the group.
+      allow_failure = true
+      is_critical   = true
     }
   }
 
   options_list {
-    tick_every           = local.vanity_intervals[each.key]
+    tick_every           = each.value.interval
     allow_insecure       = false
     min_failure_duration = 0
     min_location_failed  = 1
@@ -105,6 +112,13 @@ resource "datadog_synthetics_test" "vanity" {
     }
     monitor_options {
       renotify_interval = 60
+    }
+  }
+
+  lifecycle {
+    precondition {
+      condition     = length(local.vanity_steps[each.key]) > 0 && length(local.vanity_steps[each.key]) <= 10
+      error_message = "Each vanity group must fit Datadog's default one-to-ten-step limit."
     }
   }
 }
