@@ -4,7 +4,7 @@ publish: false
 
 # Site implementation progress
 
-The implementation PRs are merged and production-verified, and the site adopts released Zas v0.0.9. T26’s production publication backlink is verified. The candidate inventory is prepared but the reviewed document allowlist remains empty. Registrar renewal/protection and fully validated DNSSEC are complete; independent monitoring and received alerts, three publication instants, historical approvals, CV permission and personal defaults still need owner evidence. Optional T06/T23 remain deferred. The chronology below retains previous observations and their dates.
+The implementation PRs are merged and production-verified, and the site adopts released Zas v0.0.9. T26’s production publication backlink is verified. T01 is complete: registrar renewal/protection, fully validated DNSSEC, independent scheduled monitoring, real failure/recovery delivery and three expiry-notification simulations are confirmed. The candidate inventory is prepared but the reviewed document allowlist remains empty; historical approvals, three publication instants, CV permission and personal defaults still need owner input. Optional T06/T23 remain deferred. The chronology below retains previous observations and their dates.
 
 All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are merged. The site now pins the merged feed/Markdown revision and has navigation, core slash pages, crawler/security resources, complete canonical sitemaps, RSS discovery, Markdown twins and static response headers deployed. Cloudflare deployed 20a3e10 and source-history fix 594cf0d successfully on 2026-10-11; site CI and post-deploy vanity checks passed. The owner's expanded talks catalogue, cc@dario.cat contact and Sifa profile additions deployed successfully in 8e3acb1. The T14–T18 identity, post/archive microformats, supported talk/slash/project markup and protected parser checks deployed successfully in 28bd9ba; the narrow historical-email follow-up is committed as d21a476. Account operations remain separate evidence requirements.
 
@@ -15,7 +15,7 @@ All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are
 | Build prerequisite | Duplicate Spanish translation key corrected | `a4b35b5` | Clean builds succeed with corrected i18n | Deployment pending |
 | T02 | Exact seven-route local/live checker, staged assembly and build-only CI | `1defa78` | Vet, race/shuffle, workflow lint, actual release/candidate builds; 14 live routes and direct Mergo v1.0.2 resolution; real v0.0.6 failure preserves previous output | Push and observe Pages guarded build |
 | T02 post-deploy | Bounded exact-main-SHA Cloudflare-success poll followed by shared live checker | `7cdbe54` | actionlint; actual provider check/suite classified correctly; 13 classifier mutations and suite gates checked; read-only permissions | Observe first real invocation after push; dashboard-only/slow deployments need explicit live check |
-| T01 | Scheduled backstop, confirmed registrar protection, validated DNSSEC and prepared Datadog Terraform | `35aaf30`, operational receipts in PR #16, `.infra/datadog` | Manual/scheduled runs and fourteen live routes pass; paid expiry 2028-06-01; Google/Cloudflare DNSSEC fully validates | Apply/activate Datadog tests, verify hosted execution and receive failure/recovery/expiry notices |
+| T01 | Registrar protection, validated DNSSEC, scheduled backstop and active Datadog monitoring complete | `35aaf30`, operational receipts in PR #16, Datadog PRs #17–#21 and completion receipt below | Paid expiry 2028-06-01; DNSSEC fully validates; eight live tests have scheduled passes; real failure/recovery and three expiry simulations received; temporary probe removed | Ongoing quarterly and post-change review |
 | T03 | Zas current contact links merged | `9045f6f`, [PR #111](https://github.com/darccio/zas/pull/111), merge `0c94388` | README-only diff; whitespace, darna and GitHub checks pass | Mergo source-owned follow-up remains queued |
 | T05 | Lazy typed metadata/canonical helpers merged | `96f3a64`, [PR #112](https://github.com/darccio/zas/pull/112), merge `f463876` | Build, vet, race/shuffle and pinned lint; 68 real-site files and six fixtures byte-identical before adoption; remote CI/CodeQL pass | Generator release remains T32 work |
 | Generator adoption | Immutable merged feed/Markdown revision pinned in guarded publish command | `fc67575` (previous helper adoption `9bcfd95`) | Installed module is v0.0.9-0.20261011133110-abdae2fd51de; disabled options preserve all 78 baseline files; actual make publish succeeds | Deployment pending |
@@ -288,3 +288,77 @@ The actual provider's offline migration plan confirms zero creates, two updates,
 three redundant-test deletions, both moved IDs retained and six auxiliary no-ops.
 Its fake prior state is generated from pinned pre-group configuration; validation
 and refresh are disabled against a loopback endpoint, with no real state reads.
+
+## Successful grouped monitoring apply · 2026-10-12
+
+PR #21 merged as `0e45866`. The owner applied the expected zero-addition,
+two-update, three-removal migration successfully. Priority and other retain
+`kv2-z2c-77h` and `m4f-5g8-vxh`; all six auxiliary IDs are unchanged, and the
+temporary notification probe is absent. The zero scheduled-run/cost outputs
+confirm the module remains disabled and its eight resources paused.
+Grouped creation and state migration are complete. Hosted on-demand execution,
+schedule activation and received failure/recovery/expiry notices remain open.
+
+The owner then reports all eight paused on-demand tests green. Hosted execution
+is now verified for both groups and the six auxiliaries. Scheduling remains
+disabled; activation through local `enabled = true`, observed scheduled
+successes and received failure/recovery/expiry notices remain required for T01.
+
+The owner subsequently activated all eight tests with zero additions, eight
+updates and zero destructions, preserving all IDs. Active usage outputs are
+9,540/9,858 requests per thirty/thirty-one days and $4.77/$4.929 at the configured
+rate. The temporary notification probe is absent. Successful API activation
+is confirmed; observed scheduled runs and received real failure/recovery/expiry
+notices remain open.
+
+The first notification-probe saved-plan apply hit OpenTofu 1.13.1's input-value
+validation. Its plan used CLI overrides but apply omitted them. Provider-free
+reproduction confirms that repeating both exact flags fixes creation, recovery
+and cleanup, including raw Boolean/string differences. The operator guide is
+corrected; no account resource change or notification receipt is inferred.
+
+The owner then applied the matching probe overrides successfully and confirms
+receiving its failure notification. Failure-email delivery is now verified by
+the owner. Recovery delivery on the same probe, its cleanup, scheduled
+production successes and expiry-notification simulations remain pending.
+
+The owner explicitly confirms receipt of the same probe's recovery email.
+Both real failure and recovery delivery are verified. Probe cleanup, scheduled
+production-success evidence and three expiry-notification simulations remain
+required to complete T01.
+
+The owner confirms cleanup and the eight production tests remaining live.
+The temporary probe lifecycle is complete. Scheduled production passes and
+received simulations from the three registry-expiry tests remain the final
+T01 checks; no scheduled result or expiry receipt has yet been supplied.
+
+The owner now explicitly confirms passing **Scheduled** runs for all eight
+production tests. Scheduled execution, real failure/recovery email delivery
+and probe cleanup are verified. T01 remains open only for received notification
+simulations from the three registry-expiry tests; the owner is locating their
+simulation control.
+
+## T01 completion · 2026-10-12
+
+The owner confirms sending and receiving the alert simulation from each
+90/60/30-day registry-expiry test. These are notification-routing receipts;
+they do not imply that an actual expiry threshold was crossed. The earlier
+failure/recovery emails came from the real temporary wrong-metadata probe,
+which is now removed.
+
+T01 is complete with the registrar, DNSSEC, scheduled GitHub backstop, eight
+live Datadog tests, scheduled passes and all notification receipts documented
+in DOMAIN-OPERATIONS.md. This supersedes the pending states in the chronology.
+The monthly estimates remain $4.77/$4.929 for thirty/thirty-one days at the
+configured rate, excluding retries and manual/probe runs. The next owner step
+is review of the 23 Standard.site candidates in standard-site-backfill.md;
+the committed approval list remains empty and no article publication is
+inferred. Three missing publication instants, optional CV permission and
+personal defaults remain separate owner decisions.
+
+The operator instructions repeat exact OpenTofu probe inputs at plan and
+saved-plan apply in `c51256f`, and locate the test-editor simulation control in
+`47d13ab`. The first correction was verified through provider-free creation,
+recovery and cleanup plans; the second matches the official UI screenshots
+and the owner's successful sends. Documentation review and whitespace checks
+pass; these commits change no account settings or production test schedules.

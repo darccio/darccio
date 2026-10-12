@@ -197,29 +197,55 @@ Create only the additional temporary test with a deliberately wrong expected
 Mergo repository. It requests the unchanged public page; production tests and
 tags keep their normal expectations.
 
+These probe commands use OpenTofu. With OpenTofu 1.13.1, repeat the exact
+variable overrides on both `plan` and saved-plan `apply`: it reloads current
+inputs and compares them with the saved values before normalization. CLI
+Boolean overrides can differ in raw type from `.tfvars` Booleans even when
+their meaning is identical. Provider-free reproduction verifies matching
+flags for creation, recovery and cleanup; see
+[the pinned apply validation](https://github.com/opentofu/opentofu/blob/v1.13.1/internal/tofu/context_apply.go#L349).
+
 ```sh
-terraform plan -var='notification_probe_enabled=true' -out=notification.tfplan
-terraform apply notification.tfplan
+tofu plan -var='notification_probe_enabled=true' \
+  -var='notification_probe_should_fail=true' -out=notification.tfplan
+tofu apply -var='notification_probe_enabled=true' \
+  -var='notification_probe_should_fail=true' notification.tfplan
 ```
 
 Wait for its scheduled wrong-metadata failure and confirm the email arrived.
 Then restore the expectation on the **same** temporary test:
 
 ```sh
-terraform plan -var='notification_probe_enabled=true' \
+tofu plan -var='notification_probe_enabled=true' \
   -var='notification_probe_should_fail=false' -out=notification.tfplan
-terraform apply notification.tfplan
+tofu apply -var='notification_probe_enabled=true' \
+  -var='notification_probe_should_fail=false' notification.tfplan
 ```
 
-Confirm a scheduled successful run and its received recovery email. Remove the
-temporary test by planning/applying normally again (the local file keeps
-`notification_probe_enabled = false`). Verify that the plan deletes only this
-additional test and keeps the eight production resources.
+Confirm a scheduled successful run and its received recovery email. Then
+remove the temporary test with a fresh plan and matching overrides:
 
-For each expiry test, use Datadog's **Simulate Notifications** action and receive
-the `[TEST]` notice. These prove routing; local threshold fixtures prove the
-90/60/30-day calculations. Simulated notifications and paused manual tests do
-not prove that a real monitor failure/recovery transition executed. See
+```sh
+tofu plan -var='notification_probe_enabled=false' \
+  -var='notification_probe_should_fail=true' -out=notification-cleanup.tfplan
+tofu apply -var='notification_probe_enabled=false' \
+  -var='notification_probe_should_fail=true' notification-cleanup.tfplan
+```
+
+Verify that cleanup deletes only this additional test and keeps the eight
+production resources. The persistent local `notification_probe_enabled` value
+stays false and `enabled` stays true.
+
+For each expiry test, open the Synthetic Tests list, select its three-dot menu
+and **Edit Test**, then scroll to **Monitor** / **Configure the test monitor**.
+The **Simulate Notifications** button is below the message editor,
+renotification controls and **Priority**, before **Permissions**. Select
+**Alert**, deselect **Alert Recovery** if both are checked, and click
+**Send Notifications**. Receive the `[TEST]` notice at the configured contact;
+leave the editor without saving configuration changes. These prove routing;
+local threshold fixtures prove the 90/60/30-day calculations. Simulated
+notifications and paused manual tests do not prove that a real monitor
+failure/recovery transition executed. See
 [Datadog's notification simulation](https://docs.datadoghq.com/synthetics/notifications/)
 and [alert state rules](https://docs.datadoghq.com/synthetics/guide/how-synthetics-monitors-trigger-alerts/).
 

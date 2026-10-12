@@ -63,7 +63,7 @@ Dependencies below include the report’s original ordering and repository-speci
 | Task | Work | Repository | Depends on | Current status |
 | --- | --- | --- | --- | --- |
 | [T00](tasks/T00.md) | Verify unverified facts | site | — | Audit committed |
-| [T01](tasks/T01.md) | Harden domain and DNS and add monitoring | site | T02 | Software committed; account operations pending |
+| [T01](tasks/T01.md) | Harden domain and DNS and add monitoring | site | T02 | Complete; registrar/DNSSEC, scheduled checks and notification receipts verified |
 | [T02](tasks/T02.md) | Protect vanity imports with regression checks | site | T00 | Guarded build and exact-SHA post-deploy workflow deployed and live-verified |
 | [T03](tasks/T03.md) | Correct project identity links | zas+mergo | — | Zas PR #111 and Mergo PR #323 merged |
 | [T04](tasks/T04.md) | Add explicit publication metadata to posts | site | T00, T02 | Source committed; three incomplete dates excluded from syndication |
