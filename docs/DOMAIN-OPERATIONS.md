@@ -23,6 +23,14 @@ At **20:57 UTC**, the public checks confirmed:
 
 No account, billing, DNS or provider settings changed. Paid runway greater than one year, registrar protection, validated DNSSEC, an independent 30-minute monitor and received test/recovery/expiry alerts still require owner evidence.
 
+## Verification receipt, 2026-10-12
+
+All four review PRs are merged. Site main `1fb265cfe0f1b6e1ccac9f4238e2cbb9f6d903d3` has successful Pages, [Site checks](https://github.com/darccio/darccio/actions/runs/38210408284) and [post-deploy vanity](https://github.com/darccio/darccio/actions/runs/38210408194) results. An additional live checker invocation passes all fourteen route variants.
+
+The previously pending scheduled-run evidence is now present: [Vanity metadata monitor 38196543370](https://github.com/darccio/darccio/actions/runs/38196543370), triggered by `schedule` on 2026-10-12, succeeds. This establishes an enabled scheduled backstop; independent checks and received alert/recovery notices remain owner work.
+
+Fresh registry and validating-resolver checks still report expiration `2027-06-01T07:05:04.361Z`, status `active`, `delegationSigned:false`, unchanged Cloudflare nameservers, and no DS/DNSKEY answers. Auto-renew, payment, transfer lock and independent monitoring remain unverified. No account or DNS change was made.
+
 ## Registrar protection in SW Hosting
 
 1. Sign in to SWPanel and open **Domains and SSL → Domain Portfolio → dario.cat**. Confirm that this is the account controlling registration and that owner/admin contact email reaches you. Review MFA and recovery access.
