@@ -3,6 +3,10 @@ datadog_site         = "datadoghq.eu"
 notification_handles = ["@cc@dario.cat"]
 locations            = ["aws:eu-central-1"]
 
+# Only affects the estimate: annual agreement 5, month-to-month 6, on-demand 7.20.
+# Set your account's actual USD rate per 10,000 API step-runs.
+api_test_rate_usd_per_10000 = 5
+
 # Create paused, check real test results, then change this to true.
 enabled = false
 

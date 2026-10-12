@@ -226,3 +226,7 @@ The owner saved the exact Cloudflare KSK in SWPanel's domain DNSKEY form. Regist
 ## Datadog Terraform monitoring · 2026-10-12
 
 The owner selected Datadog EU1, Terraform and `cc@dario.cat` alerts. The prepared `.infra/datadog` module shares the Go vanity baseline and defines managed-location import, authenticated DNS, certificate and registry-expiry tests. A separate optional wrong-metadata probe can verify actual failure/recovery delivery without changing production. The definition starts paused and keeps account credentials, state, local variables and plans outside Git. Account apply, hosted assertion verification, activation and received notices remain open; this preparation does not close T01. Detailed commands and schedule/usage are in the module README.
+
+## Reduced monitoring budget · 2026-10-12
+
+PR #17 merged as `20bfd48`. The owner then requested about $5/month and explicitly chose Mergo/darna checks every thirty minutes, other imports every two hours, and daily auxiliary tests. That schedule retains all thirteen test resources and exact URL/metadata assertions while reducing scheduled runs from 46,890 to 9,540 per thirty days. Monthly estimates at the published annual-agreement rate are $4.77 for thirty days and $4.93 for thirty-one days; the account-specific rate is configurable. Independent detection for the other five imports is now on the chosen two-hour cadence; the full GitHub backstop remains thirty minutes. Account apply and received notices remain pending.

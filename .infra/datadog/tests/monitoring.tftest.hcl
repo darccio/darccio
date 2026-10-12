@@ -12,7 +12,7 @@ run "paused_by_default" {
     error_message = "Creating the reviewed resources must not start scheduled monitoring by default."
   }
   assert {
-    condition     = output.scheduled_requests_per_30_days == 0
+    condition     = output.scheduled_requests_per_30_days == 0 && output.scheduled_requests_per_31_days == 0 && output.estimated_scheduled_cost_usd.per_30_day_month == 0
     error_message = "Paused resources must report zero scheduled runs."
   }
 }
@@ -24,8 +24,8 @@ run "active_public_probes" {
   }
 
   assert {
-    condition     = alltrue([for test in datadog_synthetics_test.vanity : test.status == "live" && test.options_list[0].tick_every == 900 && test.options_list[0].min_failure_duration == 0 && test.options_list[0].min_location_failed == 1 && test.options_list[0].allow_insecure == false])
-    error_message = "Vanity probes must run every fifteen minutes with immediate single-location alerting and secure explicit routing."
+    condition     = alltrue([for name, test in datadog_synthetics_test.vanity : test.status == "live" && test.options_list[0].tick_every == (contains(["mergo", "darna"], name) ? 1800 : 7200) && test.options_list[0].min_failure_duration == 0 && test.options_list[0].min_location_failed == 1 && test.options_list[0].allow_insecure == false])
+    error_message = "Keep Mergo/darna at thirty minutes and other imports at two hours with immediate single-location alerts."
   }
   assert {
     condition     = alltrue([for name, test in datadog_synthetics_test.vanity : length(test.api_step) == 2 && test.api_step[0].request_definition[0].url == "https://dario.cat/${name}?go-get=1" && test.api_step[1].request_definition[0].url == "https://dario.cat/${name}/?go-get=1" && test.api_step[0].allow_failure == true && test.api_step[0].is_critical == true && alltrue([for step in test.api_step : step.request_definition[0].timeout == 10 && step.request_definition[0].follow_redirects == false && step.request_definition[0].allow_insecure == false])])
@@ -40,12 +40,20 @@ run "active_public_probes" {
     error_message = "Retain valid certificate checks and the reviewed fourteen-day expiry warning."
   }
   assert {
+    condition     = datadog_synthetics_test.certificate.options_list[0].tick_every == 86400 && alltrue([for test in datadog_synthetics_test.dnssec : test.options_list[0].tick_every == 86400])
+    error_message = "Certificate and resolver checks must use the selected daily schedule."
+  }
+  assert {
     condition     = alltrue([for days, test in datadog_synthetics_test.domain_expiry : test.options_list[0].tick_every == 86400 && test.request_definition[0].url == "https://rdap.nic.cat/rdap/domain/dario.cat" && strcontains(test.assertion[1].code, "daysRemaining > ${days}") && !strcontains(test.assertion[1].code, "__MINIMUM_DAYS__")])
     error_message = "Read current registry expiration and emit distinct 90/60/30-day alerts instead of hardcoding an expiry date."
   }
   assert {
-    condition     = output.scheduled_requests_per_30_days == 46890
+    condition     = output.scheduled_requests_per_30_days == 9540 && output.scheduled_requests_per_31_days == 9858
     error_message = "Usage must include each multistep request and scheduled resolver/certificate/expiry tests."
+  }
+  assert {
+    condition     = output.estimated_scheduled_cost_usd.per_30_day_month == 4.77 && output.estimated_scheduled_cost_usd.per_31_day_month == 4.929
+    error_message = "The default annual-rate monthly schedule must stay around five dollars in both thirty- and thirty-one-day months."
   }
 }
 
@@ -56,8 +64,20 @@ run "additional_location_usage" {
     locations = ["aws:eu-central-1", "aws:eu-west-1"]
   }
   assert {
-    condition     = output.scheduled_requests_per_30_days == 93780
+    condition     = output.scheduled_requests_per_30_days == 19080 && output.estimated_scheduled_cost_usd.per_30_day_month == 9.54
     error_message = "Every added public location multiplies scheduled request usage."
+  }
+}
+
+run "account_rate_controls_estimate" {
+  command = plan
+  variables {
+    enabled                     = true
+    api_test_rate_usd_per_10000 = 7.20
+  }
+  assert {
+    condition     = output.scheduled_requests_per_30_days == 9540 && output.estimated_scheduled_cost_usd.per_30_day_month == 6.8688
+    error_message = "Use the account's configured unit price without silently changing test frequency."
   }
 }
 
