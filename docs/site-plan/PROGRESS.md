@@ -503,6 +503,8 @@ header/current-navigation and catalogue changes; their acceptance is still pendi
 
 ### Localized layout
 
+Committed as `1fa425d`.
+
 Section metadata resolves through Zas page and nearest-directory config;
 English/Spanish defaults retain both their language and selected posts section.
 Navigation, skip link, article chrome and footer now use the ca/en/es message
@@ -517,3 +519,21 @@ scenarios pass axe, keyboard focus and 320px normal/200% reflow. A targeted
 nine-route check confirms selected sections, localized chrome, 44px nav targets
 and a single-row Catalan menu at 390px. Checks use local generated output;
 custom-domain deployment remains pending the review PR.
+
+### Talks archive
+
+All 31 talks use the supplied archive-row pattern in two labelled sections
+(10 engineering, 21 culture). Dates retain their original full/month precision;
+15 undated rows remain undated. Language badges are decorative, with full
+Catalan spoken labels outside each event name. The owner-confirmed five
+languages are now Catalan. Resources retain their destinations and gain the
+complete talk title as accessible context; qualifiers and existing prose move
+to notes. Only the requested Machine Learning/Creació dated pair changes order.
+
+Generate, full tests, vanity and microformats checks pass. The before/after
+built-page comparison has identical 46 external hrefs and ten name/start/
+location/url event tuples. Browser measurements find a 4px title-to-detail gap,
+less than one third of the gap between rows, and all resource targets at least
+24px tall. Talks passes axe, visible keyboard focus and 320px normal/200% reflow
+in both OS themes at 1440px and 390px. Before/after screenshots are retained for
+the PR. Deployment and the final full-page matrix remain pending.
