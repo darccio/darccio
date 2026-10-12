@@ -1,0 +1,526 @@
+{
+  "version": 1,
+  "publication": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+  "documents": [
+    {
+      "path": "/en/posts/a-new-path/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3lbxibacnk2x5",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "An announcement of leaving Pirates de Catalunya, reflecting on fourteen years of shared political work and the decision to pursue new challenges.",
+        "path": "/en/posts/a-new-path/",
+        "publishedAt": "2024-11-27T22:22:00+01:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "pirates",
+          "politics",
+          "lang:en"
+        ],
+        "textContent": "A New Path\nToday, coinciding with the anniversary of the November 28, 2010 elections and after fulfilling acquired commitments, I announce that a few weeks ago I left Pirates de Catalunya. This date is significant because these elections were the first in which Pirates participated, shortly after its official formation, and marked my first electoral experience.\nIn fourteen years I've had the opportunity to build an alternative, influencing public life in a historic context: from the 15M movement to the rise of Catalan independentism, through the repression of the Spanish State and the growth of the far right, ending in the whirlwind of war and climate change in which the world is immersed.\nI've taken on multiple responsibilities that have made me grow more than I ever imagined on the day I filled out the Pirates membership form. I've led electoral lists, served as a councilor, and contributed to national and international projects, among many others.\nNone of this would have been possible without you all, the hundreds of people with whom I've had the privilege of sharing this journey. I sincerely thank each and every one of you for the trust, dedication, and hours you've invested at every moment.\nNow, I close this chapter and begin a new one. I do so because I've decided to take on new personal and professional challenges. I will continue to engage in politics in a different way, mainly through my personal channels.\nPirates, continue the good work and the fight for our shared ideals. I hope to meet you again on this new path I'm embarking on. Farewell!",
+        "title": "A New Path",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/en/posts/delete-facebook-1/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fctfotbaa26v",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "First steps towards leaving Facebook: reclaiming a personal domain, reviewing 123 active logins and considering decentralized social alternatives.",
+        "path": "/en/posts/delete-facebook-1/",
+        "publishedAt": "2018-04-01T17:13:15+02:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "facebook",
+          "social networks",
+          "lang:en"
+        ],
+        "textContent": "Delete Facebook #1\nProgress made: creation of my own page under my personal domain and review of active logins.\nAs promised, I'm writing down my progress. In the last days I have recovered my personal domain, which I'll use as my main profile. Its advantages don't come without disadvantages. I'll control my identity, combined with Keybase (more about this tool in another post), and the authorship of my texts, available under the CC BY-SA 4.0 license. There are more advantages, but I don't want to extend myself. Before I must admit that this isn't available to everybody without falling into another walled garden, much less at no cost.\nIf you are curious, the web is generated with Hugo, using the theme Minimo. Repository available here for techies.\nI have also reviewed what logins I have active. I have seen that there are 123. 123 external websites and mobile applications in which I log in using Facebook because it's easy. I also do it with Twitter. It's very easy but inconvenient. It's inconvenient for cases like the one we are dealing with, but the exercise serves to become aware of how easy it's to fall into the trap of utility instead of making decisions aimed at maintaining the personal sovereignty of your information.\nFinally, a brief comment. This is leading me to think about how to solve the problem generated. We like to share our lives, either in person or digitally. Therefore, there is a need that has not yet found an optimal decentralized solution. I'll write more about it but I can advance that, although there are proposals in the right direction, they are all wrong in some way: either of wanting to be very innovative or solving all the possible problems or being focused on a specific software, no matter how free (as in freedom).\nI sincerely believe that there are already existing solutions and architectures to build a social network protocol to achieve the necessary freedom and privacy.",
+        "title": "Delete Facebook #1",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/en/posts/delete-facebook-2/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fdehsgmra2x6",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "A review of Facebook logins and the difficult process of asking third-party apps to delete the personal data they collected.",
+        "path": "/en/posts/delete-facebook-2/",
+        "publishedAt": "2018-04-08T12:06:19+02:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "facebook",
+          "social networks",
+          "lang:en"
+        ],
+        "textContent": "Delete Facebook #2\nProgress made: deletion of logins.\nThe first easy step to end my dependence on Facebook is to delete all my websites and third-party applications logins. As I said in my previous post, I have 123 logins. And what have I found among those?\nFor starters, reviewing the list, most of them are websites that I know and use, so I had to go one by one, checking if they have the option to identify myself without Facebook or any other social network. Or if I no longer use them or do not interest me anymore, to delete the accounts and applications.\nBefore going through the different cases that I have found, in this post I want to highlight one in particular: Cosmopolitan-like tests websites. I imagine that many of us have fallen at some point in this, to laugh with someone on Facebook, like those of QuizzStar. To do so, you have to identify yourself with our Facebook account. What information do these websites usually collect?\nI've looked at others, like vonvon, and the permissions are identical or worse. This is a good example of the misuse we do (yes, us) of our own data, giving them away in exchange for a frivolous and funny result. Can anyone justify that the digital version of a teen magazine test needs all this? Most likely, the tests are a hook to obtain and sell personal data.\nOnce we understand the seriousness of the matter, the question we immediately ask ourselves is “How can I get them to delete my data?”. The answer is not simple as to delete the entry from the list but to contact each web and application manually and ask them to be removed by giving a user identifier from the same permission screen. This is insane!\nInterlude: while writing this post, Facebook has given me this reminder about the new European regulation on data protection. :facepalm:\nI want to give you an example. I have an application called Instant Win. Following what is stated in the Facebook Help Center, I do:\nI search for the application: Instant Win.\nOn the page (blank) I look for a small link at the end of the right column that says “Report/Contact”.\nI follow the wizard, indicating that I want to send a message to the developer (last option).\nI follow the link on the next screen to send a message (sic).\nIt takes me to the Woobox help center, apparently the developer of the application.\nI try to find a way to contact Woobox, but there is no form or address.\nSo I decide to go to the main website.\nAt the bottom of the page I find a contact address and send them the following email:\nHello,\nI recently found that I used your Facebook app Instant win at some point. I do not longer use it. Please delete any data related to user ID XXXXXXXXXXXXXXXX and confirm.\nFailure to comply with this request will be reported to the Spanish Data Protection Agency, as it would be against GDPR's article 17.\nThis request is based on the procedure provided by Facebook in its Help Center.\nThanks,\nDario\nNow I have to wait. I want to believe that I have found a bad example and with others it will be different. If not, this will show the little interest that Facebook (and some websites) have in the protection of our data.",
+        "title": "Delete Facebook #2",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/en/posts/delete-facebook/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fcjynoduk2rd",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "The start of a documented effort to leave Facebook after Cambridge Analytica while untangling logins and keeping in touch with people.",
+        "path": "/en/posts/delete-facebook/",
+        "publishedAt": "2018-03-28T23:26:00+02:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "facebook",
+          "social networks",
+          "lang:en"
+        ],
+        "textContent": "Delete Facebook #0\nAfter the controversy of Cambridge Analytica, I have decided to stop feeding the beast, Facebook.\nI also decided that I'm going to document my process, since it is not simply stop using it or abruptly closing my account.\nActually, I found it a rather complex process: I have many websites where I use Facebook as a login, there are people with whom I keep contact here exclusively, etc. So I'm not just gonna explain it so that others can do it, but I'll make you part of it.\nAnd you, are you going to leave Facebook? If yes, where are you going? If it's no, why and how would you rather to keep in contact with me?",
+        "title": "Delete Facebook #0",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/en/posts/introduction-liquid-organizations/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3b2keyughy2ih",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "An introduction to Lýd's model of horizontal organizations, using voluntary delegation and flows to support participation and collective decisions.",
+        "path": "/en/posts/introduction-liquid-organizations/",
+        "publishedAt": "2013-07-02T10:00:39+02:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "liquid organizations",
+          "liquid democracy",
+          "lyd",
+          "lang:en"
+        ],
+        "textContent": "Introduction to liquid organizations\nSeveral years ago I decided to work after a big goal: to develop a participatory and organizational system for Pirates de Catalunya. Its name, Lýd.\nI had a one year permanent on-line assembly experience, physical assemblies, two electoral campaigns, many tips and ideas from my colleagues. Also I had acquired and shared knowledge in conversation with people of around the world.\nI started the analysis, which lasted one year and a half, with two additional campaigns, hundred of work hours and more exchange of ideas with other collective’s colleagues. A time of compilation, writing and fine tuning of an idea to unleash the true power of any horizontal collective.\nUntil today, July 1st 2013. After several versions, analyzing the outcomes and looking after the most clear and concise one, I release the analysis as online documentation, available to any collective. I ask you to enhance and improve it.\nWith this I set liquid organizations’ bases. But, what they are?\n\"Whose social graph is it?\" by Jeremy Keith licensed under CC BY 2.0\nLiquid organizations\nThey are horizontal organizations without fixed hierarchy, based on trust through delegation. All their members have equal weight and they organize themselves in workgroups or organic groups from shared traits (city, region, etc).\nIt is based in three keystones: nexus (groups), flows and delegation. In this post I’m going to focus in two of them, leaving apart nexus. They are fully explained in the analysis.\nDelegation\nWithout delegation, horizontal structures with crowded nexus don’t scale. They may work slow until stagnation. Delegation is key to allow a minimal structure without it getting petrified.\nBeing it voluntary and revocable at any moment, we delegate because we trust. In Lýd is expected as free of terms or formalism. This allows to bring resilience to organizations as they are able to handle any unexpected situation.\nLýd is targeted to decentralized organizations with actionable targets. It can be used in debate-oriented groups, because of flow concept, but its main objective is to allow a swift, auditable and locking-free decisionmaking. It is a full extent liquid democracy's application.\nE.g. when a group is created, in my opinion it should, as first action, hold a delegation “voting”, based on voluntary delegates’ merits. These delegations can change any time, even during a voting.\nFirst delegation “voting” eases member’s mutual acquaintance, as well as starting to work immediately. It doesn’t prevent new members becoming delegates, because there are no deadlines or restrictions.\nBefore going to the next point, I want to point out while a member belongs to an organization, she trusts other groups where she doesn’t participate directly. This trusting is the ultimate implicit delegation and this already exists in current organizations. Lýd just make it explicit inside nexus.\nFlows\nIn Lýd everything is a flow, from a conversation to a task or something bigger, a project. Everything revolves around dialogue and debate. These are required to get the best result from cocreation.\nBut only this is not sufficient. We need also to get working together the appropriate group. Using nexus, flows are organized according to our needs and they allow opinion’s exchange in easy to handle and focused groups.\nFlows come with tools to manage usual situations like off-topics, low-content messages (e.g. +1 messages), etc.\nAll these tools must be available to anyone except those that destroy content, to guarantee a truly horizontal and lock-free communication.\nConclusion\nLýd reaches a balance between different kind of members. It also allows organizations to self-regulate and to get maximum participation, directly or not, without restrictions or arbitrary rules.\nWith this I close my first post about liquid organizations (also known as liqorgs). As different groups use it and others criticize and suggest improvements, I will improve the model. This will impact on the development of a tool to assist implementation and extension, about what I’ll keep you up to date too in next posts.",
+        "title": "Introduction to liquid organizations",
+        "updatedAt": "2026-10-12T20:24:46+02:00"
+      }
+    },
+    {
+      "path": "/en/posts/monitoring-synology-nas-with-datadog/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3mt7dvnmh2245",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "A step-by-step setup for monitoring Synology NAS hardware and services with Datadog through SNMP and a containerized Agent, including alerts and troubleshooting.",
+        "path": "/en/posts/monitoring-synology-nas-with-datadog/",
+        "publishedAt": "2026-08-16T15:59:44+02:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "observability",
+          "synology",
+          "datadog",
+          "lang:en"
+        ],
+        "textContent": "Monitoring a Synology NAS with Datadog\nThere are two things worth watching on a NAS: the hardware (disks, RAID, temperature) and everything running on top of it. Datadog covers the first over SNMP and the second with its Agent, so I run both out of a single container on the NAS itself.\nHere's the whole setup, in the order I'd do it again.\nStep 1: Enable SNMP on DSM\nOpen DSM > Control Panel > Terminal & SNMP > SNMP.\nCheck \"Enable SNMP service\".\nEnable SNMPv3 and create a user with SHA for authentication and AES for privacy. Synology's SNMP daemon only speaks SHA-1 and AES-128, so don't reach for SHA256 or AES256.\nWrite down your NAS's LAN IP. You need that one, not 127.0.0.1, because the Agent runs in a bridged container.\nStep 2: Open the firewall for SNMP\nUnder Control Panel > Security > Firewall, allow UDP port 161 from wherever the Agent lives. Here that's the NAS itself, but the traffic leaves through a Docker bridge network, so the allowed sources have to include the bridge subnet (usually 172.17.0.0/16). Otherwise DSM's SNMP daemon never sees the packets.\nStep 3: Install Container Manager\nOpen Package Center and install Container Manager, which is what Docker got renamed to in DSM 7.2. Launch it once so it initializes before you create anything.\nStep 4: Get a Datadog API key\nIn Datadog, go to Organization Settings > API Keys and copy an existing key or create a new one. It goes straight into the compose file in the next step.\nStep 5: Create the SNMP config, then the compose project\nOrder matters here. Create the SNMP config file before the container exists. If the path isn't there when Docker starts the container, Docker creates an empty directory in its place and your config gets silently ignored.\nIn File Station, create the project folder, for example /docker/datadog-agent inside the docker shared folder that Container Manager set up for you (on whichever volume it landed, usually volume1). Inside it, create a conf.d subfolder.\nInside conf.d, create snmp.yaml with your NAS IP and the SNMPv3 credentials from step 1:\ninit_config:\n  loader: core\n  use_device_id_as_hostname: true\n\ninstances:\n  - ip_address: '192.168.1.XXX'      # your NAS LAN IP from step 1\n    snmp_version: 3\n    profile: synology-disk-station    # pins Datadog's official Synology profile\n    user: 'synology-monitor'\n    authProtocol: 'SHA'\n    authKey: 'your-authentication-key'\n    privProtocol: 'AES'\n    privKey: 'your-privacy-key'\n    tags:\n      - device_type:synology_nas\n      - environment:prod\nSave it, then go to Project > Create in Container Manager.\nName the project, e.g. datadog-agent.\nFor Path, pick the folder from step 1 (/volume1/docker/datadog-agent, or wherever yours is). DSM keeps the compose file and project data there.\nUnder Source, choose \"Create docker-compose.yml\".\nPaste this, with the snmp.yaml bind mount already in volumes::\nservices:\n  datadog-agent:\n    image: datadog/agent:7\n    container_name: datadog-agent\n    restart: unless-stopped\n    network_mode: bridge          # host mode collides with DSM nginx on 5001\n    cgroup: host                  # compose equivalent of `docker run --cgroupns host`\n    environment:\n      DD_API_KEY: \"your-datadog-api-key\"\n      DD_SITE: \"datadoghq.com\"\n      DD_ENV: \"prod\"\n      DD_HOSTNAME: \"synology-nas\"\n      DD_APM_ENABLED: \"false\"\n      DD_PROCESS_AGENT_ENABLED: \"true\"\n      DD_LOGS_ENABLED: \"true\"\n      DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL: \"true\"\n      DD_CHECK_RUNNERS: \"2\"       # lower to 1 on Atom/Celeron models\n      # Leave DD_SYSTEM_PROBE_ENABLED alone. DSM's 4.4 kernel lacks the eBPF support it needs.\n    volumes:\n      - /var/run/docker.sock:/var/run/docker.sock:ro\n      - /proc/:/host/proc/:ro\n      - /sys/fs/cgroup/:/host/sys/fs/cgroup:ro   # goes with cgroup: host above, for correct container and process metrics\n      - /volume1/docker/datadog-agent/conf.d/snmp.yaml:/etc/datadog-agent/conf.d/snmp.d/conf.yaml:ro\n    labels:\n      com.datadoghq.ad.check_names: '[\"snmp\"]'\nFix the path in that last volume line if you picked a different folder.\nClick Next, look over the settings and deploy. Container Manager pulls datadog/agent:7 and starts it with the SNMP config already mounted, so there's nothing left to edit afterwards.\nStep 6: Check that it came up\nOpen a terminal from Container Manager, or SSH into DSM and run docker exec -it datadog-agent bash, then:\nagent status\nYou want sections for snmp, process and logs agent, and no restart or crash loop. For the SNMP side specifically:\nagent status | grep -A 10 snmp\nThe tag to look for is vendor:synology. If it's there, the mounted snmp.yaml was read and the synology-disk-station profile loaded, which means disks, RAID, SMART and temperatures all come for free. You never have to write an OID list by hand.\nThen open Infrastructure > Devices in Datadog. The NAS shows up there with its model, serial number and DSM version as metadata.\nStep 7: Confirm metrics are flowing\nIn Metrics Explorer, search for:\nsnmp.synology.diskTemperature\nsnmp.synology.diskStatus\nsnmp.synology.raidStatus\nsnmp.synology.system.temperature\nsystem.cpu.* and system.mem.*, which come from the host check rather than SNMP\nGive it about five minutes. If nothing turns up, skip to the troubleshooting list at the end.\nStep 8: Alerts\nMonitors > New Monitor > Metric, then set up these:\nsnmp.synology.system.temperature above 60°C, critical.\nsnmp.synology.system.temperature above 50°C, warning.\nsnmp.synology.diskTemperature above 50°C on any disk, warning.\nsnmp.synology.diskStatus anything other than 1 (normal), critical.\nsnmp.synology.raidStatus in degrade or crashed, critical.\nVolume usage (raidFreeSize/raidTotalSize) above 90%, critical.\nVolume usage above 80%, warning.\nThe temperature numbers are a starting point. Check what your drives are actually rated for and move them.\nStep 9: A dashboard\nDashboards > New Dashboard, then:\nColor-coded query-value widgets for disk status, RAID status and current temperature. These are the ones you actually glance at.\nTimeseries for CPU, memory, network throughput and storage I/O.\nA table grouped by synology_disk_id or synology_raid_name for the per-disk and per-volume breakdown.\nI keep the NDM device page for the NAS pinned next to it, since that's where the topology and metadata live.\nMaintenance\nDSM updates have a habit of resetting SNMP settings, so after each one check that the service is still enabled, the credentials still match and the Docker bridge subnet is still in the allowed sources. After a Container Manager update, run agent status once to confirm the container came back cleanly, since network defaults sometimes shift.\nWhen something breaks\nThe container restart-loops or throws certificate errors: that's host networking. Switch to network_mode: bridge.\nNo SNMP data at all: check that ip_address is the LAN IP and not localhost, that the bridge subnet is allowed through the firewall on UDP 161, and that the version and credentials match what's on the SNMP page exactly. SHA and AES, not SHA256 and AES256.\nsnmp.yaml mounted as a directory instead of a file: the file didn't exist yet when the container was first created. Delete the directory Docker made, create the real file in File Station, redeploy the project.\nThe Agent eating CPU: drop DD_CHECK_RUNNERS to 1.\nNo fan or power status: that one's expected. Those scalar OIDs ship disabled in Datadog's profile. Add them to the SNMP config by hand if you want them.",
+        "title": "Monitoring a Synology NAS with Datadog",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/en/posts/portal-between-ruby-and-go/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3ivxt5gr7k2qu",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "An FFI prototype that lets Ruby load a Go shared library for gradual API migration and reuse of existing tests, with possible performance overhead.",
+        "path": "/en/posts/portal-between-ruby-and-go/",
+        "publishedAt": "2022-04-05T22:42:00+02:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "ruby",
+          "go",
+          "ffi",
+          "lang:en"
+        ],
+        "textContent": "A portal between Ruby and Go (using FFI)\nThinking about migrating some huge REST APIs from Ruby to Go, I researched how to replace the Ruby code progressively with Go code.\nI ended up with a possible FFI-based prototype. The solution is to have the Ruby code load a Go library and wrap the Go functions in Ruby classes and methods.\nThe Ruby side\nThe Ruby side is pretty straightforward. We must load the Go library and import the Go functions in Ruby classes and methods.\nrequire 'ffi'\n\nmodule Portal\n  extend FFI::Library\n\n  ffi_lib './libexample.so'\n\n  class Example < FFI::Struct\n    # This must be completely in sync with the C struct defined in Go code.\n    layout :id, :int, :prefix, :pointer\n  \n    def initialize(prefix, id)\n      self[:prefix] = FFI::MemoryPointer.from_string(prefix)\n      self[:id] = id\n    end\n\n    # This feels convoluted, but it hides the fact that our function is loaded\n    # outside of the \"struct mirror\" class.\n    def greet\n      Portal.greet(self)\n    end\n  end\n\n  attach_function 'greet', [Example.by_value], :void\nend\n\nex = Portal::Example.new('C', 137)\nex.greet\nThe Go side\nThe Go side is a bit more complex. We need to define a C-compatible struct and export the functions we want to use from Ruby.\nThe cool thing is that we can define the functions with the struct as the receiver.\npackage main\n\n/*\nstruct example {\n\tint ID;\n\tchar *Prefix;\n};\n*/\nimport \"C\"\nimport \"fmt\"\n\n// This declaration is just an alias to the C struct.\ntype Example C.struct_example\n\n//export greet\nfunc (e Example) greet() {\n\tfmt.Printf(\"Hello from %s-%d\\n\", C.GoString(e.Prefix), e.ID)\n}\n\nfunc main() {}\nThe build\nThe build is also straightforward. We need to:\nCompile the Go code to a shared library. This command will generate the CGO bindings.\nRun the Ruby code.\ngo build -buildmode=c-shared -o libexample.so example.go\nruby portal.rb\nThe result\nIf we run the code, we get the following output:\nHello from C-137\nThe benefits\nThe main benefit of this approach is that we can progressively migrate the Ruby code to Go. We can start by replacing part by part, until we are ready to switch to a pure Go service.\nIt's not only possible to replace existing Ruby code. Now we can reuse RSpec/Minitest specs to test the new Go code. Instead of going for a full rewrite with no tests, we can start by testing the new code with the existing ones.\nThe (possible) drawbacks\nPerformance-wise this approach is not ideal. We are adding a layer of indirection. This probably adds some overhead to the calls. This is something we need to measure if applied to high-traffic services.",
+        "title": "A portal between Ruby and Go (using FFI)",
+        "updatedAt": "2026-10-12T20:24:46+02:00"
+      }
+    },
+    {
+      "path": "/es/posts/blockchain-si-o-no/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fvaiorafs2sx",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "Un cuestionario basado en un diagrama de decisión del NIST para valorar si un proyecto necesita usar blockchain.",
+        "path": "/es/posts/blockchain-si-o-no/",
+        "publishedAt": "2018-11-21T22:45:00+01:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "blockchain",
+          "lang:es"
+        ],
+        "textContent": "Blockchain en mi próximo proyecto: ¿sí o no?\nUna pregunta habitual cuando conoces mejor la tecnología blockchain (o tu jefe) es \"¿Necesito o puedo usar una blockchain en algún proyecto?\". En el NIST se enfrentaron a esta misma pregunta y diseñaron un diagrama de decisión que podemos usar como cuestionario interactivo.\nAsí que ya sabes, en cada nuevo proyecto dónde creas que es posible aplicar la tecnología blockchain, cuenta con este diagrama y toma una decisión informada.",
+        "title": "Blockchain en mi próximo proyecto: ¿sí o no?",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/es/posts/delete-facebook-1/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fctfhcwsi2ay",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "Primeros pasos para dejar Facebook: recuperar un dominio propio, revisar 123 inicios de sesión y explorar alternativas sociales descentralizadas.",
+        "path": "/es/posts/delete-facebook-1/",
+        "publishedAt": "2018-04-01T17:09:03+02:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "facebook",
+          "social networks",
+          "lang:es"
+        ],
+        "textContent": "Delete Facebook #1\nProgresos realizados: creación de mi propia página bajo dominio propio y revisión de los inicios del período de sesiones activo.\nComo prometí, sigo documentando. Estos últimos días he recuperado el uso de mi dominio personal, que usaré como perfil principal. Sus ventajas no vienen sin desventajas. Por una parte controlaré mi identidad, combinado con Keybase (más sobre esta herramienta en otra entrega), y la autoría de mis textos, disponibles bajo licencia CC BY-SA 4.0. Hay más ventajas, pero no quiero alargarme y antes debo reconocer que esto no está al alcance de cualquiera sin caer en otra plataforma privativa y mucho menos sin coste alguno.\nPor si alguien tiene curiosidad, la web está generada con Hugo, usando el tema Minimo. Repositorio disponible aquí para los más técnicos.\nTambién he revisado qué logins tengo activos y he visto que son 123. 123 webs externas y aplicaciones de móvil en las que inicio sesión con Facebook porque es cómodo. También suelo hacerlo con Twitter. Es muy cómodo pero inconveniente. Inconveniente por casos como el que nos ocupa, pero el ejercicio sirve para tomar conciencia de lo fácil que es caer en la trampa de la utilidad antes que hacer una toma de decisiones orientada a mantener la soberanía personal de tu información.\nFinalmente, un breve inciso. Esto me está llevando a pensar acerca de cómo resolver el problema generado. Nos gusta compartir nuestras vidas, ya sea en persona o digitalmente. Por tanto, existe una necesidad que todavía no ha encontrado una solución descentralizada óptima. Escribiré más al respecto pero avanzaré que, aunque hay propuestas en la buena dirección, creo que todas pecan de algo: o bien de querer ser muy innovadoras o resolver todos los problemas o estar centradas en un software concreto, por muy libre que sea.\nCreo sinceramente que hay soluciones y arquitecturas ya existentes para construir un protocolo de red social que permita la libertad y privacidad necesarias.",
+        "title": "Delete Facebook #1",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/es/posts/delete-facebook-2/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fdeh3n2sw2wt",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "Revisión de los accesos mediante Facebook y de las dificultades para pedir a aplicaciones de terceros que eliminen los datos personales recogidos.",
+        "path": "/es/posts/delete-facebook-2/",
+        "publishedAt": "2018-04-08T11:53:34+02:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "facebook",
+          "social networks",
+          "lang:es"
+        ],
+        "textContent": "Delete Facebook #2\nProgreso realizado: eliminación de inicios de sesión.\nEl primer paso fácil para terminar mi dependencia de Facebook es eliminar todos los inicios de sesión a webs y aplicaciones de terceros. Como ya comenté en la anterior entrada, tengo 123. ¿Y qué me he encontrado entre esos 123 inicios?\nDe entrada, repasando la lista, la mayoría son webs que conozco y uso, por lo que he tenido que ir una a una comprobando si tienen opción para identificarme sin Facebook ni ninguna otra red social. O si ya no las uso o no me interesan más, eliminar las cuentas y aplicaciones.\nPero antes de explicar los diferentes casos que me he encontrado, en esta entrada quiero destacar uno en concreto: las webs de tests tipo Súper Pop. Imagino que muchos hemos caído en algún momento, para compartir unas risas con alguien en Facebook, en hacer uno de estos, como los de QuizzStar. Para hacerlos hay que identificarse con nuestra cuenta de Facebook. ¿Qué información suelen recoger estas webs?\nHe mirado otras, como vonvon, y los permisos son idénticos o peores. Este es un buen ejemplo del mal uso que hacemos (sí, hacemos) de nuestros datos, regalándolos a cambio de un resultado simpático y frívolo. ¿Alguien puede justificar que la versión digital de un test de revista para adolescentes necesita todo esto? Lo más probable es que los tests sean un gancho para obtener y vender datos personales.\nUna vez comprendemos la gravedad del asunto, la pregunta que nos hacemos es \"¿Y cómo puedo hacer que eliminen mis datos?\". La respuesta no es simplemente borrar la entrada de la lista sino, literalmente, contactar con cada web y aplicación manualmente y pedir que la eliminen indicando un identificador de usuario disponible en la misma pantalla de permisos. ¡Esto es demencial!\nIntermedio: mientras escribía esta entrada, Facebook me ha obsequiado con este recordatorio sobre el nuevo reglamento europeo de protección de datos. :facepalm:\nPor poneros un ejemplo. Tengo activada una aplicación llamada Instant Win. Siguiendo lo indicado en la ayuda de Facebook, hago lo siguiente:\nBusco la aplicación en el buscador: Instant Win.\nEn la página (en blanco) busco al final de la columna de la derecha un pequeño enlace que dice \"Reportar/Contacto\".\nSigo el asistente, indicando que quiero enviar un mensaje al desarrollador (última opción).\nSigo el enlace de la siguiente pantalla para enviar un mensaje (sic).\nMe lleva al centro de ayuda de Woobox, aparentemente la empresa desarrolladora.\nBusco la manera de contactar con Woobox, pero no hay ningún formulario o dirección.\nDecido ir a la web principal.\nAl pie de página encuentro una dirección de contacto y les mando el siguiente correo:\nHello,\nI recently found that I used your Facebook app Instant win at some point. I no longer use it. Please delete any data related to user ID XXXXXXXXXXXXXXXX and confirm.\nFailing to comply with this request will be reported to the Spanish Data Protection Agency, as it would be against GDPR's article 17.\nThis request is based in the procedure provided by Facebook in its Help Center.\nThanks,\nDario\nAhora a esperar. Quiero creer que he encontrado un mal ejemplo y que con el resto será diferente pero, si se repite, esto demostrará el poco interés que tiene Facebook (y algunas webs) en la protección de nuestros datos.",
+        "title": "Delete Facebook #2",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/es/posts/delete-facebook/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fcjynoduk2ak",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "Inicio de un proceso documentado para dejar Facebook tras el caso Cambridge Analytica, revisando los accesos a servicios y las formas de mantener el contacto.",
+        "path": "/es/posts/delete-facebook/",
+        "publishedAt": "2018-03-28T23:26:00+02:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "facebook",
+          "social networks",
+          "lang:es"
+        ],
+        "textContent": "Delete Facebook #0\nTras la polémica de Cambridge Analytica, he decidido dejar de alimentar a la bestia, Facebook.\nAdemás he decidido que será un proceso que documentaré, ya que no es simplemente dejar de usar o cerrar a las bravas mi cuenta.\nEs un proceso más bien complejo: tengo muchas webs donde uso Facebook como login, hay personas con las que mantengo contacto por aquí exclusivamente, etc. Así que no sólo lo explicaré para que otros puedan hacerlo, sino que os haré partícipes del mismo.\n¿Y tú, piensas dejar Facebook? Si es sí, ¿a dónde migras? Si es no, ¿por qué y cómo prefieres que mantengamos el contacto?",
+        "title": "Delete Facebook #0",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/es/posts/introduccion-organizaciones-liquidas/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3b2keyughy24n",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "Introducción al modelo de organizaciones horizontales de Lýd, basado en la delegación voluntaria y los flujos para facilitar la participación y las decisiones colectivas.",
+        "path": "/es/posts/introduccion-organizaciones-liquidas/",
+        "publishedAt": "2013-07-02T10:00:39+02:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "liquid organizations",
+          "liquid democracy",
+          "lyd",
+          "lang:es"
+        ],
+        "textContent": "Introducción a las organizaciones líquidas\nHace muchos años me planteé un objetivo muy ambicioso: desarrollar un sistema de participación y organización para Pirates de Catalunya. Su nombre, Lýd.\nContaba con la experiencia de un año de asamblea permanente en línea, asambleas físicas, dos campañas electorales, muchas aportaciones de mis compañeros, así como conocimiento adquirido y compartido en conversaciones con personas de todo el mundo.\nEmpecé un análisis que duró un año y medio más, con dos campañas más, cientos de horas de trabajo y más intercambio de ideas con compañeros de otros colectivos. Un tiempo de recopilación, redacción y refinamiento de una idea para desencadenar el verdadero potencial de cualquier colectivo horizontal.\nTras múltiples versiones, analizando las consecuencias y buscando la versión más clara y concisa, libero el análisis e invito a todos a mejorarlo, disponible en forma de documentación para cualquier colectivo.\nCon esto establezco las bases de las organizaciones líquidas. ¿Y qué son?\n\"Whose social graph is it?\" por Jeremy Keith bajo licencia CC BY 2.0\nOrganizaciones líquidas\nSon organizaciones horizontales sin jerarquía fija, basadas en la confianza a través de la delegación. Todos sus miembros tienen el mismo peso y se autoorganizan en grupos de trabajo específicos o grupos orgánicos surgidos de rasgos comunes (ciudad, región, etc).\nSe basa en tres piedras angulares: nexos (grupos), flujos y delegación. En este artículo me centraré en dos de ellos, dejando aparte los nexos, ampliamente explicados en el análisis.\nDelegación\nSin delegación, las estructuras horizontales no son eficientes con nexos de cientos de miembros activos, funcionando lentamente e incluso estancándose. Por ello, la delegación es el catalizador necesario para permitir una mínima estructura sin que esta se convierta en una jerarquía anquilosada.\nSiendo voluntaria y revocable en cualquier momento, delegamos en función a nuestra confianza. En Lýd se contempla no regida por plazos ni formalismos, permitiendo la reorganización del grupo ante cualquier circunstancia. Esto trae resiliencia a la organización.\nEn general, Lýd está orientado a organizaciones descentralizadas con objetivos accionables. Puede a aplicarse a organizaciones orientadas al debate, por el concepto de flujo, pero su principal objetivo es permitir una toma de decisiones ágil, auditable y libre de bloqueos. Es la aplicación de la democracia líquida en su máxima extensión.\nPor ejemplo, cuando un grupo de trabajo es creado, en mi opinión debería haber una “votación” para delegar, en función a méritos expuestos por aquellos que desean cargar con delegaciones. Posteriormente estas delegaciones pueden cambiar en cualquier momento, incluso durante una votación.\nEsto permite el conocimiento mútuo de los participantes, así como empezar a trabajar lo antes posible, y no impide que miembros que entren más tarde puedan ser delegados, ya que no se establecen plazos ni límites para ello.\nAntes de pasar al siguiente punto, quiero hacer notar que asumo que al pertenecer a una organización, uno confía en los demás grupos donde no se está adscrito, siendo ésta la delegación implícita última, subyacente en las organizaciones actuales y que Lýd explicita dentro de los nexos.\nFlujos\nEn Lýd todo es un flujo, desde una conversación hasta una tarea, pasando por un proyecto. Todo gira al diálogo y al debate, necesarios para obtener el mejor resultado de la cocreación.\nPero no sólo esto es necesario. Además, debemos conseguir que las personas necesarias interactúen. Combinados con los nexos, los flujos se organizan según necesidades y permiten el intercambio de opiniones en grupos manejables.\nLos flujos se acompañan con herramientas para gestionar las situaciones más habituales, tales como off-topics, mensajes que aportan poco contenido (los típicos de apoyo, +1), etc.\nTodas estas herramientas deben estar al alcance de cualquiera, salvo aquellas que puedan destruir contenido, para garantizar una comunicación horizontal y sin bloqueos.\nConclusión\nLýd alcanza un equilibrio entre los diferentes tipos de miembros, así como permite a la organización autoregularse y permitir que la participación sea máxima, directa o indirectamente, pero sin necesidad de cercenar o limitar con reglas arbitrarias.\nY con esto cierro mi primer artículo sobre organizaciones líquidas. A medida que diferentes grupos lo usen y otros lo critiquen y sugieran mejoras, iré mejorando el modelo. Todo repercutirá en el desarrollo de una herramienta que ayude a su implantación y extensión, de la que iré informando también.",
+        "title": "Introducción a las organizaciones líquidas",
+        "updatedAt": "2026-10-12T20:24:46+02:00"
+      }
+    },
+    {
+      "path": "/es/posts/pequena-reflexion/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3avif3ktts2ke",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "Una reflexión que defiende redistribuir el poder político antes de reformar el sistema económico para limitar la influencia de la oligarquía.",
+        "path": "/es/posts/pequena-reflexion/",
+        "publishedAt": "2013-04-28T23:50:52+02:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "capitalism",
+          "politics",
+          "lang:es"
+        ],
+        "textContent": "Pequeña reflexión: ¿qué es primero, cambiar el capitalismo o el poder?\nHoy me han dicho (cito literalmente) que \"el problema es el CA-PI-TA-LIS-MO, no una mala gestión de dicho sistema, el problema es el sistema\" ya que \"el carácter de clase del estado capitalista que con su control de los medios de comunicación puede manejar prácticamente a su antojo el estado de opinión de las mayorías para imponer sus sangrantes políticas de forma aparentemente democrática.\"\nEstoy de acuerdo que el actual capitalismo (neoliberal, ¿existe otro?) es una aberración y atenta contra nuestros derechos fundamentales. Salta a la vista con desgracias como la de Bangladesh.\nPero no estoy de acuerdo con que cambiando sólo el sistema económico vaya a mejorar nada. Su punto de vista asume que la población es imbécil, que los medios son suficientes para doblegar a todo un país.\nAclaro. Sería irresponsable negar la influencia de los medios, pero esta no es absoluta ni homogénea. Si no fuera así, no existiría disidencia de ningún tipo, cuando lo que existe es una disociación mayoritaria de la población y la política, propiciada por los mismos políticos y replicada por los medios.\nPero esta influencia sobre el estado de opinión, que depende mucho de la libertad de cada ciudadano de informarse o no, es ineficiente. Si fuera así, la oligarquía económica no necesitaría influir en el estamento político. Y, en cambio, es sabido que lo hacen.\nAsí es cómo la oligarquía económica doblega un país.\nAhora pregunto: ¿qué influencia es peor, la de la oligarquía económica sobre los medios o sobre los políticos? Desde mi punto de vista, sobre los políticos.\nY es por eso que creo que antes de cualquier cambio (¿drástico?) de modelo económico es necesario asegurarse que el poder político no está en manos de unos pocos. En una sociedad dónde el poder no está capitalizado por una élite, reforzada por la oligarquía y los medios, esta no puede influir de la misma manera.\nAdemás, se pueden crear medios nuevos que sustituyan a los controlados por los magnates, pero no nuevos organismos gubernamentales. Aunque sí nuevos espacios de decisión colectiva, pero eso es harina de otro costal.\nResumiendo: creo que reformar lo económico sin reformar la distribución del poder es empezar por el tejado, pues está claro que la influencia de la oligarquía económica empieza en lo político y no exclusivamente en los medios.",
+        "title": "Pequeña reflexión: ¿qué es primero, cambiar el capitalismo o el poder?",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/es/posts/tejiendo-el-cambio/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3bd3vafbv22ra",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "Una propuesta para conectar presencialmente a personas que buscan un cambio social y construir confianza sin imponer una única vía de acción política.",
+        "path": "/es/posts/tejiendo-el-cambio/",
+        "publishedAt": "2013-10-18T22:28:00-04:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "politics",
+          "lang:es"
+        ],
+        "textContent": "Tejiendo el cambio\nFui invitado a otro grupo de Facebook, de esos de buscar la “confluencia”. Es decir, iniciar otro proceso tortuoso de intento de unión, donde los egos no van a ceder.\nEstamos todos planteado mal el asunto.\nDebemos empezar en el mundo físico y ponernos en contacto todos con todos. No es el primer grupo que explora el camino de la unión, normalmente electoral, ya visitado en remil ocasiones.\nEs un grupo heterogéneo formado por personas de colectivos con (posibles) nodos físicos pero baja interacción con otros colectivos. Esto en comparación con lo que voy a proponer.\nDe hecho, los colectivos en sí no son importantes. Lo importante son dos cosas: compartir el objetivo de cambiar lo que está podrido y que cada uno de nosotros es un nodo personal, un agente de cambio.\nAprovechemos que tenemos algo en común y creemos un movimiento paralelo, pero complementario, a todos los ya existentes. No hablo de reinventar el 15M, hablo de conectar personas. Cada uno de su padre y su madre, pero con un objetivo compartido: cambiar el mundo.\nNo debemos conformar otro proyecto centrado en la confluencia. Como ya se habrá notado, a mí ya no me interesa. He vivido tres, cuatro, yo que sé los que he visto. Me he aburrido, quemado, asqueado… Los humanos somos capaces de lo más dantesco y lo más extraordinario. Lo que propongo es explotar lo extraordinario.\nTejamos la red de la gente que quiere un cambio, de los que coinciden en lo más básico. Es inevitable que cada uno tenga su opción, su opinión y su pasión. Usemos eso a favor de la transformación social. Fomentemos el encuentro físico, el intercambio de ideas entre personas y la sana competición entre opiniones, con un objetivo claro: conseguir hacer realidad eso que tenemos en común.\nSi tejemos esta red, basada en lo físico y coordinada por Internet, fundamentada en la confianza entre pares y en la cercanía, la confluencia (la de verdad, sin pasar por el rodillo a nadie) ocurrirá sola, en la forma que este “enjambre” decida. Más allá de nuestras preferencias personales, todos somos ya parte del mismo, pero como queremos arrastrar al otro a nuestra opción, acabamos por no hacer nada entre los que ya estamos hiperconectados (o como suelo denominarnos, los sospechosos habituales). Conectemos a todos, compartamos ideas y propongamos soluciones, y el resto vendrá sólo.\nDejemos de centrarnos en la confluencia, pero facilitémosla tejiendo conexiones. Un movimiento de personas abiertas, que no crean en soluciones mesiánicas ni se crean en posesión de la salvación de todos.\nY es que competimos demasiado con personas excluyentes, hablamos poco con los afines pero con otras vías de acción.\nNos sorprenderemos del resultado.",
+        "title": "Tejiendo el cambio",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/es/posts/un-nuevo-camino/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3lbxibacnk2h3",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "Anuncio del final de la etapa de militancia en Pirates de Catalunya, con agradecimiento por el camino compartido y la decisión de asumir nuevos retos.",
+        "path": "/es/posts/un-nuevo-camino/",
+        "publishedAt": "2024-11-27T22:22:00+01:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "pirates",
+          "politics",
+          "lang:es"
+        ],
+        "textContent": "Un nuevo camino\nHoy, coincidiendo con el aniversario de las elecciones del 28 de noviembre de 2010 y después de cumplir con compromisos adquiridos, anuncio que hace unas semanas abandoné mi militancia en Pirates de Catalunya. Esta fecha es relevante porque estas elecciones fueron las primeras en las que Pirates concurrió, poco después de su oficialización, y marcaron mi primera experiencia electoral.\nEn catorce años de militancia he tenido la oportunidad de construir una alternativa, incidiendo en la vida pública, en un contexto histórico: desde el 15M hasta el auge del independentismo catalán, pasando por la represión del Estado español y el crecimiento de la extrema derecha, terminando en el torbellino de guerra y cambio climático en el que está inmerso el mundo.\nHe asumido múltiples responsabilidades que me han hecho crecer más de lo que imaginaba el día que rellené el formulario de afiliación a Pirates. He encabezado listas, he ejercido como concejal, he podido participar en proyectos de alcance nacional e internacional, entre muchos otros.\nNada de esto habría sido posible sin vosotros, los cientos de personas con quienes he tenido el privilegio de compartir este viaje. Os agradezco de todo corazón a cada uno de vosotros la confianza, dedicación y horas que habéis puesto en cada instante.\nAhora, cierro esta etapa e inicio una nueva. Lo hago porque he decidido asumir nuevos retos personales y profesionales. Continuaré haciendo política de otra manera, principalmente desde mis canales personales.\nPiratas, continuad el buen trabajo y la lucha por nuestros ideales compartidos. Espero reencontrarnos en este nuevo camino que emprendo. ¡Hasta pronto!",
+        "title": "Un nuevo camino",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/posts/delete-facebook-1/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fctel2u5a23n",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "Primers passos per deixar Facebook: recuperar un domini propi, revisar 123 inicis de sessió i explorar alternatives socials descentralitzades.",
+        "path": "/posts/delete-facebook-1/",
+        "publishedAt": "2018-04-01T16:53:15+02:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "facebook",
+          "social networks",
+          "lang:ca"
+        ],
+        "textContent": "Delete Facebook #1\nProgrés realitzat: creació de la meva pròpia pàgina sota domini propi i revisió d'inicis de sessió actius.\nCom vaig prometre, segueixo documentant. Aquests últims dies he recuperat l'ús del meu domini personal, que faré servir com a perfil principal. Els seus avantatges no vénen sense desavantatges. D'una banda controlaré la meva identitat, combinat amb Keybase (més sobre aquesta eina en una altra entrega), i l'autoria dels meus textos, disponibles sota llicència CC BY-SA 4.0. Hi ha més avantatges, però no vull allargar-me i abans he de reconèixer que això no està a l'abast de qualsevol sense caure en una altra plataforma privativa i molt menys sense cap cost.\nPer si algú té curiositat, el web està generada amb Hugo, usant el tema Minimo. Repositori disponible aquí per als més tècnics.\nTambé he revisat què logins tinc actius i he vist que són 123. 123 webs externes i aplicacions de mòbil on inicio sessió amb Facebook perquè és còmode. També solc fer-ho amb Twitter. És molt còmode però inconvenient. Inconvenient per casos com el que ens ocupa, però l'exercici serveix per prendre consciència del fàcil que és caure en el parany de la utilitat abans que fer la presa de decisions orientada a mantenir la sobirania personal de la teva informació.\nFinalment, un breu incís. Això m'està portant a pensar sobre com resoldre el problema generat. Ens agrada compartir les nostres vides, sigui en persona o digitalment. Per tant, hi ha una necessitat que encara no ha trobat una solució descentralitzada òptima. Escriuré més sobre aquest tema però avançaré que, tot i que hi ha propostes en la bona direcció, crec que totes pequen d'alguna cosa: o bé de voler ser molt innovadores o resoldre tots els problemes o estar centrades en un programari concret, per molt lliure que sigui.\nCrec sincerament que hi ha solucions i arquitectures ja existents per construir un protocol de xarxa social que permeti la llibertat i privacitat necessàries.",
+        "title": "Delete Facebook #1",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/posts/delete-facebook-2/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fdchy3d542nw",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "Revisió dels inicis de sessió amb Facebook i de les dificultats per eliminar les dades personals cedides a aplicacions de tercers.",
+        "path": "/posts/delete-facebook-2/",
+        "publishedAt": "2018-04-07T17:04:09+02:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "facebook",
+          "social networks",
+          "lang:ca"
+        ],
+        "textContent": "Delete Facebook #2\nProgrés realitzat: eliminació d'inicis de sessió.\nEl primer pas fàcil per acabar la meva dependència de Facebook és eliminar tots els inicis de sessió a webs i aplicacions de tercers. Com ja vaig comentar en l'anterior entrada, en tinc 123. I què m'hi he trobat?\nD'entrada, repassant la llista, la majoria són webs que conec i faig servir, pel que he hagut d'anar una a una comprovant si tenen opció per a identificar-me sense Facebook ni cap altra xarxa social. O si ja no en feia ús o no m'interessaven més, eliminar els comptes i aplicacions.\nPerò abans d'explicar els diferents casos que m'he trobat, en aquesta entrada vull destacar un de concret: les webs de tests tipus Súper Pop. Imagino que molts hem caigut en algun moment, per compartir unes rialles amb algú a Facebook, en fer un d'aquests, com els de QuizzStar. Per a fer-los cal identificar-se amb el nostre compte de Facebook. Quina informació solen recollir aquestes webs?\nHe mirat d'altres, com vonvon, i els permisos són idèntics o pitjors. Aquest és un bon exemple del mal ús que fem (sí, fem) de les nostres dades, regalant-les a canvi d'un resultat simpàtic i frívol. Algú pot justificar perquè la versió digital d'un test de revista per adolescents necessita tot això? El més probable és que els tests siguin un ganxo per obtenir i vendre dades personals.\nUn cop copsada la gravetat, la pregunta que ens fem tot és \"I com puc fer que eliminin les meves dades?\". La resposta no és simplement esborrar l'entrada de la llista sinó, literalment, contactar amb cada web i aplicació manualment i demanar que l'eliminin tot indicant un identificador d'usuari disponible en la mateixa pantalla de permisos. Això és demencial!\nIntermedi: mentre feia aquesta entrada, Facebook m'ha obsequiat amb aquest recordatori sobre el nou reglament europeu de protecció de dades. :facepalm:\nPer posar-vos un exemple. Tinc activada una aplicació anomenada Instant Win. Seguint el que indica l'ajuda de Facebook, faig el següent:\nBusco l'aplicació al cercador: Instant Win.\nA la pàgina (en blanc) busco al final de la columna de la dreta un petit enllaç que hi diu \"Denunciar/Contacte\".\nSegueixo l'assistent, indicant que vull enviar un missatge al desenvolupador (última opció).\nSegueixo l'enllaç de la següent pantalla per enviar un missatge (sic).\nEm porta al centre de suport de Woobox, aparentment l'empresa desenvolupadora.\nBusco la manera de contactar amb Woobox, però no hi ha cap formulari o adreça.\nDecideixo anar a la web principal.\nAl peu de pàgina trobo una adreça de contacte i els hi envio el següent correu:\nHello,\nI recently found that I used your Facebook app Instant win at some point. I no longer use it. Please delete any data related to user ID XXXXXXXXXXXXXXXX and confirm.\nFailing to comply with this request will be reported to the Spanish Data Protection Agency, as it would be against GDPR's article 17.\nThis request is based in the procedure provided by Facebook in its Help Center.\nThanks,\nDario\nAra a esperar. Vull creure que he trobat un mal exemple i que amb la resta serà diferent però, si es repeteix, això demostrarà el poc interès que té Facebook (i algunes webs) en la protecció de les nostres dades.",
+        "title": "Delete Facebook #2",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/posts/delete-facebook/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3fcjynoduk2hl",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "Inici d'un procés documentat per deixar Facebook després del cas Cambridge Analytica i recuperar el control de la identitat digital.",
+        "path": "/posts/delete-facebook/",
+        "publishedAt": "2018-03-28T23:26:00+02:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "facebook",
+          "social networks",
+          "lang:ca"
+        ],
+        "textContent": "Delete Facebook #0\nDesprés de la polèmica de Cambridge Analytica, he decidit deixar d'alimentar la bèstia, Facebook.\nA més he decidit que serà un procés que documentaré, ja que no és simplement deixar d'usar o tancar a les braves meu compte.\nÉs un procés més aviat complex: tinc moltes webs on ús Facebook com login, hi ha persones amb les que mantinc contacte per aquí exclusivament, etc. Així que no només ho explicaré perquè altres puguin fer-ho, sinó que us faré partícips del mateix.\nI tu, penses deixar Facebook? Si és sí, a on migres? Si és no, per què i com prefereixes que mantinguem el contacte?",
+        "title": "Delete Facebook #0",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/posts/manifest-assemblees-constituents-contrapoder/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3ccrqthnaw2dl",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "Manifest que proposa assemblees constituents obertes i participatives com a contrapoder popular per construir un nou Estat des de baix.",
+        "path": "/posts/manifest-assemblees-constituents-contrapoder/",
+        "publishedAt": "2014-11-26T08:08:46+01:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "politics",
+          "catalonia",
+          "lang:ca"
+        ],
+        "textContent": "Manifest per les assemblees constituents com contrapoder\nAhir, 25 de novembre de 2014, el president Mas va trencar el tauler polític amb un full de ruta de dos anys i escaig, amb la independència com meta.\nDavant d’aquest nou pas en el procés, hem d’assumir que continuarà endavant, ens agradin les regles del joc o no. Per això, amb la certesa de les retallades viscudes i la determinació d’agafar el timó des de la societat civil, hem de constituir-nos com contrapoder popular, des d’assemblees constituents a tot el territori.\nEl poble ha de ser present, crític i actiu per no esdevenir un Estat que ho canviï tot per no canviar res, sigui quin sigui el resultat final. Hem de liderar el procés, fent que el govern governi obeint. Els temps dels messies han passat.\nVolem un Estat lliure de l’herència del 78, CiU i Mas inclosos. Volem un Estat de les persones i per les persones, desfent el mal causat per les retallades convergents. Sabem el que han fet, sabem que no els hi podem deixar el nostre futur en les seves mans.\nPer això, les que compartim aquest manifest, crearem assemblees constituents per garantir que el procés és de totes. Assemblees obertes i participatives, encarregades de vetllar i construir l’alternativa per pressionar a les institucions i encaminar-les a ser canals de la voluntat popular, en comptes de pastors que ens tractin com remat.\nLes assemblees seran nexes de confluència de totes les catalanes, sense importar carnets ni banderes, pacífiques, cíviques i tolerants, fonamentades en la transparència i mecanismes de participació directa.\nConstruirem un nou Estat des de baix. El futur està en les nostres mans i els nostres cors.\n\"Up hands Barcelona protests\" per Marcello Vicidomini sota llicència CC BY 2.0",
+        "title": "Manifest per les assemblees constituents com contrapoder",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/posts/pseudo-estat/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3li54ji6zc2xd",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "Reflexió sobre el poder de les corporacions digitals i el Pseudo-Estat com a possible forma de governabilitat d'un capitalisme hiperconcentrat.",
+        "path": "/posts/pseudo-estat/",
+        "publishedAt": "2025-02-14T12:39:00+01:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "pseudo-state",
+          "trump",
+          "capitalism",
+          "ai-assisted summary",
+          "lang:ca"
+        ],
+        "textContent": "Tecnofeudalisme i el Pseudo-Estat: la futura governabilitat del capitalisme\nSegons Alejandro Galliano a “Los tecnofeudatari de la Gran América otra vez”, el capitalisme està experimentant una transformació en què les grans corporacions acumulen poder no per innovació, sinó per monopolitzar dades i infraestructures digitals. Alguns autors han descrit aquest fenomen com a “tecnofeudalisme”, establint paral·lelismes amb el feudalisme històric per la seva concentració de riquesa i captació de rendes.\nTanmateix, aquesta analogia és discutible. El capitalisme no depèn exclusivament del mercat, sinó de la lògica d’acumulació, que pot restringir-lo o eliminar-lo quan cal. Fernand Braudel diferenciava entre un intercanvi competitiu i un d’exclusiu i dominant; és en aquest segon en què realment opera el capitalisme.\nEl repte no és si vivim en un tecnofeudalisme, sinó com es governarà aquesta nova fase del capitalisme que podem anomenar capitalisme 4.0. Figures com Elon Musk i Peter Thiel cerquen una nova governabilitat basada en el control digital d’una societat fragmentada i imprevisible. Però mentre que alguns autors parlen d’un “capitalisme de vigilància”, el model emergent és més complex i caòtic, explotant l’algoritme, la desinformació i el caos digitals per satisfer els interessos de les grans corporacions.\nEn aquest context, es perfila el que Kevin Batcho anomena “Pseudo-Estat”: una xarxa d’entitats privades que exerceixen poder sense cap rendició de comptes democràtica. A diferència de l'Estat profund, que es basa en la burocràcia, el Pseudo-Estat envaeix institucions estatals i colonitza l’espai públic des de fora d'aquestes. Això ja es va veure amb institucions “filàntropes” durant el segle XX, i ara es reprodueix amb empreses com SpaceX i Palantir, que operen en la frontera difusa entre la cosa pública i la privada.\nTrump i les elits que l'acompanyen aspiren a fer aquesta transició enmig d’una crisi climàtica i un procés de reterritorialització del capital. La consolidació del Pseudo-Estat podria ser la forma política més apta per aquest capitalisme hiperconcentrat, obrint una paradoxa per als seus seguidors neoreaccionaris i paleollibertaris. Els primers podrien veure com la seva utopia tecnocràtica es materialitza en una forma encara més autoritària del que imaginaven. Els segons, que somien amb la descentralització i privatització del poder, podrien acabar sota un règim encara més tirànic que els vells Estats nacionals. Quan aquest futur es materialitzi, ja serà massa tard per lamentacions.",
+        "title": "Tecnofeudalisme i el Pseudo-Estat: la futura governabilitat del capitalisme",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/posts/renda-basica/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3kpsf4qj4s2jv",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "Repàs dels resultats de pilots de renda bàsica sobre pobresa, benestar i ocupació, amb els reptes de finançament i viabilitat que continuen oberts.",
+        "path": "/posts/renda-basica/",
+        "publishedAt": "2024-04-10T21:09:00+02:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "basic income",
+          "ai-assisted summary",
+          "lang:ca"
+        ],
+        "textContent": "Renda bàsica: deixarà tothom de treballar?\nArran de la proposta de la CUP d'introduir la Renda Bàsica Universal, moltes persones es pregunten si tothom simplement no faria brot i tot pujaria.\nBasant-nos en les dades sobre diversos pilots i experiments de renda bàsica universal (RBU) arreu del món, aquests són alguns dels resultats positius i negatius més significatius que s'han observat:\nResultats positius:\nReducció de la pobresa i augment de l'estabilitat financera dels beneficiaris, permetent-los cobrir més fàcilment necessitats bàsiques com alimentació, habitatge i sanitat.\nMillora de la salut física i mental, amb els beneficiaris reportant menys estrès, ansietat i depressió.\nAugment de l'emprenedoria, amb alguns beneficiaris utilitzant els diners per iniciar petits negocis o perseguir educació/formació.\nPetits impactes positius en l'ocupació en alguns casos, esvaint les preocupacions que la RBU portaria a un abandonament generalitzat de les feines.\nMillora dels resultats educatius dels nens en famílies que reben la RBU.\nResultats negatius:\nAlguns estudis, especialment experiments més antics als EUA als anys 70, van trobar reduccions en les hores treballades i la participació en la força laboral, particularment per a segons guanyadors com dones casades.\nPreocupacions sobre els costos molt elevats d'implementar programes de RBU a gran escala i els efectes potencials sobre els programes existents de xarxa de seguretat social.\nDificultat per generar suport polític sostingut per a la RBU, amb alguns programes pilot cancel·lats abans d'hora a causa de canvis en el lideratge polític.\nQüestions sobre si els efectes persistirien a llarg termini o s'esvaïrien amb el temps, ja que la majoria de pilots són a curt termini.\nReptes per implementar la RBU d'una manera que interactuï eficaçment amb els programes de prestacions i sistemes fiscals existents.\nEn general, l'evidència dels pilots de RBU suggereix que és prometedora per reduir la pobresa i millorar la salut i el benestar. No obstant això, alguns dels efectes sobre l'ocupació són mixtos, i hi ha preocupacions sobre el cost i la viabilitat política que cal abordar perquè la RBU sigui una solució política viable. Es necessita més recerca a llarg termini i a gran escala per avaluar completament els impactes i les possibles compensacions d'implementar programes de RBU. Centrant-nos en els pilots dels últims 25 anys, aquests són alguns dels pilots i experiments de renda bàsica universal (RBU) més significatius que s'han dut a terme:\nExperiment de Renda Bàsica de Finlàndia (2017-2018): Finlàndia va realitzar un assaig controlat aleatori a nivell nacional on 2.000 ciutadans aturats van rebre 560€ al mes. Els resultats van mostrar un petit augment de l'ocupació i un benestar significativament millorat per als beneficiaris de la RBU en comparació amb el grup de control.\nExperiment de RBU de GiveDirectly a Kenya (2017-actualitat): Aquest és l'experiment de RBU més gran i més llarg, proporcionant pagaments a més de 20.000 kenyans en 200 pobles. A partir del 2023, els resultats inicials que comparen diferents models de RBU van trobar que els pagaments de suma global van portar a més nous negocis i ingressos més alts en comparació amb els pagaments mensuals més petits.\nPilot de Renda Bàsica d'Ontario (2017-2018): Aquest pilot canadenc va proporcionar pagaments mensuals a 4.000 persones de baixos ingressos en diverses ciutats. Tot i que els beneficiaris van informar d'una millora del benestar i de la salut física i mental, el projecte va ser cancel·lat abans d'hora per un nou govern.\nDemostració d'Apoderament Econòmic de Stockton (SEED) a Califòrnia (2019-2021): 125 residents de Stockton van rebre 500 dòlars al mes durant 24 mesos. La majoria dels beneficiaris van informar que utilitzaven els diners per a productes essencials com aliments i factures, amb un augment de l'ocupació a temps complet.\nPrograma Bolsa Familia del Brasil (2003-actualitat): Tot i que no és una RBU completa, aquest massiu programa de transferència d'efectiu proporciona fons a milions de brasilers de baixos ingressos. L'evidència mostra que ha reduït substancialment la pobresa.\nExperiment de Renda Bàsica de Y Combinator als EUA (2019-actualitat): Aquest projecte de recerca finançat per Silicon Valley està proporcionant pagaments mensuals a residents de dos estats per estudiar l'impacte de la RBU. Els primers resultats reportats són positius, però l'estudi complet encara està en curs.\nNombrosos pilots de renda garantida dirigits per ciutats als EUA (2020-actualitat): Esperonats per la pandèmia, alcaldes de ciutats com Los Angeles, Denver, Newark i altres han llançat pilots similars a la RBU, normalment proporcionant uns pocs centenars de dòlars al mes a diversos centenars de residents de baixos ingressos.\nEn resum, les últimes dècades han vist un augment significatiu de les proves del món real de la RBU, especialment pilots a petita escala finançats tant per governs com per organitzacions privades. Tot i que els resultats no sempre són concloents, aquests experiments estan construint evidència empírica que la RBU pot reduir la pobresa, millorar la salut i el benestar, i estimular l'emprenedoria sense grans caigudes en l'ocupació. No obstant això, els impactes a llarg termini i les qüestions de finançament i viabilitat política segueixen sent reptes oberts.\nFonts\nUniversal basic income pilots\nThe pros and cons of universal basic income\nUniversal Basic Income as a Policy Response to COVID-19 and Precarious Employment: Potential Impacts on Rehabilitation and Return-to-Work\nUniversal Basic Income (UBI) – Top 3 Pros and Cons\nReducing health inequities: is universal basic income the way forward?\nUniversal basic income has been tested repeatedly. It works. Will America ever embrace it?\nThe pros and cons of universal basic income\nThe Deep and Enduring History of Universal Basic Income",
+        "title": "Renda bàsica: deixarà tothom de treballar?",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/posts/un-nou-cami/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3lbxibacnk23c",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "Anunci del final de l'etapa de militància a Pirates de Catalunya, amb agraïment pel camí compartit i la decisió d'assumir nous reptes.",
+        "path": "/posts/un-nou-cami/",
+        "publishedAt": "2024-11-27T22:22:00+01:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "pirates",
+          "politics",
+          "lang:ca"
+        ],
+        "textContent": "Un nou camí\nAvui, coincidint amb l'aniversari de les eleccions del 28 de novembre del 2010 i després de complir amb compromisos adquirits, anuncio que d'unes setmanes ençà he abandonat la militància a Pirates de Catalunya. L'efemèride és rellevant perquè aquestes eleccions van ser les primeres en què Pirates va concórrer, poc després de la seva oficialització, i van marcar la meva primera experiència electoral.\nEn catorze anys de militància he tingut l'oportunitat de construir una alternativa, incidint en la vida pública, en un context històric: des del 15M fins a l'auge de l'independentisme, passant per la repressió de l'Estat espanyol i el creixement de l'extrema dreta, acabant en la voràgine de guerra i canvi climàtic en la que està el món immers.\nHe assumit múltiples responsabilitats que m'han fet créixer més del que no imaginava el dia que vaig omplir el formulari d'afiliació a Pirates. He encapçalat llistes, he exercit com a regidor, he pogut participar en projectes d'abast nacional i internacional, entre molts altres.\nRes d'això no hauria estat possible sense vosaltres, els centenars de persones amb qui he tingut el privilegi de compartir aquest viatge. Us agraeixo de tot cor a cadascuna de vosaltres la confiança, dedicació i hores que heu posat en cada instant.\nAra, tanco aquesta etapa i n'inicio una de nova. Ho faig perquè he decidit entomar nous reptes personals i professionals. Continuaré fent política d'una altra manera, principalment des dels meus canals personals.\nPirates, continueu la bona feina i la lluita pels nostres ideals compartits. Espero retrobar-nos en aquest nou camí que emprenc. Arreveure!",
+        "title": "Un nou camí",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/rizoma/001/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3id2ynw5k226r",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "Presentació de Rizoma amb lectures sobre vacunes, llibertat de compartir cultura, euro digital i desigualtat, i un record dels Jocs Olímpics de Barcelona.",
+        "path": "/rizoma/001/",
+        "publishedAt": "2021-08-08T10:00:00+02:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "rizoma",
+          "lang:ca"
+        ],
+        "textContent": "Rizoma #001\nrizoma m. [LC] [BO] Tija subterrània, normalment de creixement horitzontal, amb aspecte d’arrel.\nEn l'última dècada molts heu conegut el meu vessant polític. I alguns m'hi heu acompanyat. Després d'un temps de canvis i ressituar-me, inicio una nova etapa. Rizoma, el meu butlletí personal, en forma part.\nPer què Rizoma? Crec que reflecteix la meva filosofia de vida, d'aprofundir i treballar en estructures socials i polítiques horitzontals, cooperatives i solidàries. I perquè és una paraula poc freqüent!\nAmb una freqüència per determinar, en el millor dels casos cada dues setmanes, et faré arribar coses que he creat o llegit que trobo rellevants, però no necessàriament d'actualitat. Sense més dilació, et faig a mans el que vull destacar de les últimes tres setmanes.\nLes vacunes funcionen 💉\nAquest gràfic de Miguel Ángel Reinoso és motiu per l'optimisme; les defuncions per COVID-19 es redueixen a mesura que augmenta la vacunació i malgrat que els contagis han arribat a màxims crítics durant la cinquena onada:\nLlibertat per compartir: recollida de signatures ✍️\nDes d'inicis d'any estic implicat en l'organització de la Iniciativa Ciutadana Europea Freedom to Share.\nEn l'època daurada de l'streaming pot semblar irònic recollir signatures per garantir la llibertat de compartir cultura sense ànim de lucre, però té més sentit que mai. És una de les llibertats bàsiques, d'accedir a la producció cultural, i és necessària també per garantir que ningú monitora les nostres comunicacions.\nSigna-la aquí i, sobretot, comparteix-la!\nL'euro digital arribarà (potser) 💶\nTradueixo de l'article del banc central estonià sobre l'euro digital:\nEesti Pank va treballar amb el Banc Central Europeu i els bancs centrals d’Espanya, Alemanya, Itàlia, Grècia, Irlanda, Letònia i els Països Baixos en l’experiment per avaluar una possible solució tècnica per a l’euro digital. L'experiment va examinar com una solució tècnica per a un euro digital, basada en la tecnologia blockchain que serveix de base per a l'estat electrònic estonià, podria funcionar en termes de nombre de pagaments i de titulars de diners i els seus costos energètics, i com les identitats digitals es podrien vincular i garantir la privadesa.\nEl Consell de Govern del Banc Central Europeu encaara no ha pres cap decisió sobre la introducció d’un euro digital, però el 14 de juliol va decidir avançar en els preparatius necessaris per introduir-ne un. El Consell de Govern prendrà la decisió final sobre si introduir o no l'euro digital i en quina tecnologia s'hauria de basar en una data posterior.\nAquest desenvolupament s'haurà de seguir de prop!\nTax the rich 💸\nEls 8 homes més rics del món tenen més diners que la meitat del món. I ens diuen que no podem permetre'ns salvar el planeta.\nVia @arcitecta.\nEspecial cloenda dels Jocs Olímpics 🏅\nCom avui és la cloenda dels Jocs Olímpics de Tòquio, et comparteixo una petita joia de Barcelona: la plaça de Cobi. Un record de les nostres Olimpíades del 92.\nSi t'ha agradat i acabes de descobrir Rizoma, subscriu-t'hi aquí.\nFins la propera!\nDario Castañé",
+        "title": "Rizoma #001",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/rizoma/002/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3ie6wnt6z2262",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "Una lectura del sisè informe de l'IPCC que vincula la crisi climàtica amb el sistema econòmic i proposa canvis socials, energètics i de consum.",
+        "path": "/rizoma/002/",
+        "publishedAt": "2021-08-22T17:00:00+02:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "rizoma",
+          "lang:ca"
+        ],
+        "textContent": "Rizoma #002: Canvi climàtic. O fallida climàtica? 🌍🔥\nA l'edició d'avui parlarem del canvi climàtic. Bé, arribats a on som, començaria a parlar de l'inici de la fallida climàtica. És cap on anem si no actuem des d'ara.\nPer saber què fer, cal conèixer els fets. El dia 9 d'agost es va fer la presentació del sisè informe d’avaluació de l’IPCC (Intergovernmental Panel on Climate Change). I què ens diuen dins de les 3.949 pàgines que conté?\nÉs real.\nÉs causat per tots nosaltres (*).\nNo hi ha lloc a dubtes.\nÉs dolent, molt dolent.\nPerò ho podem arreglar.\nFont: Héctor Tejero\nEn la llista anterior he afegit un asterisc perquè cal aclarir què estem fent que ho causa. Un gràfic fet per la BBC amb dades de l'informe ens assenyala l'inici de la causa: la revolució industrial que va donar pas al capitalisme.\nFont: @adriaral\nPodem afirmar, amb dades a la mà, que la crisi climàtica és responsabilitat del capitalisme. Tant de les elits com dels que hi vivim acrítics o impotents. Però més dels primers que dels segons, no ens enganyem. Si no us agrada plantejar-lo en aquests termes, diguem-ne que és culpa del sistema econòmic actual.\nEn qualsevol cas, és exactament el mateix.\nI quines són les conseqüències?\nUs porto alguns titulars destacats d'aquest resum d'un article amb les troballes clau més importants de l'informe\nAdeu 1,5 °C, hola sobrepassament\nArribarem a l'increment d’1,5-1,6 °C sobre temperatures preindustrials cap a 2030. Però en el millor dels escenaris ho podem revertir a 1,4 °C cap al 2100.\nEls nostres aliats de la natura es troben dèbils\nBoscos, terra i oceans, els nostres embornals de carboni, estan saturats i veurem reduïda la seva capacitat d'absorbir les nostres emissions.\nSí, el canvi climàtic n'és responsable\nL’informe posa de manifest l’impressionant progrés d’un nou camp, la ciència de l’atribució, en quantificar fins a quin punt l’escalfament global induït per l’ésser humà augmenta la intensitat o la probabilitat d’un esdeveniment meteorològic extrem concret, com ara una onada de calor, un huracà o un incendi.\nEl nivell del mar puja, encara més ràpid\nEls oceans han crescut fins a vint centímetres d’ençà de l'any 1900 i es preveu que arribin a un metre durant aquest segle, arribant fins a dos o més metres per l'any 2100.\nPunts d'inflexió = canvi brusc\nL'IPCC adverteix contra els canvis bruscs, de \"baixa probabilitat i alt impacte\" del sistema climàtic que, quan són irreversibles, s'anomenen punts d'inflexió. La desintegració de les capes de gel que contenen prou aigua per elevar els mars una dotzena de metres; la fusió del permagel carregat de milers de milions de tones de carboni; la transició de l’Amazònia del bosc tropical a la sabana: en són exemples.\nPersonalment, l'informe de l'IPCC em té en flames. I a qualsevol persona l'hauria de tenir també.\nNo diu res nou, però diu tot el que s'ha estat ignorant activament o diferint amb una mica de «rentat de cara verd».\nQuè hi podem fer? 🌱\nPer saber què fer, crec que hem de partir d'una base. El mateix dia vaig fer un enfilall que resumeix prou bé quina és per mi:\nPerquè ara és hora d'anar més enllà. Avui ja no ens podem permetre tolerar actituds que refermin el capitalisme vigent.\nLa culpa és del capitalisme. La principal responsabilitat és dels pocs que han ostentat i ostenten el poder, econòmic i polític, pel seu benefici, deixant-nos només les molles.\nEl futur serà comunalista o no serà.\nPerò res de carregar-nos tota la responsabilitat. Podem canviar els nostres hàbits - fer cert allò de «els petits són poderosos» - però cal canviar el sistema social i econòmic.\nAquest repte no se superarà sent vegà, sinó sent anticapitalista.\nEl futur serà solar o no serà.\nAgafem inspiració de les noves fornades de literatura solarpunk i afrofuturista i imaginem nous horitzons.\nPerò no siguem il·lusos: les renovables no seran suficients. Hem d'apostar per la nuclear també.\nEl futur serà més vida i menys consum, o no serà.\nHem de decréixer, però això no vol dir perdre condicions materials. Haurem de saber optimitzar mitjançant la reducció, la reutilització i l'aplicació de millors (i algunes noves) tecnologies.\nLligat amb tot l'anterior, cada cop m'agrada més aquest símbol com icona del que penso, resignificant-lo com la lluita contra el capitalisme, el feixisme i la fallida climàtica. Crec que recuperar-lo és portar al segle XXI uns valors necessaris per salvar el planeta i garantir el nostre futur i el de les següents generacions.\nHo fem per nosaltres. Ho fem pels qui vindran.\nEn una línia més pràctica, podem començar per tancar les plantes energètiques de carbó. Segons un estudi recent, existeix un petit grup de plantes energètiques que poden tenir un enorme impacte en la reducció de les emissions globals, fins a un 30 % de reducció. Caldrà substituir-les per nuclears i renovables, però és un pas necessari.\nAra pregunta't: quines altres propostes i solucions aplicaries?\nSi t'ha agradat i acabes de descobrir Rizoma, subscriu-t'hi aquí.\nFins la propera!\nDario Castañé",
+        "title": "Rizoma #002: Canvi climàtic. O fallida climàtica? 🌍🔥",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/rizoma/003/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3ifbmgbj4224d",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "Una reflexió sobre la situació del català que proposa mantenir-ne l'ús quotidià i crear, consumir i difondre contingut de tots els territoris de parla catalana.",
+        "path": "/rizoma/003/",
+        "publishedAt": "2021-09-05T12:00:00+02:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "rizoma",
+          "lang:ca"
+        ],
+        "textContent": "Rizoma #003: Estat del català: a l'UCI o acostant-se a la revifada?\nFeu un experiment: aneu a una cafeteria de Barcelona i demaneu en català un cafè amb llet. Les probabilitats d'acabar amb un cafè amb gel són altes. El primer cop et sorprèn, el segon et molesta i al tercer has après a gaudir d'un cafè fresc. Però per molt inversemblant que ens sembli, això no deixa de ser anecdòtic.\nArran de l'enquesta que afirmava que només el 28 % dels joves de Barcelona tenen el català com llengua habitual, ara escoltem veus que fan una diagnosi del mal estat de la nostra llengua, deixant-la pràcticament a l'UCI. Si bé comparteixo bona part d'aquesta, no penso que hem arribat a un punt de (probable) no retorn.\nMés enllà de les dades, que cal analitzar en profunditat, el que cal és acció. Però no només des de les institucions i ens públics, sinó també des del poble.\nPerquè, per mi, cal canviar l'enfocament i entendre que:\nHem de crear contingut en català: no cal que tot sigui de qualitat sublim, hem d'enfortir la nostra llengua dins i fora de les xarxes.\nHem d'entendre que hi ha vida més enllà de Catalunya: malgrat que la situació de la llengua fora del Principat és objectivament pitjor, cal ficar-se al cap que quan gaudim de contingut en valencià, mallorquí, etc. l'estem gaudint en català. La unitat de la llengua no rau a dir que la variant oriental-central sigui \"el català\" i la resta variants, sinó que tots parlem català, cadascú amb la seva variant.\nHem de consumir i fer visible contingut d'arreu dels territoris de parla catalana: hi ha prou contingut per a viure sols en català, en totes les seves variants, i de bona qualitat. Cal fer que la gent el trobi.\nHem de mantenir-lo al dia a dia: sabent que prop del 95 % entén el català, ens hem de sentir còmodes parlant-lo malgrat que l'altra part ens respongui en castellà. Si ens entenen no hem de canviar al castellà de cap manera.\nDe fet, vaig decidir fer aquest butlletí només en català per totes aquestes raons. I crec que no sóc l'únic. Twitter és la meva bombolleta, on puc tenir gairebé tot en català, però també és més fàcil cada dia trobar persones que creen i difonen en català. I aquí és on penso que, si bé s'ha produït una caiguda en el seu ús, som a les portes d'una revifada.\nLa necessitat de desenvolupar-nos i viure en la nostra llengua està portant a l'aparició d'una nova generació de projectes. Gràcies a Internet el seu accés és universal i permet que el català segueixi ben viu. I altres sectors, com el del llibre, estan presentant xifres històriques pel que fa al consum de cultura en català.\nEn la meva opinió, si ens hi esforcem, provocarem la revifada.\nAvui no m'allargaré més, així que us deixo projectes interessants en català i al voltant seu.\nCatalApp\nLa Plataforma per la Llengua, amb la seva aplicació CatalApp, ens permet anar a bars i restaurants que són curosos amb els drets lingüístics.\nMetaData.cat\nEl primer digital de tecnologia en català, que també té el seu propi butlletí.\nEspetechcast\nUn podcast de desenvolupament en català, una de les àrees on l'anglès engoleix completament a totes les llengües. Aquesta mena de format és imprescindible, juntament amb trobades com les que organitzem a Igualada Tech & Drinks (final de la falca).\nPokémon en valencià\nProjecte de traducció dels jocs de Pokémon, amb adaptació dels noms de les bestioles, en valencià. Equip Flamantana sempre!\nLanguageTool.org\nEl millor corrector en català, i també disponible en més idiomes. És programari lliure i pots ajudar a mantenir-lo pagant el servei.\nCloenda\nQuins altres projectes coneixes? N'estàs fent algun? Respon al correu i fes-me'l a mans, m'agradarà saber-ne més!\nBola extra: El mateix aplica per l'occità, i vers cap altres llengües minoritzades, com l'asturianu.\nFins a una altra!\nDario Castañé",
+        "title": "Rizoma #003: Estat del català: a l'UCI o acostant-se a la revifada?",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    },
+    {
+      "path": "/rizoma/004/",
+      "uri": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.document/3igx5omrt22um",
+      "action": "create",
+      "record": {
+        "$type": "site.standard.document",
+        "description": "Un recull d'enllaços sobre reciclatge de CO₂, l'oposició hongaresa, privacitat dels mòbils, divulgació científica i xarxes socials, amb una xerrada sobre Mergo.",
+        "path": "/rizoma/004/",
+        "publishedAt": "2021-09-26T19:00:00+02:00",
+        "site": "at://did:plc:aj77r5uwt72o6oimdjfplqoz/site.standard.publication/3mxmtmkzqgp2t",
+        "tags": [
+          "rizoma",
+          "lang:ca"
+        ],
+        "textContent": "Rizoma #004: popurri d'enllaços\nAvui porto un recull d'enllaços interessants que he llegit aquestes últimes tres setmanes.\nDesenvolupen tecnologia per reciclar CO2 com combustible\nA la Universitat de Cincinnati han desenvolupat una tecnologia que permet reciclar CO2 i produir metanol. L'ús del combustible emetria diòxid de carboni, però seria neutral perquè aquest seria reciclat de nou.\nPotser tenim algun futur al cap i la fi.\nL'oposició hongaresa s'uneix per batre a Orbán\nAquesta sorprenent notícia no és una ocurrència d'última hora sinó la repetició de l'estratègia presa en 2019 en les eleccions locals de país, que va aconseguir arrabassar la capital de país a Fidesz i diversos importants municipis.\nAixí, sis dels principals partits opositors s'uniran per derrotar Orban: el Partit Socialista (MSZP), els verds de Párbesz (Diàleg per a Hongria), el liberal Momentum, el centreesquerra de la Coalició Democràtica, l'ecologista LMP i el dretà Jobbik.\nLituània denuncia que els dispositius mòbils de Xiaomi tenen capacitat per espiar i censurar continguts\nEl ministeri de Defensa de Lituània va desaconsellar la compra de telèfons mòbils xinesos i va recomanar que la gent canviés ràpidament qualsevol que tinguin arran d'un informe del govern segons el qual s'havien instal·lat capacitats de censura als dispositius.\nL'organisme de ciberseguretat del govern lituà va dir dimarts que els telèfons venuts a tot Europa pel gegant electrònic xinès Xiaomi tenen funcions integrades per descobrir i censurar frases en caràcters xinesos, com ara \"Tibet lliure\", \"Visca la independència de Taiwan\" o \"moviment democràtic\".\nLes funcions del programari del telèfon Mi 10T 5G de Xiaomi estan presumptament desconnectades a la \"regió de la Unió Europea\", però es poden activar remotament en qualsevol moment, segons l'informe del Centre Nacional de Seguretat Cibernètica del Ministeri de Defensa.\nEntrevista a Deborah García\nQuímica, investigadora i divulgadora científica, s'ha passat per El Sentido de la Birra i he donat una entrevista molt interessant.\nXarxes socials o tele brossa al nostre gust?\nCrec que les xarxes socials van néixer amb una concepció del consum d'informació més pròpia del menjar brossa. Seguint la idea del \"slow food\", potser també hem d'optar per les \"slow networks\". Els butlletins com aquest poden ser una manera de canviar-ho.\nBola extra\nPels més techies, he donat una breu xerrada sobre la meva llibreria Mergo, que és usada pels projectes més importants del cloud, com Kubernetes i Docker.\nFins a una altra!\nDario Castañé",
+        "title": "Rizoma #004: popurri d'enllaços",
+        "updatedAt": "2026-10-11T17:22:22+02:00"
+      }
+    }
+  ]
+}

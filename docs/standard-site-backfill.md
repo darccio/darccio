@@ -5,7 +5,11 @@ template: false
 
 # Standard.site backfill review
 
-T30 preparation is complete; no archive document has been approved or published by this preparation. The reviewed allowlist, local document plan and verified document manifest are all empty.
+The T30 PR proposes all 26 eligible articles below for publication. Its proposed allowlist and offline full-record plan contain 26 entries; the production approval list remains empty until the owner merges the PR. No article record has been written by this preparation, and the verified URI map remains empty.
+
+Review the [complete proposed records](../.tools/atproto/review/backfill-preview.json), including each article's full rendered plaintext, alongside the source links below. Planned URIs in that artifact do not imply successful publication or verified backlinks.
+
+**Merging the approval PR authorizes full-text publication of these 26 articles.** The existing workflow automatically applies the merged allowlist after a successful current-main production deploy, then opens a separate PR with publicly verified document URIs. Request any exclusions before merging. Relays and indexers can retain public copies; reverting the allowlist does not remove already published records.
 
 The offline candidate inventory contains 34 local article sources: 26 eligible candidates, seven articles before the 2013 cutoff and one draft. Eligibility is a proposal for owner review, not publication approval. The 26 candidates include 11 Catalan, eight Spanish and seven English documents; maintained language versions remain separate documents under one publication.
 
@@ -19,7 +23,7 @@ The 2021 Rizoma issues hosted here are eligible local documents. New Substack is
 
 ## Eligible candidates
 
-These 26 candidates are sorted newest first. Review the linked source and public page before adding any row to the allowlist. The three T04 additions become live with the date-correction PR; their source timestamps below are the proposed values.
+These 26 candidates are sorted newest first and match the proposed allowlist. Review the linked source and public page before approving publication. The three T04 date corrections are deployed and production-verified; the Spanish clock-time assumption remains explicitly documented above.
 
 | Published at | Language | Article | Source | Summary |
 | --- | --- | --- | --- | --- |
@@ -67,7 +71,12 @@ The three formerly partial-date articles are now eligible following the T04 sour
 
 ## Review and verification
 
-For each approved candidate, add its exact canonical path and reviewed publication timestamp to [.tools/atproto/documents-allowlist.json](../.tools/atproto/documents-allowlist.json). Leave every unapproved document absent; no bulk approval is inferred from this inventory. The optional date-correction switch is reserved for an explicitly reviewed correction of an existing published record.
+Successful publish runs retain their actual action plan in the seven-day
+`standard-site-document-apply-plan` artifact. Confirm actual record actions
+there and via public readback; an overall green workflow does not establish
+successful publication because its jobs deliberately fail softly.
+
+The proposed [.tools/atproto/documents-allowlist.json](../.tools/atproto/documents-allowlist.json) contains each listed canonical path and its exact configured publication timestamp. Remove any article the owner excludes before merging this approval PR. The inventory alone grants no publication permission; merging the explicitly scoped proposal approves this selection. The optional date-correction switch is reserved for an explicitly reviewed correction of an existing published record.
 
 The default document command makes no PDS requests or state writes. Regenerate this review inventory from the repository root with:
 
@@ -78,4 +87,4 @@ go -C .tools/atproto run -mod=readonly ./cmd/documents \
 
 After changing the reviewed allowlist, build the site and inspect the ordinary offline plan before any apply run. The mandatory cross-format gate checks its dates, canonical paths, summaries, language tags and full text against the source and assembled HTML/RSS. A planned URI does not become a verification link until a real write succeeds and a reviewed state PR records it.
 
-Actual backfill still requires owner review of the chosen articles and an authenticated publish run. Acceptance remains pending: record count equals the approved list, three records are inspected in a reader, and a second authenticated run makes zero writes. This file records preparation only.
+Actual backfill still requires owner approval and an authenticated publish run. After merging the approval PR, verify that the automatic **Standard.site documents** run accounts for all 26 selected records, without touching records belonging to another publication. Merge its public-URI PR, then check each article's live verification link against its public record. Inspect three records in a reader, preferably one per language, confirming title, full text, publication date and canonical URL. Dispatch the same workflow with `apply: true` against the unchanged current production revision and confirm zero creates, updates or deletes. A backlink-only automatic skip is not evidence of an unchanged online publishing run. These live acceptance checks remain pending; this file records the publication proposal and offline preparation.
