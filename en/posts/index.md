@@ -25,7 +25,7 @@ language: en
 </ul>
 <h2>2022</h2>
 <ul>
-<li class="h-entry" lang="en"><a class="p-name u-url u-uid" href="https://dario.cat/en/posts/portal-between-ruby-and-go/">A portal between Ruby and Go (using FFI)</a> <small>[en]</small> — <time datetime="2022-04-05">05/04/2022</time> <small lang="en">(time zone unknown)</small></li>
+<li class="h-entry" lang="en"><a class="p-name u-url u-uid" href="https://dario.cat/en/posts/portal-between-ruby-and-go/">A portal between Ruby and Go (using FFI)</a> <small>[en]</small> — <time class="dt-published" datetime="2022-04-05T22:42:00+02:00">05/04/2022</time></li>
 </ul>
 <h2>2018</h2>
 <ul>
@@ -35,7 +35,7 @@ language: en
 </ul>
 <h2>2013</h2>
 <ul>
-<li class="h-entry" lang="en"><a class="p-name u-url u-uid" href="https://dario.cat/en/posts/introduction-liquid-organizations/">Introduction to liquid organizations</a> <small>[en]</small> — <time datetime="2013-07-01">01/07/2013</time> <small lang="en">(only the publication day is known)</small></li>
+<li class="h-entry" lang="en"><a class="p-name u-url u-uid" href="https://dario.cat/en/posts/introduction-liquid-organizations/">Introduction to liquid organizations</a> <small>[en]</small> — <time class="dt-published" datetime="2013-07-02T10:00:39+02:00">02/07/2013</time></li>
 </ul>
 <h2>2009</h2>
 <ul>

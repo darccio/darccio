@@ -4,7 +4,7 @@ publish: false
 
 # Site implementation progress
 
-The implementation PRs are merged and production-verified, and the site adopts released Zas v0.0.9. T26’s production publication backlink is verified. T01 is complete: registrar renewal/protection, fully validated DNSSEC, independent scheduled monitoring, real failure/recovery delivery and three expiry-notification simulations are confirmed. The candidate inventory is prepared but the reviewed document allowlist remains empty; historical approvals, three publication instants, CV permission and personal defaults still need owner input. Optional T06/T23 remain deferred. The chronology below retains previous observations and their dates.
+The implementation PRs are merged and production-verified, and the site adopts released Zas v0.0.9. T26’s production publication backlink is verified. T01 is complete: registrar renewal/protection, fully validated DNSSEC, independent scheduled monitoring, real failure/recovery delivery and three expiry-notification simulations are confirmed. The T04 follow-up completes all publication dates using primary evidence, owner timezone confirmation and an explicit owner assumption for the Spanish translation; its merge/deploy is pending. Historical approvals, CV permission and personal defaults still need owner input. The reviewed document allowlist remains empty. Optional T06/T23 remain deferred. The chronology below retains previous observations and their dates.
 
 All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are merged. The site now pins the merged feed/Markdown revision and has navigation, core slash pages, crawler/security resources, complete canonical sitemaps, RSS discovery, Markdown twins and static response headers deployed. Cloudflare deployed 20a3e10 and source-history fix 594cf0d successfully on 2026-10-11; site CI and post-deploy vanity checks passed. The owner's expanded talks catalogue, cc@dario.cat contact and Sifa profile additions deployed successfully in 8e3acb1. The T14–T18 identity, post/archive microformats, supported talk/slash/project markup and protected parser checks deployed successfully in 28bd9ba; the narrow historical-email follow-up is committed as d21a476. Account operations remain separate evidence requirements.
 
@@ -19,7 +19,7 @@ All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are
 | T03 | Zas current contact links merged | `9045f6f`, [PR #111](https://github.com/darccio/zas/pull/111), merge `0c94388` | README-only diff; whitespace, darna and GitHub checks pass | Mergo source-owned follow-up remains queued |
 | T05 | Lazy typed metadata/canonical helpers merged | `96f3a64`, [PR #112](https://github.com/darccio/zas/pull/112), merge `f463876` | Build, vet, race/shuffle and pinned lint; 68 real-site files and six fixtures byte-identical before adoption; remote CI/CodeQL pass | Generator release remains T32 work |
 | Generator adoption | Immutable merged feed/Markdown revision pinned in guarded publish command | `fc67575` (previous helper adoption `9bcfd95`) | Installed module is v0.0.9-0.20261011133110-abdae2fd51de; disabled options preserve all 78 baseline files; actual make publish succeeds | Deployment pending |
-| T04 | 34 article metadata mappings, summaries, tags, language defaults and provenance | `00a95a2` | 31 source instants copied exactly; three incomplete dates omitted; all article bodies and both archive bodies preserved; ca=13/en=9/es=12 | Recover missing precision for three excluded articles; deployment pending |
+| T04 | 34 article metadata mappings, summaries, tags, language defaults and provenance; all publication dates completed in the follow-up | `00a95a2`, follow-up receipt below | All 33 public posts have explicit dates; original RSS, owner timezone confirmation and recorded Spanish clock-time assumption resolve the gaps; article bodies preserved | Follow-up merge and production verification |
 | T08 avatar | Existing portrait stored as local 180px/96px WebP; homepage/OG/vCard updated; preconnect removed | `482d0f1` | Both images decode at exact dimensions; assets copied byte-identically; plain mailto and existing identity links retained | Disable observed Cloudflare email obfuscation; live verification after deploy |
 | T08 licence | Content/software scopes reconciled with explicit exceptions | `d3ed333` | Original Unlicense preserved byte-identically; CV/MAC paragraphs retained; Lýd and third-party terms and prior grants explicit | Inspect deployed licence links and GitHub display after push |
 | T07 | Canonical/OG URLs, article classification/times, locales and descriptions | `6089a38` | All 54 assembled HTML canonical/OG pairs, 34 article summaries/types/languages and 31 exact times pass; three partial times absent; seven vanity tuples unchanged | Deployment and live metadata verification |
@@ -362,3 +362,39 @@ saved-plan apply in `c51256f`, and locate the test-editor simulation control in
 recovery and cleanup plans; the second matches the official UI screenshots
 and the owner's successful sends. Documentation review and whitespace checks
 pass; these commits change no account settings or production test schedules.
+
+## T04 publication evidence recovery · 2026-10-12
+
+The owner requested T04 before T30 and confirmed Europe/Madrid for Ruby/Go's
+existing April 5, 2022 clock value. Its date is completed as
+`2022-04-05T22:42:00+02:00`. The original Thinkship English RSS now provides
+the publication field for post 848: `2013-07-02T08:00:39Z`, emitted as the
+equivalent `2013-07-02T10:00:39+02:00`. Both posts regain RSS and candidate
+eligibility; the Standard.site approval list is unchanged and empty.
+
+The original Spanish article, post 829, independently confirms July 2, 2013.
+Its known day and archives are corrected with the earlier value retained as
+`date_created_original`. The owner then instructs assuming the same timestamp
+as the English translation; adopt that full value and record its clock time
+as an owner-approved assumption rather than independently recovered history.
+Its syndication exclusions are removed. All 33 public posts now have explicit
+publication dates. Source links, response hashes and the owner instructions
+are recorded in publication-provenance.md; follow-up merge/deploy is pending.
+The three article bodies remain unchanged. No publication time is inferred
+from a Git commit or archive capture; the Spanish clock time is the explicit
+owner-adopted assumption described above.
+
+The built metadata, microformats and JSON-LD checks pass for all 33 public
+publication instants. RSS contains 33 combined, nine English and twelve Spanish
+items; all seven vanity contracts are preserved. The refreshed offline T30
+inventory has 26 candidates (11 Catalan, eight Spanish and seven English) and
+eight exclusions (seven before 2013 and one draft). Both the reviewed approval
+list and verified URI map remain empty. Source dates, titles, summaries and
+language values in the review inventory match the candidate planner.
+
+A temporary external fixture exercises all 26 candidate record plans without
+network calls or changes to committed approvals. Their record keys are unique,
+including both translations at the shared timestamp, and the three corrected
+record dates agree with source. The production consistency gate correctly
+rejects this fixture plan against the real empty approval list; the ordinary
+zero-document build passes. No recovery state or public URI entry is written.
