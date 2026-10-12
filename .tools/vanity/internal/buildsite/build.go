@@ -66,6 +66,9 @@ func Build(ctx context.Context, options Options) error {
 	if err := isolateDeploy(filepath.Join(stage, ".zas", "config.yml")); err != nil {
 		return err
 	}
+	if err := prepareResume(root, stage); err != nil {
+		return fmt.Errorf("assemble reviewed CV: %w", err)
+	}
 	changelogUpdated, err := prepareChangelog(ctx, root, stage)
 	if err != nil {
 		return fmt.Errorf("assemble public changelog: %w", err)

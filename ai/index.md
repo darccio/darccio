@@ -1,7 +1,7 @@
 <!--
 entry: true
 description: "Preferències de dario.cat sobre cercadors, ús d'IA, entrenament i dades personals."
-updated: 2026-10-11T15:33:14+02:00
+updated: 2026-10-12T22:24:08+02:00
 -->
 
 <h1 class="p-name">IA i rastrejadors</h1>
@@ -18,7 +18,7 @@ Els senyals són preferències que els rastrejadors han de respectar; no impedei
 
 ## Dades personals
 
-El directori `/CV/` queda exclòs del rastreig. El CV conté dades personals i professionals que no es poden processar automàticament sense el meu permís explícit, tal com explica el [README del repositori](https://github.com/darccio/darccio#%EF%B8%8F-license).
+El JSON a `/CV/` i la versió HTML a `/cv/` queden exclosos del rastreig. El CV conté dades personals i professionals que no es poden processar automàticament sense el meu permís explícit, tal com explica el [README del repositori](https://github.com/darccio/darccio#%EF%B8%8F-license). He autoritzat la seva actualització i la generació de la versió HTML durant la construcció del web; aquesta autorització concreta no s'estén a altres usos ni a les col·leccions de text per a agents.
 
 ## Còpies fora d'aquest web
 

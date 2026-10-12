@@ -4,7 +4,7 @@ representative_hcard: true
 description: "Dario Castañé: programari lliure, tecnologia, política i comunitat."
 image: /static/avatar.webp
 vcard: /static/dario-castane.vcf
-updated: 2026-10-11T15:33:14+02:00
+updated: 2026-10-12T22:24:08+02:00
 -->
 
 <div class="h-card vcard">
@@ -20,6 +20,8 @@ updated: 2026-10-11T15:33:14+02:00
 Escric sobre tecnologia i el seu impacte en la societat, [democràcia interna](/es/posts/introduccion-organizaciones-liquidas/) i política en general. Pots llegir [l'arxiu d'articles](/posts/) i el meu butlletí, [Rizoma](https://rizoma.dario.cat/).
 
 També comparteixo <a class="u-url url" href="https://speakerdeck.com/dario" rel="me">xerrades i tallers</a>. Els [projectes](/projects/) recullen el meu treball en programari lliure; la pàgina [Ara](/now/) recull en què estic treballant.
+
+El [CV](/cv/) recull la meva trajectòria professional, formació i projectes. També està disponible en [format MAC JSON](/CV/MAC.json).
 
 ## Contacte
 

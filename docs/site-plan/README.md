@@ -79,7 +79,7 @@ Dependencies below include the report’s original ordering and repository-speci
 | [T14](tasks/T14.md) | Complete representative identity microformats | site | T08, T09 | Deployed; live representative parser and existing Mastodon verification pass |
 | [T15](tasks/T15.md) | Wrap posts in h-entry markup | site | T04, T05, T07, T14 | Deployed; 33 entries validated; narrow historical-email follow-up committed |
 | [T16](tasks/T16.md) | Add h-feed archives and language labels | site | T04 | Deployed; complete 33/9/12 archives pass live checks |
-| [T17](tasks/T17.md) | Mark up talks and other supported page types | site | T09, T14 | Talk/slash/project units deployed and live-verified; CV deferred |
+| [T17](tasks/T17.md) | Mark up talks and other supported page types | site | T09, T14 | Talk/slash/project units deployed; owner-authorized English CV refresh/render ready for review |
 | [T18](tasks/T18.md) | Validate microformats in CI | site | T14, T15, T16, T02, T04 | Deployed; offline fixtures, staged Pages validation and CI pass |
 | [T19](tasks/T19.md) | Emit shared JSON-LD metadata | site+zas | T05, T14, T15, T07, T08, T24 | Person/posts and manifest-driven project schema deployed |
 | [T20](tasks/T20.md) | Publish per-language agent context files | site | T09, T21 | [Site PR #5](https://github.com/darccio/darccio/pull/5) merged; production resources and headers verified |

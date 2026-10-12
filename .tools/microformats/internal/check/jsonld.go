@@ -22,7 +22,8 @@ var rawVanityHTML = map[string]bool{
 	"errors/index.html": true, "xdr/index.html": true, "awaken/index.html": true, "x/index.html": true,
 }
 
-func validateJSONLDPages(deploy string, inv inventory) error {
+func validateJSONLDPages(deploy string, inv inventory, configuredResume ...bool) error {
+	allowResume := len(configuredResume) == 1 && configuredResume[0]
 	posts := make(map[string]Post, len(inv.Posts))
 	for _, post := range inv.Posts {
 		posts[post.File] = post
@@ -35,19 +36,33 @@ func validateJSONLDPages(deploy string, inv inventory) error {
 		}
 		if entry.IsDir() {
 			if strings.EqualFold(entry.Name(), "CV") {
-				// Preserve existing public machine-readable files without opening
-				// them. Inspect names only to reject a new HTML render, then skip
-				// this tree entirely rather than processing CV data.
+				// Inspect filenames before reading any CV content. The explicit
+				// source opt-in permits only the exact lowercase root output;
+				// legacy, case variants and nested CV HTML remain forbidden.
 				if err := filepath.WalkDir(path, func(file string, child fs.DirEntry, err error) error {
 					if err != nil {
 						return err
 					}
 					if !child.IsDir() && strings.EqualFold(filepath.Ext(file), ".html") {
+						rel, err := filepath.Rel(deploy, file)
+						if err != nil {
+							return err
+						}
+						if allowResume && filepath.ToSlash(rel) == resumeOutput {
+							return nil
+						}
 						return fmt.Errorf("unexpected CV HTML output; validation does not process CV data")
 					}
 					return nil
 				}); err != nil {
 					return err
+				}
+				rel, err := filepath.Rel(deploy, path)
+				if err != nil {
+					return err
+				}
+				if allowResume && filepath.ToSlash(rel) == "cv" {
+					return nil
 				}
 				return filepath.SkipDir
 			}
