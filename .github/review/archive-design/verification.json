@@ -1,0 +1,64 @@
+{
+  "base_revision": "28b1b99",
+  "implementation_commits": [
+    "f9ce4bb",
+    "d5e5cf7",
+    "5ec3199",
+    "3adb6ee",
+    "cf2db6e"
+  ],
+  "browser_scenarios": 44,
+  "axe_violations": 0,
+  "all_styled_pages_reflow": 75,
+  "existing_html_paths": 79,
+  "source_cv_unchanged": true,
+  "feeds_byte_identical": 3,
+  "raw_vanity_byte_identical": 5,
+  "home_card_properties_unchanged": true,
+  "article_rows_unchanged": [
+    35,
+    9,
+    12
+  ],
+  "cv_timeline_entries": 45,
+  "talk_rows": 31,
+  "talk_event_years_added": 6,
+  "talk_resource_years_added": 9,
+  "existing_complete_talk_events_unchanged": 10,
+  "font_families": {
+    "body": "IBM Plex Sans",
+    "headings": "Newsreader",
+    "metadata": "IBM Plex Mono"
+  },
+  "tools": {
+    "chromium": "151.0.7922.34",
+    "playwright": "1.64.0",
+    "axe-core": "4.13.0"
+  },
+  "limits": [
+    "Browser tests use local generated output; hosted checks follow push.",
+    "Resource preparation/publication years are explicitly qualified and never event datetime values.",
+    "Supplied resume PDF used only for hierarchy inspiration; unchanged CV JSON remains authoritative.",
+    "Five raw vanity fragments skip CSS reflow checks and retain their exact source bytes."
+  ],
+  "sha256": {
+    "static/styles.css": "86d5439477ef98bbfee571ea8ddfe529948a76f6a3b367c620595ced085039ce",
+    "static/tokens.css": "291cfee32afbbd76e997550fb5d4dfa6eeb2ef084718661d7d44f6b21f398dc1",
+    "static/fonts/SOURCE.json": "981f208f283ec72ccf1f6d72702fec8db3ffcbcb7e4bd2dbf1eb14b2db07cc8f",
+    "CV/MAC.json": "16250f593ebe27634ec552f386355c66b983ce8b90bd3bfc50605e8787ac703f",
+    "talks/index.md": "1dc5106ad94b790015c9af35bba85954cc2fbb367d451916f90305c712b9b50e"
+  },
+  "feedback_commits": [
+    "4c37fae",
+    "8047efe"
+  ],
+  "total_html_paths": 80,
+  "header_owner_name_visible": true,
+  "catalan_archive": {
+    "path": "/posts/ca/",
+    "local_entries": 12,
+    "external_citations": 1,
+    "rows_copied_byte_identically": true,
+    "mandatory_completeness_gate": true
+  }
+}

@@ -60,6 +60,46 @@
       "sha256": "01d285447409c8a588692162439a038b8cbd7871309ee20267b0d2d91c6e8e22",
       "bytes": 14888,
       "license": "ibm-plex-mono-LICENSE.txt"
+    },
+    "ibm-plex-sans-latin-400-normal.woff2": {
+      "package": "@fontsource/ibm-plex-sans",
+      "version": "5.3.0",
+      "package_url": "https://registry.npmjs.org/@fontsource/ibm-plex-sans/-/ibm-plex-sans-5.3.0.tgz",
+      "package_integrity": "sha512-CbE4CbbEEZJX860XyUiRpsksXIQR8Rp2XDva2VO53NJox9tVNtusrysd2x5YkUEY3ErQ66W1IiiQL8/wihhw5w==",
+      "source_path": "files/ibm-plex-sans-latin-400-normal.woff2",
+      "sha256": "3b646991d30055a93a4ecc499713d4347953a74a947ecab435ab72070cbdab0e",
+      "bytes": 22588,
+      "license": "ibm-plex-sans-LICENSE.txt"
+    },
+    "ibm-plex-sans-latin-500-normal.woff2": {
+      "package": "@fontsource/ibm-plex-sans",
+      "version": "5.3.0",
+      "package_url": "https://registry.npmjs.org/@fontsource/ibm-plex-sans/-/ibm-plex-sans-5.3.0.tgz",
+      "package_integrity": "sha512-CbE4CbbEEZJX860XyUiRpsksXIQR8Rp2XDva2VO53NJox9tVNtusrysd2x5YkUEY3ErQ66W1IiiQL8/wihhw5w==",
+      "source_path": "files/ibm-plex-sans-latin-500-normal.woff2",
+      "sha256": "0717336fb31fcdcde4b8deb3675bb4a0f7f6d484864afcd6751ac29975962203",
+      "bytes": 24184,
+      "license": "ibm-plex-sans-LICENSE.txt"
+    },
+    "ibm-plex-sans-latin-600-normal.woff2": {
+      "package": "@fontsource/ibm-plex-sans",
+      "version": "5.3.0",
+      "package_url": "https://registry.npmjs.org/@fontsource/ibm-plex-sans/-/ibm-plex-sans-5.3.0.tgz",
+      "package_integrity": "sha512-CbE4CbbEEZJX860XyUiRpsksXIQR8Rp2XDva2VO53NJox9tVNtusrysd2x5YkUEY3ErQ66W1IiiQL8/wihhw5w==",
+      "source_path": "files/ibm-plex-sans-latin-600-normal.woff2",
+      "sha256": "8960851d691c054ed38e259bdcf1a6190d157b4203ed5bb32c632a863fb8ec2f",
+      "bytes": 24252,
+      "license": "ibm-plex-sans-LICENSE.txt"
+    },
+    "ibm-plex-sans-latin-400-italic.woff2": {
+      "package": "@fontsource/ibm-plex-sans",
+      "version": "5.3.0",
+      "package_url": "https://registry.npmjs.org/@fontsource/ibm-plex-sans/-/ibm-plex-sans-5.3.0.tgz",
+      "package_integrity": "sha512-CbE4CbbEEZJX860XyUiRpsksXIQR8Rp2XDva2VO53NJox9tVNtusrysd2x5YkUEY3ErQ66W1IiiQL8/wihhw5w==",
+      "source_path": "files/ibm-plex-sans-latin-400-italic.woff2",
+      "sha256": "6de912e531b6c98084f1b2d5e5a91bad77be4e68bc4e396e43c46fc435e5f3d9",
+      "bytes": 24356,
+      "license": "ibm-plex-sans-LICENSE.txt"
     }
   }
 }

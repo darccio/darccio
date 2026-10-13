@@ -1,0 +1,190 @@
+{
+  "audited_at": "2026-10-13",
+  "scope": "All fifteen previously undated rows of the 31-entry catalogue",
+  "event_years_added": 6,
+  "resource_years_added": 9,
+  "display_policy": "Verified event years use plain rails; publication/preparation years use a visible superscript asterisk and a visible, accessible note identifying the resource year. A page legend explains the distinction. No resource-only year is emitted as datetime or dt-start.",
+  "unchanged": "All 31 rows, row order, all external resource hrefs, original ten complete h-event rows including all tuple values. No private/publish:false source edited.",
+  "source_sha256_after": "1dc5106ad94b790015c9af35bba85954cc2fbb367d451916f90305c712b9b50e",
+  "entries": [
+    {
+      "title": "De filadors de codi a teixidors de sistemes",
+      "year": 2026,
+      "kind": "material_preparation",
+      "primary_sources": [
+        "https://github.com/darccio/talks/blob/main/ai/programacio-automatica/slides.md",
+        "https://github.com/darccio/talks/commit/16afda2509b90d243203b93a880ca55299b7e81f",
+        "https://github.com/darccio/talks/commit/60072fea2f6f368cace71b40658f3fe9d0aa55b8"
+      ],
+      "evidence": "The source explicitly frames the contemporary discussion in 2026. The March 2026 source history labels the initial version a draft and later versions reviews/dry runs.",
+      "confidence": "high",
+      "limits": "Preparation year only. Source history is not used as a talk date. No organiser event date or year was found."
+    },
+    {
+      "title": "Oops — I broke Docker",
+      "year": 2021,
+      "kind": "event",
+      "primary_sources": [
+        "https://github.com/darccio/talks/blob/main/go/mergo/index.slide",
+        "https://www.youtube.com/watch?v=kx1ycW4YGqQ"
+      ],
+      "evidence": "The matching source header is dated 24 Sep 2021; organiser recording title and description match the source and its September 2021 content.",
+      "confidence": "high",
+      "limits": "Only year precision added. No exact calendar day or h-event promotion."
+    },
+    {
+      "title": "Introduction to cloud computing",
+      "year": 2020,
+      "kind": "resource_publication",
+      "primary_sources": [
+        "https://speakerdeck.com/dario/introduction-to-cloud-computing",
+        "https://github.com/darccio/talks/blob/main/cloud-computing/presentation.md"
+      ],
+      "evidence": "Speaker Deck PresentationDigitalDocument datePublished is 2020-04-16.",
+      "confidence": "high",
+      "limits": "Publication year only; source content and description contain no event date."
+    },
+    {
+      "title": "Autodefensa digital: què podem fer per evitar que ens espiïn?",
+      "year": 2023,
+      "kind": "resource_publication",
+      "primary_sources": [
+        "https://www.youtube.com/watch?v=0mX-ofgn45o",
+        "https://github.com/darccio/talks/blob/main/digital-rights/digital-selfdefense/main.slide"
+      ],
+      "evidence": "Fresh YouTube metadata: upload_date 20230124, was_live false, release_date absent; organiser description matches the security conference.",
+      "confidence": "high",
+      "limits": "Upload year only. It cannot establish the year or date of the original talk."
+    },
+    {
+      "title": "Últim informe sobre Pegasus: la punta d'un iceberg",
+      "year": 2022,
+      "kind": "resource_publication",
+      "primary_sources": [
+        "https://www.youtube.com/watch?v=nHOYr44l3c8"
+      ],
+      "evidence": "Fresh YouTube metadata: upload_date 20220928, was_live false, release_date absent; title names the matching Pegasus presentation and speakers.",
+      "confidence": "high",
+      "limits": "Upload year only; no original event date is given in the recording description."
+    },
+    {
+      "title": "Libertad para compartir — esLibre 2021",
+      "year": 2021,
+      "kind": "event",
+      "primary_sources": [
+        "https://github.com/darccio/talks/blob/main/digital-rights/freedom-to-share-eci/short-presentation.md",
+        "https://commons.wikimedia.org/wiki/File:EsLibre_2021_P31_-_Dario_Casta%C3%B1%C3%A9_-_Libertad_para_compartir.webm"
+      ],
+      "evidence": "Matching short presentation source explicitly names Congreso esLibre 2021. Existing Commons recording is also explicitly named EsLibre 2021.",
+      "confidence": "high",
+      "limits": "Only year precision added; separate World.Party appearance retained."
+    },
+    {
+      "title": "Libertad para compartir — World.Party2K21",
+      "year": 2021,
+      "kind": "event",
+      "primary_sources": [
+        "https://github.com/darccio/talks/blob/main/digital-rights/freedom-to-share-eci/presentation.md",
+        "https://www.youtube.com/watch?v=HOAPwBl0GiI"
+      ],
+      "evidence": "Matching longer presentation source explicitly names WORLDPARTY 2k21. Previously recorded excerpt description also identifies World.Party2K21.",
+      "confidence": "high",
+      "limits": "Only year precision added; uploader claim for exact day is not promoted."
+    },
+    {
+      "title": "Blockchain para todo el mundo",
+      "year": 2020,
+      "kind": "material_preparation",
+      "primary_sources": [
+        "https://github.com/darccio/talks/blob/main/blockchain/presentation.md",
+        "https://github.com/darccio/talks/commit/8c96b95415f6dadc5654dc9a594e0db9523dfc5f"
+      ],
+      "evidence": "The current source names Guru Talks, contains a 20200227 screenshot, and the March 2020 source revision is explicitly described as the update for Guru Talks.",
+      "confidence": "high",
+      "limits": "Preparation year only. Source history and screenshot cannot establish actual presentation year."
+    },
+    {
+      "title": "Autodefensa digital",
+      "year": 2019,
+      "kind": "resource_publication",
+      "primary_sources": [
+        "https://speakerdeck.com/dario/autodefensa-digital",
+        "https://github.com/darccio/autodefensa-digital/blob/master/presentation.md"
+      ],
+      "evidence": "Fresh Speaker Deck PresentationDigitalDocument datePublished is 2019-11-09; transcript and linked source match the separate standalone presentation.",
+      "confidence": "high",
+      "limits": "Publication year only. This remains separate from the later recorded security conference."
+    },
+    {
+      "title": "Blockchain en 10 minutos",
+      "year": 2018,
+      "kind": "resource_publication",
+      "primary_sources": [
+        "https://speakerdeck.com/dario/blockchain-en-10-minutos"
+      ],
+      "evidence": "Fresh Speaker Deck PresentationDigitalDocument datePublished is 2018-11-22 and description names the Blockchain & Beers appearance.",
+      "confidence": "high",
+      "limits": "Publication year only. Contemporaneous news reports support a November 2018 meetup, but no primary organiser programme was recovered, so the publication qualifier remains."
+    },
+    {
+      "title": "Municipi i tecnologia: on som i futurs possibles",
+      "year": 2016,
+      "kind": "event",
+      "primary_sources": [
+        "https://www.youtube.com/watch?v=QU4UebYxay4",
+        "https://speakerdeck.com/dario/municipi-i-tecnologia-on-som-i-futurs-possibles"
+      ],
+      "evidence": "Fresh organiser video metadata identifies it as was_live true with release_date 20160220. Matching deck links the presentation source sobtec2016 and downloadable file sobtec2016.pdf.",
+      "confidence": "high",
+      "limits": "Only event year added; exact livestream date is not promoted to h-event criteria or a new day value."
+    },
+    {
+      "title": "Gobierno abierto, transparencia y participación",
+      "year": 2016,
+      "kind": "resource_publication",
+      "primary_sources": [
+        "https://www.youtube.com/watch?v=O6K7Lby1cPI"
+      ],
+      "evidence": "Fresh organiser video metadata: upload_date 20160519, was_live false, release_date absent. Title and description identify the distinct El Arenal appearance.",
+      "confidence": "high",
+      "limits": "Upload year only; recording description does not establish the original event year or day."
+    },
+    {
+      "title": "Pot la tecnologia regenerar la democràcia?",
+      "year": 2014,
+      "kind": "event",
+      "primary_sources": [
+        "https://speakerdeck.com/dario/pot-la-tecnologia-regenerar-la-democracia",
+        "https://pirates.cat/bloc/iv-jornada-pirata-els-reptes-de-la-democracia-a-lera-digital/"
+      ],
+      "evidence": "The matching deck names IV Jornada Pirata; primary organiser programme published September 2014 schedules that edition and names Dario as a speaker.",
+      "confidence": "high",
+      "limits": "Only year precision added. Organiser TLS certificate is expired; historical page was fetched read-only with verification disabled and cross-checked against the deck identification. No new h-event/date precision added."
+    },
+    {
+      "title": "Techno Politics",
+      "year": 2014,
+      "kind": "event",
+      "primary_sources": [
+        "https://www.youtube.com/watch?v=53j9SXWMAu0",
+        "https://speakerdeck.com/dario/techno-politics",
+        "https://frentesonicofuturista.net/cyberpunkexpressmadrid/",
+        "https://es.linkedin.com/in/smiralles"
+      ],
+      "evidence": "Existing recording identifies the first Barcelona Cyberpunk festival. Organiser Frente Sónico Futurista says the festival began in 2014; organiser Sandra Miralles’s public project entry names that first 2014 programme including Techno Politics.",
+      "confidence": "high",
+      "limits": "Only year precision added; no exact festival day assigned to this individual talk."
+    },
+    {
+      "title": "#EuropaPirata — Presentació de candidatura Pirates de Catalunya",
+      "year": 2014,
+      "kind": "resource_publication",
+      "primary_sources": [
+        "https://speakerdeck.com/dario/number-europapirata-presentacio-de-candidatura-pirates-de-catalunya"
+      ],
+      "evidence": "Fresh Speaker Deck PresentationDigitalDocument datePublished is 2014-05-17 and the deck title/description match the candidacy presentation.",
+      "confidence": "high",
+      "limits": "Publication year only; filename eu2014 is corroboration, not a verified event date."
+    }
+  ]
+}

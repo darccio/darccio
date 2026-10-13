@@ -46,7 +46,40 @@
   src: url("/static/fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/static/fonts/ibm-plex-sans-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/static/fonts/ibm-plex-sans-latin-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/static/fonts/ibm-plex-sans-latin-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/static/fonts/ibm-plex-sans-latin-400-italic.woff2") format("woff2");
+}
+
 :root {
+  --font-sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --border-hairline: var(--border-width) solid var(--border);
 }
 
@@ -56,7 +89,7 @@ html {
   border-top: 5px solid var(--accent);
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 100%;
 }
 
@@ -70,7 +103,7 @@ body {
   padding: 0 var(--page-pad);
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--fz-base);
   font-weight: var(--weight-regular);
   line-height: var(--leading-normal);
@@ -246,22 +279,28 @@ body > header {
   padding-top: var(--space-7);
 }
 
-.site-author, .site-author > a {
+.site-logo {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-3);
-}
-
-.site-author > a {
+  gap: var(--space-4);
+  max-width: 100%;
+  vertical-align: top;
   color: var(--text);
-  font-weight: var(--weight-medium);
+  font-family: var(--font-serif);
+  font-size: var(--fz-xl);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
 }
 
-.site-author .u-photo {
+.site-logo img {
   display: block;
-  width: 3rem;
+  flex: none;
+  width: clamp(2.5rem, 10vw, 4rem);
   margin: 0;
-  border-radius: var(--radius-sm);
+}
+
+.site-logo__name {
+  min-width: 0;
 }
 
 .primary-navigation {
@@ -287,7 +326,8 @@ body > header {
   min-height: var(--target-comfortable);
 }
 
-.primary-navigation > a[aria-current="page"] {
+.primary-navigation > a[aria-current="page"],
+.archive-language-nav > a[aria-current="page"] {
   color: var(--text);
   font-weight: var(--weight-medium);
   text-decoration-color: var(--rule-accent);
@@ -375,31 +415,110 @@ body > footer {
 
 .home-intro {
     display: grid;
-    grid-template-columns: 96px minmax(0, 1fr);
+    grid-template-columns: 6rem minmax(0, 1fr);
     align-items: center;
-    gap: var(--space-4) var(--space-5);
-}
-
-.home-intro h1 {
-    margin: 0;
-    overflow-wrap: anywhere;
+    gap: var(--space-5);
 }
 
 .home-intro > p {
-    grid-column: 1 / -1;
     margin: 0;
 }
 
 .home-intro .u-photo {
     display: block;
-    width: 96px;
-    height: 96px;
+    width: 6rem;
+    height: 6rem;
     margin: 0;
     border-radius: var(--radius-sm);
 }
 
 .home-paths {
-    margin-block: var(--space-6);
+    margin-block: var(--space-7);
+}
+
+.cv-intro {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: start;
+  margin-bottom: var(--space-5);
+}
+
+.cv-intro > .u-photo {
+  width: 6rem;
+  height: 6rem;
+  border-radius: var(--radius-sm);
+}
+
+.cv-intro__body > p {
+  margin-bottom: var(--space-2);
+}
+
+.cv-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-4);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--fz-sm);
+}
+
+.cv-contact-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-comfortable);
+}
+
+@media (max-width: 24rem) {
+  .home-intro, .cv-intro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-4);
+  }
+}
+
+/* Give index controls and section headings their own space, while the
+   archive rows keep titles and details closely grouped. */
+main h2 {
+  margin-top: var(--space-7);
+}
+
+.home-paths > h2, .home-contact > h2 {
+  margin-top: 0;
+}
+
+.page-section-nav, .archive-language-nav {
+  margin-block: var(--space-5) var(--space-7);
+  font-family: var(--font-mono);
+  font-size: var(--fz-sm);
+}
+
+.archive-year-key {
+  font-family: var(--font-mono);
+  font-size: var(--fz-sm);
+  color: var(--text-muted);
+}
+
+.page-section-nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.archive-language-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-5);
+}
+
+.page-section-nav a, .archive-language-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-comfortable);
 }
 
 .contact-links {
@@ -502,11 +621,23 @@ h1, h2, h3, h4 { overflow-wrap: break-word; hyphens: auto; }
   line-height: var(--leading-mono);
   color: var(--text-muted);
 }
+.archive-item__title + .archive-item__meta {
+  margin-top: var(--space-1);
+}
 .archive-item__note {
   margin: var(--space-1) 0 0;
   font-size: var(--fz-base);
   line-height: var(--leading-snug);
   color: var(--text-secondary);
+}
+.archive-item__description {
+  margin-top: var(--space-2);
+}
+.archive-item__description > :last-child {
+  margin-bottom: 0;
+}
+.archive-item__description .p-description:last-child > :last-child {
+  margin-bottom: 0;
 }
 .archive-item__links {
   display: flex;

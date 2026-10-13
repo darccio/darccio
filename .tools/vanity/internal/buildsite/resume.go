@@ -9,6 +9,7 @@ import (
 	"net/url"
 	"os"
 	"path/filepath"
+	"slices"
 	"strings"
 	"time"
 	"unicode"
@@ -103,6 +104,11 @@ type resumeLanguage struct{ Name, Level string }
 type resumeLabels struct {
 	Title, Review, Experience, Projects, Education, Skills, Languages string
 	Present, Issued, Completed, Expired, Expires, Download, Licence   string
+	Timeline                                                          string
+}
+type resumeTimelineItem struct {
+	Event                   resumeEvent
+	Property, Kind, Present string
 }
 type resumeView struct {
 	Locale, Name, Headline, Email, Updated string
@@ -110,6 +116,7 @@ type resumeView struct {
 	Summary                                template.HTML
 	Links                                  []resumeLink
 	Jobs, Projects, Studies                []resumeEvent
+	Timeline                               []resumeTimelineItem
 	Skills                                 []string
 	Languages                              []resumeLanguage
 	Labels                                 resumeLabels
@@ -294,9 +301,9 @@ func resumeUniqueJSON(data []byte) error {
 
 func resumeProject(cfg resumeConfig, source resumeSource, reviewed time.Time) (resumeView, error) {
 	v := resumeView{Locale: cfg.Locale, Email: cfg.PublicEmail, Updated: cfg.Updated}
-	v.Labels = resumeLabels{"Curriculum vitae", "Reviewed", "Experience", "Projects", "Education and credentials", "Skills", "Languages", "Present", "Issued", "Completed", "Expired", "Expires", "Download CV (MAC JSON)", "Personal data and use permission"}
+	v.Labels = resumeLabels{"Curriculum vitae", "Reviewed", "Experience", "Projects", "Education and credentials", "Skills", "Languages", "Present", "Issued", "Completed", "Expired", "Expires", "Download CV (MAC JSON)", "Personal data and use permission", "Timeline"}
 	if cfg.Locale == "ca" {
-		v.Labels = resumeLabels{"Currículum", "Revisat", "Experiència", "Projectes", "Formació i credencials", "Habilitats", "Llengües", "Actualitat", "Emès", "Completat", "Caducat", "Caduca", "Descarrega el CV (JSON MAC)", "Dades personals i permís d’ús"}
+		v.Labels = resumeLabels{"Currículum", "Revisat", "Experiència", "Projectes", "Formació i credencials", "Habilitats", "Llengües", "Actualitat", "Emès", "Completat", "Caducat", "Caduca", "Descarrega el CV (JSON MAC)", "Dades personals i permís d’ús", "Trajectòria"}
 	}
 	expiryDates := map[string]bool{}
 	matchedExpiry := map[string]bool{}
@@ -502,6 +509,29 @@ func resumeProject(cfg resumeConfig, source resumeSource, reviewed time.Time) (r
 		}
 		v.Languages = append(v.Languages, resumeLanguage{language.Name, language.Level})
 	}
+	// Keep the source JSON and pointers stable while presenting each dated list
+	// newest first. Sorting uses the displayed precision rather than introducing
+	// calendar detail that the source review did not establish.
+	for _, events := range [][]resumeEvent{v.Jobs, v.Projects, v.Studies} {
+		slices.SortStableFunc(events, func(a, b resumeEvent) int {
+			return strings.Compare(b.Start.Value, a.Start.Value)
+		})
+	}
+	for _, group := range []struct {
+		Events         []resumeEvent
+		Property, Kind string
+	}{
+		{v.Jobs, "p-experience", v.Labels.Experience},
+		{v.Projects, "p-experience", v.Labels.Projects},
+		{v.Studies, "p-education", v.Labels.Education},
+	} {
+		for _, event := range group.Events {
+			v.Timeline = append(v.Timeline, resumeTimelineItem{event, group.Property, group.Kind, v.Labels.Present})
+		}
+	}
+	slices.SortStableFunc(v.Timeline, func(a, b resumeTimelineItem) int {
+		return strings.Compare(b.Event.Start.Value, a.Event.Start.Value)
+	})
 	return v, nil
 }
 
@@ -597,41 +627,34 @@ var resumePage = template.Must(template.New("resume").Funcs(template.FuncMap{
 		}
 		return template.HTML("<!--/email_off-->")
 	},
-	"dictEvent": func(event resumeEvent, present string) any {
-		return struct {
-			Event   resumeEvent
-			Present string
-		}{event, present}
-	},
+	"year": func(date resumeDate) string { return date.Value[:4] },
 }).Parse(`
 <section class="h-resume" lang="{{.Locale}}">
 <h1 class="p-name">{{.Name}}</h1>
-<div class="p-contact h-card">
-<img class="u-photo" src="/static/avatar.webp" width="180" height="180" alt="{{.Name}}">
-<p><a class="p-name u-url u-uid" href="https://dario.cat/">{{.Name}}</a></p>
+<div class="p-contact h-card cv-intro">
+<img class="u-photo" src="/static/avatar.webp" width="96" height="96" alt="{{.Name}}">
+<div class="cv-intro__body">
+<a class="p-name u-url u-uid" href="https://dario.cat/" hidden>{{.Name}}</a>
 <p class="p-job-title">{{.Headline}}</p>
 {{if or .Locality .Region .Country}}<p>{{if .Locality}}<span class="p-locality">{{.Locality}}</span>{{end}}{{if .Region}}{{if .Locality}}, {{end}}<span class="p-region">{{.Region}}</span>{{end}}{{if .Country}}{{if or .Locality .Region}}, {{end}}<span class="p-country-name">{{.Country}}</span>{{end}}</p>{{end}}
-<p>{{emailBoundary true}}<a class="u-email" href="mailto:{{.Email}}">{{.Email}}</a>{{emailBoundary false}}</p>
-<ul>{{range .Links}}<li><a href="{{.URL}}" rel="me">{{.Label}}</a></li>{{end}}</ul>
+<ul class="cv-contact-links"><li>{{emailBoundary true}}<a class="u-email" href="mailto:{{.Email}}">{{.Email}}</a>{{emailBoundary false}}</li>{{range .Links}}<li><a href="{{.URL}}" rel="me">{{.Label}}</a></li>{{end}}</ul>
+</div>
 </div>
 <div class="p-summary">{{.Summary}}</div>
 <p>{{.Labels.Review}}: <time class="dt-updated" datetime="{{.Updated}}">{{.Updated}}</time>.</p>
 <p><a href="/CV/MAC.json">{{.Labels.Download}}</a></p>
-{{if .Jobs}}<section><h2>{{.Labels.Experience}}</h2>{{range .Jobs}}{{template "role" (dictEvent . $.Labels.Present)}}{{end}}</section>{{end}}
-{{if .Projects}}<section><h2>{{.Labels.Projects}}</h2>{{range .Projects}}{{template "role" (dictEvent . $.Labels.Present)}}{{end}}</section>{{end}}
-{{if .Studies}}<section><h2>{{.Labels.Education}}</h2>{{range .Studies}}
-<article class="p-education h-event" data-cv-source="{{.Pointer}}">
-{{template "event" .}}
-</article>{{end}}</section>{{end}}
-{{if .Skills}}<section data-cv-skills><h2>{{.Labels.Skills}}</h2><ul>{{range .Skills}}<li class="p-skill">{{.}}</li>{{end}}</ul></section>{{end}}
-{{if .Languages}}<section><h2>{{.Labels.Languages}}</h2><ul>{{range .Languages}}<li data-cv-language><span class="cv-language-name">{{.Name}}</span>: <span class="cv-language-level">{{.Level}}</span></li>{{end}}</ul></section>{{end}}
+{{if .Timeline}}<section aria-labelledby="cv-timeline"><h2 id="cv-timeline">{{.Labels.Timeline}}</h2><ul class="archive-list">{{range .Timeline}}{{template "role" .}}{{end}}</ul></section>{{end}}
+{{if .Skills}}<section data-cv-skills aria-labelledby="cv-skills"><h2 id="cv-skills">{{.Labels.Skills}}</h2><ul>{{range .Skills}}<li class="p-skill">{{.}}</li>{{end}}</ul></section>{{end}}
+{{if .Languages}}<section aria-labelledby="cv-languages"><h2 id="cv-languages">{{.Labels.Languages}}</h2><ul>{{range .Languages}}<li data-cv-language><span class="cv-language-name">{{.Name}}</span>: <span class="cv-language-level">{{.Level}}</span></li>{{end}}</ul></section>{{end}}
 <p><a href="/LICENSE">{{.Labels.Licence}}</a></p>
 </section>
-{{define "role"}}<article class="p-experience h-event" data-cv-source="{{.Event.Pointer}}">{{template "event" .Event}}{{if .Event.Ongoing}}<p class="cv-present">{{.Present}}</p>{{end}}</article>{{end}}
-{{define "event"}}<h3 class="p-name">{{.Name}}</h3>
-<p>{{if .URL}}<a class="p-org" href="{{.URL}}">{{.Organization}}</a>{{else}}<span class="p-org">{{.Organization}}</span>{{end}}</p>
-<p>{{if .StartLabel}}{{.StartLabel}}: {{end}}<time class="dt-start" datetime="{{.Start.Value}}">{{.Start.Label}}</time>{{if .End}} · {{if .EndLabel}}<span class="cv-end-label">{{.EndLabel}}</span>: {{end}}<time class="dt-end" datetime="{{.End.Value}}">{{.End.Label}}</time>{{end}}</p>
-{{range .Description}}<div class="p-description">{{.}}</div>{{end}}
-{{if .Skills}}<ul>{{range .Skills}}<li class="p-skill">{{.}}</li>{{end}}</ul>{{end}}
+{{define "role"}}<li class="archive-item {{.Property}} h-event" data-cv-source="{{.Event.Pointer}}">{{template "event" .}}</li>{{end}}
+{{define "event"}}<span class="archive-item__when" aria-hidden="true">{{year .Event.Start}}</span>
+<div class="archive-item__body">
+<h3 class="archive-item__title p-name">{{.Event.Name}}</h3>
+<p class="archive-item__meta">{{.Kind}} · {{if .Event.URL}}<a class="p-org" href="{{.Event.URL}}">{{.Event.Organization}}</a>{{else}}<span class="p-org">{{.Event.Organization}}</span>{{end}} · {{if .Event.StartLabel}}{{.Event.StartLabel}}: {{end}}<time class="dt-start" datetime="{{.Event.Start.Value}}">{{.Event.Start.Label}}</time>{{if .Event.End}} · {{if .Event.EndLabel}}<span class="cv-end-label">{{.Event.EndLabel}}</span>: {{end}}<time class="dt-end" datetime="{{.Event.End.Value}}">{{.Event.End.Label}}</time>{{else if .Event.Ongoing}} · <span class="cv-present">{{.Present}}</span>{{end}}</p>
+{{if .Event.Description}}<div class="archive-item__description">{{range .Event.Description}}<div class="p-description">{{.}}</div>{{end}}</div>{{end}}
+{{if .Event.Skills}}<ul>{{range .Event.Skills}}<li class="p-skill">{{.}}</li>{{end}}</ul>{{end}}
+</div>
 {{end}}
 `))

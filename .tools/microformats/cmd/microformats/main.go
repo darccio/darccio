@@ -21,5 +21,5 @@ func main() {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
-	fmt.Printf("Microformats and JSON-LD checked: representative identity, %d public posts (%d explicit publication instants), three complete archives; drafts excluded.\n", report.Posts, report.Dated)
+	fmt.Printf("Microformats and JSON-LD checked: representative identity, %d public posts (%d explicit publication instants), four complete archives; drafts excluded.\n", report.Posts, report.Dated)
 }

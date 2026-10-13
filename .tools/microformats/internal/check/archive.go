@@ -90,14 +90,14 @@ func validateArchive(archiveURL, language string, posts []Post, doc *htmlNode, d
 		}
 	}
 	cites := itemsOfType(feed.Children, "h-cite")
-	if language != "" {
-		if len(cites) != 0 {
-			return fmt.Errorf("language archive has unexpected external articles")
+	expectedCites := make(map[string]struct{ title, language string })
+	for pageURL, external := range externalArticles {
+		if language == "" || language == "ca" && external.language == "ca" {
+			expectedCites[pageURL] = external
 		}
-		return nil
 	}
-	if len(cites) != len(externalArticles) {
-		return fmt.Errorf("root archive has %d external citations, want %d", len(cites), len(externalArticles))
+	if len(cites) != len(expectedCites) {
+		return fmt.Errorf("archive has %d external citations, want %d", len(cites), len(expectedCites))
 	}
 	seenCites := make(map[string]bool)
 	for _, cite := range cites {
@@ -105,7 +105,7 @@ func validateArchive(archiveURL, language string, posts []Post, doc *htmlNode, d
 		if len(values) != 1 {
 			return fmt.Errorf("external citation must have one URL")
 		}
-		external, ok := externalArticles[values[0]]
+		external, ok := expectedCites[values[0]]
 		if !ok || seenCites[values[0]] {
 			return fmt.Errorf("unexpected or duplicate external citation %s", values[0])
 		}

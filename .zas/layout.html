@@ -102,12 +102,17 @@
 {{end}}
 <a class="skip-link" href="#main-content" lang="{{$language}}">{{.E "skip-content"}}</a>
 <header>
-    <div class="{{if not (index .Page "representative_hcard")}}h-card {{end}}site-author">
-        <a class="u-url u-uid" rel="me author" href="/">
-            <img class="u-photo" src="/static/avatar-96.webp" width="96" height="96" alt="" decoding="async">
-            <span class="p-name">{{.Extra "/site/title"}}</span>
-        </a>
+    <a class="site-logo" href="/">
+        <img src="/static/_.png" width="64" height="64" alt="" decoding="async">
+        <span class="site-logo__name">{{.Extra "/site/title"}}</span>
+    </a>
+    {{if not (index .Page "representative_hcard")}}
+    <div class="h-card" hidden>
+        <span class="p-name">{{.Extra "/site/title"}}</span>
+        <a class="u-url u-uid" rel="me author" href="{{.Site.BaseURL}}/">{{.Extra "/site/title"}}</a>
+        <data class="u-photo" value="{{.Site.BaseURL}}/static/avatar-96.webp"></data>
     </div>
+    {{end}}
     <nav class="primary-navigation" aria-label='{{.E "main-navigation"}}' lang="{{$language}}">
         <a href="/"{{if eq $nav "home"}} aria-current="page"{{end}}>{{.E "home"}}</a>
         <a href="{{$postsURL}}"{{if eq $nav "posts"}} aria-current="page"{{end}}>{{.E "nav-posts"}}</a>

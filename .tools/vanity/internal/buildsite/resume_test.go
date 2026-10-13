@@ -119,7 +119,7 @@ func TestResumeProjectsPublicFieldsWithSupportedPrecision(t *testing.T) {
 	}
 	for _, required := range []string{
 		`class="p-name">Dario Castañé &lt;script&gt;`, `class="p-org" href="https://example.org/">Example &lt;Org&gt;`,
-		`width="180" height="180"`, `mailto:cc@dario.cat`, `href="/CV/MAC.json"`,
+		`width="96" height="96"`, `mailto:cc@dario.cat`, `href="/CV/MAC.json"`,
 		`class="p-locality">Terrassa`, `class="p-region">Catalonia`, `class="p-country-name">Spain`,
 		`"template":false`, `"publish_markdown":false`, `"feed":false`, `"atproto":false`, `"language":"en"`,
 		`datetime="2026-10-12"`, `Issued:`, `class="cv-end-label">Expired</span>:`, `Does not claim current certification.`, `Valid until December 2020.`,
@@ -232,6 +232,80 @@ func TestResumeCertificationCompletionRequiresExplicitExpiry(t *testing.T) {
 				t.Fatal("completion date was presented as expiry without review")
 			}
 		})
+	}
+}
+
+func TestResumeChronologyKeepsSourcePointersAndDatePrecision(t *testing.T) {
+	var source resumeSource
+	if err := json.Unmarshal([]byte(resumeFixtureSource), &source); err != nil {
+		t.Fatal(err)
+	}
+	// Source order is not an output requirement: new imports can arrive out of
+	// order, but their JSON pointers and reviewed precision must remain intact.
+	source.Experience.Jobs[0].Roles[0], source.Experience.Jobs[0].Roles[1] = source.Experience.Jobs[0].Roles[1], source.Experience.Jobs[0].Roles[0]
+	cfg := resumeConfig{
+		Locale: "en", PublicEmail: "cc@dario.cat", Updated: "2026-10-12",
+		DatePrecision: map[string]string{
+			"/experience/jobs/0/roles/0/startDate": "year",
+			"/knowledge/studies/1/startDate":       "year",
+			"/knowledge/studies/1/finishDate":      "year",
+		},
+	}
+	reviewed, err := resumeParseDate(cfg.Updated)
+	if err != nil {
+		t.Fatal(err)
+	}
+	view, err := resumeProject(cfg, source, reviewed)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(view.Jobs) != 2 || view.Jobs[0].Name != "Engineer" || view.Jobs[1].Name != "Earlier role" {
+		t.Fatalf("jobs should be newest first, got %+v", view.Jobs)
+	}
+	if view.Jobs[0].Pointer != "/experience/jobs/0/roles/1" || view.Jobs[0].Start.Value != "2024-02" || view.Jobs[1].Pointer != "/experience/jobs/0/roles/0" || view.Jobs[1].Start.Value != "2006" {
+		t.Fatalf("sorting changed source identity or reviewed precision: %+v", view.Jobs)
+	}
+	if view.Studies[0].Name != "AWS (historical)" || view.Studies[1].Name != "Computer science" {
+		t.Fatalf("studies should be newest first, got %+v", view.Studies)
+	}
+	if len(view.Timeline) != 5 || view.Timeline[0].Event.Name != "Engineer" || view.Timeline[2].Event.Name != "AWS (historical)" || view.Timeline[2].Property != "p-education" {
+		t.Fatalf("expected a single mixed chronology, got %+v", view.Timeline)
+	}
+	for i := 1; i < len(view.Timeline); i++ {
+		if view.Timeline[i-1].Event.Start.Value < view.Timeline[i].Event.Start.Value {
+			t.Fatal("combined timeline is not newest first")
+		}
+	}
+	if source.Experience.Jobs[0].Roles[0].Name != "Earlier role" {
+		t.Fatal("projection changed source order")
+	}
+	var output bytes.Buffer
+	if err := resumePage.Execute(&output, view); err != nil {
+		t.Fatal(err)
+	}
+	if strings.Count(output.String(), `<ul class="archive-list">`) != 1 {
+		t.Fatal("CV must have one chronology without category clusters")
+	}
+	doc, err := html.Parse(bytes.NewReader(output.Bytes()))
+	if err != nil {
+		t.Fatal(err)
+	}
+	var entries int
+	var inspect func(*html.Node)
+	inspect = func(n *html.Node) {
+		if n.Type == html.ElementNode && resumeAttr(n, "data-cv-source") != "" {
+			entries++
+			if n.Data != "li" || !strings.Contains(resumeAttr(n, "class"), "archive-item ") || n.Parent == nil || n.Parent.Data != "ul" || resumeAttr(n.Parent, "class") != "archive-list" {
+				t.Errorf("resume event %s must belong to the shared archive list", resumeAttr(n, "data-cv-source"))
+			}
+		}
+		for child := n.FirstChild; child != nil; child = child.NextSibling {
+			inspect(child)
+		}
+	}
+	inspect(doc)
+	if entries != 5 {
+		t.Fatalf("got %d archive events, want all five source events", entries)
 	}
 }
 

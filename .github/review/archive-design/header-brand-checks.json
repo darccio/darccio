@@ -1,0 +1,50 @@
+[
+  {
+    "theme": "light",
+    "enlarged": false,
+    "href": "/",
+    "alt": "",
+    "family": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "outline": "solid",
+    "outlineWidth": "2px",
+    "overflow": false,
+    "metadataClasses": 0,
+    "label": "Dario Castañé"
+  },
+  {
+    "theme": "light",
+    "enlarged": true,
+    "href": "/",
+    "alt": "",
+    "family": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "outline": "solid",
+    "outlineWidth": "2px",
+    "overflow": false,
+    "metadataClasses": 0,
+    "label": "Dario Castañé"
+  },
+  {
+    "theme": "dark",
+    "enlarged": false,
+    "href": "/",
+    "alt": "",
+    "family": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "outline": "solid",
+    "outlineWidth": "2px",
+    "overflow": false,
+    "metadataClasses": 0,
+    "label": "Dario Castañé"
+  },
+  {
+    "theme": "dark",
+    "enlarged": true,
+    "href": "/",
+    "alt": "",
+    "family": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "outline": "solid",
+    "outlineWidth": "2px",
+    "overflow": false,
+    "metadataClasses": 0,
+    "label": "Dario Castañé"
+  }
+]

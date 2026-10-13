@@ -679,3 +679,152 @@ The navigation correction is committed as `6df4683`. Independent read-only
 review found no material concerns. The signed complete unit passed darna;
 no hooks were bypassed. The hosted receipt is kept in PR #28 so its fresh
 preview URL and exact-commit checks can update without altering published content.
+
+## Typography and chronological archives refinement
+
+The owner confirmed PR #28 was merged and selected IBM Plex Sans for body text,
+with Newsreader headings and IBM Plex Mono metadata/navigation/code. The new
+batch also replaces the visible avatar/name header with the existing logo,
+combines the homepage photo/bio, removes its visible name heading, improves
+submenu/section spacing, and uses one shared chronological-list design for
+posts and CV. Talks retain their two topic clusters and gain sourced year rails.
+The supplied generated resume PDF is used only for visual hierarchy inspiration;
+its text is not imported into the source CV. T09 personal defaults remain deferred.
+
+### Body typography
+
+Four self-hosted IBM Plex Sans Latin woff2 faces (400/500/600 and 400 italic)
+come from integrity-verified Fontsource 5.3.0. The original OFL notice and each
+file's provenance/SHA-256/size are retained. Added font bytes total 95,380.
+The generated tokens remain byte-identical; the stylesheet adds the owner-selected
+sans family. Newsreader headings and Plex Mono dates/navigation/code remain.
+All font checks, guarded generation, repository tests, vanity, microformats and
+publishing consistency pass. Browser acceptance for the complete batch is recorded
+below; this foundation is isolated from the structural page changes.
+
+### Header, homepage and shared spacing
+
+The header displays only the existing logo/home link plus primary navigation.
+Inner pages retain the same personal identity as hidden microformat data;
+the logo never claims to be a personal photo. The homepage retains its original
+representative card and bio wording, with one accessible hidden name heading
+and a left photo/right bio unit. It stacks at narrow/enlarged-text sizes.
+Shared archive rows use the same year/title/meta anatomy, 4px title/meta gap,
+and separated section headings. Language controls have a measured 48px gap
+before the article list; focusable controls retain comfortable target heights.
+
+Guarded generation, full repository tests and metadata/vanity checks pass.
+All 40 browser cases (ten pages × two widths × two themes) pass axe, skip/focus,
+local font checks and 320px normal/200% reflow. All 74 styled pages pass the
+wider reflow check. The five raw vanity fragments remain byte-identical.
+Homepage card properties are exactly unchanged. Before/after screenshots cover
+home, posts, CV and talks at 1440px and 390px. Hosted acceptance follows the PR.
+
+### Article archives
+
+Root, English and Spanish indexes each use one chronological archive-list,
+without separate year headings. Their 35/9/12 rows retain identical ordered
+titles, destinations, language labels and publication instants. The two external
+citations retain their established year and named external source without
+inventing exact dates. Per-row year rails, title/language badges and date metadata
+reuse the same styles as talks and the CV. Guarded generation, existing complete
+archive/microformat checks, all repository tests and the final 40-scenario browser
+matrix pass. Canonical UIDs remain separate from preview navigation.
+
+### CV timeline
+
+The HTML CV projects the unchanged MAC JSON into one reverse chronological
+timeline: 23 work/community roles, seven project roles and 15 education/credential
+entries. Types remain p-experience or p-education, with the same source pointers,
+dates and reviewed precision, organisations, descriptions, skills and certification
+expiry distinctions. Stable sorting changes presentation only. The compact
+96px photo/contact block removes the duplicated visible name and groups profile
+links into comfortable wrapping targets. The resume PDF supplied for inspiration
+remains outside the repository; no new biographical facts are imported.
+
+The meaningful regression test exercises out-of-order input, mixed entry kinds,
+stable source identity/date precision and a single semantic archive-list. Existing
+resume validation remains unchanged. Full tests, guarded build, CV microformats,
+JSON byte checks and all four CV browser scenarios pass. CV crawler/publishing
+exclusions and email_off boundaries remain intact. Full body/source content is
+retained; this is a layout change, not a shortened resume.
+
+### Talk-year evidence
+
+All 15 previously missing year rails are filled from primary linked materials,
+videos and organiser sources: six verified event years and nine preparation or
+publication years. The latter carry a visible asterisk, an explanatory page
+legend, and row notes identifying materials or video publication/preparation.
+Those resource years never become dt-start values. The evidence receipt records
+each source, confidence and limits. Existing 31 appearances/order and all resource
+destinations remain, and the ten established complete h-events retain their exact
+name/start/location/url values. No full calendar date or venue is invented.
+The source file and notes preserve every distinct esLibre/World.Party,
+Autodefensa, Mergo and disruptive-technology appearance. Guarded generation,
+microformats, repository tests and the final browser matrix pass. These newly
+shown years are distinguishable from verified event dates in both wide and
+narrow layouts; each resource note remains visible when the year rail is hidden.
+
+### Refinement review receipt
+
+Committed units: `f9ce4bb` Sans body, `d5e5cf7` logo/home/spacing,
+`5ec3199` post archives, `3adb6ee` unified CV timeline and `cf2db6e`
+talk-year evidence. Each complete unit passed darna and was signed without
+bypassing hooks. Independent final review found no material defects.
+[Review assets](../../.github/review/archive-design/verification.json) retain
+16 before/after screenshots, the 40 browser cases, 74-page reflow results,
+layout measurements, article invariants and primary talk-year evidence.
+All assets are excluded from deployment. All 79 existing HTML paths, three RSS
+feeds, source CV JSON, five raw vanity fragments and original token file remain;
+the feeds/CV/raw fragments/tokens compare byte-for-byte with the merged baseline.
+Seven vanity contracts, 33 dated posts, 54 feed items and 26 Standard.site plans
+continue to pass. The hosted preview and exact-revision CI receipt follow in the
+review PR; production changes only after owner merge. No owner input remains for
+this design batch, and the deferred personal defaults remain deferred.
+
+The review evidence is committed as `dfb8dbb`. Review is open in
+[PR #29](https://github.com/darccio/darccio/pull/29). Its
+[commit checks](https://github.com/darccio/darccio/pull/29/checks) and PR receipt
+record the hosted preview and exact-revision results separately from the local
+evidence above. The supplied PDF and unpublished planning files remain absent
+from the deploy. Production remains dependent on owner merge.
+
+### Header branding feedback
+
+The owner requested their name alongside the logo. One root-relative home link
+now combines the decorative logo and visible Dario Castañé in Newsreader.
+The separate hidden identity card and representative homepage card remain
+unchanged; the brand span does not introduce extra microformat name properties.
+Responsive sizing and a shrinkable text span retain readable branding at narrow
+and enlarged-text widths. Guarded generation, full repository tests, vanity and
+metadata/format checks pass. Four focused 320px checks plus the complete 44-case
+browser matrix pass in light/dark with normal/200% reflow and visible keyboard
+focus; all 75 styled pages pass the wider overflow check. Hosted acceptance
+follows the updated [PR #29](https://github.com/darccio/darccio/pull/29).
+
+### Catalan archive feedback
+
+The owner requested a Catalan-only filter. `/posts/ca/` presents the exact
+Catalan subset of the combined archive: 12 local articles (eight under posts,
+four hosted Rizoma issues) and the existing Núvol citation. All 13 row bytes,
+order, names, URLs, language labels and publication instants are preserved.
+All four archives link to all languages, Català, English and Castellano, with
+one selected submenu link and a distinct underline. `/posts/` remains combined.
+This static filter works without JavaScript and explicitly stays out of RSS and
+Standard.site publishing. Parent section configuration supplies posts navigation.
+
+The mandatory completeness gate now checks the fourth archive against the
+independent post inventory and permits only its reviewed Catalan citation.
+Meaningful tests reject missing local/Rizoma entries and foreign articles/cites;
+existing English/Spanish citation policy remains unchanged. Full repository tests,
+guarded build, vanity, microformats and publishing-format checks pass. The 44-case
+browser matrix and 75-page reflow check pass. Existing archive rows, homepage
+identity, CV JSON, all feeds and raw vanity fragments remain unchanged.
+
+The owner feedback is committed as `4c37fae` (header name) and `8047efe`
+(Catalan-only archive). Each atomic unit passed darna and was signed without
+bypassing hooks. The review screenshots now include the visible name and the
+new Catalan view at desktop/mobile widths. Updated evidence records 44 browser
+cases, 75 styled pages and 80 total HTML routes, retaining all 79 prior routes.
+Hosted verification follows push and is recorded in PR #29 separately from
+these local receipts. Production remains dependent on owner merge.

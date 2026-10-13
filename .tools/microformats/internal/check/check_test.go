@@ -226,6 +226,60 @@ func TestLanguageArchivesUseTheirOwnSpokenLanguage(t *testing.T) {
 			if err := validateArchive(archiveURL, tc.language, []Post{post}, doc, data); err != nil {
 				t.Fatal(err)
 			}
+			withCitation := strings.Replace(input, "</ul>", `<li class="h-cite"><a class="p-name u-url" href="https://www.nuvol.com/pantalles/per-al-lusions-22931">Per al·lusions</a></li></ul>`, 1)
+			doc, data = parsed(t, withCitation, archiveURL)
+			if err := validateArchive(archiveURL, tc.language, []Post{post}, doc, data); err == nil {
+				t.Fatal("existing English/Spanish archive accepted an external citation")
+			}
+		})
+	}
+}
+
+func TestCatalanArchiveIncludesOnlyCatalanArticlesAndCitation(t *testing.T) {
+	post := examplePost()
+	post.Language, post.URL = "ca", homeURL+"posts/example/"
+	rizoma := post
+	rizoma.Title, rizoma.URL = "Rizoma fixture", homeURL+"rizoma/001/"
+	posts := []Post{post, rizoma, examplePost()}
+	archiveURL := homeURL + "posts/ca/"
+	var lines []string
+	var localRow, rizomaRow string
+	for _, line := range strings.Split(fixture(t, "archive.html"), "\n") {
+		if strings.Contains(line, `class="h-cite" lang="es"`) {
+			continue
+		}
+		line = strings.Replace(line, `href="https://dario.cat/posts/"`, `href="`+archiveURL+`"`, 1)
+		if strings.Contains(line, `class="h-entry"`) {
+			line = strings.Replace(line, `class="h-entry" lang="en"`, `class="h-entry" lang="ca"`, 1)
+			line = strings.Replace(line, examplePost().URL, post.URL, 1)
+			line = strings.Replace(line, `aria-hidden="true">en</span>`, `aria-hidden="true">ca</span>`, 1)
+			line = strings.Replace(line, `(en anglès)`, `(en català)`, 1)
+			localRow = line
+			rizomaRow = strings.ReplaceAll(strings.ReplaceAll(line, post.URL, rizoma.URL), post.Title, rizoma.Title)
+			line += "\n" + rizomaRow
+		}
+		lines = append(lines, line)
+	}
+	input := strings.Join(lines, "\n")
+	doc, data := parsed(t, input, archiveURL)
+	if err := validateArchive(archiveURL, "ca", posts, doc, data); err != nil {
+		t.Fatal(err)
+	}
+	for _, tc := range []struct{ name, from, to string }{
+		{"missing local article", localRow, ""},
+		{"missing hosted Rizoma", rizomaRow, ""},
+		{"foreign article", post.URL, examplePost().URL},
+		{"missing Catalan citation", `class="h-cite" lang="ca"`, `class="cite" lang="ca"`},
+		{"foreign citation", "https://www.nuvol.com/pantalles/per-al-lusions-22931", "https://www.elsaltodiario.com/opinion/queer-marxismo-transfobia-contra-compartimentacion"},
+	} {
+		t.Run(tc.name, func(t *testing.T) {
+			if tc.from == "" || !strings.Contains(input, tc.from) {
+				t.Fatal("fixture mutation no longer matches")
+			}
+			doc, data := parsed(t, strings.Replace(input, tc.from, tc.to, 1), archiveURL)
+			if err := validateArchive(archiveURL, "ca", posts, doc, data); err == nil {
+				t.Fatal("Catalan archive completeness regression was accepted")
+			}
 		})
 	}
 }
