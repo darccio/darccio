@@ -7,9 +7,9 @@
     "3adb6ee",
     "cf2db6e"
   ],
-  "browser_scenarios": 40,
+  "browser_scenarios": 44,
   "axe_violations": 0,
-  "all_styled_pages_reflow": 74,
+  "all_styled_pages_reflow": 75,
   "existing_html_paths": 79,
   "source_cv_unchanged": true,
   "feeds_byte_identical": 3,
@@ -42,10 +42,23 @@
     "Five raw vanity fragments skip CSS reflow checks and retain their exact source bytes."
   ],
   "sha256": {
-    "static/styles.css": "c5bac73904284bd67322d3e9a143ee3d288e6063760a3cc8a0f761575e788653",
+    "static/styles.css": "86d5439477ef98bbfee571ea8ddfe529948a76f6a3b367c620595ced085039ce",
     "static/tokens.css": "291cfee32afbbd76e997550fb5d4dfa6eeb2ef084718661d7d44f6b21f398dc1",
     "static/fonts/SOURCE.json": "981f208f283ec72ccf1f6d72702fec8db3ffcbcb7e4bd2dbf1eb14b2db07cc8f",
     "CV/MAC.json": "16250f593ebe27634ec552f386355c66b983ce8b90bd3bfc50605e8787ac703f",
     "talks/index.md": "1dc5106ad94b790015c9af35bba85954cc2fbb367d451916f90305c712b9b50e"
+  },
+  "feedback_commits": [
+    "4c37fae",
+    "8047efe"
+  ],
+  "total_html_paths": 80,
+  "header_owner_name_visible": true,
+  "catalan_archive": {
+    "path": "/posts/ca/",
+    "local_entries": 12,
+    "external_citations": 1,
+    "rows_copied_byte_identically": true,
+    "mandatory_completeness_gate": true
   }
 }

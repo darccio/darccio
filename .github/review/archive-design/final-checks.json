@@ -164,6 +164,33 @@
       ]
     },
     {
+      "route": "/posts/ca/",
+      "scheme": "light",
+      "width": 1440,
+      "violations": [],
+      "skip": true,
+      "main": true,
+      "fonts": {
+        "body": "\"IBM Plex Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "loaded": true,
+        "mono": true,
+        "sans": true
+      },
+      "focus": [],
+      "reflow": [
+        {
+          "width": 320,
+          "scroll": 320,
+          "offenders": []
+        },
+        {
+          "width": 320,
+          "scroll": 320,
+          "offenders": []
+        }
+      ]
+    },
+    {
       "route": "/en/posts/",
       "scheme": "light",
       "width": 1440,
@@ -528,6 +555,33 @@
       ]
     },
     {
+      "route": "/posts/ca/",
+      "scheme": "light",
+      "width": 390,
+      "violations": [],
+      "skip": true,
+      "main": true,
+      "fonts": {
+        "body": "\"IBM Plex Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "loaded": true,
+        "mono": true,
+        "sans": true
+      },
+      "focus": [],
+      "reflow": [
+        {
+          "width": 320,
+          "scroll": 320,
+          "offenders": []
+        },
+        {
+          "width": 320,
+          "scroll": 320,
+          "offenders": []
+        }
+      ]
+    },
+    {
       "route": "/en/posts/",
       "scheme": "light",
       "width": 390,
@@ -892,6 +946,33 @@
       ]
     },
     {
+      "route": "/posts/ca/",
+      "scheme": "dark",
+      "width": 1440,
+      "violations": [],
+      "skip": true,
+      "main": true,
+      "fonts": {
+        "body": "\"IBM Plex Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "loaded": true,
+        "mono": true,
+        "sans": true
+      },
+      "focus": [],
+      "reflow": [
+        {
+          "width": 320,
+          "scroll": 320,
+          "offenders": []
+        },
+        {
+          "width": 320,
+          "scroll": 320,
+          "offenders": []
+        }
+      ]
+    },
+    {
       "route": "/en/posts/",
       "scheme": "dark",
       "width": 1440,
@@ -1230,6 +1311,33 @@
     },
     {
       "route": "/posts/",
+      "scheme": "dark",
+      "width": 390,
+      "violations": [],
+      "skip": true,
+      "main": true,
+      "fonts": {
+        "body": "\"IBM Plex Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "loaded": true,
+        "mono": true,
+        "sans": true
+      },
+      "focus": [],
+      "reflow": [
+        {
+          "width": 320,
+          "scroll": 320,
+          "offenders": []
+        },
+        {
+          "width": 320,
+          "scroll": 320,
+          "offenders": []
+        }
+      ]
+    },
+    {
+      "route": "/posts/ca/",
       "scheme": "dark",
       "width": 390,
       "violations": [],

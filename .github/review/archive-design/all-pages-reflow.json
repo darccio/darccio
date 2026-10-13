@@ -777,6 +777,20 @@
     "offenders": []
   },
   {
+    "route": "/posts/ca/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/ca/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
     "route": "/posts/delete-facebook/",
     "doubled": false,
     "width": 320,

@@ -10,7 +10,7 @@
     "visibleHeaderImages": [
       "/static/_.png"
     ],
-    "visibleHeaderName": false,
+    "visibleHeaderName": true,
     "photoBio": {
       "photoLeft": 384,
       "bioLeft": 504,
@@ -29,7 +29,21 @@
     "visibleHeaderImages": [
       "/static/_.png"
     ],
-    "visibleHeaderName": false,
+    "visibleHeaderName": true,
+    "photoBio": null
+  },
+  {
+    "route": "/posts/ca/",
+    "width": 1440,
+    "bodyFont": "\"IBM Plex Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 1,
+    "rows": 13,
+    "navGap": 48,
+    "visibleHeaderImages": [
+      "/static/_.png"
+    ],
+    "visibleHeaderName": true,
     "photoBio": null
   },
   {
@@ -43,7 +57,7 @@
     "visibleHeaderImages": [
       "/static/_.png"
     ],
-    "visibleHeaderName": false,
+    "visibleHeaderName": true,
     "photoBio": null
   },
   {
@@ -57,7 +71,7 @@
     "visibleHeaderImages": [
       "/static/_.png"
     ],
-    "visibleHeaderName": false,
+    "visibleHeaderName": true,
     "photoBio": null
   },
   {
@@ -71,12 +85,12 @@
     "visibleHeaderImages": [
       "/static/_.png"
     ],
-    "visibleHeaderName": false,
+    "visibleHeaderName": true,
     "photoBio": {
       "photoLeft": 20,
       "bioLeft": 140,
-      "photoTop": 254.671875,
-      "bioTop": 234
+      "photoTop": 230.671875,
+      "bioTop": 210
     }
   },
   {
@@ -90,7 +104,21 @@
     "visibleHeaderImages": [
       "/static/_.png"
     ],
-    "visibleHeaderName": false,
+    "visibleHeaderName": true,
+    "photoBio": null
+  },
+  {
+    "route": "/posts/ca/",
+    "width": 390,
+    "bodyFont": "\"IBM Plex Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 1,
+    "rows": 13,
+    "navGap": 48,
+    "visibleHeaderImages": [
+      "/static/_.png"
+    ],
+    "visibleHeaderName": true,
     "photoBio": null
   },
   {
@@ -104,7 +132,7 @@
     "visibleHeaderImages": [
       "/static/_.png"
     ],
-    "visibleHeaderName": false,
+    "visibleHeaderName": true,
     "photoBio": null
   },
   {
@@ -118,7 +146,7 @@
     "visibleHeaderImages": [
       "/static/_.png"
     ],
-    "visibleHeaderName": false,
+    "visibleHeaderName": true,
     "photoBio": null
   }
 ]

@@ -820,3 +820,11 @@ existing English/Spanish citation policy remains unchanged. Full repository test
 guarded build, vanity, microformats and publishing-format checks pass. The 44-case
 browser matrix and 75-page reflow check pass. Existing archive rows, homepage
 identity, CV JSON, all feeds and raw vanity fragments remain unchanged.
+
+The owner feedback is committed as `4c37fae` (header name) and `8047efe`
+(Catalan-only archive). Each atomic unit passed darna and was signed without
+bypassing hooks. The review screenshots now include the visible name and the
+new Catalan view at desktop/mobile widths. Updated evidence records 44 browser
+cases, 75 styled pages and 80 total HTML routes, retaining all 79 prior routes.
+Hosted verification follows push and is recorded in PR #29 separately from
+these local receipts. Production remains dependent on owner merge.
