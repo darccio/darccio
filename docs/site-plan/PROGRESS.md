@@ -679,3 +679,25 @@ The navigation correction is committed as `6df4683`. Independent read-only
 review found no material concerns. The signed complete unit passed darna;
 no hooks were bypassed. The hosted receipt is kept in PR #28 so its fresh
 preview URL and exact-commit checks can update without altering published content.
+
+## Typography and chronological archives refinement
+
+The owner confirmed PR #28 was merged and selected IBM Plex Sans for body text,
+with Newsreader headings and IBM Plex Mono metadata/navigation/code. The new
+batch also replaces the visible avatar/name header with the existing logo,
+combines the homepage photo/bio, removes its visible name heading, improves
+submenu/section spacing, and uses one shared chronological-list design for
+posts and CV. Talks retain their two topic clusters and gain sourced year rails.
+The supplied generated resume PDF is used only for visual hierarchy inspiration;
+its text is not imported into the source CV. T09 personal defaults remain deferred.
+
+### Body typography
+
+Four self-hosted IBM Plex Sans Latin woff2 faces (400/500/600 and 400 italic)
+come from integrity-verified Fontsource 5.3.0. The original OFL notice and each
+file's provenance/SHA-256/size are retained. Added font bytes total 95,380.
+The generated tokens remain byte-identical; the stylesheet adds the owner-selected
+sans family. Newsreader headings and Plex Mono dates/navigation/code remain.
+All font checks, guarded generation, repository tests, vanity, microformats and
+publishing consistency pass. Browser acceptance for the complete batch is recorded
+below; this foundation is isolated from the structural page changes.
