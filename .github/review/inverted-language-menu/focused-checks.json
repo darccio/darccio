@@ -1,0 +1,710 @@
+[
+  {
+    "theme": "light",
+    "width": 1440,
+    "enlarged": false,
+    "overflow": false,
+    "shared": {
+      "fontFamily": [
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      ],
+      "fontSize": [
+        "13px",
+        "13px"
+      ],
+      "lineHeight": [
+        "19.5px",
+        "19.5px"
+      ],
+      "letterSpacing": [
+        "0.52px",
+        "0.52px"
+      ],
+      "textTransform": [
+        "uppercase",
+        "uppercase"
+      ],
+      "columnGap": [
+        "24px",
+        "24px"
+      ]
+    },
+    "background": "rgb(152, 49, 152)",
+    "links": [
+      {
+        "label": "Català",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      },
+      {
+        "label": "English",
+        "color": "rgb(33, 29, 34)",
+        "background": "rgb(255, 255, 255)",
+        "height": 44,
+        "underline": "2px",
+        "current": true
+      },
+      {
+        "label": "Castellano",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      }
+    ]
+  },
+  {
+    "theme": "light",
+    "width": 1440,
+    "enlarged": true,
+    "overflow": false,
+    "shared": {
+      "fontFamily": [
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      ],
+      "fontSize": [
+        "26px",
+        "26px"
+      ],
+      "lineHeight": [
+        "39px",
+        "39px"
+      ],
+      "letterSpacing": [
+        "1.04px",
+        "1.04px"
+      ],
+      "textTransform": [
+        "uppercase",
+        "uppercase"
+      ],
+      "columnGap": [
+        "48px",
+        "48px"
+      ]
+    },
+    "background": "rgb(152, 49, 152)",
+    "links": [
+      {
+        "label": "Català",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      },
+      {
+        "label": "English",
+        "color": "rgb(33, 29, 34)",
+        "background": "rgb(255, 255, 255)",
+        "height": 44,
+        "underline": "2px",
+        "current": true
+      },
+      {
+        "label": "Castellano",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      }
+    ]
+  },
+  {
+    "theme": "light",
+    "width": 390,
+    "enlarged": false,
+    "overflow": false,
+    "shared": {
+      "fontFamily": [
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      ],
+      "fontSize": [
+        "13px",
+        "13px"
+      ],
+      "lineHeight": [
+        "19.5px",
+        "19.5px"
+      ],
+      "letterSpacing": [
+        "normal",
+        "normal"
+      ],
+      "textTransform": [
+        "uppercase",
+        "uppercase"
+      ],
+      "columnGap": [
+        "12px",
+        "12px"
+      ]
+    },
+    "background": "rgb(152, 49, 152)",
+    "links": [
+      {
+        "label": "Català",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      },
+      {
+        "label": "English",
+        "color": "rgb(33, 29, 34)",
+        "background": "rgb(255, 255, 255)",
+        "height": 44,
+        "underline": "2px",
+        "current": true
+      },
+      {
+        "label": "Castellano",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      }
+    ]
+  },
+  {
+    "theme": "light",
+    "width": 390,
+    "enlarged": true,
+    "overflow": false,
+    "shared": {
+      "fontFamily": [
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      ],
+      "fontSize": [
+        "26px",
+        "26px"
+      ],
+      "lineHeight": [
+        "39px",
+        "39px"
+      ],
+      "letterSpacing": [
+        "normal",
+        "normal"
+      ],
+      "textTransform": [
+        "uppercase",
+        "uppercase"
+      ],
+      "columnGap": [
+        "24px",
+        "24px"
+      ]
+    },
+    "background": "rgb(152, 49, 152)",
+    "links": [
+      {
+        "label": "Català",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      },
+      {
+        "label": "English",
+        "color": "rgb(33, 29, 34)",
+        "background": "rgb(255, 255, 255)",
+        "height": 44,
+        "underline": "2px",
+        "current": true
+      },
+      {
+        "label": "Castellano",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      }
+    ]
+  },
+  {
+    "theme": "light",
+    "width": 320,
+    "enlarged": false,
+    "overflow": false,
+    "shared": {
+      "fontFamily": [
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      ],
+      "fontSize": [
+        "13px",
+        "13px"
+      ],
+      "lineHeight": [
+        "19.5px",
+        "19.5px"
+      ],
+      "letterSpacing": [
+        "normal",
+        "normal"
+      ],
+      "textTransform": [
+        "uppercase",
+        "uppercase"
+      ],
+      "columnGap": [
+        "12px",
+        "12px"
+      ]
+    },
+    "background": "rgb(152, 49, 152)",
+    "links": [
+      {
+        "label": "Català",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      },
+      {
+        "label": "English",
+        "color": "rgb(33, 29, 34)",
+        "background": "rgb(255, 255, 255)",
+        "height": 44,
+        "underline": "2px",
+        "current": true
+      },
+      {
+        "label": "Castellano",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      }
+    ]
+  },
+  {
+    "theme": "light",
+    "width": 320,
+    "enlarged": true,
+    "overflow": false,
+    "shared": {
+      "fontFamily": [
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      ],
+      "fontSize": [
+        "26px",
+        "26px"
+      ],
+      "lineHeight": [
+        "39px",
+        "39px"
+      ],
+      "letterSpacing": [
+        "normal",
+        "normal"
+      ],
+      "textTransform": [
+        "uppercase",
+        "uppercase"
+      ],
+      "columnGap": [
+        "24px",
+        "24px"
+      ]
+    },
+    "background": "rgb(152, 49, 152)",
+    "links": [
+      {
+        "label": "Català",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      },
+      {
+        "label": "English",
+        "color": "rgb(33, 29, 34)",
+        "background": "rgb(255, 255, 255)",
+        "height": 44,
+        "underline": "2px",
+        "current": true
+      },
+      {
+        "label": "Castellano",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      }
+    ]
+  },
+  {
+    "theme": "dark",
+    "width": 1440,
+    "enlarged": false,
+    "overflow": false,
+    "shared": {
+      "fontFamily": [
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      ],
+      "fontSize": [
+        "13px",
+        "13px"
+      ],
+      "lineHeight": [
+        "19.5px",
+        "19.5px"
+      ],
+      "letterSpacing": [
+        "0.52px",
+        "0.52px"
+      ],
+      "textTransform": [
+        "uppercase",
+        "uppercase"
+      ],
+      "columnGap": [
+        "24px",
+        "24px"
+      ]
+    },
+    "background": "rgb(152, 49, 152)",
+    "links": [
+      {
+        "label": "Català",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      },
+      {
+        "label": "English",
+        "color": "rgb(33, 29, 34)",
+        "background": "rgb(255, 255, 255)",
+        "height": 44,
+        "underline": "2px",
+        "current": true
+      },
+      {
+        "label": "Castellano",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      }
+    ]
+  },
+  {
+    "theme": "dark",
+    "width": 1440,
+    "enlarged": true,
+    "overflow": false,
+    "shared": {
+      "fontFamily": [
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      ],
+      "fontSize": [
+        "26px",
+        "26px"
+      ],
+      "lineHeight": [
+        "39px",
+        "39px"
+      ],
+      "letterSpacing": [
+        "1.04px",
+        "1.04px"
+      ],
+      "textTransform": [
+        "uppercase",
+        "uppercase"
+      ],
+      "columnGap": [
+        "48px",
+        "48px"
+      ]
+    },
+    "background": "rgb(152, 49, 152)",
+    "links": [
+      {
+        "label": "Català",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      },
+      {
+        "label": "English",
+        "color": "rgb(33, 29, 34)",
+        "background": "rgb(255, 255, 255)",
+        "height": 44,
+        "underline": "2px",
+        "current": true
+      },
+      {
+        "label": "Castellano",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      }
+    ]
+  },
+  {
+    "theme": "dark",
+    "width": 390,
+    "enlarged": false,
+    "overflow": false,
+    "shared": {
+      "fontFamily": [
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      ],
+      "fontSize": [
+        "13px",
+        "13px"
+      ],
+      "lineHeight": [
+        "19.5px",
+        "19.5px"
+      ],
+      "letterSpacing": [
+        "normal",
+        "normal"
+      ],
+      "textTransform": [
+        "uppercase",
+        "uppercase"
+      ],
+      "columnGap": [
+        "12px",
+        "12px"
+      ]
+    },
+    "background": "rgb(152, 49, 152)",
+    "links": [
+      {
+        "label": "Català",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      },
+      {
+        "label": "English",
+        "color": "rgb(33, 29, 34)",
+        "background": "rgb(255, 255, 255)",
+        "height": 44,
+        "underline": "2px",
+        "current": true
+      },
+      {
+        "label": "Castellano",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      }
+    ]
+  },
+  {
+    "theme": "dark",
+    "width": 390,
+    "enlarged": true,
+    "overflow": false,
+    "shared": {
+      "fontFamily": [
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      ],
+      "fontSize": [
+        "26px",
+        "26px"
+      ],
+      "lineHeight": [
+        "39px",
+        "39px"
+      ],
+      "letterSpacing": [
+        "normal",
+        "normal"
+      ],
+      "textTransform": [
+        "uppercase",
+        "uppercase"
+      ],
+      "columnGap": [
+        "24px",
+        "24px"
+      ]
+    },
+    "background": "rgb(152, 49, 152)",
+    "links": [
+      {
+        "label": "Català",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      },
+      {
+        "label": "English",
+        "color": "rgb(33, 29, 34)",
+        "background": "rgb(255, 255, 255)",
+        "height": 44,
+        "underline": "2px",
+        "current": true
+      },
+      {
+        "label": "Castellano",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      }
+    ]
+  },
+  {
+    "theme": "dark",
+    "width": 320,
+    "enlarged": false,
+    "overflow": false,
+    "shared": {
+      "fontFamily": [
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      ],
+      "fontSize": [
+        "13px",
+        "13px"
+      ],
+      "lineHeight": [
+        "19.5px",
+        "19.5px"
+      ],
+      "letterSpacing": [
+        "normal",
+        "normal"
+      ],
+      "textTransform": [
+        "uppercase",
+        "uppercase"
+      ],
+      "columnGap": [
+        "12px",
+        "12px"
+      ]
+    },
+    "background": "rgb(152, 49, 152)",
+    "links": [
+      {
+        "label": "Català",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      },
+      {
+        "label": "English",
+        "color": "rgb(33, 29, 34)",
+        "background": "rgb(255, 255, 255)",
+        "height": 44,
+        "underline": "2px",
+        "current": true
+      },
+      {
+        "label": "Castellano",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      }
+    ]
+  },
+  {
+    "theme": "dark",
+    "width": 320,
+    "enlarged": true,
+    "overflow": false,
+    "shared": {
+      "fontFamily": [
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      ],
+      "fontSize": [
+        "26px",
+        "26px"
+      ],
+      "lineHeight": [
+        "39px",
+        "39px"
+      ],
+      "letterSpacing": [
+        "normal",
+        "normal"
+      ],
+      "textTransform": [
+        "uppercase",
+        "uppercase"
+      ],
+      "columnGap": [
+        "24px",
+        "24px"
+      ]
+    },
+    "background": "rgb(152, 49, 152)",
+    "links": [
+      {
+        "label": "Català",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      },
+      {
+        "label": "English",
+        "color": "rgb(33, 29, 34)",
+        "background": "rgb(255, 255, 255)",
+        "height": 44,
+        "underline": "2px",
+        "current": true
+      },
+      {
+        "label": "Castellano",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "height": 44,
+        "underline": "1px",
+        "current": false
+      }
+    ]
+  }
+]

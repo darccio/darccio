@@ -1,0 +1,2138 @@
+{
+  "implementation_commit": "20cd362",
+  "base_commit": "769ce9a20fa198c8f47f3959712dabb50b7d539b",
+  "required_checks": {
+    "guarded_generate": "pass",
+    "test": "pass",
+    "check_vanity": "pass",
+    "check_microformats": "pass",
+    "darna": "pass",
+    "SSH_signature": "valid"
+  },
+  "browser_cases": 44,
+  "additional_focused_cases": 12,
+  "axe_violations": 0,
+  "all_styled_page_reflow": {
+    "pages": 92,
+    "cases": 184,
+    "width": 320,
+    "normal_and_200_percent": true,
+    "failures": 0
+  },
+  "browser_results": [
+    {
+      "route": "/",
+      "theme": "light",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/en/",
+      "theme": "light",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/talks/",
+      "theme": "light",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/talks/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/talks/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/posts/",
+      "theme": "light",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/posts/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "es",
+            "href": "/es/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/en/posts/",
+      "theme": "light",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/posts/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "es",
+            "href": "/es/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/es/posts/",
+      "theme": "light",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "es",
+            "href": "/es/posts/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/projects/",
+      "theme": "light",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/projects/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/projects/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/about/",
+      "theme": "light",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/about/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/about/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/contact/",
+      "theme": "light",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/contact/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/contact/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/cv/",
+      "theme": "light",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/cv/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/en/posts/a-new-path/",
+      "theme": "light",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/posts/un-nou-cami/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/posts/a-new-path/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "es",
+            "href": "/es/posts/un-nuevo-camino/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/",
+      "theme": "light",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/en/",
+      "theme": "light",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/talks/",
+      "theme": "light",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/talks/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/talks/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/posts/",
+      "theme": "light",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/posts/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "es",
+            "href": "/es/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/en/posts/",
+      "theme": "light",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/posts/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "es",
+            "href": "/es/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/es/posts/",
+      "theme": "light",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "es",
+            "href": "/es/posts/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/projects/",
+      "theme": "light",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/projects/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/projects/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/about/",
+      "theme": "light",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/about/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/about/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/contact/",
+      "theme": "light",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/contact/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/contact/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/cv/",
+      "theme": "light",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/cv/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/en/posts/a-new-path/",
+      "theme": "light",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/posts/un-nou-cami/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/posts/a-new-path/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "es",
+            "href": "/es/posts/un-nuevo-camino/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/",
+      "theme": "dark",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/en/",
+      "theme": "dark",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/talks/",
+      "theme": "dark",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/talks/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/talks/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/posts/",
+      "theme": "dark",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/posts/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "es",
+            "href": "/es/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/en/posts/",
+      "theme": "dark",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/posts/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "es",
+            "href": "/es/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/es/posts/",
+      "theme": "dark",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "es",
+            "href": "/es/posts/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/projects/",
+      "theme": "dark",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/projects/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/projects/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/about/",
+      "theme": "dark",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/about/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/about/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/contact/",
+      "theme": "dark",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/contact/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/contact/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/cv/",
+      "theme": "dark",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/cv/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/en/posts/a-new-path/",
+      "theme": "dark",
+      "width": 1440,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "0.52px",
+          "textTransform": "uppercase",
+          "columnGap": "24px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/posts/un-nou-cami/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/posts/a-new-path/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "es",
+            "href": "/es/posts/un-nuevo-camino/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/",
+      "theme": "dark",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/en/",
+      "theme": "dark",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/talks/",
+      "theme": "dark",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/talks/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/talks/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/posts/",
+      "theme": "dark",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/posts/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "es",
+            "href": "/es/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/en/posts/",
+      "theme": "dark",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/posts/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "es",
+            "href": "/es/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/es/posts/",
+      "theme": "dark",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/posts/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "es",
+            "href": "/es/posts/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/projects/",
+      "theme": "dark",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/projects/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/projects/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/about/",
+      "theme": "dark",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/about/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/about/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/contact/",
+      "theme": "dark",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/contact/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/contact/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/cv/",
+      "theme": "dark",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/cv/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          }
+        ]
+      }
+    },
+    {
+      "route": "/en/posts/a-new-path/",
+      "theme": "dark",
+      "width": 390,
+      "axe_violations": 0,
+      "skip_and_keyboard_focus": true,
+      "normal_and_200_percent_scroll_widths": [
+        320,
+        320
+      ],
+      "language_menu": {
+        "class": "site-language-nav",
+        "styles": {
+          "fontFamily": "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "fontSize": "13px",
+          "lineHeight": "19.5px",
+          "letterSpacing": "normal",
+          "textTransform": "uppercase",
+          "columnGap": "12px"
+        },
+        "targets": [
+          {
+            "lang": "ca",
+            "href": "/posts/un-nou-cami/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          },
+          {
+            "lang": "en",
+            "href": "/en/posts/a-new-path/",
+            "height": 44,
+            "current": "page",
+            "color": "rgb(33, 29, 34)",
+            "background": "rgb(255, 255, 255)",
+            "underline": "rgb(152, 49, 152)",
+            "underlineWidth": "2px"
+          },
+          {
+            "lang": "es",
+            "href": "/es/posts/un-nuevo-camino/",
+            "height": 44,
+            "current": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "underline": "rgb(255, 255, 255)",
+            "underlineWidth": "1px"
+          }
+        ]
+      }
+    }
+  ],
+  "artifact_sha256": {
+    "feed.xml": "d470b586a68f3aa556bf96ee00a5c3586d42f40c3ac42dd6ed5e09070b4c5023",
+    "en/feed.xml": "a0d64e16504103458aaad98e7ee5eb0ef18bee7556bd62a68e7df8067cc3742b",
+    "es/feed.xml": "8ae62a07b992c946a4427cf04ca343e5453ca74802f39d98ad4fe069e647395b",
+    "CV/MAC.json": "16250f593ebe27634ec552f386355c66b983ce8b90bd3bfc50605e8787ac703f",
+    "static/tokens.css": "291cfee32afbbd76e997550fb5d4dfa6eeb2ef084718661d7d44f6b21f398dc1",
+    "xdr/index.html": "046a5b0448d0a03d23c230edceffdf24e8806d922ec6c07a830a7f4d458d63bb",
+    "errors/index.html": "4dfc138b8708937e23a304e87bb88f73239b2a2fd6542c3a50e941a7e3fa1993",
+    "awaken/index.html": "3e0da1bcc4b982818c81366396a5a2b104194962bd1c977219f8d4569959c074",
+    "cocoon/index.html": "361f3db212d0f923a17caac03a28a8ddd3da9e94995bc58fc7bfeacb2252aa42",
+    "x/index.html": "649842d844ca7f362b018f747dae133b61a7c16c359b43ac47ed004c18ce46b1"
+  },
+  "before_screenshot_method": "Current merged HTML/assets, with only static/styles.css served from merged main before the trial.",
+  "limits": [
+    "The near-black current link uses a white highlight to retain readable contrast on the plum row.",
+    "This follow-up changes only the stylesheet and private review/progress files; page-aware language targets are already merged in PR #32.",
+    "Hosted exact-revision acceptance is recorded in the PR after push; production publication follows owner merge."
+  ]
+}

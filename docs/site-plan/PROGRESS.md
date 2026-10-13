@@ -1010,6 +1010,9 @@ cover eleven page types at 1440px/390px: axe has zero violations, skip links and
 focus work, language targets remain at least 44px and shared navigation type/gaps
 still match. All 92 styled pages pass 320px normal/doubled reflow. The guarded
 `generate` build, `test`, `check-vanity` and `check-microformats` pass with pinned
-Zas v0.0.9. No new tests mirror the CSS and no client scripts are added.
-Commit, screenshots and hosted-preview receipts follow. This is a visual trial
-for owner review; production publication follows owner merge.
+Zas v0.0.9. No client scripts are added.
+The trial is committed as `20cd362`, with Darna passing and its SSH signature
+verified. [Review evidence](../../.github/review/inverted-language-menu/verification.json)
+contains desktop/mobile before/after and dark-mode screenshots plus browser,
+reflow and focused contrast/focus receipts. Hosted exact-revision acceptance
+follows push. Production publication follows owner merge.
