@@ -480,6 +480,11 @@ main h2 {
   font-size: var(--fz-sm);
 }
 
+.archive-year-key {
+  font-family: var(--font-mono);
+  font-size: var(--fz-sm);
+  color: var(--text-muted);
+}
 
 .page-section-nav > ul {
   display: flex;

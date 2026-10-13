@@ -17,11 +17,13 @@ Parlo de programari, drets digitals i de com la tecnologia transforma la societa
 
 <p>Arxiu complet a <a href="https://speakerdeck.com/dario">Speaker Deck</a> i al <a href="https://github.com/darccio/talks">repositori de xerrades</a>.</p>
 
+<p class="archive-year-key">Els anys amb asterisc (*) corresponen als materials o al vídeo, quan no consta l'any de la xerrada.</p>
+
 <section aria-labelledby="programari-i-enginyeria">
   <h2 id="programari-i-enginyeria">Programari i enginyeria</h2>
   <ul class="archive-list">
-    <li class="archive-item is-undated">
-      <span class="archive-item__when is-undated" aria-hidden="true">—</span>
+    <li class="archive-item is-resource-year">
+      <span class="archive-item__when" aria-hidden="true">2026<sup>*</sup></span>
       <div class="archive-item__body">
         <h3 class="archive-item__title"><span class="archive-item__name" lang="ca">De filadors de codi a teixidors de sistemes</span>
           <span class="lang-tag" aria-hidden="true">ca</span>
@@ -31,7 +33,7 @@ Parlo de programari, drets digitals i de com la tecnologia transforma la societa
             <li><a data-kind="materials" href="https://github.com/darccio/talks/blob/main/ai/programacio-automatica/slides.md">Materials<span class="visually-hidden">: <span lang="ca">De filadors de codi a teixidors de sistemes</span></span></a></li>
           </ul>
         </div>
-        <p class="archive-item__note">La revolució industrial del programari.</p>
+        <p class="archive-item__note">La revolució industrial del programari. Materials preparats el 2026.</p>
       </div>
     </li>
     <li class="archive-item h-event">
@@ -65,14 +67,14 @@ Parlo de programari, drets digitals i de com la tecnologia transforma la societa
         </div>
       </div>
     </li>
-    <li class="archive-item is-undated">
-      <span class="archive-item__when is-undated" aria-hidden="true">—</span>
+    <li class="archive-item">
+      <span class="archive-item__when" aria-hidden="true">2021</span>
       <div class="archive-item__body">
         <h3 class="archive-item__title"><span class="archive-item__name" lang="en">Oops — I broke Docker</span>
           <span class="lang-tag" aria-hidden="true">en</span>
           <span class="visually-hidden"> (en anglès)</span></h3>
         <div class="archive-item__line">
-          <p class="archive-item__meta">GoDevNet</p>
+          <p class="archive-item__meta">GoDevNet · 2021</p>
           <ul class="archive-item__links">
             <li><a data-kind="video" href="https://www.youtube.com/watch?v=kx1ycW4YGqQ">Vídeo<span class="visually-hidden">: <span lang="en">Oops — I broke Docker</span></span></a></li>
             <li><a data-kind="materials" href="https://github.com/darccio/talks/blob/main/go/mergo/index.slide">Materials<span class="visually-hidden">: <span lang="en">Oops — I broke Docker</span></span></a></li>
@@ -138,8 +140,8 @@ Parlo de programari, drets digitals i de com la tecnologia transforma la societa
         </div>
       </div>
     </li>
-    <li class="archive-item is-undated">
-      <span class="archive-item__when is-undated" aria-hidden="true">—</span>
+    <li class="archive-item is-resource-year">
+      <span class="archive-item__when" aria-hidden="true">2020<sup>*</sup></span>
       <div class="archive-item__body">
         <h3 class="archive-item__title"><span class="archive-item__name" lang="en">Introduction to cloud computing</span>
           <span class="lang-tag" aria-hidden="true">en</span>
@@ -150,6 +152,7 @@ Parlo de programari, drets digitals i de com la tecnologia transforma la societa
             <li><a data-kind="materials" href="https://github.com/darccio/talks/blob/main/cloud-computing/presentation.md">Materials<span class="visually-hidden">: <span lang="en">Introduction to cloud computing</span></span></a></li>
           </ul>
         </div>
+        <p class="archive-item__note">Materials publicats el 2020.</p>
       </div>
     </li>
     <li class="archive-item h-event">
@@ -174,8 +177,8 @@ Parlo de programari, drets digitals i de com la tecnologia transforma la societa
 <section aria-labelledby="tecnologia-cultura-i-política">
   <h2 id="tecnologia-cultura-i-política">Tecnologia, cultura i política</h2>
   <ul class="archive-list">
-    <li class="archive-item is-undated">
-      <span class="archive-item__when is-undated" aria-hidden="true">—</span>
+    <li class="archive-item is-resource-year">
+      <span class="archive-item__when" aria-hidden="true">2023<sup>*</sup></span>
       <div class="archive-item__body">
         <h3 class="archive-item__title"><span class="archive-item__name" lang="ca">Autodefensa digital: què podem fer per evitar que ens espiïn?</span>
           <span class="lang-tag" aria-hidden="true">ca</span>
@@ -186,10 +189,11 @@ Parlo de programari, drets digitals i de com la tecnologia transforma la societa
             <li><a data-kind="materials" href="https://github.com/darccio/talks/blob/main/digital-rights/digital-selfdefense/main.slide">Materials<span class="visually-hidden">: <span lang="ca">Autodefensa digital: què podem fer per evitar que ens espiïn?</span></span></a></li>
           </ul>
         </div>
+        <p class="archive-item__note">Vídeo publicat el 2023.</p>
       </div>
     </li>
-    <li class="archive-item is-undated">
-      <span class="archive-item__when is-undated" aria-hidden="true">—</span>
+    <li class="archive-item is-resource-year">
+      <span class="archive-item__when" aria-hidden="true">2022<sup>*</sup></span>
       <div class="archive-item__body">
         <h3 class="archive-item__title"><span class="archive-item__name" lang="ca">Últim informe sobre Pegasus: la punta d'un iceberg</span>
           <span class="lang-tag" aria-hidden="true">ca</span>
@@ -199,16 +203,17 @@ Parlo de programari, drets digitals i de com la tecnologia transforma la societa
             <li><a data-kind="video" href="https://www.youtube.com/watch?v=nHOYr44l3c8">Vídeo<span class="visually-hidden">: <span lang="ca">Últim informe sobre Pegasus: la punta d'un iceberg</span></span></a></li>
           </ul>
         </div>
-        <p class="archive-item__note">Amb Josep Jover.</p>
+        <p class="archive-item__note">Amb Josep Jover. Vídeo publicat el 2022.</p>
       </div>
     </li>
-    <li class="archive-item is-undated">
-      <span class="archive-item__when is-undated" aria-hidden="true">—</span>
+    <li class="archive-item">
+      <span class="archive-item__when" aria-hidden="true">2021</span>
       <div class="archive-item__body">
         <h3 class="archive-item__title"><span class="archive-item__name" lang="es">Libertad para compartir — esLibre 2021</span>
           <span class="lang-tag" aria-hidden="true">es</span>
           <span class="visually-hidden"> (en castellà)</span></h3>
         <div class="archive-item__line">
+          <p class="archive-item__meta">Congreso esLibre · 2021</p>
           <ul class="archive-item__links">
             <li><a data-kind="video" href="https://commons.wikimedia.org/wiki/File:EsLibre_2021_P31_-_Dario_Casta%C3%B1%C3%A9_-_Libertad_para_compartir.webm">Vídeo<span class="visually-hidden">: <span lang="es">Libertad para compartir — esLibre 2021</span></span></a></li>
             <li><a data-kind="slides" href="https://speakerdeck.com/dario/libertad-para-compartir">Diapositives<span class="visually-hidden">: <span lang="es">Libertad para compartir — esLibre 2021</span></span></a></li>
@@ -217,13 +222,14 @@ Parlo de programari, drets digitals i de com la tecnologia transforma la societa
         </div>
       </div>
     </li>
-    <li class="archive-item is-undated">
-      <span class="archive-item__when is-undated" aria-hidden="true">—</span>
+    <li class="archive-item">
+      <span class="archive-item__when" aria-hidden="true">2021</span>
       <div class="archive-item__body">
         <h3 class="archive-item__title"><span class="archive-item__name" lang="es">Libertad para compartir — World.Party2K21</span>
           <span class="lang-tag" aria-hidden="true">es</span>
           <span class="visually-hidden"> (en castellà)</span></h3>
         <div class="archive-item__line">
+          <p class="archive-item__meta">World.Party2K21 · 2021</p>
           <ul class="archive-item__links">
             <li><a data-kind="video" href="https://www.youtube.com/watch?v=HOAPwBl0GiI">Fragment<span class="visually-hidden">: <span lang="es">Libertad para compartir — World.Party2K21</span></span></a></li>
             <li><a data-kind="materials" href="https://github.com/darccio/talks/blob/main/digital-rights/freedom-to-share-eci/presentation.md">Materials<span class="visually-hidden">: <span lang="es">Libertad para compartir — World.Party2K21</span></span></a></li>
@@ -275,8 +281,8 @@ Parlo de programari, drets digitals i de com la tecnologia transforma la societa
         </div>
       </div>
     </li>
-    <li class="archive-item is-undated">
-      <span class="archive-item__when is-undated" aria-hidden="true">—</span>
+    <li class="archive-item is-resource-year">
+      <span class="archive-item__when" aria-hidden="true">2020<sup>*</sup></span>
       <div class="archive-item__body">
         <h3 class="archive-item__title"><span class="archive-item__name" lang="es">Blockchain para todo el mundo</span>
           <span class="lang-tag" aria-hidden="true">es</span>
@@ -287,10 +293,11 @@ Parlo de programari, drets digitals i de com la tecnologia transforma la societa
             <li><a data-kind="materials" href="https://github.com/darccio/talks/blob/main/blockchain/presentation.md">Materials<span class="visually-hidden">: <span lang="es">Blockchain para todo el mundo</span></span></a></li>
           </ul>
         </div>
+        <p class="archive-item__note">Materials preparats el 2020.</p>
       </div>
     </li>
-    <li class="archive-item is-undated">
-      <span class="archive-item__when is-undated" aria-hidden="true">—</span>
+    <li class="archive-item is-resource-year">
+      <span class="archive-item__when" aria-hidden="true">2019<sup>*</sup></span>
       <div class="archive-item__body">
         <h3 class="archive-item__title"><span class="archive-item__name" lang="ca">Autodefensa digital</span>
           <span class="lang-tag" aria-hidden="true">ca</span>
@@ -301,6 +308,7 @@ Parlo de programari, drets digitals i de com la tecnologia transforma la societa
             <li><a data-kind="materials" href="https://github.com/darccio/autodefensa-digital/blob/master/presentation.md">Materials<span class="visually-hidden">: <span lang="ca">Autodefensa digital</span></span></a></li>
           </ul>
         </div>
+        <p class="archive-item__note">Materials publicats el 2019.</p>
       </div>
     </li>
     <li class="archive-item">
@@ -331,8 +339,8 @@ Parlo de programari, drets digitals i de com la tecnologia transforma la societa
         </div>
       </div>
     </li>
-    <li class="archive-item is-undated">
-      <span class="archive-item__when is-undated" aria-hidden="true">—</span>
+    <li class="archive-item is-resource-year">
+      <span class="archive-item__when" aria-hidden="true">2018<sup>*</sup></span>
       <div class="archive-item__body">
         <h3 class="archive-item__title"><span class="archive-item__name" lang="es">Blockchain en 10 minutos</span>
           <span class="lang-tag" aria-hidden="true">es</span>
@@ -343,6 +351,7 @@ Parlo de programari, drets digitals i de com la tecnologia transforma la societa
             <li><a data-kind="slides" href="https://speakerdeck.com/dario/blockchain-en-10-minutos">Diapositives<span class="visually-hidden">: <span lang="es">Blockchain en 10 minutos</span></span></a></li>
           </ul>
         </div>
+        <p class="archive-item__note">Materials publicats el 2018.</p>
       </div>
     </li>
     <li class="archive-item h-event">
@@ -387,14 +396,14 @@ Parlo de programari, drets digitals i de com la tecnologia transforma la societa
         </div>
       </div>
     </li>
-    <li class="archive-item is-undated">
-      <span class="archive-item__when is-undated" aria-hidden="true">—</span>
+    <li class="archive-item">
+      <span class="archive-item__when" aria-hidden="true">2016</span>
       <div class="archive-item__body">
         <h3 class="archive-item__title"><span class="archive-item__name" lang="ca">Municipi i tecnologia: on som i futurs possibles</span>
           <span class="lang-tag" aria-hidden="true">ca</span>
           <span class="visually-hidden"> (en català)</span></h3>
         <div class="archive-item__line">
-          <p class="archive-item__meta">Congrés de Sobirania Tecnològica</p>
+          <p class="archive-item__meta">Congrés de Sobirania Tecnològica · 2016</p>
           <ul class="archive-item__links">
             <li><a data-kind="video" href="https://www.youtube.com/watch?v=QU4UebYxay4">Vídeo<span class="visually-hidden">: <span lang="ca">Municipi i tecnologia: on som i futurs possibles</span></span></a></li>
             <li><a data-kind="slides" href="https://speakerdeck.com/dario/municipi-i-tecnologia-on-som-i-futurs-possibles">Diapositives<span class="visually-hidden">: <span lang="ca">Municipi i tecnologia: on som i futurs possibles</span></span></a></li>
@@ -402,8 +411,8 @@ Parlo de programari, drets digitals i de com la tecnologia transforma la societa
         </div>
       </div>
     </li>
-    <li class="archive-item is-undated">
-      <span class="archive-item__when is-undated" aria-hidden="true">—</span>
+    <li class="archive-item is-resource-year">
+      <span class="archive-item__when" aria-hidden="true">2016<sup>*</sup></span>
       <div class="archive-item__body">
         <h3 class="archive-item__title"><span class="archive-item__name" lang="es">Gobierno abierto, transparencia y participación</span>
           <span class="lang-tag" aria-hidden="true">es</span>
@@ -414,30 +423,31 @@ Parlo de programari, drets digitals i de com la tecnologia transforma la societa
             <li><a data-kind="video" href="https://www.youtube.com/watch?v=O6K7Lby1cPI">Vídeo<span class="visually-hidden">: <span lang="es">Gobierno abierto, transparencia y participación</span></span></a></li>
           </ul>
         </div>
+        <p class="archive-item__note">Vídeo publicat el 2016.</p>
       </div>
     </li>
-    <li class="archive-item is-undated">
-      <span class="archive-item__when is-undated" aria-hidden="true">—</span>
+    <li class="archive-item">
+      <span class="archive-item__when" aria-hidden="true">2014</span>
       <div class="archive-item__body">
         <h3 class="archive-item__title"><span class="archive-item__name" lang="ca">Pot la tecnologia regenerar la democràcia?</span>
           <span class="lang-tag" aria-hidden="true">ca</span>
           <span class="visually-hidden"> (en català)</span></h3>
         <div class="archive-item__line">
-          <p class="archive-item__meta">IV Jornada Pirata</p>
+          <p class="archive-item__meta">IV Jornada Pirata · 2014</p>
           <ul class="archive-item__links">
             <li><a data-kind="slides" href="https://speakerdeck.com/dario/pot-la-tecnologia-regenerar-la-democracia">Diapositives<span class="visually-hidden">: <span lang="ca">Pot la tecnologia regenerar la democràcia?</span></span></a></li>
           </ul>
         </div>
       </div>
     </li>
-    <li class="archive-item is-undated">
-      <span class="archive-item__when is-undated" aria-hidden="true">—</span>
+    <li class="archive-item">
+      <span class="archive-item__when" aria-hidden="true">2014</span>
       <div class="archive-item__body">
         <h3 class="archive-item__title"><span class="archive-item__name" lang="es">Techno Politics</span>
           <span class="lang-tag" aria-hidden="true">es</span>
           <span class="visually-hidden"> (en castellà)</span></h3>
         <div class="archive-item__line">
-          <p class="archive-item__meta">1r Festival Cyberpunk de Barcelona</p>
+          <p class="archive-item__meta">1r Festival Cyberpunk de Barcelona · 2014</p>
           <ul class="archive-item__links">
             <li><a data-kind="video" href="https://www.youtube.com/watch?v=53j9SXWMAu0">Vídeo<span class="visually-hidden">: <span lang="es">Techno Politics</span></span></a></li>
             <li><a data-kind="slides" href="https://speakerdeck.com/dario/techno-politics">Diapositives<span class="visually-hidden">: <span lang="es">Techno Politics</span></span></a></li>
@@ -445,8 +455,8 @@ Parlo de programari, drets digitals i de com la tecnologia transforma la societa
         </div>
       </div>
     </li>
-    <li class="archive-item is-undated">
-      <span class="archive-item__when is-undated" aria-hidden="true">—</span>
+    <li class="archive-item is-resource-year">
+      <span class="archive-item__when" aria-hidden="true">2014<sup>*</sup></span>
       <div class="archive-item__body">
         <h3 class="archive-item__title"><span class="archive-item__name" lang="ca">#EuropaPirata — Presentació de candidatura Pirates de Catalunya</span>
           <span class="lang-tag" aria-hidden="true">ca</span>
@@ -456,6 +466,7 @@ Parlo de programari, drets digitals i de com la tecnologia transforma la societa
             <li><a data-kind="slides" href="https://speakerdeck.com/dario/number-europapirata-presentacio-de-candidatura-pirates-de-catalunya">Diapositives<span class="visually-hidden">: <span lang="ca">#EuropaPirata — Presentació de candidatura Pirates de Catalunya</span></span></a></li>
           </ul>
         </div>
+        <p class="archive-item__note">Materials publicats el 2014.</p>
       </div>
     </li>
     <li class="archive-item h-event">

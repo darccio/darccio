@@ -748,3 +748,19 @@ resume validation remains unchanged. Full tests, guarded build, CV microformats,
 JSON byte checks and all four CV browser scenarios pass. CV crawler/publishing
 exclusions and email_off boundaries remain intact. Full body/source content is
 retained; this is a layout change, not a shortened resume.
+
+### Talk-year evidence
+
+All 15 previously missing year rails are filled from primary linked materials,
+videos and organiser sources: six verified event years and nine preparation or
+publication years. The latter carry a visible asterisk, an explanatory page
+legend, and row notes identifying materials or video publication/preparation.
+Those resource years never become dt-start values. The evidence receipt records
+each source, confidence and limits. Existing 31 appearances/order and all resource
+destinations remain, and the ten established complete h-events retain their exact
+name/start/location/url values. No full calendar date or venue is invented.
+The source file and notes preserve every distinct esLibre/World.Party,
+Autodefensa, Mergo and disruptive-technology appearance. Guarded generation,
+microformats, repository tests and the final browser matrix pass. These newly
+shown years are distinguishable from verified event dates in both wide and
+narrow layouts; each resource note remains visible when the year rail is hidden.
