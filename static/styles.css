@@ -280,14 +280,27 @@ body > header {
 }
 
 .site-logo {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  max-width: 100%;
   vertical-align: top;
+  color: var(--text);
+  font-family: var(--font-serif);
+  font-size: var(--fz-xl);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
 }
 
 .site-logo img {
   display: block;
-  width: 4rem;
+  flex: none;
+  width: clamp(2.5rem, 10vw, 4rem);
   margin: 0;
+}
+
+.site-logo__name {
+  min-width: 0;
 }
 
 .primary-navigation {

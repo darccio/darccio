@@ -103,7 +103,8 @@
 <a class="skip-link" href="#main-content" lang="{{$language}}">{{.E "skip-content"}}</a>
 <header>
     <a class="site-logo" href="/">
-        <img src="/static/_.png" width="64" height="64" alt='{{.E "home"}}' decoding="async">
+        <img src="/static/_.png" width="64" height="64" alt="" decoding="async">
+        <span class="site-logo__name">{{.Extra "/site/title"}}</span>
     </a>
     {{if not (index .Page "representative_hcard")}}
     <div class="h-card" hidden>

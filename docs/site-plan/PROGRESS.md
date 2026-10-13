@@ -788,3 +788,16 @@ The review evidence is committed as `dfb8dbb`. Review is open in
 record the hosted preview and exact-revision results separately from the local
 evidence above. The supplied PDF and unpublished planning files remain absent
 from the deploy. Production remains dependent on owner merge.
+
+### Header branding feedback
+
+The owner requested their name alongside the logo. One root-relative home link
+now combines the decorative logo and visible Dario Castañé in Newsreader.
+The separate hidden identity card and representative homepage card remain
+unchanged; the brand span does not introduce extra microformat name properties.
+Responsive sizing and a shrinkable text span retain readable branding at narrow
+and enlarged-text widths. Guarded generation, full repository tests, vanity and
+metadata/format checks pass. Four focused 320px checks plus the complete 44-case
+browser matrix pass in light/dark with normal/200% reflow and visible keyboard
+focus; all 75 styled pages pass the wider overflow check. Hosted acceptance
+follows the updated [PR #29](https://github.com/darccio/darccio/pull/29).
