@@ -327,11 +327,26 @@ body > header {
 }
 
 .primary-navigation > a[aria-current="page"],
-.archive-language-nav > a[aria-current="page"] {
+.archive-language-nav > a[aria-current="page"],
+.site-language-nav > a[aria-current="true"] {
   color: var(--text);
   font-weight: var(--weight-medium);
   text-decoration-color: var(--rule-accent);
   text-decoration-thickness: var(--rule-weight);
+}
+
+.site-language-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--fz-sm);
+}
+
+.site-language-nav > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-comfortable);
 }
 
 @media (max-width: 34rem) {

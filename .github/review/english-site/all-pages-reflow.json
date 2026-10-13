@@ -1,0 +1,1505 @@
+[
+  {
+    "route": "/README.html",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/README.html",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/about/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/about/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/ai/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/ai/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/blogroll/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/blogroll/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/changelog/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/changelog/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/colophon/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/colophon/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/contact/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/contact/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/contact.html",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/contact.html",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/cv/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/cv/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/darna/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/darna/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/elsewhere/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/elsewhere/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/about/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/about/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/ai/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/ai/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/blogroll/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/blogroll/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/changelog/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/changelog/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/colophon/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/colophon/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/contact/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/contact/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/elsewhere/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/elsewhere/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/feeds/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/feeds/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/hello/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/hello/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/languages/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/languages/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/now/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/now/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/posts/a-new-path/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/posts/a-new-path/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/posts/deciwave/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/posts/deciwave/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/posts/delete-facebook/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/posts/delete-facebook/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/posts/delete-facebook-1/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/posts/delete-facebook-1/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/posts/delete-facebook-2/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/posts/delete-facebook-2/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/posts/geekvana/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/posts/geekvana/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/posts/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/posts/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/posts/introduction-liquid-organizations/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/posts/introduction-liquid-organizations/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/posts/monitoring-synology-nas-with-datadog/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": [
+      {
+        "tag": "CODE",
+        "class": "",
+        "text": "services:\n  datadog-agent:\n    image: datadog/agent:7\n    co"
+      }
+    ]
+  },
+  {
+    "route": "/en/posts/monitoring-synology-nas-with-datadog/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": [
+      {
+        "tag": "CODE",
+        "class": "",
+        "text": "services:\n  datadog-agent:\n    image: datadog/agent:7\n    co"
+      }
+    ]
+  },
+  {
+    "route": "/en/posts/portal-between-ruby-and-go/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/posts/portal-between-ruby-and-go/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/projects/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/projects/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/slashes/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/slashes/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/sponsor/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/sponsor/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/talks/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": [
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "De filadors de codi a teixidors de sistemes"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Orchestrion: Automatic compile-time instrumentation of Go co"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Orchestrion: Automatic compile-time instrumentation of Go co"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Genéricos: ¿A dónde vamos desde aquí?"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Genéricos: ¿A dónde vamos desde aquí?"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Creació i conseqüències de la creació d'una llibreria que és"
+      }
+    ]
+  },
+  {
+    "route": "/en/talks/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": [
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "De filadors de codi a teixidors de sistemes"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Orchestrion: Automatic compile-time instrumentation of Go co"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Orchestrion: Automatic compile-time instrumentation of Go co"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Genéricos: ¿A dónde vamos desde aquí?"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Genéricos: ¿A dónde vamos desde aquí?"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Oops — I broke Docker"
+      }
+    ]
+  },
+  {
+    "route": "/en/uses/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/en/uses/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/blockchain-si-o-no/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/blockchain-si-o-no/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/delete-facebook/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/delete-facebook/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/delete-facebook-1/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/delete-facebook-1/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/delete-facebook-2/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/delete-facebook-2/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/diez-cosas-no-deberias-hacer-en-facebook/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/diez-cosas-no-deberias-hacer-en-facebook/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/introduccion-organizaciones-liquidas/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/introduccion-organizaciones-liquidas/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/manifiesto-acampada-sol/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/manifiesto-acampada-sol/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/manifiesto-red-neutral/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/manifiesto-red-neutral/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/pequena-reflexion/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/pequena-reflexion/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/porque-deberias-temer-facebook/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/porque-deberias-temer-facebook/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/tejiendo-el-cambio/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/tejiendo-el-cambio/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/un-nuevo-camino/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/es/posts/un-nuevo-camino/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/feeds/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/feeds/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/hello/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/hello/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/languages/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/languages/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/lyd/README.html",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/lyd/README.html",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/lyd/delegation/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/lyd/delegation/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/lyd/flow/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/lyd/flow/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/lyd/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/lyd/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/lyd/nexus/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/lyd/nexus/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/mergo/faq/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/mergo/faq/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": [
+      {
+        "tag": "CODE",
+        "class": "language-go",
+        "text": "func ExampleMerge_mapStructValues() {\n\ttype Item struct {\n\t\t"
+      },
+      {
+        "tag": "CODE",
+        "class": "language-go",
+        "text": "func ExampleMerge_nestedMaps() {\n\tdst := map[string]map[stri"
+      },
+      {
+        "tag": "CODE",
+        "class": "language-go",
+        "text": "func ExampleMerge_aliasing() {\n\ttype Config struct {\n\t\tNames"
+      },
+      {
+        "tag": "CODE",
+        "class": "language-go",
+        "text": "func ExampleMap() {\n\ttype Config struct {\n\t\tHost string\n\t\tPo"
+      }
+    ]
+  },
+  {
+    "route": "/mergo/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/mergo/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": [
+      {
+        "tag": "CODE",
+        "class": "language-go",
+        "text": "func ExampleMerge_defaults() {\n\ttype Config struct {\n\t\tHost "
+      }
+    ]
+  },
+  {
+    "route": "/mergo/migration/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/mergo/migration/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/mergo/options/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/mergo/options/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": [
+      {
+        "tag": "CODE",
+        "class": "language-go",
+        "text": "func ExampleMerge_emptyValues() {\n\ttype Config struct {\n\t\tEn"
+      },
+      {
+        "tag": "CODE",
+        "class": "language-go",
+        "text": "func ExampleMerge_mapOverwrite() {\n\tdst := map[string]int{\"r"
+      },
+      {
+        "tag": "CODE",
+        "class": "language-go",
+        "text": "func ExampleMerge_emptySlice() {\n\ttype Config struct{ Names "
+      },
+      {
+        "tag": "CODE",
+        "class": "language-go",
+        "text": "func ExampleMerge_appendSlice() {\n\tdst := []string{\"local\", "
+      },
+      {
+        "tag": "CODE",
+        "class": "language-go",
+        "text": "func ExampleMerge_sliceDeepCopy() {\n\ttype Item struct{ Name "
+      },
+      {
+        "tag": "CODE",
+        "class": "language-go",
+        "text": "func ExampleMerge_pointerDefaults() {\n\ttype Config struct{ E"
+      }
+    ]
+  },
+  {
+    "route": "/mergo/transformers/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/mergo/transformers/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": [
+      {
+        "tag": "CODE",
+        "class": "language-go",
+        "text": "type docsTimeTransformer struct {\n\tOverwrite bool\n}\n\nfunc (t"
+      },
+      {
+        "tag": "CODE",
+        "class": "language-go",
+        "text": "func ExampleMerge_timeTransformer() {\n\ttype Snapshot struct{"
+      },
+      {
+        "tag": "CODE",
+        "class": "language-go",
+        "text": "type docsPort int\n\nvar errDocsPort = errors.New(\"port must b"
+      },
+      {
+        "tag": "CODE",
+        "class": "language-go",
+        "text": "func ExampleMerge_transformerError() {\n\ttype Config struct {"
+      }
+    ]
+  },
+  {
+    "route": "/now/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/now/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/ca/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/ca/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/delete-facebook/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/delete-facebook/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/delete-facebook-1/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/delete-facebook-1/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/delete-facebook-2/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/delete-facebook-2/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/delete-facebook-3/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/delete-facebook-3/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/manifest-assemblees-constituents-contrapoder/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/manifest-assemblees-constituents-contrapoder/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/perque-temer-facebook/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/perque-temer-facebook/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/pseudo-estat/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/pseudo-estat/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/renda-basica/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/renda-basica/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/un-nou-cami/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/posts/un-nou-cami/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/projects/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/projects/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/references/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/references/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/rizoma/001/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/rizoma/001/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/rizoma/002/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/rizoma/002/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/rizoma/003/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/rizoma/003/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/rizoma/004/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/rizoma/004/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/rizoma/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/rizoma/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/slashes/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/slashes/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/sponsor/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/sponsor/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/talks/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": [
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "De filadors de codi a teixidors de sistemes"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Orchestrion: Automatic compile-time instrumentation of Go co"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Orchestrion: Automatic compile-time instrumentation of Go co"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Genéricos: ¿A dónde vamos desde aquí?"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Genéricos: ¿A dónde vamos desde aquí?"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Creació i conseqüències de la creació d'una llibreria que és"
+      }
+    ]
+  },
+  {
+    "route": "/talks/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": [
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "De filadors de codi a teixidors de sistemes"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Orchestrion: Automatic compile-time instrumentation of Go co"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Orchestrion: Automatic compile-time instrumentation of Go co"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Genéricos: ¿A dónde vamos desde aquí?"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Genéricos: ¿A dónde vamos desde aquí?"
+      },
+      {
+        "tag": "SPAN",
+        "class": "",
+        "text": "Oops — I broke Docker"
+      }
+    ]
+  },
+  {
+    "route": "/uses/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/uses/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/zas/configuration/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/zas/configuration/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/zas/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/zas/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/zas/publishing/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/zas/publishing/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/zas/templates/",
+    "doubled": false,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  },
+  {
+    "route": "/zas/templates/",
+    "doubled": true,
+    "width": 320,
+    "scroll": 320,
+    "offenders": []
+  }
+]

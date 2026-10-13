@@ -79,6 +79,9 @@ func Build(ctx context.Context, options Options) error {
 	}
 	if !changelogUpdated.IsZero() {
 		docs.LastMod["changelog/index.html"] = changelogUpdated
+		if _, err := os.Stat(filepath.Join(stage, "en", changelogSource)); err == nil {
+			docs.LastMod["en/changelog/index.html"] = changelogUpdated
+		}
 	}
 	gitDir, err := gitOutput(ctx, root, "rev-parse", "--absolute-git-dir")
 	if err != nil {

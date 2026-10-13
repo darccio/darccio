@@ -828,3 +828,57 @@ new Catalan view at desktop/mobile widths. Updated evidence records 44 browser
 cases, 75 styled pages and 80 total HTML routes, retaining all 79 prior routes.
 Hosted verification follows push and is recorded in PR #29 separately from
 these local receipts. Production remains dependent on owner merge.
+
+### English personal site
+
+The owner requested a translated English homepage and English article navigation.
+Seventeen English pages now cover the homepage, biography, current work, projects,
+talks, contact, hello, feeds, slash index, colophon, AI policy, languages, profiles,
+sponsorship, tools, reading and generated changelog. The nine existing English
+articles remain the English archive; historical articles are not newly translated.
+Catalan remains the root/default language, with Spanish article URLs retained.
+
+The shared header brand, primary navigation and footer use the translated English
+routes whenever the page language is English. Articles defaults to `/en/posts/`.
+The inherited posts navigation key now lives in `en/posts/.zas.yml`, so auxiliary
+English pages do not incorrectly select Articles. A static Català/English switch
+links the two homepages. Existing CV and project guides are already English and
+keep their established root URLs, as do licences, feeds and identity identifiers.
+The translated homepage/about cards retain the canonical root personal UID.
+
+Two implementation subagents translated and reviewed the public source material.
+Dates, roles, activity, project names and external resources were copied from the
+existing public pages. All 31 talk titles, 46 external links and ten complete event
+tuples remain exact; language cues identify preserved Catalan/Spanish names.
+English contact embeds are restricted to the new reviewed literal partial. The
+English agent corpus explicitly includes the translated Markdown pages; the CV
+remains outside it. The changelog renders the same bounded Git history with an
+English introduction, preserving original commit messages and escaping.
+
+Guarded generation, the full repository test suite, vanity and microformats gates
+pass. New negative fixtures reject incorrect English language, root/production
+navigation, incorrect section selection, personal UID drift and unreviewed embeds.
+The assembled sitemap has 17 reciprocal Catalan/English translation pairs. All
+80 prior HTML routes remain, with 17 additions; feeds, CV JSON, tokens and five raw
+vanity fragments remain byte-identical to the merged PR #29 baseline. Local
+browser checks pass in 112 cases over 28 routes: axe has zero violations in both
+themes at desktop/mobile widths, skip links and keyboard focus work, and 320px
+normal/200% text reflow passes. All 92 styled pages pass the wider reflow check.
+Commit, review artifacts, hosted preview and exact-revision CI receipts follow;
+production publication requires owner merge.
+
+The complete translation and its regression checks are committed as `c9f2c76`.
+Darna and signing verification pass; no hooks were bypassed. Final talk-language
+review adds four passing focused browser cases to the 112-case matrix. Twenty-five
+real navigation clicks retain the local/preview origin, including English-home
+branding and writing links, Catalan/English switching and shared CV/docs resources.
+[Review evidence](../../.github/review/english-site/verification.json) includes six
+desktop/mobile screenshots, browser/reflow/navigation reports and the unchanged
+artifact hashes. Hosted acceptance is recorded separately after push.
+
+The review evidence is committed as `5444f35`; implementation and evidence commits
+have verified SSH signatures. [PR #30](https://github.com/darccio/darccio/pull/30)
+contains the English-site change, screenshots and source/check receipts. Its
+[checks](https://github.com/darccio/darccio/pull/30/checks) and PR acceptance receipt
+record the deployed preview and exact-head results. No owner facts or account
+settings are needed for this translation; publication follows owner merge.

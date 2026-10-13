@@ -39,11 +39,17 @@ func TestChangelogOptionalStagedGeneration(t *testing.T) {
 	}
 	put(t, root, changelogSource, changelogFixture)
 	put(t, stage, changelogSource, changelogFixture)
+	english := strings.Replace(changelogFixture, "Changes", "Site changes", 1)
+	put(t, stage, "en/"+changelogSource, english)
 	updated, err := prepareChangelog(context.Background(), root, stage)
 	if err != nil || updated.Format(time.RFC3339) != "2026-10-11T12:00:00+02:00" {
 		t.Fatalf("staged generation: %v %v", updated, err)
 	}
 	first := readMarkdownDiscoveryFile(t, stage, changelogSource)
+	translated := readMarkdownDiscoveryFile(t, stage, "en/"+changelogSource)
+	if !bytes.Equal(first, bytes.Replace(translated, []byte("Site changes"), []byte("Changes"), 1)) {
+		t.Fatal("English changelog changed history, dates or escaping")
+	}
 	if bytes.Count(first, []byte(`<ol class="site-changelog">`)) != 1 {
 		t.Fatal("generated commit list lacks its scoped text-wrapping class")
 	}
@@ -57,11 +63,15 @@ func TestChangelogOptionalStagedGeneration(t *testing.T) {
 		t.Fatal("tracked page source was modified")
 	}
 	put(t, stage, changelogSource, changelogFixture)
+	put(t, stage, "en/"+changelogSource, english)
 	if _, err := prepareChangelog(context.Background(), root, stage); err != nil {
 		t.Fatal(err)
 	}
 	if !bytes.Equal(first, readMarkdownDiscoveryFile(t, stage, changelogSource)) {
 		t.Fatal("identical history changed output bytes")
+	}
+	if !bytes.Equal(translated, readMarkdownDiscoveryFile(t, stage, "en/"+changelogSource)) {
+		t.Fatal("identical history changed English output bytes")
 	}
 }
 
