@@ -1023,3 +1023,9 @@ normal/200% reflow. Feeds, CV JSON, tokens and raw vanity fragments retain their
 hashes. Superseded language-row screenshots are replaced in the final PR tree.
 [PR #33](https://github.com/darccio/darccio/pull/33) now describes the main menu;
 its exact-head checks and hosted acceptance receipt follow after push.
+
+The corrected review evidence is committed as `88ac713`; it replaces the
+superseded language-row artifacts with main-navigation screenshots and checks.
+Both correction commits have verified SSH signatures. The final PR title and
+description refer to the general menu. Hosted exact-head acceptance is recorded
+in the PR receipt before owner merge.

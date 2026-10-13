@@ -718,5 +718,7 @@
     "The dark current main-navigation link uses a white highlight for readable contrast and retains its plum underline.",
     "Only the main navigation is inverted; the language menu retains plain styling and its merged translated-page destinations.",
     "Hosted exact-revision acceptance is recorded in PR #33 after push; production publication follows owner merge."
-  ]
+  ],
+  "review_commit": "88ac713",
+  "pr_url": "https://github.com/darccio/darccio/pull/33"
 }
