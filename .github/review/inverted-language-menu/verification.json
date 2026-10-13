@@ -2134,5 +2134,7 @@
     "The near-black current link uses a white highlight to retain readable contrast on the plum row.",
     "This follow-up changes only the stylesheet and private review/progress files; page-aware language targets are already merged in PR #32.",
     "Hosted exact-revision acceptance is recorded in the PR after push; production publication follows owner merge."
-  ]
+  ],
+  "review_commit": "a4489ec",
+  "pr_url": "https://github.com/darccio/darccio/pull/33"
 }

@@ -1016,3 +1016,8 @@ verified. [Review evidence](../../.github/review/inverted-language-menu/verifica
 contains desktop/mobile before/after and dark-mode screenshots plus browser,
 reflow and focused contrast/focus receipts. Hosted exact-revision acceptance
 follows push. Production publication follows owner merge.
+
+The inverted-row review evidence is committed as `a4489ec`; both implementation
+and evidence commits have verified SSH signatures. [PR #33](https://github.com/darccio/darccio/pull/33)
+provides the visual trial and light/dark screenshots. Its [checks](https://github.com/darccio/darccio/pull/33/checks)
+and acceptance comment record the final hosted revision and preview.
