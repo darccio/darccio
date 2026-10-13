@@ -2,7 +2,7 @@
 tags: [ "facebook", "social networks" ]
 date_created: 2018-04-01T16:53:15+02:00
 series: [ "Delete Facebook" ]
-images: [ "/images/delete-facebook-1.png" ]
+images: [ "/static/images/delete-facebook-1.png" ]
 article: true
 date: "2018-04-01T16:53:15+02:00"
 date_precision: instant
@@ -24,4 +24,4 @@ Finalment, un breu incís. Això m'està portant a pensar sobre com resoldre el 
 
 <u>Crec sincerament que hi ha solucions i arquitectures ja existents per construir un protocol de xarxa social que permeti la llibertat i privacitat necessàries.</u>
 
-![#DeleteFacebook](/images/delete-facebook-1.png)
+![#DeleteFacebook](/static/images/delete-facebook-1.png)

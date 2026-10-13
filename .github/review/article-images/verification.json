@@ -1,0 +1,36 @@
+{
+  "baseline_commit": "986fc72",
+  "implementation_commits": [
+    "f0d4622",
+    "f2e48e5",
+    "521dcbf"
+  ],
+  "cover_articles": 4,
+  "fixed_local_rendered_refs": 9,
+  "fixed_legacy_metadata_refs": 6,
+  "recovered_original_images": 2,
+  "browser_cases": 44,
+  "axe_violations": 0,
+  "keyboard_focus_and_skip_links": true,
+  "reflow_width": 320,
+  "text_scales": [
+    "100%",
+    "200%"
+  ],
+  "decode_checked_pages": 13,
+  "decoded_local_images": 16,
+  "before_after_screenshots": 12,
+  "publication_metadata_and_article_urls_unchanged": true,
+  "mandatory_commands": [
+    "make -f .zas/Makefile generate ZAS=/tmp/dario-site-zas/zas",
+    "make -f .zas/Makefile test",
+    "make -f .zas/Makefile check-vanity check-microformats"
+  ],
+  "limits": [
+    "The original Cobi photo in Rizoma #001 returns404; ownerconfirmed no originals available and requested the limitation be recorded. Its reference and alt text remain.",
+    "Archive lookup errors for Cobi do not prove that an archived original is absent.",
+    "The offline guard checks actual local img src and Open Graph targets; remote hosts are not build dependencies.",
+    "Existing git-based updated dates advance when corrected article sources are committed; published dates and feed item identity stay unchanged.",
+    "Hosted preview and exact-head CI evidence follow in the PR."
+  ]
+}

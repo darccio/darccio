@@ -46,7 +46,7 @@ Aquest desenvolupament s'haurà de seguir de prop!
 
 Els 8 homes més rics del món tenen més diners que la meitat del món. I ens diuen que no podem permetre'ns salvar el planeta.
 
-![Larry Ellison, Bill Gates, Carlos Slim, Jeff Bezos, Mark Zuckerberg, Amancio Ortega, Bernard Arnault i Warren Buffet](https://pbs.twimg.com/media/E7S7E0zXMAAmRtk?format=jpg&name=small)
+![Larry Ellison, Bill Gates, Carlos Slim, Jeff Bezos, Mark Zuckerberg, Amancio Ortega, Bernard Arnault i Warren Buffet](/static/images/rizoma-001-tax-the-rich.jpg)
 
 Via [@arcitecta](https://twitter.com/arcitecta/status/1419965479825911810/photo/1).
 

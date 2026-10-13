@@ -21,7 +21,7 @@ Per saber què fer, cal conèixer els fets. El dia 9 d'agost es va fer la presen
 * Però ho podem arreglar.
 
 <figure>
-<img src="https://pbs.twimg.com/media/E8Vn4XhX0AcpQvv?format=jpg&name=small">
+<img src="/static/images/rizoma-002-climate.jpg" alt="Infografia sobre el canvi climàtic: és real, és causat per nosaltres, n'estem segurs, és perjudicial i podem actuar." width="680" height="357" decoding="async">
 <figcaption>Font: <a href="https://twitter.com/htejero_/status/1424676109736681472">Héctor Tejero</a></figcaption>
 </figure>
 

@@ -1,0 +1,195 @@
+[
+  {
+    "route": "/posts/un-nou-cami/",
+    "images": [
+      {
+        "src": "/static/images/horitzo.jpg",
+        "alt": "Muntanyes a l'horitzó sota un cel blau.",
+        "complete": true,
+        "width": 1200,
+        "height": 628,
+        "displayWidth": 672
+      }
+    ]
+  },
+  {
+    "route": "/en/posts/a-new-path/",
+    "images": [
+      {
+        "src": "/static/images/horitzo.jpg",
+        "alt": "Mountains on the horizon under a blue sky.",
+        "complete": true,
+        "width": 1200,
+        "height": 628,
+        "displayWidth": 672
+      }
+    ]
+  },
+  {
+    "route": "/es/posts/un-nuevo-camino/",
+    "images": [
+      {
+        "src": "/static/images/horitzo.jpg",
+        "alt": "Montañas en el horizonte bajo un cielo azul.",
+        "complete": true,
+        "width": 1200,
+        "height": 628,
+        "displayWidth": 672
+      }
+    ]
+  },
+  {
+    "route": "/posts/pseudo-estat/",
+    "images": [
+      {
+        "src": "/static/images/TrumpMileiMusk.jpg",
+        "alt": "Elon Musk, Javier Milei i Donald Trump en una fotografia de grup.",
+        "complete": true,
+        "width": 1920,
+        "height": 1080,
+        "displayWidth": 672
+      }
+    ]
+  },
+  {
+    "route": "/posts/delete-facebook-1/",
+    "images": [
+      {
+        "src": "/static/images/delete-facebook-1.png",
+        "alt": "#DeleteFacebook",
+        "complete": true,
+        "width": 640,
+        "height": 640,
+        "displayWidth": 640
+      }
+    ]
+  },
+  {
+    "route": "/posts/delete-facebook-2/",
+    "images": [
+      {
+        "src": "/static/images/quizzstar_permissions.png",
+        "alt": "Permisos de QuizzStar, una de les aplicacions de tests",
+        "complete": true,
+        "width": 471,
+        "height": 478,
+        "displayWidth": 471
+      },
+      {
+        "src": "/static/images/facebook_gdpr.png",
+        "alt": "Prepare for the General Data Protection Regulation",
+        "complete": true,
+        "width": 496,
+        "height": 152,
+        "displayWidth": 496
+      }
+    ]
+  },
+  {
+    "route": "/en/posts/delete-facebook-1/",
+    "images": [
+      {
+        "src": "/static/images/delete-facebook-1.png",
+        "alt": "#DeleteFacebook",
+        "complete": true,
+        "width": 640,
+        "height": 640,
+        "displayWidth": 640
+      }
+    ]
+  },
+  {
+    "route": "/en/posts/delete-facebook-2/",
+    "images": [
+      {
+        "src": "/static/images/quizzstar_permissions.png",
+        "alt": "Permissions for QuizzStar",
+        "complete": true,
+        "width": 471,
+        "height": 478,
+        "displayWidth": 471
+      },
+      {
+        "src": "/static/images/facebook_gdpr.png",
+        "alt": "Prepare for the General Data Protection Regulation",
+        "complete": true,
+        "width": 496,
+        "height": 152,
+        "displayWidth": 496
+      }
+    ]
+  },
+  {
+    "route": "/es/posts/delete-facebook-1/",
+    "images": [
+      {
+        "src": "/static/images/delete-facebook-1.png",
+        "alt": "#DeleteFacebook",
+        "complete": true,
+        "width": 640,
+        "height": 640,
+        "displayWidth": 640
+      }
+    ]
+  },
+  {
+    "route": "/es/posts/delete-facebook-2/",
+    "images": [
+      {
+        "src": "/static/images/quizzstar_permissions.png",
+        "alt": "Permisos de QuizzStar, una de las aplicaciones de tests",
+        "complete": true,
+        "width": 471,
+        "height": 478,
+        "displayWidth": 471
+      },
+      {
+        "src": "/static/images/facebook_gdpr.png",
+        "alt": "Prepare for the General Data Protection Regulation",
+        "complete": true,
+        "width": 496,
+        "height": 152,
+        "displayWidth": 496
+      }
+    ]
+  },
+  {
+    "route": "/en/posts/portal-between-ruby-and-go/",
+    "images": [
+      {
+        "src": "/static/images/gopher-portal.png",
+        "alt": "Image generated with DALL-E and the prompt 'A digital illustration of a blue gopher staring to a wobbly shimmering Rick and Morty style portal. Eerie feeling, trending in artstation.'",
+        "complete": true,
+        "width": 1024,
+        "height": 1024,
+        "displayWidth": 672
+      }
+    ]
+  },
+  {
+    "route": "/rizoma/001/",
+    "images": [
+      {
+        "src": "/static/images/rizoma-001-tax-the-rich.jpg",
+        "alt": "Larry Ellison, Bill Gates, Carlos Slim, Jeff Bezos, Mark Zuckerberg, Amancio Ortega, Bernard Arnault i Warren Buffet",
+        "complete": true,
+        "width": 680,
+        "height": 570,
+        "displayWidth": 671.984375
+      }
+    ]
+  },
+  {
+    "route": "/rizoma/002/",
+    "images": [
+      {
+        "src": "/static/images/rizoma-002-climate.jpg",
+        "alt": "Infografia sobre el canvi climàtic: és real, és causat per nosaltres, n'estem segurs, és perjudicial i podem actuar.",
+        "complete": true,
+        "width": 680,
+        "height": 357,
+        "displayWidth": 592
+      }
+    ]
+  }
+]

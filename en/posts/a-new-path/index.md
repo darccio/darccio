@@ -11,6 +11,8 @@ language: en
 
 <h1 class="p-name">A New Path</h1>
 
+<p><img src="/static/images/horitzo.jpg" alt="Mountains on the horizon under a blue sky." width="1200" height="628" decoding="async"></p>
+
 Today, coinciding with the anniversary of the November 28, 2010 elections and after fulfilling acquired commitments, I announce that a few weeks ago I left Pirates de Catalunya. This date is significant because these elections were the first in which Pirates participated, shortly after its official formation, and marked my first electoral experience.
 
 In fourteen years I've had the opportunity to build an alternative, influencing public life in a historic context: from the 15M movement to the rise of Catalan independentism, through the repression of the Spanish State and the growth of the far right, ending in the whirlwind of war and climate change in which the world is immersed.

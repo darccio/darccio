@@ -2,7 +2,7 @@
 tags: [ "facebook", "social networks" ]
 date_created: "2018-04-07T17:04:09+02:00"
 series: [ "Delete Facebook" ]
-images: [ "/images/delete-facebook-1.png" ]
+images: [ "/static/images/delete-facebook-1.png" ]
 article: true
 date: "2018-04-07T17:04:09+02:00"
 date_precision: instant
@@ -20,7 +20,7 @@ D'entrada, repassant [la llista](https://www.facebook.com/settings?tab=applicati
 
 Però abans d'explicar els diferents casos que m'he trobat, en aquesta entrada vull destacar un de concret: les webs de tests tipus Súper Pop. Imagino que molts hem caigut en algun moment, per compartir unes rialles amb algú a Facebook, en fer un d'aquests, com els de [QuizzStar](http://es.quizzstar.com/). Per a fer-los cal identificar-se amb el nostre compte de Facebook. Quina informació solen recollir aquestes webs?
 
-![Permisos de QuizzStar, una de les aplicacions de tests](/images/quizzstar_permissions.png)
+![Permisos de QuizzStar, una de les aplicacions de tests](/static/images/quizzstar_permissions.png)
 
 He mirat d'altres, com [vonvon](https://es.vonvon.me/), i els permisos són idèntics o pitjors. Aquest és un bon exemple del mal ús que fem (sí, fem) de les nostres dades, regalant-les a canvi d'un resultat simpàtic i frívol. Algú pot justificar perquè la versió digital d'un test de revista per adolescents necessita tot això? El més probable és que els tests siguin un ganxo per obtenir i vendre dades personals.
 
@@ -28,7 +28,7 @@ Un cop copsada la gravetat, la pregunta que ens fem tot és "I com puc fer que e
 
 *Intermedi: mentre feia aquesta entrada, Facebook m'ha obsequiat amb aquest recordatori sobre el nou reglament europeu de protecció de dades. :facepalm:*
 
-![Prepare for the General Data Protection Regulation](/images/facebook_gdpr.png)
+![Prepare for the General Data Protection Regulation](/static/images/facebook_gdpr.png)
 
 Per posar-vos un exemple. Tinc activada una aplicació anomenada [Instant Win](https://apps.facebook.com/instantlywin/?ref=br_rs). Seguint el que indica l'ajuda de Facebook, faig el següent:
 

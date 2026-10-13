@@ -882,3 +882,70 @@ contains the English-site change, screenshots and source/check receipts. Its
 [checks](https://github.com/darccio/darccio/pull/30/checks) and PR acceptance receipt
 record the deployed preview and exact-head results. No owner facts or account
 settings are needed for this translation; publication follows owner merge.
+
+### Article images
+
+The owner reported missing images in A New Path and Pseudo-Estat. Their existing
+JPEG files are served correctly, but the original article sources declared only
+Open Graph images; neither the original nor the current layout inserted them into
+the visible content. Four source articles (the three New Path languages and
+Pseudo-Estat) now include one image after their H1, with localized alt text and
+the actual 1200×628 or 1920×1080 dimensions. This also includes the covers in RSS,
+Markdown twins and the reviewed context output. Existing metadata, publication
+instants, article prose and URLs are retained; the portal article keeps its one
+existing gopher image. An implementation subagent traced history, inspected the
+assets and verified that removing only the added image recovers each old source.
+
+Guarded generation, the full test suite, vanity/microformats and publishing-format
+checks pass. Forty-four article browser cases pass axe in light/dark at desktop
+and mobile widths, keyboard focus and 320px normal/200% text reflow. A separate
+Chromium decode check confirms all 14 images across the ten affected articles and
+the portal page load successfully. Before/after screenshots use the actual JPEG
+MIME type and wait for decoding. Commit and hosted checks follow below.
+
+The cover fixes are committed as `f0d4622`, with darna and SSH signing checks
+passing. A separate audit found nine incorrect body URLs in the six translated
+Delete Facebook #1/#2 posts, plus six stale `images:` metadata references. These
+now use the existing `/static/images/` assets. The build checks actual local
+`img src` and Open Graph targets against assembled files before promotion; a 200
+homepage fallback cannot mask a missing image. Query strings, escaped names,
+page-relative/root-relative/same-site URLs, default ports and first duplicate
+attribute behavior are covered. Comments and JSON script text are ignored.
+Negative tests require missing, empty or directory assets to reject the build and
+preserve the previous deployment. Remote hosts remain outside this offline gate.
+Independent subagent review and the full repository suite pass; no production
+deploy depends on remote image availability.
+
+The local URL fixes and image guard are committed as `f2e48e5`, with darna and
+verified SSH signing. A broader audit found three unavailable Twitter images in
+Rizoma #001/#002; their original URLs return 404 for both HEAD and GET, including
+alternate file formats. Six other remote image endpoints return image content.
+Two exact original small variants were recovered from Internet Archive snapshots,
+visually inspected and copied unchanged into `/static/images/`: the eight-portrait
+inequality graphic (680×570) and the climate infographic (680×357). Their original
+source credits remain. The climate graphic gains descriptive Catalan alt text and
+dimensions. Both articles keep their original dates and prose; the staged build,
+full tests, vanity, microformats and publishing-format checks pass.
+
+The Cobi statue photo in Rizoma #001 remains unavailable at its original Twitter
+URL. Bounded archive lookups encountered 503, timeout and 429 responses; this does
+not establish that no archived copy exists. The owner confirmed no originals are
+available and requested that the limitation be recorded. The original URL and alt
+text are retained, and no replacement image or historical fact is invented.
+
+The recovered-original unit is committed as `521dcbf`. All three implementation
+commits have verified SSH signatures and passed darna without bypassing hooks.
+[Review evidence](../../.github/review/article-images/verification.json) records
+the 44 browser cases, 12 before/after screenshots, image decoding and exact archive
+URL/hash provenance. Thirteen pages (the ten corrected articles, portal and two
+Rizoma editions) successfully decode all 16 local body images. All original feed
+item GUIDs, titles and publication instants remain; current git-based update dates
+advance for corrected sources. Mandatory cross-format checks still cover 33 posts,
+54 feed items and 26 verified Standard.site documents. Hosted checks follow push.
+
+The local evidence is committed as `811057a`. [PR #31](https://github.com/darccio/darccio/pull/31)
+contains the three implementation units, source/archive receipts and review images.
+The Delete Facebook screenshots explicitly scroll to the illustration so the
+before/after difference is visible. The PR's [checks](https://github.com/darccio/darccio/pull/31/checks)
+and hosted acceptance receipt record the exact final revision. The Cobi limitation
+is the only missing image left from this audit; production follows owner merge.

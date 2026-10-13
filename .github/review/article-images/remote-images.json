@@ -1,0 +1,44 @@
+[
+  {
+    "url": "https://c.tenor.com/x7-a2vbz6YoAAAAd/this-is-not-fine-everything-is-fine.gif",
+    "status": 200,
+    "type": "image/gif"
+  },
+  {
+    "url": "https://i.imgur.com/i4HKQy2.png",
+    "status": 200,
+    "type": "image/png"
+  },
+  {
+    "url": "https://i.imgur.com/qa4PwXY.png",
+    "status": 200,
+    "type": "image/png"
+  },
+  {
+    "url": "https://llengua.gencat.cat/web/.content/imatges/temes/imatges_campanyes/arxius/dona_corda.jpg_330072530.jpg",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "url": "https://pbs.twimg.com/media/E79xWk-XMAAUYs7?format=jpg&name=small",
+    "status": 200,
+    "type": "image/jpeg"
+  },
+  {
+    "url": "https://pbs.twimg.com/media/E7D7e4tXIA46ULx?format=jpg&name=small",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://pbs.twimg.com/media/E7S7E0zXMAAmRtk?format=jpg&name=small",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://pbs.twimg.com/media/E8Vn4XhX0AcpQvv?format=jpg&name=small",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://pbs.twimg.com/media/E8VpnwhXoAMNuye?format=jpg&name=small",
+    "status": 200,
+    "type": "image/jpeg"
+  }
+]

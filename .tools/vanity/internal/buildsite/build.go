@@ -133,6 +133,9 @@ func Build(ctx context.Context, options Options) error {
 	if err := auditOutput(deploy); err != nil {
 		return err
 	}
+	if err := checkLocalImages(deploy); err != nil {
+		return fmt.Errorf("assembled image assets rejected: %w", err)
+	}
 	if err := vanity.CheckDir(deploy); err != nil {
 		return fmt.Errorf("assembled deployment rejected: %w", err)
 	}
