@@ -12,6 +12,7 @@ language: es
 <p>Artículos en castellano. También puedes consultar el archivo en todas las lenguas.</p>
 <nav class="archive-language-nav" aria-label="Idioma de los artículos">
 <a href="/posts/" lang="ca">Totes les llengües</a>
+<a href="/posts/ca/" lang="ca">Català</a>
 <a href="/en/posts/" lang="en">English</a>
 <a href="/es/posts/" lang="es" aria-current="page">Castellano</a>
 </nav>

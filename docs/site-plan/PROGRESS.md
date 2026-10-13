@@ -801,3 +801,22 @@ metadata/format checks pass. Four focused 320px checks plus the complete 44-case
 browser matrix pass in light/dark with normal/200% reflow and visible keyboard
 focus; all 75 styled pages pass the wider overflow check. Hosted acceptance
 follows the updated [PR #29](https://github.com/darccio/darccio/pull/29).
+
+### Catalan archive feedback
+
+The owner requested a Catalan-only filter. `/posts/ca/` presents the exact
+Catalan subset of the combined archive: 12 local articles (eight under posts,
+four hosted Rizoma issues) and the existing Núvol citation. All 13 row bytes,
+order, names, URLs, language labels and publication instants are preserved.
+All four archives link to all languages, Català, English and Castellano, with
+one selected submenu link and a distinct underline. `/posts/` remains combined.
+This static filter works without JavaScript and explicitly stays out of RSS and
+Standard.site publishing. Parent section configuration supplies posts navigation.
+
+The mandatory completeness gate now checks the fourth archive against the
+independent post inventory and permits only its reviewed Catalan citation.
+Meaningful tests reject missing local/Rizoma entries and foreign articles/cites;
+existing English/Spanish citation policy remains unchanged. Full repository tests,
+guarded build, vanity, microformats and publishing-format checks pass. The 44-case
+browser matrix and 75-page reflow check pass. Existing archive rows, homepage
+identity, CV JSON, all feeds and raw vanity fragments remain unchanged.

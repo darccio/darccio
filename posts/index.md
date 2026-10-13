@@ -12,6 +12,7 @@ language: ca
 <p>Escrits en català, castellà i anglès. Cada versió d’un article té el seu propi enllaç; les publicacions en altres webs estan indicades.</p>
 <nav class="archive-language-nav" aria-label="Idioma dels articles">
 <a href="/posts/" lang="ca" aria-current="page">Totes les llengües</a>
+<a href="/posts/ca/" lang="ca">Català</a>
 <a href="/en/posts/" lang="en">English</a>
 <a href="/es/posts/" lang="es">Castellano</a>
 </nav>

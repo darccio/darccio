@@ -326,7 +326,8 @@ body > header {
   min-height: var(--target-comfortable);
 }
 
-.primary-navigation > a[aria-current="page"] {
+.primary-navigation > a[aria-current="page"],
+.archive-language-nav > a[aria-current="page"] {
   color: var(--text);
   font-weight: var(--weight-medium);
   text-decoration-color: var(--rule-accent);

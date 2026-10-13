@@ -91,7 +91,7 @@ func Directory(root, deploy string) (Report, error) {
 		}
 		check(post.File, err)
 	}
-	for _, archive := range []struct{ file, language string }{{"posts/index.html", ""}, {"en/posts/index.html", "en"}, {"es/posts/index.html", "es"}} {
+	for _, archive := range []struct{ file, language string }{{"posts/index.html", ""}, {"posts/ca/index.html", "ca"}, {"en/posts/index.html", "en"}, {"es/posts/index.html", "es"}} {
 		archiveURL := homeURL + strings.TrimSuffix(archive.file, "index.html")
 		doc, data, err := readPage(deploy, archive.file, archiveURL)
 		if err == nil {
