@@ -1,0 +1,27 @@
+{
+  "implementation_commit": "655f04b",
+  "base_commit": "986fc72845dce013e052aecff0e24c5a7ffeb0de",
+  "commands": [
+    "make -f .zas/Makefile generate ZAS=/tmp/dario-site-zas/zas",
+    "make -f .zas/Makefile test",
+    "make -f .zas/Makefile check-vanity check-microformats",
+    "go -C .tools/microformats test -mod=readonly ./internal/check -count=1",
+    "darna --committable --dependants; darna; SSH signature verification"
+  ],
+  "result": "pass",
+  "browser_cases": 56,
+  "additional_style_cases": 12,
+  "real_navigation_clicks": 27,
+  "all_styled_page_reflow_cases": 184,
+  "screenshots": 12,
+  "browser": "Chromium 151.0.7922.34 via Playwright 1.64.0; axe-core 4.13.0",
+  "limits": [
+    "Before screenshots and invariant hashes use the previous English-site guarded build; the source stylesheet/layout match merged main. Git-generated changelog naturally differs.",
+    "Missing ca/en translations retain home fallback; Spanish is offered only for a published counterpart/current Spanish page.",
+    "Article-image changes remain in independent PR #31.",
+    "Hosted exact-head validation is recorded in the PR after deployment; owner merge publishes production."
+  ],
+  "pr_url": "https://github.com/darccio/darccio/pull/32",
+  "review_evidence_commit": "31f2c37",
+  "image_pr_31_merge_tree": "clean"
+}
