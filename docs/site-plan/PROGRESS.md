@@ -867,6 +867,11 @@ signature verified. [Review evidence](../../.github/review/language-menu/verific
 contains twelve before/after screenshots plus browser, click, reflow and invariant
 reports. Hosted exact-revision acceptance is recorded after push. Production
 publication requires owner merge; the separate image-fix PR remains independent.
+The review evidence is committed as `31f2c37`; both commits have verified SSH
+signatures. [PR #32](https://github.com/darccio/darccio/pull/32) contains this
+change and the screenshots. Its [checks](https://github.com/darccio/darccio/pull/32/checks)
+and acceptance comment record the hosted preview and exact-head validation.
+A read-only merge-tree check also confirms compatibility with image PR #31.
 
 ### English personal site
 

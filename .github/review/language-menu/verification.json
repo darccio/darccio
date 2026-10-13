@@ -20,5 +20,8 @@
     "Missing ca/en translations retain home fallback; Spanish is offered only for a published counterpart/current Spanish page.",
     "Article-image changes remain in independent PR #31.",
     "Hosted exact-head validation is recorded in the PR after deployment; owner merge publishes production."
-  ]
+  ],
+  "pr_url": "https://github.com/darccio/darccio/pull/32",
+  "review_evidence_commit": "31f2c37",
+  "image_pr_31_merge_tree": "clean"
 }
