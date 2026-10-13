@@ -112,6 +112,9 @@ func Build(ctx context.Context, options Options) error {
 	if err := finalizeSitemap(ctx, root, stage, deploy, docs.LastMod); err != nil {
 		return fmt.Errorf("assembled sitemap rejected: %w", err)
 	}
+	if err := finalizeLanguageNavigation(stage, deploy); err != nil {
+		return fmt.Errorf("assembled language navigation rejected: %w", err)
+	}
 	if err := finalizeAgentContext(stage, deploy); err != nil {
 		return fmt.Errorf("assembled agent context rejected: %w", err)
 	}

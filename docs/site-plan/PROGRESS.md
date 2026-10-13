@@ -829,6 +829,42 @@ cases, 75 styled pages and 80 total HTML routes, retaining all 79 prior routes.
 Hosted verification follows push and is recorded in PR #29 separately from
 these local receipts. Production remains dependent on owner merge.
 
+### Page-aware language menu · 13 October 2026
+
+The owner reported that the live language submenu differed from the section
+navigation and returned to language homepages even when translations existed.
+The language menu now shares the primary navigation's mono uppercase type,
+spacing, rules, current underline, 44px targets and narrow-screen treatment.
+Its current language points to the current page with `aria-current="page"`.
+
+The guarded assembler pairs published Catalan root pages with matching English
+and Spanish paths. `.zas/translations.yml` records three content-reviewed sets
+with different slugs: New Path, Liquid Organizations and the Matthew Pherigo
+Facebook letter. No article slugs or sources change. Available Spanish siblings
+appear as Castellano; missing Catalan/English translations retain their existing
+homepage fallback. Shared English CV/docs keep their root self URLs; the
+Catalan-only archive keeps its own self URL. Menus use local paths so previews
+retain their host. The same 24 groups (53 pages) supply reciprocal sitemap
+alternates, including English article/archive siblings previously masked by a
+nearest-directory config containing only `nav: posts`.
+
+Implementation and validation subagents reviewed translation facts, maintained
+the locale checker and checked the assembler. Tests reject absent/wrong-language
+or conflicting targets, bad manifests, malformed/duplicate menus and a current
+link that leaves its page. Failed builds preserve the last successful deployment.
+`make -f .zas/Makefile generate` with pinned Zas v0.0.9, `test`, `check-vanity`
+and `check-microformats` pass. No secrets or client scripts are added.
+
+Local browser evidence covers 56 accessibility/keyboard/font cases plus 12
+matching-menu style cases, both themes at 1440px and 390px. Axe has zero
+violations; language links measure at least 44px high. Twenty-seven real menu
+clicks retain the local origin; all 92 styled pages pass 320px normal/200% text
+reflow. All 97 HTML routes survive. Three feeds, CV JSON, tokens and five raw
+vanity fragments remain byte-identical; outside the language menus only the
+Git-generated changelog differs from the earlier English-site build.
+Commit, screenshots, PR and hosted exact-revision receipts follow. Production
+publication requires owner merge; the separate image-fix PR remains independent.
+
 ### English personal site
 
 The owner requested a translated English homepage and English article navigation.

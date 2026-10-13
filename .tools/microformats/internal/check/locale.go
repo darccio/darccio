@@ -1,8 +1,10 @@
 package check
 
 import (
+	"encoding/xml"
 	"fmt"
 	"io/fs"
+	"net/url"
 	"os"
 	"path/filepath"
 	"strings"
@@ -20,12 +22,21 @@ func validateEnglishNavigation(deploy string) error {
 			return fmt.Errorf("missing translated English page %s", file)
 		}
 	}
-	return filepath.WalkDir(deploy, func(file string, entry fs.DirEntry, walkErr error) error {
+	type page struct {
+		path, file, language string
+		doc                  *html.Node
+	}
+	var pages []page
+	languages := make(map[string]string)
+	err := filepath.WalkDir(deploy, func(file string, entry fs.DirEntry, walkErr error) error {
 		if walkErr != nil {
 			return walkErr
 		}
 		if entry.IsDir() || filepath.Ext(file) != ".html" {
 			return nil
+		}
+		if entry.Type()&os.ModeSymlink != 0 {
+			return fmt.Errorf("refusing language-navigation symlink %s", file)
 		}
 		input, err := os.ReadFile(file)
 		if err != nil {
@@ -39,18 +50,157 @@ func validateEnglishNavigation(deploy string) error {
 		if err != nil {
 			return err
 		}
-		if len(find(doc, func(n *html.Node) bool { return isTag(n, "html") && attribute(n, "lang") == "en" })) == 0 {
-			if strings.HasPrefix(filepath.ToSlash(relative), "en/") {
-				return fmt.Errorf("%s: English page lost its English language", relative)
-			}
-			return nil
-		}
-		path := "/" + strings.TrimSuffix(filepath.ToSlash(relative), "index.html")
-		if err := validateLocaleNavigation(doc, path); err != nil {
+		root, err := uniqueNode(doc, func(n *html.Node) bool { return isTag(n, "html") }, "HTML root")
+		if err != nil {
 			return fmt.Errorf("%s: %w", relative, err)
 		}
+		language := attribute(root, "lang")
+		if strings.HasPrefix(filepath.ToSlash(relative), "en/") && language != "en" {
+			return fmt.Errorf("%s: English page lost its English language", relative)
+		}
+		path := "/" + filepath.ToSlash(relative)
+		if filepath.Base(file) == "index.html" {
+			path = strings.TrimSuffix(path, "index.html")
+		}
+		path = (&url.URL{Path: path}).EscapedPath()
+		languages[path] = language
+		pages = append(pages, page{path: path, file: relative, language: language, doc: doc})
 		return nil
 	})
+	if err != nil {
+		return err
+	}
+	translations, err := sitemapLanguageLinks(deploy)
+	if err != nil {
+		return err
+	}
+	for _, page := range pages {
+		if page.language == "en" {
+			if err := validateLocaleNavigation(page.doc, page.path); err != nil {
+				return fmt.Errorf("%s: %w", page.file, err)
+			}
+		} else if len(find(page.doc, func(n *html.Node) bool {
+			return hasClass(n, "site-language-nav") || hasClass(n, "site-logo") || hasClass(n, "primary-navigation")
+		})) == 0 {
+			continue // Raw vanity fragments have no site navigation.
+		}
+		links, err := validateSiteLanguageNavigation(page.doc, page.path, page.language)
+		if err != nil {
+			return fmt.Errorf("%s: %w", page.file, err)
+		}
+		for _, link := range links {
+			target, _ := localLanguagePath(attribute(link, "href"))
+			language := attribute(link, "lang")
+			actual, exists := languages[target]
+			if !exists {
+				return fmt.Errorf("%s: %s language link has no deployed page %s", page.file, language, target)
+			}
+			if actual != language {
+				return fmt.Errorf("%s: %s language link target %s uses language %q", page.file, language, target, actual)
+			}
+		}
+		expected := map[string]string{"ca": "/", "en": "/en/"}
+		for language, target := range translations[page.path] {
+			if language == page.language && target != page.path {
+				return fmt.Errorf("%s: sitemap current-language counterpart must point to this page", page.file)
+			}
+			expected[language] = target
+		}
+		expected[page.language] = page.path
+		if len(links) != len(expected) {
+			return fmt.Errorf("%s: language switch omitted or invented a translation", page.file)
+		}
+		for _, link := range links {
+			language := attribute(link, "lang")
+			if attribute(link, "href") != expected[language] {
+				return fmt.Errorf("%s: %s language link must point to %s", page.file, language, expected[language])
+			}
+		}
+	}
+	return nil
+}
+
+// The assembler enriches reciprocal hreflang links from published siblings
+// and reviewed exceptions. Check the same relationships without duplicating
+// that source manifest here.
+func sitemapLanguageLinks(deploy string) (map[string]map[string]string, error) {
+	input, err := os.ReadFile(filepath.Join(deploy, "sitemap.xml"))
+	if err != nil {
+		return nil, err
+	}
+	var sitemap struct {
+		Pages []struct {
+			Location string `xml:"loc"`
+			Links    []struct {
+				Language string `xml:"hreflang,attr"`
+				URL      string `xml:"href,attr"`
+			} `xml:"http://www.w3.org/1999/xhtml link"`
+		} `xml:"url"`
+	}
+	if err := xml.Unmarshal(input, &sitemap); err != nil {
+		return nil, err
+	}
+	translations := make(map[string]map[string]string)
+	for _, page := range sitemap.Pages {
+		location, err := url.Parse(page.Location)
+		if err != nil {
+			return nil, err
+		}
+		links := make(map[string]string)
+		for _, link := range page.Links {
+			target, err := url.Parse(link.URL)
+			if err != nil {
+				return nil, err
+			}
+			if target.Scheme != location.Scheme || target.Host != location.Host || target.RawQuery != "" || target.Fragment != "" || links[link.Language] != "" {
+				return nil, fmt.Errorf("invalid or duplicate sitemap language link for %s", page.Location)
+			}
+			links[link.Language] = target.EscapedPath()
+		}
+		translations[location.EscapedPath()] = links
+	}
+	return translations, nil
+}
+
+func localLanguagePath(href string) (string, error) {
+	parsed, err := url.Parse(href)
+	if err != nil || !strings.HasPrefix(href, "/") || strings.HasPrefix(href, "//") || parsed.Scheme != "" || parsed.Host != "" || parsed.RawQuery != "" || parsed.ForceQuery || parsed.Fragment != "" {
+		return "", fmt.Errorf("language link must use a local root-relative page path: %q", href)
+	}
+	return parsed.EscapedPath(), nil
+}
+
+func validateSiteLanguageNavigation(doc *html.Node, pagePath, language string) ([]*html.Node, error) {
+	languages, err := uniqueNode(doc, func(n *html.Node) bool { return isTag(n, "nav") && hasClass(n, "site-language-nav") }, "site languages")
+	if err != nil {
+		return nil, err
+	}
+	labels := map[string]string{"ca": "Idioma del web", "en": "Site language", "es": "Idioma del sitio"}
+	if labels[language] == "" || attribute(languages, "aria-label") != labels[language] {
+		return nil, fmt.Errorf("language switch is not labelled in the page language")
+	}
+	links := find(languages, func(n *html.Node) bool { return isTag(n, "a") })
+	if len(links) < 2 || len(links) > 3 || (language == "es" && len(links) != 3) {
+		return nil, fmt.Errorf("language switch must contain Catalan, English and optional Spanish")
+	}
+	for i, want := range []struct{ code, label string }{{"ca", "Català"}, {"en", "English"}, {"es", "Castellano"}}[:len(links)] {
+		link := links[i]
+		if attribute(link, "lang") != want.code || attribute(link, "hreflang") != want.code || normalized(textContent(link)) != want.label {
+			return nil, fmt.Errorf("language switch needs unique ca, en, optional es links in order with matching language labels")
+		}
+		if _, err := localLanguagePath(attribute(link, "href")); err != nil {
+			return nil, err
+		}
+		current := attribute(link, "aria-current")
+		if want.code == language {
+			if current != "page" || attribute(link, "href") != pagePath {
+				return nil, fmt.Errorf("current %s language link must point to this page with aria-current=page", language)
+			}
+		} else if current != "" {
+			return nil, fmt.Errorf("only the current language link may have aria-current")
+		}
+	}
+	return links, nil
 }
 
 func validateLocaleNavigation(doc *html.Node, pagePath string) error {
@@ -110,16 +260,8 @@ func validateLocaleNavigation(doc *html.Node, pagePath string) error {
 			return fmt.Errorf("English %s link has incorrect current-section state", want.label)
 		}
 	}
-	languages, err := uniqueNode(doc, func(n *html.Node) bool { return isTag(n, "nav") && hasClass(n, "site-language-nav") }, "site languages")
-	if err != nil {
+	if _, err := validateSiteLanguageNavigation(doc, pagePath, "en"); err != nil {
 		return err
-	}
-	if attribute(languages, "aria-label") != "Site language" {
-		return fmt.Errorf("English language switch is not labelled in English")
-	}
-	languageLinks := find(languages, func(n *html.Node) bool { return isTag(n, "a") })
-	if len(languageLinks) != 2 || attribute(languageLinks[0], "href") != "/" || attribute(languageLinks[0], "hreflang") != "ca" || attribute(languageLinks[0], "lang") != "ca" || attribute(languageLinks[0], "aria-current") != "" || attribute(languageLinks[1], "href") != "/en/" || attribute(languageLinks[1], "hreflang") != "en" || attribute(languageLinks[1], "lang") != "en" || attribute(languageLinks[1], "aria-current") != "true" {
-		return fmt.Errorf("English language switch lost its destinations or current language")
 	}
 	footer, err := uniqueNode(doc, func(n *html.Node) bool { return isTag(n, "footer") && isTag(n.Parent, "body") }, "site footer")
 	if err != nil {

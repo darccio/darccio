@@ -1,0 +1,11 @@
+# Matching paths under /en/ and /es/ are paired automatically. These reviewed
+# articles are translations whose existing slugs differ; keep their URLs.
+version: 1
+groups:
+  - ca: /posts/un-nou-cami/
+    en: /en/posts/a-new-path/
+    es: /es/posts/un-nuevo-camino/
+  - en: /en/posts/introduction-liquid-organizations/
+    es: /es/posts/introduccion-organizaciones-liquidas/
+  - ca: /posts/perque-temer-facebook/
+    es: /es/posts/porque-deberias-temer-facebook/
