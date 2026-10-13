@@ -335,6 +335,37 @@ body > header {
   text-decoration-thickness: var(--rule-weight);
 }
 
+.site-language-nav {
+  padding: var(--space-2);
+  background: var(--accent);
+}
+
+.site-language-nav > a {
+  border-radius: var(--radius-xs);
+  padding-inline: var(--space-2);
+  color: var(--warm-000);
+}
+
+.site-language-nav > a:hover,
+.site-language-nav > a:active {
+  background: var(--accent-active);
+  color: var(--warm-000);
+}
+
+.site-language-nav > a[aria-current="page"] {
+  background: var(--warm-000);
+  color: var(--ink-900);
+}
+
+.site-language-nav > a:focus-visible {
+  outline-color: var(--warm-000);
+  outline-offset: calc(-1 * var(--focus-width));
+}
+
+.site-language-nav > a[aria-current="page"]:focus-visible {
+  outline-color: var(--ink-900);
+}
+
 @media (max-width: 34rem) {
   .primary-navigation, .site-language-nav {
     gap: 0 var(--space-3);

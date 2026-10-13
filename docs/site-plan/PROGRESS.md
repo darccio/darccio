@@ -993,3 +993,23 @@ The Delete Facebook screenshots explicitly scroll to the illustration so the
 before/after difference is visible. The PR's [checks](https://github.com/darccio/darccio/pull/31/checks)
 and hosted acceptance receipt record the exact final revision. The Cobi limitation
 is the only missing image left from this audit; production follows owner merge.
+
+### Inverted language-row trial · 13 October 2026
+
+After merging PRs #31 and #32, the owner requested a primary-colour language row
+with white links, a black current link and the existing primary underline.
+The CSS-only follow-up uses the plum `--accent` background and white links.
+The current item uses near-black `--ink-900` on a white highlight, preserving
+readable contrast; its plum 2px underline remains. White/dark inset focus rings
+remain visible on the corresponding backgrounds. Section navigation, translated
+page targets, fonts, markup and all existing URLs are unchanged.
+
+The styling subagent implemented the row and passed twelve focused Chromium
+cases in both themes, including 320px and 200% text. Another 44 browser cases
+cover eleven page types at 1440px/390px: axe has zero violations, skip links and
+focus work, language targets remain at least 44px and shared navigation type/gaps
+still match. All 92 styled pages pass 320px normal/doubled reflow. The guarded
+`generate` build, `test`, `check-vanity` and `check-microformats` pass with pinned
+Zas v0.0.9. No new tests mirror the CSS and no client scripts are added.
+Commit, screenshots and hosted-preview receipts follow. This is a visual trial
+for owner review; production publication follows owner merge.
