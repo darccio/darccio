@@ -875,3 +875,10 @@ branding and writing links, Catalan/English switching and shared CV/docs resourc
 [Review evidence](../../.github/review/english-site/verification.json) includes six
 desktop/mobile screenshots, browser/reflow/navigation reports and the unchanged
 artifact hashes. Hosted acceptance is recorded separately after push.
+
+The review evidence is committed as `5444f35`; implementation and evidence commits
+have verified SSH signatures. [PR #30](https://github.com/darccio/darccio/pull/30)
+contains the English-site change, screenshots and source/check receipts. Its
+[checks](https://github.com/darccio/darccio/pull/30/checks) and PR acceptance receipt
+record the deployed preview and exact-head results. No owner facts or account
+settings are needed for this translation; publication follows owner merge.
