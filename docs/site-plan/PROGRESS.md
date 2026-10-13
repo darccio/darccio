@@ -902,3 +902,16 @@ and mobile widths, keyboard focus and 320px normal/200% text reflow. A separate
 Chromium decode check confirms all 14 images across the ten affected articles and
 the portal page load successfully. Before/after screenshots use the actual JPEG
 MIME type and wait for decoding. Commit and hosted checks follow below.
+
+The cover fixes are committed as `f0d4622`, with darna and SSH signing checks
+passing. A separate audit found nine incorrect body URLs in the six translated
+Delete Facebook #1/#2 posts, plus six stale `images:` metadata references. These
+now use the existing `/static/images/` assets. The build checks actual local
+`img src` and Open Graph targets against assembled files before promotion; a 200
+homepage fallback cannot mask a missing image. Query strings, escaped names,
+page-relative/root-relative/same-site URLs, default ports and first duplicate
+attribute behavior are covered. Comments and JSON script text are ignored.
+Negative tests require missing, empty or directory assets to reject the build and
+preserve the previous deployment. Remote hosts remain outside this offline gate.
+Independent subagent review and the full repository suite pass; no production
+deploy depends on remote image availability.

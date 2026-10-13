@@ -2,7 +2,7 @@
 tags: [ "facebook", "social networks" ]
 date_created: "2018-04-08T12:06:19+02:00"
 series: [ "Delete Facebook" ]
-images: [ "/images/delete-facebook-1.png" ]
+images: [ "/static/images/delete-facebook-1.png" ]
 article: true
 date: "2018-04-08T12:06:19+02:00"
 date_precision: instant
@@ -20,7 +20,7 @@ For starters, reviewing [the list](https://www.facebook.com/settings?tab=applica
 
 Before going through the different cases that I have found, in this post I want to highlight one in particular: Cosmopolitan-like tests websites. I imagine that many of us have fallen at some point in this, to laugh with someone on Facebook, like those of [QuizzStar](http://quizzstar.com/). To do so, you have to identify yourself with our Facebook account. What information do these websites usually collect?
 
-![Permissions for QuizzStar](/images/quizzstar_permissions.png)
+![Permissions for QuizzStar](/static/images/quizzstar_permissions.png)
 
 I've looked at others, like [vonvon](https://vonvon.me/), and the permissions are identical or worse. This is a good example of the misuse we do (yes, us) of our own data, giving them away in exchange for a frivolous and funny result. Can anyone justify that the digital version of a teen magazine test needs all this? Most likely, the tests are a hook to obtain and sell personal data.
 
@@ -28,7 +28,7 @@ Once we understand the seriousness of the matter, the question we immediately as
 
 *Interlude: while writing this post, Facebook has given me this reminder about the new European regulation on data protection. :facepalm:*
 
-![Prepare for the General Data Protection Regulation](/images/facebook_gdpr.png)
+![Prepare for the General Data Protection Regulation](/static/images/facebook_gdpr.png)
 
 I want to give you an example. I have an application called [Instant Win](https://apps.facebook.com/instantlywin/?ref=br_rs). Following what is stated in the Facebook Help Center, I do:
 

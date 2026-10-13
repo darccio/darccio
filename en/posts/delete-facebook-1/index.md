@@ -2,7 +2,7 @@
 tags: [ "facebook", "social networks" ]
 date_created: 2018-04-01T17:13:15+02:00
 series: [ "Delete Facebook" ]
-images: [ "/images/delete-facebook-1.png" ]
+images: [ "/static/images/delete-facebook-1.png" ]
 article: true
 date: "2018-04-01T17:13:15+02:00"
 date_precision: instant
@@ -24,4 +24,4 @@ Finally, a brief comment. This is leading me to think about how to solve the pro
 
 <u>I sincerely believe that there are already existing solutions and architectures to build a social network protocol to achieve the necessary freedom and privacy.</u>
 
-![#DeleteFacebook](/images/delete-facebook-1.png)
+![#DeleteFacebook](/static/images/delete-facebook-1.png)

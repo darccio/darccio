@@ -2,7 +2,7 @@
 tags: [ "facebook", "social networks" ]
 date_created: 2018-04-01T17:09:03+02:00
 series: [ "Delete Facebook" ]
-images: [ "/images/delete-facebook-1.png" ]
+images: [ "/static/images/delete-facebook-1.png" ]
 article: true
 date: "2018-04-01T17:09:03+02:00"
 date_precision: instant
@@ -24,4 +24,4 @@ Finalmente, un breve inciso. Esto me está llevando a pensar acerca de cómo res
 
 <u>Creo sinceramente que hay soluciones y arquitecturas ya existentes para construir un protocolo de red social que permita la libertad y privacidad necesarias.</u>
 
-![#DeleteFacebook](/images/delete-facebook-1.png)
+![#DeleteFacebook](/static/images/delete-facebook-1.png)

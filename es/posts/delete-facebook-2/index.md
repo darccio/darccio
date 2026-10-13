@@ -2,7 +2,7 @@
 tags: [ "facebook", "social networks" ]
 date_created: "2018-04-08T11:53:34+02:00"
 series: [ "Delete Facebook" ]
-images: [ "/images/delete-facebook-1.png" ]
+images: [ "/static/images/delete-facebook-1.png" ]
 article: true
 date: "2018-04-08T11:53:34+02:00"
 date_precision: instant
@@ -20,7 +20,7 @@ De entrada, repasando [la lista](https://www.facebook.com/settings?tab=applicati
 
 Pero antes de explicar los diferentes casos que me he encontrado, en esta entrada quiero destacar uno en concreto: las webs de tests tipo Súper Pop. Imagino que muchos hemos caído en algún momento, para compartir unas risas con alguien en Facebook, en hacer uno de estos, como los de [QuizzStar](http://es.quizzstar.com/). Para hacerlos hay que identificarse con nuestra cuenta de Facebook. ¿Qué información suelen recoger estas webs?
 
-![Permisos de QuizzStar, una de las aplicaciones de tests](/images/quizzstar_permissions.png)
+![Permisos de QuizzStar, una de las aplicaciones de tests](/static/images/quizzstar_permissions.png)
 
 He mirado otras, como [vonvon](https://es.vonvon.me/), y los permisos son idénticos o peores. Este es un buen ejemplo del mal uso que hacemos (sí, hacemos) de nuestros datos, regalándolos a cambio de un resultado simpático y frívolo. ¿Alguien puede justificar que la versión digital de un test de revista para adolescentes necesita todo esto? Lo más probable es que los tests sean un gancho para obtener y vender datos personales.
 
@@ -28,7 +28,7 @@ Una vez comprendemos la gravedad del asunto, la pregunta que nos hacemos es "¿Y
 
 *Intermedio: mientras escribía esta entrada, Facebook me ha obsequiado con este recordatorio sobre el nuevo reglamento europeo de protección de datos. :facepalm:*
 
-![Prepare for the General Data Protection Regulation](/images/facebook_gdpr.png)
+![Prepare for the General Data Protection Regulation](/static/images/facebook_gdpr.png)
 
 Por poneros un ejemplo. Tengo activada una aplicación llamada [Instant Win](https://apps.facebook.com/instantlywin/?ref=br_rs). Siguiendo lo indicado en la ayuda de Facebook, hago lo siguiente:
 
