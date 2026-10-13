@@ -730,3 +730,21 @@ inventing exact dates. Per-row year rails, title/language badges and date metada
 reuse the same styles as talks and the CV. Guarded generation, existing complete
 archive/microformat checks, all repository tests and the final 40-scenario browser
 matrix pass. Canonical UIDs remain separate from preview navigation.
+
+### CV timeline
+
+The HTML CV projects the unchanged MAC JSON into one reverse chronological
+timeline: 23 work/community roles, seven project roles and 15 education/credential
+entries. Types remain p-experience or p-education, with the same source pointers,
+dates and reviewed precision, organisations, descriptions, skills and certification
+expiry distinctions. Stable sorting changes presentation only. The compact
+96px photo/contact block removes the duplicated visible name and groups profile
+links into comfortable wrapping targets. The resume PDF supplied for inspiration
+remains outside the repository; no new biographical facts are imported.
+
+The meaningful regression test exercises out-of-order input, mixed entry kinds,
+stable source identity/date precision and a single semantic archive-list. Existing
+resume validation remains unchanged. Full tests, guarded build, CV microformats,
+JSON byte checks and all four CV browser scenarios pass. CV crawler/publishing
+exclusions and email_off boundaries remain intact. Full body/source content is
+retained; this is a layout change, not a shortened resume.
