@@ -942,3 +942,10 @@ Rizoma editions) successfully decode all 16 local body images. All original feed
 item GUIDs, titles and publication instants remain; current git-based update dates
 advance for corrected sources. Mandatory cross-format checks still cover 33 posts,
 54 feed items and 26 verified Standard.site documents. Hosted checks follow push.
+
+The local evidence is committed as `811057a`. [PR #31](https://github.com/darccio/darccio/pull/31)
+contains the three implementation units, source/archive receipts and review images.
+The Delete Facebook screenshots explicitly scroll to the illustration so the
+before/after difference is visible. The PR's [checks](https://github.com/darccio/darccio/pull/31/checks)
+and hosted acceptance receipt record the exact final revision. The Cobi limitation
+is the only missing image left from this audit; production follows owner merge.
