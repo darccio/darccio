@@ -719,3 +719,14 @@ local font checks and 320px normal/200% reflow. All 74 styled pages pass the
 wider reflow check. The five raw vanity fragments remain byte-identical.
 Homepage card properties are exactly unchanged. Before/after screenshots cover
 home, posts, CV and talks at 1440px and 390px. Hosted acceptance follows the PR.
+
+### Article archives
+
+Root, English and Spanish indexes each use one chronological archive-list,
+without separate year headings. Their 35/9/12 rows retain identical ordered
+titles, destinations, language labels and publication instants. The two external
+citations retain their established year and named external source without
+inventing exact dates. Per-row year rails, title/language badges and date metadata
+reuse the same styles as talks and the CV. Guarded generation, existing complete
+archive/microformat checks, all repository tests and the final 40-scenario browser
+matrix pass. Canonical UIDs remain separate from preview navigation.
