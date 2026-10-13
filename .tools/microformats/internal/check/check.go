@@ -51,11 +51,8 @@ func Directory(root, deploy string) (Report, error) {
 			failures = append(failures, fmt.Errorf("%s: %w", label, err))
 		}
 	}
-	for _, file := range []string{"index.html", "about/index.html"} {
-		sourceURL := homeURL
-		if file == "about/index.html" {
-			sourceURL += "about/"
-		}
+	for _, file := range []string{"index.html", "about/index.html", "en/index.html", "en/about/index.html"} {
+		sourceURL := homeURL + strings.TrimSuffix(file, "index.html")
 		doc, data, err := readPage(deploy, file, sourceURL)
 		if err == nil {
 			card := rhc.RepresentativeHcard(data, sourceURL)
@@ -100,6 +97,7 @@ func Directory(root, deploy string) (Report, error) {
 		check(archive.file, err)
 	}
 	check("supported slash pages, projects and talks", validateSupportedPages(root, deploy))
+	check("English locale navigation", validateEnglishNavigation(deploy))
 	check("configured resume", validateResume(deploy, resume))
 	check("shared JSON-LD", validateJSONLDPages(deploy, inv, resume != nil))
 	for _, path := range []string{".tools", "docs/site-plan", "docs/HANDOFF-FACTS.md"} {

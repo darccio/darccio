@@ -24,7 +24,7 @@ languages:
             description: "Perfils públics a GitHub, Bluesky, el Fediverse, LinkedIn, Sifa.id, Substack i Speaker Deck."
           - source: languages/index.md
             title: "Idiomes"
-            description: "Política lingüística del web personal i de la documentació, amb els arxius en anglès i castellà."
+            description: "Web personal en català i anglès, documentació en anglès i arxius d'articles en les tres llengües."
           - source: projects/index.md
             title: "Projectes"
             description: "Mergo, Zas, darna, xdr i Asembleo, amb enllaços al codi i a la documentació."
@@ -99,10 +99,57 @@ languages:
             title: "Rizoma #001"
             description: "Presentació de Rizoma amb lectures sobre vacunes, llibertat de compartir cultura, euro digital i desigualtat, i un record dels Jocs Olímpics de Barcelona."
   - language: en
-    title: "Dario Castañé — English writing"
-    summary: "English articles by Dario Castañé, a software engineer at Datadog and maintainer of Mergo and Zas, on Go, technology, politics and society."
+    title: "Dario Castañé — English site"
+    summary: "Personal site and English articles by Dario Castañé, a software engineer at Datadog and maintainer of Mergo and Zas, on Go, technology, politics and society."
     feed: true
     sections:
+      - title: "About me and this site"
+        pages:
+          - source: en/about/index.md
+            title: "About me"
+            description: "Biography, professional background and free software."
+          - source: en/now/index.md
+            title: "Now"
+            description: "Current work on corb.ax, Cocoon and updates to the site and Zas."
+          - source: en/contact/index.md
+            title: "Contact"
+            description: "Public email cc@dario.cat, profiles and contacts for software issues or vulnerabilities."
+          - source: en/elsewhere/index.md
+            title: "Elsewhere"
+            description: "Public profiles on GitHub, Bluesky, the Fediverse, LinkedIn, Sifa.id, Rizoma and Speaker Deck."
+          - source: en/languages/index.md
+            title: "Languages"
+            description: "Catalan and English personal pages, English documentation and article archives in three languages."
+          - source: en/projects/index.md
+            title: "Projects"
+            description: "Mergo, Zas, darna, xdr and Asembleo, with code and documentation links."
+          - source: en/sponsor/index.md
+            title: "Support my work"
+            description: "GitHub Sponsors and funding options listed in the public manifest."
+          - source: en/talks/index.md
+            title: "Talks and interviews"
+            description: "Recordings, slides and materials about Go, free software, digital rights, culture and politics."
+          - source: en/ai/index.md
+            title: "AI and crawlers"
+            description: "Preferences for search, use as context, AI training and personal data."
+          - source: en/colophon/index.md
+            title: "About this site"
+            description: "Zas, Cloudflare Pages publishing, source code and licences."
+          - source: en/uses/index.md
+            title: "Tools"
+            description: "Building this site with Zas and the published Synology NAS monitoring setup with Datadog."
+          - source: en/changelog/index.md
+            title: "Site changes"
+            description: "The latest fifty public repository changes, generated from Git history."
+          - source: en/feeds/index.md
+            title: "Feeds"
+            description: "Article feeds, the Rizoma newsletter and Mergo and Zas releases."
+          - source: en/blogroll/index.md
+            title: "Reading"
+            description: "La Máquina de Escribir, by Gemma Goldie, publicly recommended in Rizoma."
+          - source: en/slashes/index.md
+            title: "All pages"
+            description: "An index of the main site pages and their review dates."
       - title: "Archive"
         pages:
           - source: en/posts/index.md

@@ -35,12 +35,26 @@ type changelogMetadata struct {
 // introduction; Git contributes bounded public commit metadata, never patches,
 // file bodies, authors' contact details, or executable template content.
 func prepareChangelog(ctx context.Context, root, stage string) (time.Time, error) {
-	if _, err := os.Lstat(filepath.Join(stage, changelogSource)); os.IsNotExist(err) {
+	var updated time.Time
+	for _, source := range []string{changelogSource, "en/" + changelogSource} {
+		date, err := prepareChangelogPage(ctx, root, stage, source)
+		if err != nil {
+			return time.Time{}, fmt.Errorf("%s: %w", source, err)
+		}
+		if date.After(updated) {
+			updated = date
+		}
+	}
+	return updated, nil
+}
+
+func prepareChangelogPage(ctx context.Context, root, stage, sourcePath string) (time.Time, error) {
+	if _, err := os.Lstat(filepath.Join(stage, sourcePath)); os.IsNotExist(err) {
 		return time.Time{}, nil
 	} else if err != nil {
 		return time.Time{}, err
 	}
-	source, err := readAgentContextFile(stage, changelogSource)
+	source, err := readAgentContextFile(stage, sourcePath)
 	if err != nil {
 		return time.Time{}, err
 	}
@@ -84,7 +98,7 @@ func prepareChangelog(ctx context.Context, root, stage string) (time.Time, error
 	rendered.WriteString("-->\n")
 	rendered.Write(bytes.Replace(body, []byte(changelogMarker), entries, 1))
 	rendered.WriteByte('\n')
-	if err := os.WriteFile(filepath.Join(stage, changelogSource), rendered.Bytes(), 0644); err != nil {
+	if err := os.WriteFile(filepath.Join(stage, sourcePath), rendered.Bytes(), 0644); err != nil {
 		return time.Time{}, err
 	}
 	return updated, nil

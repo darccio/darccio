@@ -5,6 +5,57 @@ import (
 	"testing"
 )
 
+func TestEnglishSlashEntryKeepsEnglishLanguageAndCanonicalIdentity(t *testing.T) {
+	post := examplePost()
+	canonical := homeURL + "en/now/"
+	input := strings.ReplaceAll(fixture(t, "post.html"), post.URL, canonical)
+	input = strings.Replace(input, `<time class="dt-published" datetime="2024-07-01T10:00:00+02:00">1 July 2024</time>`, `Now`, 1)
+	expected, err := parseHTML(post.Body)
+	if err != nil {
+		t.Fatal(err)
+	}
+	doc, data := parsed(t, input, canonical)
+	if err := validateSlashEntry(doc, data, expected, canonical, post.Updated, "en"); err != nil {
+		t.Fatal(err)
+	}
+	for _, change := range [][2]string{
+		{`class="h-entry" lang="en"`, `class="h-entry" lang="ca"`},
+		{canonical, homeURL + "now/"},
+		{`class="p-author h-card" href="https://dario.cat/"`, `class="p-author h-card" href="https://dario.cat/en/"`},
+	} {
+		if !strings.Contains(input, change[0]) {
+			t.Fatalf("mutation does not match fixture: %s", change[0])
+		}
+		doc, data := parsed(t, strings.ReplaceAll(input, change[0], change[1]), canonical)
+		if err := validateSlashEntry(doc, data, expected, canonical, post.Updated, "en"); err == nil {
+			t.Fatal("translated language, URL or personal identity regression was accepted")
+		}
+	}
+}
+
+func TestEnglishContactAdapterOnlyReadsItsReviewedLiteralPartial(t *testing.T) {
+	root := t.TempDir()
+	file := "en/contact/index.md"
+	source := `<!--
+entry: true
+-->
+<h1 class="p-name">Contact</h1>
+<embed src="../../.zas/partials/contact-en.html" type="text/html">
+`
+	put(t, root, file, source)
+	put(t, root, ".zas/partials/contact-en.html", `<nav aria-label="Contact"><a class="u-email" href="mailto:cc@dario.cat">cc@dario.cat</a></nav>`)
+	_, doc, err := publicSource(root, file)
+	if err != nil || doc == nil || !strings.Contains(textContent(doc), email) {
+		t.Fatalf("reviewed English contact embed did not render: %v", err)
+	}
+	for _, path := range []string{"../.zas/partials/contact.html", "../../CV/MAC.json", "../../.zas/partials/other.html"} {
+		put(t, root, file, strings.Replace(source, "../../.zas/partials/contact-en.html", path, 1))
+		if _, _, err := publicSource(root, file); err == nil {
+			t.Fatalf("unreviewed embed was accepted: %s", path)
+		}
+	}
+}
+
 func TestDatedSlashEntryFixture(t *testing.T) {
 	post := examplePost()
 	input := strings.ReplaceAll(fixture(t, "post.html"), post.URL, homeURL+"now/")
@@ -15,7 +66,7 @@ func TestDatedSlashEntryFixture(t *testing.T) {
 		t.Fatal(err)
 	}
 	doc, data := parsed(t, input, homeURL+"now/")
-	if err := validateSlashEntry(doc, data, expected, homeURL+"now/", post.Updated); err != nil {
+	if err := validateSlashEntry(doc, data, expected, homeURL+"now/", post.Updated, "ca"); err != nil {
 		t.Fatal(err)
 	}
 	for _, test := range []struct{ name, from, to string }{
@@ -31,7 +82,7 @@ func TestDatedSlashEntryFixture(t *testing.T) {
 				t.Fatal("fixture mutation no longer matches")
 			}
 			doc, data := parsed(t, strings.Replace(input, test.from, test.to, 1), homeURL+"now/")
-			if err := validateSlashEntry(doc, data, expected, homeURL+"now/", post.Updated); err == nil {
+			if err := validateSlashEntry(doc, data, expected, homeURL+"now/", post.Updated, "ca"); err == nil {
 				t.Fatal("slash regression was accepted")
 			}
 		})

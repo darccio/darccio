@@ -20,37 +20,52 @@ import (
 // These are existing public pages with supported facts. Deliberately do not
 // walk CV or derive events for undated talks.
 func validateSupportedPages(root, deploy string) error {
+	for _, prefix := range []string{"", "en/"} {
+		if err := validateSupportedLocale(root, deploy, prefix); err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
+func validateSupportedLocale(root, deploy, prefix string) error {
+	language := "ca"
+	if prefix == "en/" {
+		language = "en"
+	}
 	for _, slug := range []string{"now", "ai", "colophon", "feeds", "contact", "hello", "elsewhere", "languages", "sponsor", "uses", "blogroll"} {
-		pageURL := homeURL + slug + "/"
-		config, expected, err := publicSource(root, slug+"/index.md")
+		page := prefix + slug + "/"
+		pageURL := homeURL + page
+		config, expected, err := publicSource(root, page+"index.md")
 		if err != nil {
 			return err
 		}
 		if config["entry"] != true {
 			return fmt.Errorf("%s: supported dated slash page must retain entry metadata", slug)
 		}
-		data := zas.ZasData{Page: config, Path: "/" + slug + "/index.html", Site: zas.ZasSiteData{BaseURL: strings.TrimSuffix(homeURL, "/")}}
+		data := zas.ZasData{Page: config, Path: "/" + page + "index.html", Site: zas.ZasSiteData{BaseURL: strings.TrimSuffix(homeURL, "/")}}
 		updated, err := data.Updated()
 		if err != nil || updated.IsZero() {
 			return fmt.Errorf("%s: missing explicit source updated timestamp", slug)
 		}
-		doc, parsed, err := readPage(deploy, slug+"/index.html", pageURL)
+		doc, parsed, err := readPage(deploy, page+"index.html", pageURL)
 		if err != nil {
 			return err
 		}
-		if err := validateSlashEntry(doc, parsed, expected, data.Canonical(), updated); err != nil {
+		if err := validateSlashEntry(doc, parsed, expected, data.Canonical(), updated, language); err != nil {
 			return fmt.Errorf("%s: %w", slug, err)
 		}
 	}
 	for _, spec := range []struct{ slug, childType string }{{"projects", "h-item"}, {"slashes", "h-entry"}, {"talks", "h-event"}} {
-		pageURL := homeURL + spec.slug + "/"
-		_, expected, err := publicSource(root, spec.slug+"/index.md")
+		page := prefix + spec.slug + "/"
+		pageURL := homeURL + page
+		_, expected, err := publicSource(root, page+"index.md")
 		if err != nil {
 			return err
 		}
 		base, _ := url.Parse(pageURL)
 		source := microformats.ParseNode(expected, base)
-		doc, output, err := readPage(deploy, spec.slug+"/index.html", pageURL)
+		doc, output, err := readPage(deploy, page+"index.html", pageURL)
 		if err != nil {
 			return err
 		}
@@ -85,10 +100,21 @@ func publicSource(root, file string) (map[interface{}]interface{}, *html.Node, e
 	for _, embed := range find(doc, func(n *html.Node) bool { return isTag(n, "embed") }) {
 		// Contact has one literal, public HTML fragment. No scripts or templates
 		// are executed, and no other private source may be read by this adapter.
-		if file != "contact/index.md" || attribute(embed, "src") != "../.zas/partials/contact.html" || attribute(embed, "type") != "text/html" {
+		partial := ""
+		switch file {
+		case "contact/index.md":
+			if attribute(embed, "src") == "../.zas/partials/contact.html" {
+				partial = "contact.html"
+			}
+		case "en/contact/index.md":
+			if attribute(embed, "src") == "../../.zas/partials/contact-en.html" {
+				partial = "contact-en.html"
+			}
+		}
+		if partial == "" || attribute(embed, "type") != "text/html" {
 			return nil, nil, fmt.Errorf("%s: unsupported public embed", file)
 		}
-		input, err := os.ReadFile(filepath.Join(root, ".zas", "partials", "contact.html"))
+		input, err := os.ReadFile(filepath.Join(root, ".zas", "partials", partial))
 		if err != nil {
 			return nil, nil, err
 		}
@@ -111,7 +137,7 @@ func publicSource(root, file string) (map[interface{}]interface{}, *html.Node, e
 	return config, doc, nil
 }
 
-func validateSlashEntry(doc *html.Node, data *microformats.Data, expected *html.Node, canonical string, updated time.Time) error {
+func validateSlashEntry(doc *html.Node, data *microformats.Data, expected *html.Node, canonical string, updated time.Time, language string) error {
 	entries := itemsOfType(data.Items, "h-entry")
 	if len(entries) != 1 {
 		return fmt.Errorf("expected one h-entry, got %d", len(entries))
@@ -133,8 +159,8 @@ func validateSlashEntry(doc *html.Node, data *microformats.Data, expected *html.
 	if err != nil {
 		return err
 	}
-	if attribute(article, "lang") != "ca" {
-		return fmt.Errorf("slash entry must keep Catalan language")
+	if attribute(article, "lang") != language {
+		return fmt.Errorf("slash entry must keep %s language", language)
 	}
 	content, err := uniqueNode(article, func(n *html.Node) bool { return hasClass(n, "e-content") }, "slash e-content")
 	if err != nil {

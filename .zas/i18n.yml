@@ -6,6 +6,10 @@ languages:
     ca: Idiomes
     en: Languages
     es: Idiomas
+site-languages:
+    ca: Idioma del web
+    en: Site language
+    es: Idioma del sitio
 capitalism:
     ca: Capitalisme
     en: Capitalism
