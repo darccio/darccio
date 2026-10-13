@@ -994,30 +994,26 @@ before/after difference is visible. The PR's [checks](https://github.com/darccio
 and hosted acceptance receipt record the exact final revision. The Cobi limitation
 is the only missing image left from this audit; production follows owner merge.
 
-### Inverted language-row trial · 13 October 2026
+### Inverted main-navigation trial · 13 October 2026
 
-After merging PRs #31 and #32, the owner requested a primary-colour language row
-with white links, a black current link and the existing primary underline.
-The CSS-only follow-up uses the plum `--accent` background and white links.
-The current item uses near-black `--ink-900` on a white highlight, preserving
-readable contrast; its plum 2px underline remains. White/dark inset focus rings
-remain visible on the corresponding backgrounds. Section navigation, translated
-page targets, fonts, markup and all existing URLs are unchanged.
+The owner requested an inverted general menu. The five-link main navigation uses
+the plum `--accent` background and white links; its current item uses near-black
+`--ink-900` on a white highlight with the retained 2px plum underline. Hover and
+inset focus rings remain readable in both themes. The language menu keeps its
+plain styling and the translated-page destinations already merged in PR #32.
 
-The styling subagent implemented the row and passed twelve focused Chromium
-cases in both themes, including 320px and 200% text. Another 44 browser cases
-cover eleven page types at 1440px/390px: axe has zero violations, skip links and
-focus work, language targets remain at least 44px and shared navigation type/gaps
-still match. All 92 styled pages pass 320px normal/doubled reflow. The guarded
-`generate` build, `test`, `check-vanity` and `check-microformats` pass with pinned
-Zas v0.0.9. No client scripts are added.
-The trial is committed as `20cd362`, with Darna passing and its SSH signature
-verified. [Review evidence](../../.github/review/inverted-language-menu/verification.json)
-contains desktop/mobile before/after and dark-mode screenshots plus browser,
-reflow and focused contrast/focus receipts. Hosted exact-revision acceptance
-follows push. Production publication follows owner merge.
+The first trial (`20cd362`) applied this treatment to the language row by mistake.
+The owner clarified that the general menu was intended; the styling correction
+moves all inverted overrides to `.primary-navigation`. The earlier evidence
+(`a4489ec`, receipt `80ee808`) remains in Git history as superseded trial data;
+the PR description and review artifacts now describe the final main-menu design.
+This correction keeps translated targets, markup, content, fonts and URLs intact.
 
-The inverted-row review evidence is committed as `a4489ec`; both implementation
-and evidence commits have verified SSH signatures. [PR #33](https://github.com/darccio/darccio/pull/33)
-provides the visual trial and light/dark screenshots. Its [checks](https://github.com/darccio/darccio/pull/33/checks)
-and acceptance comment record the final hosted revision and preview.
+The implementation subagent verified 36 focused browser cases (ca/en/es, both
+themes, 1440px/390px/320px, normal/200% text). All five main links fit one row at
+390px in every locale, with targets at least 44px high; smaller/enlarged views
+wrap without overflow. The guarded `generate` build, full `test`, `check-vanity`
+and `check-microformats` pass with pinned Zas v0.0.9. The publishing consistency
+check still covers 33 posts, 54 feed items and 26 verified Standard.site documents.
+The correction adds no client scripts. Final browser, commit and preview receipts
+follow before updating [PR #33](https://github.com/darccio/darccio/pull/33).
