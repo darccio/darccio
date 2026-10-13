@@ -674,3 +674,8 @@ canonical UID preservation, idempotence and normalized HTML integrity hashes.
 This follow-up belongs to [PR #28](https://github.com/darccio/darccio/pull/28).
 Its commit receipt and fresh hosted preview checks follow below; custom-domain
 deployment remains dependent on owner merge. T09 defaults remain deferred.
+
+The navigation correction is committed as `6df4683`. Independent read-only
+review found no material concerns. The signed complete unit passed darna;
+no hooks were bypassed. The hosted receipt is kept in PR #28 so its fresh
+preview URL and exact-commit checks can update without altering published content.
