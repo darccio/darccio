@@ -915,3 +915,20 @@ Negative tests require missing, empty or directory assets to reject the build an
 preserve the previous deployment. Remote hosts remain outside this offline gate.
 Independent subagent review and the full repository suite pass; no production
 deploy depends on remote image availability.
+
+The local URL fixes and image guard are committed as `f2e48e5`, with darna and
+verified SSH signing. A broader audit found three unavailable Twitter images in
+Rizoma #001/#002; their original URLs return 404 for both HEAD and GET, including
+alternate file formats. Six other remote image endpoints return image content.
+Two exact original small variants were recovered from Internet Archive snapshots,
+visually inspected and copied unchanged into `/static/images/`: the eight-portrait
+inequality graphic (680×570) and the climate infographic (680×357). Their original
+source credits remain. The climate graphic gains descriptive Catalan alt text and
+dimensions. Both articles keep their original dates and prose; the staged build,
+full tests, vanity, microformats and publishing-format checks pass.
+
+The Cobi statue photo in Rizoma #001 remains unavailable at its original Twitter
+URL. Bounded archive lookups encountered 503, timeout and 429 responses; this does
+not establish that no archived copy exists. The owner confirmed no originals are
+available and requested that the limitation be recorded. The original URL and alt
+text are retained, and no replacement image or historical fact is invented.
