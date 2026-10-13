@@ -781,3 +781,10 @@ Seven vanity contracts, 33 dated posts, 54 feed items and 26 Standard.site plans
 continue to pass. The hosted preview and exact-revision CI receipt follow in the
 review PR; production changes only after owner merge. No owner input remains for
 this design batch, and the deferred personal defaults remain deferred.
+
+The review evidence is committed as `dfb8dbb`. Review is open in
+[PR #29](https://github.com/darccio/darccio/pull/29). Its
+[commit checks](https://github.com/darccio/darccio/pull/29/checks) and PR receipt
+record the hosted preview and exact-revision results separately from the local
+evidence above. The supplied PDF and unpublished planning files remain absent
+from the deploy. Production remains dependent on owner merge.
