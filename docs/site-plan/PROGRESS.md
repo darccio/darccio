@@ -932,3 +932,13 @@ URL. Bounded archive lookups encountered 503, timeout and 429 responses; this do
 not establish that no archived copy exists. The owner confirmed no originals are
 available and requested that the limitation be recorded. The original URL and alt
 text are retained, and no replacement image or historical fact is invented.
+
+The recovered-original unit is committed as `521dcbf`. All three implementation
+commits have verified SSH signatures and passed darna without bypassing hooks.
+[Review evidence](../../.github/review/article-images/verification.json) records
+the 44 browser cases, 12 before/after screenshots, image decoding and exact archive
+URL/hash provenance. Thirteen pages (the ten corrected articles, portal and two
+Rizoma editions) successfully decode all 16 local body images. All original feed
+item GUIDs, titles and publication instants remain; current git-based update dates
+advance for corrected sources. Mandatory cross-format checks still cover 33 posts,
+54 feed items and 26 verified Standard.site documents. Hosted checks follow push.

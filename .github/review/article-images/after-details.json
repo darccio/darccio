@@ -1,0 +1,86 @@
+[
+  {
+    "route": "/en/posts/a-new-path/",
+    "width": 1440,
+    "bodyFont": "\"IBM Plex Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 0,
+    "rows": 0,
+    "navGap": null,
+    "visibleHeaderImages": [
+      "/static/_.png"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": null
+  },
+  {
+    "route": "/posts/pseudo-estat/",
+    "width": 1440,
+    "bodyFont": "\"IBM Plex Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 0,
+    "rows": 0,
+    "navGap": null,
+    "visibleHeaderImages": [
+      "/static/_.png"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": null
+  },
+  {
+    "route": "/en/posts/delete-facebook-1/",
+    "width": 1440,
+    "bodyFont": "\"IBM Plex Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 0,
+    "rows": 0,
+    "navGap": null,
+    "visibleHeaderImages": [
+      "/static/_.png"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": null
+  },
+  {
+    "route": "/en/posts/a-new-path/",
+    "width": 390,
+    "bodyFont": "\"IBM Plex Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 0,
+    "rows": 0,
+    "navGap": null,
+    "visibleHeaderImages": [
+      "/static/_.png"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": null
+  },
+  {
+    "route": "/posts/pseudo-estat/",
+    "width": 390,
+    "bodyFont": "\"IBM Plex Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 0,
+    "rows": 0,
+    "navGap": null,
+    "visibleHeaderImages": [
+      "/static/_.png"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": null
+  },
+  {
+    "route": "/en/posts/delete-facebook-1/",
+    "width": 390,
+    "bodyFont": "\"IBM Plex Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 0,
+    "rows": 0,
+    "navGap": null,
+    "visibleHeaderImages": [
+      "/static/_.png"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": null
+  }
+]

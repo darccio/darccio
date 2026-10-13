@@ -1,0 +1,36 @@
+[
+  {
+    "requested_url": "https://web.archive.org/web/20211212203753id_/https://pbs.twimg.com/media/E7S7E0zXMAAmRtk?format=jpg&name=small",
+    "kind": "image",
+    "checked_at": "2026-10-13T11:03:25.479742+00:00",
+    "http_status": 200,
+    "response_url": "https://web.archive.org/web/20211212203753id_/https://pbs.twimg.com/media/E7S7E0zXMAAmRtk?format=jpg&name=small",
+    "content_type": "image/jpeg",
+    "bytes": 68688,
+    "sha256": "fbdfd7449c17b37b70c84899d4f894b67bc70618433e1d8c73ec0f984fa92262",
+    "file": "static/images/rizoma-001-tax-the-rich.jpg",
+    "width": 680,
+    "height": 570,
+    "verification": "Image MIME and JPEG signature verified; file tool confirms JPEG dimensions; actual image visually inspected.",
+    "visual_description": "The same eight-portrait inequality collage at the exact small-variant URL used by the site.",
+    "original_url": "https://pbs.twimg.com/media/E7S7E0zXMAAmRtk?format=jpg&name=small",
+    "archive_timestamp": "20211212203753"
+  },
+  {
+    "requested_url": "https://web.archive.org/web/20211212203807id_/https://pbs.twimg.com/media/E8Vn4XhX0AcpQvv?format=jpg&name=small",
+    "kind": "image",
+    "checked_at": "2026-10-13T11:01:59.012904+00:00",
+    "http_status": 200,
+    "response_url": "https://web.archive.org/web/20211212203807id_/https://pbs.twimg.com/media/E8Vn4XhX0AcpQvv?format=jpg&name=small",
+    "content_type": "image/jpeg",
+    "bytes": 32923,
+    "sha256": "aece5819885ba030798d81b07d6ea916aa4f08bb5c310008c6a63aa6b6a5a023",
+    "file": "static/images/rizoma-002-climate.jpg",
+    "width": 680,
+    "height": 357,
+    "verification": "Image MIME and JPEG signature verified; file tool confirms JPEG dimensions; actual image visually inspected.",
+    "visual_description": "The same climate-science infographic at the exact small-variant URL used by the site.",
+    "original_url": "https://pbs.twimg.com/media/E8Vn4XhX0AcpQvv?format=jpg&name=small",
+    "archive_timestamp": "20211212203807"
+  }
+]
