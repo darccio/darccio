@@ -1,0 +1,167 @@
+{
+  "base": "http://127.0.0.1:40347",
+  "reports": [
+    {
+      "route": "/",
+      "selector": "header .site-language-nav a[hreflang=\"en\"]",
+      "href": "/en/",
+      "destination": "http://127.0.0.1:40347/en/"
+    },
+    {
+      "route": "/en/",
+      "selector": "header .site-language-nav a[hreflang=\"ca\"]",
+      "href": "/",
+      "destination": "http://127.0.0.1:40347/"
+    },
+    {
+      "route": "/about/",
+      "selector": "header .site-language-nav a[hreflang=\"en\"]",
+      "href": "/en/about/",
+      "destination": "http://127.0.0.1:40347/en/about/"
+    },
+    {
+      "route": "/en/about/",
+      "selector": "header .site-language-nav a[hreflang=\"ca\"]",
+      "href": "/about/",
+      "destination": "http://127.0.0.1:40347/about/"
+    },
+    {
+      "route": "/talks/",
+      "selector": "header .site-language-nav a[hreflang=\"en\"]",
+      "href": "/en/talks/",
+      "destination": "http://127.0.0.1:40347/en/talks/"
+    },
+    {
+      "route": "/en/contact/",
+      "selector": "header .site-language-nav a[hreflang=\"ca\"]",
+      "href": "/contact/",
+      "destination": "http://127.0.0.1:40347/contact/"
+    },
+    {
+      "route": "/posts/",
+      "selector": "header .site-language-nav a[hreflang=\"en\"]",
+      "href": "/en/posts/",
+      "destination": "http://127.0.0.1:40347/en/posts/"
+    },
+    {
+      "route": "/en/posts/",
+      "selector": "header .site-language-nav a[hreflang=\"es\"]",
+      "href": "/es/posts/",
+      "destination": "http://127.0.0.1:40347/es/posts/"
+    },
+    {
+      "route": "/es/posts/",
+      "selector": "header .site-language-nav a[hreflang=\"ca\"]",
+      "href": "/posts/",
+      "destination": "http://127.0.0.1:40347/posts/"
+    },
+    {
+      "route": "/en/posts/delete-facebook-1/",
+      "selector": "header .site-language-nav a[hreflang=\"ca\"]",
+      "href": "/posts/delete-facebook-1/",
+      "destination": "http://127.0.0.1:40347/posts/delete-facebook-1/"
+    },
+    {
+      "route": "/posts/delete-facebook-2/",
+      "selector": "header .site-language-nav a[hreflang=\"en\"]",
+      "href": "/en/posts/delete-facebook-2/",
+      "destination": "http://127.0.0.1:40347/en/posts/delete-facebook-2/"
+    },
+    {
+      "route": "/es/posts/delete-facebook/",
+      "selector": "header .site-language-nav a[hreflang=\"en\"]",
+      "href": "/en/posts/delete-facebook/",
+      "destination": "http://127.0.0.1:40347/en/posts/delete-facebook/"
+    },
+    {
+      "route": "/posts/un-nou-cami/",
+      "selector": "header .site-language-nav a[hreflang=\"en\"]",
+      "href": "/en/posts/a-new-path/",
+      "destination": "http://127.0.0.1:40347/en/posts/a-new-path/"
+    },
+    {
+      "route": "/en/posts/a-new-path/",
+      "selector": "header .site-language-nav a[hreflang=\"es\"]",
+      "href": "/es/posts/un-nuevo-camino/",
+      "destination": "http://127.0.0.1:40347/es/posts/un-nuevo-camino/"
+    },
+    {
+      "route": "/es/posts/un-nuevo-camino/",
+      "selector": "header .site-language-nav a[hreflang=\"ca\"]",
+      "href": "/posts/un-nou-cami/",
+      "destination": "http://127.0.0.1:40347/posts/un-nou-cami/"
+    },
+    {
+      "route": "/en/posts/introduction-liquid-organizations/",
+      "selector": "header .site-language-nav a[hreflang=\"es\"]",
+      "href": "/es/posts/introduccion-organizaciones-liquidas/",
+      "destination": "http://127.0.0.1:40347/es/posts/introduccion-organizaciones-liquidas/"
+    },
+    {
+      "route": "/es/posts/introduccion-organizaciones-liquidas/",
+      "selector": "header .site-language-nav a[hreflang=\"en\"]",
+      "href": "/en/posts/introduction-liquid-organizations/",
+      "destination": "http://127.0.0.1:40347/en/posts/introduction-liquid-organizations/"
+    },
+    {
+      "route": "/posts/perque-temer-facebook/",
+      "selector": "header .site-language-nav a[hreflang=\"es\"]",
+      "href": "/es/posts/porque-deberias-temer-facebook/",
+      "destination": "http://127.0.0.1:40347/es/posts/porque-deberias-temer-facebook/"
+    },
+    {
+      "route": "/es/posts/porque-deberias-temer-facebook/",
+      "selector": "header .site-language-nav a[hreflang=\"ca\"]",
+      "href": "/posts/perque-temer-facebook/",
+      "destination": "http://127.0.0.1:40347/posts/perque-temer-facebook/"
+    },
+    {
+      "route": "/en/posts/monitoring-synology-nas-with-datadog/",
+      "selector": "header .site-language-nav a[hreflang=\"en\"]",
+      "href": "/en/posts/monitoring-synology-nas-with-datadog/",
+      "destination": "http://127.0.0.1:40347/en/posts/monitoring-synology-nas-with-datadog/"
+    },
+    {
+      "route": "/en/posts/monitoring-synology-nas-with-datadog/",
+      "selector": "header .site-language-nav a[hreflang=\"ca\"]",
+      "href": "/",
+      "destination": "http://127.0.0.1:40347/"
+    },
+    {
+      "route": "/posts/ca/",
+      "selector": "header .site-language-nav a[hreflang=\"ca\"]",
+      "href": "/posts/ca/",
+      "destination": "http://127.0.0.1:40347/posts/ca/"
+    },
+    {
+      "route": "/posts/ca/",
+      "selector": "header .site-language-nav a[hreflang=\"en\"]",
+      "href": "/en/",
+      "destination": "http://127.0.0.1:40347/en/"
+    },
+    {
+      "route": "/cv/",
+      "selector": "header .site-language-nav a[hreflang=\"en\"]",
+      "href": "/cv/",
+      "destination": "http://127.0.0.1:40347/cv/"
+    },
+    {
+      "route": "/cv/",
+      "selector": "header .site-language-nav a[hreflang=\"ca\"]",
+      "href": "/",
+      "destination": "http://127.0.0.1:40347/"
+    },
+    {
+      "route": "/mergo/",
+      "selector": "header .site-language-nav a[hreflang=\"en\"]",
+      "href": "/mergo/",
+      "destination": "http://127.0.0.1:40347/mergo/"
+    },
+    {
+      "route": "/zas/",
+      "selector": "header .site-language-nav a[hreflang=\"en\"]",
+      "href": "/zas/",
+      "destination": "http://127.0.0.1:40347/zas/"
+    }
+  ]
+}

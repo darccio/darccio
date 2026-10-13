@@ -862,7 +862,10 @@ clicks retain the local origin; all 92 styled pages pass 320px normal/200% text
 reflow. All 97 HTML routes survive. Three feeds, CV JSON, tokens and five raw
 vanity fragments remain byte-identical; outside the language menus only the
 Git-generated changelog differs from the earlier English-site build.
-Commit, screenshots, PR and hosted exact-revision receipts follow. Production
+The implementation is committed as `655f04b`, with Darna passing and its SSH
+signature verified. [Review evidence](../../.github/review/language-menu/verification.json)
+contains twelve before/after screenshots plus browser, click, reflow and invariant
+reports. Hosted exact-revision acceptance is recorded after push. Production
 publication requires owner merge; the separate image-fix PR remains independent.
 
 ### English personal site

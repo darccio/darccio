@@ -1,0 +1,23 @@
+{
+  "unchanged_artifact_sha256": {
+    "feed.xml": "a77ac32dc09e2464f80559cb189dea28240622fd71841e77129bff84e1065ca9",
+    "en/feed.xml": "8040c8e19f770267729a78afa79a32a5e1c6a7aa1261c2eb154618b4b8a1a46a",
+    "es/feed.xml": "927bfbcdb4bc1a6f24130dfcc24cb1c58927be414f5a189cfb48517b71b83cf1",
+    "CV/MAC.json": "16250f593ebe27634ec552f386355c66b983ce8b90bd3bfc50605e8787ac703f",
+    "xdr/index.html": "046a5b0448d0a03d23c230edceffdf24e8806d922ec6c07a830a7f4d458d63bb",
+    "errors/index.html": "4dfc138b8708937e23a304e87bb88f73239b2a2fd6542c3a50e941a7e3fa1993",
+    "awaken/index.html": "3e0da1bcc4b982818c81366396a5a2b104194962bd1c977219f8d4569959c074",
+    "cocoon/index.html": "361f3db212d0f923a17caac03a28a8ddd3da9e94995bc58fc7bfeacb2252aa42",
+    "x/index.html": "649842d844ca7f362b018f747dae133b61a7c16c359b43ac47ed004c18ce46b1",
+    "static/tokens.css": "291cfee32afbbd76e997550fb5d4dfa6eeb2ef084718661d7d44f6b21f398dc1"
+  },
+  "html_routes": 97,
+  "non_menu_html_changes": [
+    "changelog/index.html",
+    "en/changelog/index.html"
+  ],
+  "translation_groups": 24,
+  "translated_pages": 53,
+  "reciprocal_sitemap_groups": true,
+  "article_sources_changed": false
+}
