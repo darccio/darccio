@@ -121,6 +121,9 @@ func Build(ctx context.Context, options Options) error {
 	if err := finalizeStandardDocuments(root, stage, deploy); err != nil {
 		return fmt.Errorf("assembled Standard.site documents rejected: %w", err)
 	}
+	if err := finalizeNavigation(deploy, docs.Owns); err != nil {
+		return fmt.Errorf("assembled navigation rejected: %w", err)
+	}
 	if err := finalizeHTTPWorker(root, stage, deploy, docs.Twins); err != nil {
 		return fmt.Errorf("assembled HTTP adapter rejected: %w", err)
 	}

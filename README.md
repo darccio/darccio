@@ -32,7 +32,7 @@ supplied LinkedIn export, and generating and validating `/cv/` from that JSON
 during site builds. This specific permission leaves the restriction above in
 place for other uses. Both CV URLs remain excluded from crawling and from the
 site's feeds, Standard.site publishing and agent text collections. See
-[CV maintenance](CV/README.md) for the source and date conventions.
+[CV maintenance](https://github.com/darccio/darccio/blob/main/CV/README.md) for the source and date conventions.
 
 The [MAC format](https://github.com/getmanfred/mac) is free and open-source software licensed and distributed under the [Creative Commons Attribution Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0 International).
 
@@ -51,7 +51,15 @@ revision, stages the site, validates its metadata and vanity imports, and
 replaces the previous deploy only after every check succeeds. Run
 `make -f .zas/Makefile test` for the Go, microformats, HTTP and workflow tests.
 
-[`.zas/projects.yml`](.zas/projects.yml) selects immutable public source commits
+The assembled HTML uses root-relative internal navigation so Pages previews
+stay on their own host. The finalizer also covers links projected from CV data,
+older articles and fetched documentation. Canonical head metadata, hidden
+microformat identities, feeds, Markdown and portable agent contexts retain
+production URLs; visible microformat links carry their canonical UID separately.
+Raw Go vanity fragments remain byte-identical. Repository-only documentation
+links point to GitHub because those files are excluded from the published site.
+
+[`.zas/projects.yml`](https://github.com/darccio/darccio/blob/main/.zas/projects.yml) selects immutable public source commits
 and explicit documentation paths from Mergo, Zas and darna. Only the selected
 regular Git blobs and the original repository license are read; no fetched
 checkout, build script, template action, raw HTML or embed executes. A safe
@@ -75,7 +83,7 @@ only **Contents: write** on `darccio/darccio`, which GitHub's repository-dispatc
 endpoint requires. Without the token the source workflow reports a notice and
 skips dispatch; ordinary site builds need no credentials for these public repos.
 
-The site's [Docs source update workflow](.github/workflows/docs-update.yml)
+The site's [Docs source update workflow](https://github.com/darccio/darccio/blob/main/.github/workflows/docs-update.yml)
 validates the repository and full SHA, fetches the selected files, runs the
 complete guarded build, and opens a manifest-only pin update PR. Enable Actions'
 permission to create pull requests in this site's repository settings. Its
@@ -96,7 +104,7 @@ Unlisted pages/assets are not ingested. A missing source, mismatched license cop
 unsupported link, failed fetch or rejected output leaves the last good deploy
 intact. Restore an earlier manifest pin to roll back docs, or revert the pipeline
 commit to restore the untouched original vanity landings. Operational receipts
-remain in [the implementation plan](docs/site-plan/PROGRESS.md) and are not
+remain in [the implementation plan](https://github.com/darccio/darccio/blob/main/docs/site-plan/PROGRESS.md) and are not
 published as site content.
 
 ## Publishing formats and maintenance
@@ -116,7 +124,7 @@ plan locally; builds need no PDS credentials or connectivity. Reuse the pinned
 binary with `make -f .zas/Makefile generate ZAS=/tmp/dario-site-zas/zas`, and run
 `make -f .zas/Makefile check-consistency` to inspect an existing deployment.
 
-The [Standard.site document workflow](.github/workflows/standard-site.yml) starts
+The [Standard.site document workflow](https://github.com/darccio/darccio/blob/main/.github/workflows/standard-site.yml) starts
 after a confirmed production Pages deployment and independently verifies its
 exact revision. It publishes only the committed reviewed allowlist, using
 `ATP_HANDLE` and `ATP_APP_PASSWORD` in one step. The site deployment never waits
@@ -131,7 +139,7 @@ templates, curation, source-date provenance and site assembly belong here.
 The operational `docs/HANDOFF-FACTS.md`, `docs/publication-provenance.md`,
 `docs/standard-site-backfill.md` and `docs/site-plan/PROGRESS.md` hold the audit,
 date evidence, the approved archive inventory and implementation receipts. The
-[T30 receipt](docs/site-plan/tasks/T30.md) records the 26 published articles,
+[T30 receipt](https://github.com/darccio/darccio/blob/main/docs/site-plan/tasks/T30.md) records the 26 published articles,
 production verification links, reader checks and zero-write online rerun.
 They are excluded from the deployed site. Registrar renewal, DNSSEC and external
 alert delivery require separate account evidence in `docs/DOMAIN-OPERATIONS.md`.

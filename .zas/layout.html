@@ -103,7 +103,7 @@
 <a class="skip-link" href="#main-content" lang="{{$language}}">{{.E "skip-content"}}</a>
 <header>
     <div class="{{if not (index .Page "representative_hcard")}}h-card {{end}}site-author">
-        <a class="u-url u-uid" rel="me author" href="https://dario.cat/">
+        <a class="u-url u-uid" rel="me author" href="/">
             <img class="u-photo" src="/static/avatar-96.webp" width="96" height="96" alt="" decoding="async">
             <span class="p-name">{{.Extra "/site/title"}}</span>
         </a>
@@ -133,7 +133,7 @@
             <time class="dt-updated" datetime="{{$updated.Format "2006-01-02T15:04:05.999999999Z07:00"}}">{{if eq $language "en"}}{{$updated.Format "2 Jan 2006"}}{{else}}{{$updated.Format "02/01/2006"}}{{end}}</time> ·
             {{end}}
             {{.E "by"}}
-            <span class="p-author h-card"><a class="p-name u-url u-uid" href="https://dario.cat/">{{.Extra "/site/title"}}</a></span>
+            <span class="p-author h-card"><a class="p-name u-url u-uid" href="/">{{.Extra "/site/title"}}</a></span>
             · <a class="u-url u-uid" href="{{$canonical}}">{{.E "permalink"}}</a>
         </p>
     </header>

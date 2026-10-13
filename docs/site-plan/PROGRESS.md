@@ -635,3 +635,42 @@ The screenshot/check receipt is committed as `917fc41`. Review is open in
 CI and Pages outcomes separately from the local evidence above. The review
 assets and progress notes were verified absent from exact-head generated
 output after the receipt commit. Production remains subject to owner merge.
+
+### Preview navigation follow-up
+
+The owner found that archive links left the Pages preview for production.
+The complete 79-page HTML audit found the same issue in the shared header,
+article authors/permalinks, representative-card photo links, generated CV,
+older article continuation links and a few other content links. All 54 archive
+post links now use root-relative paths in their sources. The shared templates
+and maintained content do likewise. Six README references to files excluded
+from deployment now point to their actual GitHub source.
+
+A site-specific finalizer normalizes same-origin body navigation in assembled
+HTML, including CV/docs projections, without editing the CV JSON or historical
+article sources. It tokenizes real anchors and patches only attribute bytes;
+head metadata, comments (including CV email exclusions), scripts, raw vanity
+fragments and non-HTML artifacts remain intact. Visible u-uid links transfer
+their canonical identity to a hidden data element inside the same link, keeping
+preview navigation and global identity separate. Genuinely hidden microformat
+identity links retain their production URLs. RSS, sitemap, JSON-LD,
+Standard.site and portable Markdown/agent references retain canonical URLs.
+HTTP integrity hashes are calculated after navigation is finalized.
+
+Guarded generation, full repository tests, vanity/microformats/consistency,
+the full vanity race suite and vet pass. All 79 existing HTML paths remain,
+with zero unjustified production body links. All 1,133 root navigation links
+resolve on a preview origin, and all 54 archive post links are covered. Original
+destinations are preserved apart from the six corrected GitHub references;
+the generated rolling changelog's commit links are excluded from that comparison.
+The three RSS feeds, CV JSON and five raw vanity fragments are byte-identical.
+All representative homepage card properties and five project objects remain
+unchanged when parsed against the canonical site base. All 36 requested browser
+scenarios again pass axe, keyboard focus, local fonts and 320px normal/200%
+reflow; ten real archive/header/article/CV/home clicks stay on the local preview
+origin. Regression fixtures also cover escaping, external domains, unsafe URLs,
+canonical UID preservation, idempotence and normalized HTML integrity hashes.
+
+This follow-up belongs to [PR #28](https://github.com/darccio/darccio/pull/28).
+Its commit receipt and fresh hosted preview checks follow below; custom-domain
+deployment remains dependent on owner merge. T09 defaults remain deferred.
