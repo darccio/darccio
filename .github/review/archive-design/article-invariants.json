@@ -1,0 +1,20 @@
+{
+  "posts/index.md": {
+    "preserved_rows": 35,
+    "local_entries": 33,
+    "external_citations": 2,
+    "same_order_urls_names_languages_and_dates": true
+  },
+  "en/posts/index.md": {
+    "preserved_rows": 9,
+    "local_entries": 9,
+    "external_citations": 0,
+    "same_order_urls_names_languages_and_dates": true
+  },
+  "es/posts/index.md": {
+    "preserved_rows": 12,
+    "local_entries": 12,
+    "external_citations": 0,
+    "same_order_urls_names_languages_and_dates": true
+  }
+}

@@ -1,0 +1,124 @@
+[
+  {
+    "route": "/",
+    "width": 1440,
+    "bodyFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 0,
+    "rows": 0,
+    "navGap": null,
+    "visibleHeaderImages": [
+      "/static/avatar-96.webp"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": {
+      "photoLeft": 384,
+      "bioLeft": 384,
+      "photoTop": 229.390625,
+      "bioTop": 341.390625
+    }
+  },
+  {
+    "route": "/posts/",
+    "width": 1440,
+    "bodyFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 0,
+    "rows": 0,
+    "navGap": null,
+    "visibleHeaderImages": [
+      "/static/avatar-96.webp"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": null
+  },
+  {
+    "route": "/cv/",
+    "width": 1440,
+    "bodyFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 0,
+    "rows": 0,
+    "navGap": null,
+    "visibleHeaderImages": [
+      "/static/avatar-96.webp"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": null
+  },
+  {
+    "route": "/talks/",
+    "width": 1440,
+    "bodyFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 2,
+    "rows": 31,
+    "navGap": null,
+    "visibleHeaderImages": [
+      "/static/avatar-96.webp"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": null
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "bodyFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 0,
+    "rows": 0,
+    "navGap": null,
+    "visibleHeaderImages": [
+      "/static/avatar-96.webp"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": {
+      "photoLeft": 20,
+      "bioLeft": 20,
+      "photoTop": 228.46875,
+      "bioTop": 340.46875
+    }
+  },
+  {
+    "route": "/posts/",
+    "width": 390,
+    "bodyFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 0,
+    "rows": 0,
+    "navGap": null,
+    "visibleHeaderImages": [
+      "/static/avatar-96.webp"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": null
+  },
+  {
+    "route": "/cv/",
+    "width": 390,
+    "bodyFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 0,
+    "rows": 0,
+    "navGap": null,
+    "visibleHeaderImages": [
+      "/static/avatar-96.webp"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": null
+  },
+  {
+    "route": "/talks/",
+    "width": 390,
+    "bodyFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 2,
+    "rows": 31,
+    "navGap": null,
+    "visibleHeaderImages": [
+      "/static/avatar-96.webp"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": null
+  }
+]

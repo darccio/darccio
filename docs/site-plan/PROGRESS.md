@@ -764,3 +764,20 @@ Autodefensa, Mergo and disruptive-technology appearance. Guarded generation,
 microformats, repository tests and the final browser matrix pass. These newly
 shown years are distinguishable from verified event dates in both wide and
 narrow layouts; each resource note remains visible when the year rail is hidden.
+
+### Refinement review receipt
+
+Committed units: `f9ce4bb` Sans body, `d5e5cf7` logo/home/spacing,
+`5ec3199` post archives, `3adb6ee` unified CV timeline and `cf2db6e`
+talk-year evidence. Each complete unit passed darna and was signed without
+bypassing hooks. Independent final review found no material defects.
+[Review assets](../../.github/review/archive-design/verification.json) retain
+16 before/after screenshots, the 40 browser cases, 74-page reflow results,
+layout measurements, article invariants and primary talk-year evidence.
+All assets are excluded from deployment. All 79 existing HTML paths, three RSS
+feeds, source CV JSON, five raw vanity fragments and original token file remain;
+the feeds/CV/raw fragments/tokens compare byte-for-byte with the merged baseline.
+Seven vanity contracts, 33 dated posts, 54 feed items and 26 Standard.site plans
+continue to pass. The hosted preview and exact-revision CI receipt follow in the
+review PR; production changes only after owner merge. No owner input remains for
+this design batch, and the deferred personal defaults remain deferred.
