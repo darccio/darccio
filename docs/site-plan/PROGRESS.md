@@ -1015,5 +1015,11 @@ themes, 1440px/390px/320px, normal/200% text). All five main links fit one row a
 wrap without overflow. The guarded `generate` build, full `test`, `check-vanity`
 and `check-microformats` pass with pinned Zas v0.0.9. The publishing consistency
 check still covers 33 posts, 54 feed items and 26 verified Standard.site documents.
-The correction adds no client scripts. Final browser, commit and preview receipts
-follow before updating [PR #33](https://github.com/darccio/darccio/pull/33).
+The correction adds no client scripts and is committed as `0d86bc4`, with Darna
+passing and its SSH signature verified. [Corrected review evidence](../../.github/review/primary-navigation/verification.json)
+includes twelve Catalan-homepage/English-archive screenshots. Another 44 browser
+cases report zero axe violations in both themes; all 92 styled pages pass 320px
+normal/200% reflow. Feeds, CV JSON, tokens and raw vanity fragments retain their
+hashes. Superseded language-row screenshots are replaced in the final PR tree.
+[PR #33](https://github.com/darccio/darccio/pull/33) now describes the main menu;
+its exact-head checks and hosted acceptance receipt follow after push.
