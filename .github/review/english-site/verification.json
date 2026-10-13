@@ -1,0 +1,42 @@
+{
+  "implementation_commit": "c9f2c76",
+  "baseline_commit": "654eb6d",
+  "new_english_pages": 17,
+  "existing_english_article_count": 9,
+  "commands_passed": [
+    "make -f .zas/Makefile generate ZAS=/tmp/dario-site-zas/zas",
+    "make -f .zas/Makefile test",
+    "make -f .zas/Makefile check-vanity check-microformats"
+  ],
+  "browser": {
+    "chromium": "151.0.7922.34",
+    "playwright": "1.64.0",
+    "axe_core": "4.13.0",
+    "matrix_cases": 112,
+    "final_translated_talk_cases": 4,
+    "axe_violations": 0,
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "viewports": [
+      1440,
+      390
+    ],
+    "reflow_width": 320,
+    "text_scales": [
+      "100%",
+      "200%"
+    ],
+    "all_styled_pages_reflow": 92,
+    "navigation_clicks": 25,
+    "screenshots": 6
+  },
+  "limits": [
+    "Existing article text remains in its published languages; the English archive contains its nine existing English articles.",
+    "Talk names, places and event facts retain their original strings with language cues; surrounding UI and descriptive prose are translated.",
+    "CV and project guides are shared English resources at their existing root URLs.",
+    "The site language switch links homepages; article language filters remain separate.",
+    "Hosted preview, native /en redirect, live vanity and exact-head CI checks follow publication of the PR."
+  ]
+}

@@ -866,3 +866,12 @@ themes at desktop/mobile widths, skip links and keyboard focus work, and 320px
 normal/200% text reflow passes. All 92 styled pages pass the wider reflow check.
 Commit, review artifacts, hosted preview and exact-revision CI receipts follow;
 production publication requires owner merge.
+
+The complete translation and its regression checks are committed as `c9f2c76`.
+Darna and signing verification pass; no hooks were bypassed. Final talk-language
+review adds four passing focused browser cases to the 112-case matrix. Twenty-five
+real navigation clicks retain the local/preview origin, including English-home
+branding and writing links, Catalan/English switching and shared CV/docs resources.
+[Review evidence](../../.github/review/english-site/verification.json) includes six
+desktop/mobile screenshots, browser/reflow/navigation reports and the unchanged
+artifact hashes. Hosted acceptance is recorded separately after push.

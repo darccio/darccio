@@ -1,0 +1,96 @@
+[
+  {
+    "route": "/en/",
+    "width": 1440,
+    "bodyFont": "\"IBM Plex Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 0,
+    "rows": 0,
+    "navGap": null,
+    "visibleHeaderImages": [
+      "/static/_.png"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": {
+      "photoLeft": 384,
+      "bioLeft": 504,
+      "photoTop": 278,
+      "bioTop": 295.609375
+    }
+  },
+  {
+    "route": "/en/posts/",
+    "width": 1440,
+    "bodyFont": "\"IBM Plex Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 1,
+    "rows": 9,
+    "navGap": 48,
+    "visibleHeaderImages": [
+      "/static/_.png"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": null
+  },
+  {
+    "route": "/en/talks/",
+    "width": 1440,
+    "bodyFont": "\"IBM Plex Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 2,
+    "rows": 31,
+    "navGap": null,
+    "visibleHeaderImages": [
+      "/static/_.png"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": null
+  },
+  {
+    "route": "/en/",
+    "width": 390,
+    "bodyFont": "\"IBM Plex Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 0,
+    "rows": 0,
+    "navGap": null,
+    "visibleHeaderImages": [
+      "/static/_.png"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": {
+      "photoLeft": 20,
+      "bioLeft": 140,
+      "photoTop": 274.671875,
+      "bioTop": 254
+    }
+  },
+  {
+    "route": "/en/posts/",
+    "width": 390,
+    "bodyFont": "\"IBM Plex Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 1,
+    "rows": 9,
+    "navGap": 48,
+    "visibleHeaderImages": [
+      "/static/_.png"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": null
+  },
+  {
+    "route": "/en/talks/",
+    "width": 390,
+    "bodyFont": "\"IBM Plex Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "headingFont": "Newsreader, Georgia, \"Times New Roman\", serif",
+    "lists": 2,
+    "rows": 31,
+    "navGap": null,
+    "visibleHeaderImages": [
+      "/static/_.png"
+    ],
+    "visibleHeaderName": true,
+    "photoBio": null
+  }
+]

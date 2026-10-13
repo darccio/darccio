@@ -1,0 +1,155 @@
+{
+  "base": "http://127.0.0.1:44975",
+  "reports": [
+    {
+      "route": "/",
+      "selector": "header .site-language-nav a[hreflang=\"en\"]",
+      "href": "/en/",
+      "destination": "http://127.0.0.1:44975/en/"
+    },
+    {
+      "route": "/en/",
+      "selector": "header .primary-navigation a[href=\"/en/posts/\"]",
+      "href": "/en/posts/",
+      "destination": "http://127.0.0.1:44975/en/posts/"
+    },
+    {
+      "route": "/en/",
+      "selector": "header .site-logo",
+      "href": "/en/",
+      "destination": "http://127.0.0.1:44975/en/"
+    },
+    {
+      "route": "/en/about/",
+      "selector": "header .primary-navigation a[href=\"/en/posts/\"]",
+      "href": "/en/posts/",
+      "destination": "http://127.0.0.1:44975/en/posts/"
+    },
+    {
+      "route": "/en/about/",
+      "selector": "header .site-logo",
+      "href": "/en/",
+      "destination": "http://127.0.0.1:44975/en/"
+    },
+    {
+      "route": "/en/now/",
+      "selector": "header .primary-navigation a[href=\"/en/posts/\"]",
+      "href": "/en/posts/",
+      "destination": "http://127.0.0.1:44975/en/posts/"
+    },
+    {
+      "route": "/en/now/",
+      "selector": "header .site-logo",
+      "href": "/en/",
+      "destination": "http://127.0.0.1:44975/en/"
+    },
+    {
+      "route": "/en/talks/",
+      "selector": "header .primary-navigation a[href=\"/en/posts/\"]",
+      "href": "/en/posts/",
+      "destination": "http://127.0.0.1:44975/en/posts/"
+    },
+    {
+      "route": "/en/talks/",
+      "selector": "header .site-logo",
+      "href": "/en/",
+      "destination": "http://127.0.0.1:44975/en/"
+    },
+    {
+      "route": "/en/projects/",
+      "selector": "header .primary-navigation a[href=\"/en/posts/\"]",
+      "href": "/en/posts/",
+      "destination": "http://127.0.0.1:44975/en/posts/"
+    },
+    {
+      "route": "/en/projects/",
+      "selector": "header .site-logo",
+      "href": "/en/",
+      "destination": "http://127.0.0.1:44975/en/"
+    },
+    {
+      "route": "/en/contact/",
+      "selector": "header .primary-navigation a[href=\"/en/posts/\"]",
+      "href": "/en/posts/",
+      "destination": "http://127.0.0.1:44975/en/posts/"
+    },
+    {
+      "route": "/en/contact/",
+      "selector": "header .site-logo",
+      "href": "/en/",
+      "destination": "http://127.0.0.1:44975/en/"
+    },
+    {
+      "route": "/en/feeds/",
+      "selector": "header .primary-navigation a[href=\"/en/posts/\"]",
+      "href": "/en/posts/",
+      "destination": "http://127.0.0.1:44975/en/posts/"
+    },
+    {
+      "route": "/en/feeds/",
+      "selector": "header .site-logo",
+      "href": "/en/",
+      "destination": "http://127.0.0.1:44975/en/"
+    },
+    {
+      "route": "/en/slashes/",
+      "selector": "header .primary-navigation a[href=\"/en/posts/\"]",
+      "href": "/en/posts/",
+      "destination": "http://127.0.0.1:44975/en/posts/"
+    },
+    {
+      "route": "/en/slashes/",
+      "selector": "header .site-logo",
+      "href": "/en/",
+      "destination": "http://127.0.0.1:44975/en/"
+    },
+    {
+      "route": "/en/colophon/",
+      "selector": "header .primary-navigation a[href=\"/en/posts/\"]",
+      "href": "/en/posts/",
+      "destination": "http://127.0.0.1:44975/en/posts/"
+    },
+    {
+      "route": "/en/colophon/",
+      "selector": "header .site-logo",
+      "href": "/en/",
+      "destination": "http://127.0.0.1:44975/en/"
+    },
+    {
+      "route": "/en/",
+      "selector": "main .home-paths a[href=\"/en/about/\"]",
+      "href": "/en/about/",
+      "destination": "http://127.0.0.1:44975/en/about/"
+    },
+    {
+      "route": "/en/posts/",
+      "selector": "main .h-entry .archive-item__title a.u-url",
+      "href": "/en/posts/monitoring-synology-nas-with-datadog/",
+      "destination": "http://127.0.0.1:44975/en/posts/monitoring-synology-nas-with-datadog/"
+    },
+    {
+      "route": "/en/projects/",
+      "selector": "main .h-item a[href=\"/mergo/\"]",
+      "href": "/mergo/",
+      "destination": "http://127.0.0.1:44975/mergo/"
+    },
+    {
+      "route": "/en/about/",
+      "selector": "main a[href=\"/cv/\"]",
+      "href": "/cv/",
+      "destination": "http://127.0.0.1:44975/cv/"
+    },
+    {
+      "route": "/en/",
+      "selector": "body > footer a[href=\"/en/slashes/\"]",
+      "href": "/en/slashes/",
+      "destination": "http://127.0.0.1:44975/en/slashes/"
+    },
+    {
+      "route": "/en/",
+      "selector": "header .site-language-nav a[hreflang=\"ca\"]",
+      "href": "/",
+      "destination": "http://127.0.0.1:44975/"
+    }
+  ]
+}
