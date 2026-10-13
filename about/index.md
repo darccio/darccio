@@ -1,6 +1,7 @@
 <!--
 title: Sobre mi
 representative_hcard: true
+nav: home
 description: "Dario Castañé: programari lliure, tecnologia, política i comunitat."
 image: /static/avatar.webp
 vcard: /static/dario-castane.vcf
@@ -11,7 +12,7 @@ updated: 2026-10-12T22:24:08+02:00
 
 <h1 class="p-name fn">Dario Castañé</h1>
 
-<a class="u-url u-uid" rel="me" href="https://dario.cat/"><img alt="Dario Castañé" class="u-photo photo" src="/static/avatar.webp" width="180" height="180" decoding="async"></a>
+<a class="u-url u-uid" rel="me" href="/"><img alt="Dario Castañé" class="u-photo photo" src="/static/avatar.webp" width="180" height="180" decoding="async"></a>
 
 ## Qui sóc?
 

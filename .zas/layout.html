@@ -1,4 +1,7 @@
 {{$language := .Language}}
+{{$nav := .Resolve "nav"}}
+{{$postsURL := "/posts/"}}
+{{if eq $language "en"}}{{$postsURL = "/en/posts/"}}{{else if eq $language "es"}}{{$postsURL = "/es/posts/"}}{{end}}
 {{$canonical := .Canonical}}
 {{$description := .Summary}}
 {{if not $description}}{{$description = .Resolve "description"}}{{end}}
@@ -29,143 +32,7 @@
     <link rel=icon href=/static/favicon.ico>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="origin-when-crossorigin">
-    <style>
-        * {
-            box-sizing: border-box;
-            color: #404040;
-        }
-
-        a {
-            color: #8E2F8E;
-        }
-
-        a:focus-visible {
-            outline: 3px solid #993399;
-            outline-offset: 3px;
-        }
-
-        html {
-            border-style: solid;
-            border-width: 5px 0 0 0;
-            border-color: #993399;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-        }
-
-        body {
-            background-color: white;
-            margin: 0;
-            max-width: 30em;
-            padding: 0 0.75em 0.75em 0.75em;
-            font-size: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
-            line-height: 1.5;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            line-height: 1.2;
-        }
-
-        p {
-            margin-bottom: 0.35em;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .skip-link {
-            position: absolute;
-            top: 0;
-            left: 0.75em;
-            padding: 0.75em;
-            background: white;
-            transform: translateY(-150%);
-        }
-
-        .skip-link:focus {
-            transform: translateY(0);
-        }
-
-        .home {
-            display: inline-block;
-            margin-top: 1.5em;
-            max-width: 3em;
-        }
-
-        .site-author {
-            display: inline-flex;
-            margin-top: 1.5em;
-        }
-
-        .site-author > a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75em;
-        }
-
-        .site-author .u-photo {
-            width: 3em;
-            margin: 0;
-        }
-
-        .primary-navigation {
-            display: flex;
-            flex-wrap: wrap;
-            column-gap: 1em;
-        }
-
-        .primary-navigation > a {
-            display: inline-flex;
-            align-items: center;
-            min-height: 48px;
-        }
-
-        nav[aria-label="Contact"] {
-            display: flex;
-            flex-wrap: wrap;
-            column-gap: 1em;
-        }
-
-        nav[aria-label="Contact"] > a {
-            display: inline-flex;
-            align-items: center;
-            min-height: 48px;
-        }
-
-        main {
-            scroll-margin-top: 1em;
-        }
-
-        main:focus {
-            outline: none;
-        }
-
-        footer {
-            margin-top: 2em;
-            font-size: 0.9em;
-        }
-
-        .u-photo {
-            margin-top: 1em;
-            width: unset;
-        }
-
-        /* Desktop sizes */
-        @media only screen and (min-width: 600px) {
-            ol {
-                column-count: 1;
-            }
-
-            body {
-                margin-left: 60px;
-                margin-right: 60px;
-            }
-
-            nav[aria-label="Contact"] {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/static/tokens.css">
     <link rel="stylesheet" href="/static/styles.css">
     <link rel="canonical" href="{{$canonical}}">
     {{range $profiles}}<link rel="me" href="{{.}}">
@@ -233,24 +100,20 @@
 {{else}}
 <body>
 {{end}}
-<a class="skip-link" href="#main-content" lang="ca">Salta al contingut</a>
+<a class="skip-link" href="#main-content" lang="{{$language}}">{{.E "skip-content"}}</a>
 <header>
-    {{if index .Page "representative_hcard"}}
-    <a class="home" rel="author" href="/"><img alt='{{.E "home"}}' src="/static/_.png"></a>
-    {{else}}
-    <div class="h-card site-author">
-        <a class="u-url u-uid" rel="me author" href="https://dario.cat/">
+    <div class="{{if not (index .Page "representative_hcard")}}h-card {{end}}site-author">
+        <a class="u-url u-uid" rel="me author" href="/">
             <img class="u-photo" src="/static/avatar-96.webp" width="96" height="96" alt="" decoding="async">
             <span class="p-name">{{.Extra "/site/title"}}</span>
         </a>
     </div>
-    {{end}}
-    <nav class="primary-navigation" aria-label="Navegació principal" lang="ca">
-        <a href="/">Inici</a>
-        <a href="/posts/">Escrits</a>
-        <a href="/projects/">Projectes</a>
-        <a href="/talks/">Xerrades</a>
-        <a href="/contact/">Contacte</a>
+    <nav class="primary-navigation" aria-label='{{.E "main-navigation"}}' lang="{{$language}}">
+        <a href="/"{{if eq $nav "home"}} aria-current="page"{{end}}>{{.E "home"}}</a>
+        <a href="{{$postsURL}}"{{if eq $nav "posts"}} aria-current="page"{{end}}>{{.E "nav-posts"}}</a>
+        <a href="/projects/"{{if eq $nav "projects"}} aria-current="page"{{end}}>{{.E "nav-projects"}}</a>
+        <a href="/talks/"{{if eq $nav "talks"}} aria-current="page"{{end}}>{{.E "nav-talks"}}</a>
+        <a href="/contact/"{{if eq $nav "contact"}} aria-current="page"{{end}}>{{.E "nav-contact"}}</a>
     </nav>
 </header>
 <main id="main-content" tabindex="-1">
@@ -262,23 +125,23 @@
     <header>
         <p>
             {{if $publishedArticle}}{{$date := .Date}}{{if not $date.IsZero}}
-            {{if eq $language "en"}}Published{{else if eq $language "es"}}Publicado{{else}}Publicat{{end}}:
+            {{.E "published"}}:
             <time class="dt-published" datetime="{{$date.Format "2006-01-02T15:04:05.999999999Z07:00"}}">{{if eq $language "en"}}{{$date.Format "2 Jan 2006"}}{{else}}{{$date.Format "02/01/2006"}}{{end}}</time> ·
             {{end}}{{end}}
             {{$updated := .Updated}}{{if not $updated.IsZero}}
-            {{if eq $language "en"}}Updated{{else if eq $language "es"}}Actualizado{{else}}Actualitzat{{end}}:
+            {{.E "updated"}}:
             <time class="dt-updated" datetime="{{$updated.Format "2006-01-02T15:04:05.999999999Z07:00"}}">{{if eq $language "en"}}{{$updated.Format "2 Jan 2006"}}{{else}}{{$updated.Format "02/01/2006"}}{{end}}</time> ·
             {{end}}
-            {{if eq $language "en"}}By{{else if eq $language "es"}}Por{{else}}Per{{end}}
-            <span class="p-author h-card"><a class="p-name u-url u-uid" href="https://dario.cat/">{{.Extra "/site/title"}}</a></span>
-            · <a class="u-url u-uid" href="{{$canonical}}">{{if eq $language "en"}}Permalink{{else if eq $language "es"}}Enlace permanente{{else}}Enllaç permanent{{end}}</a>
+            {{.E "by"}}
+            <span class="p-author h-card"><a class="p-name u-url u-uid" href="/">{{.Extra "/site/title"}}</a></span>
+            · <a class="u-url u-uid" href="{{$canonical}}">{{.E "permalink"}}</a>
         </p>
     </header>
     {{with .Summary}}<p class="p-summary" hidden>{{.}}</p>{{end}}
     <div class="e-content">{{.Body}}</div>
     {{with .Tags}}
     <footer>
-        <p>{{if eq $language "en"}}Tags{{else if eq $language "es"}}Etiquetas{{else}}Temes{{end}}:
+        <p>{{$.E "tags"}}:
             {{range $i, $tag := .}}{{if $i}}, {{end}}<span class="p-category">{{$tag}}</span>{{end}}
         </p>
     </footer>
@@ -291,9 +154,9 @@
 {{.Body}}
 {{end}}
 </main>
-<footer lang="ca">
-    <p><a href="/feeds/">Subscripcions</a> · <a href="/slashes/">Totes les pàgines</a> · <a href="/colophon/">Sobre aquest web</a></p>
-    <p>2009–2026 {{.Extra "/site/title"}} · {{with index .Page "docs_license"}}Documentació: <a href="{{index $.Page "docs_license_url"}}">{{.}}</a>{{else}}Contingut: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ca">CC BY-SA 4.0</a>{{end}} · <a href="/LICENSE">Llicències i excepcions</a> · Web generat amb <a href="https://github.com/darccio/zas">Zas</a>.</p>
+<footer lang="{{$language}}">
+    <p><a href="/feeds/">{{.E "footer-feeds"}}</a> · <a href="/slashes/">{{.E "footer-slashes"}}</a> · <a href="/colophon/">{{.E "footer-colophon"}}</a></p>
+    <p>2009–2026 {{.Extra "/site/title"}} · {{with index .Page "docs_license"}}{{$.E "license-docs"}}: <a href="{{index $.Page "docs_license_url"}}">{{.}}</a>{{else}}{{.E "license-content"}}: <a href='{{.E "license-content-url"}}'>CC BY-SA 4.0</a>{{end}} · <a href="/LICENSE">{{.E "license-exceptions"}}</a> · {{.E "generated-with"}} <a href="https://github.com/darccio/zas">Zas</a>.</p>
 </footer>
 </body>
 </html>

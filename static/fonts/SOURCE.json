@@ -1,0 +1,65 @@
+{
+  "source": "Fontsource npm packages",
+  "files": {
+    "newsreader-latin-400-normal.woff2": {
+      "package": "@fontsource/newsreader",
+      "version": "5.3.0",
+      "package_url": "https://registry.npmjs.org/@fontsource/newsreader/-/newsreader-5.3.0.tgz",
+      "package_integrity": "sha512-AFR6ZKY89GNL+9qBI2P2+66NhD5bhOj/v6fsLnFYLM4E0JnMB1yKb+Ro8cA64i1hwAWoBfTq5CHJGWH1toLDkw==",
+      "source_path": "files/newsreader-latin-400-normal.woff2",
+      "sha256": "e66067814f1c672d33a457e4f4d102c818b481420e2234cf685ebdbf2f443904",
+      "bytes": 22480,
+      "license": "newsreader-LICENSE.txt"
+    },
+    "newsreader-latin-500-normal.woff2": {
+      "package": "@fontsource/newsreader",
+      "version": "5.3.0",
+      "package_url": "https://registry.npmjs.org/@fontsource/newsreader/-/newsreader-5.3.0.tgz",
+      "package_integrity": "sha512-AFR6ZKY89GNL+9qBI2P2+66NhD5bhOj/v6fsLnFYLM4E0JnMB1yKb+Ro8cA64i1hwAWoBfTq5CHJGWH1toLDkw==",
+      "source_path": "files/newsreader-latin-500-normal.woff2",
+      "sha256": "5613e2fc8377392c02e8ac9d55014689fb5320a5f2a7be55e8088a314728ac2c",
+      "bytes": 23624,
+      "license": "newsreader-LICENSE.txt"
+    },
+    "newsreader-latin-600-normal.woff2": {
+      "package": "@fontsource/newsreader",
+      "version": "5.3.0",
+      "package_url": "https://registry.npmjs.org/@fontsource/newsreader/-/newsreader-5.3.0.tgz",
+      "package_integrity": "sha512-AFR6ZKY89GNL+9qBI2P2+66NhD5bhOj/v6fsLnFYLM4E0JnMB1yKb+Ro8cA64i1hwAWoBfTq5CHJGWH1toLDkw==",
+      "source_path": "files/newsreader-latin-600-normal.woff2",
+      "sha256": "05c91a26d19a61eafe7ce8e0b77eff3fd279ce994dc89f432f4cd06784935e84",
+      "bytes": 23876,
+      "license": "newsreader-LICENSE.txt"
+    },
+    "newsreader-latin-400-italic.woff2": {
+      "package": "@fontsource/newsreader",
+      "version": "5.3.0",
+      "package_url": "https://registry.npmjs.org/@fontsource/newsreader/-/newsreader-5.3.0.tgz",
+      "package_integrity": "sha512-AFR6ZKY89GNL+9qBI2P2+66NhD5bhOj/v6fsLnFYLM4E0JnMB1yKb+Ro8cA64i1hwAWoBfTq5CHJGWH1toLDkw==",
+      "source_path": "files/newsreader-latin-400-italic.woff2",
+      "sha256": "fa9b900403949d9a723106752a5c8ad2797012a0c9057427b1da2db72d552148",
+      "bytes": 24340,
+      "license": "newsreader-LICENSE.txt"
+    },
+    "ibm-plex-mono-latin-400-normal.woff2": {
+      "package": "@fontsource/ibm-plex-mono",
+      "version": "5.3.0",
+      "package_url": "https://registry.npmjs.org/@fontsource/ibm-plex-mono/-/ibm-plex-mono-5.3.0.tgz",
+      "package_integrity": "sha512-eTgnZjZEGk1QtD3ZstF+Vclo2HLAni8YMy34/DxllwZvyz1lR/1RF/xTiAquOBO7MvqBx8D2Ig2WCPMVfdZu7Q==",
+      "source_path": "files/ibm-plex-mono-latin-400-normal.woff2",
+      "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+      "bytes": 14708,
+      "license": "ibm-plex-mono-LICENSE.txt"
+    },
+    "ibm-plex-mono-latin-500-normal.woff2": {
+      "package": "@fontsource/ibm-plex-mono",
+      "version": "5.3.0",
+      "package_url": "https://registry.npmjs.org/@fontsource/ibm-plex-mono/-/ibm-plex-mono-5.3.0.tgz",
+      "package_integrity": "sha512-eTgnZjZEGk1QtD3ZstF+Vclo2HLAni8YMy34/DxllwZvyz1lR/1RF/xTiAquOBO7MvqBx8D2Ig2WCPMVfdZu7Q==",
+      "source_path": "files/ibm-plex-mono-latin-500-normal.woff2",
+      "sha256": "01d285447409c8a588692162439a038b8cbd7871309ee20267b0d2d91c6e8e22",
+      "bytes": 14888,
+      "license": "ibm-plex-mono-LICENSE.txt"
+    }
+  }
+}

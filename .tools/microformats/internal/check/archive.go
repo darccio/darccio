@@ -31,6 +31,10 @@ func validateArchive(archiveURL, language string, posts []Post, doc *htmlNode, d
 	if err != nil {
 		return err
 	}
+	pageLanguage := language
+	if pageLanguage == "" {
+		pageLanguage = "ca"
+	}
 	expected := make(map[string]Post)
 	for _, post := range posts {
 		if language == "" || post.Language == language {
@@ -65,7 +69,7 @@ func validateArchive(archiveURL, language string, posts []Post, doc *htmlNode, d
 		if err != nil {
 			return err
 		}
-		if err := archiveLanguage(node, post.Language); err != nil {
+		if err := archiveLanguage(node, post.Language, pageLanguage); err != nil {
 			return err
 		}
 		if err := validateTime(node, entry, "published", post.Date); err != nil {
@@ -113,7 +117,7 @@ func validateArchive(archiveURL, language string, posts []Post, doc *htmlNode, d
 		if err != nil {
 			return err
 		}
-		if err := archiveLanguage(node, external.language); err != nil {
+		if err := archiveLanguage(node, external.language, pageLanguage); err != nil {
 			return err
 		}
 	}
@@ -132,21 +136,43 @@ func archiveItemNode(feed *htmlNode, class, pageURL, archiveURL string) (*htmlNo
 	}, "archive item for "+pageURL)
 }
 
-func archiveLanguage(node *htmlNode, language string) error {
+var archiveLanguageNames = map[string]map[string]string{
+	"ca": {"ca": "en català", "en": "en anglès", "es": "en castellà"},
+	"en": {"ca": "in Catalan", "en": "in English", "es": "in Spanish"},
+	"es": {"ca": "en catalán", "en": "en inglés", "es": "en español"},
+}
+
+func archiveLanguage(node *htmlNode, language, pageLanguage string) error {
 	if attribute(node, "lang") != language {
 		return fmt.Errorf("archive item lang got %q, want %q", attribute(node, "lang"), language)
 	}
-	labels := find(node, func(n *htmlNode) bool { return isTag(n, "small") && textContent(n) == "["+language+"]" })
-	if len(labels) != 1 {
-		return fmt.Errorf("archive item must have one visible [%s] language label", language)
+	name := archiveLanguageNames[pageLanguage][language]
+	if name == "" {
+		return fmt.Errorf("unsupported archive language %q on %q page", language, pageLanguage)
 	}
-	for ancestor := labels[0]; ancestor != nil; ancestor = ancestor.Parent {
-		style := strings.ReplaceAll(strings.ToLower(attribute(ancestor, "style")), " ", "")
-		if hasAttribute(ancestor, "hidden") || strings.Contains(style, "display:none") || strings.Contains(style, "visibility:hidden") {
-			return fmt.Errorf("archive [%s] label is hidden", language)
-		}
-		if ancestor == node {
-			break
+	badges := find(node, func(n *htmlNode) bool { return hasClass(n, "lang-tag") })
+	if len(badges) != 1 || !isTag(badges[0], "span") || textContent(badges[0]) != language || attribute(badges[0], "aria-hidden") != "true" {
+		return fmt.Errorf("archive item must have one decorative %s language badge with aria-hidden=true", language)
+	}
+	spoken := find(node, func(n *htmlNode) bool { return hasClass(n, "visually-hidden") })
+	if len(spoken) != 1 || !isTag(spoken[0], "span") || textContent(spoken[0]) != "("+name+")" || attribute(spoken[0], "lang") != pageLanguage {
+		return fmt.Errorf("archive item must have one spoken (%s) label with lang=%s", name, pageLanguage)
+	}
+	for _, label := range []*htmlNode{badges[0], spoken[0]} {
+		for ancestor := label; ancestor != nil; ancestor = ancestor.Parent {
+			style := strings.ToLower(strings.Join(strings.Fields(attribute(ancestor, "style")), ""))
+			if hasClass(ancestor, "p-name") {
+				return fmt.Errorf("archive language labels must be outside p-name")
+			}
+			if hasAttribute(ancestor, "hidden") || strings.Contains(style, "display:none") || strings.Contains(style, "visibility:hidden") || strings.Contains(style, "visibility:collapse") {
+				return fmt.Errorf("archive %s language label has a hidden ancestor", language)
+			}
+			if label == badges[0] && hasClass(ancestor, "visually-hidden") {
+				return fmt.Errorf("archive %s badge is visually hidden", language)
+			}
+			if label == spoken[0] && (strings.EqualFold(strings.TrimSpace(attribute(ancestor, "aria-hidden")), "true") || hasAttribute(ancestor, "inert")) {
+				return fmt.Errorf("archive (%s) label is hidden from assistive technology", name)
+			}
 		}
 	}
 	return nil

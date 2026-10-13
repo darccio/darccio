@@ -1,5 +1,6 @@
 <!--
 entry: true
+nav: contact
 description: "Contacte amb Dario Castañé: correu electrònic, xarxes i incidències de programari."
 vcard: /static/dario-castane.vcf
 updated: 2026-10-11T16:45:48+02:00

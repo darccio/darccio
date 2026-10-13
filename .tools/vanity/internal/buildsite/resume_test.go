@@ -375,6 +375,21 @@ func TestResumeMetadataCannotEscapeComment(t *testing.T) {
 	}
 }
 
+func TestResumePreservesCloudflareEmailBoundaries(t *testing.T) {
+	root, stage := resumeFixture(t)
+	if err := prepareResume(root, stage); err != nil {
+		t.Fatal(err)
+	}
+	output, err := os.ReadFile(filepath.Join(stage, "cv", "index.html"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	want := `<!--email_off--><a class="u-email" href="mailto:cc@dario.cat">cc@dario.cat</a><!--/email_off-->`
+	if !bytes.Contains(output, []byte(want)) {
+		t.Fatal("Cloudflare email exclusions were removed by template rendering")
+	}
+}
+
 func yamlMetadata(comment []byte, target any) error {
 	return json.Unmarshal(bytes.TrimSpace(bytes.TrimPrefix(comment, []byte("<!--"))), target)
 }

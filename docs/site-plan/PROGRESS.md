@@ -4,7 +4,7 @@ publish: false
 
 # Site implementation progress
 
-The preceding implementation PRs are merged and production-verified, and the site adopts released Zas v0.0.9. T26's production publication backlink is verified. T01 is complete: registrar renewal/protection, fully validated DNSSEC, independent scheduled monitoring, real failure/recovery delivery and three expiry-notification simulations are confirmed. T04 is complete after PR #23. T30 is complete after owner approval in PR #24 and production backlinks in PR #25: all 26 records, three reader samples and a zero-write online rerun are verified. The owner-authorized English CV refresh and HTML render pass local acceptance and are ready for review; production acceptance follows merge. Personal defaults still need owner input. Optional T06/T23 remain deferred. The chronology below retains previous observations and their dates.
+The preceding implementation PRs are merged, and the site adopts released Zas v0.0.9. T26's production publication backlink is verified. T01 is complete: registrar renewal/protection, fully validated DNSSEC, independent scheduled monitoring, real failure/recovery delivery and three expiry-notification simulations are confirmed. T04 and T30 are complete. The English CV is merged in PR #27; its production JSON matches the preserved source, while a Cloudflare email-obfuscation regression needs the correction recorded below. The owner deferred the remaining T09 work and authorized six design/accessibility units. Optional T06/T23 remain deferred. The chronology below retains previous observations and their dates.
 
 All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are merged. The site now pins the merged feed/Markdown revision and has navigation, core slash pages, crawler/security resources, complete canonical sitemaps, RSS discovery, Markdown twins and static response headers deployed. Cloudflare deployed 20a3e10 and source-history fix 594cf0d successfully on 2026-10-11; site CI and post-deploy vanity checks passed. The owner's expanded talks catalogue, cc@dario.cat contact and Sifa profile additions deployed successfully in 8e3acb1. The T14–T18 identity, post/archive microformats, supported talk/slash/project markup and protected parser checks deployed successfully in 28bd9ba; the narrow historical-email follow-up is committed as d21a476. Account operations remain separate evidence requirements.
 
@@ -451,3 +451,231 @@ Cloudflare beacon prevents a raw whole-page/local byte-equality assertion, but
 article content and metadata agree. The original approval preview is retained
 as historical evidence. CV permission and personal defaults remain owner work;
 optional T06/T23 remain deferred.
+
+## CV email correction and design review
+
+The owner merged [PR #27](https://github.com/darccio/darccio/pull/27) as
+`4d4f481`. Exact-commit Pages, Site checks and post-deploy vanity checks succeed.
+The immutable deployment serves the new English resume; the production
+`/CV/MAC.json` bytes match its preserved source. Custom-domain verification
+found that `html/template` removed literal `email_off` comments from the new
+resume template, allowing Cloudflare to hide its email. Existing contact pages
+already retain their exclusions.
+
+The correction emits only the two reviewed static comment boundaries as trusted
+template data in `6ff0f56`. A regression test checks the exact protected email fragment;
+the guarded generated HTML retains both boundaries. Generate, full repository
+tests and the seven-package vanity check pass. Production email acceptance
+follows deployment of this correction. No CV data or processing scope changes.
+
+The design work follows the owner's six units in order: foundations, localized
+navigation, talks archive, article language tags, homepage hierarchy/contact
+and project link labels. T09's remaining personal defaults are deferred. The
+owner declined the optional homepage project-proof line and confirmed Catalan
+for all five previously untagged talks; no language question remains open.
+Only this progress file may change among files marked `publish: false`.
+
+The baseline has 31 talks (10 engineering and 21 culture), 46 external hrefs and
+ten verified event tuples. Before screenshots at 1440×900 and 390×844 and the
+exact href/event snapshot were captured before design edits. User-supplied
+Appendices A/B replace the inaccessible design-system artifact; tokens remain
+verbatim. Fonts come from the pinned Fontsource packages with original OFL
+licenses, verified npm integrity and individual file checksums.
+
+### Design foundations
+
+Committed as `51c2f67`.
+
+Self-hosted Newsreader 400/500/600 and 400 italic and IBM Plex Mono 400/500
+replace the system-font foundation. Both pinned Fontsource 5.3.0 packages retain
+their OFL licenses and checksums. `tokens.css` equals Appendix A byte-for-byte;
+the exact Appendix B is the stylesheet suffix. The missing hairline shorthand
+is supplied only in `styles.css`, preserving the tokens.
+
+The inline style block is removed. The centered column, theme colors, serif
+headings, paragraph rhythm, mono code/navigation, focus outline and wrapping
+use the supplied tokens. Generate, full repository tests and vanity checks pass.
+All 36 browser scenarios (nine requested pages, two widths and two OS themes)
+have zero axe violations and visible keyboard focus. Every scenario passes
+320px reflow at normal and 200% text, with both font families loaded locally.
+No theme JavaScript or external font request is added. Later units own the
+header/current-navigation and catalogue changes; their acceptance is still pending.
+
+### Localized layout
+
+Committed as `1fa425d`.
+
+Section metadata resolves through Zas page and nearest-directory config;
+English/Spanish defaults retain both their language and selected posts section.
+Navigation, skip link, article chrome and footer now use the ca/en/es message
+catalogue. The Catalan archive and its nav label both say Escrits. The current
+section uses an explicit aria-current attribute and a token-colored 2px underline.
+The uniform header uses the same 96px avatar and name everywhere; its compact
+card is omitted only as a microformats root where the body already supplies the
+representative card, preserving the homepage/about representative identity.
+
+Generate, full tests, vanity and microformats checks pass. All 36 browser
+scenarios pass axe, keyboard focus and 320px normal/200% reflow. A targeted
+nine-route check confirms selected sections, localized chrome, 44px nav targets
+and a single-row Catalan menu at 390px. Checks use local generated output;
+custom-domain deployment remains pending the review PR.
+
+### Talks archive
+
+Committed as `70d44fb`.
+
+All 31 talks use the supplied archive-row pattern in two labelled sections
+(10 engineering, 21 culture). Dates retain their original full/month precision;
+15 undated rows remain undated. Language badges are decorative, with full
+Catalan spoken labels outside each event name. The owner-confirmed five
+languages are now Catalan. Resources retain their destinations and gain the
+complete talk title as accessible context; qualifiers and existing prose move
+to notes. Only the requested Machine Learning/Creació dated pair changes order.
+
+Generate, full tests, vanity and microformats checks pass. The before/after
+built-page comparison has identical 46 external hrefs and ten name/start/
+location/url event tuples. Browser measurements find a 4px title-to-detail gap,
+less than one third of the gap between rows, and all resource targets at least
+24px tall. Talks passes axe, visible keyboard focus and 320px normal/200% reflow
+in both OS themes at 1440px and 390px. Before/after screenshots are retained for
+the PR. Deployment and the final full-page matrix remain pending.
+
+### Article language tags
+
+Committed as `50cb1d6`.
+
+The 35/9/12 archive rows replace all 56 bracketed codes with decorative badges
+and full spoken language names localized to each index, with explicit language
+on the spoken span even when its row is in another language. Titles, dates,
+URLs, microformats and one-line source rows are preserved. Archive dates use
+the mono small/muted tokens, including external citations.
+
+The existing guard required literal small-element bracket codes. Its contract
+and fixture now enforce the accessible badge/label pair instead; negative
+checks reject missing or hidden badges, incorrect language/name, labels inside
+p-name and spoken labels hidden from assistive technology. The original
+URL/date/entry/citation checks remain intact. Generate, full tests and vanity
+pass. All twelve archive browser scenarios pass axe, keyboard focus and 320px
+normal/200% reflow. Production acceptance remains pending deployment.
+
+### Homepage paths and contact
+
+Committed as `53143d9`.
+
+The homepage now places its 96px photo beside the name, retains the existing
+bio note verbatim, shows Per on començar next, and then the compact shared
+contact row. Duplicate prose profile links are removed; each profile occurs
+once in main, with rel=me retained. The newsletter label is Rizoma. Speaker
+Deck moves into the shared partial without adding a new h-card URL property.
+The photo retains its canonical asset URL; all parsed representative h-card
+properties are exactly unchanged. The optional projects line stays omitted.
+
+Generate, full tests, vanity and microformats checks pass. The whole starting
+list fits within 636px on a 1440×900 viewport. Contact links are 44px tall with
+16px gaps in both directions. All twelve home/about/contact browser scenarios
+pass axe, visible keyboard focus and 320px normal/200% reflow. Head identity
+links and JSON-LD remain intentionally separate from the visible contact row;
+custom-domain acceptance remains pending the review PR.
+
+### Project resource names
+
+Committed as `3766154`.
+
+The six repeated repository/API links now append their project name as spoken
+context, while visible labels and destinations stay unchanged. All five parsed
+h-item objects and the complete project href list equal the pre-change build.
+Generate, full tests, vanity and microformats checks pass. The final 36 browser
+scenarios (nine pages, light/dark, 1440px/390px) have zero axe violations,
+working focused skip links, visible link focus and no 320px overflow at normal
+or 200% text. Every prior HTML route remains present. All seven vanity contracts,
+the raw fragments and the CV JSON are preserved; talk links/events and the
+representative homepage card remain unchanged. The final screenshot/commit
+receipt and hosted preview follow this unit; production follows owner merge.
+
+### Foundation reflow follow-up
+
+Committed as `da02de2`.
+
+The wider check found 200% text overflow on the older Deciwave video embed and
+three Mergo/Zas documentation tables. Iframes now respect their container;
+tables and cells wrap within the column without changing their semantic HTML
+or content. The top 5px rule uses the requested accent token directly.
+
+Generate, full tests and vanity pass. All 74 styled HTML pages pass 320px
+reflow at normal and 200% text. Five raw vanity fragments are excluded from
+browser styling checks and remain byte-identical; four intentionally redirect
+to their existing pkg.go.dev destinations. The final requested 36-scenario
+axe/keyboard/font/reflow matrix was rerun with this final CSS and passes.
+Final screenshots and all catalogue/home measurements were recaptured.
+No article facts, embedded destinations, docs sources or client scripts change.
+
+### Design review receipt
+
+The six requested units are committed in order: `51c2f67` foundations,
+`1fa425d` localized layout, `70d44fb` talks, `50cb1d6` article tags, `53143d9`
+home/contact and `3766154` project labels. The isolated CV exclusion fix is
+`6ff0f56`; the measured media/table reflow correction is `da02de2`. All commits
+are signed and passed darna staging/atomicity validation without bypassing hooks.
+
+[Review evidence](../../.github/review/site-design/verification.json) records
+source/CSS hashes, tool versions, exact before/after talk tuples and hrefs,
+measurements and check limits. Four before/after screenshots at 1440×900 and
+390×844 and the 36-scenario/74-page browser reports live alongside it for the
+PR, under .github so they are excluded from the published site. Independent
+review found no material issues. The five talk languages are confirmed Catalan;
+the optional homepage proof line is omitted. No owner question remains for
+this batch. The remaining T09/defaults work stays deferred.
+
+Local acceptance is complete. Hosted preview and exact-commit CI checks follow
+push; custom-domain acceptance and the CV email correction require owner merge.
+
+The screenshot/check receipt is committed as `917fc41`. Review is open in
+[PR #28](https://github.com/darccio/darccio/pull/28); its
+[commit checks](https://github.com/darccio/darccio/pull/28/checks) record hosted
+CI and Pages outcomes separately from the local evidence above. The review
+assets and progress notes were verified absent from exact-head generated
+output after the receipt commit. Production remains subject to owner merge.
+
+### Preview navigation follow-up
+
+The owner found that archive links left the Pages preview for production.
+The complete 79-page HTML audit found the same issue in the shared header,
+article authors/permalinks, representative-card photo links, generated CV,
+older article continuation links and a few other content links. All 54 archive
+post links now use root-relative paths in their sources. The shared templates
+and maintained content do likewise. Six README references to files excluded
+from deployment now point to their actual GitHub source.
+
+A site-specific finalizer normalizes same-origin body navigation in assembled
+HTML, including CV/docs projections, without editing the CV JSON or historical
+article sources. It tokenizes real anchors and patches only attribute bytes;
+head metadata, comments (including CV email exclusions), scripts, raw vanity
+fragments and non-HTML artifacts remain intact. Visible u-uid links transfer
+their canonical identity to a hidden data element inside the same link, keeping
+preview navigation and global identity separate. Genuinely hidden microformat
+identity links retain their production URLs. RSS, sitemap, JSON-LD,
+Standard.site and portable Markdown/agent references retain canonical URLs.
+HTTP integrity hashes are calculated after navigation is finalized.
+
+Guarded generation, full repository tests, vanity/microformats/consistency,
+the full vanity race suite and vet pass. All 79 existing HTML paths remain,
+with zero unjustified production body links. All 1,133 root navigation links
+resolve on a preview origin, and all 54 archive post links are covered. Original
+destinations are preserved apart from the six corrected GitHub references;
+the generated rolling changelog's commit links are excluded from that comparison.
+The three RSS feeds, CV JSON and five raw vanity fragments are byte-identical.
+All representative homepage card properties and five project objects remain
+unchanged when parsed against the canonical site base. All 36 requested browser
+scenarios again pass axe, keyboard focus, local fonts and 320px normal/200%
+reflow; ten real archive/header/article/CV/home clicks stay on the local preview
+origin. Regression fixtures also cover escaping, external domains, unsafe URLs,
+canonical UID preservation, idempotence and normalized HTML integrity hashes.
+
+This follow-up belongs to [PR #28](https://github.com/darccio/darccio/pull/28).
+Its commit receipt and fresh hosted preview checks follow below; custom-domain
+deployment remains dependent on owner merge. T09 defaults remain deferred.
+
+The navigation correction is committed as `6df4683`. Independent read-only
+review found no material concerns. The signed complete unit passed darna;
+no hooks were bypassed. The hosted receipt is kept in PR #28 so its fresh
+preview URL and exact-commit checks can update without altering published content.

@@ -1,5 +1,6 @@
 <!--
 entry: true
+nav: contact
 description: "Digues hola a Dario Castañé."
 updated: 2026-10-11T16:45:48+02:00
 -->

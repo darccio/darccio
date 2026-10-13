@@ -1,0 +1,1134 @@
+{
+  "scope": "Six owner-requested UX units; T09 personal defaults remain deferred.",
+  "baseline_revision": "4d4f481e65f243c0b25dd56516c327298b2d98a2",
+  "verified_code_revision": "da02de2b157e03a6d6fb5db7eb4750686b31fe82",
+  "recorded_at": "2026-10-12T21:39:54.828016+00:00",
+  "tooling": {
+    "playwright": "1.64.0",
+    "axe_core": "4.13.0",
+    "browser": "Google Chrome for Testing 151.0.7922.34"
+  },
+  "checks": {
+    "guarded_generate": "passed",
+    "full_tests": "passed",
+    "vanity": "seven exact contracts passed",
+    "microformats_and_consistency": "passed",
+    "axe_scenarios": 36,
+    "axe_violations": 0,
+    "reflow_styled_pages": 74,
+    "reflow_width_px": 320,
+    "reflow_font_sizes": [
+      "100%",
+      "200%"
+    ],
+    "retained_html_paths": 79,
+    "raw_vanity_fragments_byte_identical": 5,
+    "cv_json_byte_identical": true,
+    "home_representative_card_identical": true,
+    "project_microformat_objects_identical": 5
+  },
+  "owner_decisions": {
+    "home_projects_line": "omit",
+    "five_previously_untagged_talks": "Catalan"
+  },
+  "talks_before": {
+    "hrefs": [
+      "https://commons.wikimedia.org/wiki/File:EsLibre_2021_P31_-_Dario_Casta%C3%B1%C3%A9_-_Libertad_para_compartir.webm",
+      "https://github.com/darccio/autodefensa-digital/blob/master/presentation.md",
+      "https://github.com/darccio/talks",
+      "https://github.com/darccio/talks/blob/main/ai/programacio-automatica/slides.md",
+      "https://github.com/darccio/talks/blob/main/blockchain/presentation.md",
+      "https://github.com/darccio/talks/blob/main/cloud-computing/presentation.md",
+      "https://github.com/darccio/talks/blob/main/digital-rights/digital-selfdefense/main.slide",
+      "https://github.com/darccio/talks/blob/main/digital-rights/freedom-to-share-eci/presentation.md",
+      "https://github.com/darccio/talks/blob/main/digital-rights/freedom-to-share-eci/short-presentation.md",
+      "https://github.com/darccio/talks/blob/main/go/generics/index.slide",
+      "https://github.com/darccio/talks/blob/main/go/linters/presentation.md",
+      "https://github.com/darccio/talks/blob/main/go/mergo/index.slide",
+      "https://github.com/darccio/talks/blob/main/go/orchestrion/slides.md",
+      "https://github.com/darccio/talks/blob/main/ml/quickly-explained/presentation.md",
+      "https://github.com/darccio/talks/blob/main/ruby/sidekiq/presentation.md",
+      "https://github.com/darccio/tecnologiesdisruptives2019/blob/master/presentation.md",
+      "https://speakerdeck.com/dario",
+      "https://speakerdeck.com/dario/autodefensa-digital",
+      "https://speakerdeck.com/dario/blockchain-en-10-minutos",
+      "https://speakerdeck.com/dario/blockchain-y-ciencia-amigas-para-siempre",
+      "https://speakerdeck.com/dario/com-sobreviure-en-lera-post-snowden-aprenent-a-navegar-de-forma-segura",
+      "https://speakerdeck.com/dario/contenidors-i-microserveis",
+      "https://speakerdeck.com/dario/eixamplem-programa-aportacions-des-de-lideari-pirata-per-a-candidatures-municipalistes",
+      "https://speakerdeck.com/dario/espiadas-y-vendidas",
+      "https://speakerdeck.com/dario/introduction-to-cloud-computing",
+      "https://speakerdeck.com/dario/libertad-para-compartir",
+      "https://speakerdeck.com/dario/municipi-i-tecnologia-on-som-i-futurs-possibles",
+      "https://speakerdeck.com/dario/number-europapirata-presentacio-de-candidatura-pirates-de-catalunya",
+      "https://speakerdeck.com/dario/pot-la-tecnologia-regenerar-la-democracia",
+      "https://speakerdeck.com/dario/revolucion-creative-commons-liberando-cultura-con-alternativas-al-copyright",
+      "https://speakerdeck.com/dario/techno-politics",
+      "https://speakerdeck.com/dario/tecnologies-disruptives",
+      "https://www.youtube.com/watch?v=-kX9VH_TaTc",
+      "https://www.youtube.com/watch?v=0mX-ofgn45o",
+      "https://www.youtube.com/watch?v=53j9SXWMAu0",
+      "https://www.youtube.com/watch?v=7ue3XhtvImA",
+      "https://www.youtube.com/watch?v=HOAPwBl0GiI",
+      "https://www.youtube.com/watch?v=O6K7Lby1cPI",
+      "https://www.youtube.com/watch?v=QU4UebYxay4",
+      "https://www.youtube.com/watch?v=_7paSqvhLbo",
+      "https://www.youtube.com/watch?v=i0UOYHs0eDI",
+      "https://www.youtube.com/watch?v=jVE-9WYNkoo",
+      "https://www.youtube.com/watch?v=kx1ycW4YGqQ",
+      "https://www.youtube.com/watch?v=nHOYr44l3c8",
+      "https://www.youtube.com/watch?v=nItWDQnYQCQ",
+      "https://www.youtube.com/watch?v=x6C_mwsypz8"
+    ],
+    "events": [
+      {
+        "name": "Blockchain y ciencia: ¿amigas para siempre?",
+        "start": "2018-06-15",
+        "location": "Vil·la Urània",
+        "url": "https://speakerdeck.com/dario/blockchain-y-ciencia-amigas-para-siempre"
+      },
+      {
+        "name": "Com sobreviure en l'era post-Snowden? Aprenent a navegar de forma segura",
+        "start": "2017-05-27",
+        "location": "Ateneu Igualadí, Igualada",
+        "url": "https://speakerdeck.com/dario/com-sobreviure-en-lera-post-snowden-aprenent-a-navegar-de-forma-segura"
+      },
+      {
+        "name": "Contenidors i microserveis",
+        "start": "2018-09-12",
+        "location": "inQuiet, Igualada",
+        "url": "https://speakerdeck.com/dario/contenidors-i-microserveis"
+      },
+      {
+        "name": "Creació i conseqüències de la creació d'una llibreria que és al cor del Cloud",
+        "start": "2020-06-03",
+        "location": "en línia",
+        "url": "https://www.youtube.com/watch?v=i0UOYHs0eDI"
+      },
+      {
+        "name": "Debat virtual de #PolíTICa",
+        "start": "2021-01-21",
+        "location": "en línia",
+        "url": "https://www.youtube.com/watch?v=x6C_mwsypz8"
+      },
+      {
+        "name": "Eixamplem Programa: aportacions des de l'ideari pirata per a candidatures municipalistes",
+        "start": "2018-07-28",
+        "location": "Igualada",
+        "url": "https://speakerdeck.com/dario/eixamplem-programa-aportacions-des-de-lideari-pirata-per-a-candidatures-municipalistes"
+      },
+      {
+        "name": "Genéricos: ¿A dónde vamos desde aquí?",
+        "start": "2023-01-20",
+        "location": "en línia",
+        "url": "https://www.youtube.com/watch?v=_7paSqvhLbo"
+      },
+      {
+        "name": "Orchestrion: Automatic compile-time instrumentation of Go code",
+        "start": "2024-11-12",
+        "location": "Florència",
+        "url": "https://www.youtube.com/watch?v=nItWDQnYQCQ"
+      },
+      {
+        "name": "Revolución Creative Commons: liberando cultura con alternativas al copyright",
+        "start": "2012-06-30",
+        "location": "Casal de Joves de Masquefa",
+        "url": "https://speakerdeck.com/dario/revolucion-creative-commons-liberando-cultura-con-alternativas-al-copyright"
+      },
+      {
+        "name": "Tecnologies disruptives i el seu impacte social",
+        "start": "2020-02-13",
+        "location": "Adoberia Bella",
+        "url": "https://www.youtube.com/watch?v=jVE-9WYNkoo"
+      }
+    ],
+    "headings": [
+      "De filadors de codi a teixidors de sistemes [ca]",
+      "Orchestrion: Automatic compile-time instrumentation of Go code [en]",
+      "Genéricos: ¿A dónde vamos desde aquí? [es]",
+      "Oops — I broke Docker [en]",
+      "Sidekiq 101 [en]",
+      "Creació i conseqüències de la creació d'una llibreria que és al cor del Cloud",
+      "Machine Learning quickly explained [en]",
+      "Toss a Linter to your Go source code [en]",
+      "Introduction to cloud computing [en]",
+      "Contenidors i microserveis [ca]",
+      "Autodefensa digital: què podem fer per evitar que ens espiïn?",
+      "Últim informe sobre Pegasus: la punta d'un iceberg",
+      "Libertad para compartir — esLibre 2021 [es]",
+      "Libertad para compartir — World.Party2K21 [es]",
+      "Debat virtual de #PolíTICa",
+      "Programari lliure a Buscando Alternativas [ca]",
+      "Tecnologies disruptives i el seu impacte social",
+      "Blockchain para todo el mundo [es]",
+      "Autodefensa digital [ca]",
+      "Tecnologies disruptives [ca]",
+      "Espiadas y vendidas [es]",
+      "Blockchain en 10 minutos [es]",
+      "Eixamplem Programa: aportacions des de l'ideari pirata per a candidatures municipalistes [ca]",
+      "Blockchain y ciencia: ¿amigas para siempre? [es]",
+      "Com sobreviure en l'era post-Snowden? Aprenent a navegar de forma segura [ca]",
+      "Municipi i tecnologia: on som i futurs possibles [ca]",
+      "Gobierno abierto, transparencia y participación [es]",
+      "Pot la tecnologia regenerar la democràcia? [ca]",
+      "Techno Politics [es]",
+      "#EuropaPirata — Presentació de candidatura Pirates de Catalunya [ca]",
+      "Revolución Creative Commons: liberando cultura con alternativas al copyright [es]"
+    ]
+  },
+  "talks_after": {
+    "hrefs": [
+      "https://commons.wikimedia.org/wiki/File:EsLibre_2021_P31_-_Dario_Casta%C3%B1%C3%A9_-_Libertad_para_compartir.webm",
+      "https://github.com/darccio/autodefensa-digital/blob/master/presentation.md",
+      "https://github.com/darccio/talks",
+      "https://github.com/darccio/talks/blob/main/ai/programacio-automatica/slides.md",
+      "https://github.com/darccio/talks/blob/main/blockchain/presentation.md",
+      "https://github.com/darccio/talks/blob/main/cloud-computing/presentation.md",
+      "https://github.com/darccio/talks/blob/main/digital-rights/digital-selfdefense/main.slide",
+      "https://github.com/darccio/talks/blob/main/digital-rights/freedom-to-share-eci/presentation.md",
+      "https://github.com/darccio/talks/blob/main/digital-rights/freedom-to-share-eci/short-presentation.md",
+      "https://github.com/darccio/talks/blob/main/go/generics/index.slide",
+      "https://github.com/darccio/talks/blob/main/go/linters/presentation.md",
+      "https://github.com/darccio/talks/blob/main/go/mergo/index.slide",
+      "https://github.com/darccio/talks/blob/main/go/orchestrion/slides.md",
+      "https://github.com/darccio/talks/blob/main/ml/quickly-explained/presentation.md",
+      "https://github.com/darccio/talks/blob/main/ruby/sidekiq/presentation.md",
+      "https://github.com/darccio/tecnologiesdisruptives2019/blob/master/presentation.md",
+      "https://speakerdeck.com/dario",
+      "https://speakerdeck.com/dario/autodefensa-digital",
+      "https://speakerdeck.com/dario/blockchain-en-10-minutos",
+      "https://speakerdeck.com/dario/blockchain-y-ciencia-amigas-para-siempre",
+      "https://speakerdeck.com/dario/com-sobreviure-en-lera-post-snowden-aprenent-a-navegar-de-forma-segura",
+      "https://speakerdeck.com/dario/contenidors-i-microserveis",
+      "https://speakerdeck.com/dario/eixamplem-programa-aportacions-des-de-lideari-pirata-per-a-candidatures-municipalistes",
+      "https://speakerdeck.com/dario/espiadas-y-vendidas",
+      "https://speakerdeck.com/dario/introduction-to-cloud-computing",
+      "https://speakerdeck.com/dario/libertad-para-compartir",
+      "https://speakerdeck.com/dario/municipi-i-tecnologia-on-som-i-futurs-possibles",
+      "https://speakerdeck.com/dario/number-europapirata-presentacio-de-candidatura-pirates-de-catalunya",
+      "https://speakerdeck.com/dario/pot-la-tecnologia-regenerar-la-democracia",
+      "https://speakerdeck.com/dario/revolucion-creative-commons-liberando-cultura-con-alternativas-al-copyright",
+      "https://speakerdeck.com/dario/techno-politics",
+      "https://speakerdeck.com/dario/tecnologies-disruptives",
+      "https://www.youtube.com/watch?v=-kX9VH_TaTc",
+      "https://www.youtube.com/watch?v=0mX-ofgn45o",
+      "https://www.youtube.com/watch?v=53j9SXWMAu0",
+      "https://www.youtube.com/watch?v=7ue3XhtvImA",
+      "https://www.youtube.com/watch?v=HOAPwBl0GiI",
+      "https://www.youtube.com/watch?v=O6K7Lby1cPI",
+      "https://www.youtube.com/watch?v=QU4UebYxay4",
+      "https://www.youtube.com/watch?v=_7paSqvhLbo",
+      "https://www.youtube.com/watch?v=i0UOYHs0eDI",
+      "https://www.youtube.com/watch?v=jVE-9WYNkoo",
+      "https://www.youtube.com/watch?v=kx1ycW4YGqQ",
+      "https://www.youtube.com/watch?v=nHOYr44l3c8",
+      "https://www.youtube.com/watch?v=nItWDQnYQCQ",
+      "https://www.youtube.com/watch?v=x6C_mwsypz8"
+    ],
+    "events": [
+      {
+        "name": "Blockchain y ciencia: ¿amigas para siempre?",
+        "start": "2018-06-15",
+        "location": "Vil·la Urània",
+        "url": "https://speakerdeck.com/dario/blockchain-y-ciencia-amigas-para-siempre"
+      },
+      {
+        "name": "Com sobreviure en l'era post-Snowden? Aprenent a navegar de forma segura",
+        "start": "2017-05-27",
+        "location": "Ateneu Igualadí, Igualada",
+        "url": "https://speakerdeck.com/dario/com-sobreviure-en-lera-post-snowden-aprenent-a-navegar-de-forma-segura"
+      },
+      {
+        "name": "Contenidors i microserveis",
+        "start": "2018-09-12",
+        "location": "inQuiet, Igualada",
+        "url": "https://speakerdeck.com/dario/contenidors-i-microserveis"
+      },
+      {
+        "name": "Creació i conseqüències de la creació d'una llibreria que és al cor del Cloud",
+        "start": "2020-06-03",
+        "location": "en línia",
+        "url": "https://www.youtube.com/watch?v=i0UOYHs0eDI"
+      },
+      {
+        "name": "Debat virtual de #PolíTICa",
+        "start": "2021-01-21",
+        "location": "en línia",
+        "url": "https://www.youtube.com/watch?v=x6C_mwsypz8"
+      },
+      {
+        "name": "Eixamplem Programa: aportacions des de l'ideari pirata per a candidatures municipalistes",
+        "start": "2018-07-28",
+        "location": "Igualada",
+        "url": "https://speakerdeck.com/dario/eixamplem-programa-aportacions-des-de-lideari-pirata-per-a-candidatures-municipalistes"
+      },
+      {
+        "name": "Genéricos: ¿A dónde vamos desde aquí?",
+        "start": "2023-01-20",
+        "location": "en línia",
+        "url": "https://www.youtube.com/watch?v=_7paSqvhLbo"
+      },
+      {
+        "name": "Orchestrion: Automatic compile-time instrumentation of Go code",
+        "start": "2024-11-12",
+        "location": "Florència",
+        "url": "https://www.youtube.com/watch?v=nItWDQnYQCQ"
+      },
+      {
+        "name": "Revolución Creative Commons: liberando cultura con alternativas al copyright",
+        "start": "2012-06-30",
+        "location": "Casal de Joves de Masquefa",
+        "url": "https://speakerdeck.com/dario/revolucion-creative-commons-liberando-cultura-con-alternativas-al-copyright"
+      },
+      {
+        "name": "Tecnologies disruptives i el seu impacte social",
+        "start": "2020-02-13",
+        "location": "Adoberia Bella",
+        "url": "https://www.youtube.com/watch?v=jVE-9WYNkoo"
+      }
+    ],
+    "headings": [
+      "De filadors de codi a teixidors de sistemes\n          ca\n           (en català)",
+      "Orchestrion: Automatic compile-time instrumentation of Go code\n          en\n           (en anglès)",
+      "Genéricos: ¿A dónde vamos desde aquí?\n          es\n           (en castellà)",
+      "Oops — I broke Docker\n          en\n           (en anglès)",
+      "Sidekiq 101\n          en\n           (en anglès)",
+      "Machine Learning quickly explained\n          en\n           (en anglès)",
+      "Creació i conseqüències de la creació d'una llibreria que és al cor del Cloud\n          ca\n           (en català)",
+      "Toss a Linter to your Go source code\n          en\n           (en anglès)",
+      "Introduction to cloud computing\n          en\n           (en anglès)",
+      "Contenidors i microserveis\n          ca\n           (en català)",
+      "Autodefensa digital: què podem fer per evitar que ens espiïn?\n          ca\n           (en català)",
+      "Últim informe sobre Pegasus: la punta d'un iceberg\n          ca\n           (en català)",
+      "Libertad para compartir — esLibre 2021\n          es\n           (en castellà)",
+      "Libertad para compartir — World.Party2K21\n          es\n           (en castellà)",
+      "Debat virtual de #PolíTICa\n          ca\n           (en català)",
+      "Programari lliure a Buscando Alternativas\n          ca\n           (en català)",
+      "Tecnologies disruptives i el seu impacte social\n          ca\n           (en català)",
+      "Blockchain para todo el mundo\n          es\n           (en castellà)",
+      "Autodefensa digital\n          ca\n           (en català)",
+      "Tecnologies disruptives\n          ca\n           (en català)",
+      "Espiadas y vendidas\n          es\n           (en castellà)",
+      "Blockchain en 10 minutos\n          es\n           (en castellà)",
+      "Eixamplem Programa: aportacions des de l'ideari pirata per a candidatures municipalistes\n          ca\n           (en català)",
+      "Blockchain y ciencia: ¿amigas para siempre?\n          es\n           (en castellà)",
+      "Com sobreviure en l'era post-Snowden? Aprenent a navegar de forma segura\n          ca\n           (en català)",
+      "Municipi i tecnologia: on som i futurs possibles\n          ca\n           (en català)",
+      "Gobierno abierto, transparencia y participación\n          es\n           (en castellà)",
+      "Pot la tecnologia regenerar la democràcia?\n          ca\n           (en català)",
+      "Techno Politics\n          es\n           (en castellà)",
+      "#EuropaPirata — Presentació de candidatura Pirates de Catalunya\n          ca\n           (en català)",
+      "Revolución Creative Commons: liberando cultura con alternativas al copyright\n          es\n           (en castellà)"
+    ]
+  },
+  "browser_details": {
+    "talks": {
+      "sections": [
+        {
+          "id": "programari-i-enginyeria",
+          "count": 10
+        },
+        {
+          "id": "tecnologia-cultura-i-política",
+          "count": 21
+        }
+      ],
+      "tags": 31,
+      "undated": true,
+      "headings": [
+        "De filadors de codi a teixidors de sistemes\n          ca\n           (en català)",
+        "Orchestrion: Automatic compile-time instrumentation of Go code\n          en\n           (en anglès)",
+        "Genéricos: ¿A dónde vamos desde aquí?\n          es\n           (en castellà)",
+        "Oops — I broke Docker\n          en\n           (en anglès)",
+        "Sidekiq 101\n          en\n           (en anglès)",
+        "Machine Learning quickly explained\n          en\n           (en anglès)",
+        "Creació i conseqüències de la creació d'una llibreria que és al cor del Cloud\n          ca\n           (en català)",
+        "Toss a Linter to your Go source code\n          en\n           (en anglès)",
+        "Introduction to cloud computing\n          en\n           (en anglès)",
+        "Contenidors i microserveis\n          ca\n           (en català)",
+        "Autodefensa digital: què podem fer per evitar que ens espiïn?\n          ca\n           (en català)",
+        "Últim informe sobre Pegasus: la punta d'un iceberg\n          ca\n           (en català)",
+        "Libertad para compartir — esLibre 2021\n          es\n           (en castellà)",
+        "Libertad para compartir — World.Party2K21\n          es\n           (en castellà)",
+        "Debat virtual de #PolíTICa\n          ca\n           (en català)",
+        "Programari lliure a Buscando Alternativas\n          ca\n           (en català)",
+        "Tecnologies disruptives i el seu impacte social\n          ca\n           (en català)",
+        "Blockchain para todo el mundo\n          es\n           (en castellà)",
+        "Autodefensa digital\n          ca\n           (en català)",
+        "Tecnologies disruptives\n          ca\n           (en català)",
+        "Espiadas y vendidas\n          es\n           (en castellà)",
+        "Blockchain en 10 minutos\n          es\n           (en castellà)",
+        "Eixamplem Programa: aportacions des de l'ideari pirata per a candidatures municipalistes\n          ca\n           (en català)",
+        "Blockchain y ciencia: ¿amigas para siempre?\n          es\n           (en castellà)",
+        "Com sobreviure en l'era post-Snowden? Aprenent a navegar de forma segura\n          ca\n           (en català)",
+        "Municipi i tecnologia: on som i futurs possibles\n          ca\n           (en català)",
+        "Gobierno abierto, transparencia y participación\n          es\n           (en castellà)",
+        "Pot la tecnologia regenerar la democràcia?\n          ca\n           (en català)",
+        "Techno Politics\n          es\n           (en castellà)",
+        "#EuropaPirata — Presentació de candidatura Pirates de Catalunya\n          ca\n           (en català)",
+        "Revolución Creative Commons: liberando cultura con alternativas al copyright\n          es\n           (en castellà)"
+      ],
+      "resources": [
+        {
+          "height": 24,
+          "label": "Materials",
+          "name": "Materials: De filadors de codi a teixidors de sistemes"
+        },
+        {
+          "height": 24,
+          "label": "Vídeo",
+          "name": "Vídeo: Orchestrion: Automatic compile-time instrumentation of Go code"
+        },
+        {
+          "height": 24,
+          "label": "Materials",
+          "name": "Materials: Orchestrion: Automatic compile-time instrumentation of Go code"
+        },
+        {
+          "height": 24,
+          "label": "Vídeo",
+          "name": "Vídeo: Genéricos: ¿A dónde vamos desde aquí?"
+        },
+        {
+          "height": 24,
+          "label": "Materials",
+          "name": "Materials: Genéricos: ¿A dónde vamos desde aquí?"
+        },
+        {
+          "height": 24,
+          "label": "Vídeo",
+          "name": "Vídeo: Oops — I broke Docker"
+        },
+        {
+          "height": 24,
+          "label": "Materials",
+          "name": "Materials: Oops — I broke Docker"
+        },
+        {
+          "height": 24,
+          "label": "Materials",
+          "name": "Materials: Sidekiq 101"
+        },
+        {
+          "height": 24,
+          "label": "Materials",
+          "name": "Materials: Machine Learning quickly explained"
+        },
+        {
+          "height": 24,
+          "label": "Vídeo",
+          "name": "Vídeo: Creació i conseqüències de la creació d'una llibreria que és al cor del Cloud"
+        },
+        {
+          "height": 24,
+          "label": "Materials",
+          "name": "Materials: Toss a Linter to your Go source code"
+        },
+        {
+          "height": 24,
+          "label": "Diapositives",
+          "name": "Diapositives: Introduction to cloud computing"
+        },
+        {
+          "height": 24,
+          "label": "Materials",
+          "name": "Materials: Introduction to cloud computing"
+        },
+        {
+          "height": 24,
+          "label": "Vídeo",
+          "name": "Vídeo: Contenidors i microserveis"
+        },
+        {
+          "height": 24,
+          "label": "Diapositives",
+          "name": "Diapositives: Contenidors i microserveis"
+        },
+        {
+          "height": 24,
+          "label": "Vídeo",
+          "name": "Vídeo: Autodefensa digital: què podem fer per evitar que ens espiïn?"
+        },
+        {
+          "height": 24,
+          "label": "Materials",
+          "name": "Materials: Autodefensa digital: què podem fer per evitar que ens espiïn?"
+        },
+        {
+          "height": 24,
+          "label": "Vídeo",
+          "name": "Vídeo: Últim informe sobre Pegasus: la punta d'un iceberg"
+        },
+        {
+          "height": 24,
+          "label": "Vídeo",
+          "name": "Vídeo: Libertad para compartir — esLibre 2021"
+        },
+        {
+          "height": 24,
+          "label": "Diapositives",
+          "name": "Diapositives: Libertad para compartir — esLibre 2021"
+        },
+        {
+          "height": 24,
+          "label": "Materials",
+          "name": "Materials: Libertad para compartir — esLibre 2021"
+        },
+        {
+          "height": 24,
+          "label": "Fragment",
+          "name": "Fragment: Libertad para compartir — World.Party2K21"
+        },
+        {
+          "height": 24,
+          "label": "Materials",
+          "name": "Materials: Libertad para compartir — World.Party2K21"
+        },
+        {
+          "height": 24,
+          "label": "Vídeo",
+          "name": "Vídeo: Debat virtual de #PolíTICa"
+        },
+        {
+          "height": 24,
+          "label": "Vídeo",
+          "name": "Vídeo: Programari lliure a Buscando Alternativas"
+        },
+        {
+          "height": 24,
+          "label": "Vídeo",
+          "name": "Vídeo: Tecnologies disruptives i el seu impacte social"
+        },
+        {
+          "height": 24,
+          "label": "Materials",
+          "name": "Materials: Tecnologies disruptives i el seu impacte social"
+        },
+        {
+          "height": 24,
+          "label": "Materials",
+          "name": "Materials: Blockchain para todo el mundo"
+        },
+        {
+          "height": 24,
+          "label": "Diapositives",
+          "name": "Diapositives: Autodefensa digital"
+        },
+        {
+          "height": 24,
+          "label": "Materials",
+          "name": "Materials: Autodefensa digital"
+        },
+        {
+          "height": 24,
+          "label": "Diapositives",
+          "name": "Diapositives: Tecnologies disruptives"
+        },
+        {
+          "height": 24,
+          "label": "Diapositives",
+          "name": "Diapositives: Espiadas y vendidas"
+        },
+        {
+          "height": 24,
+          "label": "Diapositives",
+          "name": "Diapositives: Blockchain en 10 minutos"
+        },
+        {
+          "height": 24,
+          "label": "Diapositives",
+          "name": "Diapositives: Eixamplem Programa: aportacions des de l'ideari pirata per a candidatures municipalistes"
+        },
+        {
+          "height": 24,
+          "label": "Diapositives",
+          "name": "Diapositives: Blockchain y ciencia: ¿amigas para siempre?"
+        },
+        {
+          "height": 24,
+          "label": "Diapositives",
+          "name": "Diapositives: Com sobreviure en l'era post-Snowden? Aprenent a navegar de forma segura"
+        },
+        {
+          "height": 24,
+          "label": "Vídeo",
+          "name": "Vídeo: Municipi i tecnologia: on som i futurs possibles"
+        },
+        {
+          "height": 24,
+          "label": "Diapositives",
+          "name": "Diapositives: Municipi i tecnologia: on som i futurs possibles"
+        },
+        {
+          "height": 24,
+          "label": "Vídeo",
+          "name": "Vídeo: Gobierno abierto, transparencia y participación"
+        },
+        {
+          "height": 24,
+          "label": "Diapositives",
+          "name": "Diapositives: Pot la tecnologia regenerar la democràcia?"
+        },
+        {
+          "height": 24,
+          "label": "Vídeo",
+          "name": "Vídeo: Techno Politics"
+        },
+        {
+          "height": 24,
+          "label": "Diapositives",
+          "name": "Diapositives: Techno Politics"
+        },
+        {
+          "height": 24,
+          "label": "Diapositives",
+          "name": "Diapositives: #EuropaPirata — Presentació de candidatura Pirates de Catalunya"
+        },
+        {
+          "height": 24,
+          "label": "Diapositives",
+          "name": "Diapositives: Revolución Creative Commons: liberando cultura con alternativas al copyright"
+        }
+      ],
+      "spacing": [
+        {
+          "title": "De filadors de codi a teixidors de sistemes",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Orchestrion: Automatic compile-time instrumentation of Go code",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Genéricos: ¿A dónde vamos desde aquí?",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Oops — I broke Docker",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Sidekiq 101",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Machine Learning quickly explained",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Creació i conseqüències de la creació d'una llibreria que és al cor del Cloud",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Toss a Linter to your Go source code",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Introduction to cloud computing",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Contenidors i microserveis",
+          "titleToMeta": 4,
+          "rowGap": 74.59375
+        },
+        {
+          "title": "Autodefensa digital: què podem fer per evitar que ens espiïn?",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Últim informe sobre Pegasus: la punta d'un iceberg",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Libertad para compartir — esLibre 2021",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Libertad para compartir — World.Party2K21",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Debat virtual de #PolíTICa",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Programari lliure a Buscando Alternativas",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Tecnologies disruptives i el seu impacte social",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Blockchain para todo el mundo",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Autodefensa digital",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Tecnologies disruptives",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Espiadas y vendidas",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Blockchain en 10 minutos",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Eixamplem Programa: aportacions des de l'ideari pirata per a candidatures municipalistes",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Blockchain y ciencia: ¿amigas para siempre?",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Com sobreviure en l'era post-Snowden? Aprenent a navegar de forma segura",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Municipi i tecnologia: on som i futurs possibles",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Gobierno abierto, transparencia y participación",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Pot la tecnologia regenerar la democràcia?",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Techno Politics",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "#EuropaPirata — Presentació de candidatura Pirates de Catalunya",
+          "titleToMeta": 4,
+          "rowGap": 24
+        },
+        {
+          "title": "Revolución Creative Commons: liberando cultura con alternativas al copyright",
+          "titleToMeta": 4,
+          "rowGap": null
+        }
+      ]
+    },
+    "home": {
+      "pathsTop": 434.171875,
+      "pathsBottom": 635.71875,
+      "photo": {
+        "width": 96,
+        "height": 96
+      },
+      "profiles": [
+        "https://dario.cat/",
+        "https://bsky.app/profile/dario.cat",
+        "https://mastodont.cat/@dario",
+        "https://github.com/darccio",
+        "https://linkedin.com/in/darccio",
+        "https://sifa.id/p/dario.cat",
+        "https://speakerdeck.com/dario",
+        "https://rizoma.dario.cat/"
+      ],
+      "contact": [
+        {
+          "href": "mailto:cc@dario.cat",
+          "height": 44
+        },
+        {
+          "href": "https://bsky.app/profile/dario.cat",
+          "height": 44
+        },
+        {
+          "href": "https://mastodont.cat/@dario",
+          "height": 44
+        },
+        {
+          "href": "https://github.com/darccio",
+          "height": 44
+        },
+        {
+          "href": "https://linkedin.com/in/darccio",
+          "height": 44
+        },
+        {
+          "href": "https://sifa.id/p/dario.cat",
+          "height": 44
+        },
+        {
+          "href": "https://speakerdeck.com/dario",
+          "height": 44
+        },
+        {
+          "href": "https://rizoma.dario.cat/",
+          "height": 44
+        }
+      ],
+      "contactDisplay": "flex"
+    },
+    "archives": [
+      {
+        "route": "/posts/",
+        "tags": 35,
+        "oldTags": 0,
+        "hidden": [
+          {
+            "lang": "ca",
+            "text": " (en anglès)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en català)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en castellà)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en català)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en anglès)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en català)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en anglès)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en català)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en català)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en català)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en català)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en castellà)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en castellà)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en anglès)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en castellà)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en català)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en anglès)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en castellà)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en català)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en castellà)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en anglès)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en català)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en català)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en català)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en castellà)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en anglès)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en castellà)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en castellà)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en castellà)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en castellà)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en castellà)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en català)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en castellà)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en anglès)"
+          },
+          {
+            "lang": "ca",
+            "text": " (en anglès)"
+          }
+        ],
+        "dates": [
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+        ]
+      },
+      {
+        "route": "/en/posts/",
+        "tags": 9,
+        "oldTags": 0,
+        "hidden": [
+          {
+            "lang": "en",
+            "text": " (in English)"
+          },
+          {
+            "lang": "en",
+            "text": " (in English)"
+          },
+          {
+            "lang": "en",
+            "text": " (in English)"
+          },
+          {
+            "lang": "en",
+            "text": " (in English)"
+          },
+          {
+            "lang": "en",
+            "text": " (in English)"
+          },
+          {
+            "lang": "en",
+            "text": " (in English)"
+          },
+          {
+            "lang": "en",
+            "text": " (in English)"
+          },
+          {
+            "lang": "en",
+            "text": " (in English)"
+          },
+          {
+            "lang": "en",
+            "text": " (in English)"
+          }
+        ],
+        "dates": [
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+        ]
+      },
+      {
+        "route": "/es/posts/",
+        "tags": 12,
+        "oldTags": 0,
+        "hidden": [
+          {
+            "lang": "es",
+            "text": " (en español)"
+          },
+          {
+            "lang": "es",
+            "text": " (en español)"
+          },
+          {
+            "lang": "es",
+            "text": " (en español)"
+          },
+          {
+            "lang": "es",
+            "text": " (en español)"
+          },
+          {
+            "lang": "es",
+            "text": " (en español)"
+          },
+          {
+            "lang": "es",
+            "text": " (en español)"
+          },
+          {
+            "lang": "es",
+            "text": " (en español)"
+          },
+          {
+            "lang": "es",
+            "text": " (en español)"
+          },
+          {
+            "lang": "es",
+            "text": " (en español)"
+          },
+          {
+            "lang": "es",
+            "text": " (en español)"
+          },
+          {
+            "lang": "es",
+            "text": " (en español)"
+          },
+          {
+            "lang": "es",
+            "text": " (en español)"
+          }
+        ],
+        "dates": [
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+          "\"IBM Plex Mono\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+        ]
+      }
+    ],
+    "projects": [
+      "Codi i incidències: Mergo",
+      "API de Go: Zas",
+      "Codi i incidències: Zas",
+      "API de Go: darna",
+      "Codi i incidències: darna",
+      "API de Go: xdr"
+    ]
+  },
+  "limits": [
+    "Checks use generated output; Cloudflare preview and custom-domain production verification are separate.",
+    "Five raw vanity fragments do not load the site stylesheet; their exact byte/metadata checks replace browser styling checks.",
+    "The 36 axe scenarios cover the nine requested pages; the 74-page reflow check covers all styled HTML pages.",
+    "Custom-domain CV email verification follows production deployment; a pages.dev preview cannot prove Scrape Shield behavior."
+  ],
+  "files_sha256": {
+    "static/styles.css": "1a9f86a24dd6c70f1f251e669006d14433989d79dd20b0b44e0f730ee7c41ed1",
+    "static/tokens.css": "291cfee32afbbd76e997550fb5d4dfa6eeb2ef084718661d7d44f6b21f398dc1",
+    ".github/review/site-design/talks-after-1440.png": "dd4cc8f1d02cab7216c2c2e54b4dcf88616bc7c8b2c3b14f38e4b8fd504fb46e",
+    ".github/review/site-design/talks-after-390.png": "c3e49a516c69c6f151f51c8daf3cd6b9f6e5e54861f674f8bc417adc494fdf14",
+    ".github/review/site-design/talks-before-1440.png": "d630099e8169dca32274937f608580309ea8529a2b4bcedeb5f1e41da32aa6f0",
+    ".github/review/site-design/talks-before-390.png": "ca02160e2c7c6ea34150aec3856b6250c0bf82b3b28548666fe18ef8286fd206"
+  }
+}

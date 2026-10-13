@@ -1,4 +1,5 @@
 <!--
+nav: projects
 description: "Mergo, Zas, darna i altres projectes de programari lliure de Dario Castañé."
 updated: 2026-10-11T15:33:14+02:00
 -->
@@ -19,7 +20,7 @@ Programari lliure que mantinc o en què he participat. La documentació de les A
 
 - Camí d'importació: `dario.cat/mergo`.
 - <a class="u-url" href="/mergo/">Guia d'ús</a> i [documentació de l'API](https://pkg.go.dev/dario.cat/mergo).
-- [Codi i incidències](https://github.com/darccio/mergo).
+- <a href="https://github.com/darccio/mergo">Codi i incidències<span class="visually-hidden">: Mergo</span></a>.
 
 </section>
 
@@ -30,8 +31,8 @@ Programari lliure que mantinc o en què he participat. La documentació de les A
 <p class="p-summary">Generador de webs estàtics escrit en Go. Parteix de Markdown, HTML i una plantilla, amb una estructura de fitxers senzilla. Aquest web està fet amb Zas.</p>
 
 - Mòdul: `github.com/darccio/zas`.
-- <a class="u-url" href="/zas/">Documentació</a> i [API de Go](https://pkg.go.dev/github.com/darccio/zas).
-- [Codi i incidències](https://github.com/darccio/zas).
+- <a class="u-url" href="/zas/">Documentació</a> i <a href="https://pkg.go.dev/github.com/darccio/zas">API de Go<span class="visually-hidden">: Zas</span></a>.
+- <a href="https://github.com/darccio/zas">Codi i incidències<span class="visually-hidden">: Zas</span></a>.
 
 </section>
 
@@ -42,8 +43,8 @@ Programari lliure que mantinc o en què he participat. La documentació de les A
 <p class="p-summary">Validador de commits atòmics per a Go. Comprova que els fitxers preparats formen un canvi complet i no depenen de codi que ha quedat fora del commit.</p>
 
 - Mòdul: `dario.cat/darna`.
-- <a class="u-url" href="/darna/">Documentació i instal·lació</a> i [API de Go](https://pkg.go.dev/dario.cat/darna).
-- [Codi i incidències](https://github.com/darccio/darna).
+- <a class="u-url" href="/darna/">Documentació i instal·lació</a> i <a href="https://pkg.go.dev/dario.cat/darna">API de Go<span class="visually-hidden">: darna</span></a>.
+- <a href="https://github.com/darccio/darna">Codi i incidències<span class="visually-hidden">: darna</span></a>.
 
 </section>
 
@@ -53,7 +54,7 @@ Programari lliure que mantinc o en què he participat. La documentació de les A
 
 <p class="p-summary">Projecte de Go publicat amb el camí d'importació <code>dario.cat/xdr</code>.</p>
 
-- [Codi](https://github.com/darccio/xdr) i <a class="u-url" href="https://pkg.go.dev/dario.cat/xdr">API de Go</a>.
+- [Codi](https://github.com/darccio/xdr) i <a class="u-url" href="https://pkg.go.dev/dario.cat/xdr">API de Go<span class="visually-hidden">: xdr</span></a>.
 
 </section>
 
