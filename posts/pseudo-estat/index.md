@@ -12,6 +12,8 @@ language: ca
 
 <h1 class="p-name">Tecnofeudalisme i el Pseudo-Estat: la futura governabilitat del capitalisme</h1>
 
+<p><img src="/static/images/TrumpMileiMusk.jpg" alt="Elon Musk, Javier Milei i Donald Trump en una fotografia de grup." width="1920" height="1080" decoding="async"></p>
+
 Segons Alejandro Galliano a [“Los tecnofeudatari de la Gran América otra vez”](https://revistasupernova.com/nota/los-tecnofeudatari-de-la-gran-america-otra-vez), el capitalisme està experimentant una transformació en què les grans corporacions acumulen poder no per innovació, sinó per monopolitzar dades i infraestructures digitals. Alguns autors han descrit aquest fenomen com a “tecnofeudalisme”, establint paral·lelismes amb el feudalisme històric per la seva concentració de riquesa i captació de rendes.
 
 Tanmateix, aquesta analogia és discutible. El capitalisme no depèn exclusivament del mercat, sinó de la lògica d’acumulació, que pot restringir-lo o eliminar-lo quan cal. Fernand Braudel diferenciava entre un intercanvi competitiu i un d’exclusiu i dominant; és en aquest segon en què realment opera el capitalisme.

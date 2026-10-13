@@ -11,6 +11,8 @@ language: es
 
 <h1 class="p-name">Un nuevo camino</h1>
 
+<p><img src="/static/images/horitzo.jpg" alt="Montañas en el horizonte bajo un cielo azul." width="1200" height="628" decoding="async"></p>
+
 Hoy, coincidiendo con el aniversario de las elecciones del 28 de noviembre de 2010 y después de cumplir con compromisos adquiridos, anuncio que hace unas semanas abandoné mi militancia en Pirates de Catalunya. Esta fecha es relevante porque estas elecciones fueron las primeras en las que Pirates concurrió, poco después de su oficialización, y marcaron mi primera experiencia electoral.
 
 En catorce años de militancia he tenido la oportunidad de construir una alternativa, incidiendo en la vida pública, en un contexto histórico: desde el 15M hasta el auge del independentismo catalán, pasando por la represión del Estado español y el crecimiento de la extrema derecha, terminando en el torbellino de guerra y cambio climático en el que está inmerso el mundo.

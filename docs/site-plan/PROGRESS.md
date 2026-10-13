@@ -882,3 +882,23 @@ contains the English-site change, screenshots and source/check receipts. Its
 [checks](https://github.com/darccio/darccio/pull/30/checks) and PR acceptance receipt
 record the deployed preview and exact-head results. No owner facts or account
 settings are needed for this translation; publication follows owner merge.
+
+### Article images
+
+The owner reported missing images in A New Path and Pseudo-Estat. Their existing
+JPEG files are served correctly, but the original article sources declared only
+Open Graph images; neither the original nor the current layout inserted them into
+the visible content. Four source articles (the three New Path languages and
+Pseudo-Estat) now include one image after their H1, with localized alt text and
+the actual 1200×628 or 1920×1080 dimensions. This also includes the covers in RSS,
+Markdown twins and the reviewed context output. Existing metadata, publication
+instants, article prose and URLs are retained; the portal article keeps its one
+existing gopher image. An implementation subagent traced history, inspected the
+assets and verified that removing only the added image recovers each old source.
+
+Guarded generation, the full test suite, vanity/microformats and publishing-format
+checks pass. Forty-four article browser cases pass axe in light/dark at desktop
+and mobile widths, keyboard focus and 320px normal/200% text reflow. A separate
+Chromium decode check confirms all 14 images across the ten affected articles and
+the portal page load successfully. Before/after screenshots use the actual JPEG
+MIME type and wait for decoding. Commit and hosted checks follow below.
