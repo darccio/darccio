@@ -279,22 +279,15 @@ body > header {
   padding-top: var(--space-7);
 }
 
-.site-author, .site-author > a {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-3);
+.site-logo {
+  display: inline-block;
+  vertical-align: top;
 }
 
-.site-author > a {
-  color: var(--text);
-  font-weight: var(--weight-medium);
-}
-
-.site-author .u-photo {
+.site-logo img {
   display: block;
-  width: 3rem;
+  width: 4rem;
   margin: 0;
-  border-radius: var(--radius-sm);
 }
 
 .primary-navigation {
@@ -408,31 +401,70 @@ body > footer {
 
 .home-intro {
     display: grid;
-    grid-template-columns: 96px minmax(0, 1fr);
+    grid-template-columns: 6rem minmax(0, 1fr);
     align-items: center;
-    gap: var(--space-4) var(--space-5);
-}
-
-.home-intro h1 {
-    margin: 0;
-    overflow-wrap: anywhere;
+    gap: var(--space-5);
 }
 
 .home-intro > p {
-    grid-column: 1 / -1;
     margin: 0;
 }
 
 .home-intro .u-photo {
     display: block;
-    width: 96px;
-    height: 96px;
+    width: 6rem;
+    height: 6rem;
     margin: 0;
     border-radius: var(--radius-sm);
 }
 
 .home-paths {
-    margin-block: var(--space-6);
+    margin-block: var(--space-7);
+}
+
+@media (max-width: 24rem) {
+  .home-intro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-4);
+  }
+}
+
+/* Give index controls and section headings their own space, while the
+   archive rows keep titles and details closely grouped. */
+main h2 {
+  margin-top: var(--space-7);
+}
+
+.home-paths > h2, .home-contact > h2 {
+  margin-top: 0;
+}
+
+.page-section-nav, .archive-language-nav {
+  margin-block: var(--space-5) var(--space-7);
+  font-family: var(--font-mono);
+  font-size: var(--fz-sm);
+}
+
+
+.page-section-nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.archive-language-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-5);
+}
+
+.page-section-nav a, .archive-language-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-comfortable);
 }
 
 .contact-links {
@@ -534,6 +566,9 @@ h1, h2, h3, h4 { overflow-wrap: break-word; hyphens: auto; }
   font-size: var(--fz-sm);
   line-height: var(--leading-mono);
   color: var(--text-muted);
+}
+.archive-item__title + .archive-item__meta {
+  margin-top: var(--space-1);
 }
 .archive-item__note {
   margin: var(--space-1) 0 0;

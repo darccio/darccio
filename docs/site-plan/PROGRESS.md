@@ -701,3 +701,21 @@ sans family. Newsreader headings and Plex Mono dates/navigation/code remain.
 All font checks, guarded generation, repository tests, vanity, microformats and
 publishing consistency pass. Browser acceptance for the complete batch is recorded
 below; this foundation is isolated from the structural page changes.
+
+### Header, homepage and shared spacing
+
+The header displays only the existing logo/home link plus primary navigation.
+Inner pages retain the same personal identity as hidden microformat data;
+the logo never claims to be a personal photo. The homepage retains its original
+representative card and bio wording, with one accessible hidden name heading
+and a left photo/right bio unit. It stacks at narrow/enlarged-text sizes.
+Shared archive rows use the same year/title/meta anatomy, 4px title/meta gap,
+and separated section headings. Language controls have a measured 48px gap
+before the article list; focusable controls retain comfortable target heights.
+
+Guarded generation, full repository tests and metadata/vanity checks pass.
+All 40 browser cases (ten pages × two widths × two themes) pass axe, skip/focus,
+local font checks and 320px normal/200% reflow. All 74 styled pages pass the
+wider reflow check. The five raw vanity fragments remain byte-identical.
+Homepage card properties are exactly unchanged. Before/after screenshots cover
+home, posts, CV and talks at 1440px and 390px. Hosted acceptance follows the PR.
