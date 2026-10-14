@@ -1127,3 +1127,9 @@ The two backlog items are committed independently as `76d688a` (T33) and
 generation, the existing full test suite, vanity and microformats checks pass;
 the planning files remain absent from deployment. No retrieval tooling or new
 recovery tests were added. Final review checks and the PR receipt follow push.
+
+The planning receipt is committed as `6b51cac`, with a verified SSH signature.
+[PR #34](https://github.com/darccio/darccio/pull/34) reviews both queued additions;
+their task boundaries remain separate commits. Its check results and final
+private-plan exclusion receipt are recorded on the PR. This work adds backlog
+items only; recovering and importing their source material remains queued.
