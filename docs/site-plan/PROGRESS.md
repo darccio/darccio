@@ -6,6 +6,10 @@ publish: false
 
 The preceding implementation PRs are merged, and the site adopts released Zas v0.0.9. T26's production publication backlink is verified. T01 is complete: registrar renewal/protection, fully validated DNSSEC, independent scheduled monitoring, real failure/recovery delivery and three expiry-notification simulations are confirmed. T04 and T30 are complete. The English CV is merged in PR #27; its production JSON matches the preserved source, while a Cloudflare email-obfuscation regression needs the correction recorded below. The owner deferred the remaining T09 work and authorized six design/accessibility units. Optional T06/T23 remain deferred. The chronology below retains previous observations and their dates.
 
+The owner added [T33: recover historical articles](tasks/T33.md) on 14 October
+2026. This additional backlog item is queued after the original T00–T32 plan;
+no external articles have been fetched, imported or syndicated for it.
+
 All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are merged. The site now pins the merged feed/Markdown revision and has navigation, core slash pages, crawler/security resources, complete canonical sitemaps, RSS discovery, Markdown twins and static response headers deployed. Cloudflare deployed 20a3e10 and source-history fix 594cf0d successfully on 2026-10-11; site CI and post-deploy vanity checks passed. The owner's expanded talks catalogue, cc@dario.cat contact and Sifa profile additions deployed successfully in 8e3acb1. The T14–T18 identity, post/archive microformats, supported talk/slash/project markup and protected parser checks deployed successfully in 28bd9ba; the narrow historical-email follow-up is committed as d21a476. Account operations remain separate evidence requirements.
 
 | Item | Actual outcome | Commit or PR | Verification | Remaining work |
@@ -42,6 +46,7 @@ All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are
 | T19 Person/posts | Safe layout serialization and shared Person/BlogPosting graphs, checked before promotion | Zas `844e073`, merged [PR #115](https://github.com/darccio/zas/pull/115); site `21f8287`, merged [PR #4](https://github.com/darccio/darccio/pull/4), production `b421134` | Local/remote tests pass; Schema.org zero errors/warnings; rejected output preserves 150 files; [Cloudflare preview](https://40451f37.da-rio-hn.pages.dev) graphs/feed bytes and seven vanity packages match | Production Pages, CI and independent graphs/feed/twin checks pass; SoftwareSourceCode follows T24 manifests |
 | T20 | Curated language summaries/full corpora and strict head discovery, assembled before promotion | Signed `9366c92`, [site PR #5](https://github.com/darccio/darccio/pull/5) | Clean 156-file build; race/shuffle and vet; repeated hashes identical; invalid selection preserves old deployment; 111 preview HTTPS checks and all seven vanity packages pass | PR #5 merged as c624d6c; all 111 production checks pass; project contexts follow T24 |
 | Accessibility | Wrap fenced and inline code without source or clipboard changes | `e4690db` | Independent before/after code-copy checks; integrated axe, keyboard, 320px/double-font reflow and no-JS checks pass on 18 pages | Deployed stylesheet bytes match; browser checks pass |
+| [T33](tasks/T33.md) | Recover the owner’s historical articles from original sites or archive.org | Planning addition; implementation queued | Per-item task review and private-plan exclusion checks | Inventory sources; recover text/media and publication provenance; import reviewed articles in atomic commits |
 
 The site implementation commits are signed and atomic. All 22 commits through 20a3e10 were pushed to origin/main and deployed. Commit 7e10002 fixes source-history restoration for subsequent Pages builds. Zas PRs #111–#114 were merged by the owner on 2026-10-11; no releases were tagged, credentials committed or PDS records written. The pre-existing sibling Zas checkout remains clean on feat/xml-sitemap-generation at 9c8c0b2. The table above preserves the implementation batch's original verification state; the deployment evidence below supersedes its deployment-pending entries.
 
@@ -1076,3 +1081,21 @@ implementation and evidence commits have verified SSH signatures. The review is
 [PR #33](https://github.com/darccio/darccio/pull/33), retitled around the supplied
 reference layout. Its hosted acceptance comment identifies the final deployment
 and review revision; production publication follows owner merge.
+
+### T33 historical-article recovery backlog · 14 October 2026
+
+The owner requested another item to recover older articles from other sites,
+either directly or through archive.org. [T33](tasks/T33.md) records source
+inventory, original/archived retrieval, Markdown conversion, local media,
+attribution, publication-date precision, deduplication and reviewable imports.
+The original T00–T32 tasks and their numbering are unchanged. This is a planning
+addition; no scraping, article publication or AT Protocol writes occur now.
+
+Each recovered article keeps its original wording and language, with its source
+and archival provenance recorded. Retrieval and archive captures never become
+publication dates. New imports stay out of RSS and Standard.site until their
+metadata and publication scope are reviewed; existing article URLs and syndication
+identities remain stable. Missing text/media and unresolved dates remain explicit.
+The task’s dedicated subagent prepared its handoff. Existing unpublished planning
+files remain unchanged except this progress log; the new task page is also private.
+The guarded generate build, full test suite, check-vanity and check-microformats pass. T33 and the progress log remain absent from deploy output. This validates the planning addition; retrieval/import verification belongs to the later implementation. The signed commit receipt follows below.
