@@ -27,7 +27,7 @@ func languageLinksFixture(current string, targets map[string]string) string {
 			if locale.code == current {
 				links.WriteString(` aria-current="page"`)
 			}
-			fmt.Fprintf(&links, `>%s</a>`, locale.label)
+			fmt.Fprintf(&links, ` aria-label="%s">%s</a>`, locale.label, strings.ToUpper(locale.code))
 		}
 	}
 	return links.String()
@@ -81,7 +81,13 @@ func TestEnglishNavigationRetainsTheLocale(t *testing.T) {
 		{"language query", `href="/posts/" lang="ca"`, `href="/posts/?lang=ca" lang="ca"`},
 		{"inconsistent language", `hreflang="en"`, `hreflang="ca"`},
 		{"duplicate language", `lang="es" hreflang="es"`, `lang="ca" hreflang="ca"`},
-		{"language label", `>English</a>`, `>Anglès</a>`},
+		{"incorrect visible code", `>EN</a>`, `>FR</a>`},
+		{"full name replaces compact code", `>EN</a>`, `>English</a>`},
+		{"missing accessible full name", ` aria-label="English"`, ``},
+		{"wrong accessible full name", `aria-label="English"`, `aria-label="Anglès"`},
+		{"code replaces accessible full name", `aria-label="English"`, `aria-label="EN"`},
+		{"wrong Catalan accessible full name", `aria-label="Català"`, `aria-label="Catalan"`},
+		{"wrong Spanish accessible full name", `aria-label="Castellano"`, `aria-label="Español"`},
 		{"language nav label", `aria-label="Site language"`, `aria-label="Idioma del web"`},
 		{"old current value", `lang="en" hreflang="en" aria-current="page"`, `lang="en" hreflang="en" aria-current="true"`},
 		{"missing current language", `lang="en" hreflang="en" aria-current="page"`, `lang="en" hreflang="en"`},
@@ -89,6 +95,9 @@ func TestEnglishNavigationRetainsTheLocale(t *testing.T) {
 		{"current language leaves page", `href="/en/posts/" lang="en"`, `href="/en/" lang="en"`},
 	} {
 		t.Run(mutation.name, func(t *testing.T) {
+			if !strings.Contains(input, mutation.before) {
+				t.Fatal("mutation does not match the fixture")
+			}
 			doc, _ := parsed(t, strings.Replace(input, mutation.before, mutation.after, 1), homeURL+"en/posts/")
 			if err := validateLocaleNavigation(doc, "/en/posts/"); err == nil {
 				t.Fatal("locale navigation regression was accepted")
@@ -147,8 +156,8 @@ func TestLocaleNavigationChecksDeployedCounterparts(t *testing.T) {
 		{"dead destination", "en/about/index.html", `href="/" lang="ca"`, `href="/missing/" lang="ca"`, "no deployed page"},
 		{"destination language", "en/about/index.html", `href="/" lang="ca"`, `href="/en/now/" lang="ca"`, "uses language"},
 		{"translation replaced by home", "en/posts/translated-example/index.html", `href="/posts/example/" lang="ca"`, `href="/" lang="ca"`, "must point to /posts/example/"},
-		{"omitted Spanish translation", "en/posts/translated-example/index.html", `<a href="/es/posts/ejemplo/" lang="es" hreflang="es">Castellano</a>`, "", "omitted or invented"},
-		{"invented Spanish translation", "en/about/index.html", `</nav></header>`, `<a href="/es/posts/standalone/" lang="es" hreflang="es">Castellano</a></nav></header>`, "omitted or invented"},
+		{"omitted Spanish translation", "en/posts/translated-example/index.html", `<a href="/es/posts/ejemplo/" lang="es" hreflang="es" aria-label="Castellano">ES</a>`, "", "omitted or invented"},
+		{"invented Spanish translation", "en/about/index.html", `</nav></header>`, `<a href="/es/posts/standalone/" lang="es" hreflang="es" aria-label="Castellano">ES</a></nav></header>`, "omitted or invented"},
 		{"English language lost", "en/about/index.html", `<html lang="en">`, `<html lang="ca">`, "lost its English language"},
 		{"Spanish self lost", "es/posts/standalone/index.html", `href="/es/posts/standalone/"`, `href="/es/posts/"`, "current es language link"},
 	} {
@@ -158,6 +167,9 @@ func TestLocaleNavigationChecksDeployedCounterparts(t *testing.T) {
 			input, err := os.ReadFile(file)
 			if err != nil {
 				t.Fatal(err)
+			}
+			if !strings.Contains(string(input), test.before) {
+				t.Fatal("mutation does not match the fixture")
 			}
 			put(t, deploy, test.file, strings.Replace(string(input), test.before, test.after, 1))
 			if err := validateEnglishNavigation(deploy); err == nil || !strings.Contains(err.Error(), test.want) {

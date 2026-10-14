@@ -71,9 +71,12 @@ func TestLanguageNavigationLinksToPublishedCounterparts(t *testing.T) {
 					continue
 				}
 				want := `href="` + target + `" lang="` + language + `" hreflang="` + language + `"`
+				label := map[string]string{"ca": "Català", "en": "English", "es": "Castellano"}[language]
+				want += ` aria-label="` + label + `"`
 				if language == test.current {
 					want += ` aria-current="page"`
 				}
+				want += `>` + strings.ToUpper(language) + `</a>`
 				if !bytes.Contains(body, []byte(want)) {
 					t.Fatalf("missing %s in %s", want, body)
 				}

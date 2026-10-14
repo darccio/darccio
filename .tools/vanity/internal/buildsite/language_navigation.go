@@ -303,11 +303,11 @@ func languageNavigationHTML(body []byte, current string, targets map[string]stri
 		if target == "" {
 			continue
 		}
-		fmt.Fprintf(&links, "\n        <a href=\"%s\" lang=\"%s\" hreflang=\"%s\"", stdhtml.EscapeString(target), locale.code, locale.code)
+		fmt.Fprintf(&links, "\n        <a href=\"%s\" lang=\"%s\" hreflang=\"%s\" aria-label=\"%s\"", stdhtml.EscapeString(target), locale.code, locale.code, stdhtml.EscapeString(locale.label))
 		if locale.code == current {
 			links.WriteString(` aria-current="page"`)
 		}
-		fmt.Fprintf(&links, ">%s</a>", locale.label)
+		fmt.Fprintf(&links, ">%s</a>", strings.ToUpper(locale.code))
 	}
 	links.WriteString("\n    ")
 	result := append(bytes.Clone(body[:start]), []byte(links.String())...)

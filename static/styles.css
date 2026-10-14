@@ -279,11 +279,21 @@ body > header {
   padding-top: var(--space-7);
 }
 
+.site-header-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
 .site-logo {
   display: inline-flex;
   align-items: center;
   gap: var(--space-4);
   max-width: 100%;
+  min-width: 0;
+  min-height: var(--target-comfortable);
   vertical-align: top;
   color: var(--text);
   font-family: var(--font-serif);
@@ -312,12 +322,25 @@ body > header {
   line-height: var(--leading-mono);
   letter-spacing: var(--tracking-nav);
   text-transform: uppercase;
-  border-bottom: var(--border-hairline);
-  padding-bottom: var(--space-2);
 }
 
-.primary-navigation {
-  margin-top: var(--space-4);
+.primary-navigation-band {
+  position: relative;
+  isolation: isolate;
+  margin-top: var(--space-5);
+}
+
+/* Paint the band across the viewport without a wide layout box that
+   includes scrollbar space or increases the document's scroll width. */
+.primary-navigation-band::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: var(--accent);
+  box-shadow: 0 0 0 100vmax var(--accent);
+  clip-path: inset(0 -100vmax);
+  pointer-events: none;
 }
 
 .primary-navigation > a, .site-language-nav > a {
@@ -336,8 +359,8 @@ body > header {
 }
 
 .primary-navigation {
-  padding: var(--space-2);
-  background: var(--accent);
+  justify-content: space-between;
+  padding-block: var(--space-2);
 }
 
 .primary-navigation > a {
@@ -366,15 +389,47 @@ body > header {
   outline-color: var(--ink-900);
 }
 
+.site-language-nav {
+  flex: none;
+  gap: 0 var(--space-1);
+  margin-inline-start: auto;
+}
+
+.site-language-nav > a {
+  justify-content: center;
+  min-width: var(--target-comfortable);
+  padding-inline: var(--space-2);
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.site-language-nav > a:hover,
+.site-language-nav > a:active {
+  color: var(--link-hover);
+  text-decoration-line: underline;
+}
+
+.site-language-nav > a[aria-current="page"] {
+  color: var(--text);
+  text-decoration-line: underline;
+}
+
+.site-language-nav > a:focus-visible {
+  text-decoration-line: underline;
+}
+
 @media (max-width: 34rem) {
   .primary-navigation, .site-language-nav {
-    gap: 0 var(--space-3);
     letter-spacing: var(--tracking-normal);
+  }
+
+  .site-logo {
+    gap: var(--space-3);
+    font-size: var(--fz-lg);
   }
 
   .primary-navigation {
     gap: 0 var(--space-1);
-    padding-inline: var(--space-1);
   }
 
   .primary-navigation > a {
