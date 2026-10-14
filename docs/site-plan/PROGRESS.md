@@ -9,6 +9,9 @@ The preceding implementation PRs are merged, and the site adopts released Zas v0
 The owner added [T33: recover historical articles](tasks/T33.md) on 14 October
 2026. This additional backlog item is queued after the original T00–T32 plan;
 no external articles have been fetched, imported or syndicated for it.
+The owner also added [T34: recover social posts and threads](tasks/T34.md) for
+Facebook, Twitter and Bluesky. This is queued separately and reuses T33’s recovery
+approach; Twitter and Bluesky include thread reconstruction and related collections.
 
 All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are merged. The site now pins the merged feed/Markdown revision and has navigation, core slash pages, crawler/security resources, complete canonical sitemaps, RSS discovery, Markdown twins and static response headers deployed. Cloudflare deployed 20a3e10 and source-history fix 594cf0d successfully on 2026-10-11; site CI and post-deploy vanity checks passed. The owner's expanded talks catalogue, cc@dario.cat contact and Sifa profile additions deployed successfully in 8e3acb1. The T14–T18 identity, post/archive microformats, supported talk/slash/project markup and protected parser checks deployed successfully in 28bd9ba; the narrow historical-email follow-up is committed as d21a476. Account operations remain separate evidence requirements.
 
@@ -47,6 +50,7 @@ All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are
 | T20 | Curated language summaries/full corpora and strict head discovery, assembled before promotion | Signed `9366c92`, [site PR #5](https://github.com/darccio/darccio/pull/5) | Clean 156-file build; race/shuffle and vet; repeated hashes identical; invalid selection preserves old deployment; 111 preview HTTPS checks and all seven vanity packages pass | PR #5 merged as c624d6c; all 111 production checks pass; project contexts follow T24 |
 | Accessibility | Wrap fenced and inline code without source or clipboard changes | `e4690db` | Independent before/after code-copy checks; integrated axe, keyboard, 320px/double-font reflow and no-JS checks pass on 18 pages | Deployed stylesheet bytes match; browser checks pass |
 | [T33](tasks/T33.md) | Recover the owner’s historical articles from original sites or archive.org | Planning addition; implementation queued | Per-item task review and private-plan exclusion checks | Inventory sources; recover text/media and publication provenance; import reviewed articles in atomic commits |
+| [T34](tasks/T34.md) | Recover Facebook, Twitter and Bluesky posts, including Twitter/Bluesky threads | Planning addition; implementation queued | Separate per-item review; guarded private-plan exclusion checks | Select sources, recover records/media and evidenced thread relationships; review local imports |
 
 The site implementation commits are signed and atomic. All 22 commits through 20a3e10 were pushed to origin/main and deployed. Commit 7e10002 fixes source-history restoration for subsequent Pages builds. Zas PRs #111–#114 were merged by the owner on 2026-10-11; no releases were tagged, credentials committed or PDS records written. The pre-existing sibling Zas checkout remains clean on feat/xml-sitemap-generation at 9c8c0b2. The table above preserves the implementation batch's original verification state; the deployment evidence below supersedes its deployment-pending entries.
 
@@ -1099,3 +1103,21 @@ identities remain stable. Missing text/media and unresolved dates remain explici
 The task’s dedicated subagent prepared its handoff. Existing unpublished planning
 files remain unchanged except this progress log; the new task page is also private.
 The guarded generate build, full test suite, check-vanity and check-microformats pass. T33 and the progress log remain absent from deploy output. This validates the planning addition; retrieval/import verification belongs to the later implementation. The signed commit receipt follows below.
+
+### T34 social-post and thread recovery backlog · 14 October 2026
+
+The owner added recovery from Facebook, Twitter and Bluesky, with related
+microblogging posts from Twitter and Bluesky threaded together. [T34](tasks/T34.md)
+reuses T33’s recovery/provenance workflow and adds stable post identities, reply
+relationships, branching threads, missing or deleted posts, edits and cross-platform
+copies. Topic-related posts may form clearly labeled editorial collections; these
+are distinguished from original reply chains and retain individual source links
+and timestamps. Facebook recovery retains individual post content and chronology.
+
+The dedicated T34 subagent supplied the queued handoff. Raw account exports and
+credentials remain outside Git and deployment. Reviewed public imports use local
+media and metadata and default to feed:false/atproto:false until inclusion is
+selected. The planning addition performs no platform retrieval, export parsing,
+article publication or remote writes. Existing dates, URLs, feeds and approved
+Standard.site records remain unchanged. Build, test and private-plan exclusion
+checks pass; the final committed build is checked before the review is opened.
