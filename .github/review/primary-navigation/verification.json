@@ -1,0 +1,168 @@
+{
+  "status": "passed",
+  "started": "2026-10-13T20:49:22.838Z",
+  "completed": "2026-10-13T20:53:49.008Z",
+  "baseline": {
+    "revision": "6266ac0",
+    "deploy": "/tmp/dario-reference-before/.zas/deploy"
+  },
+  "candidate": {
+    "deploy": "/tmp/dario-reference-header/.zas/deploy",
+    "stylesheetSHA256": "55c69bd4e11f4ad5c6b7e24add345ddc308dc2ae43b82e69b7c1759f4291dbe2",
+    "actualCompiledStylesheet": true,
+    "stylesheetMatchesSource": true,
+    "implementationRevision": "f8ac149235735a76c1ca472894dcabb5a755f954"
+  },
+  "checks": {
+    "axeCases": 44,
+    "axeViolations": 0,
+    "keyboardCases": 44,
+    "reflowCases": 368,
+    "reflowFailures": 0,
+    "translatedClicks": 27,
+    "screenshots": 12,
+    "preservationCompared": 92,
+    "failures": 0
+  },
+  "coverage": {
+    "routes": [
+      "/",
+      "/en/",
+      "/talks/",
+      "/posts/",
+      "/en/posts/",
+      "/es/posts/",
+      "/projects/",
+      "/about/",
+      "/contact/",
+      "/cv/",
+      "/en/posts/a-new-path/"
+    ],
+    "axeAndKeyboard": {
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "viewportWidths": [
+        1440,
+        390
+      ],
+      "cases": 44,
+      "axeViolations": 0,
+      "skipFirst": true,
+      "skipFocusesMain": true,
+      "visibleHeaderLinksHaveFocusOutlines": true
+    },
+    "reflow": {
+      "styledRoutes": 92,
+      "viewportWidth": 320,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "textSizes": [
+        "100%",
+        "200%"
+      ],
+      "cases": 368,
+      "overflowOrHeaderTargetFailures": 0
+    },
+    "translationClicks": {
+      "input": ".github/review/language-menu/local-clicks.json",
+      "count": 27,
+      "allLocalAndCurrentSelf": true
+    }
+  },
+  "preservation": {
+    "headMetadataAndBodyOutsideSiteHeader": {
+      "pagesCompared": 92,
+      "unchanged": true
+    },
+    "hiddenHeaderIdentityUnchanged": true,
+    "feedsByteIdentical": [
+      "feed.xml",
+      "en/feed.xml",
+      "es/feed.xml"
+    ],
+    "cvJSONByteIdentical": "CV/MAC.json",
+    "tokensByteIdentical": "static/tokens.css",
+    "rawVanityByteIdentical": [
+      "cocoon/index.html",
+      "errors/index.html",
+      "x/index.html"
+    ],
+    "goImportAndGoSourceTagsUnchanged": 7,
+    "sitemapException": {
+      "file": "sitemap.xml",
+      "field": "/cv/ lastmod",
+      "before": "2026-10-13T22:40:49+02:00",
+      "after": "2026-10-13T22:45:57+02:00",
+      "allOtherBytesUnchanged": true,
+      "reason": "The generated CV source receives a new timestamp in each isolated build."
+    }
+  },
+  "screenshots": [
+    "home-after-dark-1440.png",
+    "home-after-dark-390.png",
+    "home-after-1440.png",
+    "home-after-390.png",
+    "posts-after-dark-1440.png",
+    "posts-after-dark-390.png",
+    "posts-after-1440.png",
+    "posts-after-390.png",
+    "home-before-1440.png",
+    "home-before-390.png",
+    "posts-before-1440.png",
+    "posts-before-390.png"
+  ],
+  "visualReview": "Compact language controls appear beside the brand; the plum navigation band spans the viewport below. No clipping or overlap observed.",
+  "commands": [
+    "make -f .zas/Makefile generate ZAS=/tmp/dario-reference-zas/zas",
+    "make -f .zas/Makefile test",
+    "make -f .zas/Makefile check-vanity check-microformats",
+    "node /tmp/dario-reference-review/header-check.cjs",
+    "node /tmp/dario-reference-review/broad-qa.cjs",
+    "node /tmp/dario-reference-review/diagnose-overflow.cjs"
+  ],
+  "limits": [
+    "Chromium headless on Linux; local loopback deployment only.",
+    "External resource requests were blocked; offsite availability was not tested.",
+    "200% sizing applies html font-size:200%; viewport stays at 320 CSS pixels.",
+    "Body preservation compares browser DOM serialization outside the site header; raw vanity/assets compare exact bytes.",
+    "An initial DOMContentLoaded measurement raced stylesheet/image loading. Final measurements wait for load and document.fonts.ready; the original logs and before/after 390px diagnostic are retained."
+  ],
+  "evidence": {
+    "runtimeDirectory": "/tmp/dario-reference-review/broad",
+    "screenshotsDirectory": ".",
+    "hostedAcceptance": "Recorded in the PR #33 acceptance comment after Cloudflare deploys the final review revision."
+  },
+  "focusedHeaderChecks": {
+    "cases": 36,
+    "languages": [
+      "ca",
+      "en",
+      "es"
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "widths": [
+      1440,
+      390,
+      320
+    ],
+    "textSizes": [
+      "100%",
+      "200%"
+    ],
+    "targetsAtLeast44px": true,
+    "fiveLinksFitOneRowAt390px": true,
+    "firstAndLastMainLinksAlignWithContentAt1440px": true,
+    "bandEdgePixelsRGB": [
+      152,
+      49,
+      152
+    ]
+  }
+}

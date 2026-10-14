@@ -185,8 +185,11 @@ func validateSiteLanguageNavigation(doc *html.Node, pagePath, language string) (
 	}
 	for i, want := range []struct{ code, label string }{{"ca", "Català"}, {"en", "English"}, {"es", "Castellano"}}[:len(links)] {
 		link := links[i]
-		if attribute(link, "lang") != want.code || attribute(link, "hreflang") != want.code || normalized(textContent(link)) != want.label {
-			return nil, fmt.Errorf("language switch needs unique ca, en, optional es links in order with matching language labels")
+		if attribute(link, "lang") != want.code || attribute(link, "hreflang") != want.code || normalized(textContent(link)) != strings.ToUpper(want.code) {
+			return nil, fmt.Errorf("language switch needs unique ca, en, optional es links in order with visible CA, EN, ES codes")
+		}
+		if attribute(link, "aria-label") != want.label {
+			return nil, fmt.Errorf("%s language link needs the accessible name %q", want.code, want.label)
 		}
 		if _, err := localLanguagePath(attribute(link, "href")); err != nil {
 			return nil, err
