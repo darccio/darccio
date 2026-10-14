@@ -49,8 +49,8 @@ All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are
 | T19 Person/posts | Safe layout serialization and shared Person/BlogPosting graphs, checked before promotion | Zas `844e073`, merged [PR #115](https://github.com/darccio/zas/pull/115); site `21f8287`, merged [PR #4](https://github.com/darccio/darccio/pull/4), production `b421134` | Local/remote tests pass; Schema.org zero errors/warnings; rejected output preserves 150 files; [Cloudflare preview](https://40451f37.da-rio-hn.pages.dev) graphs/feed bytes and seven vanity packages match | Production Pages, CI and independent graphs/feed/twin checks pass; SoftwareSourceCode follows T24 manifests |
 | T20 | Curated language summaries/full corpora and strict head discovery, assembled before promotion | Signed `9366c92`, [site PR #5](https://github.com/darccio/darccio/pull/5) | Clean 156-file build; race/shuffle and vet; repeated hashes identical; invalid selection preserves old deployment; 111 preview HTTPS checks and all seven vanity packages pass | PR #5 merged as c624d6c; all 111 production checks pass; project contexts follow T24 |
 | Accessibility | Wrap fenced and inline code without source or clipboard changes | `e4690db` | Independent before/after code-copy checks; integrated axe, keyboard, 320px/double-font reflow and no-JS checks pass on 18 pages | Deployed stylesheet bytes match; browser checks pass |
-| [T33](tasks/T33.md) | Recover the owner’s historical articles from original sites or archive.org | Planning addition; implementation queued | Per-item task review and private-plan exclusion checks | Inventory sources; recover text/media and publication provenance; import reviewed articles in atomic commits |
-| [T34](tasks/T34.md) | Recover Facebook, Twitter and Bluesky posts, including Twitter/Bluesky threads | Planning addition; implementation queued | Separate per-item review; guarded private-plan exclusion checks | Select sources, recover records/media and evidenced thread relationships; review local imports |
+| [T33](tasks/T33.md) | Recover the owner’s historical articles from original sites or archive.org | `76d688a`; implementation queued | Per-item task review and private-plan exclusion checks | Inventory sources; recover text/media and publication provenance; import reviewed articles in atomic commits |
+| [T34](tasks/T34.md) | Recover Facebook, Twitter and Bluesky posts, including Twitter/Bluesky threads | `d934a3a`; implementation queued | Separate per-item review; guarded private-plan exclusion checks | Select sources, recover records/media and evidenced thread relationships; review local imports |
 
 The site implementation commits are signed and atomic. All 22 commits through 20a3e10 were pushed to origin/main and deployed. Commit 7e10002 fixes source-history restoration for subsequent Pages builds. Zas PRs #111–#114 were merged by the owner on 2026-10-11; no releases were tagged, credentials committed or PDS records written. The pre-existing sibling Zas checkout remains clean on feat/xml-sitemap-generation at 9c8c0b2. The table above preserves the implementation batch's original verification state; the deployment evidence below supersedes its deployment-pending entries.
 
@@ -1121,3 +1121,9 @@ selected. The planning addition performs no platform retrieval, export parsing,
 article publication or remote writes. Existing dates, URLs, feeds and approved
 Standard.site records remain unchanged. Build, test and private-plan exclusion
 checks pass; the final committed build is checked before the review is opened.
+
+The two backlog items are committed independently as `76d688a` (T33) and
+`d934a3a` (T34), with darna passing and both SSH signatures verified. Guarded
+generation, the existing full test suite, vanity and microformats checks pass;
+the planning files remain absent from deployment. No retrieval tooling or new
+recovery tests were added. Final review checks and the PR receipt follow push.
