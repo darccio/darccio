@@ -1,724 +1,168 @@
 {
-  "implementation_commit": "0d86bc4",
-  "base_commit": "769ce9a20fa198c8f47f3959712dabb50b7d539b",
-  "required_checks": {
-    "guarded_generate": "pass",
-    "test": "pass",
-    "check_vanity": "pass",
-    "check_microformats": "pass",
-    "darna": "pass",
-    "SSH_signature": "valid"
+  "status": "passed",
+  "started": "2026-10-13T20:49:22.838Z",
+  "completed": "2026-10-13T20:53:49.008Z",
+  "baseline": {
+    "revision": "6266ac0",
+    "deploy": "/tmp/dario-reference-before/.zas/deploy"
   },
-  "browser_cases": 44,
-  "additional_focused_locale_cases": 36,
-  "axe_violations": 0,
-  "browser_results": [
-    {
-      "route": "/",
-      "theme": "light",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/en/",
-      "theme": "light",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/talks/",
-      "theme": "light",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/posts/",
-      "theme": "light",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/en/posts/",
-      "theme": "light",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/es/posts/",
-      "theme": "light",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/projects/",
-      "theme": "light",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/about/",
-      "theme": "light",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/contact/",
-      "theme": "light",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/cv/",
-      "theme": "light",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/en/posts/a-new-path/",
-      "theme": "light",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/",
-      "theme": "light",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/en/",
-      "theme": "light",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/talks/",
-      "theme": "light",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/posts/",
-      "theme": "light",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/en/posts/",
-      "theme": "light",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/es/posts/",
-      "theme": "light",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/projects/",
-      "theme": "light",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/about/",
-      "theme": "light",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/contact/",
-      "theme": "light",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/cv/",
-      "theme": "light",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/en/posts/a-new-path/",
-      "theme": "light",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/",
-      "theme": "dark",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/en/",
-      "theme": "dark",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/talks/",
-      "theme": "dark",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/posts/",
-      "theme": "dark",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/en/posts/",
-      "theme": "dark",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/es/posts/",
-      "theme": "dark",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/projects/",
-      "theme": "dark",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/about/",
-      "theme": "dark",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/contact/",
-      "theme": "dark",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/cv/",
-      "theme": "dark",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/en/posts/a-new-path/",
-      "theme": "dark",
-      "width": 1440,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/",
-      "theme": "dark",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/en/",
-      "theme": "dark",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/talks/",
-      "theme": "dark",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/posts/",
-      "theme": "dark",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/en/posts/",
-      "theme": "dark",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/es/posts/",
-      "theme": "dark",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/projects/",
-      "theme": "dark",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/about/",
-      "theme": "dark",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/contact/",
-      "theme": "dark",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/cv/",
-      "theme": "dark",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    },
-    {
-      "route": "/en/posts/a-new-path/",
-      "theme": "dark",
-      "width": 390,
-      "axe_violations": 0,
-      "skip_and_keyboard_focus": true,
-      "main_background": "rgb(152, 49, 152)",
-      "language_background": "rgba(0, 0, 0, 0)",
-      "main_link_rows": 1,
-      "minimum_main_target_height": 44,
-      "normal_and_200_percent_scroll_widths": [
-        320,
-        320
-      ]
-    }
-  ],
-  "all_styled_page_reflow": {
-    "pages": 92,
-    "cases": 184,
-    "width": 320,
-    "normal_and_200_percent": true,
+  "candidate": {
+    "deploy": "/tmp/dario-reference-header/.zas/deploy",
+    "stylesheetSHA256": "55c69bd4e11f4ad5c6b7e24add345ddc308dc2ae43b82e69b7c1759f4291dbe2",
+    "actualCompiledStylesheet": true,
+    "stylesheetMatchesSource": true,
+    "implementationRevision": "f8ac149235735a76c1ca472894dcabb5a755f954"
+  },
+  "checks": {
+    "axeCases": 44,
+    "axeViolations": 0,
+    "keyboardCases": 44,
+    "reflowCases": 368,
+    "reflowFailures": 0,
+    "translatedClicks": 27,
+    "screenshots": 12,
+    "preservationCompared": 92,
     "failures": 0
   },
-  "main_390px_link_spans": {
-    "ca": 324.64,
-    "en": 285.64,
-    "es": 340.23,
-    "available_inner_width": 342
+  "coverage": {
+    "routes": [
+      "/",
+      "/en/",
+      "/talks/",
+      "/posts/",
+      "/en/posts/",
+      "/es/posts/",
+      "/projects/",
+      "/about/",
+      "/contact/",
+      "/cv/",
+      "/en/posts/a-new-path/"
+    ],
+    "axeAndKeyboard": {
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "viewportWidths": [
+        1440,
+        390
+      ],
+      "cases": 44,
+      "axeViolations": 0,
+      "skipFirst": true,
+      "skipFocusesMain": true,
+      "visibleHeaderLinksHaveFocusOutlines": true
+    },
+    "reflow": {
+      "styledRoutes": 92,
+      "viewportWidth": 320,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "textSizes": [
+        "100%",
+        "200%"
+      ],
+      "cases": 368,
+      "overflowOrHeaderTargetFailures": 0
+    },
+    "translationClicks": {
+      "input": ".github/review/language-menu/local-clicks.json",
+      "count": 27,
+      "allLocalAndCurrentSelf": true
+    }
   },
-  "artifact_sha256": {
-    "feed.xml": "d470b586a68f3aa556bf96ee00a5c3586d42f40c3ac42dd6ed5e09070b4c5023",
-    "en/feed.xml": "a0d64e16504103458aaad98e7ee5eb0ef18bee7556bd62a68e7df8067cc3742b",
-    "es/feed.xml": "8ae62a07b992c946a4427cf04ca343e5453ca74802f39d98ad4fe069e647395b",
-    "CV/MAC.json": "16250f593ebe27634ec552f386355c66b983ce8b90bd3bfc50605e8787ac703f",
-    "static/tokens.css": "291cfee32afbbd76e997550fb5d4dfa6eeb2ef084718661d7d44f6b21f398dc1",
-    "xdr/index.html": "046a5b0448d0a03d23c230edceffdf24e8806d922ec6c07a830a7f4d458d63bb",
-    "errors/index.html": "4dfc138b8708937e23a304e87bb88f73239b2a2fd6542c3a50e941a7e3fa1993",
-    "awaken/index.html": "3e0da1bcc4b982818c81366396a5a2b104194962bd1c977219f8d4569959c074",
-    "cocoon/index.html": "361f3db212d0f923a17caac03a28a8ddd3da9e94995bc58fc7bfeacb2252aa42",
-    "x/index.html": "649842d844ca7f362b018f747dae133b61a7c16c359b43ac47ed004c18ce46b1"
+  "preservation": {
+    "headMetadataAndBodyOutsideSiteHeader": {
+      "pagesCompared": 92,
+      "unchanged": true
+    },
+    "hiddenHeaderIdentityUnchanged": true,
+    "feedsByteIdentical": [
+      "feed.xml",
+      "en/feed.xml",
+      "es/feed.xml"
+    ],
+    "cvJSONByteIdentical": "CV/MAC.json",
+    "tokensByteIdentical": "static/tokens.css",
+    "rawVanityByteIdentical": [
+      "cocoon/index.html",
+      "errors/index.html",
+      "x/index.html"
+    ],
+    "goImportAndGoSourceTagsUnchanged": 7,
+    "sitemapException": {
+      "file": "sitemap.xml",
+      "field": "/cv/ lastmod",
+      "before": "2026-10-13T22:40:49+02:00",
+      "after": "2026-10-13T22:45:57+02:00",
+      "allOtherBytesUnchanged": true,
+      "reason": "The generated CV source receives a new timestamp in each isolated build."
+    }
   },
   "screenshots": [
-    "home-before-1440.png",
-    "home-before-390.png",
-    "home-after-1440.png",
-    "home-after-390.png",
     "home-after-dark-1440.png",
     "home-after-dark-390.png",
-    "posts-before-1440.png",
-    "posts-before-390.png",
+    "home-after-1440.png",
+    "home-after-390.png",
+    "posts-after-dark-1440.png",
+    "posts-after-dark-390.png",
     "posts-after-1440.png",
     "posts-after-390.png",
-    "posts-after-dark-1440.png",
-    "posts-after-dark-390.png"
+    "home-before-1440.png",
+    "home-before-390.png",
+    "posts-before-1440.png",
+    "posts-before-390.png"
   ],
-  "before_screenshot_method": "Current HTML/assets with static/styles.css from merged main, before either inverted-row trial.",
+  "visualReview": "Compact language controls appear beside the brand; the plum navigation band spans the viewport below. No clipping or overlap observed.",
+  "commands": [
+    "make -f .zas/Makefile generate ZAS=/tmp/dario-reference-zas/zas",
+    "make -f .zas/Makefile test",
+    "make -f .zas/Makefile check-vanity check-microformats",
+    "node /tmp/dario-reference-review/header-check.cjs",
+    "node /tmp/dario-reference-review/broad-qa.cjs",
+    "node /tmp/dario-reference-review/diagnose-overflow.cjs"
+  ],
   "limits": [
-    "The dark current main-navigation link uses a white highlight for readable contrast and retains its plum underline.",
-    "Only the main navigation is inverted; the language menu retains plain styling and its merged translated-page destinations.",
-    "Hosted exact-revision acceptance is recorded in PR #33 after push; production publication follows owner merge."
+    "Chromium headless on Linux; local loopback deployment only.",
+    "External resource requests were blocked; offsite availability was not tested.",
+    "200% sizing applies html font-size:200%; viewport stays at 320 CSS pixels.",
+    "Body preservation compares browser DOM serialization outside the site header; raw vanity/assets compare exact bytes.",
+    "An initial DOMContentLoaded measurement raced stylesheet/image loading. Final measurements wait for load and document.fonts.ready; the original logs and before/after 390px diagnostic are retained."
   ],
-  "review_commit": "88ac713",
-  "pr_url": "https://github.com/darccio/darccio/pull/33"
+  "evidence": {
+    "runtimeDirectory": "/tmp/dario-reference-review/broad",
+    "screenshotsDirectory": ".",
+    "hostedAcceptance": "Recorded in the PR #33 acceptance comment after Cloudflare deploys the final review revision."
+  },
+  "focusedHeaderChecks": {
+    "cases": 36,
+    "languages": [
+      "ca",
+      "en",
+      "es"
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "widths": [
+      1440,
+      390,
+      320
+    ],
+    "textSizes": [
+      "100%",
+      "200%"
+    ],
+    "targetsAtLeast44px": true,
+    "fiveLinksFitOneRowAt390px": true,
+    "firstAndLastMainLinksAlignWithContentAt1440px": true,
+    "bandEdgePixelsRGB": [
+      152,
+      49,
+      152
+    ]
+  }
 }
