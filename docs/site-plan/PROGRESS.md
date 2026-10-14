@@ -1029,3 +1029,50 @@ superseded language-row artifacts with main-navigation screenshots and checks.
 Both correction commits have verified SSH signatures. The final PR title and
 description refer to the general menu. Hosted exact-head acceptance is recorded
 in the PR receipt before owner merge.
+
+### Reference header layout · 13 October 2026
+
+The owner supplied a header reference with the language controls beside the logo
+and name and a full-width plum main-menu band below. The layout now groups the
+brand and compact CA/EN/ES links in one top row, with full language names in their
+accessible labels. Current-language and current-section underlines remain. The
+five primary links fill the content column, fit one row at 390px and wrap safely
+on narrower screens or with enlarged text. Every header link has a 44px-high
+click target; language controls are also at least 44px wide.
+
+The implementation subagents covered stylesheet behavior and the locale checker.
+Build-time language rendering and its regression checks now require compact codes
+and full accessible names. Translated-page targets, language fallbacks, canonical
+metadata, page content and identity microformats retain their existing values.
+No client JavaScript, font or dependency changes are introduced.
+
+The guarded build with Zas v0.0.9, full tests, check-vanity and check-microformats
+pass. Publishing consistency still covers 33 public posts, 54 feed items and
+26 verified Standard.site documents. The focused 36-case browser matrix passes
+for three languages, both themes, 1440/390/320px and normal/200% text. Desktop
+first/last menu links align with the content bounds, and screenshot pixels confirm
+the plum band reaches both viewport edges. Broader review evidence and the signed
+commit receipt follow below; production follows owner merge of PR #33.
+
+[Updated review evidence](../../.github/review/primary-navigation/verification.json)
+records 44 full axe cases with zero violations, 44 keyboard skip/header-focus
+cases, 368 reflow checks across all 92 styled pages in both themes, and 27 real
+translated-page clicks. Twelve before/after screenshots cover the Catalan homepage
+and English archive. The head metadata and body outside the site header match
+baseline on all 92 pages; feeds, CV JSON, tokens and vanity tags retain exact bytes.
+Only the generated CV sitemap lastmod advances between isolated builds; all other
+sitemap bytes match. Browser checks use Linux Chromium and local assets, with
+external requests blocked. Doubled text means a 200% root font size at a fixed
+320px viewport. Final measurements wait for resources and fonts to finish loading.
+
+The implementation is committed as `f8ac149` on 14 October 2026 after the owner
+unlocked the configured signing key. Darna passes and the SSH signature verifies;
+hooks were not bypassed. PR #33 will carry this reference layout and the updated
+screenshots. Hosted acceptance is recorded against its final pushed revision.
+
+The refreshed screenshots and browser receipt are committed as `c927146`; this
+replaces the earlier main-menu trial artifacts in the final PR tree. Both the
+implementation and evidence commits have verified SSH signatures. The review is
+[PR #33](https://github.com/darccio/darccio/pull/33), retitled around the supplied
+reference layout. Its hosted acceptance comment identifies the final deployment
+and review revision; production publication follows owner merge.
