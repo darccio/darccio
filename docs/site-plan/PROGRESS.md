@@ -19,6 +19,9 @@ approach; Twitter and Bluesky include thread reconstruction and related collecti
 The owner also added [T35: compile a personal hemeroteca](tasks/T35.md), expanding
 the existing `/references/` archive with verified coverage, interviews and profiles.
 This is queued separately from recovery of the owner’s articles and social posts.
+The owner added [T36: review and polish the UI/UX item by item](tasks/T36.md) on
+15 October 2026. This queues a full route review, footnote/artifact cleanup and
+separately reviewable fixes with per-finding evidence and acceptance.
 
 All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are merged. The site now pins the merged feed/Markdown revision and has navigation, core slash pages, crawler/security resources, complete canonical sitemaps, RSS discovery, Markdown twins and static response headers deployed. Cloudflare deployed 20a3e10 and source-history fix 594cf0d successfully on 2026-10-11; site CI and post-deploy vanity checks passed. The owner's expanded talks catalogue, cc@dario.cat contact and Sifa profile additions deployed successfully in 8e3acb1. The T14–T18 identity, post/archive microformats, supported talk/slash/project markup and protected parser checks deployed successfully in 28bd9ba; the narrow historical-email follow-up is committed as d21a476. Account operations remain separate evidence requirements.
 
@@ -59,6 +62,7 @@ All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are
 | [T33](tasks/T33.md) | Recover the owner’s historical articles from original sites or archive.org | `76d688a`; implementation queued | Per-item task review and private-plan exclusion checks | Inventory sources; recover text/media and publication provenance; import reviewed articles in atomic commits |
 | [T34](tasks/T34.md) | Recover Facebook, Twitter and Bluesky posts, including Twitter/Bluesky threads | `d934a3a`; implementation queued | Separate per-item review; guarded private-plan exclusion checks | Select sources, recover records/media and evidenced thread relationships; review local imports |
 | [T35](tasks/T35.md) | Compile coverage, interviews and profiles about the owner in a hemeroteca | `31f265e`, [PR #35](https://github.com/darccio/darccio/pull/35); implementation queued | Dedicated task review; build and private-plan exclusion checks recorded below | Inventory and verify sources; expand `/references/` in reviewed archive batches |
+| [T36](tasks/T36.md) | Review every public page and polish UI/UX, including footnote and rendering artifacts | Planning receipt below; implementation queued | Dedicated task handoff; private-plan build checks recorded below | Inventory routes and individual findings; fix evidenced issues in atomic units and verify all affected pages |
 
 The site implementation commits are signed and atomic. All 22 commits through 20a3e10 were pushed to origin/main and deployed. Commit 7e10002 fixes source-history restoration for subsequent Pages builds. Zas PRs #111–#114 were merged by the owner on 2026-10-11; no releases were tagged, credentials committed or PDS records written. The pre-existing sibling Zas checkout remains clean on feat/xml-sitemap-generation at 9c8c0b2. The table above preserves the implementation batch's original verification state; the deployment evidence below supersedes its deployment-pending entries.
 
@@ -1260,3 +1264,34 @@ T09 is complete. The HTML comparison covers main content because production
 injects existing Cloudflare edge markup outside it; no whole-page byte equality
 or new production browser matrix is claimed. Local keyboard/axe/reflow evidence
 remains the reviewed PR #36 receipt. No owner preferences remain unresolved.
+
+### T36 full UI/UX review backlog · 15 October 2026
+
+The owner requested another item for UI/UX polish, cleanup of artifacts such as
+footnotes and a full review item by item. [T36](tasks/T36.md) queues a complete
+route inventory and page-by-page review across languages and content types,
+including shared navigation, reading flow, spacing, typography, link labels,
+media, archives, CV and project docs. Footnotes are checked against their sources
+for numbering, markers, IDs, targets, backlinks, generated labels and accessibility;
+authored citations and established fragment links are preserved.
+
+The task’s dedicated subagent prepared the handoff. Every route receives an
+explicit reviewed outcome, and every finding has a stable ID, reproduction,
+severity, source mapping, proposed fix, acceptance and final disposition. Shared
+component fixes and individual content fixes form small atomic units with
+before/after evidence. Full browser, keyboard, language and reflow review follows
+focused checks; automated accessibility scans alone do not close the review.
+The chosen design, content facts, publishing identities and vanity contracts
+remain the boundaries. Generic Zas work is scoped upstream only when findings
+demonstrate a renderer defect. This addition queues the work; no UI audit or
+template, stylesheet or authored-content changes are performed now.
+
+The guarded generate build with pinned Zas v0.0.9, full existing test suite,
+check-vanity and check-microformats pass. The build retains seven vanity contracts
+and consistent metadata for 33 posts, four archives, 54 feed items and 26 verified
+Standard.site documents. The new task and this progress log remain absent from
+deployment. These checks validate the planning addition; the full UI/UX review
+and its page-by-page browser evidence remain queued. No new cosmetic tests were
+added. T09’s verified production closure is recorded independently in `b2dbad3`,
+with darna and its configured SSH signature verified; T36’s commit and PR receipt
+follow below.
