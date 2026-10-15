@@ -4,9 +4,9 @@ publish: false
 
 # Site implementation progress
 
-T09 resumed on 15 October 2026. Its remaining `/defaults/` page is implemented
-locally in Catalan and English from the owner’s confirmed choices. Build and
-browser checks pass; production completion follows review, merge and live checks.
+T09 is complete as of 15 October 2026. PR #36 merged and deployed its remaining
+defaults pages in Catalan and English. Production content, Markdown responses,
+translated links and the live vanity check pass; the closure receipt is below.
 
 The preceding implementation PRs are merged, and the site adopts released Zas v0.0.9. T26's production publication backlink is verified. T01 is complete: registrar renewal/protection, fully validated DNSSEC, independent scheduled monitoring, real failure/recovery delivery and three expiry-notification simulations are confirmed. T04 and T30 are complete. The English CV is merged in PR #27; its production JSON matches the preserved source, while a Cloudflare email-obfuscation regression needs the correction recorded below. The owner deferred the remaining T09 work and authorized six design/accessibility units. Optional T06/T23 remain deferred. The chronology below retains previous observations and their dates.
 
@@ -39,7 +39,7 @@ All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are
 | T07 | Canonical/OG URLs, article classification/times, locales and descriptions | `6089a38` | All 54 assembled HTML canonical/OG pairs, 34 article summaries/types/languages and 31 exact times pass; three partial times absent; seven vanity tuples unchanged | Deployment and live metadata verification |
 | T21 | Merged default-off rendered twins; enabled here with inventory-based head discovery | [PR #113](https://github.com/darccio/zas/pull/113), merge `643967d`; site `b782b00` | 53 committed public twins and exact matching links; 54 with unchanged user-owned document; full tooling tests and independent review pass | Live Markdown bodies/MIME/discovery confirmed; T20 deployed; T22 negotiation remains queued |
 | T11 | Merged native RSS 2.0 with owned lifecycle and expected XML fixtures; enabled on site | [PR #114](https://github.com/darccio/zas/pull/114), merge `abdae2f` | 30 combined, 7 English and 11 Spanish items; source publication instants, canonical GUIDs, namespaces and absolute content URLs agree; repeated output deterministic | Live W3C validation after deploy |
-| T09 | Core navigation and supplementary pages deployed; final defaults page implemented in Catalan and English | Core `1ad3087`; defaults `8950141`, links `59d9b76`, [PR #36](https://github.com/darccio/darccio/pull/36) | Guarded build, full tests, seven vanity contracts, microformats, 24 axe/keyboard and 24 reflow cases pass | Review, merge and verify the defaults pages in production |
+| T09 | Core navigation and all supplementary pages deployed, including localized defaults | Core `1ad3087`; defaults [PR #36](https://github.com/darccio/darccio/pull/36), merge `cb6afe2` | Local build/browser checks, production HTML/Markdown content, translated links and seven live vanity contracts pass | Complete; maintain dated personal pages |
 | T10 | Explicit crawler policy, security contact and final native sitemap assembly | `0556a86` | Complete 62-page canonical coverage including 7 raw vanity pages; reciprocal language URLs and Git dates retained; one robots Sitemap line; failure preserves prior deploy | Live resource checks; maintain security expiry before 2027-10-11 |
 | T12 | Strict RSS enablement, language-aware autodiscovery and subscription hub | `cd7e20a` | Every templated page advertises real generated feeds; current Rizoma/Mergo/Zas external feeds parse as RSS/Atom | Deploy/live discovery checks; archive h-feed awaits T16 |
 | T13 | Static Cloudflare Pages RSS/security/Markdown MIME and cache rules; matching Content-Signal | `3c3b196` | Exact _headers bytes survive assembly; reviewed patterns preserve WebFinger and absent verification resources | Live header checks; future Functions must set their own response headers |
@@ -1245,3 +1245,18 @@ SSH signature verifies. This final receipt records that commit separately from
 the original page implementation and initial review receipt. The final pushed
 revision and hosted acceptance results are recorded on PR #36; production still
 requires merge and live verification.
+
+### T09 production closure · 15 October 2026
+
+The owner merged PR #36 as `cb6afe2`. Its exact-commit Pages deployment, Site
+checks and post-deploy vanity check succeeded. Production main content on both
+defaults pages, both Tools pages and both slash indexes matches the reviewed
+output, including the supplied app choices, all eighteen tool/contact links and
+reciprocal defaults-language links. Both direct Markdown twins and both negotiated
+responses match their reviewed bytes and MIME types; negotiated responses retain
+Vary: Accept. The existing live checker passes all seven vanity contracts.
+
+T09 is complete. The HTML comparison covers main content because production
+injects existing Cloudflare edge markup outside it; no whole-page byte equality
+or new production browser matrix is claimed. Local keyboard/axe/reflow evidence
+remains the reviewed PR #36 receipt. No owner preferences remain unresolved.
