@@ -4,11 +4,14 @@ publish: false
 
 # Site implementation progress
 
+T06’s upstream helper is merged in Zas PR #118 and released as v0.0.10.
+PR #38 records its implementation; site adoption follows this receipt merge.
+
 T09 is complete as of 15 October 2026. PR #36 merged and deployed its remaining
 defaults pages in Catalan and English. Production content, Markdown responses,
 translated links and the live vanity check pass; the closure receipt is below.
 
-The preceding implementation PRs are merged, and the site adopts released Zas v0.0.9. T26's production publication backlink is verified. T01 is complete: registrar renewal/protection, fully validated DNSSEC, independent scheduled monitoring, real failure/recovery delivery and three expiry-notification simulations are confirmed. T04 and T30 are complete. The English CV is merged in PR #27; its production JSON matches the preserved source, while a Cloudflare email-obfuscation regression needs the correction recorded below. The owner deferred the remaining T09 work and authorized six design/accessibility units. Optional T06/T23 remain deferred. The chronology below retains previous observations and their dates.
+The preceding implementation PRs are merged, and the site adopts released Zas v0.0.9. T26's production publication backlink is verified. T01 is complete: registrar renewal/protection, fully validated DNSSEC, independent scheduled monitoring, real failure/recovery delivery and three expiry-notification simulations are confirmed. T04 and T30 are complete. The English CV is merged in PR #27; its production JSON matches the preserved source, while a Cloudflare email-obfuscation regression needs the correction recorded below. The owner deferred the remaining T09 work and authorized six design/accessibility units. T06 is now selected; T23 remains deferred. The chronology below retains previous observations and their dates.
 
 The owner added [T33: recover historical articles](tasks/T33.md) on 14 October
 2026. This additional backlog item is queued after the original T00–T32 plan;
@@ -35,6 +38,7 @@ All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are
 | T01 | Registrar protection, validated DNSSEC, scheduled backstop and active Datadog monitoring complete | `35aaf30`, operational receipts in PR #16, Datadog PRs #17–#21 and completion receipt below | Paid expiry 2028-06-01; DNSSEC fully validates; eight live tests have scheduled passes; real failure/recovery and three expiry simulations received; temporary probe removed | Ongoing quarterly and post-change review |
 | T03 | Zas current contact links merged | `9045f6f`, [PR #111](https://github.com/darccio/zas/pull/111), merge `0c94388` | README-only diff; whitespace, darna and GitHub checks pass | Mergo source-owned follow-up remains queued |
 | T05 | Lazy typed metadata/canonical helpers merged | `96f3a64`, [PR #112](https://github.com/darccio/zas/pull/112), merge `f463876` | Build, vet, race/shuffle and pinned lint; 68 real-site files and six fixtures byte-identical before adoption; remote CI/CodeQL pass | Generator release remains T32 work |
+| T06 | Opt-in immutable page listings implemented upstream | `1ba6011`, [Zas PR #118](https://github.com/darccio/zas/pull/118) | Full race/shuffle, pinned lint, lifecycle/metadata regressions; 223 default-off native files identical; guarded site checks pass | Upstream merge, tested pin adoption and optional curated archive migration |
 | Generator adoption | Immutable merged feed/Markdown revision pinned in guarded publish command | `fc67575` (previous helper adoption `9bcfd95`) | Installed module is v0.0.9-0.20261011133110-abdae2fd51de; disabled options preserve all 78 baseline files; actual make publish succeeds | Deployment pending |
 | T04 | 34 article metadata mappings, summaries, tags, language defaults and provenance; all publication dates complete | `00a95a2`, `a5896cc`, PR #23 merge `bcd015c` | All 33 public posts have explicit dates; original RSS, owner timezone confirmation and recorded Spanish clock-time assumption resolve the gaps; production formats agree | Complete; retain provenance for any later correction |
 | T08 avatar | Existing portrait stored as local 180px/96px WebP; homepage/OG/vCard updated; preconnect removed | `482d0f1` | Both images decode at exact dimensions; assets copied byte-identically; plain mailto and existing identity links retained | Disable observed Cloudflare email obfuscation; live verification after deploy |
@@ -1300,3 +1304,51 @@ The T36 handoff is committed as `92c7699`, with darna and its configured SSH
 signature verified. [PR #37](https://github.com/darccio/darccio/pull/37) reviews
 the queued task and the separate T09 completion receipt. Final check status is
 recorded on the PR; the UI/UX audit and fixes remain queued.
+
+### T06 opt-in page listings · 15 October 2026
+
+The owner selected the previously deferred T06. Dedicated implementation,
+test and independent review subagents completed the helper on current upstream
+Zas master. Signed commit `1ba6011d753c24514dc7c88c4bb21987a624e04e` is reviewed
+in [Zas PR #118](https://github.com/darccio/zas/pull/118); darna passes and the
+configured SSH signature verifies, with hooks respected.
+
+`site.page_listings: true` exposes `.Pages "posts"` in page and layout templates.
+Each call returns an independent slice from a complete immutable static-source
+snapshot, with title, local navigation URL, canonical URL, date, language and
+summary. Private/draft pages and the requested section's own index are omitted;
+nested article indexes remain eligible. Explicit dates sort newest first, URL
+breaks ties and undated pages sort last. Navigation retains hosting subpaths
+without forcing the production origin. Templates, embeds and plugins are never
+executed by the prepass; unsupported generated metadata is documented.
+
+Build, vet and the full race/shuffle suite pass. Focused tests also pass under
+Go 1.26 with race detection, and pinned golangci-lint v2.11.4 reports no issues
+with that matching toolchain. Regression coverage includes independent concurrent
+snapshots, malformed metadata, Markdown/HTML and twin metadata parity, escaping,
+output collisions and symlink aliases, generated publication flags, generator
+reuse and full/incremental equality after create/edit/rename/delete/unpublish
+changes with Markdown twins on and off. Independent review has no open blocker.
+
+On identical assembled site input, all 223 native output files match upstream
+master byte for byte with listings disabled. A temporary opt-in copy lists all
+33 dated posts across `posts`, `en/posts`, `es/posts` and `rizoma`, plus the
+undated nested `/posts/ca/` archive. Its 224 native files are byte-identical on
+two builds. The guarded candidate site build, complete site tests, vanity,
+microformats/JSON-LD and cross-format checks pass: all seven import contracts,
+33 post publication instants, four archives, three feeds/54 items and 26 verified
+Standard.site documents remain consistent.
+
+Production still pins Zas v0.0.9 and keeps its curated archives. Upstream merge
+precedes adoption of a tested immutable revision and any optional archive
+migration, preserving off-site entries, Rizoma and multilingual grouping.
+Enabled runs intentionally render every HTML/Markdown page for freshness.
+Runtime template failures retain existing full-build behavior; the documented
+staging requirement remains relevant. These are local candidate checks, not a
+production deployment or a new browser/UI acceptance claim. Existing unpublished
+task pages and the owner's unrelated working files remain untouched.
+
+PR #118 merged as `3868cbc` and the owner released Zas v0.0.10. The PR #38
+conflict resolution preserves both T09’s production closure and T36’s queued
+review alongside this T06 receipt. The owner explicitly authorized merging
+PR #38 before the separate release-adoption change.
