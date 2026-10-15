@@ -1380,3 +1380,21 @@ stays private; other existing unpublished task pages and the owner’s unrelated
 working files remain untouched. Live deployment evidence is recorded on PR #40
 after its exact merge commit deploys; the checks above are local acceptance. Page listings remain opt-in and the curated archives are preserved;
 using the helper in those archives is a separate migration. T23 stays deferred.
+
+### Alphabetical slash-page indexes · 15 October 2026
+
+The owner requested alphabetical ordering in each language. The dedicated
+subagent reordered the 18 entries in `/slashes/` and the 18 in `/en/slashes/`
+by their localized visible labels, using case-insensitive Catalan and English
+collation. Signed commit `b77044f87327375b57a9ae7b2f7997e15719fbb4` is reviewed in
+[PR #41](https://github.com/darccio/darccio/pull/41); darna and configured SSH
+signature verification pass, with hooks respected.
+
+Every complete row and all source outside row order remain byte-identical.
+Parsed generated HTML and Markdown twins match each locale's sorted labels.
+Guarded publish/generate with Zas v0.0.10, all existing site tests, vanity,
+microformats/JSON-LD and cross-format checks pass. All seven import contracts
+remain intact. This small content reorder adds no new tests; its verification
+covers source preservation and generated order. Hosted check and deployment
+status are recorded on the PR. Other unpublished task pages and the owner's
+pending local files remain untouched.
