@@ -1223,3 +1223,19 @@ documentation commit, with its revision and hosted check results recorded on the
 PR. The unrelated Datadog lockfile change and untracked vanity document in the
 owner’s original checkout remain untouched. T09 has no remaining content choices;
 production closure awaits merge and live verification.
+
+The initial review receipt is committed as `ce10920`, with darna and a verified
+SSH signature. The owner then requested links for every tool. Both defaults
+pages now link fifteen product names to their official sites or Apple App Store
+listings, alongside the three unchanged personal messaging links. Bash and Zsh
+have separate links; Synology keeps both its product link and the article link.
+Source review confirms that only link wrappers changed, preserving the choices,
+wording, dates and “for now” qualifier.
+
+The updated guarded build, full tests, vanity and microformats checks pass.
+All eighteen tool/contact links appear exactly once with the expected href in
+each built page. The six-route browser matrix was rerun after adding the links:
+24 full axe, 24 keyboard and 24 normal/doubled-text reflow cases pass, as do both
+no-JavaScript pages and both translated-page clicks. Official destinations were
+checked against their publisher sites; no product capabilities or usage facts
+were added. The follow-up is reviewed in the same PR #36.
