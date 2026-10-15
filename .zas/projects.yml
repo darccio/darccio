@@ -28,7 +28,7 @@ projects:
       name: Zas
       repo: darccio/zas
       ref: feat/t24-site-docs
-      commit: d89a28125f63b041692385e07ca9e64ed9c6e9c6
+      commit: 3868cbc501fbce52f4cc51183bef0c39f37e17e3
       language: en
       license: AGPL-3.0-or-later
       license_file: docs/LICENSE.txt
