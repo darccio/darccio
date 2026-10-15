@@ -4,13 +4,12 @@ publish: false
 
 # Site implementation progress
 
-T06 resumed on 15 October 2026. Its opt-in Zas page-listing helper is implemented
-and reviewed in [Zas PR #118](https://github.com/darccio/zas/pull/118).
-Production adoption and any archive migration follow the upstream merge.
+T06’s upstream helper is merged in Zas PR #118 and released as v0.0.10.
+PR #38 records its implementation; site adoption follows this receipt merge.
 
-T09 resumed on 15 October 2026. Its remaining `/defaults/` page is implemented
-locally in Catalan and English from the owner’s confirmed choices. Build and
-browser checks pass; production completion follows review, merge and live checks.
+T09 is complete as of 15 October 2026. PR #36 merged and deployed its remaining
+defaults pages in Catalan and English. Production content, Markdown responses,
+translated links and the live vanity check pass; the closure receipt is below.
 
 The preceding implementation PRs are merged, and the site adopts released Zas v0.0.9. T26's production publication backlink is verified. T01 is complete: registrar renewal/protection, fully validated DNSSEC, independent scheduled monitoring, real failure/recovery delivery and three expiry-notification simulations are confirmed. T04 and T30 are complete. The English CV is merged in PR #27; its production JSON matches the preserved source, while a Cloudflare email-obfuscation regression needs the correction recorded below. The owner deferred the remaining T09 work and authorized six design/accessibility units. T06 is now selected; T23 remains deferred. The chronology below retains previous observations and their dates.
 
@@ -23,6 +22,9 @@ approach; Twitter and Bluesky include thread reconstruction and related collecti
 The owner also added [T35: compile a personal hemeroteca](tasks/T35.md), expanding
 the existing `/references/` archive with verified coverage, interviews and profiles.
 This is queued separately from recovery of the owner’s articles and social posts.
+The owner added [T36: review and polish the UI/UX item by item](tasks/T36.md) on
+15 October 2026. This queues a full route review, footnote/artifact cleanup and
+separately reviewable fixes with per-finding evidence and acceptance.
 
 All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are merged. The site now pins the merged feed/Markdown revision and has navigation, core slash pages, crawler/security resources, complete canonical sitemaps, RSS discovery, Markdown twins and static response headers deployed. Cloudflare deployed 20a3e10 and source-history fix 594cf0d successfully on 2026-10-11; site CI and post-deploy vanity checks passed. The owner's expanded talks catalogue, cc@dario.cat contact and Sifa profile additions deployed successfully in 8e3acb1. The T14–T18 identity, post/archive microformats, supported talk/slash/project markup and protected parser checks deployed successfully in 28bd9ba; the narrow historical-email follow-up is committed as d21a476. Account operations remain separate evidence requirements.
 
@@ -44,7 +46,7 @@ All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are
 | T07 | Canonical/OG URLs, article classification/times, locales and descriptions | `6089a38` | All 54 assembled HTML canonical/OG pairs, 34 article summaries/types/languages and 31 exact times pass; three partial times absent; seven vanity tuples unchanged | Deployment and live metadata verification |
 | T21 | Merged default-off rendered twins; enabled here with inventory-based head discovery | [PR #113](https://github.com/darccio/zas/pull/113), merge `643967d`; site `b782b00` | 53 committed public twins and exact matching links; 54 with unchanged user-owned document; full tooling tests and independent review pass | Live Markdown bodies/MIME/discovery confirmed; T20 deployed; T22 negotiation remains queued |
 | T11 | Merged native RSS 2.0 with owned lifecycle and expected XML fixtures; enabled on site | [PR #114](https://github.com/darccio/zas/pull/114), merge `abdae2f` | 30 combined, 7 English and 11 Spanish items; source publication instants, canonical GUIDs, namespaces and absolute content URLs agree; repeated output deterministic | Live W3C validation after deploy |
-| T09 | Core navigation and supplementary pages deployed; final defaults page implemented in Catalan and English | Core `1ad3087`; defaults `8950141`, links `59d9b76`, [PR #36](https://github.com/darccio/darccio/pull/36) | Guarded build, full tests, seven vanity contracts, microformats, 24 axe/keyboard and 24 reflow cases pass | Review, merge and verify the defaults pages in production |
+| T09 | Core navigation and all supplementary pages deployed, including localized defaults | Core `1ad3087`; defaults [PR #36](https://github.com/darccio/darccio/pull/36), merge `cb6afe2` | Local build/browser checks, production HTML/Markdown content, translated links and seven live vanity contracts pass | Complete; maintain dated personal pages |
 | T10 | Explicit crawler policy, security contact and final native sitemap assembly | `0556a86` | Complete 62-page canonical coverage including 7 raw vanity pages; reciprocal language URLs and Git dates retained; one robots Sitemap line; failure preserves prior deploy | Live resource checks; maintain security expiry before 2027-10-11 |
 | T12 | Strict RSS enablement, language-aware autodiscovery and subscription hub | `cd7e20a` | Every templated page advertises real generated feeds; current Rizoma/Mergo/Zas external feeds parse as RSS/Atom | Deploy/live discovery checks; archive h-feed awaits T16 |
 | T13 | Static Cloudflare Pages RSS/security/Markdown MIME and cache rules; matching Content-Signal | `3c3b196` | Exact _headers bytes survive assembly; reviewed patterns preserve WebFinger and absent verification resources | Live header checks; future Functions must set their own response headers |
@@ -64,6 +66,7 @@ All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are
 | [T33](tasks/T33.md) | Recover the owner’s historical articles from original sites or archive.org | `76d688a`; implementation queued | Per-item task review and private-plan exclusion checks | Inventory sources; recover text/media and publication provenance; import reviewed articles in atomic commits |
 | [T34](tasks/T34.md) | Recover Facebook, Twitter and Bluesky posts, including Twitter/Bluesky threads | `d934a3a`; implementation queued | Separate per-item review; guarded private-plan exclusion checks | Select sources, recover records/media and evidenced thread relationships; review local imports |
 | [T35](tasks/T35.md) | Compile coverage, interviews and profiles about the owner in a hemeroteca | `31f265e`, [PR #35](https://github.com/darccio/darccio/pull/35); implementation queued | Dedicated task review; build and private-plan exclusion checks recorded below | Inventory and verify sources; expand `/references/` in reviewed archive batches |
+| [T36](tasks/T36.md) | Review every public page and polish UI/UX, including footnote and rendering artifacts | `92c7699`, [PR #37](https://github.com/darccio/darccio/pull/37); implementation queued | Dedicated task handoff; private-plan build checks recorded below | Inventory routes and individual findings; fix evidenced issues in atomic units and verify all affected pages |
 
 The site implementation commits are signed and atomic. All 22 commits through 20a3e10 were pushed to origin/main and deployed. Commit 7e10002 fixes source-history restoration for subsequent Pages builds. Zas PRs #111–#114 were merged by the owner on 2026-10-11; no releases were tagged, credentials committed or PDS records written. The pre-existing sibling Zas checkout remains clean on feat/xml-sitemap-generation at 9c8c0b2. The table above preserves the implementation batch's original verification state; the deployment evidence below supersedes its deployment-pending entries.
 
@@ -1251,6 +1254,57 @@ the original page implementation and initial review receipt. The final pushed
 revision and hosted acceptance results are recorded on PR #36; production still
 requires merge and live verification.
 
+### T09 production closure · 15 October 2026
+
+The owner merged PR #36 as `cb6afe2`. Its exact-commit Pages deployment, Site
+checks and post-deploy vanity check succeeded. Production main content on both
+defaults pages, both Tools pages and both slash indexes matches the reviewed
+output, including the supplied app choices, all eighteen tool/contact links and
+reciprocal defaults-language links. Both direct Markdown twins and both negotiated
+responses match their reviewed bytes and MIME types; negotiated responses retain
+Vary: Accept. The existing live checker passes all seven vanity contracts.
+
+T09 is complete. The HTML comparison covers main content because production
+injects existing Cloudflare edge markup outside it; no whole-page byte equality
+or new production browser matrix is claimed. Local keyboard/axe/reflow evidence
+remains the reviewed PR #36 receipt. No owner preferences remain unresolved.
+
+### T36 full UI/UX review backlog · 15 October 2026
+
+The owner requested another item for UI/UX polish, cleanup of artifacts such as
+footnotes and a full review item by item. [T36](tasks/T36.md) queues a complete
+route inventory and page-by-page review across languages and content types,
+including shared navigation, reading flow, spacing, typography, link labels,
+media, archives, CV and project docs. Footnotes are checked against their sources
+for numbering, markers, IDs, targets, backlinks, generated labels and accessibility;
+authored citations and established fragment links are preserved.
+
+The task’s dedicated subagent prepared the handoff. Every route receives an
+explicit reviewed outcome, and every finding has a stable ID, reproduction,
+severity, source mapping, proposed fix, acceptance and final disposition. Shared
+component fixes and individual content fixes form small atomic units with
+before/after evidence. Full browser, keyboard, language and reflow review follows
+focused checks; automated accessibility scans alone do not close the review.
+The chosen design, content facts, publishing identities and vanity contracts
+remain the boundaries. Generic Zas work is scoped upstream only when findings
+demonstrate a renderer defect. This addition queues the work; no UI audit or
+template, stylesheet or authored-content changes are performed now.
+
+The guarded generate build with pinned Zas v0.0.9, full existing test suite,
+check-vanity and check-microformats pass. The build retains seven vanity contracts
+and consistent metadata for 33 posts, four archives, 54 feed items and 26 verified
+Standard.site documents. The new task and this progress log remain absent from
+deployment. These checks validate the planning addition; the full UI/UX review
+and its page-by-page browser evidence remain queued. No new cosmetic tests were
+added. T09’s verified production closure is recorded independently in `b2dbad3`,
+with darna and its configured SSH signature verified; T36’s commit and PR receipt
+follow below.
+
+The T36 handoff is committed as `92c7699`, with darna and its configured SSH
+signature verified. [PR #37](https://github.com/darccio/darccio/pull/37) reviews
+the queued task and the separate T09 completion receipt. Final check status is
+recorded on the PR; the UI/UX audit and fixes remain queued.
+
 ### T06 opt-in page listings · 15 October 2026
 
 The owner selected the previously deferred T06. Dedicated implementation,
@@ -1293,3 +1347,8 @@ Runtime template failures retain existing full-build behavior; the documented
 staging requirement remains relevant. These are local candidate checks, not a
 production deployment or a new browser/UI acceptance claim. Existing unpublished
 task pages and the owner's unrelated working files remain untouched.
+
+PR #118 merged as `3868cbc` and the owner released Zas v0.0.10. The PR #38
+conflict resolution preserves both T09’s production closure and T36’s queued
+review alongside this T06 receipt. The owner explicitly authorized merging
+PR #38 before the separate release-adoption change.
