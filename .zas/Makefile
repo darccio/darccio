@@ -1,5 +1,5 @@
 ZAS ?= zas
-ZAS_VERSION := v0.0.9
+ZAS_VERSION := v0.0.10
 ZAS_BIN_DIR ?= /tmp/dario-site-zas
 
 .PHONY: serve generate publish check-vanity check-vanity-live check-microformats check-consistency test

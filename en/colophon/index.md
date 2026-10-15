@@ -2,7 +2,7 @@
 entry: true
 language: en
 description: "How dario.cat is built: Zas, Cloudflare Pages, code and licences."
-updated: 2026-10-12T08:09:18+02:00
+updated: 2026-10-15T19:56:48+02:00
 -->
 
 <h1 class="p-name">About this site</h1>
@@ -11,7 +11,7 @@ dario.cat is a static site built with [Zas](https://github.com/darccio/zas), my 
 
 ## Publishing
 
-Cloudflare Pages builds the site when changes are pushed to the `main` branch. The build runs `make -f .zas/Makefile publish` and publishes `.zas/deploy`. The Zas version is pinned in the Makefile so each build uses a specific revision; this site uses [Zas v0.0.9](https://github.com/darccio/zas/releases/tag/v0.0.9).
+Cloudflare Pages builds the site when changes are pushed to the `main` branch. The build runs `make -f .zas/Makefile publish` and publishes `.zas/deploy`. The Zas version is pinned in the Makefile so each build uses a specific revision; this site uses [Zas v0.0.10](https://github.com/darccio/zas/releases/tag/v0.0.10).
 
 The [project guides](/en/projects/) live in their own repositories. This site includes only selected files from a pinned revision and renders them as data, without executing project templates, plugins or scripts. Each guide retains its original licence and links to its source revision. Updates arrive as a proposed change to this site; they are published when merged into `main`.
 
