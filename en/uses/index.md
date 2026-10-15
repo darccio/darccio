@@ -3,12 +3,14 @@ entry: true
 nav: ""
 language: en
 description: "Tools documented on dario.cat: the website built with Zas and Synology NAS monitoring with Datadog."
-updated: 2026-10-11T22:53:31+02:00
+updated: 2026-10-15T08:48:17+02:00
 -->
 
 <h1 class="p-name">Tools</h1>
 
 A collection of tools I have written about on this website.
+
+[Everyday apps](/en/defaults/) lists my choices for browsing, communication, work and backups.
 
 ## This website
 

@@ -114,7 +114,7 @@ func basicLanguagePageFixture(language string, targets map[string]string) string
 func localeDeploymentFixture(t *testing.T) string {
 	t.Helper()
 	deploy := t.TempDir()
-	for _, slug := range []string{"", "about", "now", "projects", "talks", "contact", "hello", "feeds", "slashes", "colophon", "ai", "languages", "elsewhere", "sponsor", "uses", "blogroll", "changelog", "posts"} {
+	for _, slug := range []string{"", "about", "now", "projects", "talks", "contact", "hello", "feeds", "slashes", "colophon", "ai", "languages", "elsewhere", "sponsor", "uses", "defaults", "blogroll", "changelog", "posts"} {
 		pagePath := "/en/"
 		if slug != "" {
 			pagePath += slug + "/"

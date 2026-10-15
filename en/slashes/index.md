@@ -1,7 +1,7 @@
 <!--
 language: en
 description: "An index of the main pages on dario.cat."
-updated: 2026-10-12T22:24:08+02:00
+updated: 2026-10-15T08:48:17+02:00
 -->
 
 <section class="h-feed" lang="en">
@@ -24,7 +24,8 @@ A short index to help you find the site's content. The dates show when these pag
 <li class="h-entry" lang="en"><a class="p-name u-url" href="/en/elsewhere/">Elsewhere</a>: all public profiles. Reviewed <time class="dt-updated" datetime="2026-10-11">11 October 2026</time>.</li>
 <li class="h-entry" lang="en"><a class="p-name u-url" href="/en/languages/">Languages</a>: Catalan, Spanish and English on this site. Reviewed <time class="dt-updated" datetime="2026-10-11">11 October 2026</time>.</li>
 <li class="h-entry" lang="en"><a class="p-name u-url" href="/en/sponsor/">Support my work</a>: sponsorship and funding. Reviewed <time class="dt-updated" datetime="2026-10-11">11 October 2026</time>.</li>
-<li class="h-entry" lang="en"><a class="p-name u-url" href="/en/uses/">Tools</a>: this site and NAS monitoring. Reviewed <time class="dt-updated" datetime="2026-10-11">11 October 2026</time>.</li>
+<li class="h-entry" lang="en"><a class="p-name u-url" href="/en/uses/">Tools</a>: this site and NAS monitoring. Reviewed <time class="dt-updated" datetime="2026-10-15">15 October 2026</time>.</li>
+<li class="h-entry" lang="en"><a class="p-name u-url" href="/en/defaults/">Everyday apps</a>: my preferred applications and services. Reviewed <time class="dt-updated" datetime="2026-10-15">15 October 2026</time>.</li>
 <li class="h-entry" lang="en"><a class="p-name u-url" href="/en/blogroll/">Reading</a>: recommendations from Rizoma. Reviewed <time class="dt-updated" datetime="2026-10-11">11 October 2026</time>.</li>
 <li><a href="/en/changelog/">Site changes</a>: history generated on each publication.</li>
 <li><a href="/en/posts/">Articles</a>: the English archive, with access to Catalan and Spanish writing.</li>
