@@ -62,7 +62,7 @@ All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are
 | [T33](tasks/T33.md) | Recover the owner’s historical articles from original sites or archive.org | `76d688a`; implementation queued | Per-item task review and private-plan exclusion checks | Inventory sources; recover text/media and publication provenance; import reviewed articles in atomic commits |
 | [T34](tasks/T34.md) | Recover Facebook, Twitter and Bluesky posts, including Twitter/Bluesky threads | `d934a3a`; implementation queued | Separate per-item review; guarded private-plan exclusion checks | Select sources, recover records/media and evidenced thread relationships; review local imports |
 | [T35](tasks/T35.md) | Compile coverage, interviews and profiles about the owner in a hemeroteca | `31f265e`, [PR #35](https://github.com/darccio/darccio/pull/35); implementation queued | Dedicated task review; build and private-plan exclusion checks recorded below | Inventory and verify sources; expand `/references/` in reviewed archive batches |
-| [T36](tasks/T36.md) | Review every public page and polish UI/UX, including footnote and rendering artifacts | Planning receipt below; implementation queued | Dedicated task handoff; private-plan build checks recorded below | Inventory routes and individual findings; fix evidenced issues in atomic units and verify all affected pages |
+| [T36](tasks/T36.md) | Review every public page and polish UI/UX, including footnote and rendering artifacts | `92c7699`, [PR #37](https://github.com/darccio/darccio/pull/37); implementation queued | Dedicated task handoff; private-plan build checks recorded below | Inventory routes and individual findings; fix evidenced issues in atomic units and verify all affected pages |
 
 The site implementation commits are signed and atomic. All 22 commits through 20a3e10 were pushed to origin/main and deployed. Commit 7e10002 fixes source-history restoration for subsequent Pages builds. Zas PRs #111–#114 were merged by the owner on 2026-10-11; no releases were tagged, credentials committed or PDS records written. The pre-existing sibling Zas checkout remains clean on feat/xml-sitemap-generation at 9c8c0b2. The table above preserves the implementation batch's original verification state; the deployment evidence below supersedes its deployment-pending entries.
 
@@ -1295,3 +1295,8 @@ and its page-by-page browser evidence remain queued. No new cosmetic tests were
 added. T09’s verified production closure is recorded independently in `b2dbad3`,
 with darna and its configured SSH signature verified; T36’s commit and PR receipt
 follow below.
+
+The T36 handoff is committed as `92c7699`, with darna and its configured SSH
+signature verified. [PR #37](https://github.com/darccio/darccio/pull/37) reviews
+the queued task and the separate T09 completion receipt. Final check status is
+recorded on the PR; the UI/UX audit and fixes remain queued.
