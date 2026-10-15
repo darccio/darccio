@@ -12,6 +12,9 @@ no external articles have been fetched, imported or syndicated for it.
 The owner also added [T34: recover social posts and threads](tasks/T34.md) for
 Facebook, Twitter and Bluesky. This is queued separately and reuses T33’s recovery
 approach; Twitter and Bluesky include thread reconstruction and related collections.
+The owner also added [T35: compile a personal hemeroteca](tasks/T35.md), expanding
+the existing `/references/` archive with verified coverage, interviews and profiles.
+This is queued separately from recovery of the owner’s articles and social posts.
 
 All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are merged. The site now pins the merged feed/Markdown revision and has navigation, core slash pages, crawler/security resources, complete canonical sitemaps, RSS discovery, Markdown twins and static response headers deployed. Cloudflare deployed 20a3e10 and source-history fix 594cf0d successfully on 2026-10-11; site CI and post-deploy vanity checks passed. The owner's expanded talks catalogue, cc@dario.cat contact and Sifa profile additions deployed successfully in 8e3acb1. The T14–T18 identity, post/archive microformats, supported talk/slash/project markup and protected parser checks deployed successfully in 28bd9ba; the narrow historical-email follow-up is committed as d21a476. Account operations remain separate evidence requirements.
 
@@ -51,6 +54,7 @@ All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are
 | Accessibility | Wrap fenced and inline code without source or clipboard changes | `e4690db` | Independent before/after code-copy checks; integrated axe, keyboard, 320px/double-font reflow and no-JS checks pass on 18 pages | Deployed stylesheet bytes match; browser checks pass |
 | [T33](tasks/T33.md) | Recover the owner’s historical articles from original sites or archive.org | `76d688a`; implementation queued | Per-item task review and private-plan exclusion checks | Inventory sources; recover text/media and publication provenance; import reviewed articles in atomic commits |
 | [T34](tasks/T34.md) | Recover Facebook, Twitter and Bluesky posts, including Twitter/Bluesky threads | `d934a3a`; implementation queued | Separate per-item review; guarded private-plan exclusion checks | Select sources, recover records/media and evidenced thread relationships; review local imports |
+| [T35](tasks/T35.md) | Compile coverage, interviews and profiles about the owner in a hemeroteca | `31f265e`, [PR #35](https://github.com/darccio/darccio/pull/35); implementation queued | Dedicated task review; build and private-plan exclusion checks recorded below | Inventory and verify sources; expand `/references/` in reviewed archive batches |
 
 The site implementation commits are signed and atomic. All 22 commits through 20a3e10 were pushed to origin/main and deployed. Commit 7e10002 fixes source-history restoration for subsequent Pages builds. Zas PRs #111–#114 were merged by the owner on 2026-10-11; no releases were tagged, credentials committed or PDS records written. The pre-existing sibling Zas checkout remains clean on feat/xml-sitemap-generation at 9c8c0b2. The table above preserves the implementation batch's original verification state; the deployment evidence below supersedes its deployment-pending entries.
 
@@ -1133,3 +1137,36 @@ The planning receipt is committed as `6b51cac`, with a verified SSH signature.
 their task boundaries remain separate commits. Its check results and final
 private-plan exclusion receipt are recorded on the PR. This work adds backlog
 items only; recovering and importing their source material remains queued.
+
+### T35 personal hemeroteca backlog · 14 October 2026
+
+The owner requested a hemeroteca about himself. [T35](tasks/T35.md) queues a
+sourced archive of coverage, interviews, profiles and substantive mentions about
+Dario. The existing `/references/` page already has the Hemeroteca title and a
+2020 Pirates de Catalunya source lead; its source link and date heading still
+need verification during the later inventory. The task preserves that public URL
+and distinguishes these references from owner-authored articles (T33) and social
+posts (T34).
+
+The dedicated T35 subagent prepared the handoff. Entries retain verified identity,
+titles, publishers, bylines, dates and their precision, languages and original or
+archival links. Source-grounded summaries and contextual links make the future
+archive useful without assuming rights to reproduce or relicense third-party
+texts and images. Syndicated copies and distinct appearances remain identifiable;
+missing sources or uncertain attribution stay explicit. This planning addition
+does not retrieve coverage or change the public archive. The original task pages
+remain untouched; only this log and the new private T35 page are changed.
+
+Guarded generation with pinned Zas v0.0.9, the existing full test suite,
+check-vanity and check-microformats pass. The build retains seven vanity contracts,
+33 public posts, four archives, three feeds with 54 items and 26 verified
+Standard.site documents. T35 and this progress log are absent from deploy output,
+and the task’s local source links resolve. These checks validate the planning
+addition; live source verification and archive-content review belong to later
+implementation. No retrieval tooling or new archive tests were introduced.
+
+The planning addition is committed as `31f265e`; darna passes and its configured
+SSH signature verifies, with hooks respected. [PR #35](https://github.com/darccio/darccio/pull/35)
+reviews the queued T35 handoff. This progress receipt is a separate documentation
+commit; its final revision and check status are recorded on the PR. Compiling and
+publishing the expanded hemeroteca remain later work.
