@@ -3,7 +3,7 @@ module dario.cat/atproto-tools
 go 1.26.0
 
 require (
-	github.com/darccio/zas v0.0.9
+	github.com/darccio/zas v0.0.10
 	github.com/yuin/goldmark v1.8.6
 	go.yaml.in/yaml/v3 v3.0.5
 	golang.org/x/net v0.59.0

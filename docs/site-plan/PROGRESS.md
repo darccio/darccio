@@ -4,14 +4,15 @@ publish: false
 
 # Site implementation progress
 
-T06’s upstream helper is merged in Zas PR #118 and released as v0.0.10.
-PR #38 records its implementation; site adoption follows this receipt merge.
+T06’s upstream helper is merged and released as Zas v0.0.10. PR #38 is merged;
+[PR #40](https://github.com/darccio/darccio/pull/40) adopts that release in the
+publisher and both Go-based checkers. Archive migration remains a separate unit.
 
 T09 is complete as of 15 October 2026. PR #36 merged and deployed its remaining
 defaults pages in Catalan and English. Production content, Markdown responses,
 translated links and the live vanity check pass; the closure receipt is below.
 
-The preceding implementation PRs are merged, and the site adopts released Zas v0.0.9. T26's production publication backlink is verified. T01 is complete: registrar renewal/protection, fully validated DNSSEC, independent scheduled monitoring, real failure/recovery delivery and three expiry-notification simulations are confirmed. T04 and T30 are complete. The English CV is merged in PR #27; its production JSON matches the preserved source, while a Cloudflare email-obfuscation regression needs the correction recorded below. The owner deferred the remaining T09 work and authorized six design/accessibility units. T06 is now selected; T23 remains deferred. The chronology below retains previous observations and their dates.
+The preceding implementation PRs are merged, and the site adopts released Zas v0.0.10. T26's production publication backlink is verified. T01 is complete: registrar renewal/protection, fully validated DNSSEC, independent scheduled monitoring, real failure/recovery delivery and three expiry-notification simulations are confirmed. T04 and T30 are complete. The English CV is merged in PR #27; its production JSON matches the preserved source, while a Cloudflare email-obfuscation regression needs the correction recorded below. The owner deferred the remaining T09 work and authorized six design/accessibility units. T06 is now selected; T23 remains deferred. The chronology below retains previous observations and their dates.
 
 The owner added [T33: recover historical articles](tasks/T33.md) on 14 October
 2026. This additional backlog item is queued after the original T00–T32 plan;
@@ -38,8 +39,8 @@ All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are
 | T01 | Registrar protection, validated DNSSEC, scheduled backstop and active Datadog monitoring complete | `35aaf30`, operational receipts in PR #16, Datadog PRs #17–#21 and completion receipt below | Paid expiry 2028-06-01; DNSSEC fully validates; eight live tests have scheduled passes; real failure/recovery and three expiry simulations received; temporary probe removed | Ongoing quarterly and post-change review |
 | T03 | Zas current contact links merged | `9045f6f`, [PR #111](https://github.com/darccio/zas/pull/111), merge `0c94388` | README-only diff; whitespace, darna and GitHub checks pass | Mergo source-owned follow-up remains queued |
 | T05 | Lazy typed metadata/canonical helpers merged | `96f3a64`, [PR #112](https://github.com/darccio/zas/pull/112), merge `f463876` | Build, vet, race/shuffle and pinned lint; 68 real-site files and six fixtures byte-identical before adoption; remote CI/CodeQL pass | Generator release remains T32 work |
-| T06 | Opt-in immutable page listings implemented upstream | `1ba6011`, [Zas PR #118](https://github.com/darccio/zas/pull/118) | Full race/shuffle, pinned lint, lifecycle/metadata regressions; 223 default-off native files identical; guarded site checks pass | Upstream merge, tested pin adoption and optional curated archive migration |
-| Generator adoption | Immutable merged feed/Markdown revision pinned in guarded publish command | `fc67575` (previous helper adoption `9bcfd95`) | Installed module is v0.0.9-0.20261011133110-abdae2fd51de; disabled options preserve all 78 baseline files; actual make publish succeeds | Deployment pending |
+| T06 | Opt-in page listings merged and released; site release pins adopted | Zas PR #118, v0.0.10; `f68ee98`, [site PR #40](https://github.com/darccio/darccio/pull/40) | Full upstream checks; release identity verified; 223 native files identical; guarded site, race/vet, vanity and format checks pass | Optional curated archive migration; live deployment receipt on PR #40 |
+| Generator adoption | Zas v0.0.10 pinned in publish, metadata checker and Standard.site publisher | `f68ee98`, [PR #40](https://github.com/darccio/darccio/pull/40) | Installed module and checksums match release commit `3868cbc`; actual publish and same-input release comparison pass | Post-change monitoring; deployment receipt on PR #40 |
 | T04 | 34 article metadata mappings, summaries, tags, language defaults and provenance; all publication dates complete | `00a95a2`, `a5896cc`, PR #23 merge `bcd015c` | All 33 public posts have explicit dates; original RSS, owner timezone confirmation and recorded Spanish clock-time assumption resolve the gaps; production formats agree | Complete; retain provenance for any later correction |
 | T08 avatar | Existing portrait stored as local 180px/96px WebP; homepage/OG/vCard updated; preconnect removed | `482d0f1` | Both images decode at exact dimensions; assets copied byte-identically; plain mailto and existing identity links retained | Disable observed Cloudflare email obfuscation; live verification after deploy |
 | T08 licence | Content/software scopes reconciled with explicit exceptions | `d3ed333` | Original Unlicense preserved byte-identically; CV/MAC paragraphs retained; Lýd and third-party terms and prior grants explicit | Inspect deployed licence links and GitHub display after push |
@@ -1352,3 +1353,30 @@ PR #118 merged as `3868cbc` and the owner released Zas v0.0.10. The PR #38
 conflict resolution preserves both T09’s production closure and T36’s queued
 review alongside this T06 receipt. The owner explicitly authorized merging
 PR #38 before the separate release-adoption change.
+
+### Zas v0.0.10 release adoption · 15 October 2026
+
+The owner requested adoption of the released helper and resolution/merge of PR #38
+first. Signed resolution `acbe66b` preserves T09’s completion and T36’s queued
+review; its checks passed and PR #38 merged as `b12712d` before adoption began.
+Signed implementation `f68ee98ea58c5bea2c8a209db437897760af9dce` in
+[PR #40](https://github.com/darccio/darccio/pull/40) pins Zas v0.0.10 in the
+Makefile and both Go tool modules, with matching checksums and updated public
+build documentation and Catalan/English colophons. Other dependencies are unchanged.
+
+The downloaded module resolves to release commit
+`3868cbc501fbce52f4cc51183bef0c39f37e17e3`, with checksum
+`h1:W5AIFz2CFRP9eTAhIQeVsMx/qejxhn+BqoMWaPVyeMw=`. Actual `make publish`
+installs that released binary. Guarded `generate`, all existing site tests,
+vanity, microformats/JSON-LD and cross-format consistency pass. Both updated Go
+modules also pass vet and race/shuffle tests. On identical assembled input,
+v0.0.9 and v0.0.10 produce byte-identical output across all 223 native files.
+Seven vanity contracts, 33 publication instants, four archives, three feeds/54
+items and 26 verified Standard.site documents remain consistent.
+
+Independent release-adoption review has no findings. Darna and the configured
+SSH signature verification pass, with hooks respected. The progress receipt
+stays private; other existing unpublished task pages and the owner’s unrelated
+working files remain untouched. Live deployment evidence is recorded on PR #40
+after its exact merge commit deploys; the checks above are local acceptance. Page listings remain opt-in and the curated archives are preserved;
+using the helper in those archives is a separate migration. T23 stays deferred.
