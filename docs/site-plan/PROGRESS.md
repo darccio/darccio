@@ -4,6 +4,10 @@ publish: false
 
 # Site implementation progress
 
+T09 resumed on 15 October 2026. Its remaining `/defaults/` page is implemented
+locally in Catalan and English from the owner’s confirmed choices. Build and
+browser checks pass; production completion follows review, merge and live checks.
+
 The preceding implementation PRs are merged, and the site adopts released Zas v0.0.9. T26's production publication backlink is verified. T01 is complete: registrar renewal/protection, fully validated DNSSEC, independent scheduled monitoring, real failure/recovery delivery and three expiry-notification simulations are confirmed. T04 and T30 are complete. The English CV is merged in PR #27; its production JSON matches the preserved source, while a Cloudflare email-obfuscation regression needs the correction recorded below. The owner deferred the remaining T09 work and authorized six design/accessibility units. Optional T06/T23 remain deferred. The chronology below retains previous observations and their dates.
 
 The owner added [T33: recover historical articles](tasks/T33.md) on 14 October
@@ -35,7 +39,7 @@ All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are
 | T07 | Canonical/OG URLs, article classification/times, locales and descriptions | `6089a38` | All 54 assembled HTML canonical/OG pairs, 34 article summaries/types/languages and 31 exact times pass; three partial times absent; seven vanity tuples unchanged | Deployment and live metadata verification |
 | T21 | Merged default-off rendered twins; enabled here with inventory-based head discovery | [PR #113](https://github.com/darccio/zas/pull/113), merge `643967d`; site `b782b00` | 53 committed public twins and exact matching links; 54 with unchanged user-owned document; full tooling tests and independent review pass | Live Markdown bodies/MIME/discovery confirmed; T20 deployed; T22 negotiation remains queued |
 | T11 | Merged native RSS 2.0 with owned lifecycle and expected XML fixtures; enabled on site | [PR #114](https://github.com/darccio/zas/pull/114), merge `abdae2f` | 30 combined, 7 English and 11 Spanish items; source publication instants, canonical GUIDs, namespaces and absolute content URLs agree; repeated output deterministic | Live W3C validation after deploy |
-| T09 | Accessible five-link navigation, Catalan home hub and nine core slash pages | `1ad3087` | Owner-confirmed Corb/Cocoon on dated Now; axe finds zero violations on 12 pages; keyboard skip, 320px, double-font reflow and no-JS contact checks pass | Deploy; supplementary Tier 2 content remains queued |
+| T09 | Core navigation and supplementary pages deployed; final defaults page implemented in Catalan and English | Core `1ad3087`; defaults `8950141`, links `59d9b76`, [PR #36](https://github.com/darccio/darccio/pull/36) | Guarded build, full tests, seven vanity contracts, microformats, 24 axe/keyboard and 24 reflow cases pass | Review, merge and verify the defaults pages in production |
 | T10 | Explicit crawler policy, security contact and final native sitemap assembly | `0556a86` | Complete 62-page canonical coverage including 7 raw vanity pages; reciprocal language URLs and Git dates retained; one robots Sitemap line; failure preserves prior deploy | Live resource checks; maintain security expiry before 2027-10-11 |
 | T12 | Strict RSS enablement, language-aware autodiscovery and subscription hub | `cd7e20a` | Every templated page advertises real generated feeds; current Rizoma/Mergo/Zas external feeds parse as RSS/Atom | Deploy/live discovery checks; archive h-feed awaits T16 |
 | T13 | Static Cloudflare Pages RSS/security/Markdown MIME and cache rules; matching Content-Signal | `3c3b196` | Exact _headers bytes survive assembly; reviewed patterns preserve WebFinger and absent verification resources | Live header checks; future Functions must set their own response headers |
@@ -1170,3 +1174,74 @@ SSH signature verifies, with hooks respected. [PR #35](https://github.com/darcci
 reviews the queued T35 handoff. This progress receipt is a separate documentation
 commit; its final revision and check status are recorded on the PR. Compiling and
 publishing the expanded hemeroteca remain later work.
+
+### T09 everyday defaults · 15 October 2026
+
+The owner resumed the remaining T09 work and supplied current app/service choices
+through twelve questions. `/defaults/` and `/en/defaults/` now list Firefox and
+Kagi; Fastmail for email, calendar and contacts; Apple Notes and Reminders; Visual
+Studio Code, Ghostty and Bash or Zsh; 1Password; Telegram, WhatsApp and Signal;
+the owner’s Synology NAS and BorgBase backups; Spotify and YouTube “for now”; and
+NewsBlur. The three messaging links retain the exact owner-supplied URLs, and
+the NAS links to the existing Synology/Datadog article. No device, OS, version or
+future migration claim is inferred.
+
+The task’s dedicated subagent prepared both localized pages. Each has explicit
+updated metadata and an h-entry, with reciprocal language switching, sitemap
+alternates and rendered Markdown companions supplied by existing generation.
+Both slash indexes list the dated page, and both Tools pages link to it. Existing
+microformats/locale guards now require the new pages, and the English fixture
+inventory includes the new required translation. No layout, stylesheet, script,
+feed-selection or Standard.site-selection changes are introduced.
+
+The guarded generate build with pinned Zas v0.0.9, full existing test suite,
+check-vanity and check-microformats pass. Publishing consistency still covers
+33 public posts, four article archives, three feeds with 54 items and 26 verified
+Standard.site documents. All 251 prior output paths survive; only the two HTML
+pages and their Markdown companions are added. All seven vanity-route files,
+feeds, source CV JSON, styles and tokens retain baseline bytes. Discovery/context
+content, the sitemap and generated Markdown-serving inventory update as expected.
+
+Chromium checks pass on six affected routes in light and dark at 1440px and
+390px: 24 axe cases have zero violations and 24 keyboard cases retain working
+skip links and visible link focus. Another 24 cases pass at 320px with normal or
+200% root text. Both new pages remain readable with JavaScript disabled and their
+language links navigate to each other. The original three contact URLs return
+HTTP 200 under read-only requests. Local browser checks block external requests;
+they check the exact link targets without sending messages or exercising app
+handoffs. Screenshots were inspected at mobile and desktop sizes.
+
+This completes local implementation of T09’s remaining page. The new commit and
+PR receipts follow below; production acceptance awaits merge and actual hosted
+checks. Other existing unpublished task pages remain untouched, and this progress
+log stays excluded from deployment.
+
+The implementation is committed as `8950141`; darna passes and its configured
+SSH signature verifies, with hooks respected. [PR #36](https://github.com/darccio/darccio/pull/36)
+reviews the complete defaults unit. The final progress receipt is a separate
+documentation commit, with its revision and hosted check results recorded on the
+PR. The unrelated Datadog lockfile change and untracked vanity document in the
+owner’s original checkout remain untouched. T09 has no remaining content choices;
+production closure awaits merge and live verification.
+
+The initial review receipt is committed as `ce10920`, with darna and a verified
+SSH signature. The owner then requested links for every tool. Both defaults
+pages now link fifteen product names to their official sites or Apple App Store
+listings, alongside the three unchanged personal messaging links. Bash and Zsh
+have separate links; Synology keeps both its product link and the article link.
+Source review confirms that only link wrappers changed, preserving the choices,
+wording, dates and “for now” qualifier.
+
+The updated guarded build, full tests, vanity and microformats checks pass.
+All eighteen tool/contact links appear exactly once with the expected href in
+each built page. The six-route browser matrix was rerun after adding the links:
+24 full axe, 24 keyboard and 24 normal/doubled-text reflow cases pass, as do both
+no-JavaScript pages and both translated-page clicks. Official destinations were
+checked against their publisher sites; no product capabilities or usage facts
+were added. The follow-up is reviewed in the same PR #36.
+
+The tool-link follow-up is committed as `59d9b76`; darna passes and its configured
+SSH signature verifies. This final receipt records that commit separately from
+the original page implementation and initial review receipt. The final pushed
+revision and hosted acceptance results are recorded on PR #36; production still
+requires merge and live verification.

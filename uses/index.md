@@ -1,12 +1,14 @@
 <!--
 entry: true
 description: "Eines documentades a dario.cat: el web amb Zas i la monitorització d'un NAS Synology amb Datadog."
-updated: 2026-10-11T22:53:31+02:00
+updated: 2026-10-15T08:48:17+02:00
 -->
 
 <h1 class="p-name">Eines</h1>
 
 Un recull de les eines que he explicat en aquest web.
+
+A [Aplicacions de cada dia](/defaults/) hi trobaràs les meves preferències per navegar, comunicar-me, treballar i fer còpies de seguretat.
 
 ## El web
 

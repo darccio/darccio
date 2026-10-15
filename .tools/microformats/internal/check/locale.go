@@ -16,7 +16,7 @@ import (
 // Shared resources (CV, project docs, licences and canonical identity) keep
 // their established URLs; only translated site navigation uses /en/.
 func validateEnglishNavigation(deploy string) error {
-	for _, slug := range []string{"", "about", "now", "projects", "talks", "contact", "hello", "feeds", "slashes", "colophon", "ai", "languages", "elsewhere", "sponsor", "uses", "blogroll", "changelog", "posts"} {
+	for _, slug := range []string{"", "about", "now", "projects", "talks", "contact", "hello", "feeds", "slashes", "colophon", "ai", "languages", "elsewhere", "sponsor", "uses", "defaults", "blogroll", "changelog", "posts"} {
 		file := filepath.Join(deploy, "en", filepath.FromSlash(slug), "index.html")
 		if info, err := os.Stat(file); err != nil || !info.Mode().IsRegular() {
 			return fmt.Errorf("missing translated English page %s", file)

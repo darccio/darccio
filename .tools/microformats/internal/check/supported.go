@@ -33,7 +33,7 @@ func validateSupportedLocale(root, deploy, prefix string) error {
 	if prefix == "en/" {
 		language = "en"
 	}
-	for _, slug := range []string{"now", "ai", "colophon", "feeds", "contact", "hello", "elsewhere", "languages", "sponsor", "uses", "blogroll"} {
+	for _, slug := range []string{"now", "ai", "colophon", "feeds", "contact", "hello", "elsewhere", "languages", "sponsor", "uses", "defaults", "blogroll"} {
 		page := prefix + slug + "/"
 		pageURL := homeURL + page
 		config, expected, err := publicSource(root, page+"index.md")
