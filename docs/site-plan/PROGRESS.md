@@ -26,6 +26,9 @@ This is queued separately from recovery of the owner’s articles and social pos
 The owner added [T36: review and polish the UI/UX item by item](tasks/T36.md) on
 15 October 2026. This queues a full route review, footnote/artifact cleanup and
 separately reviewable fixes with per-finding evidence and acceptance.
+The owner added [T37: de-Cloudflare the website](tasks/T37.md) on 16 October
+2026. This queues portable search, hosting and deployment, with an inventory of
+provider-specific integrations and behavior checks before any migration.
 
 All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are merged. The site now pins the merged feed/Markdown revision and has navigation, core slash pages, crawler/security resources, complete canonical sitemaps, RSS discovery, Markdown twins and static response headers deployed. Cloudflare deployed 20a3e10 and source-history fix 594cf0d successfully on 2026-10-11; site CI and post-deploy vanity checks passed. The owner's expanded talks catalogue, cc@dario.cat contact and Sifa profile additions deployed successfully in 8e3acb1. The T14–T18 identity, post/archive microformats, supported talk/slash/project markup and protected parser checks deployed successfully in 28bd9ba; the narrow historical-email follow-up is committed as d21a476. Account operations remain separate evidence requirements.
 
@@ -68,6 +71,7 @@ All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are
 | [T34](tasks/T34.md) | Recover Facebook, Twitter and Bluesky posts, including Twitter/Bluesky threads | `d934a3a`; implementation queued | Separate per-item review; guarded private-plan exclusion checks | Select sources, recover records/media and evidenced thread relationships; review local imports |
 | [T35](tasks/T35.md) | Compile coverage, interviews and profiles about the owner in a hemeroteca | `31f265e`, [PR #35](https://github.com/darccio/darccio/pull/35); implementation queued | Dedicated task review; build and private-plan exclusion checks recorded below | Inventory and verify sources; expand `/references/` in reviewed archive batches |
 | [T36](tasks/T36.md) | Review every public page and polish UI/UX, including footnote and rendering artifacts | `92c7699`, [PR #37](https://github.com/darccio/darccio/pull/37); implementation queued | Dedicated task handoff; private-plan build checks recorded below | Inventory routes and individual findings; fix evidenced issues in atomic units and verify all affected pages |
+| [T37](tasks/T37.md) | De-Cloudflare the website, including search, hosting and deployment | Planning queued; receipt below | Dedicated task review; documentation checks recorded below | Inventory integrations; implement and verify portable equivalents; migrate with rollback after behavior parity |
 
 The site implementation commits are signed and atomic. All 22 commits through 20a3e10 were pushed to origin/main and deployed. Commit 7e10002 fixes source-history restoration for subsequent Pages builds. Zas PRs #111–#114 were merged by the owner on 2026-10-11; no releases were tagged, credentials committed or PDS records written. The pre-existing sibling Zas checkout remains clean on feat/xml-sitemap-generation at 9c8c0b2. The table above preserves the implementation batch's original verification state; the deployment evidence below supersedes its deployment-pending entries.
 
@@ -1442,3 +1446,24 @@ pages and the owner's unrelated working files remain untouched. Hosted CI,
 Pages preview and later production acceptance are recorded on PR #42; local
 checks do not constitute deployment. Revert the implementation to restore the
 previous curated archives. T23 stays deferred.
+
+### T37 Cloudflare independence backlog · 16 October 2026
+
+The owner requested future Cloudflare independence after reviewing how T23's
+search runs in a Pages Worker. [T37](tasks/T37.md) queues portable search,
+site serving, hosting and deployment integrations, with an evidenced inventory,
+a provider-independent reference runtime, behavior parity and reversible cutover.
+The dedicated planning subagent covered the new task; implementation is queued.
+
+The task preserves ordinary no-JavaScript search, all locales, reviewed public
+metadata/privacy rules, Markdown responses, stable publishing identities and all
+seven exact vanity contracts. Pages-specific routing, assets, response headers,
+WebFinger and deployment/publishing gates must be inventoried before choosing
+replacements. Cloudflare DNS may remain during an initial hosting migration;
+retained dependencies must be explicit and a DNS transfer planned separately.
+PR #43 is open at `a287e1f`; this entry makes no production-search claim.
+
+Only this progress log and the new unpublished task are changed. Existing site
+tests and the guarded publish command with pinned Zas v0.0.10 pass. The final
+private-plan exclusion and vanity checks are recorded with the commit receipt.
+No hosting, DNS, account, billing or public-content change is made by this item.
