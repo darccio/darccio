@@ -39,7 +39,7 @@ All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are
 | T01 | Registrar protection, validated DNSSEC, scheduled backstop and active Datadog monitoring complete | `35aaf30`, operational receipts in PR #16, Datadog PRs #17–#21 and completion receipt below | Paid expiry 2028-06-01; DNSSEC fully validates; eight live tests have scheduled passes; real failure/recovery and three expiry simulations received; temporary probe removed | Ongoing quarterly and post-change review |
 | T03 | Zas current contact links merged | `9045f6f`, [PR #111](https://github.com/darccio/zas/pull/111), merge `0c94388` | README-only diff; whitespace, darna and GitHub checks pass | Mergo source-owned follow-up remains queued |
 | T05 | Lazy typed metadata/canonical helpers merged | `96f3a64`, [PR #112](https://github.com/darccio/zas/pull/112), merge `f463876` | Build, vet, race/shuffle and pinned lint; 68 real-site files and six fixtures byte-identical before adoption; remote CI/CodeQL pass | Generator release remains T32 work |
-| T06 | Opt-in page listings merged/released and adopted; generated article archives ready for review | Zas PR #118, v0.0.10; site PR #40; `5602114`, [archive PR #42](https://github.com/darccio/darccio/pull/42) | Full site tests, lifecycle/full-incremental fixtures, vet/race, guarded build, exact row/feed/vanity comparisons and focused browser checks pass | Merge PR #42 and verify its deployment; release adoption already deployed |
+| T06 | Opt-in page listings released/adopted and generated article archives deployed | Zas PR #118, v0.0.10; site PR #40; [PR #42](https://github.com/darccio/darccio/pull/42), merge `202146e` | Local lifecycle/browser checks and exact production archive/twin/feed/vanity checks pass; [production receipt](https://github.com/darccio/darccio/pull/42#issuecomment-6212463240) | Complete; maintain explicit article metadata |
 | Generator adoption | Zas v0.0.10 pinned in publish, metadata checker and Standard.site publisher | `f68ee98`, [PR #40](https://github.com/darccio/darccio/pull/40) | Installed module and checksums match release commit `3868cbc`; actual publish and same-input release comparison pass | Post-change monitoring; deployment receipt on PR #40 |
 | T04 | 34 article metadata mappings, summaries, tags, language defaults and provenance; all publication dates complete | `00a95a2`, `a5896cc`, PR #23 merge `bcd015c` | All 33 public posts have explicit dates; original RSS, owner timezone confirmation and recorded Spanish clock-time assumption resolve the gaps; production formats agree | Complete; retain provenance for any later correction |
 | T08 avatar | Existing portrait stored as local 180px/96px WebP; homepage/OG/vCard updated; preconnect removed | `482d0f1` | Both images decode at exact dimensions; assets copied byte-identically; plain mailto and existing identity links retained | Disable observed Cloudflare email obfuscation; live verification after deploy |
@@ -64,6 +64,7 @@ All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are
 | T19 Person/posts | Safe layout serialization and shared Person/BlogPosting graphs, checked before promotion | Zas `844e073`, merged [PR #115](https://github.com/darccio/zas/pull/115); site `21f8287`, merged [PR #4](https://github.com/darccio/darccio/pull/4), production `b421134` | Local/remote tests pass; Schema.org zero errors/warnings; rejected output preserves 150 files; [Cloudflare preview](https://40451f37.da-rio-hn.pages.dev) graphs/feed bytes and seven vanity packages match | Production Pages, CI and independent graphs/feed/twin checks pass; SoftwareSourceCode follows T24 manifests |
 | T20 | Curated language summaries/full corpora and strict head discovery, assembled before promotion | Signed `9366c92`, [site PR #5](https://github.com/darccio/darccio/pull/5) | Clean 156-file build; race/shuffle and vet; repeated hashes identical; invalid selection preserves old deployment; 111 preview HTTPS checks and all seven vanity packages pass | PR #5 merged as c624d6c; all 111 production checks pass; project contexts follow T24 |
 | Accessibility | Wrap fenced and inline code without source or clipboard changes | `e4690db` | Independent before/after code-copy checks; integrated axe, keyboard, 320px/double-font reflow and no-JS checks pass on 18 pages | Deployed stylesheet bytes match; browser checks pass |
+| T23 | Multilingual ordinary GET search and declarative WebMCP forms ready for review | `65040b9`, `bd036ab`, [PR #43](https://github.com/darccio/darccio/pull/43) | Guarded build, full suite, vet/race, actual lifecycle/privacy checks, no-JS form submissions, 36 axe/36 reflow scenarios and native experimental Chromium invocation pass | Merge and verify production; native WebMCP support and completion responses remain experimental |
 | [T33](tasks/T33.md) | Recover the owner’s historical articles from original sites or archive.org | `76d688a`; implementation queued | Per-item task review and private-plan exclusion checks | Inventory sources; recover text/media and publication provenance; import reviewed articles in atomic commits |
 | [T34](tasks/T34.md) | Recover Facebook, Twitter and Bluesky posts, including Twitter/Bluesky threads | `d934a3a`; implementation queued | Separate per-item review; guarded private-plan exclusion checks | Select sources, recover records/media and evidenced thread relationships; review local imports |
 | [T35](tasks/T35.md) | Compile coverage, interviews and profiles about the owner in a hemeroteca | `31f265e`, [PR #35](https://github.com/darccio/darccio/pull/35); implementation queued | Dedicated task review; build and private-plan exclusion checks recorded below | Inventory and verify sources; expand `/references/` in reviewed archive batches |
@@ -1442,3 +1443,71 @@ pages and the owner's unrelated working files remain untouched. Hosted CI,
 Pages preview and later production acceptance are recorded on PR #42; local
 checks do not constitute deployment. Revert the implementation to restore the
 previous curated archives. T23 stays deferred.
+
+### T23 search and declarative WebMCP · 16 October 2026
+
+The owner explicitly selected T23, superseding the earlier deferred status.
+The existing Cloudflare Pages advanced-mode Worker supplies the same-origin GET
+backend. No new hosting service, account secret, browser script or JavaScript
+exception is needed. Dedicated index/assembly and Worker subagents implemented
+the independent parts; a third subagent reviewed the visibility boundaries,
+request handling and actual native browser integration without open blockers.
+
+Signed ordinary-search commit `65040b97fce7301c73dbe7c1158bb88687183ac5` creates
+`/search/`, `/en/search/` and `/es/search/`, their rendered Markdown twins, shared
+catalogue, footer discovery and alphabetical slash-index links. Zas page listings
+provide candidate titles/summaries; existing public head descriptions fill empty
+summaries after visibility checks. The final index has 90 public pages, including
+ten compiler-owned Mergo, Zas and darna docs pages. Queries match all words,
+ignoring case/accents, with title matches ranked first and URL ties deterministic.
+Results retain root-relative links and the page's locale; HTML/Markdown and HEAD
+are supported, and query responses are uncached and excluded from indexing.
+
+The builder checks original source and inherited publication/privacy metadata,
+canonical URLs, languages, final deployed pages and regular files before writing
+all six catalogues and the embedded Worker index. CV/private/repository-only
+paths, drafts, unpublished sources and ordinary Markdown opt-outs are excluded.
+Project docs intentionally supply portable twins outside Zas's Markdown pass;
+only exact compiler manifest ownership plus the validated finalized twin permits
+that output-flag exception. Private/draft/unpublished flags still deny inclusion,
+and a forged project metadata field grants no exception. No page body is indexed.
+
+Signed annotation commit `bd036abd0e85076737d71762258a5932ca76d7f0` adds localized
+toolname/tooldescription/toolparamdescription and toolautosubmit attributes to the
+working forms, with the experimental limit documented in README. Primary Chrome
+documentation, updated 25 September 2026, and the proposal's implementation notes
+were rechecked. Actual Chromium 151.0.7922.34 discovery exposes search_site and
+the localized string parameter q in all three locales. CDP invocation navigates
+to nine real Mergo results with JavaScript disabled. The local native check uses
+WebMCPTesting/DevToolsWebMCPSupport feature flags and WebMCP/WebMCPTesting Blink
+flags; unflagged Chromium exposes no native API and ordinary submissions still
+return the same results. Completion currently returns the existing Person JSON-LD,
+not a structured search-match payload; the navigated page contains the results.
+No production origin-trial enrollment or universal native support is claimed.
+
+Guarded generate, full site tests, modified-module vet/race/shuffle, explicit
+vanity, microformats/JSON-LD and cross-format checks pass. Thirty-five Worker
+request tests include 17 new search contracts. Builder tests cover metadata,
+privacy, publication transitions, deterministic bytes, template boundaries and
+compiler-owned docs. A temporary actual-source pipeline check adds, edits and
+deletes a page and verifies private/draft/unpublished/Markdown-opted-out records
+never enter any catalogue or index; all fixtures are removed before final build.
+
+Actual ordinary browser submissions pass in all three locales with JavaScript
+disabled. Thirty-six axe scenarios (three locales, catalogue/results/no-results,
+light/dark, 1440px/390px) have zero violations. Thirty-six 320px normal/doubled-text
+reflow checks and keyboard skip-link/input/button focus checks pass. Local logs,
+native evidence and screenshots are in `/tmp/dario-t23-review`. Existing 255 files
+remain with six new search artifacts; three feeds, all 33 article bodies, CV JSON
+and five raw vanity fragments are byte-identical. All seven vanity contracts,
+four article archives and 26 verified Standard.site records remain consistent;
+CV Markdown remains absent. Changes to shared pages add only the footer search
+link; the new styles are scoped to search components.
+
+[PR #43](https://github.com/darccio/darccio/pull/43) reviews both atomic feature
+commits and this private receipt. Darna and configured SSH signature verification
+pass, with hooks respected. The other existing unpublished task files and the
+owner's unrelated local files remain untouched. Hosted CI and exact Pages preview
+checks are recorded on the PR; production acceptance follows merge. Search covers
+titles, summaries and descriptions. Revert the feature to remove search and its
+discovery links; experimental annotations can be reverted independently.
