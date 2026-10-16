@@ -1,7 +1,7 @@
 <!--
 language: en
 description: "An index of the main pages on dario.cat."
-updated: 2026-10-15T08:48:17+02:00
+updated: 2026-10-16T12:11:48+02:00
 -->
 
 <section class="h-feed" lang="en">
@@ -27,6 +27,7 @@ A short index to help you find the site's content. The dates show when these pag
 <li class="h-entry" lang="en"><a class="p-name u-url" href="/en/now/">Now</a>: current projects and work. Reviewed <time class="dt-updated" datetime="2026-10-11">11 October 2026</time>.</li>
 <li class="h-entry" lang="en"><a class="p-name u-url" href="/en/projects/">Projects</a>: free software and documentation. Reviewed <time class="dt-updated" datetime="2026-10-11">11 October 2026</time>.</li>
 <li class="h-entry" lang="en"><a class="p-name u-url" href="/en/blogroll/">Reading</a>: recommendations from Rizoma. Reviewed <time class="dt-updated" datetime="2026-10-11">11 October 2026</time>.</li>
+<li><a href="/en/search/">Search</a>: find articles, pages and documentation.</li>
 <li><a href="/en/changelog/">Site changes</a>: history generated on each publication.</li>
 <li class="h-entry" lang="en"><a class="p-name u-url" href="/en/sponsor/">Support my work</a>: sponsorship and funding. Reviewed <time class="dt-updated" datetime="2026-10-11">11 October 2026</time>.</li>
 <li><a href="/en/talks/">Talks</a>: videos, interviews and presentations.</li>

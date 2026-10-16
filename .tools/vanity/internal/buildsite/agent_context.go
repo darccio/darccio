@@ -271,9 +271,19 @@ func agentContextSourcePath(source string) error {
 }
 
 func agentContextPublicSource(stage, source, language string) error {
+	return agentContextSourceVisibility(stage, source, language, false)
+}
+
+// Compiler-owned project docs opt out of Zas Markdown output because their
+// portable twins are finalized separately. Only that output flag may differ;
+// private, draft and unpublished metadata always deny visibility.
+func agentContextSourceVisibility(stage, source, language string, compilerMarkdown bool) error {
 	directory, err := agentContextDirectoryMetadata(stage, source)
 	if err != nil {
 		return err
+	}
+	if compilerMarkdown {
+		directory.PublishMarkdown = nil
 	}
 	if err := agentContextEligible(directory); err != nil {
 		return fmt.Errorf("directory metadata: %w", err)
@@ -326,6 +336,9 @@ func agentContextPublicSource(stage, source, language string) error {
 				var metadata agentContextMetadata
 				if err := yaml.Unmarshal([]byte(header.String()), &metadata); err != nil {
 					return err
+				}
+				if compilerMarkdown {
+					metadata.PublishMarkdown = nil
 				}
 				if err := agentContextEligible(metadata); err != nil {
 					return err
