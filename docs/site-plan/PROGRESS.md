@@ -71,7 +71,7 @@ All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are
 | [T34](tasks/T34.md) | Recover Facebook, Twitter and Bluesky posts, including Twitter/Bluesky threads | `d934a3a`; implementation queued | Separate per-item review; guarded private-plan exclusion checks | Select sources, recover records/media and evidenced thread relationships; review local imports |
 | [T35](tasks/T35.md) | Compile coverage, interviews and profiles about the owner in a hemeroteca | `31f265e`, [PR #35](https://github.com/darccio/darccio/pull/35); implementation queued | Dedicated task review; build and private-plan exclusion checks recorded below | Inventory and verify sources; expand `/references/` in reviewed archive batches |
 | [T36](tasks/T36.md) | Review every public page and polish UI/UX, including footnote and rendering artifacts | `92c7699`, [PR #37](https://github.com/darccio/darccio/pull/37); implementation queued | Dedicated task handoff; private-plan build checks recorded below | Inventory routes and individual findings; fix evidenced issues in atomic units and verify all affected pages |
-| [T37](tasks/T37.md) | De-Cloudflare the website, including search, hosting and deployment | Planning queued; receipt below | Dedicated task review; documentation checks recorded below | Inventory integrations; implement and verify portable equivalents; migrate with rollback after behavior parity |
+| [T37](tasks/T37.md) | De-Cloudflare the website, including search, hosting and deployment | `e18190e`, [PR #44](https://github.com/darccio/darccio/pull/44); implementation queued | Dedicated task review; documentation checks recorded below | Inventory integrations; implement and verify portable equivalents; migrate with rollback after behavior parity |
 
 The site implementation commits are signed and atomic. All 22 commits through 20a3e10 were pushed to origin/main and deployed. Commit 7e10002 fixes source-history restoration for subsequent Pages builds. Zas PRs #111–#114 were merged by the owner on 2026-10-11; no releases were tagged, credentials committed or PDS records written. The pre-existing sibling Zas checkout remains clean on feat/xml-sitemap-generation at 9c8c0b2. The table above preserves the implementation batch's original verification state; the deployment evidence below supersedes its deployment-pending entries.
 
@@ -1463,7 +1463,14 @@ replacements. Cloudflare DNS may remain during an initial hosting migration;
 retained dependencies must be explicit and a DNS transfer planned separately.
 PR #43 is open at `a287e1f`; this entry makes no production-search claim.
 
-Only this progress log and the new unpublished task are changed. Existing site
-tests and the guarded publish command with pinned Zas v0.0.10 pass. The final
-private-plan exclusion and vanity checks are recorded with the commit receipt.
+Signed task commit `e18190e` is reviewed in
+[PR #44](https://github.com/darccio/darccio/pull/44). Existing site tests, guarded
+publish and final generate with pinned Zas v0.0.10, microformats/JSON-LD,
+cross-format consistency and all seven exact vanity checks pass. Both private
+planning files are absent from all 255 published files. Darna and configured
+SSH signature verification pass; hooks are respected. These are local checks,
+not evidence of a hosting migration; hosted CI results belong on the PR.
+
+Only this progress log and the new unpublished task are changed. Other existing
+unpublished task pages and the owner's unrelated working files remain untouched.
 No hosting, DNS, account, billing or public-content change is made by this item.
