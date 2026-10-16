@@ -1486,8 +1486,8 @@ not a structured search-match payload; the navigated page contains the results.
 No production origin-trial enrollment or universal native support is claimed.
 
 Guarded generate, full site tests, modified-module vet/race/shuffle, explicit
-vanity, microformats/JSON-LD and cross-format checks pass. Thirty-five Worker
-request tests include 17 new search contracts. Builder tests cover metadata,
+vanity, microformats/JSON-LD and cross-format checks pass. Thirty-six Worker
+request tests include 18 new search contracts. Builder tests cover metadata,
 privacy, publication transitions, deterministic bytes, template boundaries and
 compiler-owned docs. A temporary actual-source pipeline check adds, edits and
 deletes a page and verifies private/draft/unpublished/Markdown-opted-out records
@@ -1511,3 +1511,10 @@ owner's unrelated local files remain untouched. Hosted CI and exact Pages previe
 checks are recorded on the PR; production acceptance follows merge. Search covers
 titles, summaries and descriptions. Revert the feature to remove search and its
 discovery links; experimental annotations can be reverted independently.
+
+Final review found that JavaScript replacement strings expand dollar sequences
+after query escaping. The signed follow-up `fix(search): preserve literal dollar
+signs in queries` uses a replacement callback, so user text cannot reinsert raw
+markup through replacement tokens. Its regression fails against the original
+line and passes after the fix, covering dollar match/prefix/suffix/literal tokens
+and an attribute-injection payload. All 36 HTTP contracts pass.

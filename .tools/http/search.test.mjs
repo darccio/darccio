@@ -116,6 +116,26 @@ test("query, title, and summary are inert HTML, including attribute injection at
   assert.equal(response.headers.get("Content-Security-Policy"), "default-src 'self'; script-src 'none'");
 });
 
+test("dollar replacement sequences stay literal inside the escaped query input", async () => {
+  for (const [query, escaped] of [
+    ["$&", "$&amp;"],
+    ["$`", "$`"],
+    ["$'", "$&#39;"],
+    ["$$", "$$"],
+    ['$& autofocus onfocus="alert(1)', "$&amp; autofocus onfocus=&quot;alert(1)"],
+  ]) {
+    const response = await fixture().fetch("/search/?q=" + encodeURIComponent(query));
+    assert.equal(response.status, 200);
+    const html = await response.text();
+    const input = html.match(/<input name="q" value="([^"]*)" data-search-query>/);
+    assert.ok(input, query);
+    assert.equal(input[1], escaped, query);
+    for (const tag of ["<!doctype", "<form", "<input", "<main"]) {
+      assert.equal(html.split(tag).length - 1, 1, `${query}: ${tag} must not be duplicated`);
+    }
+  }
+});
+
 test("duplicate, oversized, control, bidi-formatting and broken-encoding queries receive localized 400", async () => {
   for (const query of ["q=one&q=two", "q=" + "x".repeat(161), "q=one%0Atwo", "q=a%00b", "q=a%E2%80%AEb", "q=%FF"]) {
     const origin = fixture();

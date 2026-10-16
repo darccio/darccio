@@ -318,7 +318,7 @@ async function search(request, env, routes, index, language) {
   if (html === null || html.indexOf(input) < 0 || html.indexOf(input) !== html.lastIndexOf(input)) {
     return searchResponse("Search is unavailable.\n", request, 502, "text/plain", original);
   }
-  html = html.replace(input, `name="q" value="${escapeHTML(query)}" data-search-query`);
+  html = html.replace(input, () => `name="q" value="${escapeHTML(query)}" data-search-query`);
   if (qualities.markdown > qualities.html) {
     const markdown = `# ${copy.title}\n\n${escapeMarkdown(status)}\n\n` + results.map((entry) =>
       `## [${escapeMarkdown(entry.title)}](<${entry.url}>) (${copy.languages[entry.language]})\n\n${escapeMarkdown(entry.summary)}\n`).join("\n");
