@@ -182,3 +182,30 @@ Every value below is copied from that path's pre-edit leading-comment `date_crea
 | [rizoma/002/index.md](../rizoma/002/index.md) | `2021-08-22T17:00:00+02:00` | `instant` | `ca` |
 | [rizoma/003/index.md](../rizoma/003/index.md) | `2021-09-05T12:00:00+02:00` | `instant` | `ca` |
 | [rizoma/004/index.md](../rizoma/004/index.md) | `2021-09-26T19:00:00+02:00` | `instant` | `ca` |
+
+## Catalan republication of Democracia en venta, 2026-10-16
+
+The owner requested a faithful, natural Catalan translation of their
+[El Periódico article](https://www.elperiodico.com/es/entre-todos/participacion/democracia-venta-precio-injusto-dario-castane-carta-88382783),
+retaining the original publication date, linking to the source without making
+it canonical, and omitting the original image.
+
+Before creating [the translation](../posts/democracia-en-venda/index.md), a search
+of the local article sources, the live `/posts/` archive and all 99 URLs in the
+live sitemap found no existing translation. Public searches for the Catalan
+title and electoral-campaign wording on dario.cat also returned no match.
+
+The supplied `.com` URL returned HTTP 406. The publisher's
+[`.cat` URL for the same article](https://www.elperiodico.cat/entre-tots/participacio/democracia-venta-precio-injusto-dario-castane-carta-88382783)
+returned HTTP 200 and the complete Spanish text. Its `NewsArticle` JSON-LD
+explicitly gives both `datePublished` and `dateModified` as
+`2023-06-13T11:28:15+02:00`; its visible date and `meta[name="date"]` corroborate
+13 June 2023 at 11:28 CEST. The new source retains the exact `datePublished`
+value, including seconds and offset, in `date` and `date_created`.
+
+The retrieved HTML response has SHA-256
+`34f73c5b6c83289f81a811b76fc139633168924979c5adf35e6ddc26a62bf40d`.
+The translation preserves the six article paragraphs and adds a short source
+credit. It has no image or canonical override; the normal site canonical is
+`https://dario.cat/posts/democracia-en-venda/`. The Standard.site reviewed
+allowlist is unchanged.
