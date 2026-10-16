@@ -9,9 +9,9 @@ atproto: false
 
 # Cerca
 
-<form class="search-form" role="search" method="get" action="/search/">
+<form class="search-form" role="search" method="get" action="/search/" toolname="search_site" tooldescription="Cerca als títols i resums dels articles, pàgines i documentació públics de dario.cat en català, castellà i anglès." toolautosubmit>
 <label for="search-query">Què vols trobar?</label>
-<div class="search-form__controls"><input id="search-query" type="search" name="q" value="" data-search-query maxlength="160" aria-describedby="search-hint"><button type="submit">Cerca</button></div>
+<div class="search-form__controls"><input id="search-query" type="search" name="q" value="" data-search-query maxlength="160" aria-describedby="search-hint" toolparamdescription="Paraules que vols trobar als títols i resums; fins a 160 caràcters."><button type="submit">Cerca</button></div>
 </form>
 
 <p id="search-hint">Cerca als títols i resums en català, castellà i anglès. Per exemple: Mergo, Synology o política.</p>

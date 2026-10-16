@@ -139,6 +139,16 @@ require account secrets. Query responses use `no-store`, remain on preview hosts
 and provide Markdown when requested. Reverting the search change restores the
 previous Worker and removes the pages and discovery links together.
 
+The forms also expose `search_site` through the experimental
+[WebMCP declarative API](https://developer.chrome.com/docs/ai/webmcp/declarative-api),
+using `toolname`, `tooldescription`, `toolparamdescription` and `toolautosubmit`.
+An enabled browser can submit the same GET search and navigate to its results.
+Native discovery and invocation are checked locally with Chromium's experimental
+WebMCP flags. Browser availability and post-navigation tool responses remain
+experimental; ordinary form submission works independently of those APIs.
+In the tested Chromium 151 build, native completion contains the page's Person
+JSON-LD; search matches are available on the navigated results page.
+
 The guarded build checks all seven exact vanity tuples, representative identity,
 article/archive microformats, JSON-LD and cross-format dates, canonical URLs,
 summaries and tags before replacing output. It creates the Standard.site record
