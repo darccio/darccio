@@ -117,6 +117,16 @@ and `/es/feed.xml` select their respective posts. Complete explicit source dates
 drive RSS, h-entry, JSON-LD and Open Graph; a partial historical date stays partial
 and is excluded from RSS and AT Protocol publishing.
 
+Article archives use Zas's opt-in `site.page_listings` and the shared
+`.zas/partials/archive-items.html` template. Add or edit a public dated article
+under `posts`, `en/posts`, `es/posts` or `rizoma`; the combined and matching
+language archives refresh automatically, newest first (URL order breaks ties).
+Keep `article: true` and an explicit RFC 3339 `date` on those sources. The guarded
+build checks the generated lists against the independent article inventory.
+The two off-site citations remain curated in the shared partial, retaining
+their known years without invented publication timestamps. Turning off page
+listings requires restoring the previous archive sources as well.
+
 The guarded build checks all seven exact vanity tuples, representative identity,
 article/archive microformats, JSON-LD and cross-format dates, canonical URLs,
 summaries and tags before replacing output. It creates the Standard.site record

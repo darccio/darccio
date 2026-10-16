@@ -1,0 +1,36 @@
+<!--
+publish: false
+-->
+{{- /* Page bodies use text/template, so metadata is escaped explicitly. */ -}}
+{{- $language := index .Page "archive_language" -}}
+{{- $chrome := .Language -}}
+{{- $posts := .Pages "posts" -}}
+{{- $english := .Pages "en/posts" -}}
+{{- $spanish := .Pages "es/posts" -}}
+{{- $rizoma := .Pages "rizoma" -}}
+{{- $elSalto := not $language -}}
+{{- $nuvol := or (not $language) (eq $language "ca") -}}
+{{- /* The root snapshot supplies the global date order. Membership in the
+      four article trees excludes unrelated dated pages and section indexes. */ -}}
+{{- range $page := .Pages "." -}}
+  {{- $article := false -}}
+  {{- range $posts -}}{{- if eq .URL $page.URL -}}{{- $article = true -}}{{- break -}}{{- end -}}{{- end -}}
+  {{- if not $article -}}{{- range $english -}}{{- if eq .URL $page.URL -}}{{- $article = true -}}{{- break -}}{{- end -}}{{- end -}}{{- end -}}
+  {{- if not $article -}}{{- range $spanish -}}{{- if eq .URL $page.URL -}}{{- $article = true -}}{{- break -}}{{- end -}}{{- end -}}{{- end -}}
+  {{- if not $article -}}{{- range $rizoma -}}{{- if eq .URL $page.URL -}}{{- $article = true -}}{{- break -}}{{- end -}}{{- end -}}{{- end -}}
+  {{- if and $article (not .Date.IsZero) (or (not $language) (eq .Language $language)) -}}
+    {{- /* External citations establish only a year. Keep that precision and
+          place each after local articles from that year, without a fake date. */ -}}
+    {{- if and $elSalto (lt .Date.Year 2020) -}}{{- template "archive-el-salto" -}}{{- $elSalto = false -}}{{- end -}}
+    {{- if and $nuvol (lt .Date.Year 2015) -}}{{- template "archive-nuvol" -}}{{- $nuvol = false -}}{{- end -}}
+<li class="archive-item h-entry" lang="{{html .Language}}"><span class="archive-item__when" aria-hidden="true">{{.Date.Year}}</span><div class="archive-item__body"><h2 class="archive-item__title"><a class="p-name u-url u-uid" href="{{html .URL}}">{{html .Title}}</a> <span class="lang-tag" aria-hidden="true">{{html .Language}}</span><span class="visually-hidden" lang="{{html $chrome}}"> ({{if eq $chrome "en"}}{{if eq .Language "en"}}in English{{else if eq .Language "es"}}in Spanish{{else if eq .Language "ca"}}in Catalan{{else}}{{html .Language}}{{end}}{{else if eq $chrome "es"}}{{if eq .Language "en"}}en inglés{{else if eq .Language "es"}}en español{{else if eq .Language "ca"}}en catalán{{else}}{{html .Language}}{{end}}{{else}}{{if eq .Language "en"}}en anglès{{else if eq .Language "es"}}en castellà{{else if eq .Language "ca"}}en català{{else}}{{html .Language}}{{end}}{{end}})</span></h2><p class="archive-item__meta"><time class="dt-published" datetime="{{.Date.Format "2006-01-02T15:04:05Z07:00"}}">{{.Date.Format "02/01/2006"}}</time></p></div></li>
+  {{- end -}}
+{{- end -}}
+{{- if $elSalto -}}{{- template "archive-el-salto" -}}{{- end -}}
+{{- if $nuvol -}}{{- template "archive-nuvol" -}}{{- end -}}
+{{- define "archive-el-salto" -}}
+<li class="archive-item h-cite" lang="es"><span class="archive-item__when" aria-hidden="true">2020</span><div class="archive-item__body"><h2 class="archive-item__title"><a class="p-name u-url" href="https://www.elsaltodiario.com/opinion/queer-marxismo-transfobia-contra-compartimentacion">Contra la compartimentación</a> <span class="lang-tag" aria-hidden="true">es</span><span class="visually-hidden" lang="ca"> (en castellà)</span></h2><p class="archive-item__meta"><span>2020</span> · <span lang="ca">article extern a El Salto.</span></p></div></li>
+{{- end -}}
+{{- define "archive-nuvol" -}}
+<li class="archive-item h-cite" lang="ca"><span class="archive-item__when" aria-hidden="true">2015</span><div class="archive-item__body"><h2 class="archive-item__title"><a class="p-name u-url" href="https://www.nuvol.com/pantalles/per-al-lusions-22931">Per al·lusions</a> <span class="lang-tag" aria-hidden="true">ca</span><span class="visually-hidden" lang="ca"> (en català)</span></h2><p class="archive-item__meta"><span>2015</span> · <span lang="ca">article extern a Núvol.</span></p></div></li>
+{{- end -}}

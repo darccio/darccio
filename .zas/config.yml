@@ -8,6 +8,7 @@ site:
   language: ca
   title: Dario Castañé
   sitemap: true
+  page_listings: true
   publish_markdown: true
   markdown_negotiation: true
   feed: true
