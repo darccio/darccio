@@ -39,7 +39,7 @@ All 33 tasks have a dedicated completed subagent review. Zas PRs #111–#115 are
 | T01 | Registrar protection, validated DNSSEC, scheduled backstop and active Datadog monitoring complete | `35aaf30`, operational receipts in PR #16, Datadog PRs #17–#21 and completion receipt below | Paid expiry 2028-06-01; DNSSEC fully validates; eight live tests have scheduled passes; real failure/recovery and three expiry simulations received; temporary probe removed | Ongoing quarterly and post-change review |
 | T03 | Zas current contact links merged | `9045f6f`, [PR #111](https://github.com/darccio/zas/pull/111), merge `0c94388` | README-only diff; whitespace, darna and GitHub checks pass | Mergo source-owned follow-up remains queued |
 | T05 | Lazy typed metadata/canonical helpers merged | `96f3a64`, [PR #112](https://github.com/darccio/zas/pull/112), merge `f463876` | Build, vet, race/shuffle and pinned lint; 68 real-site files and six fixtures byte-identical before adoption; remote CI/CodeQL pass | Generator release remains T32 work |
-| T06 | Opt-in page listings merged and released; site release pins adopted | Zas PR #118, v0.0.10; `f68ee98`, [site PR #40](https://github.com/darccio/darccio/pull/40) | Full upstream checks; release identity verified; 223 native files identical; guarded site, race/vet, vanity and format checks pass | Optional curated archive migration; live deployment receipt on PR #40 |
+| T06 | Opt-in page listings merged/released and adopted; generated article archives ready for review | Zas PR #118, v0.0.10; site PR #40; `5602114`, [archive PR #42](https://github.com/darccio/darccio/pull/42) | Full site tests, lifecycle/full-incremental fixtures, vet/race, guarded build, exact row/feed/vanity comparisons and focused browser checks pass | Merge PR #42 and verify its deployment; release adoption already deployed |
 | Generator adoption | Zas v0.0.10 pinned in publish, metadata checker and Standard.site publisher | `f68ee98`, [PR #40](https://github.com/darccio/darccio/pull/40) | Installed module and checksums match release commit `3868cbc`; actual publish and same-input release comparison pass | Post-change monitoring; deployment receipt on PR #40 |
 | T04 | 34 article metadata mappings, summaries, tags, language defaults and provenance; all publication dates complete | `00a95a2`, `a5896cc`, PR #23 merge `bcd015c` | All 33 public posts have explicit dates; original RSS, owner timezone confirmation and recorded Spanish clock-time assumption resolve the gaps; production formats agree | Complete; retain provenance for any later correction |
 | T08 avatar | Existing portrait stored as local 180px/96px WebP; homepage/OG/vCard updated; preconnect removed | `482d0f1` | Both images decode at exact dimensions; assets copied byte-identically; plain mailto and existing identity links retained | Disable observed Cloudflare email obfuscation; live verification after deploy |
@@ -1398,3 +1398,47 @@ remain intact. This small content reorder adds no new tests; its verification
 covers source preservation and generated order. Hosted check and deployment
 status are recorded on the PR. Other unpublished task pages and the owner's
 pending local files remain untouched.
+
+### T06 generated article archives · 16 October 2026
+
+The owner selected the site follow-up after Zas v0.0.10 was released and adopted.
+Signed implementation `5602114717335d095bcb4faf2c7103413dfe5e16` in
+[PR #42](https://github.com/darccio/darccio/pull/42) enables page listings and
+replaces duplicated local rows in the combined, Catalan, English and Spanish
+archives with one shared template. Dedicated implementation, integration-test
+and independent review subagents covered this item. The reviewer found no
+blocking findings.
+
+All 35 combined, 13 Catalan, 9 English and 12 Spanish rows retain their exact
+normalized text and attributes by URL in HTML and rendered Markdown. Language
+navigation, accessible labels and row styling are preserved. New public dated
+articles, metadata edits, removals and publication transitions now refresh the
+appropriate indexes automatically. Equal-instant translations follow Zas's
+documented URL tie order. The two curated off-site citations retain their
+verified years, without new timestamps.
+
+Guarded baseline publish and candidate generate, the complete site test suite,
+explicit vanity/microformats/JSON-LD/consistency checks, and checker vet and
+race/shuffle pass. New tests render the actual site templates with released Zas
+and cover adding, editing, deleting, unpublishing, drafting, dropping a date and
+republishing articles, including old source mtimes, escaping, unrelated dated
+pages, empty local archives, citation boundaries, preview-local URLs and matching
+incremental/full output. All 255 published paths survive; three RSS feeds and
+seven vanity pages remain byte-identical. All 33 publication instants and 26
+verified Standard.site documents remain consistent.
+
+Local Chromium 151.0.7922.34 reports zero axe violations in 16 archive scenarios
+(four routes, light/dark, 1440px/390px). Sixteen 320px reflow scenarios with normal
+and doubled text pass, as do eight keyboard skip-link checks. Every complete
+HTML row matches the baseline by URL. Before/after desktop/mobile screenshots
+and detailed local logs are in `/tmp/dario-t06-archive-review`.
+
+The shared embed uses the existing rendered-Markdown setting. Dated sources in
+article trees must retain the article marker; the independent guarded inventory
+rejects unexpected rows. The generated CV's fallback sitemap lastmod differed
+between separate builds; CV content stayed identical. Darna and configured SSH
+signature verification pass, with hooks respected. Existing unpublished task
+pages and the owner's unrelated working files remain untouched. Hosted CI,
+Pages preview and later production acceptance are recorded on PR #42; local
+checks do not constitute deployment. Revert the implementation to restore the
+previous curated archives. T23 stays deferred.
