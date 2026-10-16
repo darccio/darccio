@@ -127,6 +127,28 @@ The two off-site citations remain curated in the shared partial, retaining
 their known years without invented publication timestamps. Turning off page
 listings requires restoring the previous archive sources as well.
 
+Search at `/search/`, `/en/search/` and `/es/search/` uses an ordinary GET form
+and the existing Cloudflare Pages Worker, with no client JavaScript. It matches
+all query words against public page titles and summaries, ignoring case and
+accents. The same search catalogue remains browsable without submitting a query.
+Zas page listings supply the candidate metadata; the guarded builder validates
+the published sources and removes drafts, private sources, CV data, repository
+documentation and the search pages before writing the catalogue and Worker index.
+The index refreshes with each build. Search does not fetch remote content or
+require account secrets. Query responses use `no-store`, remain on preview hosts
+and provide Markdown when requested. Reverting the search change restores the
+previous Worker and removes the pages and discovery links together.
+
+The forms also expose `search_site` through the experimental
+[WebMCP declarative API](https://developer.chrome.com/docs/ai/webmcp/declarative-api),
+using `toolname`, `tooldescription`, `toolparamdescription` and `toolautosubmit`.
+An enabled browser can submit the same GET search and navigate to its results.
+Native discovery and invocation are checked locally with Chromium's experimental
+WebMCP flags. Browser availability and post-navigation tool responses remain
+experimental; ordinary form submission works independently of those APIs.
+In the tested Chromium 151 build, native completion contains the page's Person
+JSON-LD; search matches are available on the navigated results page.
+
 The guarded build checks all seven exact vanity tuples, representative identity,
 article/archive microformats, JSON-LD and cross-format dates, canonical URLs,
 summaries and tags before replacing output. It creates the Standard.site record

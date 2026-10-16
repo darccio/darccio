@@ -1,0 +1,10 @@
+<!--
+publish: false
+-->
+{{$root := .}}
+<li data-search-url="/" data-search-language="ca"><h2><a class="search-result__title" href="/">{{html (.Extra "/site/title")}}</a></h2><p class="search-result__summary">{{html (.Extra "/site/feed_description")}}</p><span class="lang-tag" aria-hidden="true">ca</span><span class="visually-hidden"> ({{html (.E "search-language-ca")}})</span></li>
+{{range .Pages "."}}
+{{if .Title}}
+<li data-search-url="{{html .URL}}" data-search-language="{{html .Language}}"><h2><a class="search-result__title" href="{{html .URL}}">{{html .Title}}</a></h2><p class="search-result__summary">{{html .Summary}}</p><span class="lang-tag" aria-hidden="true">{{html .Language}}</span><span class="visually-hidden"> ({{html ($root.E (printf "search-language-%s" .Language))}})</span></li>
+{{end}}
+{{end}}

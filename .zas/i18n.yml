@@ -102,6 +102,22 @@ footer-feeds:
     ca: Subscripcions
     en: Feeds
     es: Suscripciones
+search:
+    ca: Cerca
+    en: Search
+    es: Buscar
+search-language-ca:
+    ca: en català
+    en: in Catalan
+    es: en catalán
+search-language-en:
+    ca: en anglès
+    en: in English
+    es: en inglés
+search-language-es:
+    ca: en castellà
+    en: in Spanish
+    es: en español
 footer-slashes:
     ca: Totes les pàgines
     en: All pages

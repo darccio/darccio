@@ -170,7 +170,7 @@
 {{end}}
 </main>
 <footer lang="{{$language}}">
-    <p><a href="{{$localeRoot}}/feeds/">{{.E "footer-feeds"}}</a> · <a href="{{$localeRoot}}/slashes/">{{.E "footer-slashes"}}</a> · <a href="{{$localeRoot}}/colophon/">{{.E "footer-colophon"}}</a></p>
+    <p><a href="{{$localeRoot}}/feeds/">{{.E "footer-feeds"}}</a> · <a href="{{$localeRoot}}/slashes/">{{.E "footer-slashes"}}</a> · <a href="{{$localeRoot}}/colophon/">{{.E "footer-colophon"}}</a> · <a href="{{if eq $language "es"}}/es{{else}}{{$localeRoot}}{{end}}/search/"{{if eq $nav "search"}} aria-current="page"{{end}}>{{.E "search"}}</a></p>
     <p>2009–2026 {{.Extra "/site/title"}} · {{with index .Page "docs_license"}}{{$.E "license-docs"}}: <a href="{{index $.Page "docs_license_url"}}">{{.}}</a>{{else}}{{.E "license-content"}}: <a href='{{.E "license-content-url"}}'>CC BY-SA 4.0</a>{{end}} · <a href="/LICENSE">{{.E "license-exceptions"}}</a> · {{.E "generated-with"}} <a href="https://github.com/darccio/zas">Zas</a>.</p>
 </footer>
 </body>

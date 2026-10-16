@@ -53,6 +53,13 @@ func finalizeHTTPWorker(root, stage, deploy string, docs ...map[string]string) e
 		return err
 	}
 	if !config.Site.MarkdownNegotiation {
+		for _, prefix := range []string{"", "en/", "es/"} {
+			if _, err := os.Lstat(filepath.Join(deploy, prefix+"search/index.html")); err == nil {
+				return errors.New("site search requires site.markdown_negotiation for its server-side GET form")
+			} else if !errors.Is(err, os.ErrNotExist) {
+				return err
+			}
+		}
 		return nil
 	}
 	if !config.Site.PublishMarkdown {
@@ -83,9 +90,22 @@ func finalizeHTTPWorker(root, stage, deploy string, docs ...map[string]string) e
 	if bytes.Count(template, []byte(httpWorkerMarker)) != 1 {
 		return errors.New("HTTP worker template must contain exactly one page-inventory marker")
 	}
+	search, err := finalizeSiteSearch(stage, deploy, base, docs...)
+	if err != nil {
+		return err
+	}
+	template, err = siteSearchInject(template, search)
+	if err != nil {
+		return err
+	}
 	pages, routes, err := collectHTTPWorkerPages(deploy, base, docs...)
 	if err != nil {
 		return err
+	}
+	for _, entry := range search {
+		if _, exists := pages[entry.URL]; !exists {
+			return fmt.Errorf("site search %s has no public HTTP route", entry.URL)
+		}
 	}
 	inventory, err := json.Marshal(pages)
 	if err != nil {
